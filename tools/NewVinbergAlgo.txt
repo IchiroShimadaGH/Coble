@@ -1,0 +1,119 @@
+#Read("NewVinbergAlgo.txt");
+
+NewVinbergAlgo:=function(adetype)
+  local GramR, Gram, beep, hv, nv,rankR,posvfoundflag,
+  tample, iniseps,stillbad, badrays,vrec,foundflag,
+  rvs, rvduals, task, nops, flag, rank, tdeg, tv,
+  lfs, frec, rays, fflags, tray, trayv, sqnrm;
+  #
+
+  beep:=function(beepnumb)
+    localbeep("NewVinbergAlgo", beepnumb); Error();
+  end;
+  #
+  GramR:=-ADEHGram(adetype);
+  rankR:=Length(GramR);
+  Gram:=DiagonalMats([GramU, GramR]);
+  hv:=Concatenation([1,1], MakeZeroVect(Length(GramR)));
+  nv:=Concatenation([0,1], Sum(InverseMat(GramR)));
+  posvfoundflag:=false;
+  tample:=GetPrimitiveIntVect((hv+nv)/2);
+  while not posvfoundflag do
+    if tample*Gram*tample<=0 then
+      tample:=GetPrimitiveIntVect((hv+tample)/2);
+    else
+      posvfoundflag:=true;
+    fi;
+  od;
+  iniseps:=SeparatingVects(Gram, hv, tample, -2);
+  if iniseps<>[] then
+    tample:=GetPrimitiveIntVect(hv+(iniseps[1][2])/2*tample);
+  fi;
+  iniseps:=SeparatingVects(Gram, hv, tample, -2);
+  if iniseps<>[] then beep(828811); fi;
+  foundflag:=false;
+  while not foundflag do
+    if OrthoRoots(Gram, [tample])<>[] then
+      tample:=GetPrimitiveIntVect((hv+tample)/2);
+    else
+      foundflag:=true;
+    fi;
+  od;
+  if SeparatingVects(Gram, hv, tample, -2)<>[] then beep(91773); fi;
+  if OrthoRoots(Gram, [tample])<>[] then beep(91773); fi;
+  rvs:=List(IdentityMat(rankR), tv->Concatenation([0,0], tv));
+  Add(rvs,Concatenation([1,-1], MakeZeroVect(Length(GramR))));
+  if Set(rvs, tv->tv*Gram*tv)<>[-2] then beep(9192); fi;
+  rvduals:=rvs*Gram;
+  if Set(rvduals*tample, xx->xx>0)<>[true] then beep(9112); fi;
+  tdeg:=1;
+  #
+  task:=function(tv)
+    local tvdual;
+    for tvdual in rvduals do
+      if tvdual*tv<0 then return(); fi;
+    od;
+    Add(rvs, tv);
+    Add(rvduals, tv*Gram);
+    return();
+  end;
+  #
+  nops:=0;
+  flag:=false;
+  rank:=Length(Gram);
+  tdeg:=0;
+  badrays:="not yet";
+  while not flag do
+    tdeg:=tdeg+1;
+    AffES(Gram, hv, tdeg, -2, true, task);
+    if Length(rvs)=nops then
+      Printn(tdeg, "nops does not change", nops);
+    else
+      Printn(tdeg, "nops changes", nops, "->", Length(rvs));
+      nops:=Length(rvs);
+      if badrays<>"not yet" then
+        fflags:=List(badrays, tv->Set(rvduals*tv, xx->xx>=0)=[true]);
+        if true in fflags  then
+          Printn("still bad", OccurNumb(fflags, true));
+          stillbad:=true;
+        else
+          stillbad:=false;
+        fi;
+      else
+        stillbad:=false;
+      fi;
+      if not stillbad then
+        if Rank(rvs)=rank then
+          lfs:=Set(rvduals, GetPrimitiveIntVect);
+          frec:=Make2TotalFaceRecs(lfs, 1, "temp", 10000000);
+          rays:=frec.totalfacerecss[rank];
+          badrays:=[];
+          for tray in rays do
+            if Length(tray.subspacebasis)<>1 then beep(725272); fi;
+            trayv:=tray.subspacebasis[1];
+            sqnrm:=trayv*Gram*trayv;
+            if sqnrm<0 then
+              Add(badrays, trayv);
+            fi;
+          od;
+          if badrays=[] then
+            flag:=true;
+          else
+            Printn("nops bad rays", Length(badrays), "in", Length(rays));
+          fi;
+        fi;
+      fi;
+    fi;
+  od;
+  #
+  vrec:=rec();
+  vrec.type:=adetype;
+  vrec.Gram:=Gram;
+  vrec.hv:=hv;
+  vrec.nv:=nv;
+  vrec.rats:=rvs;
+  vrec.ample:=tample;
+  vrec.faces:=frec.totalfacerecss;
+  Printn("nops walls", Length(rvs));
+  return(vrec);
+end;

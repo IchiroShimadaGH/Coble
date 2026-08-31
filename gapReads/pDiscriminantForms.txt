@@ -1,0 +1,826 @@
+#Read("pDiscriminantForms.txt");
+
+modFAG:=function(vec, fag) #destructive on vec
+	local ii;
+	for ii in [1..Length(fag)] do
+		vec[ii]:=vec[ii] mod fag[ii];
+	od;
+	return(vec);
+end;
+
+
+CopymodFAG:=function(vec, fag) #not destructive on vec
+	local ii, newvec;
+	newvec:=[];
+	for ii in [1..Length(fag)] do
+		Add(newvec, vec[ii] mod fag[ii]);
+	od;
+	return(newvec);
+end;
+
+MatmodFAG:=function(mat, fag)
+	Apply(mat, vv->modFAG(vv, fag)); #modFAG is #destructive on vec
+end;
+
+CopyMatmodFAG:=function(mat, fag)
+	return(List(mat, vv->CopymodFAG(vv, fag))); #CopymodFAG is not destructive on vec
+end;
+
+pdecomnpfag:=function(fag)
+	#
+	# fag is a finite list of integers >1, which represents a finite abelian group
+	# G:=Z/fag[1] times dots \times Z/fag[leng].
+	# pdecomprec.ps=[tps[1], dots, tps[m]]  is the list of prime factors.
+	# for i=1..m, let p:=tps[i].
+	#
+	#pdecomprec.decompdata[i].p is p.
+	#
+	# pdecomprec.decompdata[i].pfag is the p-component Gp of G,
+	# which is represented by [p^nu1, \dots, p^nuk], with 1>=nu1>=...>=nuk.
+	# CAUTION: DECREASING ORDER !!
+	#
+	# pdecomprec.decompdata[i].pproj is the matrix Mp representing the projection G ->Gp,
+	# which is a leng times k matrix:
+	# the projection is given by x mapsto x*Mp mod pdecomprec.pcomps[i],
+	# (more precisely, x mapsto CopymodFAG( x*Mp, pdecomprec.pcomps[i] ).
+	# 
+	# pdecomprec.decompdata[i].pincl is the matrix Np representing the inclution  Gp -> G,
+	# which is a k times leng matrix:
+	# the projection is given by x mapsto x*Np mod fag,
+	# (more precisely, x mapsto CopymodFAG( x*Mp, fag ).
+	#
+	#
+	local pdecomprec, tps, tpcomps, tprojs, tincls, tpproj, tpincl, 
+	longfag, sprojs, sincls, n, nps, snps, npfag, p, nu, Lengnpfag, bigproj, bigincl,
+	poss, pos, tpnu, tpcomp, tdecompdata, pdecompdata;
+	#
+	tps:=Set(Flat(List(fag, FactorsInt)));
+	Sort(tps);
+	#
+	#
+	longfag:=[];
+	sprojs:=[];
+	sincls:=[];
+	#
+	# fag is isom to the direct sum of Z/p^nu, where [p, nu] runs through longfag.
+	# Let npfag be the [p, nu]'s comming from n in fag,
+	# sorted according to p.
+	# longfag is the concatenation of these npfag's. 
+	# sprojs is the list of projections (isoms) from Z/n to npfag.
+	# sincls is the list of inclusions (isoms) from npfag to Z/n.
+	#
+	for n in fag do
+		nps:=FactorsInt(n);
+		snps:=Set(nps);
+		Sort(snps);
+		npfag:=[];
+		for p in snps do
+			nu:=NumbOccur(p, nps);
+			Add(longfag, [p, nu]);
+			Add(npfag, p^nu);
+		od;
+		Lengnpfag:=[1..Length(npfag)];
+		Add(sprojs, [List(Lengnpfag, ii->1)]);
+		Add(sincls,	List(Lengnpfag, ii-> ChineseRem(npfag, MakeVectei(Length(npfag), ii))));
+	od;
+	sincls:=List(sincls, tv->TransposedMat([tv]));
+	bigproj:=DiagonalMats(sprojs);
+	bigincl:=DiagonalMats(sincls);
+	#
+	# the isoms from fag to longfag and from longfag to fag.
+	#
+	tdecompdata:=[];
+	#
+	for p in tps do
+		#
+		poss:=[];
+		pos:=0;
+		for tpnu in longfag do
+			pos:=pos+1;
+			if tpnu[1]=p then Add(poss, pos); fi;
+		od;
+		Sort(poss, function(ii, jj) return(longfag[ii][2]>=longfag[jj][2]); end);
+		tpcomp:=List(poss, ii->longfag[ii][1]^longfag[ii][2]);
+		#
+		tpproj:=List(bigproj, tv->List(poss, ii->tv[ii]));
+		tpincl:=List(poss, ii->bigincl[ii]);
+		pdecompdata:=rec(
+			p:=p,
+			pfag:=tpcomp,
+			pincl:=tpincl,
+			pproj:=tpproj
+		);
+		Add(tdecompdata, pdecompdata);
+	od;
+	#
+	pdecomprec:=rec(
+		fag:=fag,
+		ps:=tps,
+		decompdata:=tdecompdata
+	);
+	return(pdecomprec);
+end;
+
+
+pdecomnpfagcheck:=function(pdecomprec, fag)
+	local tps, tpcomps, tprojs, tincls, beep, ttpcomp, revtpcomp, tpcomp, 
+	ii, jj, tA, n;
+	beep:=function(n) Printn("wrong in pdecomnpfagcheck\n", "n=", n); Error(); end;
+	if pdecomprec.fag<>fag then beep(-1); fi;
+	tps:=pdecomprec.ps;
+	if tps<>List([1..Length(tps)], ii->pdecomprec.decompdata[ii].p) then beep(0); fi;
+	tpcomps:=List([1..Length(tps)], ii->pdecomprec.decompdata[ii].pfag);
+	tprojs:=List([1..Length(tps)], ii->pdecomprec.decompdata[ii].pproj);
+	tincls:=List([1..Length(tps)], ii->pdecomprec.decompdata[ii].pincl);
+	if Product(fag)<>Product(List(tpcomps, Product)) then beep(1); fi;
+	for tpcomp in tpcomps do 
+		revtpcomp:=Reversed(tpcomp); 
+		ttpcomp:=List(tpcomp); Sort(ttpcomp);
+		if revtpcomp<>ttpcomp then beep(2); fi;
+	od;
+	n:=Length(fag);
+	for ii in [1..Length(tps)] do
+		tA:=tincls[ii]*tprojs[ii];
+		MatmodFAG(tA, tpcomps[ii]);
+		if tA<>IdentityMat(Length(tpcomps[ii])) then beep(3); fi;
+		for jj in [1..Length(tps)] do 
+			if ii<>jj then
+				tA:=tincls[ii]*tprojs[jj];
+				MatmodFAG(tA, tpcomps[jj]);
+				if not IsZeroMat(tA) then  beep(4); fi;
+			fi;
+		od;
+	od;
+	tA:=NullMat(n,n);
+	for ii in [1..Length(tps)] do
+		tA:=tA+tprojs[ii]*tincls[ii];
+	od;
+	MatmodFAG(tA, fag);
+	if tA<>IdentityMat(n) then beep(5); fi;
+	return(true);
+end;
+
+
+
+#
+# fqf is a Q/2Z-valued finite quadratic form.
+#
+
+_Normalform_oddpfqf:=function(p, pfag, pfqf)
+	#
+	# p is an odd prime.
+	# pfag is a finite abelian p-group (DECREASING list of p^nu's).
+	# pfqf is a Q/2Z-valued finite quadratic form on pfag.
+	# newfqf is diagonalized.
+	# T is an isomorphism of pfag such that 
+	# T*pfqf*Transposed(T) is newfqf.
+	# diags is the diagonal components of newfqf.
+	# 
+	local beep,aa,nq,findt,newfqf,T,nus,n,denomordp, ii,
+	nuii, pnuii, jj, jfound, alpha,beta, kfound, kk, numalpha, t, diags;
+	#
+	beep:=function(n) Printn("wrong in _Normalform_oddpfqf", n);Error(); end;
+	#
+	for aa in [1..p-1] do
+		if Legendre(aa, p)=-1 then nq:=aa ; break; ; fi; # nq: nonquadratic residue
+	od;
+	findt:=function(aa, pnu)
+		#
+		# pnu=p^nu.
+		# t is a unit of Z/pnu Z such that 
+		# aa*t^2 mod pnu is one or nq
+		# according to Legendre(aa, p).
+		#
+		local f, bb, t;
+		f:=Legendre(aa, p);
+		if f=1 then bb:=1; 
+		elif f=-1 then bb:=nq;
+		else beep(1); fi;
+		for t in [1..pnu-1] do
+			if GcdInt(t, p)=1 and bb=aa*t^2 mod pnu then return(t); fi;
+		od;
+		beep(2);
+	end;
+	newfqf:=CopyMat(pfqf);
+	T:=IdentityMat(Length(pfag));
+	nus:=List(pfag, xx->Ordp(xx, p));
+	n:=Length(pfag);
+	denomordp:=function(aa) return(Ordp(DenominatorRat(aa), p)); end;
+	#
+	diags:=[];
+	for ii in [1..n] do 
+		nuii:=nus[ii];
+		pnuii:=pfag[ii]; #pnui=p^nuii
+		jfound:=false;
+		for jj in [ii..n] do 
+			if nus[jj]>nuii then beep(3); # nus should be decreasing!
+			elif nus[jj]<nuii then break; #from for jj in [ii..n] do 
+			else
+				if denomordp(newfqf[jj][jj])=nuii then
+					jfound:=true;
+					if jj>ii then 
+						MatRowSwap(T, ii, jj);
+						MatRowColSwap(newfqf, ii, jj);
+					fi;
+					break; #from for jj in [ii..n] do 
+				fi;
+			fi;
+		od;
+		if not jfound then 
+			kfound:=false;
+			for kk in [ii+1..n]  do 
+				if nus[kk]<nuii then break;fi; # from for kk in [ii+1..n] 
+				if denomordp(newfqf[ii][kk])=nuii then
+					kfound:=true;
+					MatAddRows(T, ii, 1, kk);
+					MatAddRowsCols(newfqf, ii, 1, kk);
+					break; # from for kk in [ii+1..n]
+				fi;
+			od;
+		fi;
+		if not (jfound or kfound) then beep(4); fi;
+		alpha:=modtZ(newfqf[ii][ii]);
+		if denomordp(alpha)<>nuii then beep(5); fi;
+		numalpha:=NumeratorRat(alpha);
+		if numalpha mod 2 <>0 then beep(6); fi;
+		t:=findt(numalpha/2, pnuii);
+		MatRowScMult(T, ii, t);
+		MatRowColScMult(newfqf, ii, t);
+		alpha:=modtZ(newfqf[ii][ii]);
+		#
+		for kk in [ii+1..n] do
+			beta:=modZ(newfqf[ii][kk]);
+			aa:=(-beta/alpha) mod pnuii;
+			if not IsInt(aa) then beep(65); fi;
+			MatAddRows(T, kk, aa, ii);
+			MatAddRowsCols(newfqf, kk, aa, ii);
+		od;
+		NormalDiscf(newfqf);
+		MatmodFAG(T, pfag);
+		Add(diags, [[alpha]]);
+		# for check 
+		if CopyNormalDiscf(TMTTmult(T, pfqf))<>newfqf then beep(7); fi;
+	od;
+	#
+	#
+	#
+	return([newfqf, T, diags]);
+end;
+
+_Normalform_twofqf:=function(tfag, fqf)
+	#
+	# tfag is a finite abelian 2-group (DECREASING).
+	# fqf is a Q/2Z-valued finite quadratic form on tfag.
+	# newfqf is quasi-diagonalized (1 times 1 or U-type or V-type).
+	# T is an isomorphism of tfag such that 
+	# T*fqf*Transposed(T) is newfqf.
+	# diags is the diagonal components of ewfqf.
+	# 
+	local beep,findtbb, findGAA, U, V, actG_on_Rows, actG_on_a_Row,
+	actG_on_RowsCols, newfqf,T,nus,n,denomordt, ii,
+	nuii, tnuii, jj, jfound, alpha,beta,aa, kfound, kk, numalpha, diags, rs, t,xy,
+	tnuiiAAinv,GAA,G, subT, tbb, A, AA;
+	#
+	beep:=function(n) Printn("wrong in _Normalform_twofqf", n);Error(); end;
+	#
+	findtbb:=function(a, tnu)
+		#
+		# a*t^2 =b mod tnu.
+		# where b is in the standard representatives (rs)
+		# of (Z/tnu)\sptimes /((Z/tnu)\sptimes )^2
+		#
+		local aa, rs, t, ht, bb;
+		aa:=a mod tnu;
+		if aa mod 2 =0 then beep(201); fi;
+		if tnu=2 then rs:=[1,3]; 
+		else rs:=[1,3,5,7];
+		fi;
+		for ht in [1..tnu/2] do
+			t:=2*ht-1;
+			bb:=(aa*t^2) mod tnu;
+			if bb in rs then return([t,bb]); fi;
+		od;
+		beep(202);
+	end;
+	#
+	U:= [[0,1],[1,0]];
+	V:=[[2,1],[1,2]];
+	#
+	findGAA:=function(A, tnu)
+		#
+		# A:=[[tu, v], [v, tw]], where tu and tv are even with the same ord2,
+		# and v is odd.
+		# the fqf G*((1/tnu)*A)*tG  on Z/tnu times Z/tnu
+		# is the same as the fqf (1/tnu)*AA on Z/tnu times Z/tnu
+		# where AA is [[2,1],[1,2]] or [[0,1],[1,0]].
+		# This algorith is based on ssK3Milnor20.pdf Section 3.
+		#
+		local beepGAA, tA, tu, tw, v, nu, AA, G, currentnu,
+		Delta, M, alpha, beta, gamma, Gamma, newA;
+		#
+		beepGAA:=function(n) Printn("wrong in findGAA", n); Error(); end;
+		tA:=CopyMat(A);
+		#
+		tu:=tA[1][1]; v:=tA[1][2]; tw:=tA[2][2]; 
+		if tu mod 2<>0 then beepGAA(101); fi;
+		if tw mod 2<>0 then beepGAA(102); fi;
+		if v mod 2<>1 then beepGAA(103); fi;
+		#
+		if tu mod 4 =0 and  tw mod 4 =0 then 
+			G:=IdentityMat(2);AA:=U; 
+		elif tu mod 4 =2 and  tw mod 4 =2 then 
+			G:=IdentityMat(2);AA:=V; 
+		elif tu mod 4 =0 and  tw mod 4 =2 then
+			G:=[[1,0],[1,1]]; AA:=U;
+		elif tu mod 4 =2 and  tw mod 4 =0 then
+			G:=[[1,1],[0,1]]; AA:=U;
+		else beepGAA(100); 
+		fi;
+		#
+		nu:=Ordp(tnu, 2);
+		#
+		currentnu:=1;
+		while currentnu<nu do
+			Delta:=((AA-TMTTmult(G, tA))/(2^currentnu)) mod 4;
+			M:=Inverse(tA*TransposedMat(G)) mod 4;
+			alpha:=Delta[1][1]/2;
+			beta:=Delta[1][2];
+			gamma:=Delta[2][2]/2;
+			if not IsIntMat([[alpha,0], [beta, gamma]]) then beepGAA(105); fi;
+			Gamma:=([[alpha,0], [beta, gamma]]*M) mod 4;
+			G:=G+2^currentnu*Gamma;
+			currentnu:=currentnu+1;
+			G:=G mod 2^currentnu;
+		od;
+		#
+		# for check
+		newA:=TMTTmult(G, A);
+		if (AA[1][1]-newA[1][1]) mod 2*tnu <>0 then beepGAA(106); fi;
+		if (AA[2][2]-newA[2][2]) mod 2*tnu <>0 then beepGAA(107); fi;
+		if (AA[1][2]-newA[1][2]) mod   tnu <>0 then beepGAA(108); fi;
+		#
+		return([G, AA]);
+	end;
+	#
+	actG_on_Rows:=function(G, ii, T)
+		local g11, g12, g21, g22, newTii, newTiiplus1;
+		g11:=G[1][1]; g12:=G[1][2]; g21:=G[2][1]; g22:=G[2][2];
+		newTii:=g11*T[ii]+g12*T[ii+1];
+		newTiiplus1:=g21*T[ii]+g22*T[ii+1];
+		T[ii]:=newTii;
+		T[ii+1]:=newTiiplus1;
+	end;
+	#
+	actG_on_a_Row:=function(v,ii, G)
+		# the transpose of G acts on v from right
+		local tg11, tg12, tg21, tg22, newvii, newviiplus1, newv;
+		tg11:=G[1][1]; tg21:=G[1][2]; tg12:=G[2][1]; tg22:=G[2][2];
+		newvii:=v[ii]*tg11+v[ii+1]*tg21;
+		newviiplus1:=v[ii]*tg12+v[ii+1]*tg22;
+		newv:=List(v);
+		newv[ii]:=newvii; newv[ii+1]:=newviiplus1;
+		return(newv);
+	end;
+	#
+	actG_on_RowsCols:=function(G, ii, Q)
+		local nn;
+		actG_on_Rows(G, ii, Q);
+		for nn in [1..Length(Q)] do
+			Q[nn]:=actG_on_a_Row(Q[nn], ii, G);
+		od;
+	end;
+	#
+	newfqf:=CopyMat(fqf);
+	T:=IdentityMat(Length(tfag));
+	diags:=[];
+	nus:=List(tfag, xx->Ordp(xx, 2));
+	n:=Length(tfag);
+	denomordt:=function(aa) return(Ordp(DenominatorRat(aa), 2)); end;
+	#
+	ii:=1;
+	while ii<=n do 
+		nuii:=nus[ii];
+		tnuii:=tfag[ii]; #tnuii=2^nuii
+		jfound:=false;
+		for jj in [ii..n] do 
+			if nus[jj]>nuii then beep(11); # tfag should be decreasing.
+			elif nus[jj]<nuii then break; # from for jj in [ii..n] do 
+			else # nus[jj]=nuii 
+				if denomordt(newfqf[jj][jj])=nuii then
+					jfound:=true;
+					if jj>ii then 
+						MatRowSwap(T, ii, jj);
+						MatRowColSwap(newfqf, ii, jj);
+					fi;
+					break; # from for jj in [ii..n] do 
+				fi;
+			fi;
+		od;
+		if jfound then # the diagonal is 1 times 1 
+			alpha:=modtZ(newfqf[ii][ii]);
+			if denomordt(alpha)<>nuii then beep(12); fi;
+			numalpha:=NumeratorRat(alpha);
+			tbb:=findtbb(numalpha, 2*tnuii);
+			t:=tbb[1];
+			MatRowScMult(T, ii, t);
+			MatRowColScMult(newfqf, ii, t);
+			alpha:=modtZ(newfqf[ii][ii]);
+			for kk in [ii+1..n] do
+				beta:=modZ(newfqf[ii][kk]);
+				aa:=(-beta/alpha) mod tnuii;
+				if not IsInt(aa) then beep(13); fi;
+				MatAddRows(T, kk, aa, ii);
+				MatAddRowsCols(newfqf, kk, aa, ii);
+			od;
+			Add(diags, [[tbb[2]/tnuii]]);
+			ii:=ii+1;
+		else #if jfound then : the diagonal is 2 times 2
+			if ii=n then beep(14); fi;
+			kfound:=false;
+			for kk in [ii+1..n]  do 
+				if nus[kk]<nuii then break; fi; # from for kk in [ii+1..n]  
+				if denomordt(newfqf[ii][kk])=nuii then
+					kfound:=true;
+					if kk>ii+1 then
+						MatRowSwap(T, ii+1, kk);
+						MatRowColSwap(newfqf, ii+1, kk);	
+					fi;
+					break; # from for kk in [ii+1..n] 
+				fi;
+			od;
+			if not kfound then beep(141); fi;
+			#
+			A:=tnuii*[[newfqf[ii][ii], newfqf[ii][ii+1]], [newfqf[ii+1][ii], newfqf[ii+1][ii+1]]];
+			GAA:=findGAA(A, tnuii);
+			G:=GAA[1];
+			AA:=GAA[2];
+			if DeterminantIntMat(G) mod 2 =0 then beep(15); fi;
+			#
+			actG_on_RowsCols(G, ii, newfqf);
+			actG_on_Rows(G, ii, T);
+			#
+			# for check
+			NormalDiscf(newfqf);
+			if not newfqf[ii][ii] in [0,2/tnuii]  then beep(16); fi;
+			if not newfqf[ii+1][ii+1] in [0,2/tnuii]  then beep(17); fi;
+			if not newfqf[ii][ii+1]=1/tnuii  then beep(18); fi;
+			if not newfqf[ii][ii]=newfqf[ii+1][ii+1] then beep(19); fi;
+			#
+			#Printn(0, ii, newfqf);
+			subT:=IdentityMat(n);
+			tnuiiAAinv:=tnuii*(InverseMat(AA) mod tnuii);
+			for kk in [ii+2..n] do
+				xy:=tnuiiAAinv*[newfqf[ii][kk], newfqf[ii+1][kk]];
+				MatAddRows(subT, kk, -xy[1], ii);
+				MatAddRows(subT, kk, -xy[2], ii+1);
+			od;
+			newfqf:=TMTTmult(subT, newfqf);
+			T:=subT*T;
+			Add(diags, (1/tnuii)*AA);
+			#Printn(1, ii, newfqf, diags);
+			ii:=ii+2;
+			#
+			#
+		fi;
+		#
+		NormalDiscf(newfqf);
+		MatmodFAG(T, tfag);
+		# for check 
+		if CopyNormalDiscf(TMTTmult(T, fqf))<>newfqf then beep(20); fi;
+	od;
+	#
+	#
+	#
+	return([newfqf, T, diags]);
+end;
+
+
+Normalform_pfqf:=function(p, fag, fqf)
+	if p=2 then
+		return(_Normalform_twofqf(fag, fqf));
+	else if not IsPrime(p) then Beep(1); fi;
+		return(_Normalform_oddpfqf(p, fag, fqf));
+	fi;
+end;
+
+
+Normalform_fqf:=function(fag, fqf)
+	#
+	# This function decomposes into p parts of fqf on fag.
+	# It also provides the projection to each p-part and the inclusion from each p-part.
+	# The fqf on each p-part is diagonalized for odd p
+	# and quasi-diagonalized (involving U and V) for p=2.
+	# The output is the record consisiting of the list ps of primes ps,
+	# and the list decompdata of pdecompdatas.
+	# The record pdecompdata is the list of the records 
+	# p:=p,
+	# pfag:=pfag,
+	# pfqf:=diags,
+	# pincl:=newpincl,
+	# pproj:=newpproj
+	# pfag is the p-part of the fag
+	# (a list of p powers)
+	# pfqf is the list of matrices of size 1 or 2 that are diagonals
+	# of the p-part of fqf.
+	# (The matrix of size 2 appears omly when p=2).
+	# These matrices are one of the standard forms (see _IsStdComponent below).
+	# 
+	local beep, pdecompfagrec, pos, tdecompdata, p, pfag,
+	pproj, pincl, pfqf, newfqfT, newfqf, T, Tinv, newpproj, newpincl, 
+	Normalform_fqfrec, diags, pdecompdatas, pdecompdatafqf;
+	#
+	beep:=function(n) Printn("wrong in Normalform_fqf", n); Error(); end;
+	pdecompfagrec:=pdecomnpfag(fag);
+	pos:=0;
+	pdecompdatas:=[];
+	for p in pdecompfagrec.ps do
+		pos:=pos+1;
+		tdecompdata:=pdecompfagrec.decompdata[pos];
+		if p<>tdecompdata.p then beep(1); fi;
+		pfag:=tdecompdata.pfag;
+		pproj:=tdecompdata.pproj;
+		pincl:=tdecompdata.pincl;
+		pfqf:=CopyNormalDiscf(TMTTmult(pincl, fqf));
+		#
+		newfqfT:=Normalform_pfqf(p, pfag, pfqf); # main part
+		#
+		newfqf:=newfqfT[1];
+		T:=newfqfT[2];
+		diags:=newfqfT[3];
+		Tinv:=InverseAutFAG(T, pfag);
+		newpproj:=CopyMatmodFAG(pproj*Tinv, pfag);
+		newpincl:=CopyMatmodFAG(T*pincl, fag);
+		pdecompdatafqf:=rec(
+			p:=p,
+			pfag:=pfag,
+			pfqf:=diags,
+			pincl:=newpincl,
+			pproj:=newpproj
+		);
+		Add(pdecompdatas, pdecompdatafqf);
+	od;
+	Normalform_fqfrec:=rec(
+		ps:=List(pdecompfagrec.ps), 
+		decompdata:=pdecompdatas
+	);
+	return(Normalform_fqfrec);
+end;
+
+
+_IsStdComponent:=function(p, pfag, diags)
+	local aa, nq, ii, pnu, diag, beep, nu, stds, U, V;
+	#
+	beep:=function(n) Printn("wrong in _IsStdComponent", n); Error(); end;
+	#
+	U:=[[0,1],[1,0]]; V:=[[2,1],[1,2]];
+	#
+	if p mod 2 =1 then 
+		for aa in [1..p-1] do
+			if Legendre(aa, p)=-1 then nq:=aa ; break; ; fi; # nq: nonquadratic residue
+		od;
+		for ii in [1..Length(pfag)] do
+			pnu:=pfag[ii];
+			nu:=Ordp(pnu, p);
+			if pnu<>p^nu then beep(100); fi;
+			diag:=diags[ii];
+			if not diag in [ [[2/pnu]], [[2*nq/pnu]] ] then beep(101); fi;
+		od;
+	else
+		ii:=1;
+		for diag in diags do
+			pnu:=pfag[ii];
+			nu:=Ordp(pnu, p);
+			if pnu<>p^nu then beep(99); fi;
+			if Length(diag)=1 then
+				if pnu=2 then stds:=[[[1/2]], [[3/2]]];
+				else stds:=[[[1/pnu]], [[3/pnu]], [[5/pnu]], [[7/pnu]] ];
+				fi;
+				if not diag in stds then beep(201); fi;
+				ii:=ii+1;
+			elif Length(diag)=2 then
+				if pnu<>pfag[ii+1] then beep(401); fi;
+				stds:=[(1/pnu)*U, (1/pnu)*V];
+				if not diag in stds then beep(402); fi;
+				ii:=ii+2;
+			else
+			fi;
+		od;
+		if ii<>Length(pfag)+1 then
+			beep(1001);
+		fi;
+	fi;
+	return(true);
+end;
+
+Normalform_fqf_check:=function(Normalform_fqfrec, fag, fqf)
+	 local pos, p, pdecompdata, beep, bigfag, projs, incls,
+	 fqfs, bigproj, bigincl, bigfqf;
+	 #
+	 beep:=function(n) Printn("wrong in Normalform_fqf_check", n); Error(); end;
+	 #
+	 if not IsDuplicateFree(Normalform_fqfrec.ps) then beep(-1); fi;
+	 bigfag:=[];
+	 projs:=[];
+	 incls:=[];
+	 fqfs:=[];
+	 if Length(Normalform_fqfrec.ps)<>Length(Normalform_fqfrec.decompdata) then
+	 	beep(7722); #Added on 23 Jan 2018
+	 fi;
+	 for pos in [1..Length(Normalform_fqfrec.ps)] do
+	 	p:=Normalform_fqfrec.ps[pos];
+	 	if not IsPrime(p) then beep(0); fi; 
+	 	pdecompdata:=Normalform_fqfrec.decompdata[pos];
+	 	if p<>pdecompdata.p then beep(1); fi;
+	 	if not _IsStdComponent(p, pdecompdata.pfag, pdecompdata.pfqf) then beep(2); fi;
+	 	#
+	 	Append(bigfag, pdecompdata.pfag);
+	 	Add(projs, pdecompdata.pproj);
+	 	Add(incls, pdecompdata.pincl);
+	 	Add(fqfs, DiagonalMats(pdecompdata.pfqf));
+	 	#
+	 od;
+	 #
+	 bigproj:=ConcatMatss(projs);
+	 bigincl:=StackMatss(incls);
+	 bigfqf:=DiagonalMats(fqfs);
+	 #
+	 if CopyMatmodFAG(bigproj*bigincl, fag)<>IdentityMat(Length(fag)) then beep(11); fi;
+	 if CopyMatmodFAG(bigincl*bigproj, bigfag)<>IdentityMat(Length(bigfag)) then beep(12); fi;
+	 if CopyNormalDiscf(TMTTmult(bigproj, bigfqf))<>fqf then beep(101); fi;
+	 if CopyNormalDiscf(TMTTmult(bigincl, fqf))<>bigfqf then beep(102); fi;
+	 #
+	 return(true);
+end;
+
+###### 2020Apr29 
+
+
+
+# The value of the finite quadratic form in Mirand-Morrison's book
+# is half of the value of the Nukulin's finite quadratic form.
+#  MM is Mirand-Morrison.
+#
+# The Brwon invariant Br(G, q) of (G,q) [in Nikulin's notation]
+# is related to
+#   gamma_G(1)=1/sqrt(|G|)*Sum_{x in G } exp(pi*i*q(x))
+# in Chapter III of Mirand-Morrison's book
+# by
+# exp(pi*i*Br(G, q)/4)=gamma_G(1)
+
+
+
+BrownInvariant_naive:=function(fag, faq)
+	#
+	# the faq is according to Nikulin's definition.
+	#
+	local beep, sum, brs, tbr, order, xx, xs, x,
+	qx, zeta, denom, qxdenom,  theta, resum, imsum;
+	#quot
+	#
+	beep:=function(n) Printn("wrong in BrownInvariant_naive", n); Error(); end;
+	if fag=[] then return(0); fi;
+	sum:=0;
+	resum:=0.0;
+	imsum:=0.0;
+	denom:=2*Lcm(List(Flat(faq), DenominatorRat));
+	zeta:=E(denom);
+	theta:=2*FLOAT.PI/denom;
+	order:=Product(fag);
+	xs:=IteratorOfCartesianProduct(List(fag, xx->[0..xx-1]));
+	for x in xs do
+		qx:=x*faq*x;
+		qxdenom:=(qx/2)*denom  mod denom;
+		sum:=sum+zeta^qxdenom;
+		resum:=resum+Cos(theta*qxdenom);
+		imsum:=imsum+Sin(theta*qxdenom);
+	od;
+	brs:=[];
+	for tbr in [0..3] do
+		if order*E(8)^(2*tbr)=sum^2 then
+			if tbr=0 then
+				if resum>0.0 then  Add(brs, 0);  if imsum^2/order^2>0.000001 then beep(1000); fi;
+				else Add(brs, 4);
+				fi;
+			elif tbr=1 then
+				if resum>0.0 then  Add(brs, 1); if imsum<0.0 then beep(100); fi;
+				else Add(brs, 5);
+				fi;
+			elif tbr=2 then
+				if imsum>0.0 then  Add(brs, 2); if resum^2/order^2>0.000001 then beep(2000); fi;
+				else Add(brs, 6);
+				fi;
+			elif tbr=3 then
+				if resum<0.0 then  Add(brs, 3); if imsum<0.0 then beep(200); fi;
+				else Add(brs, 7);
+				fi;
+			fi;
+			#quot:=sum/E(8)^tbr;
+			#if ComplexConjugate(quot)<>quot then beep(1); fi;
+			#Printn("quot", quot);
+			#if quot>0 then Add(brs, tbr);
+			#elif quot<0  then Add(brs, tbr+4);
+			#else beep(3);
+			#fi;
+		fi;
+	od;
+	if Length(brs)<>1 then beep(4); fi;
+	return(brs[1]);
+end;
+
+BrownInvariantPdecomps:=function(fqfpdecomprec)
+	#
+	# fqfpdecomprec is produced by
+	# fqfpdecomprec:=Normalform_fqf(fag, fqf).
+	# "pDiscriminantForms.txt"
+	# The record fqfpdecomprec.decompdata is the list of the records
+	# p:=p,
+	# pfag:=pfag,
+	# pfqf:=diags,
+	# pincl:=newpincl,
+	# pproj:=newpproj
+	#
+	local beep, ps, decompdata, sum, pddata, p, pos,
+	pfag, pfqf, lengp, gg, kk, aa, taa, fqfpos, pfqfcomp, Bps, therec, psum;
+	#
+	beep:=function(n) Printn("wrong in BrownInvariantPdecomps", n); Error(); end;
+	#
+	ps:=fqfpdecomprec.ps;
+	decompdata:=fqfpdecomprec.decompdata;
+	if ps=[] then
+		therec:=rec(total:=0, pparts:=[]);
+		return(therec);
+	fi;
+	sum:=0;
+	Bps:=[];
+	#
+	for pddata in decompdata do
+		p:=pddata.p;
+		psum:=0;
+		pfag:=pddata.pfag;
+		pfqf:=pddata.pfqf;
+		lengp:=Length(pfag);
+		if p=2 then
+			pos:=1;
+			fqfpos:=1;
+			while pos<=lengp do
+				gg:=pfag[pos];
+				kk:=Ordp(gg, p);
+				if gg<>p^kk then beep(2); fi;
+				pfqfcomp:=pfqf[fqfpos];
+			 	if Length(pfqfcomp)=1 then # w
+			 		aa:=gg*pfqfcomp[1][1];
+			 		if not ( IsInt(aa) and aa mod 2=1) then beep(5); fi;
+			 		sum:=sum+(aa+kk*(aa^2-1)/2);
+					psum:=psum+(aa+kk*(aa^2-1)/2);
+			 		pos:=pos+1;
+			 		fqfpos:=fqfpos+1;
+			 	else # U or V
+			 		if pfqfcomp[1][2]<>1/2^kk or pfqfcomp[2][1]<>1/2^kk then beep(10); fi;
+			 		if pfqfcomp[1][1]=0 then # U
+			 			if pfqfcomp[2][2]<>0 then beep(12); fi;
+			 			sum:=sum+0;
+						psum:=psum+0;
+			 		else # V
+			 			if pfqfcomp[1][1]<>1/2^(kk-1) or pfqfcomp[2][2]<>1/2^(kk-1) then beep(20); fi;
+			 			sum:=sum +4*kk;
+						psum:=psum+4*kk;
+			 		fi;
+			 		pos:=pos+2;
+			 		fqfpos:=fqfpos+1;
+			 	fi;
+			od;
+			if fqfpos<>Length(pfqf)+1 then beep(21); fi;
+		else
+			pos:=1;
+			while pos<=lengp do
+				gg:=pfag[pos];
+				kk:=Ordp(gg, p);
+				if gg<>p^kk then beep(28); fi;
+				taa:=gg*pfqf[pos][1][1];
+				if not ( IsInt(taa) and taa mod 2=0) then beep(30); fi;
+				if kk mod 2 =1 then
+					sum:=sum+2*Legendre(taa/2, p)-Legendre(-1, p)-1;
+					psum:=psum+2*Legendre(taa/2, p)-Legendre(-1, p)-1;
+				else
+					sum:=sum+0;
+					psum:=psum+0;
+				fi;
+				pos:=pos+1;
+			od;
+		fi;
+		Add(Bps, [p, psum mod 8]);
+	od;
+	#
+	therec:=rec(total:=(sum mod 8), pparts:=Bps);
+	if Sum(List(therec.pparts, xx->xx[2])) mod 8<>therec.total then
+		beep(54744737463);
+	fi;
+	return(therec);
+end;
+
+BrownInvariant:=function(fag, fqf)
+	return(BrownInvariantPdecomps(Normalform_fqf(fag, fqf)));
+end;
+
+
+################

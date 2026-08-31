@@ -1,0 +1,617 @@
+#Read("RatQF.txt");
+
+
+
+#######################
+
+SquareFree:=function(aa)
+  #
+  # aa is a non-zero rational number.
+  # zz is a square-free integer,
+  # and mm is a rational such that zz=mm^2*aa.
+  #
+  local trec, beep, mm, zz, numfacs, denfacs, numkk, denkk,
+  facs, ps, p, kk, mu, numaa, denaa;
+  #
+  beep:=function(beepnumb)
+    localbeep("SqaureFree", beepnumb); Error();
+  end;
+  #
+  if aa=0 then beep(4233); fi;
+  numaa:=NumeratorRat(aa);
+  denaa:=DenominatorRat(aa);
+  if numaa<0 then zz:=-1; numaa:=-numaa; else zz:=1; fi;
+  if numaa=1 and denaa=1 then trec:=rec(zz:=zz, mm:=1); return(trec); fi;
+  numfacs:=Factors(numaa);
+  denfacs:=Factors(denaa);
+  facs:=Union(numfacs, denfacs);
+  mm:=1;
+  ps:=Set(facs);
+  for p in ps do
+    if p=1 then continue; fi;
+    numkk:=OccurNumb(numfacs, p);
+    denkk:=OccurNumb(denfacs, p);
+    if numkk>0 then
+      if denkk<>0 then beep(52233); fi;
+      if numkk mod 2=1 then
+        zz:=zz*p;
+        mu:=(numkk-1)/2;
+      else
+        mu:=numkk/2;
+      fi;
+      mm:=mm/p^mu;
+    else
+      if denkk=0 then beep(54733); fi;
+      if denkk mod 2=1 then
+        zz:=zz*p;
+        mu:=(denkk+1)/2;
+      else
+        mu:=denkk/2;
+      fi;
+      mm:=mm*p^mu;
+    fi;
+  od;
+  #
+  if mm^2*aa<>zz then beep(4762); fi;
+  trec:=rec(zz:=zz, mm:=mm);
+  return(trec);
+end;
+
+
+
+
+DiagRatQF:=function(ratGram)
+  #
+  local beep, diagrec, diagjob, n, diagcomps, T, basis, tgram, ttsquarefree;
+  #
+  beep:=function(beepnumb)
+    localbeep("DiagRatQF", beepnumb); Error();
+  end;
+  #
+  n:=Length(ratGram);
+  diagcomps:=[];
+  basis:=IdentityMat(n);
+  tgram:=List(ratGram, List);
+  #
+  diagjob:=function(kk) #[1..kk-1] has been  diagonalized
+    local newtbasis, tbasis, newtgram, ttgram, ii, mm, tv,
+    nonzeroflag, jj, tt, cc, tvkkdual, tviidual, bb;
+    #
+    #Printn(tgram, kk, basis);
+    #
+    if kk=n then
+      ttsquarefree:=SquareFree(tgram[n][n]);
+      basis[n]:=ttsquarefree.mm*basis[kk];
+      Add(diagcomps, ttsquarefree.zz);
+    else
+      nonzeroflag:=false;
+      for mm in [kk..n] do
+        if tgram[mm][mm]<>0 then
+          nonzeroflag:=true;
+          tv:=basis[mm];
+          basis[mm]:=basis[kk];
+          basis[kk]:=tv;
+          break;
+        fi;
+      od;
+      if not nonzeroflag then
+        for jj in [kk..n] do
+          for mm in [jj+1..n] do
+            if tgram[jj][mm]<>0 then
+              nonzeroflag:=true;
+              tv:=basis[jj]+basis[mm];
+              basis[jj]:=basis[kk];
+              basis[kk]:=tv;
+              break;
+            fi;
+          od;
+          if nonzeroflag then
+            break;
+          fi;
+        od;
+      fi;
+      if not nonzeroflag then
+        while Length(diagcomps)<n do
+          Add(diagcomps, 0);
+        od;
+        return();
+      fi;
+      #
+      tvkkdual:=basis[kk]*ratGram;
+      tt:=tvkkdual*basis[kk];
+      if tt=0 then beep(5533); fi;
+      ttsquarefree:=SquareFree(tt);
+      basis[kk]:=ttsquarefree.mm*basis[kk];
+      tvkkdual:=basis[kk]*ratGram;
+      tt:=tvkkdual*basis[kk];
+      #
+      Add(diagcomps, ttsquarefree.zz);
+      #
+      for mm in [kk+1..n] do
+        cc:=tvkkdual*basis[mm]/tt;
+        basis[mm]:=basis[mm]-cc*basis[kk];
+      od;
+      #
+      for ii in [kk..n] do
+        tviidual:=basis[ii]*ratGram;
+        tgram[ii][ii]:=tviidual*basis[ii];
+        for jj in [ii+1..n] do
+          bb:=tviidual*basis[jj];
+          tgram[ii][jj]:=bb;
+          tgram[jj][ii]:=bb;
+        od;
+      od;
+      #newtgram:=TMTTmult(basis, ratGram);
+      diagjob(kk+1);
+    fi;
+  end;
+  #
+  diagjob(1);
+  #
+  diagrec:=rec(
+    newbasis:=basis,
+    diags:=diagcomps
+  );
+  if TMTTmult(diagrec.newbasis, ratGram)<>DiagonalMat(diagrec.diags) then
+    beep(5853);
+  fi;
+  return(diagrec);
+end;
+
+RandomRatGram:=function(n, denom, abs)
+  local ii, jj, M, aa;
+  M:=NullMat(n, n);
+  for ii in [1..n] do
+    aa:=RandomRat(denom, abs);
+    M[ii][ii]:=aa;
+    for jj in [ii+1..n] do
+      aa:=RandomRat(denom, abs);
+      M[ii][jj]:=aa;
+      M[jj][ii]:=aa;
+    od;
+  od;
+  return(M);
+end;
+
+RandomRatGramList:=function(n, L)
+  local ii, jj, M, aa;
+  M:=NullMat(n, n);
+  for ii in [1..n] do
+    aa:=Random(L);
+    M[ii][ii]:=aa;
+    for jj in [ii+1..n] do
+      aa:=Random(L);
+      M[ii][jj]:=aa;
+      M[jj][ii]:=aa;
+    od;
+  od;
+  return(M);
+end;
+
+
+RandomRatMatList:=function(r, c, L)
+  local ii, jj, M, aa;
+  M:=NullMat(r, c);
+  for ii in [1..r] do
+    for jj in [1..c] do
+      aa:=Random(L);
+      M[ii][jj]:=aa;
+    od;
+  od;
+  return(M);
+end;
+
+
+HilbertSymbol:=function(a, b, p)
+  #
+  local alpha, beta, u, v, ep, hilb, eu, ev, omegau, omegav;
+  #
+  if p=infinity then
+    if a>0 or b>0 then return(1);
+    else return(-1);
+    fi;
+  fi;
+  #
+  alpha:=RatOrdp(a, p);
+  beta:=RatOrdp(b, p);
+  u:=a*p^(-alpha);
+  v:=b*p^(-beta);
+  #
+  if p <> 2 then
+    u:=u mod p;
+    v:=v mod p;
+    ep:=(p-1)/2 mod 2;
+    hilb:=(-1)^(alpha*beta*ep)*Legendre(u, p)^beta*Legendre(v, p)^alpha;
+    return(hilb);
+  fi;
+  #
+  if p=2 then
+    u:=u mod 8;
+    v:=v mod 8;
+    eu:=(u-1)/2 mod 2;
+    ev:=(v-1)/2 mod 2;
+    omegau:=(u^2-1)/8;
+    omegav:=(v^2-1)/8;
+    hilb:=(-1)^(eu*ev+alpha*omegav+beta*omegau);
+    return(hilb);
+  fi;
+  #
+end;
+
+
+
+
+
+IsSquareRat:=function(aa)
+  #
+  local alpha, uu, ps, p;
+  #
+  if aa=0 then beep(575763); fi;
+  if aa<0 then return(false); fi;
+  ps:=Union(Factors(NumeratorRat(aa)), Factors(DenominatorRat(aa)));
+  ps:=SetMinus(ps, [1]);
+  for p in ps do
+    alpha:=RatOrdp(aa, p);
+    if alpha mod 2 <>0 then return(false); fi;
+  od;
+  return(true);
+end;
+
+IsSquareInQp:=function(aa, p)
+  #
+  local alpha, uu;
+  #
+  if aa=0 then beep(575763); fi;
+  if p=infinity then
+    return(aa>0);
+  fi;
+  alpha:=RatOrdp(aa, p);
+  if alpha mod 2 <>0 then return(false); fi;
+  uu:=aa*p^(-alpha);
+  if uu mod p=0 then beep(42653); fi;
+  if p=2 then return(uu mod 8=1);
+  else return(Legendre(uu mod p, p)=1);
+  fi;
+end;
+
+
+
+Hilbcpp:=function(tdiagrec, pp)
+  #
+  local nn, cpp, ii, aaii, jj, aajj;
+  #
+  nn:=Length(tdiagrec.diags);
+  cpp:=1;
+  for ii in [1..nn] do
+    aaii:=tdiagrec.diags[ii];
+    for jj in [ii+1..nn] do
+      aajj:=tdiagrec.diags[jj];
+      cpp:=cpp*HilbertSymbol(aaii, aajj, pp);
+    od;
+  od;
+  return(cpp);
+end;
+
+
+NonSquarep:=function(p)
+  local xx, N, cc;
+  if p<2^60 then
+    for xx in [2..p-1] do
+      if Legendre(xx, p)=-1 then return(xx); fi;
+    od;
+  else
+    N:=2^60;
+    for cc in [1..N-1] do
+      for xx in [0..N-1] do
+        if Legendre(xx+cc*N, p)=-1 then return(xx+cc*2^30); fi;
+      od;
+    od;
+  fi;
+  beep(32643763);
+end;
+
+RepInQptimesModSquare:=function(aa, p)
+  #
+  local reps, bb, nu, uu, pf;
+  #
+  if p=2 then
+    reps:=[];
+    for bb in [1,3,5,7,2,6,10,14] do
+      if IsSquareInQp(bb/aa, 2) then Add(reps, bb); fi;
+    od;
+    if Length(reps)<>1 then beep(4172381); fi;
+    return(reps[1]);
+  else
+    nu:=RatOrdp(aa, p);
+    uu:=(aa*p^(-nu)) mod p;
+    if nu mod 2 =0 then pf:=1;
+    else pf:=p;
+    fi;
+    if Legendre(uu, p)=1 then return(pf);
+    else
+      return(NonSquarep(p)*pf);
+    fi;
+  fi;
+  beep(417417);
+end;
+
+
+DoesExistFp:=function(p, n, dd, c)
+  #
+  # Serre: Ch.4, S2.3, Prop.6
+  #
+  local repdd, repminusone;
+  #
+  if n=1 then return(c=1);
+  elif n=2 then
+    if c=1 then return(true); fi;
+    repdd:=RepInQptimesModSquare(dd, p);
+    repminusone:=RepInQptimesModSquare(-1, p);
+    return(repdd<>repminusone);
+  elif n>=3 then
+    return(true);
+  fi;
+  beep(54819854321);
+end;
+
+IsRepresentableByFp:=function(p, n, dd, c, aa)
+  #
+  # Serre: Ch.4, S2.2, Th.6, Cor
+  #
+  local repdd, repaa, repmdd, flag1, flag2;
+  if n=1 then
+    repdd:=RepInQptimesModSquare(dd, p);
+    repaa:=RepInQptimesModSquare(aa, p);
+    return(repdd=repaa);
+  elif n=2 then
+    return(HilbertSymbol(aa, -dd, p)=c);
+  elif n=3 then
+    repmdd:=RepInQptimesModSquare(-dd, p);
+    repaa:=RepInQptimesModSquare(aa, p);
+    flag1:=(repaa<>repmdd);
+    flag2:=(repaa=repmdd) and HilbertSymbol(-1, repmdd, p)=c;
+    return(flag1 or flag2);
+  elif n>=4 then return(true);
+  fi;
+  beep(5473654321);
+end;
+
+
+IsZeroRepresentableByFp:=function(p, n, dd, c)
+  #
+  # Serre: Ch.4, S2.2, Th.6
+  #
+  local repdd, repaa, repmdd, repminusone;
+  #Printn("not yet checked IsZeroRepresentableByFp");
+  if n=1 then return(false);
+  elif n=2 then
+    repdd:=RepInQptimesModSquare(dd, p);
+    repminusone:=RepInQptimesModSquare(-1, p);
+    return(repdd=repminusone);
+  elif n=3 then
+    return(HilbertSymbol(-1, -dd, p)=c);
+  elif n=4 then
+    repdd:=RepInQptimesModSquare(dd, p);
+    if repdd<>1 then return(true); fi;
+    if HilbertSymbol(-1, -1, p)=c then return(true); fi;
+    return(false);
+  elif n>=5 then return(true);
+  fi;
+  beep(5473654321);
+end;
+
+
+LocalDataRatQF:=function(ratGram)
+  #
+  local n, d0, d0ps, tdiagrec, sminus, diagps, aa, aaps, xx,
+  negativecps, P, tp, localdata, d0rec;
+  #
+  n:=Length(ratGram);
+  d0:=Determinant(ratGram);
+  if d0=0 then beep(5533); fi;
+  d0rec:=SquareFree(d0);
+  d0ps:=Factors(AbsInt(d0rec.zz));
+  d0ps:=SetMinus(d0ps, [1]);
+  tdiagrec:=DiagRatQF(ratGram);
+  sminus:=OccurNumb(List(tdiagrec.diags, xx->xx<0), true);
+  diagps:=[2, infinity];
+  for aa in tdiagrec.diags do
+    aaps:=Union(Factors(AbsInt(NumeratorRat(aa))), Factors(AbsInt(DenominatorRat(aa))));
+    diagps:=Union(diagps, aaps);
+  od;
+  diagps:=SetMinus(diagps, [1]);
+  negativecps:=[];
+  for tp in diagps do
+    if Hilbcpp(tdiagrec, tp)=-1 then Add(negativecps, tp); fi;
+  od;
+  P:=Union([2, infinity], d0ps, negativecps);
+  #
+  localdata:=rec();
+  localdata.n:=n;
+  localdata.P:=P;
+  localdata.d0:=d0rec.zz;
+  localdata.negativecps:=negativecps;
+  localdata.sminus:=sminus;
+  return(localdata);
+end;
+
+
+
+InvolvedPrimes:=function(aa)
+  #
+  # aa is a non-zero rational number.
+  # ps is the set of primes p such that Ordp(aa, p)<>0.
+  #
+  local ps;
+  if aa=0 then beep(3263427463765837); fi;
+  ps:=Union(Factors(AbsInt(NumeratorRat(aa))), Factors(AbsInt(DenominatorRat(aa))));
+  ps:=SetMinus(ps, [1]);
+  return(ps);
+end;
+
+
+IsRepresentableByFp:=function(p, n, dd, c, aa)
+  #
+  # Serre: Ch.4, S2.2, Th.6, Cor
+  #
+  local repdd, repaa, repmdd, flag1, flag2;
+  if n=1 then
+    repdd:=RepInQptimesModSquare(dd, p);
+    repaa:=RepInQptimesModSquare(aa, p);
+    return(repdd=repaa);
+  elif n=2 then
+    return(HilbertSymbol(aa, -dd, p)=c);
+  elif n=3 then
+    repmdd:=RepInQptimesModSquare(-dd, p);
+    repaa:=RepInQptimesModSquare(aa, p);
+    flag1:=(repaa<>repmdd);
+    flag2:=(repaa=repmdd) and HilbertSymbol(-1, repmdd, p)=c;
+    return(flag1 or flag2);
+  elif n>=4 then return(true);
+  fi;
+  beep(5473654321);
+end;
+
+
+
+ConstructRatQF:=function(normalizedlocaldata)
+  #
+  local currentlocaldata, diags,findt, tt, d0overtt, newlocaldata,
+  newnegativecps, newps, tp, ups, cps;
+  #
+  currentlocaldata:=normalizedlocaldata;
+  diags:=[];
+  #
+  #
+  findt:=function()
+    #
+    local tn, sgn, tfactors, smallP, tp, IsRepresentedOnSmallps,
+    tt, tp0, cc, td0, ttf;
+    #
+    tn:=currentlocaldata.n;
+    if tn>=4 and tn<>currentlocaldata.sminus then
+      return(1);
+    fi;
+    #
+    if tn=currentlocaldata.sminus then sgn:=[-1];
+    elif currentlocaldata.sminus=0 then sgn:=[1];
+    else sgn:=[1,-1];
+    fi;
+    #
+    td0:=currentlocaldata.d0;
+    tfactors:=[sgn];
+    smallP:=Union(InvolvedPrimes(currentlocaldata.d0), currentlocaldata.negativecps, [2]);
+    smallP:=SetMinus(smallP, [infinity]);
+    for tp in smallP do
+      Add(tfactors, [1,tp]);
+    od;
+    tfactors:=Reversed(tfactors);
+    #
+    IsRepresentedOnSmallps:=function(tt)
+      local tcp, tp;
+      for tp in smallP do
+        if tp in currentlocaldata.negativecps then
+          tcp:=-1;
+        else
+          tcp:=1;
+        fi;
+        if not IsRepresentableByFp(tp, tn, td0, tcp, tt) then
+          return(false);
+        fi;
+      od;
+      return(true);
+    end;
+    #
+    for ttf in Cartesian(tfactors)  do
+      tt:=Product(ttf);
+      if IsRepresentedOnSmallps(tt) then
+          return(tt);
+      fi;
+    od;
+    #
+    if tn<>2 then beep(43347654); fi;
+    #
+    for ttf in Cartesian(tfactors) do
+      tt:=Product(ttf);
+      for tp0 in Primes do
+        if (not tp0 in smallP) and IsRepresentedOnSmallps(tp0*tt) then
+            return(tp0*tt);
+        fi;
+      od;
+    od;
+    for cc in [1..1000] do
+      for ttf in Cartesian(tfactors) do
+        tt:=Product(ttf);
+        for tp0 in [cc*1000..(cc+1)*1000] do
+          if IsPrime(tp0) and (not tp0 in smallP) and IsRepresentedOnSmallps(tp0*tt) then
+              return(tp0*tt);
+          fi;
+        od;
+      od;
+    od;
+    #
+    beep(4274473473473476347633476);
+    #
+  end;
+  #
+  while Length(diags)<normalizedlocaldata.n do
+    if currentlocaldata.n=2 then
+      tt:=findt();
+      d0overtt:=SquareFree(currentlocaldata.d0/tt).zz;
+      Append(diags, [tt, d0overtt]);
+    else
+      tt:=findt();
+      Add(diags, tt);
+      newlocaldata:=rec();
+      #
+      newlocaldata.n:=(currentlocaldata.n)-1;
+      d0overtt:=SquareFree(currentlocaldata.d0/tt).zz;
+      newlocaldata.d0:=d0overtt;
+      if tt<0 then
+        newlocaldata.sminus:=currentlocaldata.sminus-1;
+      else
+        newlocaldata.sminus:=currentlocaldata.sminus;
+      fi;
+      if tt<>1 then
+        #
+        #if tt=1, then HilbertSymbol(tt, d0overtt, tp)=1 for any tp.
+        #
+        newps:=Union(InvolvedPrimes(tt), InvolvedPrimes(d0overtt));
+        newnegativecps:=[];
+        if HilbertSymbol(tt, d0overtt, 2)=-1 then
+          Add(newnegativecps, 2);
+        fi;
+        for tp in newps do
+          if tp<>2 and HilbertSymbol(tt, d0overtt, tp)=-1 then
+            Add(newnegativecps, tp);
+          fi;
+        od;
+        if tt<0 and d0overtt<0 then
+          Add(newnegativecps, infinity);
+        fi;
+        if Length(newnegativecps) mod 2 <>0 then
+          beep(4246363);
+        fi;
+        ups:=Union(newnegativecps, currentlocaldata.negativecps);
+        cps:=Intersection(newnegativecps, currentlocaldata.negativecps);
+        newlocaldata.negativecps:=SetMinus(ups, cps);
+        if Length(newlocaldata.negativecps) mod 2<>0 then
+          beep(57345);
+        fi;
+      else
+        newlocaldata.negativecps:=currentlocaldata.negativecps;
+      fi;
+      #
+      #Printn(currentlocaldata.n, "->", newlocaldata.n);
+      #Printn("tt", tt);
+      #Printn(currentlocaldata.negativecps, newlocaldata.negativecps);
+      currentlocaldata:=newlocaldata;
+      #
+    fi;
+  od;
+  #
+  return(diags);
+  #
+end;
+
+#end

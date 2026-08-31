@@ -1,0 +1,42 @@
+#Read("newtools.txt");
+#
+
+NormalFAGrec:= function(A)
+	#
+	# NormalFAG means the representation of finite abelian group
+	# that satisfies the successive-divisibility condition.
+	# based on NormalFAG in DiscriminantForms.txt
+  #
+	local leng, oldD, snf, D, tT, Tinv,
+	newD, told2new, old2new, new2old, ii,
+  fagrec;
+	#
+	leng:=Length(A);
+	oldD:=DiagonalMats(List(A, aa->[[aa]]));
+	snf:=SmithNormalFormIntegerMatTransforms(oldD);
+	D:=snf.normal;
+	Tinv:=InverseMat(snf.coltrans);
+	tT:=TransposedMat(snf.coltrans);
+	newD:=[];
+	told2new:=[];
+	new2old:=[];
+	for ii in [1..leng] do
+		if D[ii][ii]>1 then
+			Add(newD, D[ii][ii]);
+			Add(new2old, Tinv[ii]);
+			Add(told2new, tT[ii]);
+		fi;
+	od;
+	old2new:=TransposedMatMutable(told2new);
+	MatmodDiscg(new2old, A);
+	MatmodDiscg(old2new, newD);
+  fagrec:=rec(
+    newD:=newD,
+    old2new:=old2new,
+    new2old:=new2old
+  );
+	return(fagrec);
+end;
+
+
+#end

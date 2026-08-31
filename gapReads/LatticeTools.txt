@@ -1,0 +1,1242 @@
+#######################
+
+SignatureQ:=function(Q)
+	#
+	# the signature of the non-degenerate symmetric matrix Q
+	#
+	local tp, tn, dim, signaturejob;
+	dim:=Length(Q);
+	tp:=0;
+	tn:=0;
+	signaturejob:=function(sdim, sQ)
+		local a, fflag, v, orthoB, newsQ, ii, e1;
+		if sdim=1 then
+			a:=sQ[1][1];
+			if a>0 then tp:=tp+1;
+			elif a<0 then tn:=tn+1;
+			else Printn("wrong_in_SignatureQ", Q); Error();
+			fi;
+		else
+			fflag:=false;
+			for ii in [1..sdim] do
+				v:=MakeVectei(sdim, ii);
+				a:=v*sQ*v;
+				if a>0 then tp:=tp+1; fflag:=true;break;
+				elif a<0 then tn:=tn+1; fflag:=true;break;
+				fi;
+			od;
+			if not fflag then
+				e1:=MakeVectei(sdim, 1);
+				for ii in [2..sdim] do
+					v:=MakeVectei(sdim, ii);
+					v:=e1+v;
+					a:=v*sQ*v;
+					if a>0 then tp:=tp+1; fflag:=true;break;
+					elif a<0 then tn:=tn+1; fflag:=true;break;
+					fi;
+				od;
+			fi;
+			if fflag then
+				orthoB:=NullspaceMat(TransposedMat([v*sQ]));
+				newsQ:=TMTTmult(orthoB, sQ);
+				signaturejob(sdim-1, newsQ);
+			else
+				Printn("wrong2_in_SignatureQ", Q); Error();
+			fi;
+		fi;
+	end;
+	signaturejob(dim, Q);
+	return([dim, tp, tn]);
+end;
+
+
+IsEvenLattice:=function(tG)
+  # changed on 2026/08/16
+	local r, ii;
+	if not IsIntMat(tG) then return(false); fi;
+	if not IsSymmMat(tG) then return(false); fi;
+  if DeterminantIntMat(tG)=0 then return(false); fi;
+	r:=Length(tG);
+	for ii in [1..r] do
+		if tG[ii][ii] mod 2 <>0 then return(false); fi;
+	od;
+	return(true);
+end;
+
+IsLattice:=function(tG)
+  # added on 2026/08/16
+	if not IsIntMat(tG) then return(false); fi;
+	if not IsSymmMat(tG) then return(false); fi;
+  if DeterminantIntMat(tG)=0 then return(false); fi;
+	return(true);
+end;
+
+MakeADEHLat:=function(R)
+	#
+	# R is a list of names in theADEHlist
+	#
+	local Gram, ir, numb, ii;
+	Gram:=[];
+	for ir in theADEHlist do
+		numb:=NumbOccur(ir, R);
+		if numb>0 then
+			for ii in [1..numb] do
+				Gram:=DiagonalMats([Gram, ADEHrec.(ir).Gram]);
+			od;
+		fi;
+	od;
+	return(Gram);
+end;
+
+
+####################
+
+OrthogonalComp:=function(B, Gram)
+	local Bcomp, comprec;
+	#if not IsEvenLattice(Gram) then
+	if TransposedMat(Gram)<>Gram or Length(Gram)<Length(B) then 
+		#Added on 2024/12/16
+		Printn("wrong input in OrthogonalComp");
+		Printn("maybe this should be OrthogonalCompRec");
+		Error(); #Added on 2018/07/21
+	fi;
+	Bcomp:=NullspaceIntMat(Gram*TransposedMat(B));
+	comprec:=rec(
+		basis:=Bcomp,
+		Gram:=TMTTmult(Bcomp, Gram)
+	);
+	return(comprec);
+end;
+
+OrthogonalCompRec:=function(Gram, B)
+	local Bcomp, comprec;
+	Bcomp:=NullspaceIntMat(Gram*TransposedMat(B));
+	comprec:=rec(
+		basis:=Bcomp,
+		Gram:=TMTTmult(Bcomp, Gram)
+	);
+	return(comprec);
+end;
+
+
+#############
+
+AutPosLat:=function(Gram)
+	local n, LLLrec, T, Tinv, newG, diags, mm, svrec, sv, bigM, list, vv, tg;
+	n:=Length(Gram);
+	LLLrec:=LLLReducedGramMat(Gram);
+	T:=LLLrec.transformation;
+	Tinv:=Inverse(T);
+	newG:=LLLrec.remainder;
+	diags:=[1..n]; Apply(diags, ii->newG[ii][ii]);
+	mm:=MaximumList(diags);
+	svrec:=ShortestVectors(Gram, mm);
+	sv:=[];
+	for vv in svrec.vectors do
+		Append(sv, [vv, -vv]);
+	od;
+	bigM:=TMTTmult(sv, Gram);
+	list:=FindAllSubconfigs(newG, bigM);
+	#Apply(list, vv->Map(ii->sv[ii], vv));
+	Apply(list, vv->List(vv, ii->sv[ii]));
+	Apply(list, gg->Tinv*gg);
+	#
+	# for check
+	#for tg in list do
+	#	if TMTTmult(tg, Gram)<>Gram then Printn("wrong_AutPosL"); Error(); fi;
+	#od;
+	#
+	return(list);
+end;
+
+IsomPosLat:=function(Gram1, Gram2)
+	local n, LLLrec, T1, T1inv, newG1, diags, mm, svrec, sv, bigM2, list, vv, tg;
+	n:=Length(Gram1);
+	LLLrec:=LLLReducedGramMat(Gram1);
+	T1:=LLLrec.transformation;
+	T1inv:=Inverse(T1);
+	newG1:=LLLrec.remainder;
+	diags:=[1..n]; Apply(diags, ii->newG1[ii][ii]);
+	mm:=MaximumList(diags);
+	svrec:=ShortestVectors(Gram2, mm);
+	sv:=[];
+	for vv in svrec.vectors do
+		Append(sv, [vv, -vv]);
+	od;
+	bigM2:=TMTTmult(sv, Gram2);
+	list:=FindAllSubconfigs(newG1, bigM2);
+	#Apply(list, vv->Map(ii->sv[ii], vv));
+	Apply(list, vv->List(vv, ii->sv[ii]));
+	Apply(list, gg->T1inv*gg);
+	#
+	# for check
+	#for tg in list do
+	#	if TMTTmult(tg, Gram2)<>Gram1 then Printn("wrong_IsomPosL"); Error(); fi;
+	#od;
+	#
+	return(list);
+end;
+
+IsIsomPosLat:=function(Gram1, Gram2)
+	local n, LLLrec, T1, T1inv, newG1, diags, mm, svrec, sv, bigM2, anisom, vv, tg;
+	n:=Length(Gram1);
+	LLLrec:=LLLReducedGramMat(Gram1);
+	T1:=LLLrec.transformation;
+	T1inv:=Inverse(T1);
+	newG1:=LLLrec.remainder;
+	diags:=[1..n]; Apply(diags, ii->newG1[ii][ii]);
+	mm:=MaximumList(diags);
+	svrec:=ShortestVectors(Gram2, mm);
+	sv:=[];
+	for vv in svrec.vectors do
+		Append(sv, [vv, -vv]);
+	od;
+	bigM2:=TMTTmult(sv, Gram2);
+	anisom:=FindASubconfig(newG1, bigM2);
+	if anisom =false or anisom=fail then return(false); fi;
+	#anisom:=Map(ii->sv[ii], anisom);
+	anisom:=List(anisom, ii->sv[ii]);
+	anisom:=T1inv*anisom;
+	#
+	#
+	return(anisom);
+end;
+
+
+
+##################
+
+
+mtReflection:=function(vv, GramL, r)
+	#
+	# r shoud be square norm -2
+	#
+	return(vv+(vv*GramL*r)*r);
+end;
+
+Reflection:=function(vv, GramL, r)
+	#
+	return(vv-2*((vv*GramL*r)/(r*GramL*r))*r);
+end;
+
+################
+#
+# added on 2016 Apr 30 from HesseQ2
+#
+##################
+
+FindBasisOfLattice:=function(bigM, targetrank, targetdisc)
+	#
+	# bigM is a large intersection matrix.
+	# basisiis is the list of ii's (increasing order) of length targetrank
+	# such that  the ii-th vectors form a basis of lattice of discriminant targetdisc
+	#( assumed to be minimal)
+	# with the Gram matrix Gram.
+	#
+	local fflag, partial, findbasisjob, basisiis, Gram;
+	fflag:=false;
+	partial:=MakeZeroVect(targetrank); #holder
+	#
+	findbasisjob:=function(level, lastentry)
+		local tM, td, kk;
+		if level>targetrank then
+			tM:=List(partial, kk->bigM[kk]);
+			Apply(tM, vv->List(partial, kk->vv[kk]));
+			td:=AbsInt(DeterminantIntMat(tM));
+			if td=targetdisc then basisiis:=List(partial); Gram:=CopyMat(tM); fflag:=true;
+			elif td<targetdisc then
+				Printn("there is a denser basis"); Error();
+			fi;
+			return();
+		fi;
+		for kk in [lastentry+1..Length(bigM)] do
+			partial[level]:=kk;
+			if RankMat(List([1..level], ii->bigM[partial[ii]]))=level then
+				findbasisjob(level+1, kk);
+				if fflag then break; fi; #for kk in
+			fi;
+		od;
+	end;
+	findbasisjob(1, 0);
+	if not fflag then Printn("cannot Find Basis Of Lattice"); return(false); fi;
+	return([basisiis, Gram]);
+end;
+
+
+
+FindSubvsWithRank:=function(vs, targetrank)
+	local svs, v, ranksvs, ii, iis;
+	svs:=[];
+	iis:=[];
+	ii:=0;
+	for v in vs do
+		ii:=ii+1;
+		Add(svs, v);
+		Add(iis, ii);
+		ranksvs:=RankMat(svs);
+		if ranksvs=targetrank then return([svs, iis]); fi;
+		if ranksvs<Length(svs) then
+			Remove(svs); Remove(iis);
+		fi;
+	od;
+	return(false);
+end;
+
+
+IsAWall:=function(vs, w, checklevel)
+	#
+	# We assume that vs is the full rank and that
+	# the region defined by w*x>=0 and v*x>=0 for all v in vs
+	# has an interior point.
+	# Does the hyperplane w*x=0 intersect with the interior of
+	# the cone defined by v*x>=0 for all v in vs?
+	# This is a problem of linear programming.
+	# The answer is yes if and only if the problem
+	#       minimize w*x
+	#       subject to v*x>=0
+	# has unbounded to -infinity,
+	# or if and only if there exists x0 such that
+	# w*x0<0 and v*x0>=0 for any v in vs,
+	# or if and only if w can NOT  be written as
+	# a linear combination of some v's in vs with
+	# positive coefficients.
+	# If true, then it returns [true, x0].
+	# If false, then it returns [false, [coeffs, v's]].
+	#
+	local dic, f, n, nonbasics, svsiis, NBinv,
+	#NBinv is nonbasic inv;
+	counter, minc,  y,evpos, sol,
+	entvarnumb, entpos, ynumb, leavevarnumb, leavey,a,correcty,
+	pivotfunc, NB, fvs, tv;
+	#
+	n:=Length(w);
+	dic:=CopyMat(vs);
+	f:=CopyVect(w);
+	#
+	# initialize
+	#
+	svsiis:=FindSubvsWithRank(vs, n);
+	if svsiis=false then
+		Printn("cannot apply IsAWall", RankMat(vs)); Error();
+	fi;
+	nonbasics:=svsiis[2];
+	NBinv:=Inverse(svsiis[1]);
+	Apply(dic, v->v*NBinv);
+	f:=f*NBinv;
+	#
+	counter:=0;
+	#
+	while counter<1000 do
+		#
+		counter:=counter+1;
+		#
+		# find entering
+		#
+		minc:=Minimum(f);
+		#
+		if minc>=0 then # bound
+			fvs:=List(nonbasics, ii->vs[ii]);
+			if checklevel>0 then
+				if f*fvs<>w then Printn("wrong IsAWall bound"); Error(); fi;
+			fi;
+			return([false, [f, fvs]]); #bound
+		fi;
+		#
+		entpos:=Position(f, minc);
+		entvarnumb:=nonbasics[entpos];
+		#
+		# find leaving
+		#
+		ynumb:=0;
+		a:=0;
+		for y in dic do
+			ynumb:=ynumb+1;
+			if y[entpos]<a then
+				a:=y[entpos];
+				leavevarnumb:=ynumb;
+				leavey:=y;
+			fi;
+		od;
+		#
+		if a=0 then
+			NBinv:=Inverse(List(nonbasics, xx->vs[xx]));
+			evpos:=MakeVectei(n, entpos);
+			sol:=NBinv*evpos;
+			if checklevel>0 then
+				if sol*w>=0 then Printn("wrong IsAWall unbound1"); Error(); fi;
+				for tv in vs do
+					if sol*tv<0 then Printn("wrong IsAWall unbound2"); Error(); fi;
+				od;
+			fi;
+			return([true, sol]); #Printn(counter, "unbound");
+		fi;
+		#
+		# pivot
+		#
+		nonbasics[entpos]:=leavevarnumb;
+		correcty:=CopyVect(leavey);
+		correcty[entpos]:=-1;
+		correcty:=(-1/a)*correcty;
+		pivotfunc:=function(yy)
+			local newy, aacorrecty;
+			aacorrecty:=yy[entpos]*correcty;
+			yy[entpos]:=0;
+			newy:=yy+aacorrecty;
+			return(newy);
+		end;
+		Apply(dic, pivotfunc);
+		f:=pivotfunc(f);
+		#
+		#  check
+		if checklevel>1 then
+			NB:=List(nonbasics, ii->vs[ii]);
+			if dic*NB<>vs then Printn("wrong pivot 1"); Error(); fi;
+			if f*NB<>w then Printn("wrong pivot 2"); Error(); fi;
+			Printn("pivot check done: this should be removed; counter=", counter);
+		fi;
+		#
+	od;
+	#
+	Printn("too many pivots");
+	return("too many pivots");
+	#
+end;
+
+IsAWallCounter:=function(vs, w, checklevel, trialcounter)
+	#
+	# same as IsAWall above except the line
+	# #while counter<trialcounter do
+	#
+	# We assume that vs is the full rank and that
+	# the region defined by w*x>=0 and v*x>=0 for all v in vs
+	# has an interior point.
+	# Does the hyperplane w*x=0 intersect with the interior of
+	# the cone defined by v*x>=0 for all v in vs?
+	# This is a problem of linear programming.
+	# The answer is yes if and only if the problem
+	#       minimize w*x
+	#       subject to v*x>=0
+	# has unbounded to -infinity,
+	# or if and only if there exists x0 such that
+	# w*x0<0 and v*x0>=0 for any v in vs,
+	# or if and only if w can NOT  be written as
+	# a linear combination of some v's in vs with
+	# positive coefficients.
+	# If true, then it returns [true, x0].
+	# If false, then it returns [false, [coeffs, v's]].
+	#
+	local dic, f, n, nonbasics, svsiis, NBinv,
+	#NBinv is nonbasic inv;
+	counter, minc,  y,evpos, sol,
+	entvarnumb, entpos, ynumb, leavevarnumb, leavey,a,correcty,
+	pivotfunc, NB, fvs, tv;
+	#
+	n:=Length(w);
+	dic:=CopyMat(vs);
+	f:=CopyVect(w);
+	#
+	# initialize
+	#
+	svsiis:=FindSubvsWithRank(vs, n);
+	if svsiis=false then
+		Printn("cannot apply IsAWall", RankMat(vs)); Error();
+	fi;
+	nonbasics:=svsiis[2];
+	NBinv:=Inverse(svsiis[1]);
+	Apply(dic, v->v*NBinv);
+	f:=f*NBinv;
+	#
+	counter:=0;
+	#
+	while counter<trialcounter do
+		#
+		counter:=counter+1;
+		#
+		# find entering
+		#
+		minc:=Minimum(f);
+		#
+		if minc>=0 then # bound
+			fvs:=List(nonbasics, ii->vs[ii]);
+			if checklevel>0 then
+				if f*fvs<>w then Printn("wrong IsAWall bound"); Error(); fi;
+			fi;
+			return([false, [f, fvs]]); #bound
+		fi;
+		#
+		entpos:=Position(f, minc);
+		entvarnumb:=nonbasics[entpos];
+		#
+		# find leaving
+		#
+		ynumb:=0;
+		a:=0;
+		for y in dic do
+			ynumb:=ynumb+1;
+			if y[entpos]<a then
+				a:=y[entpos];
+				leavevarnumb:=ynumb;
+				leavey:=y;
+			fi;
+		od;
+		#
+		if a=0 then
+			NBinv:=Inverse(List(nonbasics, xx->vs[xx]));
+			evpos:=MakeVectei(n, entpos);
+			sol:=NBinv*evpos;
+			if checklevel>0 then
+				if sol*w>=0 then Printn("wrong IsAWall unbound1"); Error(); fi;
+				for tv in vs do
+					if sol*tv<0 then Printn("wrong IsAWall unbound2"); Error(); fi;
+				od;
+			fi;
+			return([true, sol]); #Printn(counter, "unbound");
+		fi;
+		#
+		# pivot
+		#
+		nonbasics[entpos]:=leavevarnumb;
+		correcty:=CopyVect(leavey);
+		correcty[entpos]:=-1;
+		correcty:=(-1/a)*correcty;
+		pivotfunc:=function(yy)
+			local newy, aacorrecty;
+			aacorrecty:=yy[entpos]*correcty;
+			yy[entpos]:=0;
+			newy:=yy+aacorrecty;
+			return(newy);
+		end;
+		Apply(dic, pivotfunc);
+		f:=pivotfunc(f);
+		#
+		#  check
+		if checklevel>1 then
+			NB:=List(nonbasics, ii->vs[ii]);
+			if dic*NB<>vs then Printn("wrong pivot 1"); Error(); fi;
+			if f*NB<>w then Printn("wrong pivot 2"); Error(); fi;
+			Printn("pivot check done: this should be removed; counter=", counter);
+		fi;
+		#
+	od;
+	#
+	Printn("too many pivots");
+	return("too many pivots");
+	#
+end;
+
+
+###########
+
+IsEvenSymmInt:=function(M)
+	#
+	# Even if M is degenerate, it can return true.
+	#
+	local n, ii, jj, aa;
+	n:=Length(M);
+	for ii in [1..n] do
+		aa:=M[ii][ii];
+		if not ( IsInt(aa)  and  aa mod 2 =0 ) then
+			return(false);
+		fi;
+		for jj in [ii+1..n] do
+			aa:=M[ii][jj];
+			if not IsInt(aa) then return(false); fi;
+			if aa<>M[jj][ii] then return(false); fi;
+		od;
+	od;
+	return(true);
+end;
+
+############
+
+ModLatticeKer:=function(bigGram)
+	#
+	local  bigrk, hn, rk, basis, basisKer, ii, redGram, T;
+	#
+	#beep:=function(numb)
+	#	Printn("wrong in ModLatticeKer"); Error();
+	#end;
+	#
+	bigrk:=Length(bigGram);
+	hn:=HermiteNormalFormIntegerMatTransform(bigGram);
+	rk:=Rank(hn.normal);
+	T:=hn.rowtrans;
+	basis:=List([1..rk], ii->T[ii]);
+	basisKer:=List([rk+1..bigrk], ii->T[ii]);
+	redGram:=TMTTmult(basis, bigGram);
+	return([redGram, basis, basisKer]);
+end;
+
+
+
+############
+
+EvenPosDefBinaryFormGL:=function(d)
+	#
+	# The representatives of the positive-definite
+	# even lattices of rank 2 with discrimimant d
+	# under the GL_2(Z)-equivalence.
+	#
+	local Ms, a, c, bsq, rootbsq, b;
+	a:=2;
+	Ms:=[];
+	while 3*a^2<=4*d do
+		c:=a;
+		while 3*a*c<=4*d do
+			bsq:=a*c-d;
+			if bsq>=0 then
+				rootbsq:=RootInt(bsq);
+				if rootbsq^2=bsq then
+					b:=rootbsq;
+					if 0<=2*b and 2*b<=a and a<=c then
+						Add(Ms, [[a,b],[b,c]]);
+					fi;
+				fi;
+			fi;
+			c:=c+2;
+		od;
+		a:=a+2;
+	od;
+	return(Ms);
+end;
+
+################
+# Added on 15 Jan 2018
+#################
+
+LatticeGens2Gram:=function(bigGram)
+	#
+	local  bigrk, hn, rk, basis, basisKer,  redGram, T,
+	Tinv, vv, ii, proj, trec;
+	#
+	#beep:=function(numb)
+	#	Printn("wrong in ModLatticeKer"); Error();
+	#end;
+	#
+	bigrk:=Length(bigGram);
+	hn:=HermiteNormalFormIntegerMatTransform(bigGram);
+	rk:=Rank(hn.normal);
+	T:=hn.rowtrans;
+	basis:=List([1..rk], ii->T[ii]);
+	basisKer:=List([rk+1..bigrk], ii->T[ii]);
+	redGram:=TMTTmult(basis, bigGram);
+	Tinv:=InverseMat(T);
+	proj:=List(Tinv, vv->List([1..rk], ii->vv[ii]));
+	trec:=rec(
+		Gram:=redGram,
+		proj:=proj,
+		lifts:=basis,
+		Kerbasis:=basisKer
+	);
+	return(trec);
+end;
+
+checkLatticeGens2Gram:=function(bigGram, trec)
+	local r, beep;
+	beep:=function(numb)
+		Printn("wrong checkLatticeGens2Gram", numb);
+		Error();
+	end;
+	if trec.Gram=[] then
+		if not IsZeroMat(bigGram) then beep(-1); fi;
+		return(true);
+	fi;
+	if DeterminantIntMat(trec.Gram)=0 then beep(0); fi;
+	if not IsZeroMat(trec.Kerbasis*bigGram) then beep(1); fi;
+	if TMTTmult(trec.proj, trec.Gram)<>bigGram then beep(2); fi;
+	if TMTTmult(trec.lifts, bigGram)<>trec.Gram then beep(3); fi;
+	if AbsInt(DeterminantIntMat(StackMats(trec.Kerbasis, trec.lifts)))<>1 then
+		beep(4);
+	fi;
+	r:=Rank(bigGram);
+	if Length(trec.Gram)<>r then beep(5); fi;
+	if trec.lifts*trec.proj<>IdentityMat(r) then beep(6); fi;
+	return(true);
+end;
+
+WeylGroupOrder:=function(adetypes)
+	local order, adetype, r, t;
+	order:=1;
+	if adetypes=[] then return(1); fi;
+	for adetype in adetypes do
+		r:=ADEHrec.(adetype).rank;
+		t:=ADEHrec.(adetype).type;
+		if t='A' then
+			order:=order*Factorial(r+1);
+		elif t='D' then
+			order:=order*2^(r-1)*Factorial(r);
+		elif t='E' then
+			if r=6 then order:=order*2^7*3^4*5;
+			elif r=7 then order:=order*2^10*3^4*5*7;
+			elif r=8 then order:=order*2^14*3^5*5^2*7;
+			else Printn("wrong WeylGroupOrder", 1); Error();
+			fi;
+		else Printn("wrong WeylGroupOrder", 2); Error();
+		fi;
+	od;
+	return(order);
+end;
+
+CokerTorsion:=function(emb)
+	local tor, snf, ii, aa;
+	tor:=[];
+	snf:=SmithNormalFormIntegerMat(emb);
+	for ii in [1..Minimum(Length(emb), Length(emb[1]))] do
+		aa:=snf[ii][ii];
+		if aa<>0 and aa<>1 then
+			Add(tor, aa);
+		fi;
+	od;
+	return(tor);
+end;
+
+#####################
+# Added on 16 Jan 2018
+#####################
+
+mtReflectionMat:=function(Gram, r)
+	local beep, Idn, rM;
+	beep:=function(numb)
+		Printn("wrong mtReflectionMat", numb); Error();
+	end;
+	Idn:=IdentityMat(Length(r));
+	rM:=List(Idn, vv->mtReflection(vv, Gram, r));
+	if Order(rM)<>2 then beep(1); fi;
+	if TMTTmult(rM, Gram)<>Gram then beep(2); fi;
+	if r*rM<>-r then beep(3); fi;
+	return(rM);
+end;
+
+
+
+OrthogonalProj:=function(GramL, emb)
+	#
+	local beep, n, n1, n2, Idn1, Idn2, emb1, Gram1, orthocomp,
+	emb2, Gram2, Gram1dual, Gram2dual, emb12, emb12inv,
+	proj1, proj2, emb1_dual, emb2_dual, proj1_dual, proj2_dual,
+	trec;
+	#
+	beep:=function(numb)
+		Printn("wrong OrtogonalProj", numb); Error();
+	end;
+	#
+	if CokerTorsion(emb)<>[] then beep(1); fi;
+	n:=Length(GramL[1]);
+	n1:=Length(emb);
+	n2:=n-n1;
+	Idn1:=IdentityMat(n1);
+	Idn2:=IdentityMat(n2);
+	#
+	emb1:=List(emb);
+	Gram1:=TMTTmult(emb1, GramL);
+	if DeterminantIntMat(Gram1)=0 then beep(2); fi;
+	orthocomp:=OrthogonalComp(emb, GramL);
+	emb2:=orthocomp.basis;
+	Gram2:=TMTTmult(emb2, GramL);
+	Gram1dual:=InverseMat(Gram1);
+	Gram2dual:=InverseMat(Gram2);
+	#
+	emb1_dual:=Gram1dual*emb1; # in terms of the STANDARD basis of L and the dual basis of L1
+	emb2_dual:=Gram2dual*emb2; # in terms of the STANDARD basis of L and the dual basis of L2
+	emb12:=StackMats(emb1, emb2);
+	emb12inv:=InverseMat(emb12);
+	proj1:=emb12inv*StackMats(Idn1, NullMat(n2, n1));
+	proj2:=emb12inv*StackMats(NullMat(n1, n2), Idn2);
+	proj1_dual:=proj1*Gram1; #in terms of the STANDARD(!!) basis of L and the dual basis of L1
+	proj2_dual:=proj2*Gram2; # in terms of the STANDARD basis of OL and the dual basis of L2
+	#
+	#
+	trec:=rec(
+		Gram:=List(GramL),
+		Gram1:=Gram1,
+		Gram2:=Gram2,
+		emb1:=List(emb),
+		emb2:=emb2,
+		proj1:=proj1,
+		proj2:=proj2,
+		emb1_dual:=emb1_dual,
+		emb2_dual:=emb2_dual,
+		proj1_dual:=proj1_dual,
+		proj2_dual:=proj2_dual
+	);
+	MakeImmutable(trec);
+	return(trec);
+end;
+
+CheckOrthogonalProj:=function(projrec)
+	#
+	#
+	local beep,Gram1, Gram2, n1, n2, tn, Gram1inv, Gram2inv,
+	Binv, B, H,G,temb, tproj, ttproj, n;
+	#
+	beep:=function(numb)
+		Printn("wrong", numb, "CheckOrthogonalProj");  Error();
+	end;
+	#
+	Gram1:=projrec.Gram1;
+	Gram2:=projrec.Gram2;
+	n1:=Length(projrec.Gram1);
+	n2:=Length(projrec.Gram2);
+	tn:=n1+n2;
+	Gram1inv:=Inverse(Gram1);
+	Gram2inv:=Inverse(Gram2);
+	Binv:=DiagonalMats([Gram1inv, Gram2inv]);
+	B:=DiagonalMats([Gram1, Gram2]);
+	G:=projrec.Gram;
+	#
+	#
+	#
+	temb:=projrec.emb1;
+	tproj:=projrec.proj1;
+	ttproj:=projrec.proj2;
+	n:=n1;
+	#
+	if CokerTorsion(temb)<>[] then beep(10); fi;
+	#
+	if RowdimMat(temb)<>n then beep (100); fi;
+	if ColdimMat(temb)<>tn then beep (101); fi;
+	if RowdimMat(tproj)<>tn then beep (102); fi;
+	if ColdimMat(tproj)<>n then beep (103); fi;
+	#
+	if not temb*tproj=IdentityMat(n) then beep(11); fi;
+	if not TMTTmult(temb, G)=Gram1 then beep(12); fi;
+	if not IsZeroMat(temb*ttproj) then beep(13); fi;
+	#
+	#
+	temb:=projrec.emb2;
+	tproj:=projrec.proj2;
+	ttproj:=projrec.proj1;
+	n:=n2;
+	#
+	if CokerTorsion(temb)<>[] then beep(20); fi;
+	#
+	if RowdimMat(temb)<>n then beep (200); fi;
+	if ColdimMat(temb)<>tn then beep (201); fi;
+	if RowdimMat(tproj)<>tn then beep (202); fi;
+	if ColdimMat(tproj)<>n then beep (203); fi;
+	#
+	if not temb*tproj=IdentityMat(n) then beep(21); fi;
+	if not TMTTmult(temb, G)= Gram2 then beep(22); fi;
+	if not IsZeroMat(temb*ttproj) then beep(23); fi;
+	#
+	temb:=projrec.emb1_dual;
+	tproj:=projrec.proj1_dual;
+	ttproj:=projrec.proj2_dual;
+	n:=n1;
+	#
+	#
+	if RowdimMat(temb)<>n then beep (300); fi;
+	if ColdimMat(temb)<>tn then beep (301); fi;
+	if RowdimMat(tproj)<>tn then beep (302); fi;
+	if ColdimMat(tproj)<>n then beep (303); fi;
+	#
+	if not temb*tproj=IdentityMat(n) then beep(31); fi;
+	if not TMTTmult(temb, G)= Gram1inv then beep(32); fi;
+	if not IsZeroMat(temb*ttproj) then beep(33); fi;
+	#
+	temb:=projrec.emb2_dual;
+	tproj:=projrec.proj2_dual;
+	ttproj:=projrec.proj1_dual;
+	n:=n2;
+	#
+	#
+	if RowdimMat(temb)<>n then beep (400); fi;
+	if ColdimMat(temb)<>tn then beep (401); fi;
+	if RowdimMat(tproj)<>tn then beep (402); fi;
+	if ColdimMat(tproj)<>n then beep (403); fi;
+	#
+	if not temb*tproj=IdentityMat(n) then beep(41); fi;
+	if not TMTTmult(temb, G)= Gram2inv then beep(42); fi;
+	if not IsZeroMat(temb*ttproj) then beep(43); fi;
+	#
+	#
+	return(true);
+end;
+
+####################
+# Added on 2018 07 12
+####################
+
+
+CokerTorsionLifts:=function(A)
+	#
+	# The m times n matrix A defines phi: M:=Z^m to N:=Z^n.
+	# Tor is the torsion of cokernel of phi.
+	# torsion:=[a1,..., ak] means
+	# Tor is Z/(a1) times cdots times  Z/(ak).
+	# lifts=[f1, dots, fk] means
+	# fi mod Image (phi) is a generator of
+	# the i-th factor of Tor = Z/(a1) times cdots times  Z/(ak).
+	#
+	local snf, D, Tinv, tor, lifts, ii, trec;
+	snf:=SmithNormalFormIntegerMatTransforms(A);
+	D:=snf.normal;
+	Tinv:=InverseMat(snf.coltrans);
+	tor:=[];
+	lifts:=[];
+	for ii in [1..Minimum(RowdimMat(A), ColdimMat(A))] do
+		if D[ii][ii]>1 then
+			Add(tor, D[ii][ii]);
+			Add(lifts, Tinv[ii]);
+		fi;
+	od;
+	trec:=rec(
+		phi:=List(A),
+		torsion:=tor,
+		lifts:=lifts
+	);
+	return(trec);
+end;
+
+FindSmallNormVect:=function(GramL, minnorm, trial,  tab)
+	local r, min, tt, U, newGramL, tv, newGramL2, LLL, T, ii, vects, aa,
+	counter, beep;
+	#
+	beep:=function(numb)
+		Printn("wrong FindSmallNormVect", numb); Error();
+	end;
+	#
+	r:=Length(GramL);
+	vects:=[];
+	U:=IdentityMat(r);
+	counter:=0;
+	for tt in [1..trial] do
+		newGramL:=TMTTmult(U, GramL);
+		LLL:=LLLReducedGramMat(newGramL, 1);
+		T:=LLL.transformation;
+		newGramL2:=LLL.remainder;
+		for ii in [1..r] do
+			aa:=newGramL2[ii][ii];
+			if aa<minnorm then
+				#beep(11111111111111111);
+				tv:=T[ii]*U;
+				if tv*GramL*tv<>aa then
+					beep(15288344);
+				fi;
+				return([false, tv]);
+			elif aa=minnorm then
+				tv:=T[ii]*U;
+				if tv*GramL*tv>minnorm then
+					beep(11223344);
+				fi;
+				Add(vects, tv);
+			fi;
+		od;
+		counter:=counter+1;
+		if counter mod tab =0 then
+			Printn("in FindSmallNormVect", counter, Length(vects));
+			#savedataas(vects, "vectsname");
+		fi;
+		U:=RandomUnimodularMat(r);
+	od;
+	return([true, vects]);
+end;
+
+
+#######################
+# 2018 September
+#######################
+
+VectorsListInPosLat:=function(GramP, nn)
+	#
+	local tempsvsrec, pos, vs, vv;
+	#
+	tempsvsrec:=ShortestVectors(GramP, nn);
+	pos:=0;
+	vs:=[];
+	for vv in tempsvsrec.vectors do
+		pos:=pos+1;
+		if tempsvsrec.norms[pos]=nn then
+			Add(vs, vv);
+			Add(vs, -vv);
+		fi;
+	od;
+	return(vs);
+end;
+
+#######################
+# 2019 March 04
+#######################
+
+
+
+IsEvenUnimodularHyperbolicLattice:=function(Gram)
+	local n;
+	if not IsEvenLattice(Gram) then beep(5112); fi;
+	if DeterminantIntMat(Gram)<>-1 then beep(52212); fi;
+	n:=Length(Gram);
+	if n mod 8 <>2 then beep(71122); fi;
+	if SignatureQ(Gram)<>[n, 1, n-1] then
+		beep(25251);
+	fi;
+	return(true);
+end;
+
+APosVectInHypLat:=function(Gram)
+	#
+	local beep, posv, aa, ii, bb, cc, jj, xx, yy, n, minabsaapos, minabsaa, orthorec;
+	#
+	beep:=function(beepnumb)
+		localbeep("APosVectInHypLat", beepnumb);
+	end;
+	#
+	n:=Length(Gram);
+	#
+	if SignatureQ(Gram)<>[n, 1, n-1] then
+		beep(15185851);
+	fi;
+	#
+	minabsaa:=infinity;
+	minabsaapos:=0;
+	for ii in [1..n] do
+		aa:=Gram[ii][ii];
+		if aa>0 then
+			posv:=MakeVectei(n, ii);
+			if posv*Gram*posv<=0 then beep(147314); fi; return(posv);
+		elif aa=0 then
+			for jj in [1..n] do
+				if ii<>jj then
+					cc:=Gram[ii][jj];
+					if cc<>0 then
+						bb:=Gram[jj][jj];
+						yy:=AbsInt(cc)/cc;
+						xx:=CeilingRat(-yy*bb/2/cc);
+						if xx=-yy*bb/2/cc then xx:=xx+1; fi;
+						posv:=xx*MakeVectei(n, ii)+yy*MakeVectei(n, jj);
+						if posv*Gram*posv<=0 then beep(124714); fi; return(posv);
+					fi;
+				fi;
+			od;
+		fi;
+		if aa>=0 then beep(15858581); fi;
+		if -aa<minabsaa then
+			minabsaa:=-aa;
+			minabsaapos:=ii;
+		fi;
+	od;
+	#
+	orthorec:=OrthogonalCompRec(Gram, [MakeVectei(n, minabsaapos)]);
+	posv:=APosVectInHypLat(orthorec.Gram)*orthorec.basis;
+	if posv*Gram*posv<=0 then beep(147514); fi; return(posv);
+	#
+	beep(145851851);
+	#
+end;
+
+
+
+
+######## Added on 2020Apr29
+
+LatticeFromBigGram:=function(bigGram)
+  #
+  # based on ModLatticeKer in LatticeTools
+  # the output is a record
+	#
+	local  beep, bigrk, hn, rk, basis, basisKer, ii, redGram, T, lrec, proj;
+	#
+  beep:=function(numb)
+		Printn("wrong in LatticeFromBigGram", numb); Error();
+	end;
+	#
+	bigrk:=Length(bigGram);
+	hn:=HermiteNormalFormIntegerMatTransform(bigGram);
+	rk:=Rank(hn.normal);
+	T:=hn.rowtrans;
+	basis:=List([1..rk], ii->T[ii]);
+	basisKer:=List([rk+1..bigrk], ii->T[ii]);
+	redGram:=TMTTmult(basis, bigGram);
+	proj:=TransposedMat(basis*bigGram)*InverseMat(redGram);
+ 	if basis*proj<>IdentityMat(Length(redGram)) then beep(34567); fi;
+  	if bigGram<>TMTTmult(proj, redGram) then beep(42353); fi;
+  	lrec:=rec(Gram:=redGram, basis:=basis, basisKer:=basisKer, proj:=proj);
+	return(lrec);
+end;
+
+
+PrimitiveClosure:=function(ff)
+	#
+	# ff is a homomorphism Z^m -> L=Z^n (not nesessarily injective).
+	# Let M be the image, and Mbar is the primitive closure of M in L.
+	# rec.basisbar is a basis of Mbar.
+	# rec.section is the section Mbar ->Q^m of ff.
+	# rec.homtobar is the homomorphism Z^m -> Mbar
+	# written with respect to rec.basisbar.
+	# rec.tor is the abelian group A=Mbar/M.
+	# rec.projtor is the quotient map Mbar -> A
+	# written with respect to rec.basisbar.
+	# rec.homtotor is Z^m -> Mbar/M
+	#
+	local m, n, smfrec,r,S,T,D,Tinv, ii,leng,
+	primbasis, A, sec, dii, projA, jj, tobarM, homtotor, modA, trec;
+	#
+	m:=Length(ff);
+	n:=Length(ff[1]);
+	smfrec:=SmithNormalFormIntegerMatTransforms(ff);
+	r:=smfrec.rank;
+	#
+	#
+	S:=smfrec.rowtrans;
+	T:=smfrec.coltrans;
+	D:=smfrec.normal;
+	Tinv:=InverseMat(T);
+	primbasis:=List([1..r], ii->Tinv[ii]);
+	A:=[];
+	sec:=[];
+	#
+	for ii in [1..r] do
+		dii:=D[ii][ii];
+		Add(sec, S[ii]/dii);
+		if dii>1 then
+			Add(A, dii);
+		fi;
+	od;
+	#
+	leng:=Length(A);
+	projA:=NullMat(r, leng);
+	jj:=0;
+	for ii in [1..r] do
+		dii:=D[ii][ii];
+		if dii>1 then
+			jj:=jj+1;
+			projA[ii][jj]:=1;
+		fi;
+	od;
+	#
+	tobarM:=SubMatrix(InverseMat(S)*D, [1..m], [1..r]);
+	#
+	modA:=function(vv)
+		local vvmodA, ii;
+		vvmodA:=[];
+		for ii in [1..leng] do
+			Add(vvmodA, vv[ii] mod A[ii]);
+		od;
+		return(vvmodA);
+	end;
+	if leng>0 then
+		homtotor:=List(tobarM*projA, modA);
+	else
+		homtotor:=[];
+	fi;
+	trec:=rec(
+		rank:=r,
+		basisbar:=primbasis,
+		section:=sec,
+		tor:=A,
+		homtobar:=tobarM,
+		projtor:=projA,
+		homtotor:=homtotor
+	);
+	return(trec);
+end;
+
+
+checkPrimitiveClosure:=function(ff, pcrec)
+	#
+	local beep, rank, basisbar, section, tor, homtobar, projtor, momtotor,
+	modA, bone, homtotor, leng;
+	#
+	beep:=function(numb)
+		Printn("wrong checkPrimitiveClosure", numb); Error();
+	end;
+	#
+	rank:=pcrec.rank;
+	basisbar:=pcrec.basisbar;
+	section:=pcrec.section;
+	tor:=pcrec.tor;
+	homtobar:=pcrec.homtobar;
+	projtor:=pcrec.projtor;
+	homtotor:=pcrec.homtotor;
+	leng:=Length(tor);
+	#
+	if rank=0 then
+		if not IsZeroMat(ff) then beep(9213); fi;
+		if basisbar<>[] then beep(442233); fi;
+		if section<>[] then beep(4422331); fi;
+		if tor<>[] then beep(45731); fi;
+		if projtor<>[] then beep(452331); fi;
+		if homtotor<>[] then beep(45231); fi;
+		return(true);
+	fi;
+	#
+	if rank<>Rank(ff) then beep(4352626); fi;
+	if Length(basisbar)<>rank then beep(4412233); fi;
+	if Rank(basisbar)<>rank then beep(44221233); fi;
+	if CokerTorsion(basisbar)<>[] then beep(5533); fi;
+	if Rank(Concatenation(basisbar, ff))<>rank then beep(4465283); fi;
+	if homtobar*basisbar<>ff then beep(452211); fi;
+	if section*homtobar<>IdentityMat(rank) then
+		beep(91123);
+	fi;
+	if CokerTorsion(homtobar)<>tor then beep(783838); fi;
+	modA:=function(vv)
+		local vvmodA, ii;
+		vvmodA:=[];
+		for ii in [1..leng] do
+			Add(vvmodA, vv[ii] mod tor[ii]);
+		od;
+		return(vvmodA);
+	end;
+	if not IsZeroMat(List(homtobar*projtor, modA)) then
+		beep(46611);
+	fi;
+	if not IsZeroMat(List(homtotor, modA)) then
+		beep(443322);
+	fi;
+	if tor<>[] then
+		bone:=DiagonalMat(tor);
+		Append(bone, projtor);
+		if CokerTorsion(bone)<>[] then
+			beep(882233);
+		fi;
+	fi;
+	#
+	return(true);
+end;
+
+
+##### Add 2022/04/09
+
+IsIsomToL10:=function(tGram)
+	if not IsIntMat(tGram) then return(false); fi;
+	if not IsEvenLattice(tGram) then return(false); fi;
+	if DeterminantIntMat(tGram)<>-1 then return(false); fi;
+	if SignatureQ(tGram)<>[10,1,9] then return(false); fi;
+	return(true);
+end;
+
+
+
+#QuotientLbyM:=function(rankL, matM) is in DiscriminantForms.txt
+#CheckQuotientLbyM:=function(quotrec, rankL, matM) is in DiscriminantForms.txt
+
+
+##### Add 2025/02/19
+
+EasyOrthogonalProj:=function(GramL, emb)
+	#
+	local beep, n, n1, n2, Idn1, orthocomp, emb2, emb12inv, proj1;
+	#
+	beep:=function(numb)
+		Printn("wrong EasyOrtogonalProj", numb); Error();
+	end;
+	#
+	n:=Length(GramL);
+	n1:=Length(emb);
+	n2:=n-n1;
+	Idn1:=IdentityMat(n1);
+	#
+	if DeterminantIntMat(TMTTmult(emb, GramL))=0 then beep(43522); fi;
+	orthocomp:=OrthogonalComp(emb, GramL);
+	emb2:=OrthogonalCompRec(GramL, emb).basis;
+	#
+	emb12inv:=InverseMat(StackMats(List(emb), emb2));
+	proj1:=emb12inv*StackMats(Idn1, NullMat(n2, n1));
+	if  emb*proj1<>Idn1 then beep(8188181); fi; #This line is added on 2025/02/19.Not yet checked
+	return(proj1);
+end;
+
+
+
+
+#####

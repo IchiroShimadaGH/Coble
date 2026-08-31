@@ -1,0 +1,131 @@
+#Read("./gapReads/ADEautconfig.txt");
+
+#######################
+# 2018 October 08
+#######################
+
+DecompFundRoots:=function(Gram, stdroots)
+	#
+	local beep, stdconns, stdrootconns, stdconn, Gramstdconn,
+	disc, rank, type, anisom, newstdconn, ii, svs;
+	#
+	beep:=function(beepnumb)
+		Printn("wrong DecompStdRoots", beepnumb); Error();
+	end;
+	#
+	stdconns:=makeConnComps(Gram, stdroots);
+	#
+	stdrootconns:=[];
+	for stdconn in stdconns do
+		Gramstdconn:=TMTTmult(stdconn, Gram);
+		disc:=AbsInt(DeterminantIntMat(Gramstdconn));
+		rank:=Length(stdconn);
+		svs:=VectorsListInPosLat(-Gramstdconn, 2);
+		type:=FindRoottype(rank, disc, Length(svs));
+		anisom:=FindASubconfig(ADEHrec.(type).Gram, (-1)*TMTTmult(stdconn, Gram));
+		if anisom=fail then
+			beep(15577171);
+		fi;
+		newstdconn:=List(anisom, ii->stdconn[ii]);
+		if ADEHrec.(type).Gram<>(-1)*TMTTmult(newstdconn, Gram) then
+			beep(91122);
+		fi;
+		Add(stdrootconns, [type, newstdconn]);
+	od;
+	#
+	return(stdrootconns);
+end;
+
+
+_stdADEautconfig:=function(roottype)
+	#
+	local msetroottype, twgenss, tt, ttR, ttn, ttk, tgens, 
+	tGgens, tGgensperm, tgmat, tGram,tGgensmat,
+	trank, twgens,  theGram, id, ii, tg, beep, Grams, Gram, troottype;
+	#
+	beep:=function(beepnumb)
+		Printn("wrong in _stdADEautconfig", beepnumb); Error();
+	end;
+	#
+	if not IsSortedList(roottype) then beep(15851111); fi;
+	#
+	msetroottype:=toMultiSet(roottype);
+	twgenss:=[];
+	Grams:=[];
+	troottype:=[];
+	for tt in msetroottype do
+		#
+		ttR:=tt[1];
+		ttn:=tt[2];
+		ttk:=ADErec.(ttR).rank;
+		Gram:=ADErec.(ttR).Gram;
+		tgens:=ADErec.(ttR).autconfigperm;
+		twgens:=WreathProd(ttn, [ttk, tgens]);
+		Add(twgenss, [ttn*ttk, twgens]);
+		#
+		Append(Grams, List([1..ttn], ii->Gram));
+		Append(troottype, List([1..ttn], ii->ttR));
+	od;
+	#
+	if troottype<>roottype then
+		beep(146169696);
+	fi;
+	#
+	tGgensperm:=DirectProd(twgenss);
+	tGram:=DiagonalMats(Grams);
+	trank:=Length(tGram);
+	tGgensmat:=[];
+	id:=IdentityMat(trank);
+	for tg in tGgensperm do
+		tgmat:=MoveByPermOnList(id, tg);
+		if TMTTmult(tgmat, tGram)<>tGram then
+			beep(166223); 
+		fi;
+		Add(tGgensmat, tgmat);
+	od;
+	#
+	return([tGgensperm, tGgensmat]);
+end;
+
+ADEautconfig:=function(Gram, roots)
+	#
+	local beep, adetype, n, id, stdgens, stdGram, config,
+	anisom, gens, gensmat, tg, tgmat, ii, iitg, anisominv, anisomL, 
+	rootsinv, trtss, xx, tr, newroots;
+	#
+	beep:=function(beepnumb)
+		Printn("wrong in ADEautconfig", beepnumb); Error();
+	end;
+	#
+	trtss:=DecompFundRoots(Gram, roots);
+	adetype:=List(trtss, xx->xx[1]);
+	SortParallel(adetype, trtss);
+	newroots:=Concatenation(List(trtss, xx->xx[2]));
+	n:=Length(roots);
+	id:=IdentityMat(n);
+	if ADEHrank(adetype)<>n then beep(1585181); fi;
+	stdgens:=_stdADEautconfig(adetype)[1];
+	stdGram:=(-1)*ADEHGram(adetype);
+	if TMTTmult(newroots, Gram)<>stdGram then
+		beep(881122);
+	fi;
+	anisomL:=List(newroots, tr->SinglePosition(roots, tr));
+	anisom:=PermList(anisomL);
+	anisominv:=anisom^(-1);
+	gens:=List(stdgens, tg->anisominv*tg*anisom);
+	gensmat:=[];
+	rootsinv:=InverseMat(roots);
+	for tg in gens do
+		#
+		tgmat:=rootsinv*MoveByPermOnList(roots, tg);
+		if TMTTmult(tgmat, Gram)<>Gram then
+			beep(16677223); 
+		fi;
+		if roots*tgmat<>MoveByPermOnList(roots, tg) then
+			beep(16622223); 
+		fi;
+		Add(gensmat, tgmat);
+	od;
+	#
+	return([gens, gensmat]);
+end;

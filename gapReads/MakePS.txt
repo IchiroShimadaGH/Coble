@@ -1,0 +1,214 @@
+#Read("gapReads/MakePS.txt");
+
+_PScurve:="curve";
+_PSdashcurve:="dashcurve";
+_PSblackcircle:="blackcircle";
+_PSwhitecircle:="whitecircle";
+_PSfillcurve:="fillcurve";
+_PSgrayfillcurve:="grayfillcurve";
+_PSPStextplot:="textplot";
+
+mmTOptScale:=2.84575981787;
+
+SqaureRootFloat:=function(x)
+	return(Exp(Log(Float(x)/2)));
+end;
+
+AppendToSepn:=function(arg)
+	local ii, fd;
+	fd:=arg[1];
+	for ii in [2..Length(arg)] do
+		if ii>2 then
+			AppendTo(fd, " ");
+		fi;
+		AppendTo(fd, arg[ii]);
+	od;
+	AppendTo(fd, "\n");
+end;
+
+MakePS_arrow:=function(position, direction, howbig)
+	local v, lengthv, p1, p2, ii;
+	v:=[[-1,-1],[1,-1]]*direction;
+	lengthv:=Float(SqaureRootFloat(v[1]^2+v[2]^2));
+	v:=List(x->Float(howbig/lengthv)*x, v);
+	p1:=position+v;
+	p1:=List(p1, Float);
+	v:=[[-1,1],[-1,-1]]*direction;
+	lengthv:=Float(SqaureRootFloat(v[1]^2+v[2]^2));
+	v:=List(v, x->Float(howbig/lengthv)*x);
+	p2:=position+v;
+	p2:=List(p2, Float);
+	return([p1, List(position, Float), p2]);
+end;
+
+WritePS_curve:=function(fd, pointslistR, thickness)
+	local xy, howthick,pointslist;
+	pointslist:=List(pointslistR, xy->List(xy, Float));
+	AppendToSepn(fd, "newpath");
+	howthick:=Float(thickness);
+	AppendToSepn(fd,  howthick, "setlinewidth");
+	AppendToSepn(fd, pointslist[1][1],  pointslist[1][2], "moveto");
+	for xy in pointslist do
+		AppendToSepn(fd, xy[1], xy[2], "lineto");
+	od;
+	AppendToSepn(fd, "stroke");
+end;
+
+
+WritePS_fillcurve:=function(fd, pointslistR)
+	local xy, pointslist;
+	pointslist:=List(pointslistR, xy->List(xy, Float));
+	AppendToSepn(fd, "newpath");
+	AppendToSepn(fd, "1 setlinewidth");
+	AppendToSepn(fd,pointslist[1][1], pointslist[1][2], "moveto");
+	for xy in pointslist do
+		AppendToSepn(fd,xy[1], xy[2], "lineto");
+	od;
+	AppendToSepn(fd, "closepath");
+	AppendToSepn(fd, "0 setgray");
+	AppendToSepn(fd, "fill");
+end;
+
+WritePS_grayfillcurve:=function(fd, setgray, pointslistR)
+	local xy, pointslist;
+	pointslist:=List(pointslistR, xy->List(xy, Float));
+	AppendToSepn(fd, "newpath");
+	AppendToSepn(fd, "1 setlinewidth");
+	AppendToSepn(fd, pointslist[1][1], pointslist[1][2], "moveto");
+	for xy in pointslist do
+		AppendToSepn(fd, xy[1], xy[2], "lineto");
+	od;
+	AppendToSepn(fd, "closepath");
+	AppendToSepn(fd,  "gsave");
+	AppendToSepn(fd,  setgray, "setgray");
+	AppendToSepn(fd, "fill");
+	AppendToSepn(fd, "grestore");
+end;
+
+WritePS_dashcurve:=function(fd, k, pointslistR) # one unit consists of (k-1) lines and 1 blank
+	local LL, L, xy, pointslist;
+	pointslist:=List(pointslistR, xy->List(xy, Float));
+	LL:=[];
+	L:=[];
+	for xy in pointslist do
+		Add(L, xy);
+		if Length(L)=k then
+			Add(LL, L);
+			L:=[];
+		fi;
+	od;
+	Add(LL, L);
+	for L in LL do
+		WritePS_curve(fd, L, .5);
+	od;
+end;
+
+WritePS_blackcircle:=function(fd, center, radius)
+	AppendToSepn(fd,  "newpath");
+	AppendToSepn(fd, Float(center[1]), Float(center[2]), Float(radius), 0, 360, "arc");
+	AppendToSepn(fd, "fill");
+end;
+
+WritePS_whitecircle:=function(fd, center, radius)
+	AppendToSepn(fd, "newpath");
+	AppendToSepn(fd,  Float(center[1]), Float(center[2]), Float(radius), 0, 360, "arc");
+	AppendToSepn(fd,  "stroke");
+end;
+
+MakePS:=function(filename, scalemm, xytr, xyB, LL)
+	local fd, L, xys, stl, xr, yr, center, radius, fnps, fntex, fdtex,scale,
+	Fxy1, Fxy2;
+	xr:=xytr[1];
+	yr:=xytr[2];
+	scale:=mmTOptScale*scalemm;
+	stl:=function(xy) return([scale*(xy[1]+xr), scale*(xy[2]+yr)]); end;
+	fnps:=Concatenation(filename, ".eps");
+	fntex:=Concatenation(filename, ".tex");
+	#fd:=fopen(fnps, WRITE);
+	#fdtex:=fopen(fntex, WRITE);
+	fd:=fnps; PrintTo(fd, "");
+	fdtex:=fntex; PrintTo(fdtex, "");
+	AppendTo(fdtex, "\\renewcommand{\\PStextplot}[3]%\n");
+	AppendTo(fdtex, "{\\rlap{\\hskip -", xyB[1]*scale, "pt \\hbox{\\hskip #1pt%\n");
+	AppendTo(fdtex, "\\raise #2pt \\hbox{#3}}}}%%\n");
+	AppendToSepn(fd, "%!PS-Adobe-2.0 EPSF-2.0");
+	AppendToSepn(fd, "%%Title:", filename, "");
+	AppendToSepn(fd, "%%BoundingBox:",  0, 0, xyB[1]*scale, xyB[2]*scale, "");
+	AppendToSepn(fd, "%%Orientation: Portrait");
+	AppendToSepn(fd, "%%EndComments");
+	for L in LL do # print(L[1]);
+	  if L=[] then 
+		  	# do nothing
+		elif L[1]=_PScurve then 
+			xys:=List(L[2], stl);			
+			WritePS_curve(fd, xys, L[3]);
+		elif L[1]=_PSdashcurve then
+			xys:=List(L[3], stl);				
+			WritePS_dashcurve(fd, L[2], xys);
+		elif L[1]=_PSblackcircle then 
+			center:=stl(L[2]);
+			radius:=scale*L[3];
+			WritePS_blackcircle(fd, center, radius);
+		 elif L[1]=_PSwhitecircle then 
+			center:=stl(L[2]);
+			radius:=scale*L[3];
+			WritePS_whitecircle(fd, center, radius);
+		elif L[1]=_PSfillcurve then 
+		 	xys:=List(L[2], stl);
+			WritePS_fillcurve(fd,  xys);
+		elif L[1]=_PSgrayfillcurve then 
+		 	xys:=List(L[3], stl);
+			WritePS_grayfillcurve(fd,  L[2],  xys);
+		elif L[1]=_PSPStextplot then 
+				xys:=stl(L[2]);
+				Fxy1:=Float(xys[1]);
+				Fxy2:=Float(xys[2]);
+		  		AppendTo(fdtex, "\\PStextplot{",Fxy1,"}{",Fxy2,"}{", L[3],"}%%\n");
+		else
+			Printn("WRONG_L[1]", L[1]);
+		fi;
+	od;
+	AppendToSepn(fd, "showpage");
+	AppendToSepn(fd, "%%EOF");
+	#fclose(fd);
+	#fclose(fdtex);
+end;
+
+# MakePS:=function(filename, scalemm, xytr, xyB, LL)
+# the unit = scalemm*mm;
+# xytr=[xr, yr] is the amount of translation (mesured by unit)
+# xyB=[xB, yB]  is the %%BoundingBox (mesured by unit)
+#"%%BoundingBox:",  0, 0, xB*scale, yB*scale
+# each point is given by [x, y]  with -xr<x<xr, -y<y<yr;
+# LL is a list of the following L;
+# [curve, [[x_1, y_1], ..., [x_N, y_N]], thickness in pt] 
+#  the curve passing through [x_1, y_1], ..., [x_N, y_N];
+# (if N=2, then this is a segment connecting [x_1, y_1] and [x_2, y_2]);
+#  [fillcurve, [[x_1, y_1], ..., [x_N, y_N]]]
+#  [grayfillcurve, setgray, [[x_1, y_1], ..., [x_N, y_N]]]
+
+
+# [dashcurve, k, [[x_1, y_1], ..., [x_N, y_N]]] the dash_curve passing through [x_1, y_1], ..., [x_N, y_N];
+# (one unit consists of (k-1) lines and 1 blank, e.g., if k=2, then _ _ _ ; if k=4, then ___ ___ ___);
+# [blackcircle, center, radius];
+# [whitecircle, center, radius];
+
+# [PStextplot, left_bottom_position, string];
+
+
+####################
+#
+# CAUTION
+#
+####################
+
+# You have to make LL on a editor (not on Maple),
+# and the backslash in the string of [PStextplot, left_bottom_position, string]
+# must be \\
+# 
+# EXAMPLE
+# tL:=[[fillcurve, [[1,2],[2,5],[3,4]]], [PStextplot, [0,0], "$\\alpha $"]]: # not "$\alpha $" but "$\\alpha $"
+# newmakePS("test", 14, [6,6],[12,15], tL):
+#
+# If LL is made on Maple, the backslash becomes  yen.
+#

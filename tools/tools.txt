@@ -1,0 +1,62 @@
+#Read("tools.txt");
+
+
+
+
+
+DiffPol:=function(pol, ind)
+	local deg, diffpol, dd;
+	deg:=DegreeIndeterminate(pol, ind);
+	diffpol:=0;
+	for dd in [1..deg] do
+		diffpol:=diffpol+dd*ind^(dd-1)*GetCoeff(pol, [ind], [dd]);
+	od;
+	return(diffpol);
+end;
+
+
+Findfzconfigs:=function(singtype, bigrats, GramSX, savename)
+  #
+  local fzs, n, task, bigconfig, targetconfig,
+  exttheta, affade, onev, tonev;
+  #
+  fzs:=[];
+  n:=ADEHrank([singtype])+2;
+  #
+  bigconfig:=TMTTmult(bigrats, GramSX);
+  affade:=(-1)*affineADErec.(singtype).Gram;
+  exttheta:=CopyAppend(affineADErec.(singtype).theta, [1,0]);
+  n:=Length(affade)+1;
+  onev:=[MakeVectei(n-1, n-1)];
+  tonev:=TransposedMat(onev);
+  targetconfig:=MatMatToMat([[affade, tonev ], [ onev, [[-2]] ]]);
+  #
+  task:=function(temb)
+    #
+    local rats, tz,tf, tfdual;
+    rats:=List(temb, ii->bigrats[ii]);
+    tz:=rats[n];
+    tf:=exttheta*rats;
+    tfdual:=tf*GramSX;
+    if tfdual*tf<>0 then beep(423663); fi;
+    if tfdual*tz<>1 then beep(455663); fi;
+    if not [tf, tz] in fzs then
+      Add(fzs, [tf, tz]);
+      if Length(fzs) mod 1000=1 then
+        Printn("found", singtype, Length(fzs), temb);
+        savedataas(fzs, savename);
+      fi;
+    fi;
+  end;
+  #
+  #
+  FindAllSubconfigstask(targetconfig, bigconfig, task);
+  #
+  return(fzs);
+end;
+
+
+
+
+
+#end

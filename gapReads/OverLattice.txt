@@ -1,0 +1,505 @@
+###################
+
+UnimodularOverLat:=function(Gram1,  Gram2, discrec1, discrec2, antiisom)
+	#
+	# Gram1 is a Gram mat of an even lat L1, and discrec1 is its discriminant record.
+	# Gram2 is a Gram mat of an even lat L2, and discrec2 is its discriminant record.
+	# antisom is an isom of FQF( finite quadratic form) from disc1 to (-1)*disc2.
+	# This function returns a data on the overlattice of L1 oplus L2
+	# corresponding to antiisom (which is unimodular).
+	#
+	local n1, n2, L, H, Binv, G, ii, newL, Hinv,  OLrec, v, tH, #HNFrec,
+	Gram1inv, tembdual1, tprojdual1,
+	Gram2inv, tembdual2, tprojdual2;
+	#
+	n1:=Length(Gram1);
+	n2:=Length(Gram2);
+	Gram1inv:=Inverse(Gram1);
+	Gram2inv:=Inverse(Gram2);
+	L:=DiagonalMats([Gram1, Gram2]);
+	Binv:=DiagonalMats([Gram1inv, Gram2inv]);
+	newL:=ConcatMats(discrec1.reps_dual, antiisom*discrec2.reps_dual);
+	L:=StackMats(L, newL);
+	tH:=HermiteNormalFormIntegerMat(L);
+	H:=[];
+	for ii in [1..n1+n2] do
+		Add(H, tH[ii]);
+	od;
+	G:=TMTTmult(H, Binv);
+	Hinv:=Inverse(H);
+	#
+	# for check
+	#if not IsEvenLattice(G) then Printn("wrong_UnimodularOverLat"); Error(); fi;
+	#if not AbsInt(DeterminantIntMat(G))=1 then Printn("wrong2_UnimodularOverLat"); Error(); fi;
+	#
+	tprojdual1:=SubMatrix(H,  [1..n1+n2], [1..n1]);
+	tprojdual2:=SubMatrix(H,  [1..n1+n2], [n1+1..n1+n2]);
+	tembdual1:=SubMatrix(Hinv,   [1..n1], [1..n1+n2]);
+	tembdual2:=SubMatrix(Hinv,  [n1+1..n1+n2],  [1..n1+n2]);
+	#
+	OLrec:=rec(
+		basis:=H,
+		Gram:=G,
+		proj1:=tprojdual1*Gram1inv,
+		emb1:=Gram1*tembdual1,
+		proj2:=tprojdual2*Gram2inv,
+		emb2:=Gram2*tembdual2,
+		proj1_dual:=tprojdual1, # in terms of the STANDARD(!!) basis of OL and the dual basis of L1
+		emb1_dual:=tembdual1, # in terms of the STANDARD basis of OL and the dual basis of L1
+		proj2_dual:=tprojdual2, # in terms of the STANDARD basis of OL and the dual basis of L2
+		emb2_dual:=tembdual2 # in terms of the STANDARD basis of OL and the dual basis of L2
+	);
+	MakeImmutable(OLrec);
+	return(OLrec);
+end;
+
+
+CheckUnimodularOverLat:=function(Gram1,  Gram2, discrec1, discrec2,  OLrec)
+	#
+	#
+	local beep, n1, n2, tn, Gram1inv, Gram2inv, Binv, B, H,G,temb, tproj, ttproj, n;
+	#
+	beep:=function(n) Printn("wrong", n, "checkUnimodularOverLat");  Error(); end;
+	#
+	n1:=Length(Gram1);
+	n2:=Length(Gram2);
+	tn:=n1+n2;
+	Gram1inv:=Inverse(Gram1);
+	Gram2inv:=Inverse(Gram2);
+	Binv:=DiagonalMats([Gram1inv, Gram2inv]);
+	B:=DiagonalMats([Gram1, Gram2]);
+	#
+	H:=OLrec.basis;
+	G:=OLrec.Gram;
+	#Ginv:=Inverse(G);
+	#
+	if not TMTTmult(H, Binv)=G then beep(0); fi;
+	if not IsEvenLattice(G) then beep(1); fi;
+	if not AbsInt(DeterminantIntMat(G))=1 then beep(2); fi;
+	#
+	temb:=OLrec.emb1;
+	tproj:=OLrec.proj1;
+	ttproj:=OLrec.proj2;
+	n:=n1;
+	#
+	if not IsPrimitiveMat(temb) then beep(10); fi;
+	#
+	if RowdimMat(temb)<>n then beep (100); fi;
+	if ColdimMat(temb)<>tn then beep (101); fi;
+	if RowdimMat(tproj)<>tn then beep (102); fi;
+	if ColdimMat(tproj)<>n then beep (103); fi;
+	#
+	if not temb*tproj=IdentityMat(n) then beep(11); fi;
+	if not TMTTmult(temb, G)=Gram1 then beep(12); fi;
+	if not IsZeroMat(temb*ttproj) then beep(13); fi;
+	#
+	#
+	temb:=OLrec.emb2;
+	tproj:=OLrec.proj2;
+	ttproj:=OLrec.proj1;
+	n:=n2;
+	#
+	if not IsPrimitiveMat(temb) then beep(20); fi;
+	#
+	if RowdimMat(temb)<>n then beep (200); fi;
+	if ColdimMat(temb)<>tn then beep (201); fi;
+	if RowdimMat(tproj)<>tn then beep (202); fi;
+	if ColdimMat(tproj)<>n then beep (203); fi;
+	#
+	if not temb*tproj=IdentityMat(n) then beep(21); fi;
+	if not TMTTmult(temb, G)= Gram2 then beep(22); fi;
+	if not IsZeroMat(temb*ttproj) then beep(23); fi;
+	#
+	temb:=OLrec.emb1_dual;
+	tproj:=OLrec.proj1_dual;
+	ttproj:=OLrec.proj2_dual;
+	n:=n1;
+	#
+	if not IsPrimitiveMat(tproj) then beep(30); fi;
+	#
+	if RowdimMat(temb)<>n then beep (300); fi;
+	if ColdimMat(temb)<>tn then beep (301); fi;
+	if RowdimMat(tproj)<>tn then beep (302); fi;
+	if ColdimMat(tproj)<>n then beep (303); fi;
+	#
+	if not temb*tproj=IdentityMat(n) then beep(31); fi;
+	if not TMTTmult(temb, G)= Gram1inv then beep(32); fi;
+	if not IsZeroMat(temb*ttproj) then beep(33); fi;
+	#
+	temb:=OLrec.emb2_dual;
+	tproj:=OLrec.proj2_dual;
+	ttproj:=OLrec.proj1_dual;
+	n:=n2;
+	#
+	if not IsPrimitiveMat(tproj) then beep(40); fi;
+	#
+	if RowdimMat(temb)<>n then beep (400); fi;
+	if ColdimMat(temb)<>tn then beep (401); fi;
+	if RowdimMat(tproj)<>tn then beep (402); fi;
+	if ColdimMat(tproj)<>n then beep (403); fi;
+	#
+	if not temb*tproj=IdentityMat(n) then beep(41); fi;
+	if not TMTTmult(temb, G)= Gram2inv then beep(42); fi;
+	if not IsZeroMat(temb*ttproj) then beep(43); fi;
+	#
+	#
+	return(true);
+end;
+
+################
+
+_Make_OverLattice:=function(GramL, GramLdual, isotsubspace, repsdual, rank, discnL)
+	local olrec, newGramL, herm, tnewbasis, textensiondeg;
+	rank:=Length(GramL);
+	newGramL:=CopyMat(GramL); Append(newGramL, isotsubspace*repsdual);
+	herm:=HermiteNormalFormIntegerMat(newGramL);
+	tnewbasis:=SubMatrix(herm, [1..rank], [1..rank]);
+	textensiondeg:=AbsInt(discnL/DeterminantIntMat(tnewbasis));
+	olrec:=rec(
+		emb_nondual_to_dual:=tnewbasis, #new basis of the overlattice in the dual basis of the original lattice
+		Gram:=TMTTmult(tnewbasis, GramLdual),
+		extensiondeg:=textensiondeg
+	);
+	return(olrec);
+end;
+
+Make_OverLattices:=function(GramL,  discrecL, isots)
+	local GramLdual, repsdual, ols, rank, discnL, olrec;
+	rank:=Length(GramL);
+	discnL:=AbsInt(DeterminantIntMat(GramL));
+	if discnL=1 then
+		olrec:=rec(
+			emb_nondual_to_dual:=InverseMat(GramL), #new basis of the overlattive in the dual basis of the original lattice
+			Gram:=GramL,
+			extensiondeg:=1
+		);
+		return([olrec]);
+	fi;
+	GramLdual:=InverseMat(GramL);
+	repsdual:=discrecL.reps_dual;
+	#ols:=Map(xx->_Make_OverLattice(GramL, GramLdual, xx, repsdual, rank, discnL), isots);
+	ols:=List(isots, xx->_Make_OverLattice(GramL, GramLdual, xx, repsdual, rank, discnL));
+	return(ols);
+end;
+
+Check_OverLattices:=function(GramL,  discrecL, isotsubspaces,  olrecs)
+	local GramLdual, beep, olrec, T,  ii, olGramdual, discnL,
+	discembinv, discT, relM, snfrelM, jj;
+	beep:=function(n) Printn("wrong Check_OverLattices", n, "\n"); Error(); end;
+	GramLdual:=Inverse(GramL);
+	discnL:=AbsInt(DeterminantIntMat(GramL));
+	ii:=0;
+	for olrec in olrecs do
+		ii:=ii+1;
+		if not IsEvenLattice(olrec.Gram) then beep(1); fi;
+		if not IsIntMat(olrec.emb_nondual_to_dual) then beep(1); fi;
+		olGramdual:=Inverse(olrec.Gram);
+		T:=olrec.emb_nondual_to_dual;
+		if TMTTmult(T,GramLdual)<>olrec.Gram  then beep(2); fi;
+		if isotsubspaces[ii]<>BaseIntFAG(T*discrecL.proj_dual, discrecL.discg) then beep(3); fi;
+		if olrec.extensiondeg^2*AbsInt(DeterminantIntMat(olrec.Gram))<>discnL then beep(4);fi;
+		if ii=1 and olrec.extensiondeg<>1 then beep(5);fi;
+		if ii>1 and olrec.extensiondeg=1 then beep(6);fi;
+	od;
+	return(true);
+end;
+
+####################
+# Added on 2018 07 12
+####################
+
+MakeOverLatticeFromDiscemb:=function(GramS, discSrec,  discemb)
+	#
+	# discemb: H inj discS is an isotropic subgroup of discS.
+	# L is the corresponding overlattice of S.
+	#
+	local beep, discg, discf, r, GramSdual,
+	addvects, ii, hnf, newbasis, GramL, emb, olrec, vv, embinv;
+	#
+	beep:=function(beepnumb)
+		Printn("wrong in MakeOLfromIsotH", beepnumb); Error();
+	end;
+	#
+	r:=Length(GramS);
+	if discemb=[] then
+		olrec:=rec(
+			GramL:=List(GramS),
+			GramS:=List(GramS),
+			discemb:=List(discemb),
+			emb:=IdentityMat(r)
+		);
+		return(olrec);
+	fi;
+	#
+	discg:=discSrec.discg;
+	discf:=discSrec.discf;
+	#
+	# for check
+	if not IsZeroMat(CopyNormalDiscf(TMTTmult(discemb, discf))) then
+		beep(33656);
+	fi;
+	#
+	GramSdual:=InverseMat(GramS);
+	addvects:=List(GramS);
+	for vv in discemb do
+		Add(addvects,  vv*discSrec.reps_dual);
+	od;
+	hnf:=HermiteNormalFormIntegerMatTransform(addvects);
+	newbasis:=RemoveZeroVectsIntMat(hnf.normal);
+	GramL:=TMTTmult(newbasis, GramSdual);
+	emb:=SubMatrix(InverseMat(hnf.rowtrans), [1..r], [1..r]);
+	#
+	# for check
+	if not IsEvenLattice(GramL) then beep(33812);fi;
+	if TMTTmult(emb, GramL)<>GramS then beep(4327727); fi;
+	#
+	olrec:=rec(
+		GramL:=GramL,
+		GramS:=List(GramS),
+		discemb:=List(discemb),
+		emb:=emb
+	);
+	#
+	return(olrec);
+end;
+
+
+
+MakeDiscembFromOverLattice:=function(GramS, discS, emb)
+	#
+	# emb is an embedding of S into L.
+	# Hgens is the isotropic subgroup L/S.
+	#
+	local beep, embinv, Hgens;
+	beep:=function(numb)
+		Printn("wrong in MakeDiscembFromOverLattice", numb); Error();
+	end;
+	if DeterminantIntMat(emb) in [1, -1] then
+		return([]);
+	fi;
+	embinv:=InverseMat(emb);
+	Hgens:=embinv*discS.proj;
+	if not IsIntMat(Hgens) then beep(41811); fi;
+	Hgens:=StackMats(DiagonalMat(discS.discg), Hgens);
+	Hgens:=RemoveZeroVectsIntMat(HermiteNormalFormIntegerMat(Hgens));
+	#
+	# for check
+	if not IsZeroMat(CopyNormalDiscf(TMTTmult(Hgens, discS.discf))) then
+		beep(35256);
+	fi;
+	#
+	return(Hgens);
+end;
+
+
+MakeLatOverDirectSum:=function(GramS1, discS1, GramS2, discS2, discemb1, discemb2)
+	#
+	# discemb1: H inj discS1
+	# discemb2: H inj discS2
+	#
+	local olrec, beep, r1, r2, r, GramB, discB, discemb,
+	ii, Id1, Id2, embS1B, embS2B, projBS1, projBS2,
+	trec, GramL, embB, projB,
+	emb1, emb2,proj1, proj2
+	;
+	#
+	beep:=function(numb)
+		Printn("wrong MakeLatOverDirectSum", numb); Error();
+	end;
+	#
+	r1:=Length(GramS1);
+	r2:=Length(GramS2);
+	r:=r1+r2;
+	#
+	GramB:=DiagonalMats([GramS1, GramS2]);
+	discB:=OrthoDirectSumOfDiscForms([r1, r2], [discS1, discS2]);
+	#
+	if Length(discemb1)<>Length(discemb2) then
+		beep(4724724);
+	fi;
+	#
+	discemb:=[];
+	for ii in [1..Length(discemb1)] do
+		Add(discemb, Concatenation(discemb1[ii], discemb2[ii]));
+	od;
+	#
+	# for check
+	if not IsZeroMat(CopyNormalDiscf(TMTTmult(discemb, discB.discf))) then
+		beep(3361156);
+	fi;
+	#
+	Id1:=IdentityMat(r1);
+	Id2:=IdentityMat(r2);
+	embS1B:=ConcatMats(Id1, NullMat(r1, r2));
+	embS2B:=ConcatMats(NullMat(r2, r1), Id2);
+	projBS1:=StackMats(Id1, NullMat(r2, r1));
+	projBS2:=StackMats(NullMat(r1, r2), Id2);
+	#
+	#MakeOverLatticeFromDiscemb:=function(GramS, discSrec,  discemb)
+	trec:=MakeOverLatticeFromDiscemb(GramB, discB, discemb);
+	GramL:=trec.GramL;
+	embB:=trec.emb;
+	projB:=InverseMat(embB);
+	emb1:=embS1B*embB;
+	emb2:=embS2B*embB;
+	proj1:=projB*projBS1;
+	proj2:=projB*projBS2;
+	#
+	olrec:=rec(
+		GramL:=GramL,
+		GramS1:=GramS1,
+		GramS2:=GramS2,
+		discemb1:=discemb1,
+		discemb2:=discemb2,
+		emb1:=emb1,
+		emb2:=emb2,
+		proj1:=proj1,
+		proj2:=proj2
+	);
+	return(olrec);
+end;
+
+checkMakeLatOverDirectSum:=function(olrec)
+	#
+	local beep, GramL, GramS1, GramS2, emb1, emb2, proj1, proj2,
+	r1, r2, r, Id1, Id2;
+	#
+	beep:=function(numb)
+		Printn("wrong checkMakeLatOverDirectSum", numb); Error();
+	end;
+	#
+	GramL:=olrec.GramL;
+	GramS1:=olrec.GramS1;
+	GramS2:=olrec.GramS2;
+	emb1:=olrec.emb1;
+	emb2:=olrec.emb2;
+	proj1:=olrec.proj1;
+	proj2:=olrec.proj2;
+	r1:=Length(GramS1);
+	r2:=Length(GramS2);
+	r:=r1+r2;
+	Id1:=IdentityMat(r1);
+	Id2:=IdentityMat(r2);
+	if CokerTorsion(emb1)<>[] then beep(417471741); fi;
+	if CokerTorsion(emb2)<>[] then beep(451819741); fi;
+	if TMTTmult(emb1, GramL)<>GramS1 then beep(3646621); fi;
+	if TMTTmult(emb2, GramL)<>GramS2 then beep(3681121); fi;
+	if emb1*proj1<>Id1 then beep(912456); fi;
+	if emb2*proj2<>Id2 then beep(916656); fi;
+	if not IsZeroMat(emb1*proj2) then beep(91245611); fi;
+	if not IsZeroMat(emb2*proj1) then beep(91665622); fi;
+	return(true);
+end;
+
+MakeDiscembsFromLatOverDirectsum:=function(GramS1, discS1, GramS2, discS2, GramL, emb1, emb2)
+	#
+	local beep, GramB, embBtoL, discB, leng1, leng2, Hgens,
+	discemb1, discemb2, ii, v, r1, r2;
+	#
+	beep:=function(numb)
+		Printn("wrong MakeDiscembsFromLatOverDirectsum", numb); Error();
+	end;
+	#
+	if TMTTmult(emb1, GramL)<>GramS1 then beep(3646621); fi;
+	if TMTTmult(emb2, GramL)<>GramS2 then beep(3681121); fi;
+	if CokerTorsion(emb1)<>[] then beep(3626661); fi;
+	if CokerTorsion(emb2)<>[] then beep(3264662); fi;
+	GramB:=DiagonalMats([GramS1, GramS2]);
+	embBtoL:=StackMats(emb1, emb2);
+	r1:=Length(GramS1);
+	r2:=Length(GramS2);
+	discB:=OrthoDirectSumOfDiscForms([r1, r2], [discS1, discS2]);
+	leng1:=Length(discS1.discg);
+	leng2:=Length(discS2.discg);
+	Hgens:=MakeDiscembFromOverLattice(GramB, discB, embBtoL);
+	discemb1:=List(Hgens, v->List([1..leng1], ii->v[ii]));
+	discemb2:=List(Hgens, v->List([leng1+1..leng1+leng2], ii->v[ii]));
+	return([discemb1, discemb2]);
+end;
+
+###########2019/03/04
+
+checkLGrec:=function(LGrec)
+	local beep, r1, r2, r;
+	#
+	beep:=function(beepnumb)
+		localbeep("checkLGrec", beepnumb);
+	end;
+	#
+	if CokerTorsion(LGrec.emb1)<>[] then beep(11); fi;
+	if TMTTmult(LGrec.emb1, LGrec.Gram)<>LGrec.Gram1 then beep(12); fi;
+	if CokerTorsion(LGrec.emb2)<>[] then beep(21); fi;
+	if TMTTmult(LGrec.emb2, LGrec.Gram)<>LGrec.Gram2 then beep(22); fi;
+	#
+	r1:=Length(LGrec.emb1);
+	r2:=Length(LGrec.emb2);
+	r:=Length(LGrec.Gram);
+	if r1+r2<>r then beep(112); fi;
+	if r<>Length(LGrec.emb1[1]) then beep(1121); fi;
+	if r<>Length(LGrec.emb2[1]) then beep(1122); fi;
+	if r1<>Length(LGrec.proj1[1]) then beep(1123); fi;
+	if r2<>Length(LGrec.proj2[1]) then beep(1124); fi;
+	if r<>Length(LGrec.proj1) then beep(1125); fi;
+	if r<>Length(LGrec.proj2) then beep(1126); fi;
+	#
+	if not IsZeroMat(LGrec.emb1*LGrec.Gram*TransposedMat(LGrec.emb2)) then beep(9121); fi;
+	if not IsZeroMat(LGrec.emb2*LGrec.Gram*TransposedMat(LGrec.emb1)) then beep(9221); fi;
+	#
+	if LGrec.emb1*LGrec.proj1<>IdentityMat(Length(LGrec.emb1)) then beep(13161); fi;
+	if LGrec.emb2*LGrec.proj2<>IdentityMat(Length(LGrec.emb2)) then beep(13261); fi;
+	if not IsZeroMat(LGrec.emb1*LGrec.proj2) then beep(13331); fi;
+	if not IsZeroMat(LGrec.emb2*LGrec.proj1) then beep(14261); fi;
+	#
+	return(true);
+end;
+
+
+
+MakeLGrecFromEmb1:=function(GramL, emb1)
+	#
+	local beep, Gram1, proj1, orthorec, emb2,Gram2,proj2,
+	Gram1dual, Gram2dual, LGrec, dim1, dim2;
+	#
+	#
+	beep:=function(numb)
+		Printn("wrong MakeLGrecFromEmb1", numb); Error();
+	end;
+	#
+	#
+	Gram1:=TMTTmult(emb1, GramL);
+	proj1:=OrthogonalProj(GramL, emb1).proj1;
+	orthorec:=OrthogonalComp(emb1, GramL);
+	emb2:=orthorec.basis;
+	Gram2:=orthorec.Gram;
+	proj2:=OrthogonalProj(GramL, emb2).proj1;
+	dim1:=Length(Gram1);
+	dim2:=Length(Gram2);
+	if dim1+dim2<>Length(GramL) then beep(1581581); fi;
+	if emb1*proj1<>IdentityMat(dim1) then beep(1); fi;
+	if emb2*proj2<>IdentityMat(dim2) then beep(2); fi;
+	if not IsZeroMat(emb1*GramL*TransposedMat(emb2)) then
+		beep(919223);
+	fi;
+	#
+	Gram1dual:=InverseMat(Gram1);
+	Gram2dual:=InverseMat(Gram2);
+	#
+	LGrec:=rec(
+		Gram:=GramL,
+		proj1:=proj1,
+		emb1:=emb1,
+		proj2:=proj2,
+		emb2:=emb2,
+		Gram1:=Gram1,
+		Gram2:=Gram2,
+		Gram1dual:=Gram1dual,
+		Gram2dual:=Gram2dual,
+		proj1_dual:=proj1*Gram1, # in terms of the STANDARD(!!) basis of L and the dual basis of L1
+		emb1_dual:=Gram1dual*emb1, # in terms of the STANDARD basis of L and the dual basis of L1
+		proj2_dual:=proj2*Gram2, # in terms of the STANDARD basis of L and the dual basis of L2
+		emb2_dual:=Gram2dual*emb2 # in terms of the STANDARD basis of L and the dual basis of L2
+	);
+	#
+	#
+	return(LGrec);
+end;

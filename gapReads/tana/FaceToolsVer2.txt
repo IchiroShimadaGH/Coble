@@ -1,0 +1,385 @@
+#Read("./gapReads/FaceTools.txt");
+
+# SelectWalls:=function(linforms)
+# MakeFacesWithAut:=function(GramS, linforms, mindim, Aut, tempsavename)
+# CheckFaceData:=function(GramS, Aut, initialwalllfs, facedata, mindim)
+#
+
+#
+#2020 March 15
+# New3MakeFaceData-> MakeFaceData
+# New3checkfacedata -> CheckFaceData
+#
+
+# Normalized Linear Forms: nlinform
+# should  be
+# nlinform=Set(nlinforms, lf->MakePrimitiveIntVect(lf)[2]),
+# (in particular, no two are proportional)
+# and  contain no zero vector.
+#
+
+SelectWalls:=function(linforms)
+	#
+	# The input should be normalized as
+	# linforms=Set(linforms, lf->MakePrimitiveIntVect(lf)[2]);
+	# and does not contain a zerovector.
+	#
+	# The list of elements of linforms
+	# that define a wall of the cone defined by x*tfl>=0 for all tfl in linforms.
+	#
+	local beep, dim, tlf, walllfs, lf, wallflag,  st, nlinforms;
+	#
+	beep:=function(numb)
+		Printn("wrong SelectWalls"); Error();
+	end;
+	#nlinforms:=Set(linforms, lf->MakePrimitiveIntVect(lf)[2]); #the normalized linforms
+	#if nlinforms<>linforms then beep(4433); fi;
+	#if true in List(nlinforms, IsZeroVect) then beep(5633); fi;
+	#MakePrimitiveIntVect does not work if a zero vector is input.
+	#
+	nlinforms:=List(linforms); #Prevent destroying the input linforms.
+	dim:=Length(nlinforms[1]);
+	#
+	if Length(nlinforms)=dim then
+		#
+		# linforms defines the cone over a simplex. #Added 2018 01/21
+		#
+		return(nlinforms);
+	fi;
+	#
+	walllfs:=[];
+	for tlf in linforms do
+		#
+		# Since we use SubtractSet and AddSet to nlinforms,
+		# we cannot write "for tlf in nlinforms do" #Added 2018/07/21
+		#
+		SubtractSet(nlinforms, [tlf]); #Add tfl back below.
+		if Rank(nlinforms)<dim then
+			#
+			# if removed then the rest is not bounded;
+			# hence tlf defines a wall. #Added 2018 01/21
+			#
+			wallflag:=[true];
+		else
+			#IsAWall:=function(vs, w, checklevel) #in LatticeTools
+			wallflag:=IsAWall(nlinforms, tlf, 1);
+		fi;
+		if wallflag[1] then
+			Add(walllfs, tlf);
+			AddSet(nlinforms, tlf);
+			#
+			# No need to put tlf back if not wallflag[1]
+			#
+		fi;
+	od;
+	return(walllfs);
+end;
+
+
+MakeFacesWithAut:=function(GramS, linforms, mindim, Aut, tempsavename)
+	# make the list of faces (down to mindim) of the cone
+	# defined by x*tlf>=0 for all tlf in linforms.
+	#
+	# Aut is an automorphism group of the lattice,
+	# while linforms are a subset of the dual lattice.
+	#
+	# The result is the list FaceData of the following records:
+	# newfacerec:=rec(
+	#	codim:=facedata.codim+1,
+	#	dim:=dimF-1,
+	#	ups:=[facedatapos],
+	#	basis:=newbasis,
+	#	wallsF:=SelectWalls(nlinearformsonnewF).
+	# passings:=
+	# nopsorb:=
+	#);
+	#
+	#
+	local beep, lf, xx, n, Idn, nlinforms,tlf,basisamb,
+	inifacerec, FaceData, facedatapos, wallsF, wallsdata,tlfwF,
+	codim1basis,hnfT, newbasis, newbasisF,isnewflag, oldpos,
+	oldfacedata, nlinearformsonnewF, twF, newfacerec,
+	facedata, twnewF, tg, total2, dimF, aa, st,fpaa,fpaaposs,
+	st2,  ttfrec, newwallsF,nowdim, makingchunk, currentchunk,
+  frec, Autperms, tv, passings, passingsAut, tperm, nn, walls;
+	#
+	beep:=function(numb)
+		Printn("wrong in MakeFacesWithAut", numb); Error();
+	end;
+	#
+	n:=Length(linforms[1]);
+	if mindim<1 or mindim>=n then
+		beep(0);
+	fi;
+	Idn:=IdentityMat(n);
+	#
+	nlinforms:=Set(linforms, lf->MakePrimitiveIntVect(lf)[2]);
+	#the normalized linforms
+	if nlinforms<>linforms then beep(88333);fi;
+	if true in List(linforms, IsZeroVect) then beep(6288111); fi;
+	#
+	walls:=linforms*InverseMat(GramS);
+	Autperms:=[];
+	for tg in Aut do
+		tperm:=PermList(List(walls*tg, tv->SinglePosition(walls, tv)));
+		Add(Autperms, tperm);
+	od;
+	#
+	inifacerec:=rec(
+		codim:=0,
+		dim:=n,
+		ups:=[],
+		basis:=Idn,
+		wallsF:=SelectWalls(nlinforms),
+		passings:=[],
+		nopsorb:=1
+	);
+	#
+	currentchunk:=[inifacerec];
+	makingchunk:=[];
+	nowdim:=n;
+	# have made faces of dimension nowdim.
+	# making walls of these faces
+	# and putting them in makingchunk.
+	#
+	FaceData:=[];
+	#
+	st:=Runtime();
+	while nowdim>mindim do
+		makingchunk:=[];
+		facedatapos:=0;
+		#
+		for facedata in currentchunk do
+			facedatapos:=facedatapos+1;
+			dimF:=facedata.dim;
+			if dimF<>nowdim then beep(4147227); fi;
+			# make facedata.wallsdata.
+			# make also new facedatas (without .wallsdata)
+			# that are walls of this face
+			# and put them in makingchunk.
+			# wallsdata is a list of
+			# [a linform defining a wall W,
+			# the position of the wall W in FaceData[the position of dimW faces]]
+			#
+			wallsdata:=[];
+			# the data of walls of F.
+			# A member of this list is
+			# [tlfwF, pos]
+			# (the wall of F (the face of dimF-1) defied
+			# by tlfwF is at pos in makingchunk).
+			#
+			for tlfwF in facedata.wallsF do
+				#
+				#tlfwF is a linear form on the face F of the facedata
+				# written in terms of facedata.basis.
+				#
+				codim1basis:=BasisSubspBylinformsZ([tlfwF]);
+				# codim1basis is a basis of the wall W
+				# of the face F defined by tlfwF
+				# written in terms of facedata.basis.
+				#
+				basisamb:=codim1basis*facedata.basis;
+				hnfT:=HermiteNormalFormIntegerMatTransform(basisamb);
+				newbasis:=hnfT.normal;
+				# newbasis is the standard basis of the wall W of the face F
+				# written in terms of the ambiant S.
+				#
+				newbasisF:=hnfT.rowtrans*codim1basis;
+				# newbasisF is newbasis
+				# written in terms of facedata.basis.
+				#
+				passings:=Positions(List(linforms, lf->IsZeroVect(newbasis*lf)), true);
+				passingsAut:=Set(Autperms, tperm->Set(passings, nn->nn^tperm));
+				#
+				# Has we already found the wall W (dimW=dimF-1)?
+				#
+				isnewflag:=true;
+				oldpos:=0;
+				for oldfacedata in makingchunk do
+					oldpos:=oldpos+1;
+					if oldfacedata.passings in passingsAut then
+						Add(oldfacedata.ups, facedatapos);
+						Add(wallsdata, [tlfwF, oldpos]);
+						isnewflag:=false;
+						break; #from for oldfacedata in makingchunk do
+					fi;
+				od;
+				#
+				if isnewflag then
+					# We make the data of the wall W of F.
+					#
+					nlinearformsonnewF:=[];
+					for twF in facedata.wallsF do
+						twnewF:=newbasisF*twF;
+						if not IsZeroVect(twnewF) then
+							Add(nlinearformsonnewF, MakePrimitiveIntVect(twnewF)[2]);
+						else
+							if twF<>tlfwF then beep(3214471711); fi;
+						fi;
+					od;
+					#
+					nlinearformsonnewF:=Set(nlinearformsonnewF);
+					newwallsF:=SelectWalls(nlinearformsonnewF);
+					if Rank(newwallsF)<>facedata.dim-1 then
+						beep(92651156533);
+					fi;
+					#
+					newfacerec:=rec(
+						codim:=facedata.codim+1,
+						dim:=facedata.dim-1,
+						ups:=[facedatapos],
+						basis:=newbasis,
+						wallsF:=newwallsF,
+						passings:=passings,
+						nopsorb:=Length(passingsAut)
+					);
+					Add(makingchunk, newfacerec);
+					Add(wallsdata, [tlfwF, Length(makingchunk)]);
+				fi;
+				#
+			od; #for tlfwF in facedata.wallsF do
+			#
+			facedata.wallsdata:=wallsdata;
+			if List(facedata.wallsdata, xx->xx[1])<>facedata.wallsF then
+				beep(15533);
+			fi;
+			if facedatapos mod 10=0 then #This is new 2018 Aug 02.
+				Printn(facedatapos, "in", Length(currentchunk), "dim", dimF,
+				"makingchunk",  Length(makingchunk), StringTime(Runtime()-st)
+				);
+				st:=Runtime();
+			fi;
+			#
+		od;
+		#
+		# finished making the faces of dimension nowdim-1.
+		#
+		Add(FaceData, currentchunk);
+		currentchunk:=makingchunk;
+		savedataas(FaceData, tempsavename);
+		Printn("###### dim", nowdim, "done: newly added",
+					Length(makingchunk), List(FaceData, Length));
+		nowdim:=nowdim-1;
+		#
+	od;
+	#
+	Add(FaceData, makingchunk);
+	Printn("###### done", List(FaceData, Length));
+	#
+	return(FaceData);
+end;
+
+CheckFaceData:=function(GramS, Aut, initialwalllfs, facedata, mindim)
+	local beep, n, frecs, orb, orbs, tg, frec, ii, dim, xx, tb,
+	twdata, frecpos, frecspos, upfrecs, newlfsinF, lf, nlf, basesAut, tbasesAut,
+	stabs, upfrecpos, upfrec, twup,  twdatapos, thebasisinup,
+	thebasisinups, tbasis, cc, tcc, nowdim, basisdual, flagpassings, tv;
+	#
+	beep:=function(numb)
+		Printn("wrong CheckFaceData", numb); Error();
+	end;
+	#
+	n:=Length(GramS);
+	orbs:=List([1..n], ii->[]);
+	for ii in [1..mindim-1] do
+		orbs[ii]:="not yet";
+	od;
+	for frecs in facedata do
+		for frec in frecs do
+			orb:=List(Aut, tg->HermiteNormalFormIntegerMat(frec.basis*tg));
+			stabs:=Set(orb, tb->Length(Positions(orb, tb)));
+			if Length(stabs)<>1 then beep(628881); fi;
+			if stabs[1]*frec.nopsorb<>Length(Aut) then
+				beep(4147741741);
+			fi;
+			Add(orbs[frec.dim], Set(orb));
+		od;
+	od;
+	for dim in [1..n] do
+		if dim>=mindim then
+			Printn(dim, toMultiSet(List(orbs[dim], Length)), Sum(List(orbs[dim], Length)));
+		fi;
+	od;
+	#
+	#
+	cc:=0;
+	nowdim:=n+1;
+	frecspos:=0;
+	for frecs in facedata do
+		frecspos:=frecspos+1;
+		if frecspos>1 then
+			upfrecs:=facedata[frecspos-1];
+		else
+			upfrecs:=[];
+		fi;
+		frecpos:=0;
+		nowdim:=nowdim-1;
+		for frec in frecs do
+			frecpos:=frecpos+1;
+			if frec.dim<mindim then break; fi;
+			if frec.dim<>nowdim then
+				beep(14247742);
+			fi;
+			if frec.codim+frec.dim<>n then beep(124); fi;
+			if Rank(frec.basis)<>frec.dim then beep(2441122); fi;
+			if Length(frec.basis)<>frec.dim then beep(1441122); fi;
+			if frec.dim>mindim then
+				if List(frec.wallsdata, xx->xx[1])<>frec.wallsF then beep(1212); fi;
+			fi;
+			if Set(frec.basis, Length)<>[n] then beep(36166); fi;
+			newlfsinF:=[];
+			for lf in initialwalllfs*TransposedMat(frec.basis) do
+				if not IsZeroVect(lf) then
+					nlf:=MakePrimitiveIntVect(lf)[2];
+					if not nlf in newlfsinF then
+						Add(newlfsinF, nlf);
+					fi;
+				fi;
+			od;
+			flagpassings:=List(initialwalllfs, tv->IsZeroVect(frec.basis*tv));
+			if frec.passings<>Positions(flagpassings, true) then
+				beep(551122);
+			fi;
+			newlfsinF:=Set(newlfsinF);
+			if not IsEqualSet(SelectWalls(newlfsinF), frec.wallsF) then
+				beep(268394);
+			fi;
+			#
+			#
+			basesAut:=orbs[nowdim][frecpos];
+			#
+			for upfrecpos in frec.ups do
+				upfrec:=upfrecs[upfrecpos];
+				if upfrec.dim<>frec.dim+1 then beep(312121); fi;
+				thebasisinups:=[];
+				for tbasis in basesAut do
+					if Rank(StackMats(upfrec.basis, tbasis))=frec.dim+1 then
+						thebasisinup:=MisXB(tbasis, upfrec.basis);
+						Add(thebasisinups, thebasisinup);
+					fi;
+				od;
+				#
+				if thebasisinups=[] then
+					beep(81000119);
+				fi;
+				if not frecpos in List(upfrec.wallsdata, xx->xx[2]) then
+					beep(51517575);
+				fi;
+				for twdatapos in upfrec.wallsdata do
+					if twdatapos[2]=frecpos then
+						twup:=twdatapos[1];
+						if not true in List(thebasisinups, tb->IsZeroVect(tb*twup)) then
+							beep(41774711);
+						fi;
+					fi;
+				od;
+			od;
+			cc:=cc+1;
+			if cc mod 100=0 then
+				Printn("___frec.dim", frec.dim, cc, frecpos);
+			fi;
+		od;
+		Printn("frec.dim", frec.dim, "done", cc, frecpos);
+	od;
+	return(true);
+end;

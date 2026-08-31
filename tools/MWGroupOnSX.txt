@@ -1,0 +1,433 @@
+#Read("MWGroupOnSX.txt"); #Ver5
+
+
+monitorPermsOnThetaTilde:=[];
+
+PermsOnThetaTilde:=function(tau, jj)
+  local beep, trec, ell, dd, perm, ii, idperm,
+  pf,xx,rest, pf1s;
+  #
+  beep:=function(beepnumb)
+    localbeep("PermsOnThetaTilde", beepnumb); Error();
+  end;
+  #
+  #AddSet(monitorPermsOnThetaTilde, [tau, jj]);
+  #Printn("____________________________", [tau, jj]);
+  #
+  trec:=ADEHrec.(tau);
+  ell:=trec.rank;
+  if jj=0 then return([0..ell]); fi;
+  #
+  if trec.type='A' then
+    if not jj in [1..ell] then beep(5872587); fi;
+    dd:=ell+1;
+    pf:=List([0..ell], ii->[ii, (ii+jj) mod dd]);
+  elif trec.type='D' then
+    if not jj in [1,2,ell] then beep(5872587); fi;
+    if ell mod 2=0 then
+      pf:=[[0,jj],[jj, 0]];
+      rest:=SetMinus([0,1,2,ell], [0, jj]);
+      Add(pf, [rest[1], rest[2]]);
+      Add(pf, [rest[2], rest[1]]);
+      if jj in [1, 2] then
+        for ii in [3..ell-1] do
+          Add(pf,[ii, ell+2-ii]);
+        od;
+      elif jj in [ell] then
+        for ii in [3..ell-1] do
+          Add(pf,[ii, ii]);
+        od;
+      else beep(976282);
+      fi;
+    elif ell mod 2=1 then
+      if jj=1 then
+        pf:=[[0,1], [1,ell], [ell,2], [2,0]];
+        for ii in [3..ell-1] do
+          Add(pf, [ii, ell+2-ii]);
+        od;
+      elif jj=2 then
+        pf:=[[0,2], [2,ell], [ell,1], [1,0]];
+        for ii in [3..ell-1] do
+          Add(pf, [ii, ell+2-ii]);
+        od;
+      elif jj=ell then
+        pf:=[[0,ell], [ell, 0], [1,2], [2,1]];
+        for ii in [3..ell-1] do
+          Add(pf, [ii, ii]);
+        od;
+      else beep(19282);
+      fi;
+    fi; #if ell mod 2=0 then
+  elif trec.type='E' then
+    if ell=6 then
+      if not jj in [2,6] then beep(51187); fi;
+      if jj=2 then
+        pf:=[[0,2],[2,6],[6,0],[1,3],[3,5],[5,1],[4,4]];
+      else
+        pf:=[[0,6],[6,2],[2,0],[1,5],[5,3],[3,1],[4,4]];
+      fi;
+    elif ell=7 then
+      if not jj in [7] then beep(513187); fi;
+      pf:=[[0,7],[7,0],[2,6],[6,2],[3,5],[5,3],[4,4],[1,1]];
+    elif ell=8 then
+      beep(9192);
+    else beep(91992);
+    fi;
+  else beep(75785287);
+  fi;
+  #
+  pf1s:=List(pf, xx->xx[1]);
+  perm:=[];
+  for ii in [0..ell] do
+    Add(perm, pf[SinglePosition(pf1s, ii)][2]);
+  od;
+  if CopySort(perm)<>[0..ell] then beep(69982); fi;
+  return(perm);
+  #
+end;
+
+
+FindTransSection:=function(tau, dualv)
+  local beep, trec, Gramdual, vv, cc, thediff, thejj,
+  ell, Jprime, transsectionrec, tvv, jj;
+  #
+  beep:=function(beepnumb)
+    localbeep("FindTransSection", beepnumb); Error();
+  end;
+  #
+  trec:=ADEHrec.(tau);
+  Gramdual:=-trec.dualGram;
+  vv:=dualv*Gramdual;
+  cc:=0;
+  if IsIntVect(vv) then
+    cc:=cc+1;
+    thediff:=vv;
+    thejj:=0;
+  fi;
+  ell:=trec.rank;
+  if trec.type='A' then
+    Jprime:=[1..ell];
+  elif trec.type='D' then
+    Jprime:=[1,2,ell];
+  elif trec.type='E' then
+    if ell=6 then Jprime:=[2,6];
+    elif ell=7 then Jprime:=[7];
+    elif ell=8 then Jprime:=[];
+    else beep(69627);
+    fi;
+  else beep(1721);
+  fi;
+  for jj in Jprime do
+    tvv:=vv-Gramdual[jj];
+    if IsIntVect(tvv) then
+      cc:=cc+1;
+      thediff:=tvv;
+      thejj:=jj;
+    fi;
+  od;
+  if cc<>1 then beep(828283); fi;
+  transsectionrec:=rec(
+    jj:=thejj,
+    diff:=thediff
+  );
+  return(transsectionrec);
+end;
+
+
+MWGroupOnSX:=function(GramS, manyamples, ellfibrec)
+  local beep, singfibs, rankS, ff, zz, ampleS, Wrec, GramW,
+  projW,   TrivLatBasis, Sigma, tcomp, FindRat, FindAut,
+  nwrec, gs, grecs, grec, mwrank, mwtor, SigmaBasis,
+  quotrec, TorRepsInS, TorRepsRats, tempMWbasisRepsInS,
+  tempGramMWL, LLLinttempGramMWL, inttempGramMWL,
+  mwrec, ttgg, torder, IsqidAut, newSgens, GramMWL,
+  Sgens, iddiscS, discS, MWbasisRepsInS, Sgensinv,embW,
+  MWbasisRats, IdS, MWLrec, projMWL, TrivLatBarBasis, tw, tg, pos,
+  projSXtoMW, tB, tBinv, ffdual, idmwrank, embMWL, OrthoMWbasisInS;
+  #
+  beep:=function(beepnumb)
+    localbeep("MWGroupOnSX", beepnumb); Error();
+  end;
+  #
+  if ellfibrec.singfibs=[0, []] then
+    singfibs:=[];
+  else
+    singfibs:=ellfibrec.singfibs;
+  fi;
+  #
+  rankS:=Length(GramS);
+  ff:=ellfibrec.f;
+  zz:=ellfibrec.z;
+  ffdual:=ff*GramS;
+  ampleS:=manyamples[1];
+  #
+  if not NewIsIrredRat(GramS, manyamples, zz) then beep(828218); fi;
+  if not IsEllfNef(GramS, ampleS, ff) then beep(838218); fi;
+  #
+  mwrank:=ellfibrec.MWrank;
+  mwtor:=ellfibrec.MWtor;
+  #
+  Wrec:=OrthogonalProj(GramS, [ff, zz]);
+  GramW:=Wrec.Gram2;
+  projW:=Wrec.proj2;
+  embW:=Wrec.emb2;
+  TrivLatBasis:=[ff, zz];
+  SigmaBasis:=[];
+  for tcomp in singfibs do
+    Append(TrivLatBasis, tcomp[2]);
+    Append(SigmaBasis, tcomp[2]);
+  od;
+  #
+  if mwrank>0 then
+    TrivLatBarBasis:=PrimitiveClosure(TrivLatBasis).basisbar;
+    MWLrec:=OrthogonalProj(GramS, TrivLatBarBasis);
+    projMWL:=MWLrec.proj2;
+    embMWL:=MWLrec.emb2;
+    idmwrank:=IdentityMat(mwrank);
+  else
+    TrivLatBarBasis:=[];
+    projMWL:=[];
+  fi;
+  #
+  FindRat:=function(v)
+    local vv, vdual, tcomp, localsec, vvW, vvWsqnrm, tt, sv;
+    vdual:=v*GramS;
+    vv:=List(v);
+    for tcomp in singfibs do
+      localsec:=FindTransSection(tcomp[1], tcomp[2]*vdual);
+      vv:=vv-localsec.diff*tcomp[2];
+    od;
+    vvW:=vv*projW;
+    vvWsqnrm:=vvW*GramW*vvW;
+    tt:=-vvWsqnrm/2;
+    sv:=tt*ff+zz+vvW*embW;
+    if sv*ffdual<>1 then beep(929921); fi;
+    if SolutionIntMat(TrivLatBasis, sv-vv)=fail then beep(691682); fi;
+    if not NewIsIrredRat(GramS, manyamples,sv) then beep(919292); fi;
+    return(sv);
+  end;
+  #
+  if FindRat(MakeZeroVect(rankS))<>zz then beep(672672); fi;
+  #
+  quotrec:=QuotientLbyM(rankS, TrivLatBasis);
+  if mwtor=[] then
+    if quotrec.torsionfag<>[] then beep(817682); fi;
+  else
+    if EasyNormalFAG(quotrec.torsionfag)<>EasyNormalFAG(mwtor) then beep(969862); fi;
+  fi;
+  if mwrank<>Length(quotrec.freebasisreps) then beep(51281); fi;
+  #
+  TorRepsInS:=quotrec.torsiongensreps;
+  TorRepsRats:=List(TorRepsInS, FindRat);
+  #
+  tempMWbasisRepsInS:=quotrec.freebasisreps;
+  if tempMWbasisRepsInS<>[] then
+    if Rank(tempMWbasisRepsInS)<>mwrank then beep(92922); fi;
+    tempGramMWL:=-TMTTmult(tempMWbasisRepsInS*projMWL, MWLrec.Gram2);
+    inttempGramMWL:=MakePrimitiveIntMat(tempGramMWL);
+    LLLinttempGramMWL:=LLLReducedGramMat(inttempGramMWL.ssM);
+    GramMWL:=(1/inttempGramMWL.ss)*LLLinttempGramMWL.remainder;
+    MWbasisRepsInS:=LLLinttempGramMWL.transformation*tempMWbasisRepsInS;
+    MWbasisRats:=List(MWbasisRepsInS, FindRat);
+    OrthoMWbasisInS:= MWbasisRats*projMWL*embMWL;
+    if Rank(OrthoMWbasisInS)<>mwrank then beep(21325); fi;
+    if GramMWL<>-TMTTmult(MWbasisRepsInS*projMWL, MWLrec.Gram2) then beep(729211); fi;
+    if GramMWL<>-TMTTmult(OrthoMWbasisInS, GramS) then beep(9211); fi;
+    if Rank(StackMats(TrivLatBarBasis, MWbasisRepsInS-MWbasisRats))<>rankS-mwrank then
+      beep(92663);
+    fi;
+    tB:=StackMats(TrivLatBarBasis, MWbasisRats);
+    if Length(tB)<>rankS then beep(29391); fi;
+    if Rank(tB)<>rankS then beep(30391); fi;
+    tBinv:=InverseMat(tB);
+    projSXtoMW:=SubMatrix(tBinv, [1..rankS], [rankS-mwrank+1..rankS]);
+    if not IsZeroMat(TrivLatBarBasis*projSXtoMW) then beep(92912); fi;
+    if MWbasisRats*projSXtoMW<>idmwrank then beep(2471722); fi;
+    if not IsZeroMat(AMTBmult(TrivLatBasis, GramS, OrthoMWbasisInS)) then beep(2322); fi;
+ else
+    projSXtoMW:=[];
+    MWbasisRepsInS:=[];
+    MWbasisRats:=[];
+    OrthoMWbasisInS:=[];
+    GramMWL:=[];
+ fi;
+  #
+  #
+  discS:=DiscriminantForm(GramS);
+  IdS:=IdentityMat(rankS);
+  iddiscS:=OLtoOqL(IdS, discS);
+  #
+  IsqidAut:=function(tg)
+    if not IsIntMat(tg) then return(false); fi;
+    if TMTTmult(tg, GramS)<>GramS then return(false); fi;
+    if OLtoOqL(tg, discS)<>iddiscS then return(false); fi;
+    if not DoesKeepTheNef(GramS, manyamples, tg) then return(false); fi;
+    if ff*tg<>ff then return(false); fi;
+    return(true);
+  end;
+  #
+  Sgens:=[ff, zz];
+  Append(Sgens, MWbasisRats);
+  Append(Sgens, SigmaBasis);
+  Sgensinv:=InverseMat(Sgens);
+  #
+  FindAut:=function(vv)
+    #
+    local vvrat, vvratdual, newSgens, newMWbasisRat, oldratvv,
+    newSigmaBasis, tcomp, localsec, perm, newSigmanu,kk, newkk,
+    theg, grec;
+    #
+    vvrat:=FindRat(vv);
+    vvratdual:=vvrat*GramS;
+    newSgens:=[ff, vvrat];
+    #
+    newMWbasisRat:=[];
+    for oldratvv in MWbasisRats do
+      Add(newMWbasisRat, FindRat(oldratvv+vvrat));
+    od;
+    Append(newSgens, newMWbasisRat);
+    #
+    newSigmaBasis:=[];
+    for tcomp in singfibs do
+      localsec:=FindTransSection(tcomp[1], tcomp[2]*vvratdual);
+      if not IsZeroVect(localsec.diff) then beep(698198); fi;
+      perm:=PermsOnThetaTilde(tcomp[1], localsec.jj);
+      newSigmanu:=[];
+      for kk in [2..Length(perm)] do
+        newkk:=perm[kk];
+        if newkk=0 then
+          Add(newSigmanu, tcomp[3]);
+        else
+          Add(newSigmanu, tcomp[2][newkk]);
+        fi;
+      od;
+      if TMTTmult(newSigmanu, GramS)<>-ADEHGram([tcomp[1]]) then beep(6926); fi;
+      Append(newSigmaBasis, newSigmanu);
+    od;
+    Append(newSgens, newSigmaBasis);
+    #
+    theg:=Sgensinv*newSgens;
+    if not IsqidAut(theg) then
+      beep(46467);
+    fi;
+    grec:=rec(
+      rep:=List(vv),
+      rat:=List(vvrat),
+      g:=theg,
+      order:=Order(theg)
+    );
+   return(grec);
+  end;
+  #
+  gs:=[];
+  grecs:=[];
+  for tw in MWbasisRats do
+    grec:=FindAut(tw);
+    if grec.order<>infinity then beep(11929922); fi;
+    Add(grecs, grec);
+    tg:=grec.g;
+    for ttgg in gs do
+      if ttgg*tg<>tg*ttgg then beep(75247257); fi;
+    od;
+    Add(gs, tg);
+  od;
+  pos:=0;
+  for tw in TorRepsRats do
+    pos:=pos+1;
+    grec:=FindAut(tw);
+    torder:=quotrec.torsionfag[pos];
+    if grec.order<>torder then beep(92977922); fi;
+    Add(grecs, grec);
+    tg:=grec.g;
+    for ttgg in gs do
+      if ttgg*tg<>tg*ttgg then beep(73247257); fi;
+    od;
+    Add(gs, tg);
+  od;
+  #
+  mwrec:=rec(
+    GramMWL:=GramMWL, #positive definite rational
+    TorReps:=TorRepsRats,
+    TrivLatBasis:=TrivLatBasis,
+    TrivLatBarBasis:=TrivLatBarBasis,
+    GramS:=GramS,
+    ellfibrec:=ellfibrec,
+    MWbasisRats:=MWbasisRats,
+    projSXtoMW:=projSXtoMW,
+    OrthoMWbasisInS:=OrthoMWbasisInS,
+    grecs:=grecs,
+    gs:=gs
+  );
+  return(mwrec);
+end;
+
+
+SVAutrecsInMWrec:=function(GramS, manyamples, mwrec, MWLnrm)
+  #
+  #
+  local beep, ellfibrec,tr, grecsrat, grecsg,xx,
+  LGrec, Triv, svs, ddG, ddGGramMWL, GramMWL, MWbasisRepsInSX, toautg,
+  gbasis, id, mwrank, nrms, shvects, projSXtoMW,  ff, zz, IsqidAut,
+  discS, iddiscS;
+  #
+  beep:=function(beepnumb)
+    localbeep("SVAutrecsInMWrec", beepnumb); Error();
+  end;
+  #
+  id:=IdentityMat(Length(GramS));
+  ellfibrec:=mwrec.ellfibrec;
+  ff:=ellfibrec.f;
+  zz:=ellfibrec.z;
+  discS:=DiscriminantForm(GramS);
+  iddiscS:=OLtoOqL(id, discS);
+  #
+  IsqidAut:=function(tg)
+    if not IsIntMat(tg) then return(false); fi;
+    if TMTTmult(tg, GramS)<>GramS then return(false); fi;
+    if OLtoOqL(tg, discS)<>iddiscS then return(false); fi;
+    if not DoesKeepTheNef(GramS, manyamples, tg) then return(false); fi;
+    if ff*tg<>ff then return(false); fi;
+    return(true);
+  end;
+  #
+  grecsrat:=List(mwrec.grecs, xx->xx.rat);
+  grecsg:=List(mwrec.grecs, xx->xx.g);
+  mwrank:=ellfibrec.MWrank;
+  GramMWL:=mwrec.GramMWL;
+  if TMTTmult(mwrec.OrthoMWbasisInS, GramS)<>-GramMWL then beep(75298); fi;
+  projSXtoMW:=mwrec.projSXtoMW;
+  #
+  ddG:=Llcm(List(Flat(GramMWL), DenominatorRat));
+  ddGGramMWL:=ddG*GramMWL;
+  if not IsIntMat(ddGGramMWL) then beep(82281); fi;
+  if SignatureQ(ddGGramMWL)<>[mwrank,mwrank,0] then beep(9992921); fi;
+  shvects:=ShortestVectors(ddGGramMWL, MWLnrm*ddG);
+  svs:=shvects.vectors;
+  svs:=Union(-svs, svs);
+  nrms:=(1/ddG)*shvects.norms;
+  nrms:=Collected(Concatenation(nrms, nrms));
+  #
+  gbasis:=List(mwrec.MWbasisRats, tr->grecsg[SinglePosition(grecsrat, tr)]);
+  toautg:=function(sv)
+    local autg, kk, zzautg, autgrec;
+    autg:=id;
+    for kk in [1..Length(sv)] do
+      autg:=autg*grecsg[kk]^sv[kk];
+    od;
+    if not IsqidAut(autg) then beep(686893); fi;
+    zzautg:=zz*autg;
+    if not NewIsIrredRat(GramS, manyamples, zzautg) then beep(69826982); fi;
+    if zzautg*projSXtoMW<>sv then beep(62726912); fi;
+    autgrec:=rec(g:=autg, rat:=zzautg, sv:=sv, MWLnorm:=sv*GramMWL*sv);
+    return(autgrec);
+  end;
+  #
+  mwrec.MWLnorms:=nrms;
+  mwrec.svautrecs:=List(svs, toautg);
+  SortParallel(List(mwrec.svautrecs, xx->xx.MWLnorm), mwrec.svautrecs);
+  return(mwrec);
+  #
+end;
+
+
+#end

@@ -1,0 +1,37 @@
+#Read("gapsReads/AutK3Monitor.txt");
+
+
+time1:=0;
+time2:=0;
+time3:=0;
+time4:=0;
+time5:=0;
+time6:=0;
+time7:=0;
+time8:=0;
+time9:=0;
+prevdiff:=0;
+prevtweylnumb:=0;
+
+timepercent:=function(time, totaltime)
+	return(Float(FloorRat(10000*time/totaltime)/100));
+end;
+
+AutK3Monitor:=function(tweylnumb)
+	local timeperc, average1, average2, average1inv100, diff;
+	timeperc:=List([time1, time2, time3, time4, time5, time6, time7, time8], xx->timepercent(xx, time9));
+	average1:=FloatRat(totalweylnumb/tweylnumb, 4);
+	average1inv100:=FloatRat(100*tweylnumb/totalweylnumb, 4);
+	average2:=FloatRat(100*Length(FingerPrints)/tweylnumb, 4);
+	diff:=totalweylnumb-tweylnumb;
+	Printn("=============================");
+	Printn("number of weyl vectors", totalweylnumb, "current numb", tweylnumb, 
+	"diff", diff, "(", diff-prevdiff, "/", tweylnumb-prevtweylnumb,  ")", 
+	"new chams numb", Length(FingerPrints));
+	Printn("totaltime", StringTime(time9), "average new wall", average1, "done perc", average1inv100, "new chams perc", average2);
+	Printn("navs", timeperc[1], "chnk", timeperc[2], "isnew", timeperc[3], "aut", timeperc[4],
+	"orb", timeperc[5], "walls", timeperc[6], "adj", timeperc[7], "rec", timeperc[8]);
+	Printn("=============================");
+	prevdiff:=diff;
+	prevtweylnumb:=tweylnumb;
+end;

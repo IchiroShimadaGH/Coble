@@ -1,0 +1,202 @@
+#Read("K3Amples.txt")
+
+AmplePerturb:=function(Gram, ample, filter, trials, seed,  ms, cs)
+  local beep, dim, counter, mysource, m, pv, newample,  tgg;
+  #
+  beep:=function(beepnumb)
+    localbeep("AmplePerturb", beepnumb); Error();
+  end;
+  if OrthoRoots(Gram, [ample])<>[] then beep(331882); fi;
+  dim:=Length(Gram);
+  counter:=0;
+  mysource := RandomSource(IsMersenneTwister, seed);;
+  while counter<trials do
+    counter:=counter+1;
+    m:=Random(mysource, ms);
+    pv:=List([1..dim], ii->Random(mysource, cs));
+    newample:=GetPrimitiveIntVect(m*ample+pv);
+    if newample*Gram*newample>0 then
+      if OrthoRoots(Gram, [newample])=[] then
+        tgg:=MoveToTheSameChamber(Gram, newample, ample);
+        newample:=newample*tgg;
+        if filter(newample) then
+          if OrthoRoots(Gram, [newample])<>[] then beep(1882); fi;
+          if SeparatingVects(Gram, ample, newample, -2)<>[] then beep(8111); fi;
+          return(newample);
+        fi;
+      fi;
+    fi;
+  od;
+  return(fail);
+end;
+
+
+NewMakeRandomAmple:=function(Gram,  iniposv,filter, trials, seed,  ms, cs)
+  local beep, dim, counter, mysource, m, pv, newample,  tgg, iniposvdual, mta;
+  #
+  beep:=function(beepnumb)
+    localbeep("NewMakeRandomAmple", beepnumb); Error();
+  end;
+  iniposvdual:=iniposv*Gram;
+  if iniposvdual*iniposv<=0 then beep(822882888); fi;
+  dim:=Length(Gram);
+  counter:=0;
+  mysource := RandomSource(IsMersenneTwister, seed);;
+  while counter<trials do
+    counter:=counter+1;
+    m:=Random(mysource, ms);
+    pv:=List([1..dim], ii->Random(mysource, cs));
+		mta:=m*iniposv+pv;
+		if IsZeroVect(mta) then continue; fi;
+    newample:=GetPrimitiveIntVect(mta);
+    if newample*Gram*newample>0 and iniposvdual*newample>0 then
+      if OrthoRoots(Gram, [newample])=[] then
+        tgg:=MoveToTheSameChamber(Gram, newample, iniposv);
+        newample:=newample*tgg;
+        if filter=true or filter(newample) then
+          if OrthoRoots(Gram, [newample])<>[] then beep(1882); fi;
+          if SeparatingVects(Gram, iniposv, newample, -2)<>[] then
+						beep(8111);
+		  		fi;
+          return(newample);
+        fi;
+      fi;
+    fi;
+  od;
+  return(fail);
+end;
+
+
+
+
+AmplePerturb:=function(Gram, ample, filter, trials, seed,  ms, cs)
+  local beep, dim, counter, mysource, m, pv, newample,  tgg;
+  #
+  beep:=function(beepnumb)
+    localbeep("AmplePerturb", beepnumb); Error();
+  end;
+  if OrthoRoots(Gram, [ample])<>[] then beep(331882); fi;
+  dim:=Length(Gram);
+  counter:=0;
+  mysource := RandomSource(IsMersenneTwister, seed);;
+  while counter<trials do
+    counter:=counter+1;
+    m:=Random(mysource, ms);
+    pv:=List([1..dim], ii->Random(mysource, cs));
+    newample:=GetPrimitiveIntVect(m*ample+pv);
+    if newample*Gram*newample>0 then
+      if OrthoRoots(Gram, [newample])=[] then
+        tgg:=MoveToTheSameChamber(Gram, newample, ample);
+        newample:=newample*tgg;
+        if filter(newample) then
+          if OrthoRoots(Gram, [newample])<>[] then beep(1882); fi;
+          if SeparatingVects(Gram, ample, newample, -2)<>[] then beep(8111); fi;
+          return(newample);
+        fi;
+      fi;
+    fi;
+  od;
+  return(fail);
+end;
+
+
+MakeRandomAmples:=function(GramS, iniample, nops, maxnrm, tseed)
+  local beep, amples, dim, iniampledual, cc,ta,nu,nownops,
+  tta, mm, tb1, tt, tb2, ttaa, ccc, ta1, ta2, nrms, cs,
+  nowmaxnrm, tanrm, maxmm, ii, zs, cnops, iniseed;
+  #
+  beep:=function(beepnumb)
+    localbeep("MakeRandomAmples", beepnumb); Error();
+  end;
+  #
+  iniseed:= State(GlobalMersenneTwister);
+  Reset(GlobalMersenneTwister, tseed);
+  nowmaxnrm:=maxnrm;
+  amples:=[iniample];
+  nownops:=Length(amples);
+  dim:=Length(GramS);
+  zs:=List([1..2*dim+1], ii->0);
+  iniampledual:=iniample*GramS;
+  cc:=0;
+  maxmm:=10;
+  mm:=1;
+  while Length(amples)<4*nops do
+    cc:=cc+1;
+    tta:=Random(amples);
+    mm:=mm+1;
+    if mm=maxmm then
+      mm:=1;
+    fi;
+    cs:=Concatenation([-mm..mm], zs);
+    ta:=RandomVectFromL(dim, cs);
+    while ta*GramS*ta<=0 do
+  		ta:=ta+tta;
+  	od;
+    if IsZeroVect(ta) then continue; fi;
+    nu:=10;
+  	ta1:=List(ta/2^nu,  NearestInt);
+    while ta1*GramS*ta1<=0  and nu>=0  do
+      ta1:=List(ta/2^nu, NearestInt);
+      nu:=nu-1;
+    od;
+    ta:=GetPrimitiveIntVect(ta1);
+    tanrm:= ta*GramS*ta;
+    if tanrm<=0 then beep(838382); fi;
+    if tanrm>=nowmaxnrm then  continue; fi;
+    if ta*iniampledual<0 then ta:=-ta; fi;
+    #
+    tb1:=Random(amples);
+    ta:=ta*MoveToTheSameChamber(GramS, ta, tb1);
+    if Length(amples)>100 then
+      for tt in [1..20] do
+    		tb2:=Random(amples);
+    		ttaa:=GetPrimitiveIntVect(tb2+ta);
+    		#if OrthoRoots(GramS, [ttaa])<>[] then beep(61221); fi;
+    		if ttaa*GramS*ttaa<nowmaxnrm then
+    			Add(amples, List(ttaa));
+    		fi;
+    	od;
+    else
+      cnops:=Length(amples);
+      for tt in [1..cnops] do
+        tb2:=amples[tt];
+        ttaa:=GetPrimitiveIntVect(tb2+ta);
+        #if OrthoRoots(GramS, [ttaa])<>[] then beep(61221); fi;
+        if ttaa*GramS*ttaa<nowmaxnrm then
+          Add(amples, List(ttaa));
+        fi;
+      od;
+    fi;
+    amples:=Set(amples);
+    #Printn(Length(amples));
+    if cc mod 1000=0 then
+      Printn("making amples", cc, nownops, "->", Length(amples), nowmaxnrm);
+  		ccc:=0;
+  		while ccc<=10 do
+  			ta1:=Random(amples);
+  			ta2:=Random(amples);
+  			if OrthoRoots(GramS, [ta1])<>[] then beep(6124421); fi;
+  			if OrthoRoots(GramS, [ta2])<>[] then beep(6177221); fi;
+  			if SeparatingVects(GramS, ta1, ta2, -2)<>[] then beep(66298762); fi;
+  			ccc:=ccc+1;
+  		od;
+      if nownops=Length(amples) then
+        nowmaxnrm:=nowmaxnrm+maxnrm;
+        maxmm:=maxmm+2;
+      else
+        nownops:=Length(amples);
+      fi;
+  	fi;
+  od;
+  nrms:=List(amples, tv->tv*GramS*tv);
+  SortParallel(nrms, amples);
+  amples:=List([1..nops], ii->amples[ii]);
+  Printn("___ random amples", Length(amples));
+  Reset(GlobalMersenneTwister, iniseed);
+  return(amples);
+end;
+
+
+
+
+#end

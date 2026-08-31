@@ -1,0 +1,38 @@
+# Read("Eisenstein.txt");
+
+q:=X(Rationals, "q");
+sigmafunc:=function(nu, m)
+	local xx;
+	return(Sum(List(DivisorsInt(m), xx->xx^nu)));
+end;
+
+CoeffsUpToDeg:=function(pol, dd)
+	local coefs;
+	coefs:=CoefficientsOfLaurentPolynomial(pol)[1];
+	return(List([1..dd+1], ii->coefs[ii]));
+end;
+
+ThetaExtremal:=function(n)
+	local beep, E4, E6,minL,  eqM, weight, nu4, nu6, pol,
+	eqMinv;
+	beep:=function(numb)
+		Printn("wrong ThetaExtremal"); Error();
+	end;
+	if n mod 8<>0 then beep(1); fi;
+	minL:=2+2*FloorRat(n/24);
+	E4:=1+240*Sum(List([1..minL/2], mm->sigmafunc(3, mm)*q^mm));
+	E6:=1-504*Sum(List([1..minL/2], mm->sigmafunc(5, mm)*q^mm));
+	eqM:=[];
+	weight:=n/2;
+	nu4:=weight/4;
+	while nu4>=0 do
+		nu6:=(weight-4*nu4)/6;
+		pol:=(E4^nu4)*(E6^nu6);
+		Add(eqM, CoeffsUpToDeg(pol, 2+minL/2));
+		nu4:=nu4-3;
+	od;
+	if Length(eqM)<>minL/2 then beep(2); fi;
+	eqMinv:=InverseMat(SubMatrix(eqM, [1..minL/2], [1..minL/2]));
+	return(eqMinv*eqM);
+end;
+

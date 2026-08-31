@@ -1,0 +1,353 @@
+#We construct randomized version of 
+#FindAllSubconfigs:=function(targetM, bigM)
+#and
+#FindASubconfig:=function(targetM, bigM)
+
+
+FindAllSubconfigsBounded:=function(targetM, bigM, bound)
+	#
+	local embs, findjob, n, N, partial, counter, bddflag;
+	#
+	N:=Length(bigM); 
+	n:=Length(targetM);
+	embs:=[];
+	partial:=[1..n]; 
+	counter:=0;
+	bddflag:=false;
+	#
+	findjob:=function(kk)
+		#
+		local targetv, jj, bigvjj, fflag, cc, ii;
+		#
+		counter:=counter+kk;
+		if counter>bound then bddflag:=true; return(); fi;
+		#
+		if kk=n then 
+			counter:=Maximum(counter-1000, 0);
+			AddCopy(embs, partial);
+		else
+			targetv:=targetM[kk+1];
+			for jj in [1..N] do
+				#
+				bigvjj:=bigM[jj];
+				partial[kk+1]:=jj;
+				fflag:=true;
+				cc:=0;
+				for ii in partial do # only up to cc=kk+1; see below.
+					cc:=cc+1;
+					if bigvjj[ii]<>targetv[cc] then 
+						fflag:=false; break;
+					fi;
+					if cc=kk+1 then break; fi;# break from "for ii in partial do"
+				od;
+				if fflag then 
+					findjob(kk+1);
+					if bddflag then break; fi; # from for jj in [1..N] do
+				fi;
+				#
+			od;
+		fi;
+	end;
+	#
+	findjob(0);
+	#
+	if bddflag then 
+		return(fail);
+	fi;
+	return(embs);
+end;
+
+
+FindAllSubconfigsBoundedWithTask:=function(targetM, bigM, task, bound)
+	#
+	local embs, findjob, n, N, partial, counter, bddflag;
+	#
+	N:=Length(bigM); 
+	n:=Length(targetM);
+	embs:=[];
+	partial:=[1..n]; 
+	counter:=0;
+	bddflag:=false;
+	#
+	findjob:=function(kk)
+		#
+		local targetv, jj, bigvjj, fflag, cc, ii, copypartial;
+		#
+		counter:=counter+kk;
+		if counter>bound then bddflag:=true; return(); fi;
+		#
+		if kk=n then 
+			copypartial:=List(partial);
+			task(copypartial);
+			AddCopy(embs, partial);
+		else
+			targetv:=targetM[kk+1];
+			for jj in [1..N] do
+				#
+				bigvjj:=bigM[jj];
+				partial[kk+1]:=jj;
+				fflag:=true;
+				cc:=0;
+				for ii in partial do # only up to cc=kk+1; see below.
+					cc:=cc+1;
+					if bigvjj[ii]<>targetv[cc] then 
+						fflag:=false; break;
+					fi;
+					if cc=kk+1 then break; fi;# break from "for ii in partial do"
+				od;
+				if fflag then 
+					findjob(kk+1);
+					if bddflag then break; fi; # from for jj in [1..N] do
+				fi;
+				#
+			od;
+		fi;
+	end;
+	#
+	findjob(0);
+	#
+	if bddflag then 
+		return(fail);
+	fi;
+	return(embs);
+end;
+
+PermedMat:=function(M, permlist)
+	local newM;
+	newM:=List(permlist, ii->List(permlist, jj->M[ii][jj]));
+	return(newM);
+end;
+
+RandomFindAllSubconfigs:=function(targetM, bigM,  bound, trial)
+	#
+	# trial: the number of random perm
+	# bound: for each trial, count the job number until
+	# bound.
+	#
+	local N, n, sigma, tau, newtargetM, newbigM, embs, 
+	sigmainv, recover, embs2, cc, temb;
+	#
+	N:=Length(bigM); 
+	n:=Length(targetM);
+	#
+	for cc in [1..trial] do
+		sigma:=RandomChoose(n,n);
+		tau:=RandomChoose(N,N);
+		newtargetM:=PermedMat(targetM, sigma);
+		newbigM:=PermedMat(bigM, tau);
+		embs:=FindAllSubconfigsBounded(newtargetM, newbigM, bound);
+		#if embs<>fail then 
+		# for check
+			#Printn("check0 RandomFindAllSubconfigs");
+			#for temb in embs do
+			#	if List(temb, ii->List(temb, jj->newbigM[ii][jj]))<>newtargetM then
+			#		Printn("wrong0 in RandomFindAllSubconfigs");
+			#		Error();
+			#	fi;
+			#od;
+		#fi;
+		#
+		if embs<>fail then
+			sigmainv:=ListPerm(Inverse(PermList(sigma)), n);
+			recover:=function(temb)
+				return(List(sigmainv, ss->tau[temb[ss]]));
+			end;
+			embs2:=List(embs, recover);
+			#
+			# for check
+			#Printn("check RandomFindAllSubconfigs");
+			#for temb in embs2 do
+			#	if List(temb, ii->List(temb, jj->bigM[ii][jj]))<>targetM then
+			#		Printn("wrong in RandomFindAllSubconfigs");
+			#		Error();
+			#	fi;
+			#od;
+			#
+			return(embs2);
+		fi;
+	od;
+	#
+	return(fail);
+	#
+end;
+
+
+RandomFindAllSubconfigsWithTask:=function(targetM, bigM, initask, task,  bound, trial)
+	#
+	# trial: the number of random perm
+	# bound: for each trial, count the job number until
+	# bound.
+	#
+	local N, n, sigma, tau, newtargetM, newbigM, embs, 
+	sigmainv, recover, embs2, cc, temb;
+	#
+	N:=Length(bigM); 
+	n:=Length(targetM);
+	#
+	for cc in [1..trial] do
+		sigma:=RandomChoose(n,n);
+		tau:=RandomChoose(N,N);
+		newtargetM:=PermedMat(targetM, sigma);
+		newbigM:=PermedMat(bigM, tau);
+		initask();
+		embs:=FindAllSubconfigsBoundedWithTask(newtargetM, newbigM, task, bound);
+		#if embs<>fail then 
+		# for check
+			#Printn("check0 RandomFindAllSubconfigs");
+			#for temb in embs do
+			#	if List(temb, ii->List(temb, jj->newbigM[ii][jj]))<>newtargetM then
+			#		Printn("wrong0 in RandomFindAllSubconfigs");
+			#		Error();
+			#	fi;
+			#od;
+		#fi;
+		#
+		if embs<>fail then
+			sigmainv:=ListPerm(Inverse(PermList(sigma)), n);
+			recover:=function(temb)
+				return(List(sigmainv, ss->tau[temb[ss]]));
+			end;
+			embs2:=List(embs, recover);
+			#
+			# for check
+			#Printn("check RandomFindAllSubconfigs");
+			#for temb in embs2 do
+			#	if List(temb, ii->List(temb, jj->bigM[ii][jj]))<>targetM then
+			#		Printn("wrong in RandomFindAllSubconfigs");
+			#		Error();
+			#	fi;
+			#od;
+			#
+			return(embs2);
+		fi;
+	od;
+	#
+	return(fail);
+	#
+end;
+
+
+
+FindAMAPSubconfigsBounded:=function(targetM, bigM, bound, resultbound)
+	#
+	local embs, findjob, n, N, partial, counter, bddflag, resbddflag;
+	#
+	N:=Length(bigM); 
+	n:=Length(targetM);
+	embs:=[];
+	partial:=[1..n]; 
+	counter:=0;
+	bddflag:=false;
+	resbddflag:=false;
+	#
+	findjob:=function(kk)
+		#
+		local targetv, jj, bigvjj, fflag, cc, ii;
+		#
+		counter:=counter+kk;
+		if counter>bound then bddflag:=true; return(); fi;
+		#
+		if kk=n then 
+			AddCopy(embs, partial);
+			if Length(embs)>=resultbound then
+				resbddflag:=true; return();
+			fi;
+		else
+			targetv:=targetM[kk+1];
+			for jj in [1..N] do
+				#
+				bigvjj:=bigM[jj];
+				partial[kk+1]:=jj;
+				fflag:=true;
+				cc:=0;
+				for ii in partial do # only up to cc=kk+1; see below.
+					cc:=cc+1;
+					if bigvjj[ii]<>targetv[cc] then 
+						fflag:=false; break;
+					fi;
+					if cc=kk+1 then break; fi;# break from "for ii in partial do"
+				od;
+				if fflag then 
+					findjob(kk+1);
+					if bddflag or resbddflag then break; fi; # from for jj in [1..N] do
+				fi;
+				#
+			od;
+		fi;
+	end;
+	#
+	findjob(0);
+	#
+	return(embs);
+end;
+
+
+RandomFindAMAPSubconfigs:=function(targetM, bigM,  bound, smallresultbound, trial)
+	#
+	# trial: the number of random perm
+	# bound: for each trial, count the job number until
+	# bound.
+	# smallresultbound: resultbound for each trial
+	#
+	local N, n, sigma, tau, newtargetM, newbigM, embs, 
+	sigmainv, recover, embs2, cc, temb, totalembs;
+	#
+	N:=Length(bigM); 
+	n:=Length(targetM);
+	totalembs:=[];
+	#
+	for cc in [1..trial] do
+		sigma:=RandomChoose(n,n);
+		tau:=RandomChoose(N,N);
+		newtargetM:=PermedMat(targetM, sigma);
+		newbigM:=PermedMat(bigM, tau);
+		embs:=FindAMAPSubconfigsBounded(newtargetM, newbigM, bound, smallresultbound);
+		if embs<>[] then
+			sigmainv:=ListPerm(Inverse(PermList(sigma)), n);
+			recover:=function(temb)
+				return(List(sigmainv, ss->tau[temb[ss]]));
+			end;
+			embs2:=List(embs, recover);
+			#
+			# for check
+			#Printn("check RandomFindAMAPSubconfigs");
+			#for temb in embs2 do
+			#	if List(temb, ii->List(temb, jj->bigM[ii][jj]))<>targetM then
+			#		Printn("wrong in RandomFindAMAPSubconfigs");
+			#		Error();
+			#	fi;
+			#od;
+			#
+			Append(totalembs, embs2);
+			totalembs:=Set(totalembs);
+		fi;
+	od;
+	#
+	return(totalembs);
+	#
+end;
+
+
+#
+# For the test
+#
+
+RandomMatFromL:=function(r,c,L)
+	local M;
+	M:=List([1..r], xx->List([1..c], yy->RandomOp(L)));
+	return(M);
+end;
+
+RandomSymmMatFromL:=function(r,c,L)
+	local M, ii, jj, a;
+	M:=NullMat(r,c);
+	for ii in [1..r] do
+		M[ii][ii]:=RandomOp(L);
+		for jj in [ii+1..c] do
+			a:=RandomOp(L);
+			M[ii][jj]:=a;
+			M[jj][ii]:=a;
+		od;
+	od;
+	return(M);
+end;

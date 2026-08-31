@@ -1,0 +1,7 @@
+#Read("gapstart.txt");
+#/usr/local/Cellar/gap/4.12.2/bin/gap
+#/usr/local/Cellar/gap/4.12.2/bin/gap -o $mem
+
+__debugflag:=false;
+Read("gapReads/gapreReads.txt");
+restart();

@@ -1,0 +1,628 @@
+# IntegerVectorsQF.txt
+
+
+MakeFullShortestVectors:=function(GramL, svrec)
+	local n, tlist, vv;
+	n:=Length(GramL);
+	tlist:=[MakeZeroVect(n)];
+	for vv in svrec.vectors do
+		Add(tlist, vv); Add(tlist, -vv); 
+	od;
+	return(tlist);
+end;
+
+if IsReadOnlyGlobal("CholeskyDecomp") then
+	MakeReadWriteGlobal("CholeskyDecomp");
+fi;
+
+CholeskyDecomp:=function(Q)
+	# Q is a positive definite symmetric matric;
+	# [U, ds] is a pair of a matrice U and a vector ds, where
+	# D=DiagonalMat(ds) is diagonal,
+	# U is upper triangular matrix with diagonals 1, and 
+	# Q=TransposedMatImmutable(U)*D*U.
+	#
+	local DU, U, D, n, ii, jj, dii, aii, ds, kk;
+	#
+	n:=Length(Q);
+	#
+	if debugflag then # check input
+		if Determinant(Q)=0 then
+			Printn("wrong0 input in CholeskyDecomp");
+			#Print(Q);
+			Error();
+		fi;
+		for ii in [1..n] do
+			for jj in [ii+1..n] do
+				if Q[ii][jj]<>Q[jj][ii] then
+					Printn("wrong input in CholeskyDecomp");
+					#Print(Q);
+					Error();
+				fi;
+			od;
+		od;
+	fi;
+	#
+	#
+	DU:=CopyMat(Q);
+	ds:=[];
+	for ii in [1..n] do
+		dii:=DU[ii][ii];
+		if dii<=0 then
+			Printn("wrong2 input in CholeskyDecomp");
+			#Print(Q, "\n"); Print(ii, dii);
+			Error();
+		fi;
+		Add(ds, dii);
+		for jj in [ii+1..n] do
+			aii:=DU[jj][ii]/dii;
+			DU[jj][ii]:=0;
+			for kk in [ii+1..n] do
+				DU[jj][kk]:=DU[jj][kk]-aii*DU[ii][kk];
+			od;
+		od;
+	od;
+	#
+	U:=DU;# DU is not used any more, so that it can be destroyed.
+	for ii in [1..n] do
+		dii:=ds[ii];
+		U[ii][ii]:=1;
+		for jj in [ii+1..n] do
+			U[ii][jj]:=U[ii][jj]/dii;
+		od;
+	od;
+	#
+	#
+	if debugflag then
+		D:=DiagonalMat(ds);
+		for ii in [1..n] do
+			if U[ii][ii]<>1 then
+				Printn("wrong4 input in CholeskyDecomp");
+				#Print(Q, U, D);
+				Error();
+			fi;
+			for jj in [1..ii-1] do
+				if U[ii][jj]<>0 then 
+					Printn("wrong5 input in CholeskyDecomp");
+					#Print([Q, U, D]);
+					Error();
+				fi;
+			od;
+		od;
+		if Q<>TransposedMatImmutable(U)*D*U then
+			Printn("wrong3 input in CholeskyDecomp");
+			#Print([Q, U, D]);
+			Error();
+		fi;
+	fi;
+	#
+	return [U, ds];
+end;
+
+revCholeskyDecomp:=function(Q)
+	# Q is a positive definite symmetric matric;
+	# [L, ds] is a pair of a matrice L and a vector ds, where
+	# D=DiagonalMat(ds) is diagonal,
+	# L is lower triangular matrix with diagonals 1, and 
+	# Q=TransposedMatImmutable(L)*D*L.
+	#
+	local DL, L, D, n, ii, jj, dii, aii, ds, kk, revii;
+	#
+	n:=Length(Q);
+	#
+	if debugflag then # check input
+		if Determinant(Q)=0 then
+			Printn("wrong0 input in revCholeskyDecomp");
+			#Print(Q);
+			Error();
+		fi;
+		for ii in [1..n] do
+			for jj in [ii+1..n] do
+				if Q[ii][jj]<>Q[jj][ii] then
+					Printn("wrong input in revCholeskyDecomp");
+					#Print(Q);
+					Error();
+				fi;
+			od;
+		od;
+	fi;
+	#
+	#
+	DL:=CopyMat(Q);
+	ds:=[1..n]; # holder for dii
+	for revii in [1..n] do
+		ii:=n+1-revii;
+		dii:=DL[ii][ii];
+		if dii<=0 then
+			Printn("wrong2 input in revCholeskyDecomp");
+			#Print(Q, "\n"); Print(ii, dii);
+			Error();
+		fi;
+		ds[ii]:=dii;
+		for jj in [1..ii-1] do
+			aii:=DL[jj][ii]/dii;
+			DL[jj][ii]:=0;
+			for kk in [1..ii-1] do
+				DL[jj][kk]:=DL[jj][kk]-aii*DL[ii][kk];
+			od;
+		od;
+	od;
+	#
+	L:=DL;
+	for ii in [1..n] do
+		dii:=ds[ii];
+		L[ii][ii]:=1;
+		for jj in [1..ii-1] do
+			L[ii][jj]:=L[ii][jj]/dii;
+		od;
+	od;
+	#
+	#
+	if debugflag then
+		D:=DiagonalMat(ds);
+		for ii in [1..n] do
+			if L[ii][ii]<>1 then
+				Printn("wrong4  in revCholeskyDecomp");
+				#Print(Q, L, D);
+				Error();
+			fi;
+			for jj in [ii+1..n] do
+				if L[ii][jj]<>0 then 
+					Printn("wrong5 t in revCholeskyDecomp");
+					#Print([Q, L, D]);
+					Error();
+				fi;
+			od;
+		od;
+		if Q<>TransposedMatImmutable(L)*D*L then
+			Printn("wrong3  in revCholeskyDecomp");
+			#Print([Q, L, D, TransposedMatImmutable(L)*D*L]);
+			Error();
+		fi;
+	fi;
+	#
+	return [L, ds];
+end;
+
+
+
+
+
+Rootdae:=function(d, a, e)
+	local m, f, minx, maxx, r;
+	if d<0 then Printn("wrong_input_Rootdae ", d, a, e); Error(); fi;
+	if e<0 then return [0..-1]; fi;
+	r:=e/d;
+	f:=RootInt(Int(r)); # the floor of square root of r
+	m:=FloorRat(-a);
+	if r<(1+a+m+f)^2 then
+		maxx:=m+f;
+	else
+		maxx:=m+f+1;
+	fi;
+	m:=CeilingRat(-a);
+	if r<(1-m+f-a)^2 then
+		minx:=m-f;
+	else
+		minx:=m-f-1;
+	fi;
+	#
+	if debugflag then 
+		if minx>maxx then
+			if maxx<>minx-1 then
+				Printn("wrong1_Rootdae", d, a, e, minx, maxx);
+				Error();
+			fi;
+		else
+			if d*(minx+a)^2>e then 
+				Printn("wrong2_Rootdae", d, a, e, minx, maxx);
+				Error();
+			elif d*(minx-1+a)^2<=e then 
+				Printn("wrong3_Rootdae", d, a, e, minx, maxx);
+				Error();
+			elif d*(maxx+a)^2>e then 
+				Printn("wrong4_Rootdae", d, a, e, minx, maxx);
+				Error();
+			elif d*(maxx+1+a)^2<=e then 
+				Printn("wrong5_Rootdae", d, a, e, minx, maxx);
+				Error();
+			fi;
+		fi;
+	fi;
+	return [minx..maxx];
+end;
+
+
+
+IntVectsQF:=function(Q, L, c, isES, task)
+	#
+	# Q is a symmetric positive matrix of size n with rational coefficients,
+	# L is a rational vector of length n,
+	# and c is a rational number.
+	#
+	# This program does task(x) for all integer vectors x
+	# such that 
+	# xQx+2Lx+c<=0 (is isES is false)
+	# xQx+2Lx+c=0 (is isES is true)
+	# 
+	# standatrd task (standardtaskQF) is Add(theVectListQF, CopyMat(x));
+	#
+	local leveljob, n, Uds, U, ds, tempx, inias, ii, kk, copyL, jj, dkk, newa, inie, fds;
+	#
+	n:=Length(L);
+	#
+	Uds:=CholeskyDecomp(Q);
+	U:=Uds[1];
+	ds:=Uds[2];
+	#
+	copyL:=CopyVect(L);
+	inie:=-c;
+	inias:=[1..n];
+	#
+	for kk in [1..n] do
+		dkk:=ds[kk];
+		newa:=copyL[kk]/dkk;
+		inias[kk]:=newa;
+		inie:=inie+dkk*newa^2;
+		for jj in [kk+1..n] do
+			copyL[jj]:=copyL[jj]-newa*dkk*U[kk][jj];
+		od;
+	od;
+	#
+	#Printn("ds", Map(Float, ds), "inie", Float(inie));
+	#
+	tempx:=[1..n]; # holder
+	#
+	leveljob:=function(level, tas, te)
+		local td, ta, newtas, newte, xx, interval;
+		if level=0 then
+			if te=0 or (not isES) then 
+				task(tempx);
+			fi;
+		else
+			td:=ds[level];
+			ta:=tas[level];
+			newtas:=[1..level-1];
+			interval:=Rootdae(td, ta, te);
+			for xx in interval do 
+				for kk in [1..level-1] do
+					newtas[kk]:=tas[kk]+U[kk][level]*xx;
+				od;
+				newte:=te-td*(xx+ta)^2;
+				tempx[level]:=xx;
+				leveljob(level-1, newtas, newte);
+			od;
+		fi;
+	end;
+	#
+	leveljob(n, inias, inie);
+	#
+end;
+
+
+LLLIntVectsQF:=function(Q, L, c, isES, task)
+	#
+	# IntVectsQF enhanced with LLL algorithm
+	#
+	local n, newQ, newL, newc, LLLrec, T, Q1inv, perm, H, tH, ii, Hinv, sortfunc, newtask;
+	n:=Length(L);
+	LLLrec:=LLLReducedGramMat(Inverse(Q));
+	T:=LLLrec.transformation;
+	Q1inv:=LLLrec.remainder;
+	# make perm
+	perm:=[1..n];
+	sortfunc:=function(ii) return(-Q1inv[ii][ii]); end;
+	SortBy(perm, sortfunc); # decreasing!
+	#
+	tH:=[];
+	for ii in [1..n] do
+		tH[ii]:=T[perm[ii]];
+	od;
+	H:=TransposedMatMutable(tH);
+	Hinv:=Inverse(H);
+	#
+	newQ:=TMTTmult(Hinv, Q);
+	newL:=Hinv*L;
+	newc:=c;
+	newtask:=function(xx)
+		task(xx*Hinv);
+	end;
+	IntVectsQF(newQ, newL, newc, isES, newtask);
+end;
+
+
+AffES:=function(SQ, vec, reldeg, norm, isES, task)
+	#
+	# SQ is a Gram matrix of a hyperbolic lattice (that is, signature (1, n-1)).
+	# vec is a vector with squarenorm >0.
+	# Let L be the set of all integer vectors xx such that 
+	# xx*SQ*vec =reldeg, and 
+	# xx*SQ*xx=norm (if isES) xx*SQ*xx>=norm (if not isES) 
+	# This function apply  the function task to all xx in L.
+	#
+	local SolNullsp, SQvec, vc, T, newQ, newL, newc, newtask;
+	#
+	#SQvec:=Map(ii->[ii], SQ*vec);
+	SQvec:=List( SQ*vec, ii->[ii]);
+	SolNullsp:=SolutionNullspaceRatMat(SQvec, [reldeg]);
+	if SolNullsp[1]=fail then return([]); fi;
+	vc:=SolNullsp[1];
+	T:=SolNullsp[2];
+	#
+	# L is the set of xx=yy*T+vc, 
+	# where yy runs through the set of integer vectors satisfying 
+	# yy*(T*SQ*tT)*yy + 2* yy*T*SQ*vc+ vc*SQ*vc=norm (is isES), 
+	# yy*(T*SQ*tT)*yy + 2* yy*T*SQ*vc+ vc*SQ*vc>=norm (is not isES)
+	# where tT is the transpose of T.
+	# Since (T*SQ*tT) is negative definite, we change the sign.
+	#
+	newQ:=(-1)*TMTTmult(T, SQ);
+	newL:=(-1)*T*SQ*vc;
+	newc:=(-1)*(vc*SQ*vc-norm);
+	#
+	newtask:=function(yy)
+		task(yy*T+vc);
+	end;
+	#
+	LLLIntVectsQF(newQ, newL, newc, isES, newtask);
+	#
+end;
+
+
+#### standard version
+
+IntVectsQFstd:=function(Q, L, c, isES)
+	local list, task;
+	list:=[];
+	task:=function(x)
+		Add(list, List(x));
+	end;
+	IntVectsQF(Q, L, c, isES, task);
+	return(list);
+end;
+
+LLLIntVectsQFstd:=function(Q, L, c, isES)
+	local list, task;
+	list:=[];
+	task:=function(x)
+		Add(list, List(x));
+	end;
+	LLLIntVectsQF(Q, L, c, isES, task);
+	return(list);
+end;
+
+AffESstd:=function(SQ, vec, reldeg, norm, isES)
+	local list, task;
+	list:=[];
+	task:=function(x)
+		Add(list, List(x));
+	end;
+	AffES(SQ, vec, reldeg, norm, isES, task);
+	return(list);
+end;
+
+#######################
+
+SeparatingVects:=function(GramS, pol, v, d) 
+	# GramS is a Gram matrix of a hyperbolic lattice.
+	# pol and v are vectors of positive square norm in the same positive cone.
+	#
+	# This function returns the list of all [ri, ti] such that ri is a vector  
+	# in the lattice GramS satisfying 
+	# (ri, pol)>0, (ri, v)<0,  (ri, ri)=d, and 
+	# and (pol+ti*v, ri)=0, where ti are positive real numbers.
+	# When pol is pol, the input d=-2 gives a criterion for nef.
+	#
+	# Moreover, we assume that pol is a primitive integer vector. 
+	# The case where pol is non-primitive can be handled by replacing pol with pol/Lgcd(pol).
+	# Since the non-primitivity of pol is geometrically significant,
+	# it is better to high-lighten that property.
+	#
+	local n, poldual, polnorm, degv, vdual, vnorm, Fs,
+	projW_in_basisS, basisW, GramW, projW_in_basisW_mat, projW_in_basisW, 
+	vW, vWdual, Q, posd, posQ, ys, y, goodys, rhosprime, rr, tt, snfrec;
+	#
+	if Lgcd(pol)<>1 then
+		Printn("wrong_input_separatingvects_nonprimitive", pol);
+		Error();
+	fi;
+	#
+	n:=Length(GramS);
+	poldual:=pol*GramS;
+	polnorm:=poldual*pol;
+	degv:=poldual*v;
+	vdual:=v*GramS;
+	vnorm:=vdual*v;
+	#
+	if polnorm<=0 or degv<=0 or vnorm<=0  then 
+		Printn("wrong_input_separatingvects");
+		Printn("polnorm,degv,vnorm", polnorm,degv,vnorm);
+		Error();
+	fi;
+	#
+	snfrec:=SmithNormalFormIntegerMatTransforms([pol]);
+	Fs:=InverseMat((snfrec.rowtrans[1][1])*snfrec.coltrans);
+	#the basis f1, ..., fr of S with f1=pol;
+	#
+	if debugflag then 
+		if Fs[1]<>pol then Printn("wrong_Sep", 1); Error(); fi;
+	fi;
+	#
+	# W is the image of the projection to (h)\sperp.
+	#
+	projW_in_basisS:=function(vv)
+		return(vv-((vv*poldual)/polnorm)*pol);
+	end;
+	#basisW:=Map(ii->projW_in_basisS(Fs[ii]), [2..n]);
+	basisW:=List([2..n], ii->projW_in_basisS(Fs[ii]));
+	GramW:=TMTTmult(basisW, GramS);
+	projW_in_basisW_mat:=SubMatrix(Inverse(CopyAppendCopy([pol], basisW)), [1..n], [2..n]);
+	projW_in_basisW:=function(vv)
+		return(vv*projW_in_basisW_mat);
+	end;
+	#
+	if debugflag then 
+		if not IsZeroVect(projW_in_basisW(pol)) then Printn("wrong_Sep", 2); Error(); fi;
+	fi;
+	#
+	vW:=projW_in_basisW(v);
+	vWdual:=vW*GramW;
+	Q:=GramW+(polnorm/degv^2)*TransposedMat([vWdual])*[vWdual];
+	if debugflag then 
+		if  SignatureQ(Q)[2]<>0 then Printn("wrong_Sep", 3); Error(); fi;
+	fi;
+	#
+	posd:=-d;
+	posQ:=(-1)*Q;
+	ys:=MakeFullShortestVectors(posQ, ShortestVectors(posQ, posd));
+	#
+	goodys:=[];
+	for y in ys do
+		rhosprime:=IsSquareRootRat((d-y*GramW*y)/polnorm);
+		if rhosprime<>false then
+			rr:=rhosprime*pol+y*basisW;
+			if IsIntVect(rr) and rr*poldual>0 and rr*vdual<0 then
+				tt:=-(poldual*rr)/(vdual*rr);
+				if debugflag then if rr<=0 then Printn("wrong_Sep", 3); Error(); fi; fi;
+				Add(goodys, [rr, tt]);
+			fi;
+		fi;
+	od;
+	#
+	Sort(goodys, function(xx, yy) return(xx[2]<yy[2]); end);
+	return(goodys);
+end;
+
+
+Ckeck_SeparatingVects_mt:=function(GramL, pol, v)
+	#
+	local beep, revseps, tv, ii, rrtt, d;
+	#
+	d:=-2;
+	beep:=function(n) Printn("wrong in Ckeck_SeparatingVects_mt", n, "\n"); Error(); end;
+	revseps:=Reversed(SeparatingVects(GramL, pol, v, d));
+	tv:=CopyVect(v);
+	ii:=0;
+	#if not IsDuplicateFree(Map(xx->xx[2], revseps)) then return(); fi; 
+	if not IsDuplicateFree(List(revseps, xx->xx[2])) then return(); fi; 
+	Printn("nops revseps", Length(revseps));
+	for rrtt in revseps do
+		ii:=ii+1;
+		if rrtt[1]*GramL*rrtt[1]<>d then beep(1); fi;
+		if rrtt[1]*GramL*(pol+rrtt[2]*v)<>0 then beep(2); fi;
+		if not IsIntVect(rrtt[1]) then beep(3); fi;
+		tv:=mtReflection(tv, GramL, rrtt[1]);
+		
+	od;
+	if Length(SeparatingVects(GramL, pol, tv, d))<>0 then
+		beep(4);
+	fi;
+	return(true);
+end;
+
+Ckeck_SeparatingVects:=function(GramL, pol, v, d)
+	#
+	local beep, revseps, tv, ii, rrtt, ts, tau, newv, seps, seps1, seps2, newseps, dnewv, nnewv,
+	cprimv;
+	#
+	beep:=function(n) Printn("wrong in Ckeck_SeparatingVects", n, "d=", d, "\n"); Error(); end;
+	seps:=SeparatingVects(GramL, pol, v, d);
+	Printn("nops seps", Length(seps), "d", d);
+	for rrtt in seps do
+		if rrtt[1]*GramL*rrtt[1]<>d then beep(1); fi;
+		if rrtt[1]*GramL*(pol+rrtt[2]*v)<>0 then beep(2); fi;
+		if not IsIntVect(rrtt[1]) then beep(3); fi;
+		if rrtt[2]<=0 then beep(31); fi;
+	od;
+	cprimv:=MakePrimitiveIntVect(v);
+	revseps:=SeparatingVects(GramL, cprimv[2], pol, d);
+	#if not IsEqualSet(seps, Map(xx->[-xx[1], cprimv[1]/xx[2]], revseps)) then beep(-1); fi;
+	if not IsEqualSet(seps, List(revseps, xx->[-xx[1], cprimv[1]/xx[2]])) then beep(-1); fi;
+	if seps=[] then return(); fi;
+	#ts:=DuplicateFreeList(Map(xx->xx[2],seps));
+	#Sort(ts);
+	ts:=CopySort(DuplicateFreeList(List(seps, xx->xx[2])));
+	ts:=Concatenation([[0], ts, [ts[Length(ts)]+1]]);
+	for ii in [1..Length(ts)-1] do
+		tau:=(ts[ii]+ts[ii+1])/2;
+		newv:=pol+tau*v;
+		nnewv:=MakePrimitiveIntVect(newv);
+		dnewv:=nnewv[1];
+		seps1:=SeparatingVects(GramL, pol, newv, d);
+		seps2:=SeparatingVects(GramL, nnewv[2], v, d);
+		#
+		#seps1:=Map(xx->[xx[1], xx[2]*tau/(1+xx[2])], seps1);
+		#seps2:=Map(xx->[xx[1], xx[2]*dnewv+tau], seps2);
+		seps1:=List(seps1, xx->[xx[1], xx[2]*tau/(1+xx[2])]);
+		seps2:=List(seps2, xx->[xx[1], xx[2]*dnewv+tau]);
+		#
+		newseps:=Concatenation(seps1, seps2);
+		if not IsEqualSet(seps, newseps) then beep(4); fi;
+		Printn("______nops seps1", Length(seps1), "nops seps2", Length(seps2), "ii", ii, "in", Length(ts));
+	od;
+	return(true);
+end;
+
+
+################
+# Added on 2016 Apr 30 HesseQ2
+################
+
+AffESLargeCodim:=function(SQ, vecreldegs, norm, isES, task)
+	#
+	# SQ is a Gram matrix of a hyperbolic lattice S (that is, signature (1, n-1)).
+	# vecreldegs is a list of [vector, reldeg]
+	# such that the sublattice of S defined by
+	# xx*SQ*vec =reldeg for [vec, reldeg] in  vecreldegs
+	# is negative definite.
+	# Let L be the set of all integer vectors xx such that 
+	# xx*SQ*vec =reldeg for [vec, reldeg] in  vecreldegs, and 
+	# xx*SQ*xx=norm (if isES) xx*SQ*xx>=norm (if not isES) 
+	# This function AffESLargeCodim apply the function task to all xx in L.
+	#
+	local SolNullsp, vecs, reldegs, SQvecs,  vc, T, newQ, newL, newc, newtask;
+	#
+	vecs:=List(vecreldegs, xx->xx[1]);
+	reldegs:=List(vecreldegs, xx->xx[2]);
+	SQvecs:=TransposedMat(List(vecs, tv->tv*SQ));
+	SolNullsp:=SolutionNullspaceRatMat(SQvecs, reldegs);
+	#
+	# SolutionNullspaceRatMat:=function(mat, vec) is in LinearAlgebra.txt
+	# SolutionNullspaceIntMat returns 
+	# [ an integer solution of x*mat=vec, 
+	#   an integer  basis of the kernel of x -> x*mat].
+	#
+	if SolNullsp[1]=fail then return([]); fi;# from SolNullsp to SolNullsp[1]: 30 Jan 2018
+	vc:=SolNullsp[1];
+	T:=SolNullsp[2];
+	#
+	# L is the set of xx=yy*T+vc, 
+	# where yy runs through the set of integer vectors satisfying 
+	# yy*(T*SQ*tT)*yy + 2* yy*T*SQ*vc+ vc*SQ*vc=norm (is isES), 
+	# yy*(T*SQ*tT)*yy + 2* yy*T*SQ*vc+ vc*SQ*vc>=norm (is not isES)
+	# where tT is the transpose of T.
+	# Since (T*SQ*tT) is negative definite, we change the sign.
+	#
+	newQ:=(-1)*TMTTmult(T, SQ);
+	newL:=(-1)*T*SQ*vc;
+	newc:=(-1)*(vc*SQ*vc-norm);
+	#
+	newtask:=function(yy)
+		task(yy*T+vc);
+	end;
+	#
+	LLLIntVectsQF(newQ, newL, newc, isES, newtask);
+	#
+end;
+
+
+AffESLargeCodimstd:=function(SQ, vecreldegs, norm, isES)
+	local list, task;
+	list:=[];
+	task:=function(x)
+		Add(list, List(x));
+	end;
+	AffESLargeCodim(SQ, vecreldegs, norm, isES, task);
+	return(list);
+end;
+

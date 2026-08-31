@@ -1,0 +1,46 @@
+GetCoeff:=function(pol, vars, exps)
+	local f, ii, var, exp, pv;
+	f:=pol;
+	for ii in [1..Length(vars)] do
+		var:=vars[ii];
+		exp:=exps[ii];
+		pv:=PolynomialCoefficientsOfPolynomial(f, var);
+		if exp+1>Length(pv) then return(0); fi;
+		f:=pv[exp+1];
+	od;
+	return(f);
+end;
+
+NormalProjPt:=function(pt)
+	return((1/IniValnzF(pt))*List(pt));
+end;
+
+
+#### Add 2020Apr29 
+
+DetPolMat:=function(M)
+	#
+	local nn, det, ii, colv1, submat, aa, riis;
+	#
+	nn:=Length(M);
+	if nn=1  then
+		return(M[1][1]);
+	elif nn=2  then
+		det:=M[1][1]*M[2][2]-M[1][2]*M[2][1];
+		return(det);
+	else
+		det:=0;
+		colv1:=List([1..nn], ii->M[ii][1]);
+		submat:=SubMatrix(M, [1..nn], [2..nn]);
+		for ii in [1..nn] do
+			if not IsZero(colv1[ii]) then
+				aa:=(-1)^(ii+1)*colv1[ii];
+				riis:=SetMinus([1..nn], [ii]);
+				det:=det+aa*DetPolMat(List(riis, kk->submat[kk]));
+			fi;
+		od;
+		return(det);
+	fi;
+end;
+
+##########

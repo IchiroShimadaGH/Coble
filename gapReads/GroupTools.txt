@@ -1,0 +1,79 @@
+#Read("gapReads/GroupTools.txt");
+
+
+#2018 September
+ 
+DirectProd:=function(ngslist)
+	#
+	# ngslist is a list of [n, g],
+	# g is a list of  perms of degree n.
+	# This returns a list of gens of <g1> times ... times <gk> in
+	# the symmetric group of degree n1+...+nk.
+	#
+	local newgens, stackedn, pos, tn, tg, idn,
+	gL, newgL, newg;
+	newgens:=List(ngslist[1][2]);
+	stackedn:=ngslist[1][1];
+	for pos in [2..Length(ngslist)] do
+		tn:=ngslist[pos][1];
+		tg:=ngslist[pos][2];
+		idn:=[1..stackedn];
+		gL:=List(tg, tgp->ListPermN(tn, tgp));
+		newgL:=List(gL, xx->Concatenation(idn, List(xx, ii->ii+stackedn)));
+		newg:=List(newgL, PermList);
+		Append(newgens, newg);
+		stackedn:=stackedn+tn;
+	od;
+	return(newgens);
+end;
+
+
+WreathProd:=function(n, kgpair)
+	# g is a list of  perms of degree k.
+	# This returns a list of gens of <g>^n semidirect S_n in
+	# the symmetric group of degree kn.
+	#
+	local k, g, Sngens, id, ii, newt;
+	k:=kgpair[1];
+	g:=kgpair[2];
+	Sngens:=[];
+	id:=ChopVectToMat([1..k*n], n, k);
+	for ii in [1..n-1] do
+		newt:=List(id);
+		newt[ii]:=id[ii+1];
+		newt[ii+1]:=id[ii];
+		Add(Sngens, PermList(Flat(newt)));
+	od;
+	return(Concatenation(List(g), Sngens));
+end;
+
+######## Added on 20190828 
+
+EasySmallGenerators:=function(listofperms)
+	local tgens, G, tg;
+	tgens:=[];
+  G:=Group(());
+  for tg in listofperms do
+    if not tg in G then
+      Add(tgens, tg);
+      G:=Group(tgens);
+    fi;
+  od;
+  return(tgens);
+end;
+
+######## Added on 2021/11/09 
+
+GetMinimumAndSizeStab:=function(G, iis)
+  local nops, miniis, tg, iistg, ii, sortediis;
+  nops:=0;
+	sortediis:=CopySort(iis);
+  miniis:=List(iis);
+  for tg in G do
+    iistg:=List(iis, ii->ii^tg);
+    Sort(iistg);
+		if iistg=sortediis then nops:=nops+1; fi;
+    if iistg<miniis then miniis:=iistg; fi;
+  od;
+  return([miniis, nops]);
+end;

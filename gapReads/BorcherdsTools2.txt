@@ -1,0 +1,419 @@
+#Read("gapReads/BorcherdsTools2.txt");
+
+
+
+
+###############
+
+
+LiftsOfgS2gL:=function(gS, Lrec, GramSX, GramR, OGR, discSXrec, discRrec, phiqSXmqR, phiqSXmqRinv)
+	local gLs, qgS, qgR, emb12, emb12inv, gSemb1, tgR,
+	tqgR, tgRemb2, tgL, rankSX, beep;
+	#
+	beep:=function(numb)
+		Printn("wrong LiftsOfgS2gL", numb); Error();
+	end;
+	#
+	qgS:=OLtoOqL(gS, discSXrec);
+	qgR:=CopyMat(phiqSXmqRinv*qgS*phiqSXmqR);
+	MatmodDiscg(qgR, discRrec.discg);
+	emb12:=StackMats(Lrec.emb1, Lrec.emb2);
+	emb12inv:=InverseMat(emb12);
+	gSemb1:=gS*Lrec.emb1;
+	gLs:=[];
+	rankSX:=Length(GramSX);
+	for tgR in OGR do
+		tqgR:=OLtoOqL(tgR, discRrec);
+		if tqgR=qgR then
+			tgRemb2:=tgR*Lrec.emb2;
+			tgL:=emb12inv*StackMats(gSemb1, tgRemb2);
+			if not IsIntMat(tgL) then beep(46338); fi;
+			if TMTTmult(tgL, Lrec.Gram)<>Lrec.Gram then beep(52233); fi;
+			if Rank(StackMats(Lrec.emb1*tgL, Lrec.emb1))<>rankSX then beep(56673); fi;
+			if tgL*Lrec.proj1<>Lrec.proj1*gS then
+				beep(43527722);
+			fi;
+			if Lrec.emb1*tgL*Lrec.proj1<>gS then
+				beep(435277);
+			fi;
+			Add(gLs, tgL);
+		fi;
+	od;
+	if gLs=[] then beep(4633); fi;
+	return(gLs);
+end;
+
+###############
+
+
+#
+# Normalized Linear Forms: nlinforms
+# is that no two are proportional
+# (in particular, none is a zero vector).
+#
+
+SelectWalls:=function(linforms)
+	#
+	# The input should be normalized as
+	# linforms=Set(linforms, lf->MakePrimitiveIntVect(lf)[2]);
+	# and does not contain a zerovector.
+	#
+	local beep, dim, tlf, walllfs, lf, wallflag,  st, nlinforms;
+	#
+	beep:=function(numb)
+		Printn("wrong SelectWalls"); Error();
+	end;
+	#nlinforms:=Set(linforms, lf->MakePrimitiveIntVect(lf)[2]); #the normalized linforms
+	#if nlinforms<>linforms then beep(4433); fi;
+	#if true in List(nlinforms, IsZeroVect) then beep(5633); fi;
+	#MakePrimitiveIntVect does not work if a zero vector is input.
+	#
+	nlinforms:=List(linforms);
+	dim:=Length(linforms[1]);
+	#
+	if Length(linforms)=dim then
+		#
+		# linforms defines the cone over a simplex. #Added 2018 01/21
+		#
+		return(nlinforms);
+	fi;
+	#
+	walllfs:=[];
+	for tlf in linforms do
+		SubtractSet(nlinforms, [tlf]); #Add tfl back below.
+		if Rank(nlinforms)<dim then
+			#
+			# if removed then the rest is not bounded;
+			# hence tlf defines a wall. #Added 2018 01/21
+			#
+			wallflag:=[true];
+		else
+			#IsAWall:=function(vs, w, checklevel) #in LatticeTools
+			wallflag:=IsAWall(nlinforms, tlf, 1);
+		fi;
+		if wallflag[1] then
+			Add(walllfs, tlf);
+			AddSet(nlinforms, tlf);
+			#
+			# No need to put tlf back if not wallflag[1]
+			#
+		fi;
+	od;
+	return(walllfs);
+end;
+
+MakeFaces:=function(linforms, mindim, task)
+	# make the list of faces (down to mindim) of the cone
+	# defined by x*lf>=0 for all lf in linforms.
+	# The result is the list FaceData of the following records:
+	# facerec.
+	#newfacerec:=rec(
+	#				codim:=facedata.codim+1,
+	#				dim:=dimF-1,
+	#				ups:=[facedatapos],
+	#				basis:=newbasis,
+	#				wallsF:=SelectWalls(nlinearformsonnewF)
+	#			);
+	#
+	#
+	local beep, lf, n, Idn, nlinforms,tlf,
+	inifacerec, FaceData, facedatapos, wallsF, wallsdata,tlfwF,
+	codim1basis,hnfT, newbasis, newbasisF,isnewflag, oldpos,
+	oldfacedata, nlinearformsonnewF, twF, newfacerec,
+	facedata, twnewF, xx, dimF;
+	#
+	beep:=function(numb)
+		Printn("wrong in MakeFaces", numb); Error();
+	end;
+	#
+	#
+	n:=Length(linforms[1]);
+	if mindim<1 or mindim>=n then
+		beep(0);
+	fi;
+	Idn:=IdentityMat(n);
+	#
+	nlinforms:=Set(linforms, lf->MakePrimitiveIntVect(lf)[2]); #the normalized linforms
+	if nlinforms<>linforms then
+		beep(88333);
+	fi;
+	#
+	inifacerec:=rec(
+		codim:=0,
+		dim:=n,
+		ups:=[],
+		basis:=Idn,
+		wallsF:=SelectWalls(nlinforms)
+	);
+	#
+	task(inifacerec);
+	FaceData:=[inifacerec];
+	facedatapos:=1;
+	Printn("go");
+	while facedatapos<=Length(FaceData) do
+		facedata:=FaceData[facedatapos];
+		#
+		dimF:=facedata.dim;
+		if dimF=mindim then
+			break; #from while facedatapos<=Length(FaceData) do
+		fi;
+		#
+		# make new facedatas that are walls of this face
+		# and facedata.wallsdata.
+		#
+		wallsdata:=[];
+		if Rank(facedata.wallsF)<>dimF then
+			beep(56533);
+		fi;
+		for tlfwF in facedata.wallsF do
+			codim1basis:=BasisSubspBylinformsZ([tlfwF]);
+			hnfT:=HermiteNormalFormIntegerMatTransform(codim1basis*facedata.basis);
+			newbasis:=hnfT.normal;
+			newbasisF:=hnfT.rowtrans*codim1basis;
+			isnewflag:=true;
+			oldpos:=0;
+			for oldfacedata in FaceData do
+				oldpos:=oldpos+1;
+				if oldfacedata.basis=newbasis then
+					Add(oldfacedata.ups, facedatapos);
+					isnewflag:=false;
+					Add(wallsdata, [tlfwF, oldpos]);
+					break; #from for oldfacedata in FaceData do
+				fi;
+			od;
+			if isnewflag then
+				nlinearformsonnewF:=[];
+				for twF in facedata.wallsF do
+					twnewF:=newbasisF*twF;
+					if not IsZeroVect(twnewF) then
+						AddSet(nlinearformsonnewF, MakePrimitiveIntVect(twnewF)[2]);
+					fi;
+				od;
+				newfacerec:=rec(
+					codim:=facedata.codim+1,
+					dim:=dimF-1,
+					ups:=[facedatapos],
+					basis:=newbasis,
+					wallsF:=SelectWalls(nlinearformsonnewF)
+				);
+				task(newfacerec);
+				Add(FaceData, newfacerec);
+				Add(wallsdata, [tlfwF, Length(FaceData)]);
+			fi;
+		od;
+		#
+		if List(wallsdata, xx->xx[1])<>facedata.wallsF then
+			beep(15533);
+		fi;
+		facedata.wallsdata:=wallsdata;
+		#
+		Printn(facedatapos, "dim", dimF, "walls", Length(wallsdata), "total", Length(FaceData));
+		facedatapos:=facedatapos+1;
+		if facedatapos mod 100=0 then
+			savedataas(FaceData, "tempFaceData");
+		fi;
+	od;
+	savedataas(FaceData, "tempFaceData");
+	#
+	return(FaceData);
+end;
+
+MakeFacesWithAut:=function(linforms, mindim, Aut, task)
+	# make the list of faces (down to mindim) of the cone
+	# defined by x*tlf>=0 for all tlf in linforms.
+	# The result is the list FaceData of the following records:
+	# newfacerec:=rec(
+	#	codim:=facedata.codim+1,
+	#	dim:=dimF-1,
+	#	ups:=[facedatapos],
+	#	basis:=newbasis,
+	#	wallsF:=SelectWalls(nlinearformsonnewF)
+	#);
+	#
+	#
+	local beep, lf, xx, n, Idn, nlinforms,tlf,
+	inifacerec, FaceData, facedatapos, wallsF, wallsdata,tlfwF,
+	codim1basis,hnfT, newbasis, newbasisF,isnewflag, oldpos,
+	oldfacedata, nlinearformsonnewF, twF, newfacerec,
+	facedata, twnewF, tg, total2, dimF, aa, st,
+	moncc, st2, nowdim, del, ttfrec,
+	hashedorbs, makehashedbasis, makehashedorb, hashednewbasis, oldhashedorb,
+	tgpos, oldtg, oldhashedbasis, oldstdbasis;
+	#
+	beep:=function(numb)
+		Printn("wrong in MakeFacesWithAut", numb); Error();
+	end;
+	#
+	del:="deleted for memory reason";
+	#
+	n:=Length(linforms[1]);
+	if mindim<1 or mindim>=n then
+		beep(0);
+	fi;
+	Idn:=IdentityMat(n);
+	#
+	makehashedbasis:=function(basis)
+		return(EasyHashMatrix(basis, 4));
+	end;
+	makehashedorb:=function(basis)
+		local hashedorb, tg, tM;
+		hashedorb:=[];
+		for tM in List(Aut, tg->HermiteNormalFormIntegerMat(basis*tg)) do
+			Add(hashedorb, makehashedbasis(tM));
+		od;
+		return(hashedorb);
+	end;
+	#
+	nlinforms:=Set(linforms, lf->MakePrimitiveIntVect(lf)[2]); #the normalized linforms
+	if nlinforms<>linforms then
+		beep(88333);
+	fi;
+	#
+	inifacerec:=rec(
+		codim:=0,
+		dim:=n,
+		ups:=[],
+		basis:=Idn,
+		wallsF:=SelectWalls(nlinforms)
+	);
+	#
+	task(inifacerec);
+	FaceData:=[inifacerec];
+	hashedorbs:=[makehashedorb(Idn)];
+	#
+	facedatapos:=1;
+	nowdim:=n;
+	while facedatapos<=Length(FaceData) do
+		facedata:=FaceData[facedatapos];
+		#
+		dimF:=facedata.dim;
+		if dimF=mindim then
+			break; #from while facedatapos<=Length(FaceData) do
+		fi;
+		#
+		if dimF<nowdim then
+			hashedorbs:=List(hashedorbs, xx->del);
+			savedataas(FaceData, "temp3FaceData");
+			nowdim:=dimF;
+		fi;
+		#
+		Printn(facedatapos, "in", Length(FaceData), "start", Length(facedata.wallsF));
+		#
+		# make new facedatas that are walls of this face
+		# and facedata.wallsdata.
+		# wallsdata is a list of
+		# [a linform defining a wall W, the position of the wall W in FaceData]
+		#
+		wallsdata:=[];
+		if Rank(facedata.wallsF)<>facedata.dim then
+			beep(56533);
+		fi;
+		#
+		moncc:=0;
+		st:=Runtime();
+		for tlfwF in facedata.wallsF do
+			moncc:=moncc+1;
+			#tlfwF is a linear form on the face F of the facedata.
+			codim1basis:=BasisSubspBylinformsZ([tlfwF]);
+			#codim1basis is a basis of the wall W of the face F defined by tlfwF
+			# written in terms of facedata.basis.
+			hnfT:=HermiteNormalFormIntegerMatTransform(codim1basis*facedata.basis);
+			newbasis:=hnfT.normal;
+			hashednewbasis:=makehashedbasis(newbasis);
+			# newbasis is the standard basis of the wall W of the face F
+			# written in terms of the ambiant S.
+			newbasisF:=hnfT.rowtrans*codim1basis;
+			# newbasisF is newbasis
+			# written in terms of facedata.basis.
+			isnewflag:=true;
+			oldpos:=0;
+			for oldfacedata in FaceData do
+				oldpos:=oldpos+1;
+				if oldfacedata.dim=dimF-1 then
+					oldstdbasis:=oldfacedata.basis;
+					oldhashedorb:=hashedorbs[oldpos];
+					tgpos:=0;
+					for oldhashedbasis in oldhashedorb do
+						tgpos:=tgpos+1;
+						if oldhashedbasis=hashednewbasis then
+							oldtg:=Aut[tgpos];
+							if newbasis=HermiteNormalFormIntegerMat(oldstdbasis*oldtg) then
+								Add(oldfacedata.ups, facedatapos);
+								isnewflag:=false;
+								Add(wallsdata, [tlfwF, oldpos]);
+								break; #from for oldhashedbasis in oldhashedorb do
+							fi;
+						fi;
+					od;
+				fi;
+				if not isnewflag then
+					break; #from for oldfacedata in FaceData do
+				fi;
+			od;
+			if isnewflag then
+				#
+				Printn("______new", moncc, Length(facedata.wallsF));
+				st2:=Runtime();
+				nlinearformsonnewF:=[];
+				for twF in facedata.wallsF do
+					twnewF:=newbasisF*twF;
+					if not IsZeroVect(twnewF) then
+						AddSet(nlinearformsonnewF, MakePrimitiveIntVect(twnewF)[2]);
+					fi;
+				od;
+				newfacerec:=rec(
+					codim:=facedata.codim+1,
+					dim:=dimF-1,
+					ups:=[facedatapos],
+					basis:=newbasis,
+					wallsF:=SelectWalls(nlinearformsonnewF)
+				);
+				task(newfacerec);
+				Add(FaceData, newfacerec);
+				Add(hashedorbs, makehashedorb(newbasis));
+				Add(wallsdata, [tlfwF, Length(FaceData)]);
+				Printn("______new done", "wallnops", Length(newfacerec.wallsF), StringTime(Runtime()-st2));
+			fi;
+			facedata.wallsdata:=wallsdata;
+		od;
+		if List(wallsdata, xx->xx[1])<>facedata.wallsF then
+			beep(15533);
+		fi;
+		Printn(facedatapos, "in", Length(FaceData), "done", "dim", dimF, StringTime(Runtime()-st), toMultiSet(List(FaceData, xx->xx.dim)));
+		facedatapos:=facedatapos+1;
+		if facedatapos mod 100=0 then
+			savedataas(FaceData, "temp3FaceData");
+		fi;
+	od;
+	savedataas(FaceData, "temp3FaceData");
+	#
+	return(FaceData);
+end;
+
+#### Add 2022/04/09
+
+IsEmbNondegenerate:=function(GramL26,  weylL26, embS, ampleS)
+  #
+  local roots1, roots2,
+  ampleSinL26, seps, wamplesL26, ampleSinL26dual, twample, degs;
+  #
+  #
+  ampleSinL26:=ampleS*embS;
+  wamplesL26:=WeylAmples(GramL26, weylL26,1000, 0);
+  ampleSinL26dual:=ampleSinL26*GramL26;
+  degs:=wamplesL26*ampleSinL26dual;
+  SortParallel(degs, wamplesL26);
+  twample:=wamplesL26[1];
+  seps:=SeparatingVects(GramL26, twample, ampleSinL26, -2);
+  if seps<>[] then return(false); fi;
+  #
+  roots1:=OrthoRoots(GramL26, embS);
+  roots2:=OrthoRoots(GramL26, [ampleSinL26]);
+  #
+  if roots1<>roots2 then return(false); fi;
+  #
+  return(true);
+end;
+
+
+#### end 

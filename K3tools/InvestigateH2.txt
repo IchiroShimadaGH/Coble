@@ -1,0 +1,128 @@
+#Read("InvestigateH2.txt");
+
+
+InvestigateH2:=function(GramS, h2, ampleS, manyamples)
+  local fs, beep, trec, tg, tcc, nonJacfds, Jacfzs,
+  singptpos, singpt, type, ttheta,zz,ff,ffdual,mu,
+  intnumbs, pos, poss, tpos, tz, tfintnumbs, seps, xx,
+  mwrecs, mwrec, ttrec, geometricauts, monitor, ellrec,
+  ampleSdual, counter, aa, tgeomroots;
+  #
+  beep:=function(beepnumb)
+    localbeep("InvestigateH2", beepnumb); Error();
+  end;
+  #
+  ampleSdual:=ampleS*GramS;
+  nonJacfds:=[];
+  Jacfzs:=[];
+  mwrecs:=[];
+  ttrec:=rec(GramS:=GramS, ampleS:=ampleS, h2:=h2);
+  geometricauts:=[];
+  #
+  monitor:=function()
+    local ellrecs, xx, monlist;
+    ellrecs:=List(mwrecs,xx->xx.ellfibrec);
+    monlist:=List(ellrecs, xx->[Collected(xx.singtypes), xx.MWrank, xx.MWtor]);
+    Printn("___mwrecs monitor____");
+    for xx in monlist do
+      Printn(xx);
+    od;
+    Printn("___mwrecs monitor done____");
+  end;
+  #
+  fs:=AffESstd(GramS, h2, 1, 0, true);
+  if fs=[] then #h2 is baseptsfree
+    ttrec.baseptsfree:=true;
+    ttrec.overP2rec:=RatInvolRecP2(GramS, h2, ampleS);
+    Add(geometricauts, ttrec.overP2rec.invol);
+    if ttrec.overP2rec.geomroots=[ 0, [  ] ] then
+      tgeomroots:=[];
+    else
+      tgeomroots:=ttrec.overP2rec.geomroots;
+    fi;
+    singptpos:=0;
+    for singpt in tgeomroots do
+      singptpos:=singptpos+1;
+      type:=singpt[1];
+      mu:=Length(singpt[2]);
+      ttheta:=affineADErec.(type).theta;
+      zz:=ttheta*singpt[2];
+      #if not NewIsIrredRat(GramS, manyamples, zz) then beep(22921); fi;
+      # zz is not necessarily irreducible.
+      if zz*GramS*zz<>-2 then beep(146274); fi;
+      ff:=h2-zz;
+      ffdual:=ff*GramS;
+      if ffdual*ff<>0 then beep(69622222); fi;
+      intnumbs:=singpt[2]*ffdual;
+      if type="A1" then
+        if intnumbs<>[2] then beep(68182); fi;
+        Add(nonJacfds, [singptpos, ff, singpt[2][1]]);
+      else # if type="A1" then
+        if Set(intnumbs)<>[0,1] then
+          if not (intnumbs=[1,1] and type="A2") then
+            beep(6768971);
+          fi;
+        fi;
+        if type[1]='A' then
+          for pos in [1..mu] do
+            if pos =1 or pos=mu then
+              if intnumbs[pos]<>1 then beep(68926982); fi;
+              tz:=singpt[2][pos];
+              Add(Jacfzs, [singptpos,ff, tz]);
+              ellrec:= MakeEllFibrecK3(GramS, ff, tz, ampleS);
+              #MWGroupOnSX:=function(GramS, manyamples, ellfibrec)
+              Add(geometricauts, ellrec.inversion);
+              mwrec:=MWGroupOnSX(GramS, manyamples, ellrec);
+              Add(mwrecs,mwrec);
+              Append(geometricauts, mwrec.gs);
+            else
+              if intnumbs[pos]<>0 then beep(22926982); fi;
+            fi;
+          od; #for pos in [1..mu)] do
+        else #if type[1]='A' then
+          pos:=SinglePosition(intnumbs, 1);
+          tz:=singpt[2][pos];
+          Add(Jacfzs, [singptpos, ff, tz]);
+          ellrec:= MakeEllFibrecK3(GramS, ff, tz, ampleS);
+          Add(geometricauts, ellrec.inversion);
+          mwrec:=MWGroupOnSX(GramS, manyamples, ellrec);
+          mwrec.singptpos:=singptpos;
+          Add(mwrecs,mwrec);
+          Append(geometricauts, mwrec.gs);
+        fi; #if type[1]='A' then
+      fi; # if type="A1" then
+    od; #for singpt in ttrec.overP2rec.geomroots do
+    ttrec.Jacfzs:=Jacfzs;
+    ttrec.nonJacfds:=nonJacfds;
+    ttrec.mwrecs:=mwrecs;
+    ttrec.geometricauts:=geometricauts;
+    Printn("____ double plane", Collected(List(tgeomroots, xx->xx[1])));
+    #Printn("geometricauts", Length(geometricauts));
+    #monitor();
+  else #if fs=[] then
+    ttrec.baseptsfree:=false;
+    counter:=0;
+    for ff in fs do
+      aa:=ampleS+(ampleSdual*ff)*ff;
+      seps:=SeparatingVects(GramS, GetPrimitiveIntVect(aa), ampleS, -2);
+      if seps<>[] then continue; fi; #in for ff in fs do
+      counter:=counter+1;
+      tz:=h2-2*ff;
+      #NewIsIrredRat:=function( GramS, manyamples, tr )
+      if not NewIsIrredRat(GramS, manyamples, tz) then beep(92921); fi;
+      Add(Jacfzs, [ff, tz]);
+      ellrec:= MakeEllFibrecK3(GramS, ff, tz, ampleS);
+      Add(geometricauts, ellrec.inversion);
+      mwrec:=MWGroupOnSX(GramS, manyamples, ellrec);
+      Add(mwrecs,mwrec);
+      Append(geometricauts, mwrec.gs);
+    od;
+    if counter=0 then beep(6296298); fi;
+    Printn("____ there exists a fixed component: counter=", counter);
+    #Printn("geometricauts", Length(geometricauts));
+    #monitor();
+    ttrec.mwrecs:=mwrecs;
+    ttrec.geometricauts:=geometricauts;
+  fi; #if fs=[] then
+  return(ttrec);
+end;

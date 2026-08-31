@@ -1,0 +1,29 @@
+checkCokerTorsionLifts:=function(trec)
+	local beep, A, tor, lifts, tA, r, H,
+	ii, tlift, newrec;
+	#
+	beep:=function(numb)
+		Printn("wrong checkCokerTorsionLifts", numb); Error();
+	end;
+	#
+	A:=trec.phi;
+	tor:=trec.torsion;
+	if CokerTorsion(A)<>tor then beep(91231); fi;
+	lifts:=trec.lifts;
+	tA:=CopyAppend(A, lifts);
+	r:=Rank(A);
+	if r<>Rank(tA) then beep(8182787); fi;
+	H:=RemoveZeroVectsIntMat(HermiteNormalFormIntegerMat(A));
+	for ii in [1..Length(tor)] do
+		tlift:=lifts[ii];
+		if tor[ii]<>LcmDenom(SolutionMat(H, tlift)) then
+			beep(521123);
+		fi;
+		tA:=CopyAdd(A, tlift);
+		newrec:=CokerTorsionLifts(tA);
+		if newrec.torsion<>CopyRemove(tor, ii) then
+			beep(52231); 
+		fi;
+	od;
+	return(true);
+end;

@@ -1,0 +1,281 @@
+#Read("newtools2new.txt");
+#Based on #Read("EnrRtools.txt");
+
+_SmallADEDiagramAutOrder:=function(chunk)
+  #
+  #  chunk is [A_i or D_i or E_i, number]
+  #
+	local  ADEtype, smallaut, type, rank, succ, order;
+  #
+	ADEtype:=chunk[1];
+	type:=ADEHrec.(ADEtype).type;
+	rank:=ADEHrec.(ADEtype).rank;
+	succ:=chunk[2];
+	if type='A' then
+		if rank=1 then
+			smallaut:=1;
+		else
+			smallaut:=2;
+		fi;
+	elif type='D' then
+		if rank=4 then
+			smallaut:=6;
+		else
+			smallaut:=2;
+		fi;
+	elif type='E' then
+		if rank=6 then
+			smallaut:=2;
+		elif rank=7 then
+			smallaut:=1;
+    elif rank=8 then
+      smallaut:=1;
+		else beep(100);
+		fi;
+	else
+		beep(200);
+	fi;
+	order:=smallaut^succ*Factorial(succ);
+	return(order);
+end;
+
+
+ADEDiagramAutOrder:=function(typelist)
+	#
+	local typechunks, order;
+	#
+	typechunks:=ToMultiSet(typelist);
+	order:=Product(List(typechunks, _SmallADEDiagramAutOrder));
+	return(order);
+end;
+
+
+_SmallADEDiagramAutGens:=function(chunk)
+	#
+	#  chunk is [A_i or D_i or E_i, number]
+	#
+ 	local beep, ADEtype, type, rank, succ, typelist, gens,
+ 	Idr, Zeror, totalrank, Idrest, tg1, tg2, poss, makemat, perm,
+ 	Gram, tg, ii;
+ 	#
+ 	beep:=function(numb)
+ 		Printn("wrong in  diagramautgenschunk", numb); Error();
+ 	end;
+ 	#
+ 	ADEtype:=chunk[1];
+	type:=ADEHrec.(ADEtype).type;
+	rank:=ADEHrec.(ADEtype).rank;
+	succ:=chunk[2];
+	typelist:=List([1..succ], ii->ADEtype);
+	gens:=[];
+	Idr:=IdentityMat(rank);
+	Zeror:=NullMat(rank,rank);
+	totalrank:=rank*succ;
+	if succ>1 then
+		Idrest:=IdentityMat(totalrank-rank);
+	fi;
+	#
+	if type='A' then
+		if rank=1 then
+			#do nothing
+		else
+			tg1:=Reversed(Idr);
+			if succ=1 then
+			else
+				tg1:=DiagonalMats([tg1, Idrest]);
+			fi;
+			Add(gens, tg1);
+		fi;
+	elif type='D' then
+		poss:=Concatenation([2,1], [3..rank]);
+		tg1:=List(poss, nn->MakeVectei(rank,nn));
+		if rank=4 then
+			poss:=[4,2,3,1];
+			tg2:=List(poss, nn->MakeVectei(rank,nn));
+			if succ=1 then
+			else
+				tg1:=DiagonalMats([tg1, Idrest]);
+				tg2:=DiagonalMats([tg2, Idrest]);
+			fi;
+			Append(gens, [tg1, tg2]);
+		else
+			if succ=1 then
+			else
+				tg1:=DiagonalMats([tg1, Idrest]);
+			fi;
+			Add(gens, tg1);
+		fi;
+	elif type='E' then
+		if rank=6 then
+			poss:=[1,6,5,4,3,2];
+			tg1:=List(poss, nn->MakeVectei(rank,nn));
+			if succ=1 then
+			else
+				tg1:=DiagonalMats([tg1, Idrest]);
+			fi;
+			Add(gens, tg1);
+		elif rank=7 then
+			#do nothing
+		elif rank=8 then
+			#do nothing
+		else
+			beep(300);
+		fi;
+	else
+		beep(200);
+	fi;
+	#
+	if succ>1 then
+		#
+		makemat:=function(perm)
+			local Idsucc, M, m, vL, a, vM, v;
+			Idsucc:=IdentityMat(succ);
+			m:=List([1..succ], ii->Idsucc[ii^perm]);
+			M:=[];
+			for v in m do
+				vL:=[];
+				for a in v do
+					if a=0 then Add(vL, Zeror);
+					elif a=1 then Add(vL, Idr);
+					else beep(79);
+					fi;
+				od;
+				vM:=ConcatMatss(vL);
+				if M=[] then M:=vM;
+				else
+					Append(M, vM);
+				fi;
+			od;
+			return(M);
+		end;
+		#
+		tg1:=makemat((1,2));
+		Add(gens, tg1);
+		if succ>2 then
+			perm:=PermList(CopyAdd([2..succ], 1));
+			tg1:=makemat(perm);
+			Add(gens, tg1);
+		fi;
+	fi;
+	#
+	Gram:=ADEHGram(typelist);
+	for tg in gens do
+		if TMTTmult(tg, Gram)<>Gram then beep(100); fi;
+	od;
+	if gens=[] then
+		Add(gens, IdentityMat(ADEHrank(typelist)));
+	fi;
+	if _SmallADEDiagramAutOrder(chunk)<>Size(Group(gens)) then beep(2000); fi;
+	return(gens);
+ end;
+
+ADEDiagramAutGens:=function(simplerootsystem, tGram)
+  #
+	local typelist, beep, Gram, gens, chunks, tg, ranks, Ids,
+	pos, ii, factors, rr,chunk, size, tgg, xx, ttlist,ttGram,
+  rts, rt, kk, nops, typelist2, newsrts, newsrtsinv, anisom;
+ 	#
+ 	beep:=function(beepnumb)
+ 		localbeep("DiagramAutGens", beepnumb); Error();
+ 	end;
+ 	#
+  if CokerTorsion(simplerootsystem)<>[] then beep(25258111); fi;
+  typelist:=GetRootType(tGram, simplerootsystem);
+  ttGram:=TMTTmult(simplerootsystem, tGram);
+  Gram:=-ADEHGram(typelist);
+  anisom:=FindASubconfig(Gram, ttGram);
+  if anisom=fail then beep(2211122); fi;
+  newsrts:=List(anisom, ii->simplerootsystem[ii]);
+  newsrtsinv:=InverseMat(newsrts);
+  #
+  chunks:=[];
+  rts:=[];
+  typelist2:=[];
+  for rt in typelist do
+    if not rt in rts then
+      nops:=OccurNumb(typelist, rt);
+      Add(chunks, [rt, nops]);
+      Add(rts, rt);
+      for kk in [1..nops] do
+        Add(typelist2, rt);
+      od;
+    fi;
+  od;
+  if typelist2<>typelist then beep(522112); fi;
+  #
+ 	gens:=[];
+ 	ranks:=List(chunks, chunk->ADEHrec.(chunk[1]).rank*chunk[2]);
+ 	Ids:=List(ranks, rr->IdentityMat(rr));
+ 	#
+ 	pos:=0;
+ 	for chunk in chunks do
+ 		pos:=pos+1;
+ 		factors:=[];
+ 		for ii in [1..Length(chunks)] do
+ 			if ii<>pos then
+ 				Add(factors, [Ids[ii]]);
+ 			else
+ 				Add(factors, _SmallADEDiagramAutGens(chunks[pos]));
+ 			fi;
+ 		od;
+ 		for tgg in Cartesian(factors) do
+ 			tg:=DiagonalMats(tgg);
+ 			Add(gens, tg);
+ 		od;
+ 	od;
+  #
+  gens:=List(gens, tg->newsrtsinv*tg*newsrts);
+ 	#
+ 	for tg in gens do
+		if TMTTmult(tg, tGram)<>tGram then beep(100); fi;
+    if not IsEqualSet(simplerootsystem*tg, simplerootsystem) then beep(200); fi;
+	od;
+	if gens=[] then
+		Add(gens, IdentityMat(ADEHrank(typelist)));
+	fi;
+	size:=Size(Group(gens));
+	if ADEDiagramAutOrder(typelist)<>size then
+		beep(2001);
+	fi;
+	return(gens);
+ end;
+
+
+MakeAmpleNegADE:=function(simplerootsystem, tGram)
+  local tM;
+  tM:=TransposedMat(InverseMat(simplerootsystem*tGram));
+  return(GetPrimitiveIntVect(Sum(tM)));
+end;
+
+IntoAutDiagramNegADE2:=function(Gram, refs, ample, tg)
+  #
+	# Quotient homomorphism O(Gram) to Aut(ADE-basis) by the Weyl group.
+	#
+	local  tgg, targetdeg,  flag, ampledual, findjob, thegg;
+	#
+  ampledual:=ample*Gram;
+  targetdeg:=ample*ampledual;
+  flag:=false;
+  thegg:=[];
+  #
+  findjob:=function(gg, currentdeg)
+    local tref, trefgg, tdeg;
+    if currentdeg=targetdeg then
+      thegg:=List(gg);
+      flag:=true;
+      return();
+    fi;
+    for tref in refs do
+      trefgg:=tref*gg;
+      tdeg:=ample*trefgg*ampledual;
+      if tdeg<currentdeg then
+        findjob(trefgg, tdeg);
+      fi;
+      if flag then break; fi;
+    od;
+  end;
+  findjob(tg, ample*tg*ampledual);
+  #
+  if ample*thegg<>ample then beep(568121); fi;
+	return(thegg);
+end;

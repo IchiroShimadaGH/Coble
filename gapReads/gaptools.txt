@@ -1,0 +1,1117 @@
+
+restart:=function()
+	local namelist, name;
+	namelist:=NamesUserGVars( );
+	for name in namelist do
+		if IsReadOnlyGlobal(name) then
+			MakeReadWriteGlobal(name);
+		fi;
+		UnbindGlobal(name);
+	od;
+	LogTo( );
+	Read("gapReads.txt");
+end;
+
+ReStart:=function()
+	local namelist, name;
+	namelist:=NamesUserGVars( );
+	for name in namelist do
+		if IsReadOnlyGlobal(name) then
+			MakeReadWriteGlobal(name);
+		fi;
+		UnbindGlobal(name);
+	od;
+	LogTo( );
+end;
+
+#logfn:="";
+#wspfn:="";
+#sessionnumb:=0;
+
+
+reread:=function()
+	local namelist, name;
+	namelist:=NamesUserGVars( );
+	for name in namelist do
+		if name <>"logfn" and name<>"wspfn" and name<>"sessionnumb" and name<>"debugflag" then
+		 	if IsReadOnlyGlobal(name) then
+				MakeReadWriteGlobal(name);
+			fi;
+			UnbindGlobal(name);
+		fi;
+	od;
+	Read("gapReads/gapreReads.txt");
+end;
+
+
+
+debug0:=function()
+	Read("fordebug0.txt");
+end;
+
+debug1:=function()
+	Read("fordebug1.txt");
+end;
+
+debug2:=function()
+	Read("fordebug2.txt");
+end;
+
+debug3:=function()
+	Read("fordebug3.txt");
+end;
+
+debug4:=function()
+	Read("fordebug4.txt");
+end;
+
+debug5:=function()
+	Read("fordebug5.txt");
+end;
+
+debug6:=function()
+	Read("fordebug6.txt");
+end;
+
+dbg0:=function()
+	Read("fordebug0.g");
+end;
+
+dbg1:=function()
+	Read("fordebug1.g");
+end;
+
+dbg2:=function()
+	Read("fordebug2.g");
+end;
+
+dbg3:=function()
+	Read("fordebug3.g");
+end;
+
+dbg4:=function()
+	Read("fordebug4.g");
+end;
+
+dbg5:=function()
+	Read("fordebug5.g");
+end;
+
+dbg6:=function()
+	Read("fordebug6.g");
+end;
+
+
+
+#####################
+
+Snapshot:=function(name)
+	local wspfn, flag;
+	flag:=false;
+	if IsReadOnlyGlobal("SavedFloatIndex") then
+		MakeReadWriteGlobal("SavedFloatIndex");
+		flag:=true;
+	fi;
+	wspfn:=Concatenation(["gapwsps/", name, ".gwsp"]);
+	SaveWorkspace(wspfn);
+	if flag then
+		MakeReadOnlyGlobal("SavedFloatIndex");
+	fi;
+end;
+
+
+
+#####################
+
+Printn:=function(arg)
+	local targ;
+	for targ in arg do
+		Print(targ, " ");
+	od;
+	Print("\n");
+end;
+
+Beep:=function(n)
+	Printn("wrongBeep", n, "\n\n"); Error();
+end;
+
+beep:=function(beepnumb)
+	Printn("wrong global beep", beepnumb); Error();
+end;
+
+BeepStr:=function(beepstr)
+	Printn("wrongBeepStr", beepstr, "\n\n"); Error();
+end;
+
+
+###############
+
+
+
+AddCopy:=function(list, obj)
+	Add(list, StructuralCopy(obj));
+end;
+
+CopyAddCopy:=function(list, obj)
+	local tlist;
+	tlist:=StructuralCopy(list);
+	Add(tlist, StructuralCopy(obj));
+	return(tlist);
+end;
+
+CopyAdd:=function(list, obj)
+	local tlist;
+	tlist:=StructuralCopy(list);
+	Add(tlist, obj);
+	return(tlist);
+end;
+
+AppendCopy:=function(list, objlist)
+	Append(list, StructuralCopy(objlist));
+end;
+
+CopyAppend:=function(list, objlist)
+	local tlist;
+	tlist:=StructuralCopy(list);
+	Append(tlist, objlist);
+	return(tlist);
+end;
+
+CopyAppendCopy:=function(list1, list2)
+	local tlist1, tlist2;
+	tlist1:=StructuralCopy(list1);
+	tlist2:=StructuralCopy(list2);
+	Append(tlist1, tlist2);
+	return(tlist1);
+end;
+
+
+
+CopySort:=function(list)
+	local tlist;
+	tlist:=StructuralCopy(list);
+	Sort(tlist);
+	return(tlist);
+end;
+
+CopySortBy:=function(list, func)
+	local tlist;
+	tlist:=StructuralCopy(list);
+	#SortBy(tlist, func);
+	Sort(tlist, func);
+	return(tlist);
+end;
+
+
+####################
+
+NumbOccur:=function(a, L)
+	local  numb, x;
+	numb:=0;
+	for x in L do if x=a then numb:=numb+1; fi; od;
+	return(numb);
+end;
+
+
+OccurNumb:=function(L, a)
+  return(Length(Positions(L, a)));
+end;
+
+
+
+###################
+
+FloorRat:=function(a)
+	local ia;
+	ia:=Int(a);
+	if ia>a then ia:=ia-1; fi;
+	return ia;
+end;
+
+CeilingRat:=function(a)
+	local ia;
+	ia:=Int(a);
+	if ia<a then ia:=ia+1; fi;
+	return ia;
+end;
+
+IsSquareRootRat:=function(a)
+	local da, na;
+	na:=NumeratorRat(a);
+	if na<0 then return(false); fi;
+	da:=DenominatorRat(a);
+	if RootInt(da)^2<>da then return(false); fi;
+	if RootInt(na)^2<>na then return(false); fi;
+	return(RootInt(na)/RootInt(da));
+end;
+
+
+modZ:=function(a)
+	return a-FloorRat(a);
+end;
+
+modtZ:=function(a)
+	return a-2*FloorRat(a/2);
+end;
+
+FloatRat:=function(a, keta)
+	return(Float(FloorRat(a*10^keta)/10^keta));
+end;
+
+
+#######################
+
+Lgcd:=function(L)
+	if L=[] then return(0); fi;
+	return(Gcd( Integers, L));
+end;
+
+Llcm:=function(L)
+	if L=[] then return(1); fi;
+	return(Lcm( Integers, L));
+end;
+
+Ordp:=function(n, p)
+	#
+	# The largest integer e such that p^e divides the integer n.
+	#
+	local e, nn;
+	#
+	if n=0 then Printn("wrong_in_Ordp", n); Error(); fi;
+	#
+	e:=0;
+	nn:=n;
+	while nn mod p=0 do
+		e:=e+1;
+		nn:=nn/p;
+	od;
+	return(e);
+end;
+
+####################
+
+ClassifyByTags:=function(list, tagfunc)
+	#
+	# tagfunc should not destroy the input,
+	# otherwise  list will be changed when tags:=List(list, tagfunc).
+	#
+	# This classifies the elements of list according to the value of tagfunc.
+	# The output is the list of [tagvalue, the list of elms x with tagfunc(x)=tagvalue].
+	# This list is sorted according to tag-value.
+	#
+	#
+	local tags, dftags, tlist, tag, ttlist, ii;
+	tags:=List(list, tagfunc);
+	dftags:=DuplicateFreeList(tags);
+	Sort(dftags);
+	tlist:=[];
+	for tag in dftags do
+		ttlist:=[];
+		for ii in [1..Length(list)] do
+			if tags[ii]=tag then
+				AddCopy(ttlist, list[ii]);
+			fi;
+		od;
+		Add(tlist, [tag, ttlist]);
+	od;
+	return(tlist);
+end;
+
+##################
+
+OrbitdecompByConnects:=function(n, connects, prevmerge)
+	#
+	#
+	local orbs, ii, newconnects, connii, tconn, jj, beep,
+	neworb, neworbs, oldorb, donekks, newconnects2, tt;
+	#
+	beep:=function(numb)
+		Printn("wrong OrbitdecompByConnects", numb); Error();
+	end;
+	#
+	newconnects:=List(connects);
+	#
+	for tt in [1..prevmerge] do
+		newconnects2:=[];
+		for ii in [1..n] do
+			connii:=[ii];
+			for tconn in newconnects do
+				if ii in tconn then
+					for jj in tconn do
+						if jj<>ii then Add(connii, jj);fi;
+					od;
+				fi;
+			od;
+			connii:=Set(connii);
+			Add(newconnects2, connii);
+		od;
+		newconnects:=Set(newconnects2);
+	od;
+	#
+	orbs:=[];
+	donekks:=[];
+	#
+	for connii in newconnects do
+		neworbs:=[];
+		if Intersection(donekks, connii)=[] then
+			Add(orbs, connii);
+		else
+			neworbs:=[];
+			neworb:=List(connii);
+			for oldorb in orbs do
+				if Intersection(oldorb, connii)=[] then
+					Add(neworbs, oldorb);
+				else
+					Append(neworb, oldorb);
+				fi;
+			od;
+			neworb:=Set(neworb);
+			Add(neworbs, neworb);
+			orbs:=neworbs;
+		fi;
+		Append(donekks, connii);
+		donekks:=Set(donekks);
+	od;
+	#
+	if not IsDuplicateFree(Flat(orbs)) then beep(100); fi;
+	if Length(Set(Flat(orbs)))<>n then beep(200); fi;
+	if not IsEqualSet(Concatenation(orbs), [1..n]) then beep(300); fi;
+	#
+	return(orbs);
+end;
+##########################
+koko:=function(numb)
+	Printn("koko", numb);
+	return();
+end;
+
+
+
+##########################
+
+tolatexmat:=function(M)
+	local ii, v, jj, a;
+	Print("\\left[\\begin{array}{");
+	for ii in [1..Length(M[1])] do
+		Print("c");
+	od;
+	Printn("}");
+	ii:=0;
+	for v in M do
+		jj:=0;
+		for a in v do
+			if jj>0 then Print(" & "); fi;
+			Print(a);
+			jj:=jj+1;
+		od;
+		ii:=ii+1;
+		if ii<Length(M) then
+			Printn(" \\\\");
+		else
+			Printn("");
+		fi;
+	od;
+	Printn("\\end{array}\\right]");
+end;
+
+###################
+
+RootRat:=function(a)
+	local roota;
+	roota:=RootInt(NumeratorRat(a))/RootInt(DenominatorRat(a));
+	if roota^2<>a then Printn("wrong in RootRat", a); Error(); fi;
+	return(roota);
+end;
+
+LcmDenom:=function(vect)
+	return(Lcm(List(vect, DenominatorRat)));
+end;
+
+#####################
+
+lexsorter:=function(v1, v2)
+	#
+	# if v1 is less than v2 by lex, then -1
+	# if v1 is equal to v2 , then 0,
+	# if v1 is larger than v2 then 1.
+	#
+	local ii, c1, c2, comp;
+	if IsList(v1) then
+		for ii in [1..Length(v1)] do
+			c1:=v1[ii]; c2:=v2[ii];
+			comp:=lexsorter(c1, c2);
+			if comp<>0 then return(comp); fi;
+		od;
+		return(0);
+	else
+		if v1<v2 then return(-1);
+		elif v1>v2 then return(1);
+		else return(0);
+		fi;
+	fi;
+	BeepStr("lexsorter 10");
+end;
+
+sortbylex:=function(list)
+	Sort(list, function(xx, yy) return(lexsorter(xx, yy)<0); end);
+end;
+
+########################
+
+SetMinus:=function(S1, S2)
+	local SS1;
+	SS1:=Set(S1);
+	SubtractSet(SS1, Set(S2));
+	return(SS1);
+end;
+
+#####################
+
+GroupGeneratedBy:=function(gens, productfunction, identityelement)
+	#
+	local G, job;
+	G:=[List(identityelement)];
+	#
+	# induction by length of the words.
+	#
+	job:=function(Gleng)
+		local newelms, oldelm, tgen, tg;
+		newelms:=[];
+		for oldelm in Gleng do
+			for tgen in gens do
+				tg:=productfunction(oldelm , tgen);
+				if not tg in G then
+					Add(newelms, tg);
+				fi;
+			od;
+		od;
+		if newelms<>[] then
+			newelms:=Set(newelms);
+			Append(G, newelms);
+			job(newelms);
+		fi;
+	end;
+	job([List(identityelement)]);
+	G:=Set(G);
+	return(G);
+end;
+
+#####################
+
+toMultiSet:=function(listL)
+	local Lset, aa;
+	Lset:=Set(listL);
+	return(List(Lset, aa->[aa, NumbOccur(aa, listL)]));
+end;
+
+
+##################### Added on 2019/05/03
+
+ToMultiSet:=function(arg)
+	if Length(arg)=1 then
+		return(toMultiSet(arg[1]));
+	elif Length(arg)=2 then
+		return(toMultiSet(List(arg[1], arg[2])));
+	else
+		Printn("wrong in ToMultiSet"); Error();
+	fi;
+end;
+
+####################
+
+ChompListBy:=function(list, unitleng)
+	local mlist, ulist, aa, leng;
+	mlist:=[];
+	ulist:=[];
+	leng:=0;
+	for aa in list do
+		Add(ulist, aa);
+		leng:=leng+1;
+		if leng=unitleng then
+			Add(mlist, ulist);
+			leng:=0;
+			ulist:=[];
+		fi;
+	od;
+	if ulist<>[] then Printn("wrong ChompListBy"); beep(1); fi;
+	return(mlist);
+end;
+
+ChompMatBy:=function(mat, rowunitleng, colunitleng)
+	local matrowchompped, matchompped, trcunit, runit;
+	matrowchompped:=ChompListBy(mat, rowunitleng);
+	matchompped:=[];
+	for runit in matrowchompped do
+		trcunit:=ChompListBy(TransposedMat(runit), colunitleng);
+		Add(matchompped, List(trcunit,TransposedMat));
+	od;
+	return(matchompped);
+end;
+
+#################
+
+ListPermN:=function(N, perm)
+	local nn;
+	return(List([1..N], nn->nn^perm));
+end;
+
+
+
+####################
+
+RevPosition:=function(list, elm)
+	local cc;
+	cc:=Length(list);
+	while cc>0 do
+		if elm=list[cc] then return(cc); fi;
+		cc:=cc-1;
+	od;
+	return(fail);
+end;
+
+########################
+# Added on 15 Jan 2018
+#########################
+
+LpermLists:=function(listtg, list)
+	#
+	# the ii-th element of listtg is at Lperm[ii]-th element of list.
+	#
+	local Lperm, vtg, poss, beep;
+	beep:=function(beepn)
+		Printn("wrong in LpermLists", beepn); Error();
+	end;
+	Lperm:=[];
+	for vtg in listtg do
+		poss:=Positions(list, vtg);
+		if Length(poss)<>1 then beep(49); fi;
+		Add(Lperm, poss[1]);
+	od;
+	if CopySort(Lperm)<>[1..Length(list)] then
+		beep(28);
+	fi;
+	return(Lperm);
+end;
+
+
+SinglePosition:=function(list, elm)
+	local poss;
+	poss:=Positions(list, elm);
+	if Length(poss)<>1 then
+		Printn("wrong in SinglePosition"); Error();
+	fi;
+	return(poss[1]);
+end;
+
+########################
+# Added on 24 Feb 2018
+#########################
+
+EasyGroupStructure:=function(elementslist, id)
+	local gens, G, tg, structure;
+	gens:=[id];
+	G:=Group(gens);
+	for tg in elementslist do
+		if not tg in G then
+			Add(gens, tg);
+			G:=Group(gens);
+		fi;
+	od;
+	structure:=StructureDescription(G);
+	return([elementslist, structure]);
+end;
+
+PermOnList:=function(list, perm)
+	local xx;
+	return(List(list, xx->xx^perm));
+end;
+
+MoveByPermOnList:=function(list, perm)
+	local xx, ii, iis;
+	iis:=List([1..Length(list)], xx->xx^perm);
+	return(List(iis,ii->list[ii]));
+end;
+
+
+SqRoot:=function(xx)
+	local fxx, sqnxx, sqdxx, sqxx, dxx, nxx;
+	if  not (IsFloat(xx)) and xx<0 then
+		Printn("wrong in SqRoot"); Error();
+	fi;
+	if IsInt(xx) then
+		sqxx:=RootInt(xx);
+		if sqxx^2=xx then
+			return(sqxx);
+		fi;
+	fi;
+	if IsRat(xx) then
+		dxx:=DenominatorRat(xx);
+		nxx:=NumeratorRat(xx);
+		sqdxx:=RootInt(dxx);
+		sqnxx:=RootInt(nxx);
+		if sqdxx^2=dxx and sqnxx^2=nxx then
+			return(sqnxx/sqdxx);
+		fi;
+	fi;
+	fxx:=Float(xx);
+	return(Exp(Log(fxx)/2));
+end;
+
+
+####################
+# Added on 2018 07 12
+####################
+
+CopyRemove:=function(list, pos)
+	local newlist;
+	newlist:=StructuralCopy(list);
+	Remove(newlist, pos);
+	return(newlist);
+end;
+
+
+
+
+NearestInt:=function(a)
+	local n;
+	n:=FloorRat(a);
+	if (a-n)>1/2 then
+		n:=n+1;
+	fi;
+	return(n);
+end;
+
+
+SqIntRange:=function(vv, uu)
+	#
+	# [min..max] is the range of x in Z such that (x-vv)^2<=uu
+	#
+	local beep,  max, xx, min;
+	#
+	beep:=function(numb)
+		Printn("wrong SqIntRange", numb); Error();
+	end;
+	#
+	if uu<0 then beep(587557); fi;
+	xx:=FloorRat(vv);
+	while true do
+		xx:=xx+1;
+		if xx>vv and (xx-vv)^2>uu then
+			max:=xx-1;
+			break; #from while true do
+		fi;
+	od;
+	xx:=FloorRat(vv)+1;
+	while true do
+		xx:=xx-1;
+		if xx<vv and (xx-vv)^2>uu then
+			min:=xx+1;
+			break; #from while true do
+		fi;
+	od;
+	return([min, max]);
+end;
+
+
+#######################
+# 2018 October 08
+#######################
+
+
+localbeep:=function(name, beepnumb)
+	Printn(Concatenation("wrong in ", name), beepnumb);
+	Error();
+end;
+
+Z2to01Mat:=function(tM)
+	local beep, tv, newtv, newtM, ta;
+	#
+	beep:=function(beepnumb)
+		localbeep("Z2to01Mat", beepnumb);
+	end;
+	#
+	newtM:=[];
+	for tv in tM do
+		newtv:=[];
+		for ta in tv do
+			if ta=0*Z(2) then
+				Add(newtv, 0);
+			elif ta=Z(2)^0 then
+				Add(newtv, 1);
+			else beep(14747474741);
+			fi;
+		od;
+		Add(newtM, newtv);
+	od;
+	return(newtM);
+end;
+
+#######################
+# 2019 March 04
+#######################
+
+latexifac:=function(nn)
+	local n, str, ii, tp, concat;
+	str:="";
+	if nn=0 then str:="0"; return(str); fi;
+	if nn<0 then str:="-"; fi;
+	n:=AbsInt(nn);
+	ii:=0;
+	for tp in toMultiSet(Factors(n)) do
+		if ii>0 then
+			Append(str, " \\cdot ");
+		fi;
+		concat:=Concatenation("{", String(tp[1]), "}");
+		Append(str, concat);
+		if tp[2]>1 then
+			concat:=Concatenation("^{", String(tp[2]), "}");
+			Append(str, concat);
+		fi;
+		ii:=ii+1;
+	od;
+	return(str);
+end;
+
+#######################
+# 2019 July 16
+#######################
+
+AppendToLatexMat:=function(filename, M) #to be standarized
+	local ii, v, jj, a;
+	AppendTo(filename, "\\left[\\begin{array}{");
+	for ii in [1..Length(M[1])] do
+		AppendTo(filename, "c");
+	od;
+	AppendTo(filename, "}\n");
+	ii:=0;
+	for v in M do
+		jj:=0;
+		for a in v do
+			if jj>0 then AppendTo(filename, " & "); fi;
+			AppendTo(filename, a);
+			jj:=jj+1;
+		od;
+		ii:=ii+1;
+		if ii<Length(M) then
+			AppendTo(filename, " \\\\ \n");
+		else
+			AppendTo(filename, "\n");
+		fi;
+	od;
+	AppendTo(filename, "\\end{array}\\right]\n");
+end;
+
+
+#######################
+# 2019 July 16
+#######################
+
+
+
+ReadAllSaveFilesInDir:=function(savedir)
+  #
+  local path, ls, stdin, stdout, str,splstr, fnn, ii, fn, Rfnn;
+  #
+  path := DirectoriesSystemPrograms();
+  ls := Filename( path, "ls" );
+  stdin := InputTextUser();
+  str:="";
+  stdout :=OutputTextString(str, true);
+  Process(savedir, ls, stdin, stdout, ["-c"] );
+  #
+  splstr:=SplitString(str, "\n");
+  #
+  for fnn in splstr do
+    if Length(fnn)>=8 and List([1..4], ii->fnn[ii])= "save"
+    then
+      Rfnn:=Reversed(fnn);
+      if List([1..4], ii->Rfnn[ii])="txt." then
+        fn:=Filename(savedir, fnn);
+        Read(fn);
+      fi;
+    fi;
+  od;
+  return(1);
+end;
+
+
+################# Added on 20190828
+
+readtask:=function(n)
+  local fn;
+  fn:=Concatenation("task", String(n), ".txt");
+  Read(fn);
+end;
+
+################# Added on 20190928
+
+RatOrdp:=function(r, p)
+	#
+	# The  integer e such that r*p^(-e) is a p-adic unit.
+	#
+	if r=0 then
+    Printn("wrong input in RatOrdp"); Error();
+  fi;
+	return(Ordp(NumeratorRat(r), p)-Ordp(DenominatorRat(r), p));
+end;
+
+RatOrdpZ:=function(a, p)
+  if a=0 then return(infinity); fi;
+  return(Ordp(NumeratorRat(a), p)-Ordp(DenominatorRat(a), p));
+end;
+
+################# Added on 20200307
+
+readTask:=function(tasknumb)
+  Read(Concatenation("Task", String(tasknumb), ".txt"));
+end;
+
+############ Added on 2020Apr29
+
+DoOverlap:=function(tset1, tset2)
+  local xx;
+  for xx in tset1 do
+    if xx in tset2 then return(true); fi;
+  od;
+  return(false);
+end;
+
+UnToMultiSet:=function(multiset)
+  local list, mm, aa;
+  list:=[];
+  for mm in multiset do
+    for aa in [1..mm[2]] do
+      Add(list, mm[1]);
+    od;
+  od;
+  return(list);
+end;
+
+GetNamesFromDir:=function(dirname, filter)
+  #
+  local exerstr, files, namesfromdir, filename, ii;
+  #
+  exerstr:=Concatenation("ls ", dirname, " >templist.txt");
+  Exec(exerstr);
+  files:=InputTextFile("templist.txt");
+  namesfromdir:=[];
+  filename:=ReadLine(files);
+  while filename<>fail do
+    if filter(filename) then
+      Add(namesfromdir, List([1..Length(filename)-1], ii->filename[ii]));
+      #Remove '\n' at the end of filename
+    fi;
+    filename:=ReadLine(files);
+  od;
+  CloseStream(files);
+  return(namesfromdir);
+end;
+
+
+DoesAFileExist:=function(dirname, filename)
+  #
+  local exerstr, files,tfilename, ttfilename, ii;
+  #
+  exerstr:=Concatenation("ls ", dirname, " >templist.txt");
+  Exec(exerstr);
+  files:=InputTextFile("templist.txt");
+  tfilename:=ReadLine(files);
+  while tfilename<>fail do
+    ttfilename:=List([1..Length(tfilename)-1], ii->tfilename[ii]);
+    #Printn(ttfilename);
+    if ttfilename=filename then
+      CloseStream(files);
+      return(true);
+    fi;
+    tfilename:=ReadLine(files);
+  od;
+  CloseStream(files);
+  return(false);
+end;
+
+
+CutList:=function(list, cutsize)
+	local ii, newlist, nopslist;
+	nopslist:=Length(list);
+	newlist:=List([1..Minimum(nopslist, cutsize)], ii->list[ii]);
+	return(newlist);
+end;
+
+#############
+# 2021/11/09
+#############
+
+EquivClasses:=function(L, isoms)
+  #
+  # decomposition of the set Copyright (c)
+  # into the equivalence classes
+  # by the equivalence relation generated by
+  # a ~ b  iff [a, b] in isoms
+  #
+  local beep, tisoms, equivs, aas, aa, flag, bbs;
+  #
+  beep:=function(beepnumb)
+    localbeep("EquivClasses", beepnumb); Error();
+  end;
+  tisoms:=List(isoms);
+  equivs:=List(SetMinus(L, Union(isoms)), aa->[aa]);
+  while tisoms<>[] do
+    aas:=Remove(tisoms);
+    flag:=true;
+    for bbs in tisoms do
+      if Intersection(aas, bbs)<>[] then
+        Append(bbs, aas);
+        flag:=false;
+        break;
+      fi;
+    od;
+    if flag then
+      Add(equivs, Set(aas));
+    fi;
+  od;
+  #
+  if not Sum(equivs, Length)=Length(Set(L)) then beep(391681); fi;
+  if not IsEqualSet(Union(equivs), L) then beep(265181); fi;
+  return(equivs);
+end;
+
+#############
+# 2022/04/09
+#############
+
+
+NewClassifyByTags:=function(list, tagfunc)
+	#
+	# tagfunc should not destroy the input,
+	# otherwise  list will be changed when tags:=List(list, tagfunc).
+	#
+	# This classifies the elements of list according to the value of tagfunc.
+	# The output is the list of [tagvalue, the list of elms x with tagfunc(x)=tagvalue].
+	# This list is sorted according to tag-value.
+	#
+  # This will be used in Make_nSaSvSss
+	#
+	local tags, tagsset, tlist, tag, ttlist, ii, beep;
+	beep:=function(beepnumb)
+		localbeep("NewClassifyByTags", beepnumb); Error();
+	end;
+	#
+  tags:=List(list, tagfunc);
+	tagsset:=Set(tags);
+	tlist:=[];
+	for tag in tagsset do
+		ttlist:=List(Positions(tags, tag), ii->list[ii]);
+		Add(tlist, [tag, ttlist]);
+	od;
+	if Sum(tlist, xx->Length(xx[2]))<>Length(list) then beep(71723); fi;
+	return(tlist);
+end;
+
+
+#############
+# 2025/02/19
+#############
+
+ConnectedCompsGraph:=function(adjacencymat)
+  #
+  local beep, size, conncomps, dones, nn, newconncomp,
+  kk, mm, pp;
+  #
+  beep:=function(beepnumb)
+    localbeep("ConnectedCompsGraph", beepnumb); Error();
+  end;
+  #
+  if adjacencymat<>TransposedMat(adjacencymat) then beep(726353); fi;
+  #
+  size:=Length(adjacencymat);
+  conncomps:=[];
+  dones:=[];
+  #
+  for nn in [1..size] do
+    if not nn in dones then
+      newconncomp:=[nn];
+      kk:=1;
+      while kk<=Length(newconncomp) do
+        mm:=newconncomp[kk];
+        for pp in Positions(adjacencymat[mm], 1) do # We cannot use Union!
+          if not pp in newconncomp then
+            Add(newconncomp, pp);
+          fi;
+        od;
+        kk:=kk+1;
+      od; #while kk<=Length(newconncomp) do
+      #
+      newconncomp:=Set(newconncomp);
+      Add(conncomps, newconncomp);
+      if Intersection(dones, newconncomp)<>[] then beep(3321929); fi;
+      Append(dones, newconncomp);
+      #
+    fi;
+  od; #for nn in [1..size] do
+  #
+  Sort(dones);
+  if dones<>[1..size] then beep(445662); fi;
+  return(conncomps);
+end;
+
+GetAPosition:=function(list, elm)
+  local pos, xx;
+  pos:=0;
+  for xx in list do
+    pos:=pos+1;
+    if xx=elm then return(pos); fi;
+  od;
+  return(fail);
+end;
+
+AbsRat:=function(rat)
+  return(AbsInt(NumeratorRat(rat))/AbsInt(DenominatorRat(rat)));
+end;
+
+SignRat:=function(rat)
+  local nrat, drat;
+  nrat:=NumeratorRat(rat);
+  drat:=DenominatorRat(rat);
+  if not drat>0 then beep(11638587); fi;
+  if nrat>0 then return(1);
+  elif nrat=0 then return(0);
+  elif nrat<0 then return(-1);
+  else beep(525278);
+  fi;
+end;
+
+#############
+# 2025/06/09
+#############
+
+
+CompareVects:=function(vv1, vv2)
+  local diffvv, xx;
+  diffvv:=vv1-vv2;
+  for xx in diffvv do
+    if xx<0 then return(-1);
+    elif xx>0 then return(1);
+    fi;
+  od;
+  return(0);
+end;
+
+
+#############
+# 2026/04/20
+#############
+
+PrintTimeSecMin := function(tt) #tt is milisec
+    local sec, min;
+    sec := Int(tt/ 1000);
+    min := Int(sec / 60);
+    Print(min, " min ", sec mod 60, " sec\n");
+end;
+
+#############
+# 2026/06/27
+#############
+
+PrintnHline:=function()
+    Printn("################");;
+end;

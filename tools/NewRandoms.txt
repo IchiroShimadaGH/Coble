@@ -1,0 +1,266 @@
+#Read("NewRandoms.txt");
+
+RandomPosVects:=function(Gram, iniposv, nops, myseed)
+  #
+  # Gram is hyperbolic.
+  # ta is of positive square norm
+  #
+  local beep, inistate, rank, newposvects, ii,
+  rvects, nrms, newrvects;
+  #
+  beep:=function(beepnumb)
+    localbeep("RandomPosVect", beepnumb); Error();
+  end;
+  #
+  if iniposv*Gram*iniposv<=0 then beep(269692); fi;
+  inistate:=State(GlobalMersenneTwister);
+  Reset(GlobalMersenneTwister,myseed);
+  #
+  rank:=Length(Gram);
+  #
+  newposvects:=function(tposv, subnops)
+    #
+    local orthorec, GramN, embN, aa, newposvs, RU,
+    LLLrec, negvs, tv, bb,m,newposv;
+    #
+    orthorec:=OrthogonalCompRec(Gram, [tposv]);
+    GramN:=orthorec.Gram;
+    embN:=orthorec.basis;
+    aa:=tposv*Gram*tposv;
+    newposvs:=[];
+    while Length(newposvs)<subnops do
+      RU:=RandomUnimodMat(rank-1);
+      LLLrec:=LLLReducedGramMat(-TMTTmult(RU, GramN));
+      negvs:=LLLrec.transformation*RU*embN;
+      for tv in negvs do
+        bb:=tv*Gram*tv;
+        m:=Int(SqRoot(-bb/aa))+1;
+        newposv:=m*tposv+tv;
+        #if newposv*Gram*newposv<=0 then beep(6262); fi;
+        Add(newposvs, newposv);
+      od;
+    od;
+    return(Set(newposvs));
+  end;
+  #
+  rvects:=[iniposv];
+  while Length(rvects)<10*nops do
+    newrvects:=newposvects(Random(rvects), nops);
+    Append(rvects, newrvects);
+  od;
+  #
+  rvects:=Set(rvects);
+  nrms:=List(rvects, tv->tv*Gram*tv);
+  SortParallel(nrms, rvects);
+  if nrms[1]<=0 then beep(626972); fi;
+  if Length(rvects)>nops then
+    rvects:=List([1..nops], ii->rvects[ii]);
+  fi;
+  Reset(GlobalMersenneTwister, inistate);
+  return(rvects);
+end;
+
+
+GetAStandardADEBasis:=function(Gram, roots)
+  local beep, type, bigM, target, anisom, stdbasis;
+  beep:=function(beepnumb)
+    localbeep("GetAStandardADEBasis", beepnumb); Error();
+  end;
+  type:=GetRootType(Gram, roots);
+  bigM:=TMTTmult(roots, Gram);
+  target:=-ADEHGram(type);
+  anisom:=FindASubconfig(target, bigM);
+  if anisom=fail then beep(585286); fi;
+  stdbasis:=List(anisom, ii->roots[ii]);
+  if TMTTmult(stdbasis, Gram)<>target then beep(6986219); fi;
+  return(stdbasis);
+end;
+
+RandomAmple:=function(Gram, iniposv, inimaxnrm, stepnrm, myseed)
+  #
+  local beep,inistate, tseed, tposv, tposvs,found, tmaxnrm,
+  troots, tposvnrm,  tbasis, rhoR, onev, ii,tGramRdual,
+  perturbv, perturbvnrm, mm, newnrm, ta, theta, counter, ttype;
+  #
+  beep:=function(beepnumb)
+    localbeep("RandomAmple", beepnumb); Error();
+  end;
+  #
+  inistate:=State(GlobalMersenneTwister);
+  Reset(GlobalMersenneTwister,myseed);
+  tseed:=myseed;
+  found:=false;
+  tmaxnrm:=inimaxnrm;
+  counter:=0;
+  while not found do
+    counter:=counter+1;
+    tseed:=tseed+1;
+    tposvs:=RandomPosVects(Gram, iniposv, 100, tseed);
+    for tposv in tposvs do
+      tposvnrm:=tposv*Gram*tposv;
+      if tposvnrm>tmaxnrm  then  Printn("_______break", tposvnrm); break; fi;
+      troots:=OrthoRoots(Gram, [tposv]);
+      if troots<>[] then
+        tbasis:=GetAStandardADEBasis(Gram, troots);
+        ttype:=GetRootType(Gram, troots);
+        tGramRdual:=-ADEHdualGram(ttype);
+        rhoR:=Length(troots);
+        onev:=List([1..rhoR], ii->1)*tGramRdual;
+        perturbv:=GetPrimitiveIntVect(onev*tbasis);
+        perturbvnrm:=perturbv*Gram*perturbv;
+      else
+        perturbv:=MakeZeroVect(Length(Gram));
+        perturbvnrm:=0;
+      fi;
+      mm:=0;
+      while true do
+        mm:=mm+1;
+        newnrm:=mm^2*tposvnrm+perturbvnrm;
+        if newnrm>0 then
+          if newnrm>tmaxnrm then Printn("mm", mm);break; fi;# from #while true do
+          ta:=mm*tposv+perturbv;
+          if OrthoRoots(Gram, [ta])=[] then
+            theta:=ta;
+            if ta*Gram*ta<>newnrm then beep(99221); fi;
+            found:=true;
+            break; #from #while true do
+          fi;
+        fi;
+      od; # while true do
+      #
+      if found then break; fi;#from for tposv in tposvs do
+      #
+    od; # for tposv in tposvs do
+    Printn("___", counter, found);
+    tmaxnrm:=tmaxnrm+stepnrm;
+  od;
+  Reset(GlobalMersenneTwister, inistate);
+  return(theta);
+end;
+
+RandomMatFromLSeed:=function(r, c, L, myseed)
+  local inistate, tM;
+  inistate:=State(GlobalMersenneTwister);
+  Reset(GlobalMersenneTwister,myseed);
+  tM:=RandomMatFromL(r, c, L);
+  Reset(GlobalMersenneTwister, inistate);
+  return(tM);
+end;
+
+RandomUnimodMatSeed:=function(m, myseed)
+	#
+	# very strangely,  RandomUnimodularMat(1) does not return value!
+	#
+  local inistate, tM;
+  inistate:=State(GlobalMersenneTwister);
+  Reset(GlobalMersenneTwister,myseed);
+	if m=1 then
+    tM:=Random([ [[1]], [[-1]] ]);
+	else
+    tM:=RandomUnimodularMat(m);
+	fi;
+  Reset(GlobalMersenneTwister, inistate);
+  return(tM);
+end;
+
+
+NewMakeRandomAmples:=function(GramS, iniample, nops, maxnrm, tseed)
+  local beep, amples, dim, iniampledual, cc,ta,nu,nownops,
+  tta, mm, tb1, tt, tb2, ttaa, ccc, ta1, ta2, nrms, cs,
+  nowmaxnrm, tanrm, maxmm, ii, zs, cnops, iniseed, tas,newtas, newta,
+  tb1dual, newtacc, tts, tb1degs;
+  #
+  beep:=function(beepnumb)
+    localbeep("MakeRandomAmples", beepnumb); Error();
+  end;
+  #
+  iniseed:= State(GlobalMersenneTwister);
+  Reset(GlobalMersenneTwister, tseed);
+  nowmaxnrm:=maxnrm;
+  amples:=[iniample];
+  nownops:=Length(amples);
+  dim:=Length(GramS);
+  zs:=List([1..2*dim+1], ii->0);
+  iniampledual:=iniample*GramS;
+  cc:=0;
+  maxmm:=10;
+  mm:=1;
+  while Length(amples)<4*nops do
+    cc:=cc+1;
+    tta:=Random(amples);
+    mm:=mm+1;
+    if mm=maxmm then
+      mm:=1;
+    fi;
+    tb1:=Random(amples);
+    tb1dual:=tb1*GramS;
+    #RandomPosVects:=function(Gram, iniposv, nops, myseed)
+    tas:=RandomPosVects(GramS, tta, nops, cc);
+    newtas:=[];
+    for ta in tas do
+      nu:=10;
+    	ta1:=List(ta/2^nu,  NearestInt);
+      while ta1*GramS*ta1<=0  and nu>=0  do
+        ta1:=List(ta/2^nu, NearestInt);
+        nu:=nu-1;
+      od;
+      ta:=GetPrimitiveIntVect(ta1);
+      tanrm:= ta*GramS*ta;
+      if tanrm<=0 then beep(838382); fi;
+      if tanrm>=nowmaxnrm then  continue; fi;
+      if ta*iniampledual<0 then ta:=-ta; fi;
+      Add(newtas, ta);
+    od;
+    #
+    tb1degs:=newtas*tb1dual;
+    SortParallel(tb1degs, newtas);
+    #
+    newtacc:=0;
+    for newta in newtas do
+      newtacc:=newtacc+1;
+      if newtacc>Int(nops/10)+1 then break; fi;
+      newta:=newta*MoveToTheSameChamber(GramS, newta, tb1);
+      cnops:=Length(amples);
+      if cnops>50 then
+        tts:=RandomChooseFromL([1..cnops], 20);
+      else
+        tts:=[1..cnops];
+      fi;
+      for tt in tts do
+        tb2:=amples[tt];
+        ttaa:=GetPrimitiveIntVect(tb2+newta);
+        if ttaa*GramS*ttaa<nowmaxnrm then
+          Add(amples, List(ttaa));
+        fi;
+      od;
+    od; #for newta in newtas do
+    amples:=Set(amples);
+    if cc mod 1000=0 then
+      Printn("making amples", cc, nownops, "->", Length(amples), nowmaxnrm);
+  		ccc:=0;
+  		while ccc<=10 do
+  			ta1:=Random(amples);
+  			ta2:=Random(amples);
+  			if OrthoRoots(GramS, [ta1])<>[] then beep(6124421); fi;
+  			if OrthoRoots(GramS, [ta2])<>[] then beep(6177221); fi;
+  			if SeparatingVects(GramS, ta1, ta2, -2)<>[] then beep(66298762); fi;
+  			ccc:=ccc+1;
+  		od;
+      if nownops=Length(amples) then
+        nowmaxnrm:=nowmaxnrm+maxnrm;
+        maxmm:=maxmm+2;
+      else
+        nownops:=Length(amples);
+      fi;
+  	fi;
+  od;
+  nrms:=List(amples, tv->tv*GramS*tv);
+  SortParallel(nrms, amples);
+  amples:=List([1..nops], ii->amples[ii]);
+  Printn("___ random amples", Length(amples));
+  Reset(GlobalMersenneTwister, iniseed);
+  return(amples);
+end;
+
+
+#end

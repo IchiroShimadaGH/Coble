@@ -1,0 +1,46 @@
+#Read("newtools4.txt");
+
+
+StdBinaryCode:=function(tcode)
+  #checked in checkStdBinaryCode.txt
+  local ii, jj, H, d, l, flag, tii, tkk, tv;
+  ii:=0;
+  jj:=0;
+  H:=List(tcode) mod 2;
+  d:=Length(tcode);
+  l:=Length(tcode[1]);
+  while ii<d and jj<l do
+    flag:=false;
+    for tii in [ii+1..d] do
+      if H[tii][jj+1]<>0 then
+        flag:=true;
+        tv:=H[tii];
+        if tii<>ii+1 then
+          H[tii]:=H[ii+1];
+          H[ii+1]:=tv;
+        fi;
+        for tkk in [1..d] do
+          if tkk<>ii+1 then
+            H[tkk]:=(H[tkk]+(H[tkk][jj+1])*tv) mod 2;
+          fi;
+        od;
+        break;
+      fi;
+    od;
+    jj:=jj+1;
+    if flag then ii:=ii+1; fi;
+  od;
+  return(RemoveZeroVectsIntMat(H));
+end;
+
+
+StdBinaryCodeNum:=function(tcode)
+  local stdcode, stdcodenum, tv, aa, bb;
+  stdcode:=StdBinaryCode(tcode);
+  stdcodenum:=0;
+  tv:=Flat(stdcode);
+  for bb in tv do
+    stdcodenum:=2*stdcodenum+bb;
+  od;
+  return(stdcodenum);
+end;

@@ -1,0 +1,478 @@
+#Read("gapReads/checkBorcherdsTools.txt");
+
+#####################
+# Global Variables
+#####################
+GramSX:=[]; #ANNW 
+GramSXdual:=[]; #ANNW 
+discSXrec:=[]; #ANNW 
+intGramSXdual:=[]; #ANNW  
+OqSXperiod:=[]; #ANNW
+OqSXliftable:=[]; #ANNW 
+ampleX:=[]; #ANNW 
+ampleXdual:=[]; #ANNW
+GramR:=[]; #ANNW 
+GramRdual:=[]; #ANNW 
+Lrec:=[]; #ANNW 
+GramL:=[]; #ANNW 
+thenRvRs:=[]; #ANNW 
+thenRvRinLs:=[]; #ANNW 
+weyl1:=[]; #ANNW
+
+rankSX:=0; #ANNW
+rankR:=0; #ANNW
+rankL:=0; #ANNW
+IdmatSX:=[]; #ANNW
+
+
+#####################
+# End of Global Variables
+#####################
+
+
+MinimalBorcherdsRead:=function(tdirname)
+	readdatadir(tdirname, "OqSXperiod");
+	readdatadir(tdirname, "OqSXliftable"); 
+	readdatadir(tdirname, "ampleX");  
+	readdatadir(tdirname, "Lrec"); 
+	readdatadir(tdirname, "weyl1");
+end;
+
+Make_nRvRs:=function(tGramRdual)
+	#
+	# make the list of [nR, the list of int vects in tGramRdual with sqnorm nR],
+	# where -2 < nR <= 0.
+	#
+	local svrec;
+	svrec:=ShortestVectors((-1)*tGramRdual, 2); 
+	if Length(svrec.vectors)=0 then Printn("wrong in Make_nRvRs"); Error(); fi;
+	return(ClassifyByTags(MakeFullShortestVectors(tGramRdual, svrec), vv->vv*tGramRdual*vv));
+end;
+
+PrepareDataCheckBorcherds:=function(tdirname)
+	#
+	local denomGramSXdual, nRvRs;
+	#
+	MinimalBorcherdsRead(tdirname);
+	#
+	GramL:=Lrec.Gram;
+	GramSX:=TMTTmult(Lrec.emb1, GramL);
+	GramR:=TMTTmult(Lrec.emb2, GramL);
+	rankSX:=Length(GramSX); 
+	rankR:=Length(GramR); 
+	rankL:=Length(GramL); 
+	IdmatSX:=IdentityMat(rankSX); 
+	GramSXdual:=InverseMat(GramSX);
+	GramRdual:=InverseMat(GramR);
+	discSXrec:=DiscriminantForm(GramSX);
+	denomGramSXdual:=discSXrec.discg[Length(discSXrec.discg)];
+	intGramSXdual:=denomGramSXdual*GramSXdual;
+	ampleXdual:=ampleX*GramSX;
+	thenRvRs:=Make_nRvRs(GramRdual);
+	thenRvRinLs:=[];
+	for nRvRs in thenRvRs do
+		Add(thenRvRinLs, [nRvRs[1], List(nRvRs[2], xx->xx*Lrec.emb2_dual)]);
+	od;
+	Printn("rank of SX", rankSX);
+	Printn("discriminant of SX", discSXrec.discg);
+	Printn("degree of ampleX", ampleX*ampleXdual);
+end;
+
+
+
+##############
+
+
+makeAutST:=function(dim, autS, autT)
+	local beep, autST, tgs, vtgs, tgt;
+	Printn("makeAutST is wrong!!"); Error();
+	beep:=function(n) Printn("wrong makeAutST", n); Error(); end;
+	autST:=[];
+	for tgt in autT do
+		Add(autST, tgt);
+	od; # corresponding to tgs=id 
+	for tgs in autS do
+		Add(autST, tgs); # corresponding to tgt=id 
+		for tgt in autT do
+			Add(autST, tgs*tgt);
+		od;
+	od;
+	if not IsDuplicateFreeList(autST) then
+		beep(1);
+	fi;
+	if Length(autST)<>Length(autS)*Length(autT) then
+		beep(2);
+	fi;
+	return(autST);
+end;
+
+makeorb:=function(v, autST)
+	local beep, orb;
+	Printn("makeorb is obsolete!!"); Error();
+	beep:=function(n) Printn("wrong makeorb", n); Error(); end;
+	orb:=List(autST, tg->v*tg);
+	orb:=DuplicateFreeList(orb);
+	if Length(autST) mod Length(orb)<>0 then beep(1); fi;
+	return(orb);
+end;
+
+isinvol:=function(GramS, tg)
+	local beep, Idr;
+	#
+	beep:=function(n)
+		Printn("wrong in isinvol", n); Error();
+	end;
+	if TMTTmult(tg, GramS)<>GramS then beep(1); fi;
+	Idr:=IdentityMat(Length(GramS));
+	if tg*tg<>Idr then return(false); fi;
+	return(true);
+end;
+
+savedchamlists:=[]; #ANNW
+tempChamsData:=[]; #ANNW
+
+checkBorcherds:=function(periodflag, dirname)
+	local chamrecs, fn, tChamrec, beep, wdatas, chamnumb, tobecheckedchamnumbs, 
+	oldtChamrec, pos, nopsisnew, nopsnotisnew, tgcheck, periodcheck, 
+	tweylS, oldweylS, tg, rdata, walldata, wv, wvdual, norm, aa, sqrootaa, makeorb,
+	savedfn, outwalls, innwalls, wallsorb, wallsorbrec, oldoutwallstisom, oldinnwallstg,
+	orderaut, wallsorbrecsorter, naofwall, nas, torbrec,
+	oldnanopsdata, nanopsdata, wallsorbtisom, wallsorbtisomrec, tisom;
+	#
+	beep:=function(beepnumb)
+		Printn("checkAutK3", beepnumb); Error();
+	end;
+	#
+	PrepareDataCheckBorcherds(dirname);
+	#
+	wallsorbrecsorter:=function(wallsorbrec1, wallsorbrec2)
+		if wallsorbrec1.na[1]<wallsorbrec2.na[1] then return(true);
+		elif wallsorbrec1.na[1]>wallsorbrec2.na[1]  then return(false);
+		else
+			if wallsorbrec1.na[2]<wallsorbrec2.na[2] then return(true);
+			elif wallsorbrec1.na[2]>wallsorbrec2.na[2]  then return(false);
+			else
+				if wallsorbrec1.nops<wallsorbrec2.nops then return(true);
+				elif wallsorbrec1.nops>wallsorbrec2.nops then return(false);
+				else
+					if wallsorbrec1.vects[1]<wallsorbrec2.vects[1] then return(true);
+					elif wallsorbrec1.vects[1]>wallsorbrec2.vects[1]  then return(false);
+					else
+						beep(87722);
+					fi;
+				fi;
+			fi;
+		fi;
+	end;
+	#
+	naofwall:=function(tv, th)
+		local n, a, tvdual;
+		tvdual:=tv*GramSX;
+		n:=tv*tvdual;
+		a:=tvdual*th;
+		return([n,a]);
+	end;
+	#
+	chamrecs:=[];
+	chamnumb:=0;
+	tobecheckedchamnumbs:=[1]; #to_be_checked_cham_numbs
+	chamrecs:=[];
+	nopsisnew:=0;
+	nopsnotisnew:=0;
+	savedfn:=Filename(dirname, "savedchamlists.txt");
+	Read(savedfn);
+	#
+	Printn("start checkBorcherds");
+	#
+	for fn in savedchamlists do
+		Read(fn);
+		if tempChamsData=[] then beep(1); fi;
+		for tChamrec in tempChamsData do
+			chamnumb:=chamnumb+1;
+			if chamnumb<>tChamrec.chamnumb then beep(2); fi;
+			#
+			# check of adjacency relation 
+			#
+			if chamnumb>1 then
+				oldtChamrec:=chamrecs[tChamrec.fromwhichcham];
+				if oldtChamrec.isnew<>true then beep(35); fi;
+				if not chamnumb in List(oldtChamrec.innerwalls, xx->xx[4]) then
+					beep(4);
+				fi;
+				pos:=Position(List(oldtChamrec.innerwalls, xx->xx[4]), chamnumb);
+				if oldtChamrec.innerwalls[pos][3]<>tChamrec.weyl then 
+					beep(5);
+				fi;
+				if oldtChamrec.innerwalls[pos][1]<>-(tChamrec.enteringwall)*GramSXdual then
+					beep(6);
+				fi;
+			fi;
+			if tChamrec.isnew then
+				Append(tobecheckedchamnumbs, List(tChamrec.innerwalls, xx->xx[4]));
+				nopsisnew:=nopsisnew+1;
+			else
+				nopsnotisnew:=nopsnotisnew+1;
+			fi;
+			Add(chamrecs, tChamrec);
+		od;
+	od;
+	if chamnumb<>Length(chamrecs) then beep(101); fi;
+	if tobecheckedchamnumbs<>[1..chamnumb] then 
+		Printn("NOT YET COMPLETED", chamnumb, Maximum(tobecheckedchamnumbs));
+	fi;
+	Printn("adj_rel check done:", nopsisnew, nopsnotisnew);
+	Printn("%%%%%%%%%%%%%%%%%%%%%%");
+	#
+	#
+	if periodflag then
+		periodcheck:=function(tg)
+			return(OLtoOqL(tg, discSXrec) in OqSXperiod);
+		end;
+	else
+		periodcheck:=function(tg)
+			return(OLtoOqL(tg, discSXrec) in OqSXliftable);
+		end;
+	fi;
+	#
+	tgcheck:=function(tg, v1, v2)
+		if not IsIntMat(tg) then beep(20); fi;
+		if (ampleX*tg*GramSX)*ampleX<=0 then beep(21); fi;
+		if TMTTmult(tg, GramSX)<>GramSX then beep(22); fi;
+		if not periodcheck(tg) then beep(23); fi;
+		if v1*tg<>v2 then beep(24); fi;
+		return(true);
+	end;
+	#
+	makeorb:=function(v, autS, autT)
+		local orb, tgs, vtgs, tgt;
+		orb:=[v];
+		for tgt in autT do
+			Add(orb, v*tgt);
+		od; # corresponding to tgs=id 
+		for tgs in autS do
+			vtgs:=v*tgs;
+			Add(orb, vtgs); # corresponding to tgt=id 
+			for tgt in autT do
+				Add(orb, vtgs*tgt);
+			od;
+		od;
+		orb:=Set(orb);
+		return(orb);
+	end;
+	#
+	for tChamrec in chamrecs do
+		tweylS:=tChamrec.weyl*Lrec.proj1;
+		outwalls:=[];
+		innwalls:=[];
+		if tChamrec.isnew then
+			for tg in tChamrec.AutS do tgcheck(tg, tweylS, tweylS); od;
+			for tg in tChamrec.AutT do tgcheck(tg, tweylS, tweylS); od;
+			for rdata in tChamrec.outerwalls do
+				if rdata[1]*GramSX*rdata[1] <>-2 then
+					beep(30);
+				fi;
+				wallsorb:=makeorb(rdata[1], tChamrec.AutS, tChamrec.AutT);
+				if Length(wallsorb)<>rdata[2] then
+					beep(31);
+				fi;
+				nas:=Set(wallsorb, tv->naofwall(tv, tweylS));
+				if Length(nas)<>1 then beep(526611); fi;
+				wallsorbrec:=rec(
+					vects:=wallsorb,
+					nops:=Length(wallsorb), 
+					na:=nas[1]
+				);
+				Add(outwalls,wallsorbrec); 
+			od;
+			#
+			for walldata in tChamrec.innerwalls do
+				wv:=walldata[1];
+				wvdual:=wv*GramSX;
+				if not IsIntVect(wvdual) then beep(32); fi;
+				if  Lgcd(wvdual)<>1 then beep(33); fi;
+				norm:=wv*wvdual;
+				if norm>=0 then beep(34); fi;
+				aa:=(-2)/norm;
+				if  IsInt(aa)  then
+					sqrootaa:=RootInt(aa);
+					if sqrootaa^2=aa and IsIntVect(sqrootaa*wv) then 
+						beep(35);
+					fi;
+				fi;
+				wallsorb:=makeorb(wv, tChamrec.AutS, tChamrec.AutT);
+				if Length(wallsorb)<>walldata[2] then
+					beep(36);
+				fi;
+				nas:=Set(wallsorb, tv->naofwall(tv, tweylS));
+				if Length(nas)<>1 then beep(52616); fi;
+				wallsorbrec:=rec(
+					vects:=wallsorb,
+					nops:=Length(wallsorb), 
+					na:=nas[1]
+				);
+				Add(innwalls, wallsorbrec);
+			od;
+			#
+			Sort(outwalls, wallsorbrecsorter);
+			Sort(innwalls, wallsorbrecsorter);
+			tChamrec.outwalls:=outwalls;
+			tChamrec.innwalls:=innwalls;
+			#
+			orderaut:=Length(tChamrec.AutS)*Length(tChamrec.AutT);
+			tChamrec.orderaut:=orderaut;
+			#
+			Printn("newcham", tChamrec.chamnumb, "__orderaut", tChamrec.orderaut);
+			#Printn("__orderaut", tChamrec.orderaut);
+			#Printn("__outwalls", List(tChamrec.outwalls, torbrec->[torbrec.na, torbrec.nops]));
+			#Printn("__innwalls", List(tChamrec.innwalls, torbrec->[torbrec.na, torbrec.nops]));
+			#
+		else
+			oldtChamrec:=chamrecs[tChamrec.isomwith];
+			Printn("isom cham", tChamrec.chamnumb, "<-", oldtChamrec.chamnumb);
+			oldweylS:=oldtChamrec.weyl*Lrec.proj1;
+			tisom:=tChamrec.by;
+			tgcheck(tisom, oldweylS, tweylS);
+			if "outerwalls" in RecNames(tChamrec) then
+				Printn("____hard check part is wrong !!"); Error();
+				#Printn("____hard check part");
+				outwalls:=[];
+				innwalls:=[];
+				###########
+				#
+				# hard check part
+				#
+				###########
+				for tg in tChamrec.AutS do tgcheck(tg, tweylS, tweylS); od;
+				for tg in tChamrec.AutT do tgcheck(tg, tweylS, tweylS); od;
+				#
+				for rdata in tChamrec.outerwalls do
+					if rdata[1]*GramSX*rdata[1] <>-2 then
+					beep(320);
+					fi;
+					wallsorb:=makeorb(rdata[1], tChamrec.AutS, tChamrec.AutT);
+					if Length(wallsorb)<>rdata[2] then
+						beep(321);
+					fi;
+					nas:=Set(wallsorb, tv->naofwall(tv, tweylS));
+					if Length(nas)<>1 then beep(526622); fi;
+					wallsorbrec:=rec(
+						vects:=wallsorb,
+						nops:=Length(wallsorb), 
+						na:=nas[1]
+					);
+					Add(outwalls,wallsorbrec); 
+				od;
+				#
+				for walldata in tChamrec.innerwalls do
+					wv:=walldata[1];
+					wvdual:=wv*GramSX;
+					if not IsIntVect(wvdual) then beep(322); fi;
+					if  Lgcd(wvdual)<>1 then beep(33); fi;
+					norm:=wv*wvdual;
+					if norm>=0 then beep(324); fi;
+					aa:=(-2)/norm;
+					if  IsInt(aa)  then
+						sqrootaa:=RootInt(aa);
+						if sqrootaa^2=aa and IsIntVect(sqrootaa*wv) then 
+							beep(325);
+						fi;
+					fi;
+					wallsorb:=makeorb(wv, tChamrec.AutS, tChamrec.AutT);
+					if Length(wallsorb)<>walldata[2] then
+						beep(326);
+					fi;
+					nas:=Set(wallsorb, tv->naofwall(tv, tweylS));
+					if Length(nas)<>1 then beep(526633); fi;
+					wallsorbrec:=rec(
+						vects:=wallsorb,
+						nops:=Length(wallsorb), 
+						na:=nas[1]
+					);
+					Add(innwalls, wallsorbrec);
+				od;
+				#
+				Sort(outwalls, wallsorbrecsorter);
+				Sort(innwalls, wallsorbrecsorter);
+				tChamrec.outwalls:=outwalls;
+				tChamrec.innwalls:=innwalls;
+				#
+				#out
+				nanopsdata:=List(tChamrec.outwalls, torbrec->[torbrec.na, torbrec.nops]);
+				oldnanopsdata:=List(oldtChamrec.outwalls, torbrec->[torbrec.na, torbrec.nops]);
+				if nanopsdata<>oldnanopsdata then beep(51266); fi;
+				#
+				#inn
+				nanopsdata:=List(tChamrec.innwalls, torbrec->[torbrec.na, torbrec.nops]);
+				oldnanopsdata:=List(oldtChamrec.innwalls, torbrec->[torbrec.na, torbrec.nops]);
+				if nanopsdata<>oldnanopsdata then beep(52266); fi;
+				#
+				oldoutwallstisom:=[];
+				for wallsorbrec in oldtChamrec.outwalls do
+					wallsorbtisom:=wallsorbrec.vects*tisom;
+					nas:=Set(wallsorbtisom, tv->naofwall(tv, tweylS));
+					if Length(nas)<>1 then beep(526644); fi;
+					if wallsorbrec.na<>nas[1] then beep(616277); fi;
+					wallsorbtisomrec:=rec(
+						vects:=Set(wallsorbtisom),
+						nops:=Length(wallsorbtisom), 
+						na:=nas[1]
+					);
+					Add(oldoutwallstisom, wallsorbtisomrec);
+				od;
+				Sort(oldoutwallstisom, wallsorbrecsorter);
+				if tChamrec.outwalls<>oldoutwallstisom then
+					#Printn("tg IS WRONG 777");
+					beep(777);
+				else
+					#Printn("ok");
+				fi;
+				#
+				oldinnwallstg:=[];
+				for wallsorbrec in oldtChamrec.innwalls do
+					wallsorbtisom:=wallsorbrec.vects*tisom;
+					nas:=Set(wallsorbtisom, tv->naofwall(tv, tweylS));
+					if Length(nas)<>1 then beep(526655); fi;
+					if wallsorbrec.na<>nas[1] then beep(616117); fi;
+					wallsorbtisomrec:=rec(
+						vects:=Set(wallsorbtisom),
+						nops:=Length(wallsorbtisom), 
+						na:=nas[1]
+					);
+					Add(oldinnwallstg, wallsorbtisomrec);
+				od;
+				Sort(oldinnwallstg, wallsorbrecsorter);
+				if tChamrec.innwalls<>oldinnwallstg then
+					Printn("tg IS WRONG 888");
+					beep(888);
+				else
+					#Printn("ok");
+				fi;
+				#
+				orderaut:=(Length(tChamrec.AutS)+1)*(Length(tChamrec.AutT)+1);
+				tChamrec.orderaut:=orderaut;
+				if oldtChamrec.orderaut<>tChamrec.orderaut then
+					beep(999);
+				fi;
+				#
+				#Printn("____orderaut", tChamrec.orderaut);
+				#Printn("__outwalls", List(tChamrec.outwalls, torbrec->[torbrec.na, torbrec.nops]));
+				#Printn("__innwalls", List(tChamrec.innwalls, torbrec->[torbrec.na, torbrec.nops]));
+				#################
+				#
+				# hard check part done
+				#
+				###################
+			fi;
+		fi;
+		#Printn("%%%%%%%%%%%%%%%%%%%%%%");
+	od;
+	#
+	fn:=Filename(dirname, "savechamrecs.txt");
+	PrintTo(fn, "chamrecs:=", chamrecs, ";\n");
+	#
+	Printn("auts and isoms and mtc check done:");
+	#
+	return(true);
+end;
+
+

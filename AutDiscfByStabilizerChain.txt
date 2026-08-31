@@ -1,0 +1,88 @@
+#Read("AutDiscfByStabilizerChain.txt");
+
+
+AutDiscfByStabilizerChain:=function(inibiis, bigmat)
+  #
+  local beep, nn, targetmat, ii, jj, orbits, endmark, task, autrec, examples,
+  yy, kk, tv;
+  #
+  beep:=function(beepnumb)
+    localbeep("AutDiscfByStabilizerChain", beepnumb);Error();
+  end;
+  #
+  nn:=Length(inibiis);
+  if bigmat<>TransposedMat(bigmat) then beep(68215873); fi;
+  targetmat:=List(inibiis, ii->List(inibiis, jj->bigmat[ii][jj]));
+  orbits:=List([1..nn], ii->[]);
+  examples:=List([1..nn], ii->[]);
+  endmark:="end";
+  #
+  task:=function(piis, leng)
+    #
+    local tmm, xx,mm,targetv, kk, newpii, newpiis, rmm, pkk;
+    #
+    if leng=nn then
+      tmm:=0;
+      for xx in piis do
+        if xx<>inibiis[tmm+1] then
+          break; #from for xx in piis do
+        else
+          tmm:=tmm+1;
+        fi;
+      od;
+      mm:=tmm;
+      for kk in [1..mm+1] do
+        if kk<=nn then
+          pkk:=piis[kk];
+          if not pkk in orbits[kk] then
+            Add(orbits[kk], pkk);
+            Add(examples[kk], List(piis));
+          fi;
+        elif kk=nn+1 then
+          if piis<>inibiis then beep(522457); fi;
+        else
+          beep(6761871);
+        fi;
+      od;
+      #
+      return(mm);
+      #
+    else #if leng=nn then
+      #
+      targetv:=List([1..leng+1], kk->targetmat[leng+1][kk]);
+      newpii:=0;
+      for tv in bigmat do
+        newpii:=newpii+1;
+        newpiis:=CopyAdd(piis, newpii);
+        if targetv=List(newpiis, kk->tv[kk]) then
+          rmm:=task(newpiis, leng+1);
+          if rmm<>endmark and rmm<leng then
+            return(rmm);
+          fi;
+        fi;
+      od;
+    fi;
+    #
+    return(endmark);
+  end;#if leng=nn then
+  #
+  task([], 0);
+  #
+  for kk in [1..nn] do
+    if not IsDuplicateFree(orbits[kk]) then beep(698621); fi;
+    if orbits[kk]<>List(examples[kk], yy->yy[kk]) then
+      beep(8758751);
+    fi;
+  od;
+  #
+  autrec:=rec(
+    orbits:=orbits,
+    examples:=examples,
+    order:=Product(List(orbits, Length))
+  );
+  #
+  return(autrec);
+end;
+
+
+#############3

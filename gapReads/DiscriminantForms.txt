@@ -1,0 +1,2209 @@
+modDiscg:=function(vec, discg)
+	local ii;
+	for ii in [1..Length(discg)] do
+		vec[ii]:=vec[ii] mod discg[ii];
+	od;
+	return(vec); # even though this function is an operation, we need return.
+end;
+
+
+CopymodDiscg:=function(vec, discg)
+	local ii, newvec;
+	newvec:=[];
+	for ii in [1..Length(discg)] do
+		Add(newvec, vec[ii] mod discg[ii]);
+	od;
+	return(newvec);
+end;
+
+MatmodDiscg:=function(H, discg)
+	Apply(H, vec->modDiscg(vec, discg));
+end;
+
+CopyMatmodDiscg:=function(H, discg)
+	return(List(H, vec->CopymodDiscg(vec, discg)));
+end;
+
+NormalDiscf:=function(discf)
+	local n, ii, jj;
+	if discf<>[[]] then
+		n:=Length(discf);
+		for ii in [1..n] do
+			for jj in [1..n] do
+				if ii<>jj then
+					discf[ii][jj]:=modZ(discf[ii][jj]);
+				else
+					discf[ii][jj]:=modtZ(discf[ii][jj]);
+				fi;
+			od;
+		od;
+	fi;
+end;
+
+
+
+CopyNormalDiscf:=function(discf)
+	local n, ii, jj, newdiscf, v;
+	if discf=[[]] then return([[]]); fi;
+	if discf=[] then return([[]]); fi;
+	n:=Length(discf);
+	newdiscf:=[];
+	for ii in [1..n] do
+		v:=[];
+		for jj in [1..n] do
+			if ii<>jj then
+				Add(v, modZ(discf[ii][jj]));
+			else
+				Add(v, modtZ(discf[ii][jj]));
+			fi;
+		od;
+		Add(newdiscf, v);
+	od;
+	return(newdiscf);
+end;
+
+
+
+#######################
+
+
+DiscriminantForm:=function(GramMat)
+	#
+	# the output is the record,
+	# with names
+	# tdiscg, tdiscf, reps_dual, proj_dual, reps, proj.
+	#
+	# tdiscg is the discrinant group of an even lattice GramMat;
+	# it is a list of integers.
+	# tdiscf is the discriminant form.
+	#
+	# xx*reps_dual gives a representative (modulo GramMat) of an element xx of tdiscg
+	# written in the dual basis of GramMat:
+	# yy*proj_dual gives the element corresponding to yy in dual of GramMat
+	# (written in the dual basis of GramMat):
+	#
+	# reps and proj are non-dual versions of reps and proj.
+	#
+	local tdiscg, tdiscf, treps_dual, invM, DF, D, F, i, n, d, is, Finv,
+	subsfv, fv, tproj_dual, discrec, treps, newtreps, newv, v, a;
+	#
+	if AbsInt(Determinant(GramMat))=1 then
+		discrec:=rec(
+			discg:=[],
+			discf:=[[]],
+			reps_dual:=[],
+			proj_dual:=[[]],
+			reps:=[],
+			proj:=[[]]
+		);
+		MakeImmutable(discrec);
+		return(discrec);
+	fi;
+	n:=Length(GramMat);
+	invM:=Inverse(GramMat);
+	DF:=SmithNormalFormIntegerMatTransforms(GramMat);
+	D:=DF.normal;
+	Finv:=DF.coltrans;
+	F:=Inverse(DF.coltrans);
+	tdiscg:=[];
+	treps_dual:=[];
+	is:=[];
+	for  i in [1..n] do
+		d:=D[i][i];
+		if d>1 then
+			Add(tdiscg, d);
+			Add(treps_dual, F[i]);
+			Add(is, i);
+		elif d<=0 then
+			Printn("wrong in DiscriminantForm ", GramMat);
+		fi;
+	od;
+	treps:=treps_dual*invM;
+	newtreps:=[];
+	for v in treps do
+		newv:=[];
+		for a in v do
+			Add(newv, modZ(a));
+		od;
+		Add(newtreps, newv);
+	od;
+	treps:=newtreps;
+	treps_dual:=treps*GramMat;
+	#
+	tdiscf:=CopyNormalDiscf(TMTTmult(treps_dual, invM));
+	#
+	tproj_dual:=[];
+	for fv in Finv do
+		#subsfv:=Map(j->fv[j], is);
+		subsfv:=List(is, j->fv[j]);
+		Add(tproj_dual, subsfv);
+	od;
+	Apply(tproj_dual, tv->modDiscg(tv, tdiscg));
+	#
+	discrec:=rec(
+		discg:=tdiscg,
+		discf:=tdiscf,
+		reps_dual:=treps_dual,
+		proj_dual:=tproj_dual,
+		reps:=treps_dual*invM,
+		proj:=GramMat*tproj_dual #this should not be reduced mod discg,
+		#because it operates on vectors of RATIONAL coefficients.
+	);
+	#
+	#
+	#
+	return(discrec);
+end;
+
+##### FAG
+
+OrderOfElmInFAG:=function(g, A)
+	local torder, ii, gii;
+	torder:=1;
+	for ii in [1..Length(g)] do
+		gii:=g[ii];
+		if gii<>0 then
+			torder:=LcmInt(torder, LcmInt(gii, A[ii])/gii);
+		fi;
+	od;
+	return(torder);
+end;
+
+
+
+
+
+
+OrderAutFAG:=function(tA)
+	#
+	# tA is a finite abelian group
+	# represented as a list of integers>1.
+	#([a,b,c] represents Z/aZ times Z/bZ times Z/cZ.)
+	#
+	# A is a finite abelian group isom to tA
+	# represented as a list of integers>1
+	# that satisfies the successive-divisibility condition.
+	#([a,b,c] satsifies a|b and b|c.
+	# By the successive-divisibility condition, the representation is unique.)
+	#
+	# This function returns the order of Aut(A).
+	#
+	local A, tS, cardA, ordautA, pdcardA, pordautA, p, nu, nus,ells, ii, jj, te, gammas, N, Snus;
+	#
+	tS:=SmithNormalFormIntegerMat(DiagonalMat(tA));
+	A:=[];
+	for ii in [1..Length(tA)] do
+		if tS[ii][ii]<>1 then Add(A, tS[ii][ii]); fi;
+	od;
+	#
+	cardA:=Product(A);
+	pdcardA:=PrimeDivisors(cardA);
+	ordautA:=1;
+	for p in pdcardA do
+		#nus:=Map(xx->Ordp(xx, p), A);
+		nus:=List(A, xx->Ordp(xx, p));
+		if not IsSortedList(nus) then
+			Printn("wrong_inpur_in_orderAutFAG", A, p, nus);
+			Error();
+		fi;
+		#Snus:=ToSet(nus);
+		Snus:=Set(nus);
+		#ells:=Map(xx->NumbOccur(xx, nus), Snus);
+		ells:=List(Snus, xx->NumbOccur(xx, nus));
+		N:=Length(Snus);
+		te:=0;
+		for ii in [1..N] do
+			for jj in [1..ii-1] do
+				te:=te+Snus[jj]*ells[ii]*ells[jj];
+			od;
+			for jj in [ii..N] do
+				te:=te+Snus[ii]*ells[ii]*ells[jj];
+			od;
+		od;
+		gammas:=[];
+		for ii in [1..N] do
+			if Snus[ii]>0 then
+				#gammas[ii]:=Product(Map(lambda->1-p^(-lambda), [1..ells[ii]]));
+				gammas[ii]:=Product(List([1..ells[ii]], lambda->1-p^(-lambda)));
+			else
+				gammas[ii]:=1;
+			fi;
+		od;
+		pordautA:=p^te*Product(gammas);
+		#Printn(p, nus, ells,  pordautA);
+		ordautA:=ordautA*pordautA;
+	od;
+	#
+	return(ordautA);
+end;
+
+BaseIntFAG:=function(vs, discg)
+	#
+	# The basis of the pull-back of <vs> subset Z^n/discg by Z^n->Z^n/discg
+	#
+	local M;
+	M:=DiagonalMat(discg);
+	Append(M, vs);
+	return(BaseIntMat(M));
+end;
+
+###### Aut and Isom
+
+AutFAG:=function(tA)
+	#
+	# tA is a finite abelian group
+	# represented as a list of integers>1.
+	#([a,b,c] represents Z/aZ times Z/bZ times Z/cZ.)
+	#
+	# A is a finite abelian group
+	# represented as a list of integers>1
+	# that satisfes the successive-divisibility condition.
+	#([a,b,c] represents Z/aZ times Z/bZ times Z/cZ.
+	# [a,b,c] satsifies a|b and b|c.
+	# By the successive-divisibility condition, the representation is unique.)
+	#
+	# This function returns the list of all automorphisms M of A.
+	# Each M is represented as a square matrix of size Length(A);
+	# x mapsto x*M is the automorphism.
+	#
+	local A, tS, ii, n, auts, vs, complistss, complists, kk, aakk,aa, findjob, bb;
+	#counter, theorder, Dvs, IZ, DA, In; # for check
+	#
+	tS:=SmithNormalFormIntegerMat(DiagonalMat(tA));
+	A:=[];
+	for ii in [1..Length(tA)] do
+		if tS[ii][ii]<>1 then Add(A, tS[ii][ii]); fi;
+	od;
+	#
+	n:=Length(A);
+	if n=0 then
+		return(["id"]);
+	fi;
+	auts:=[];
+	vs:=NullMat(n,n); #holder
+	#
+	complistss:=[];
+	#
+	# complistss[kk] is the list of components of elements g in A such that A[kk]*g=0.
+	#
+	for kk in [1..n] do
+		complists:=[];
+		aakk:=A[kk];
+		for aa in A do
+			if aakk mod aa=0 then
+				Add(complists, [0..aa-1]);
+			elif aa mod aakk=0 then
+				bb:=aa/aakk;
+				#Add(complists, Map(x->bb*x, [0..aakk-1]));
+				Add(complists, List([0..aakk-1], x->bb*x));
+			else
+				Printn("wrong input in AutFAG", A);
+			fi;
+		od;
+		Add(complistss, complists);
+	od;
+	#
+	#
+	# the following lines are for checks
+	#
+	#theorder:=OrderAutFAG(A);
+	#counter:=0;
+	#In:=IdentityMat(n);
+	#IZ:=StackMats(In, NullMat(n,n));
+	#DA:=DiagonalMat(A);
+	#
+	findjob:=function(mm, T, D)
+		#
+		# When this function is called,
+		# the image v[ii] of the ii-th generator
+		# of A has been found for ii=1..mm.
+		# These images generate a subgroup isomorphic to [A[1], .., A[mm]].
+		# This function finds the image v[mm+1] of the (mm+1)-st generator of A,
+		# which generate, together with v[1], .., v[mm],
+		# a subgroup isomorphic to [A[1], .., A[mm], A[mm+1]].
+		#
+		# The matrix M=[v[1], .., v[mm]]
+		# has been transformed to the Smith normal form D by S*M*T=D.
+		# Hence D is SNF with diagonal entries
+		# A[1], .., A[mm].
+		#
+		local iter, newv, DD,  TT, SNFrec, newD, fflag, jj,  newT, aamm;
+		#
+		if mm=n then
+			#if D<>In then Printn("wrong1", D);Error(); fi;
+			#if S*StackMats(DA, vs)*T<>IZ then Printn("wrong2", D);Error(); fi;
+			#if SmithNormalFormIntegerMat(StackMats(DA, vs))<>IZ then
+			#	Printn("wrong3", vs);Error();
+			#fi;
+			AddCopy(auts, vs);
+			#counter:=counter+1;
+		else
+			#
+			aamm:=A[mm+1];
+			#
+			iter:=Iterator(Cartesian(complistss[mm+1]));
+			for newv in iter do
+				if OrderOfElmInFAG(newv, A)=aamm then
+					DD:=CopyMat(D); DD[n+1]:=newv*T;
+					#SS:=DiagMats([S, [[1]]]);
+					#TT:=StructuralCopy(T);
+					SNFrec:=SmithNormalFormIntegerMatTransforms(DD);
+					newD:=List([1..n], xx->SNFrec.normal[xx]);
+					fflag:=true;
+					if newD[mm+1][mm+1]<>1 then fflag:=false;
+					else
+						for jj in [mm+2..n] do
+							if newD[jj][jj]<>A[jj] then fflag:=false; break; fi;
+						od;
+						#Printn("_________", mm, newv, DD, newD, fflag);
+					fi;
+					if fflag then
+						#newS:=(SNFrec.rowtrans)*SS;
+						newT:=T*(SNFrec.coltrans);
+						vs[mm+1]:=newv;
+						findjob(mm+1, newT, newD);
+					fi;
+				fi;
+			od;
+
+		fi;
+	end;
+	#
+	findjob(0,  IdentityMat(n), DiagonalMat(A));
+	#
+	#if counter<>theorder then
+	#	Printn("wrong", A, counter, theorder); Error();
+	#fi;
+	#
+	return(auts);
+end;
+
+InverseAutFAG:=function(tg, discg)
+	local n, hnfrec, tginv;
+	n:=Length(discg);
+	hnfrec:=HermiteNormalFormIntegerMatTransform(StackMats(tg, DiagonalMat(discg)));
+	tginv:=SubMatrix(hnfrec.rowtrans, [1..n], [1..n]);
+	MatmodDiscg(tginv, discg);
+	return(tginv);
+end;
+
+###################
+
+IsomFQF:=function(discf1, discf2)
+	#
+	# A finite discriminant form qF represented as a pair [A, F]
+	# of a inite abelian group A and a symmetric matrix F of size Length(A)
+	# that has the normal form
+	#(diagonals are non-negative <2 and off-diagonals are non-negative <1).
+	# The finite abelian group A is
+	# represented as a list of integers>1
+	# that satisfes the successive-divisibility condition.
+	#([a,b,c] represents Z/aZ times Z/bZ times Z/cZ.
+	# [a,b,c] satsifies a|b and b|c.
+	# By the successive-divisibility condition, the representation is unique.)
+	# Let l be the length of A,  and let e[1], ..., e[l] be
+	# the standard generators of A.
+	# The i-th diagonal entry of F represents  qF(e_i, e_i) in Q/2Z,
+	# and the off-diagonal entry at (i, j) represents  bF(e_i, e_j) in Q/Z,
+	# where bF(x, y)=(qF(x+y)-qF(x)-qF(y))/2.
+	#
+	# This function returns the list of all isomorphisms from discf1 to discf2.
+	# Each M is represented as a square matrix of size Length(A);
+	# x mapsto x*M is the isomorphism.
+	#
+	local A, n, isoms, vs, complistss, complists, kk, aakk,aa,
+	findjob, bb, F1, F2, vsF2, ii;
+	#
+	#
+	#
+	if discf1[1]<>discf2[1] then return([]); fi;
+	A:=discf1[1];
+	F1:=discf1[2];
+	F2:=discf2[2];
+	n:=Length(A);
+	#
+	for ii in [1..n-1] do
+		if A[ii+1] mod A[ii]<>0 then
+			Printn("wrong input in IsomFQF:");
+			Printn("successive-divisibility condition", A);
+			Error();
+		fi;
+	od;
+	#
+	if n=0 then
+		return(["id"]);
+	fi;
+	isoms:=[];
+	vs:=NullMat(n,n); #holder
+	vsF2:=NullMat(n,n); #holder
+	#
+	complistss:=[];
+	#
+	# complistss[kk] is the list of components of
+	# elements g in the FAG such that A[kk]*g=0.
+	#
+	# CartesianProd(complistss[kk]) generates
+	# all elements g of the FAG such that A[kk]*g=0.
+	#
+	for kk in [1..n] do
+		complists:=[];
+		aakk:=A[kk];
+		for aa in A do
+			if aakk mod aa=0 then
+				Add(complists, [0..aa-1]);
+			elif aa mod aakk=0 then
+				bb:=aa/aakk;
+				Add(complists, List([0..aakk-1], x->bb*x));
+			else
+				Printn("wrong input in IsomFQF", A);
+			fi;
+		od;
+		Add(complistss, complists);
+	od;
+	#
+	#
+	#
+	findjob:=function(mm, T, D)
+		#
+		# When this function is called,
+		# the image v[ii] of the ii-th generator
+		# of A has been found for ii=1..mm.
+		# These images generate a subgroup isomorphic to
+		# the subgroup generated by A[1], .., A[mm],
+		# and they satisfy
+		# F1[ii][ii]= v[ii]*F2*v[ii] mod 2Z for ii=1..mm,
+		# and F1[ii][jj]= v[ii]*F2*v[jj] mod 2Z for 1<=ii<jj<=mm
+		# This function "findjob" finds the image v[mm+1] of
+		# the (mm+1)-st generator of A,
+		# which generate, together with v[1], .., v[mm],
+		# a subgroup isomorphic to gen(A[1], .., A[mm], A[mm+1]),
+		# and extend the compatibilily with F1 and F2;
+		# namely, F1[mm+1][mm+1]= v[mm+1]*F2*v[mm+1] mod 2Z,
+		# and F1[ii][mm+1]= v[ii]*F2*v[mm+1] mod Z for 1<=ii<=mm.
+		#
+		# D is the SNF of the quotient of A by the sunbgroup
+		# generated by v[1], .., v[mm],
+		# and T is the transform from the original basis to
+		# the current basis containing v[1], .., v[mm].
+		#
+		#
+		local iter, newv, DD,  TT, SNFrec, newD, fflag, jj,  newT, aamm, fflag2, ii;
+		#
+		if mm=n then
+			#
+			#if CopyNormalDiscf(TMTTmult(vs, F2))<>F1 then
+			#	Printn("wrong_in_IsomFQF", discf1, discf2); Error();
+			#fi;
+			#
+			Add(isoms, CopyMat(vs));
+		else
+			#
+			aamm:=A[mm+1];
+			#
+			iter:=Iterator(Cartesian(complistss[mm+1]));
+			for newv in iter do
+				if OrderOfElmInFAG(newv, A)=aamm then
+					DD:=CopyMat(D); DD[n+1]:=newv*T;
+					SNFrec:=SmithNormalFormIntegerMatTransforms(DD);
+					newD:=List([1..n], xx->SNFrec.normal[xx]);
+					fflag:=true;
+					if newD[mm+1][mm+1]<>1 then fflag:=false;
+					else
+						for jj in [mm+2..n] do
+							if newD[jj][jj]<>A[jj] then fflag:=false; break; fi;
+						od;
+					fi;
+					if fflag and modtZ(newv*F2*newv -F1[mm+1][mm+1])=0 then
+						fflag2:=true;
+						for ii in [1..mm] do
+							if modZ(vsF2[ii]*newv-F1[mm+1][ii])<>0 then
+								fflag2:=false; break;
+							fi;
+						od;
+						if fflag2 then
+							newT:=T*(SNFrec.coltrans);
+							vs[mm+1]:=newv;
+							vsF2[mm+1]:=newv*F2;
+							findjob(mm+1, newT, newD);
+						fi;
+					fi;
+				fi;
+			od;
+
+		fi;
+	end;
+	#
+	findjob(0,  IdentityMat(n), DiagonalMat(A));
+	#
+	return(isoms);
+end;
+
+AutFQF:=function(discf)
+	return(IsomFQF(discf, discf));
+end;
+
+##########################
+
+
+
+#############
+
+
+OLtoOqL:=function(tg, discrec)
+	return(CopyMatmodDiscg(discrec.reps * tg * discrec.proj, discrec.discg));
+end;
+
+OLdualtoOqL:=function(tgdual, discrec)
+	return(CopyMatmodDiscg(discrec.reps_dual * tgdual * discrec.proj_dual, discrec.discg));
+end;
+
+##################
+
+IsotropicVectsDiscrec:=function(discrec)
+	local discg, discf, iter, isots, tv;
+	discg:=discrec.discg;
+	if discg=[] then return([]); fi;
+	discf:=discrec.discf;
+	#iter:=IteratorOfCartesianProduct(Map(xx->[0..xx-1], discg));
+	iter:=IteratorOfCartesianProduct(List(discg, xx->[0..xx-1]));
+	isots:=[];
+	for tv in iter do
+		if modtZ(tv*discf*tv)=0 then
+			Add(isots, tv);
+		fi;
+	od;
+	return(isots);
+end;
+
+IsotropicSubspacesDiscrec:=function(discrec)
+	local discg, discf, isots, isotsubspaces, fjob, discn;
+	discg:=discrec.discg;
+	discf:=discrec.discf;
+	discn:=Product(discg);
+	isots:=IsotropicVectsDiscrec(discrec);
+	fjob:=function(dualvs, tbasis, dettbasis)
+		local tv, newB;
+		if dettbasis^2>discn then
+			for tv in isots do
+				if dualvs=[] or IsIntVect(dualvs*tv) then
+					Add(tbasis, tv);
+					newB:=CopyMat(BaseIntMat(tbasis));
+					if DeterminantIntMat(newB)<dettbasis then
+						AddCopy(isotsubspaces, newB);
+						Add(dualvs, discf*tv);
+						fjob(CopyMat(dualvs), newB, DeterminantIntMat(newB));
+						Remove(dualvs);
+					fi;
+					Remove(tbasis);
+				fi;
+			od;
+		fi;
+	end;
+	isotsubspaces:=[DiagonalMat(discg)];
+	fjob([], DiagonalMat(discg), discn);
+	return(isotsubspaces);
+end;
+
+
+
+################
+
+checkDiscriminantForm:=function(GramMat, discrec, trialnumb)
+	#
+	local dualGram,  n,
+	ii, jj, leng, a, b, Ileng, In, rp, bbarvbarw, bvw, normbarv, normv, diff,
+	discg, discf, reps, reps_dual, proj, proj_dual, errp, v, w, barv, barw;
+	#
+	#
+	errp:=function(numb)
+		Printn("wrong checkDiscriminantForm", numb);
+		Error();
+	end;
+	#
+	n:=Length(GramMat);
+	dualGram:=InverseMat(GramMat);
+	discg:=discrec.discg;
+	discf:=discrec.discf;
+	reps:=discrec.reps;
+	reps_dual:=discrec.reps_dual;
+	proj:=discrec.proj;
+	proj_dual:=discrec.proj_dual;
+	#
+	if AbsInt(Determinant(GramMat))=1 then
+		if discg<>[] then errp(-1); fi;
+		if discf<>[[]] then errp(-2); fi;
+		if proj<> [ [  ] ] then errp(-3); fi;
+		if proj_dual <> [ [  ] ] then errp(-4); fi;
+		if reps <> [  ]  then errp(-5); fi;
+		if reps_dual <> [  ]  then errp(-6); fi;
+		return(true);
+	fi;
+	#
+
+	leng:=Length(discg);
+	#
+	for ii in [1..leng] do
+		for jj in [ii+1..leng] do
+			a:=discf[ii][jj];
+			b:=discf[jj][ii];
+			if a<>b then errp(1); fi;
+			if ii<>jj then
+				if a<0 or a>=1 then errp(21); fi;
+			else
+				if a<0 or a>=2 then errp(22); fi;
+			fi;
+		od;
+	od;
+	#
+	In:=IdentityMat(n);
+	Ileng:=IdentityMat(leng);
+	#
+	rp:=List(reps*proj, xx->CopymodDiscg(xx, discg));
+	if rp<>Ileng then errp(41); fi;
+	rp:=List(reps_dual*proj_dual, xx->CopymodDiscg(xx, discg));
+	if rp<>Ileng then errp(42); fi;
+	#
+	if not IsIntMat(proj*reps-In) then errp(51); fi;
+	if not IsIntMat((proj_dual*reps_dual-In)*dualGram) then errp(52); fi;
+	#
+	for ii in [1..trialnumb] do
+		v:=RandomVect(n);
+		normv:=v*dualGram*v;
+		barv:=v*proj_dual;
+		normbarv:=barv*discf*barv;
+		diff:=normv-normbarv;
+		if not (IsInt(diff) and diff mod 2=0) then
+			Printn(v, diff);
+			errp(61);
+		fi;
+		for jj in [1..trialnumb] do
+			w:=RandomVect(n);
+			bvw:=w*dualGram*v;
+			barw:=w*proj_dual;
+			bbarvbarw:=barw*discf*barv;
+			diff:=bvw-bbarvbarw;
+			if not (IsInt(diff)) then
+				Printn(v, w, diff);
+				errp(62);
+			fi;
+		od;
+	od;
+	#
+	for ii in [1..trialnumb] do
+		barv:=RandomVect(leng);
+		normbarv:=barv*discf*barv;
+		v:=barv*reps_dual;
+		normv:=v*dualGram*v;
+		diff:=normv-normbarv;
+		if not (IsInt(diff) and diff mod 2=0) then
+			Printn(v, diff);
+			errp(71);
+		fi;
+		for jj in [1..trialnumb] do
+			barw:=RandomVect(leng);
+			w:=barw*reps_dual;
+			bbarvbarw:=barw*discf*barv;
+			bvw:=w*dualGram*v;
+			diff:=bvw-bbarvbarw;
+			if not (IsInt(diff)) then
+				Printn(v, w, diff);
+				errp(72);
+			fi;
+		od;
+	od;
+	#
+	return true;
+end;
+
+##############
+# Added 2016 Sep 01
+###################
+
+AnIsomFQF:=function(discf1, discf2)
+	#
+	# A finite discriminant form qF represented as a pair [A, F]
+	# of a inite abelian group and a symmetric matrix F of size Length(A)
+	# that has the normal form (diagonals are non-negative <2 and off-diagonals are non-negative <1).
+	# A is a finite abelian group
+	# represented as a list of integers>1
+	# that satisfes the successive-divisibility condition.
+	#([a,b,c] represents Z/aZ times Z/bZ times Z/cZ.
+	# [a,b,c] satsifies a|b and b|c.
+	# By the successive-divisibility condition, the representation is unique.)
+	# Let l be the length of A,  and let e[1], ..., e[l] be
+	# the standard generators of A.
+	# The i-th diagonal entry of F represents  qF(e_i, e_i) in Q/2Z,
+	# and the off-diagonal entry at (i, j) represents  bF(e_i, e_j) in Q/Z,
+	# where bF(x, y)=(qF(x+y)-qF(x)-qF(y))/2.
+	#
+	# This function returns an isomorphism from discf1 to discf2 if it exists.
+	# An isom  M is represented as a square matrix of size Length(A);
+	# x mapsto x*M is the isomorphism.
+	# If no such isomorphism exists, it returns false.
+	#
+	local A, n, isoms, vs, complistss, complists, kk, aakk,aa, findjob, bb,
+	F1, F2, vsF2, findflag;
+	#counter, theorder, Dvs, IZ, DA, In; # for check
+	#
+	#
+	if discf1[1]<>discf2[1] then return(fail); fi;
+	A:=discf1[1];
+	F1:=discf1[2];
+	F2:=discf2[2];
+	n:=Length(A);
+	if n=0 then
+		return(["id"]);
+	fi;
+	if F1=F2 then
+		return(IdentityMat(n));
+	fi;
+	isoms:=[];
+	vs:=NullMat(n,n); #holder
+	vsF2:=NullMat(n,n); #holder
+	#
+	complistss:=[];
+	#
+	# complistss[kk] is the list of components of elements g in A such that A[kk]*g=0.
+	#
+	for kk in [1..n] do
+		complists:=[];
+		aakk:=A[kk];
+		for aa in A do
+			if aakk mod aa=0 then
+				Add(complists, [0..aa-1]);
+			elif aa mod aakk=0 then
+				bb:=aa/aakk;
+				#Add(complists, Map(x->bb*x, [0..aakk-1]));
+				Add(complists, List([0..aakk-1], x->bb*x));
+			else
+				Printn("wrong input in IsomFQF", A);
+			fi;
+		od;
+		Add(complistss, complists);
+	od;
+	#
+	#
+	findflag:=false;
+	#
+	findjob:=function(mm, T, D)
+		#
+		# When this function is called,
+		# the image v[ii] of the ii-th generator
+		# of A has been found for ii=1..mm.
+		# These images generate a subgroup isomorphic to [A[1], .., A[mm]],
+		# and satisfies F1[ii][ii]= v[ii]*F2*v[ii] mod 2Z for ii=1..mm,
+		# and F1[ii][jj]= v[ii]*F2*v[jj] mod 2Z for 1<=ii<jj<=mm
+		# This function finds the image v[mm+1] of the (mm+1)-st generator of A,
+		# which generate, together with v[1], .., v[mm],
+		# a subgroup isomorphic to [A[1], .., A[mm], A[mm+1]],
+		# and extend the compatibilily with F1 and F2;
+		# namely, F1[mm+1][mm+1]= v[mm+1]*F2*v[mm+1] mod 2Z,
+		# and F1[ii][mm+1]= v[ii]*F2*v[mm+1] mod Z for 1<=ii<=mm.
+		#
+		# The matrix M=[v[1], .., v[mm]]
+		# has been transformed to the Smith normal form D by S*M*T=D.
+		# Hence D is SNF with diagonal entries
+		# A[1], .., A[mm].
+		#
+		local iter, newv, DD,  TT, SNFrec, newD, fflag, jj,  newT, aamm, fflag2, ii;
+		#
+		if findflag then return(); fi;
+		#
+		if mm=n then
+			#
+			if CopyNormalDiscf(vsF2*TransposedMatImmutable(vs))<>F1 then
+				Printn("wrong_in_AnIsomFQF", discf1, discf2); Error();
+			fi;
+			#
+			findflag:=true;
+			AddCopy(isoms, vs);
+		else
+			#
+			aamm:=A[mm+1];
+			#
+			iter:=Iterator(Cartesian(complistss[mm+1]));
+			for newv in iter do
+				if OrderOfElmInFAG(newv, A)=aamm then
+					DD:=CopyMat(D); DD[n+1]:=newv*T;
+					SNFrec:=SmithNormalFormIntegerMatTransforms(DD);
+					newD:=List([1..n], xx->SNFrec.normal[xx]);
+					fflag:=true;
+					if newD[mm+1][mm+1]<>1 then fflag:=false;
+					else
+						for jj in [mm+2..n] do
+							if newD[jj][jj]<>A[jj] then fflag:=false; break; fi;
+						od;
+					fi;
+					if fflag and modtZ(newv*F2*newv -F1[mm+1][mm+1])=0 then
+						fflag2:=true;
+						for ii in [1..mm] do
+							if modZ(vsF2[ii]*newv-F1[mm+1][ii])<>0 then
+								fflag2:=false; break;
+							fi;
+						od;
+						if fflag2 then
+							newT:=T*(SNFrec.coltrans);
+							vs[mm+1]:=newv;
+							vsF2[mm+1]:=newv*F2;
+							findjob(mm+1, newT, newD);
+						fi;
+					fi;
+				fi;
+			od;
+
+		fi;
+	end;
+	#
+	findjob(0,  IdentityMat(n), DiagonalMat(A));
+	#
+	#if counter<>theorder then
+	#	Printn("wrong", A, counter, theorder); Error();
+	#fi;
+	#
+	if isoms=[] then return(fail);
+	else return(isoms[1]);
+	fi;
+end;
+
+#####################
+
+
+NormalFAG:= function(A)
+	#
+	# NormalFAG means the representation of finite abelian group
+	# that satisfies the successive-divisibility condision.
+	#
+	local leng, oldD, snf, D, tT, Tinv,
+	newD, told2new, old2new, new2old, ii;
+	#
+	leng:=Length(A);
+	oldD:=DiagonalMats(List(A, aa->[[aa]]));
+	snf:=SmithNormalFormIntegerMatTransforms(oldD);
+	D:=snf.normal;
+	Tinv:=InverseMat(snf.coltrans);
+	tT:=TransposedMat(snf.coltrans);
+	newD:=[];
+	told2new:=[];
+	new2old:=[];
+	for ii in [1..leng] do
+		if D[ii][ii]>1 then
+			Add(newD, D[ii][ii]);
+			Add(new2old, Tinv[ii]);
+			Add(told2new, tT[ii]);
+		fi;
+	od;
+	old2new:=TransposedMatMutable(told2new);
+	MatmodDiscg(new2old, A);
+	MatmodDiscg(old2new, newD);
+	return([newD, old2new, new2old]);
+end;
+
+NormalFQF:= function(discgf)
+	#
+	#
+	local nfag, old2new, new2old, olddiscf, newdiscf;
+	#
+	nfag:=NormalFAG(discgf[1]);
+	old2new:=nfag[2];
+	new2old:=nfag[3];
+	olddiscf:=discgf[2];
+	newdiscf:=CopyNormalDiscf(TMTTmult(new2old, olddiscf));
+	return([[nfag[1], newdiscf], old2new, new2old]);
+end;
+
+NormalDiscrec:= function(discrec)
+	#
+	#
+	local nfag, old2new, new2old, olddiscg, olddiscf, newdiscf,
+	newdiscg, newproj_dual, newproj, newdiscrec;
+	#
+	olddiscg:=discrec.discg;
+	if olddiscg=[] then
+		newdiscrec:=rec(
+			discg:=[],
+			discf:=[[]],
+			reps_dual:=[],
+			proj_dual:=[[]],
+			reps:=[],
+			proj:=[[]]
+		);
+		return([newdiscrec, [], []]);
+	fi;
+	olddiscf:=discrec.discf;
+	nfag:=NormalFAG(olddiscg);
+	newdiscg:=nfag[1];
+	old2new:=nfag[2];
+	new2old:=nfag[3];
+	newdiscf:=CopyNormalDiscf(TMTTmult(new2old, olddiscf));
+	newproj_dual:=(discrec.proj_dual)*old2new;
+	MatmodDiscg(newproj_dual, newdiscg);
+	newproj:=(discrec.proj)*old2new;
+	#
+	#MatmodDiscg(newproj, newdiscg); SINCE newproj will be applied to rational vectors
+	# THIS IS VERY WRONG!
+	#
+	newdiscrec:=rec(
+		discg:=nfag[1],
+		discf:=newdiscf,
+		reps_dual:=new2old*(discrec.reps_dual),
+		proj_dual:=newproj_dual,
+		reps:=new2old*(discrec.reps),
+		proj:=newproj
+	);
+	return([newdiscrec, old2new, new2old]);
+end;
+
+
+############################
+
+
+GeneralizedOrderAutFAG:=function(tA)
+	return(OrderAutFAG(NormalFAG(tA)[1]));
+end;
+
+GeneralizedInverseIsomFAG:=function(fag1, fag2, tg)
+	local leng1, leng2, tD2, Fag2, hnf, tginv, aa;
+	leng1:=Length(fag1);
+	leng2:=Length(fag2);
+	tD2:=DiagonalMats(List(fag2, aa->[[aa]]));
+	Fag2:=StackMats(tg, tD2);
+	hnf:=HermiteNormalFormIntegerMatTransform(Fag2);
+	tginv:=SubMatrix(hnf.rowtrans, [1..leng2], [1..leng1]);
+	tginv:=CopyMatmodDiscg(tginv, fag1);
+	return(tginv);
+end;
+
+GeneralizedIsomFQF:=function(discf1, discf2)
+	#
+	local ndiscf1, ndiscf2, isoms, old2new1, new2old2, olddiscg2, trans;
+	#
+	ndiscf1:=NormalFQF(discf1);
+	ndiscf2:=NormalFQF(discf2);
+	isoms:=IsomFQF(ndiscf1[1], ndiscf2[1]);
+	old2new1:=ndiscf1[2];
+	new2old2:=ndiscf2[3];
+	olddiscg2:=discf2[1];
+	trans:=function(tg)
+		return(CopyMatmodDiscg(old2new1*tg*new2old2, olddiscg2));
+	end;
+	return(List(isoms, trans));
+end;
+
+GeneralizedAnIsomFQF:=function(discf1, discf2)
+	#
+	local ndiscf1, ndiscf2, old2new1, new2old2, olddiscg2, anisom;
+	#
+	ndiscf1:=NormalFQF(discf1);
+	ndiscf2:=NormalFQF(discf2);
+	anisom:=AnIsomFQF(ndiscf1[1], ndiscf2[1]);
+	if anisom=fail then return(fail); fi;
+	old2new1:=ndiscf1[2];
+	new2old2:=ndiscf2[3];
+	olddiscg2:=discf2[1];
+	return(CopyMatmodDiscg(old2new1*anisom*new2old2, olddiscg2));
+end;
+
+GeneralizedAutFQF:=function(discf)
+	#
+	local ndiscf, auts, old2new, new2old, olddiscg, trans;
+	#
+	ndiscf:=NormalFQF(discf);
+	auts:=IsomFQF(ndiscf[1], ndiscf[1]);
+	old2new:=ndiscf[2];
+	new2old:=ndiscf[3];
+	olddiscg:=discf[1];
+	trans:=function(tg)
+		return(CopyMatmodDiscg(old2new*tg*new2old, olddiscg));
+	end;
+	return(List(auts, trans));
+end;
+
+
+ChecktoNormalFAG:= function(A, nfag)
+	#
+	local beep, oldleng, newleng;
+	beep:=function(numb)
+		Printn("wrong ChecktoNormalFAG", numb); Error();
+	end;
+	if Product(nfag[1])<>Product(A) then beep(1); fi;
+	oldleng:=Length(A);
+	newleng:=Length(nfag[1]);
+	if CopyMatmodDiscg(nfag[2]*nfag[3], A)<>IdentityMat(oldleng) then beep(2); fi;
+	if CopyMatmodDiscg(nfag[3]*nfag[2], nfag[1])<>IdentityMat(newleng) then beep(3); fi;
+	return(true);
+end;
+
+CheckDiscrec:=function(Gram,  discrec)
+	local beep, Gramdual, discg, discf, proj, projdual, reps, repsdual, leng,
+	Idleng, rank, Idrank, KG;
+	beep:=function(numb)
+		Printn("wrong CheckDiscrec", numb); Error();
+	end;
+	Gramdual:=InverseMat(Gram);
+	discg:=discrec.discg;
+	#
+	if Product(discg)<>AbsInt(DeterminantIntMat(Gram)) then
+		beep(15455);
+	fi;
+	#
+	if Product(discg)=1 then
+		if discg<>[] then beep(155); fi;
+		if discrec.discf<>[[]] then beep(5177); fi;
+		if discrec.reps<>[] then beep(1555); fi;
+		if discrec.reps_dual<>[] then beep(1155); fi;
+		if Set(discrec.proj)<>[[]] then beep(15255); fi;
+		if Set(discrec.proj_dual)<>[[]] then beep(11545); fi;
+		return(true);
+	fi;
+	#
+	leng:=Length(discg);
+	Idleng:=IdentityMat(leng);
+	rank:=Length(Gram);
+	Idrank:=IdentityMat(rank);
+	discf:=discrec.discf;
+	proj:=discrec.proj;
+	projdual:=discrec.proj_dual;
+	reps:=discrec.reps;
+	repsdual:=discrec.reps_dual;
+	#
+	if CopyNormalDiscf(TMTTmult(reps, Gram))<>discf then beep(1); fi;
+	if CopyNormalDiscf(TMTTmult(repsdual, Gramdual))<>discf then beep(2); fi;
+	if CopyMatmodDiscg(reps*proj, discg)<>Idleng then beep(3); fi;
+	if CopyMatmodDiscg(repsdual*projdual, discg)<>Idleng then beep(4); fi;
+	KG:=TMTTmult(proj*reps-Idrank, Gram);
+	if not IsZeroMat(CopyNormalDiscf(KG)) then beep(5); fi;
+	KG:=TMTTmult(projdual*repsdual-Idrank, Gramdual);
+	if not IsZeroMat(CopyNormalDiscf(KG)) then beep(6); fi;
+	#
+	return(true);
+end;
+
+
+
+CheckGeneralizedIsomFQF:=function(discf1, discf2, isoms)
+	#
+	local tg, tginv, Id1, Id2, beep;
+	#
+	beep:=function(numb)
+		Printn("wrong CheckGeneralizedIsomFQF", numb); Error();
+	end;
+	#
+	Id1:=IdentityMat(Length(discf1[1]));
+	Id2:=IdentityMat(Length(discf2[1]));
+	for tg in isoms do
+		# x->x*tg is the isom from DF1 to DF2: Hence tg*F2*ttg=F1 !!
+		if CopyNormalDiscf(TMTTmult(tg, discf2[2]))<>discf1[2] then
+			beep(1);
+		fi;
+		#
+		tginv:=GeneralizedInverseIsomFAG(discf1[1], discf2[1], tg);
+		if CopyMatmodDiscg(tg*tginv, discf1[1])<>Id1 then beep(21); fi;
+		if CopyMatmodDiscg(tginv*tg, discf2[1])<>Id2 then beep(28); fi;
+		#
+		if CopyNormalDiscf(TMTTmult(tginv, discf1[2]))<>discf2[2] then
+			beep(3);
+		fi;
+	od;
+	#
+	return(true);
+end;
+
+
+#####################
+
+########################
+
+
+newOrthogonalModN:=function(M, N)
+	#
+	# M is a matrix with components in Z.
+	# N is a non-zero integer.
+	# This program returns a basis of the Z-module
+	# consisting of x that satisfy  x*v=0 mod N for all v in M,
+	# that is, Transposed(M)*colvect(x)=0 mod N
+	# where * is the standard inner product.
+	#
+	local n, snfM, tT, D, V, ii, Mperpgens;
+	#
+	n:=Length(M[1]);
+	snfM:=SmithNormalFormIntegerMatTransforms(M);
+	tT:=TransposedMat(snfM.coltrans);
+	D:=snfM.normal;
+	V:=NullMat(n, n);
+	for ii in [1..Minimum(n, Length(M))] do
+		V[ii][ii]:=Lcm(D[ii][ii], N)/D[ii][ii];
+	od;
+	for ii in [Minimum(n, Length(M))+1..n] do
+		V[ii][ii]:=1;
+	od;
+	#
+	# V is symmetric
+	#
+	Mperpgens:=HermiteNormalFormIntegerMat(V*tT);
+	#
+	# for check
+	#
+	if not IsZeroMat((Mperpgens*TransposedMat(M)) mod N) then
+		Printn("wrong newOrthogonalModN", 1); Error();
+	fi;
+	if DeterminantIntMat(Mperpgens)=0 then
+		Printn("wrong newOrthogonalModN", 2); Error();
+	fi;
+	#
+	#
+	return(Mperpgens);
+end;
+
+TorsionOrthogonal:=function(fag, fbf, M)
+	#
+	# fbf is a symmetric matrix with rational components
+	# (finite binary form) on a finite abelian group fag,
+	# and M a matrix with components in Z.
+	# This program returns  a basis of the Z-module
+	# consisting of x that satisfy  x*fbf*v=0 mod Z for all v in M.
+	# ZMsperp is its pullback by the natural projection
+	# Z^n -> fag in the hermite normal form.
+	#
+	local Mfbf, dd, Mperp, v, ZMsperp,vv, n;
+	#
+	if M=[] then # the whole group is Mperp
+		n:=Length(fag);
+		return([IdentityMat(n), IdentityMat(n)]);
+	fi;
+	Mfbf:=M*fbf;
+	dd:=Lcm(List(Flat(Mfbf), DenominatorRat));
+	ZMsperp:=newOrthogonalModN(dd*Mfbf, dd);
+	#
+	# newOrthogonalModN is defined above.
+	#
+	Mperp:=[];
+	for v in  ZMsperp do
+		vv:=CopymodDiscg(v, fag);
+		if not IsZeroVect(vv) then
+			Add(Mperp, vv);
+		fi;
+	od;
+	#
+	# for check
+	#
+	if not IsIntMat(Mperp*fbf*TransposedMat(M)) then
+		Printn("wrong TorsionOrthogonal"); Error();
+	fi;
+	#
+	return([Mperp, ZMsperp]);
+end;
+
+
+QuotDiscf:=function(fag, fqf, Hgens)
+	#
+	# [fag, fqf] is a finite quadratic form of length n,
+	# and H is an totally isotropic  subgroup generated by Hgens.
+	# This program returns the following record
+	# that describe the discriminant Hsperp/H
+	# rec(
+	#   originalfqf:= the original [fag, fqf],
+	#   basisH:=a basis of H,
+	#   ZbasisH:=the pullback of basisH by Z^n->fag,
+	#   ZbasisHinv:= the inverse of ZbasisH,
+	#   basisHsperp:=elements of the original fag that form a basis of Hsperp,
+	#   ZbasisHsperp:=the pullback of basisHsperp,
+	#   basisquot:=elements of the original fag whose classes mod H is
+	#  			   a basis of Hsperp/H,
+	#   Horder:= the order of H,
+	#   fag:= the abelian group Hsperp/H,
+	#   fqf:= the quadratic form on  Hsperp/H with respect to basisquot,
+	#
+	#   hermZHsperpinv:=the inverse of the hermite normal form
+	#       (zero vects removed) of
+	#       quotH:=basisquot+ZbasisH (stack mats),
+	#   rowtranshermquotZH:=the matrix S such that S*quotH=hermZHsperp,
+	#
+	# )
+	#
+	#  The last two items are used to calculate the matrix representation
+	#  of the automorphism gg of Hsperp/H with respect to basisquot
+	#  induced by an automorphism g of [fag, fqf] preserving H.
+	#  Suppose that k=Length(basisH).
+	#  If g is given by a matrix T,
+	#  then the matrix representation of gg is given as
+	#  the left k times k matrix of T*hermZHsperpinv*rowtranshermquotZH.
+	#
+	local beep, fagD, hnf,  xx, v,n,
+	SZMbasisZHsperp, basisquot, ii, ZbasisH,
+	basisH, vv, orthodata, basisHsperp,ZbasisHsperp, Hsperpinv,
+	ZM,  snf, S, newfag,newfqf, newfagD, dii, rep,
+	hermZHsperp, hermZHsperpinv, rowtranshermquotZH, HH, ZbasisHinv,
+	newdiscfrec,  Horder, Idn, fagDinv, hnfsperp, k, v1, v2, v1dual;
+	#
+	beep:=function(numb)
+		Printn("wrong QuotDiscf", numb); Error();
+	end;
+	#
+	n:=Length(fag);
+	fagD:=NullMat(n, n);
+	for ii in [1..n] do
+		fagD[ii][ii]:=fag[ii];
+	od;
+	ZbasisH:=HermiteNormalFormIntegerMat(StackMats(fagD, Hgens));
+	ZbasisH:=RemoveZeroVectsIntMat(ZbasisH);
+	Horder:=Product(fag)/DeterminantIntMat(ZbasisH);
+	ZbasisHinv:=InverseMat(ZbasisH);
+	basisH:=[];
+	for v in ZbasisH do
+		vv:=CopymodDiscg(v, fag);
+		if not IsZeroVect(vv) then
+			Add(basisH, vv);
+		fi;
+	od;
+	#
+	if basisH=[] then
+		Idn:=IdentityMat(n);
+		fagDinv:=InverseMat(fagD);
+		newdiscfrec:=rec();
+		newdiscfrec.originalfqf:=[List(fag), CopyMat(fqf)];
+		newdiscfrec.basisH:=[];
+		newdiscfrec.ZbasisH:=fagD;
+		newdiscfrec.ZbasisHinv:=List(fagDinv);
+		newdiscfrec.basisHsperp:=List(Idn);
+		newdiscfrec.ZbasisHsperp:=List(Idn);
+		newdiscfrec.basisquot:=List(Idn);
+		newdiscfrec.Horder:=1;
+		newdiscfrec.fag:=List(fag);
+		newdiscfrec.fqf:=CopyMat(fqf);
+		newdiscfrec.hermZHsperpinv:=List(Idn);
+		newdiscfrec.rowtranshermquotZH:=List(Idn);
+		#
+		return(newdiscfrec);
+	fi;
+	#
+	if not IsZeroMat(CopyNormalDiscf(TMTTmult(basisH, fqf))) then
+		beep(1);
+	fi;
+	orthodata:=TorsionOrthogonal(fag, fqf, basisH);;
+	#
+	# TorsionOrthogonal is defined above.
+	#
+	basisHsperp:=orthodata[1];
+	ZbasisHsperp:=orthodata[2];
+	Hsperpinv:=InverseMat(ZbasisHsperp);
+	ZM:=ZbasisH*Hsperpinv;
+	if not IsIntMat(ZM) then
+		# H is contained in Hsperp
+		beep(2);
+	fi;
+	#
+	# The row vectors of ZM is a vector representation of
+	# elements of ZbasisH with respect to ZbasisHsperp.
+	#
+	snf:=SmithNormalFormIntegerMatTransforms(ZM);
+	newfagD:=snf.normal;
+	S:=snf.rowtrans;
+	SZMbasisZHsperp:=S*ZM*ZbasisHsperp;
+	newfag:=[];
+	basisquot:=[];
+	for ii in [1..Length(newfagD)] do
+		if newfagD[ii][ii]<>1 then
+			dii:=newfagD[ii][ii];
+			Add(newfag, dii);
+			rep:=(1/dii)*SZMbasisZHsperp[ii];
+			if not IsIntVect(rep) then beep(3); fi;
+			Add(basisquot, rep);
+		fi;
+	od;
+	#
+	# for check
+	for v1 in Hgens do
+		v1dual:=v1*fqf;
+		for v2 in basisquot do
+			if modZ(v1dual*v2)<>0 then
+				beep(51);
+			fi;
+		od;
+	od;
+	#
+	newfqf:=CopyNormalDiscf(TMTTmult(basisquot, fqf));
+	#
+	if Product(newfag)*(Horder)^2<>Product(fag) then
+		beep(33);
+	fi;
+	#
+	k:=Length(newfag);
+	if k>0 then
+		hnf:=HermiteNormalFormIntegerMatTransforms(StackMats(basisquot, ZbasisH));
+	else
+		hnf:=HermiteNormalFormIntegerMatTransforms(ZbasisH);
+	fi;
+	rowtranshermquotZH:=hnf.rowtrans;
+	hnfsperp:=HermiteNormalFormIntegerMatTransforms(ZbasisHsperp);
+	if k>0 then
+		if hnf.normal<>StackMats(hnfsperp.normal, NullMat(k, n)) then
+			beep(40);
+		fi;
+	else
+		if hnf.normal<>hnfsperp.normal then beep(41); fi;
+	fi;
+	hermZHsperpinv:=InverseMat(hnfsperp.normal);
+	#
+	#
+	#
+	newdiscfrec:=rec();
+	newdiscfrec.originalfqf:=[List(fag), CopyMat(fqf)];
+	newdiscfrec.basisH:=basisH;
+	newdiscfrec.ZbasisH:=ZbasisH;
+	newdiscfrec.ZbasisHinv:=ZbasisHinv;
+	newdiscfrec.basisHsperp:=basisHsperp;
+	newdiscfrec.ZbasisHsperp:=ZbasisHsperp;
+	newdiscfrec.basisquot:=basisquot;
+	newdiscfrec.Horder:=Horder;
+	newdiscfrec.fag:=newfag;
+	newdiscfrec.fqf:=newfqf;
+	newdiscfrec.hermZHsperpinv:=hermZHsperpinv;
+	newdiscfrec.rowtranshermquotZH:=rowtranshermquotZH;
+	#
+	return(newdiscfrec);
+end;
+
+DoesPreserveH:=function(tg, quotdiscfrec)
+	return(IsIntMat((quotdiscfrec.ZbasisH)*tg*(quotdiscfrec.ZbasisHinv)));
+end;
+
+InducedAutOnQuotDiscf:=function(tg, quotdiscfrec)
+	#
+	# tg is an automorphism of quotdiscfrec.originalfqf
+	# that preserves the totall isotropic subspace
+	# generated by quotdiscfrec.basisH.
+	# tgg is the induced automorphism on Hsperp/H
+	# represented with respect to quotdiscfrec.basisquot.
+	#
+	local hermZHsperpinv, rowtranshermquotZH, k, tgg, Q, A;
+	#
+	if quotdiscfrec.basisquot=[] then return([]); fi;
+	#
+	hermZHsperpinv:=quotdiscfrec.hermZHsperpinv;
+	rowtranshermquotZH:=quotdiscfrec.rowtranshermquotZH;
+	k:=Length(quotdiscfrec.fag);
+	Q:=quotdiscfrec.basisquot;
+	A:=ConcatMats(Q*tg*hermZHsperpinv, NullMat(k,k));
+	tgg:=SubMatrix(A*rowtranshermquotZH, [1..k], [1..k]);
+	MatmodDiscg(tgg, quotdiscfrec.fag);
+	if  not IsIntMat(tgg) then
+		Printn("wrong InducedAutOnQuotDiscf", 1); Error();
+	fi;
+	if  CopyNormalDiscf(TMTTmult(tgg, quotdiscfrec.fqf))<>quotdiscfrec.fqf then
+		Printn("wrong InducedAutOnQuotDiscf", 2); Error();
+	fi;
+	return(tgg);
+end;
+
+###############
+
+#######################
+
+CopyNormalDiscfOdd:=function(discf)
+	local n, ii, jj, newdiscf, v;
+	if discf=[[]] then return([[]]); fi;
+	if discf=[] then return([[]]); fi;
+	n:=Length(discf);
+	newdiscf:=[];
+	for ii in [1..n] do
+		v:=[];
+		for jj in [1..n] do
+			Add(v, modZ(discf[ii][jj]));
+		od;
+		Add(newdiscf, v);
+	od;
+	return(newdiscf);
+end;
+
+
+DiscriminantFormOdd:=function(GramMat)
+	#
+	# the output is the record,
+	# with names
+	# tdiscg, tdiscf, reps_dual, proj_dual, reps, proj.
+	#
+	# tdiscg is the discrinant group of an (not necessarily even lattice) GramMat;
+	# it is a list of integers.
+	# tdiscf is the discriminant form.
+	#
+	# xx*reps_dual gives a representative (modulo GramMat) of an element xx of tdiscg
+	# written in the dual basis of GramMat:
+	# yy*proj_dual gives the element corresponding to yy in dual of GramMat
+	# (written in the dual basis of GramMat):
+	#
+	# reps and proj are non-dual versions of reps and proj.
+	#
+	local tdiscg, tdiscf, treps_dual, invM, DF, D, F, i, n, d, is, Finv,
+	subsfv, fv, tproj_dual, discrec, treps, newtreps, newv, v, a;
+	#
+	if AbsInt(Determinant(GramMat))=1 then
+		discrec:=rec(
+			discg:=[],
+			discf:=[[]],
+			reps_dual:=[],
+			proj_dual:=[[]],
+			reps:=[],
+			proj:=[[]]
+		);
+		MakeImmutable(discrec);
+		return(discrec);
+	fi;
+	n:=Length(GramMat);
+	invM:=Inverse(GramMat);
+	DF:=SmithNormalFormIntegerMatTransforms(GramMat);
+	D:=DF.normal;
+	Finv:=DF.coltrans;
+	F:=Inverse(DF.coltrans);
+	tdiscg:=[];
+	treps_dual:=[];
+	is:=[];
+	for  i in [1..n] do
+		d:=D[i][i];
+		if d>1 then
+			Add(tdiscg, d);
+			Add(treps_dual, F[i]);
+			Add(is, i);
+		elif d<=0 then
+			Printn("wrong in DiscriminantForm ", GramMat);
+		fi;
+	od;
+	treps:=treps_dual*invM;
+	newtreps:=[];
+	for v in treps do
+		newv:=[];
+		for a in v do
+			Add(newv, modZ(a));
+		od;
+		Add(newtreps, newv);
+	od;
+	treps:=newtreps;
+	treps_dual:=treps*GramMat;
+	#
+	tdiscf:=CopyNormalDiscfOdd(TMTTmult(treps_dual, invM));
+	# Only this part is changed
+	#
+	tproj_dual:=[];
+	for fv in Finv do
+		#subsfv:=Map(j->fv[j], is);
+		subsfv:=List(is, j->fv[j]);
+		Add(tproj_dual, subsfv);
+	od;
+	Apply(tproj_dual, tv->modDiscg(tv, tdiscg));
+	#
+	discrec:=rec(
+		discg:=tdiscg,
+		discf:=tdiscf,
+		reps_dual:=treps_dual,
+		proj_dual:=tproj_dual,
+		reps:=treps_dual*invM,
+		proj:=GramMat*tproj_dual #this should not be reduced mod discg,
+		#because it operates on vectors of RATIONAL coefficients.
+	);
+	#
+	#
+	#
+	return(discrec);
+end;
+
+########################
+# Added on 15 Jan 2018
+########################
+
+OrthoDirectSumOfDiscForms:=function(ranks, discformrecs)
+	local newrec, tdiscg, tdiscf, treps_dual, tproj_dual, treps, tproj, xx,leng, rank,
+	curleng, currank, cc, discrec, subrank, subleng, subreps, subreps_dual,
+	subproj, subproj_dual, ii, iii, jj, jjj;
+	#
+	tdiscg:=Concatenation(List(discformrecs, xx->xx.discg));
+	tdiscf:=DiagonalMats(List(discformrecs, xx->xx.discf));
+	leng:=Length(tdiscg);
+	rank:=Sum(ranks);
+	treps:=NullMat(leng, rank);
+	treps_dual:=NullMat(leng, rank);
+	tproj:=NullMat(rank, leng);
+	tproj_dual:=NullMat(rank, leng);
+	#
+	curleng:=0;
+	currank:=0;
+	cc:=0;
+	for discrec in discformrecs do
+		cc:=cc+1;
+		subrank:=ranks[cc];
+		subleng:=Length(discrec.discg);
+		#
+		subreps:=discrec.reps;
+		subreps_dual:=discrec.reps_dual;
+		iii:=0;
+		for ii in [curleng+1..curleng+subleng] do
+			iii:=iii+1;
+			jjj:=0;
+			for jj in [currank+1..currank+subrank] do
+				jjj:=jjj+1;
+				treps[ii][jj]:=subreps[iii][jjj];
+				treps_dual[ii][jj]:=subreps_dual[iii][jjj];
+			od;
+		od;
+		#
+		subproj:=discrec.proj;
+		subproj_dual:=discrec.proj_dual;
+		jjj:=0;
+		for jj in [currank+1..currank+subrank] do
+			jjj:=jjj+1;
+			iii:=0;
+			for ii in [curleng+1..curleng+subleng] do
+				iii:=iii+1;
+				tproj[jj][ii]:=subproj[jjj][iii];
+				tproj_dual[jj][ii]:=subproj_dual[jjj][iii];
+			od;
+		od;
+		#
+		curleng:=curleng+subleng;
+		currank:=currank+subrank;
+	od;
+	#
+	if tproj=[] then
+		tproj:=[[]];
+	fi;
+	if tproj_dual=[] then
+		tproj_dual:=[[]];
+	fi;
+	#
+	newrec:=rec(
+		discg:=tdiscg,
+		discf:=tdiscf,
+		reps_dual:=treps_dual,
+		proj_dual:=tproj_dual,
+		reps:=treps,
+		proj:=tproj
+	);
+	return(newrec);
+end;
+
+
+####################
+# Added on 2018 07 12 from SHconst
+####################
+
+IsotropicVectsDiscgf:=function(discg, discf)
+	local iter, isots, tv;
+	if discg=[] then return([]); fi;
+	#iter:=IteratorOfCartesianProduct(Map(xx->[0..xx-1], discg));
+	iter:=IteratorOfCartesianProduct(List(discg, xx->[0..xx-1]));
+	isots:=[];
+	for tv in iter do
+		if modtZ(tv*discf*tv)=0 then
+			Add(isots, tv);
+		fi;
+	od;
+	return(isots);
+end;
+
+
+IsotropicSubspacesDiscgf:=function(discg, discf)
+	local isots, isotsubspaces, fjob, discn;
+	discn:=Product(discg);
+	isots:=IsotropicVectsDiscgf(discg, discf);
+	fjob:=function(dualvs, tbasis, dettbasis)
+		local tv, newB;
+		if dettbasis^2>discn then
+			for tv in isots do
+				if dualvs=[] or IsIntVect(dualvs*tv) then
+					Add(tbasis, tv);
+					newB:=CopyMat(BaseIntMat(tbasis));
+					if DeterminantIntMat(newB)<dettbasis then
+						AddCopy(isotsubspaces, newB);
+						Add(dualvs, discf*tv);
+						fjob(CopyMat(dualvs), newB, DeterminantIntMat(newB));
+						Remove(dualvs);
+					fi;
+					Remove(tbasis);
+				fi;
+			od;
+		fi;
+	end;
+	isotsubspaces:=[DiagonalMat(discg)];
+	fjob([], DiagonalMat(discg), discn);
+	return(isotsubspaces);
+end;
+
+OrderSubFAG:=function(fag, gens)
+	#
+	local dd, M, DD, dd1, ii;
+	#
+	dd:=Product(fag);
+	M:=StackMats(DiagonalMat(fag), gens);
+	DD:=SmithNormalFormIntegerMat(M);
+	dd1:=1;
+	for ii in [1..Length(fag)] do
+		dd1:=dd1*DD[ii][ii];
+	od;
+	if dd mod dd1 <> 0 then
+		beep(25454345);
+	fi;
+	return(dd/dd1);
+end;
+
+
+############################
+# Added on 2018 sep 08 from newtools0.txt in theMostAlgEnr
+############################
+
+NewNormalFAG:=function(A)
+	#
+	# NormalFAG means the representation of finite abelian group
+	# that satisfies the successive-divisibility condision.
+	#
+	# The difference from old version is that it returns a rec.
+	#
+	local leng, oldD, snf, D, tT, Tinv,
+	newD, told2new, old2new, new2old, ii, nrmfagrec;
+	#
+	leng:=Length(A);
+	if leng=0 then
+		nrmfagrec:=rec(
+			nrmfag:=[]
+		);
+		return(nrmfagrec);
+	fi;
+	oldD:=DiagonalMats(List(A, aa->[[aa]]));
+	snf:=SmithNormalFormIntegerMatTransforms(oldD);
+	D:=snf.normal;
+	Tinv:=InverseMat(snf.coltrans);
+	tT:=TransposedMat(snf.coltrans);
+	newD:=[];
+	told2new:=[];
+	new2old:=[];
+	for ii in [1..leng] do
+		if D[ii][ii]>1 then
+			Add(newD, D[ii][ii]);
+			Add(new2old, Tinv[ii]);
+			Add(told2new, tT[ii]);
+		fi;
+	od;
+	old2new:=TransposedMatMutable(told2new);
+	MatmodDiscg(new2old, A);
+	MatmodDiscg(old2new, newD);
+	nrmfagrec:=rec(
+		nrmfag:=newD,
+		old2new:=old2new,
+		new2old:=new2old
+	);
+	return(nrmfagrec);
+end;
+
+NewNormalDiscrec:= function(discrec)
+	#
+	# The difference from old version is that it returns a rec.
+	#
+	local nfag, old2new, new2old, olddiscg, olddiscf, newdiscf,
+	newdiscg, newproj_dual, newproj, newdiscrec, nrmdiscrec;
+	#
+	olddiscg:=discrec.discg;
+	if olddiscg=[] then
+		newdiscrec:=rec(
+			discg:=[],
+			discf:=[[]],
+			reps_dual:=[],
+			proj_dual:=[[]],
+			reps:=[],
+			proj:=[[]]
+		);
+		nrmdiscrec:=rec(
+			discrec:=newdiscrec,
+			old2new:=old2new,
+			new2old:=new2old
+		);
+		return(nrmdiscrec);
+	fi;
+	olddiscf:=discrec.discf;
+	nfag:=NormalFAG(olddiscg);
+	newdiscg:=nfag[1];
+	old2new:=nfag[2];
+	new2old:=nfag[3];
+	newdiscf:=CopyNormalDiscf(TMTTmult(new2old, olddiscf));
+	newproj_dual:=(discrec.proj_dual)*old2new;
+	MatmodDiscg(newproj_dual, newdiscg);
+	newproj:=(discrec.proj)*old2new;
+	#
+	#MatmodDiscg(newproj, newdiscg); SINCE newproj will be applied to rational vectors
+	# THIS IS VERY WRONG!
+	#
+	newdiscrec:=rec(
+		discg:=nfag[1],
+		discf:=newdiscf,
+		reps_dual:=new2old*(discrec.reps_dual),
+		proj_dual:=newproj_dual,
+		reps:=new2old*(discrec.reps),
+		proj:=newproj
+	);
+	nrmdiscrec:=rec(
+		discrec:=newdiscrec,
+		old2new:=old2new,
+		new2old:=new2old
+	);
+	return(nrmdiscrec);
+end;
+
+DiscIsomByUnimodOverlat:=function(embS1, discS1rec, embS2, discS2rec)
+	#
+	# L is a unimodular even overlattice of S1 oplus S2.
+	# discisom is the isomorphism from discS1 to -discS2.
+	#
+	local beep, nrmfag1, nrmfag2,nrmbone, lengnrmbone,
+	rankS1, rankS2, embsum, sumcokerrec, embsuminv,
+	tvS1nrmds, tv, tvS1S2, tvS1, tvS1d, tvS2, tvS2d,
+	aa1, aa2, hnf, T, TtvS2nrmds, tdiscisom, discisom,
+	mdiscfS2, lower1, lower2, upper1, upper2,  tvS2nrmds;
+	#
+	beep:=function(numb)
+		Printn("wrong DiscIsomByUnimodOverlat", numb); Error();
+	end;
+	#
+	if CokerTorsion(embS1)<>[] then beep(317719); fi;
+	if CokerTorsion(embS2)<>[] then beep(367196); fi;
+	nrmfag1:=NewNormalFAG(discS1rec.discg);
+	nrmfag2:=NewNormalFAG(discS2rec.discg);
+	if nrmfag1.nrmfag<>nrmfag2.nrmfag then
+		beep(31567771);
+	fi;
+	if nrmfag1.nrmfag=[] then
+		return([]);
+	fi;
+	nrmbone:=DiagonalMat(nrmfag1.nrmfag);
+	lengnrmbone:=Length(nrmfag1.nrmfag);
+	#
+	rankS1:=Length(embS1);
+	rankS2:=Length(embS2);
+	embsum:=StackMats(embS1, embS2);
+	sumcokerrec:=CokerTorsionLifts(embsum);
+	embsuminv:=InverseMat(embsum);
+	tvS1nrmds:=CopyMat(nrmbone);
+	tvS2nrmds:=CopyMat(nrmbone);
+	for tv in sumcokerrec.lifts do
+		tvS1S2:=tv*embsuminv;
+		tvS1:=List([1..rankS1], ii->tvS1S2[ii]);
+		tvS1d:=tvS1*discS1rec.proj;
+		tvS2:=List([rankS1+1..rankS1+rankS2], ii->tvS1S2[ii]);
+		tvS2d:=tvS2*discS2rec.proj;
+		aa1:=tvS1d*discS1rec.discf*tvS1d;
+		aa2:=tvS2d*discS2rec.discf*tvS2d;
+		if modtZ(aa1)<>modtZ(-aa2) then beep(414811); fi;
+		Add(tvS1nrmds, tvS1d*nrmfag1.old2new);
+		Add(tvS2nrmds, tvS2d*nrmfag2.old2new);
+	od;
+	#
+		hnf:=HermiteNormalFormIntegerMatTransform(tvS1nrmds);
+	T:=hnf.rowtrans;
+	TtvS2nrmds:=T*tvS2nrmds;
+	upper1:=List([1..lengnrmbone], ii->hnf.normal[ii]);
+	upper2:=List([1..lengnrmbone], ii->TtvS2nrmds[ii]);
+	lower1:=List([lengnrmbone+1..Length(hnf.normal)], ii->hnf.normal[ii]);
+	lower2:=List([lengnrmbone+1..Length(TtvS2nrmds)], ii->TtvS2nrmds[ii]);
+	if upper1<>IdentityMat(lengnrmbone) then
+		beep(912345);
+	fi;
+	if not IsZeroMat(lower1) then
+		beep(414818);
+	fi;
+	MatmodDiscg(lower2, nrmfag2.nrmfag);
+	if not IsZeroMat(lower2) then
+		beep(418218);
+	fi;
+	tdiscisom:=List([1..lengnrmbone], ii->TtvS2nrmds[ii]);
+	if not IsIntMat(tdiscisom) then beep(471717); fi;
+	#
+	discisom:=nrmfag1.old2new*tdiscisom*nrmfag2.new2old;
+	MatmodDiscg(discisom, discS2rec.discg);
+	mdiscfS2:=CopyNormalDiscf((-1)*discS2rec.discf);
+	if CopyNormalDiscf(TMTTmult(discisom, mdiscfS2))<>discS1rec.discf then
+		beep(3637119);
+	fi;
+	return(discisom);
+end;
+
+DiscIsomByUnimodOverlat2:=function(embS1, discS1rec, embS2, discS2rec)
+	#
+	# L is a unimodular even overlattice of S1 oplus S2.
+	# discisom is the isomorphism from discS1 to -discS2.
+	#
+	local beep, nrm1, nrm2, nrm1discg, nrm2discg,
+	 nrm1discf, nrm2discf, nrm1proj, nrm2proj,  nrmbone, lengnrmbone,
+	rankS1, rankS2, embsum, sumcokerrec, embsuminv,
+	tvS1nrmds, tv, tvS1S2, tvS1, tvS1d, tvS2, tvS2d,
+	aa1, aa2, hnf, T, TtvS2nrmds, tdiscisom, discisom,
+	mdiscfS2, lower1, lower2, upper1, upper2,  tvS2nrmds;
+	#
+	beep:=function(numb)
+		Printn("wrong DiscIsomByUnimodOverlat2", numb); Error();
+	end;
+	#
+	if CokerTorsion(embS1)<>[] then beep(317719); fi;
+	if CokerTorsion(embS2)<>[] then beep(367196); fi;
+	nrm1:=NewNormalDiscrec(discS1rec);
+	nrm2:=NewNormalDiscrec(discS2rec);
+	nrm1discg:=nrm1.discrec.discg;
+	nrm2discg:=nrm2.discrec.discg;
+	nrm1discf:=nrm1.discrec.discf;
+	nrm2discf:=nrm2.discrec.discf;
+	if nrm1discg<>nrm2discg then
+		beep(31567771);
+	fi;
+	if nrm1discg=[] then
+		return([]);
+	fi;
+	nrmbone:=DiagonalMat(nrm1discg);
+	lengnrmbone:=Length(nrm1discg);
+	#
+	nrm1proj:=nrm1.discrec.proj;
+	nrm2proj:=nrm2.discrec.proj;
+	rankS1:=Length(embS1);
+	rankS2:=Length(embS2);
+	embsum:=StackMats(embS1, embS2);
+	sumcokerrec:=CokerTorsionLifts(embsum);
+	embsuminv:=InverseMat(embsum);
+	tvS1nrmds:=CopyMat(nrmbone);
+	tvS2nrmds:=CopyMat(nrmbone);
+	for tv in sumcokerrec.lifts do
+		tvS1S2:=tv*embsuminv;
+		tvS1:=List([1..rankS1], ii->tvS1S2[ii]);
+		tvS1d:=tvS1*nrm1proj;
+		tvS2:=List([rankS1+1..rankS1+rankS2], ii->tvS1S2[ii]);
+		tvS2d:=tvS2*nrm2proj;
+		aa1:=tvS1d*nrm1discf*tvS1d;
+		aa2:=tvS2d*nrm2discf*tvS2d;
+		if modtZ(aa1)<>modtZ(-aa2) then beep(11414811); fi;
+		Add(tvS1nrmds, tvS1d);
+		Add(tvS2nrmds, tvS2d);
+	od;
+	#
+	hnf:=HermiteNormalFormIntegerMatTransform(tvS1nrmds);
+	T:=hnf.rowtrans;
+	TtvS2nrmds:=T*tvS2nrmds;
+	upper1:=List([1..lengnrmbone], ii->hnf.normal[ii]);
+	upper2:=List([1..lengnrmbone], ii->TtvS2nrmds[ii]);
+	lower1:=List([lengnrmbone+1..Length(hnf.normal)], ii->hnf.normal[ii]);
+	lower2:=List([lengnrmbone+1..Length(TtvS2nrmds)], ii->TtvS2nrmds[ii]);
+	if upper1<>IdentityMat(lengnrmbone) then
+		beep(912345);
+	fi;
+	if not IsZeroMat(lower1) then
+		beep(414818);
+	fi;
+	MatmodDiscg(lower2, nrm2discg);
+	if not IsZeroMat(lower2) then
+		beep(418218);
+	fi;
+	tdiscisom:=List([1..lengnrmbone], ii->TtvS2nrmds[ii]);
+	if not IsIntMat(tdiscisom) then beep(471717); fi;
+	if CopyNormalDiscf(TMTTmult(tdiscisom, nrm2discf))<>CopyNormalDiscf((-1)*nrm1discf) then
+		beep(36999919);
+	fi;
+	#
+	discisom:=nrm1.old2new*tdiscisom*nrm2.new2old;
+	MatmodDiscg(discisom, discS2rec.discg);
+	mdiscfS2:=CopyNormalDiscf((-1)*discS2rec.discf);
+	if CopyNormalDiscf(TMTTmult(discisom, mdiscfS2))<>discS1rec.discf then
+		beep(3637119);
+	fi;
+	return(discisom);
+end;
+
+
+############################
+#  End of Added on 2018 sep 08 from newtools0.txt in theMostAlgEnr
+############################
+
+#### Add on 2020Apr29
+
+FAGlatex:=function(as)
+  local msetas, fag, kk, anu;
+  msetas:=ToMultiSet(as);
+  fag:="";
+  kk:=0;
+  for anu in msetas do
+    if kk>0 then
+      fag:=Concatenation(fag, " \\cdot ");
+    fi;
+    fag:=Concatenation(fag, String(anu[1]));
+    if anu[2]>1 then
+      fag:=Concatenation(fag, " \\sp{", String(anu[2]), "} ");
+    fi;
+    kk:=kk+1;
+  od;
+  return(fag);
+end;
+
+
+
+##### Added on 2022/04/09
+
+QuotientLbyM:=function(rankL, matM)
+  #
+  # record on the quotient map phi: L to L/M,
+  # where L is a free Z-module of rankL and
+  # M is a subnodule of L generated by rows of matM.
+  # The free part of L/M has  a basis
+  # freebasisreps^phi.
+  # The torsion part of L/M has is generated by
+  # torsiongensreps^phi.
+  # The finite-abelian-group representation of
+  # the torsion part of L/M  with repsect to the generator
+  # torsiongensreps^phi is torsionfag.
+  #
+  local beep,smfrec, S, T, D, Tinv, quotrec, ii,
+  freebasisreps,torsiongensreps,torsionfag, phifree, phitorsion, freeposs, torposs,
+  In, Dsize;
+  #
+  #
+  beep:=function(beepnumb)
+    localbeep("QuotientLbyM", beepnumb); Error();
+  end;
+  #
+  In:=IdentityMat(rankL);
+  if matM=[] then
+    #
+    quotrec:=rec(
+      freebasisreps:=In,
+      torsiongensreps:=[],
+      torsionfag:=[],
+      phifree:=In,
+      phitorsion:=[]
+    );
+    #
+    return(quotrec);
+  fi;
+  smfrec:=SmithNormalFormIntegerMatTransforms(matM);
+  S:=smfrec.rowtrans;
+	T:=smfrec.coltrans;
+	D:=smfrec.normal;
+	Tinv:=InverseMat(T);
+  freebasisreps:=[];
+  torsiongensreps:=[];
+  torsionfag:=[];
+  torposs:=[];
+  freeposs:=[];
+  Dsize:=Minimum(rankL, Length(matM));
+  #
+  for ii in [1..Dsize] do
+    if D[ii][ii]<>1 then
+      if D[ii][ii]>1 then
+        Add(torposs, ii);
+        Add(torsionfag, D[ii][ii]);
+        Add(torsiongensreps, Tinv[ii]);
+      elif D[ii][ii]=0 then
+        Add(freeposs, ii);
+        Add(freebasisreps, Tinv[ii]);
+      else beep(5287827);
+      fi;
+    fi;
+  od;
+  for ii in [Dsize+1..rankL] do
+    Add(freeposs, ii);
+    Add(freebasisreps, Tinv[ii]);
+  od;
+  #
+  if freeposs=[] then
+    phifree:=[];
+  else
+    phifree:=SubMatrix(T, [1..rankL], freeposs);
+    if Length(freebasisreps)+Rank(matM)<>rankL then beep(282811); fi;
+  fi;
+  if torposs=[] then
+    phitorsion:=[];
+  else
+    phitorsion:=SubMatrix(T, [1..rankL], torposs);
+    for ii in [1..Length(torposs)-1] do
+      if torsionfag[ii+1] mod torsionfag[ii]<>0 then beep(9291); fi;
+    od;
+  fi;
+  #
+  #
+  quotrec:=rec(
+    freebasisreps:=freebasisreps,
+    torsiongensreps:=torsiongensreps,
+    torsionfag:=torsionfag,
+    phifree:=phifree,
+    phitorsion:=phitorsion
+  );
+  #
+  return(quotrec);
+end;
+
+CheckQuotientLbyM:=function(quotrec, rankL, matM)
+  #
+  local beep, rankM, tor0, tor1, thetor, tororder,
+  freebasisreps, torsiongensreps, phifree, phitorsion,
+  In, AreInMQ, AreInM, AreIsomFAG, matMplusfreebasisreps,
+  ta, vii, gii, nu, tM, ii, Zn, prlifttorsion, prliftfree;
+  #
+  beep:=function(beepnumb)
+    localbeep("CheckQuotientLbyM", beepnumb); Error();
+  end;
+  #
+  In:=IdentityMat(rankL);
+  Zn:=NullMat(rankL, rankL);
+  #
+  if matM=[] then
+    if quotrec.freebasisreps<>In then beep(62982); fi;
+    if quotrec.torsiongensreps<>[] then beep(622982); fi;
+    if quotrec.torsionfag<>[] then beep(6227982); fi;
+    if quotrec.phifree<>In then beep(6252982); fi;
+    if quotrec.phitorsion<>[] then beep(6226982); fi;
+    return();
+  fi;
+  #
+  rankM:=Rank(matM);
+  tor0:=CokerTorsion(matM);
+  tororder:=Product(tor0);
+  #
+  #
+  AreInMQ:=function(vs)
+    local tM;
+    tM:=CopyAppend(matM, vs);
+    return(rankM=Rank(tM));
+  end;
+  AreInM:=function(vs)
+    local tM, tg;
+    tM:=CopyAppend(matM, vs);
+    tg:=Product(CokerTorsion(tM));
+    return(rankM=Rank(tM) and tg=tororder);
+  end;
+  AreIsomFAG:=function(fag1, fag2)
+    return(NewNormalFAG(fag1).nrmfag=NewNormalFAG(fag2).nrmfag);
+  end;
+  #
+  #
+  freebasisreps:=quotrec.freebasisreps;
+  torsiongensreps:=quotrec.torsiongensreps;
+  phifree:=quotrec.phifree;
+  phitorsion:=quotrec.phitorsion;
+  thetor:=quotrec.torsionfag;
+  for ii in [1..Length(thetor)-1] do
+    if  thetor[ii]<=1 then beep(9211); fi;
+    if  thetor[ii+1]=0 then beep(9311); fi;
+    if thetor[ii+1] mod thetor[ii]<>0 then beep(9291); fi;
+  od;
+  #
+  if Length(freebasisreps)<>rankL-rankM then beep(915); fi;
+  matMplusfreebasisreps:=CopyAppend(matM, freebasisreps);
+  if Rank(matMplusfreebasisreps)<>rankL then beep(76782); fi;
+  tor1:=CokerTorsion(matMplusfreebasisreps);
+  if not AreIsomFAG(tor0, thetor) then beep(29269); fi;
+  if not AreIsomFAG(tor1, thetor) then beep(69269); fi;
+  #
+  if not AreInMQ(torsiongensreps) then beep(3773); fi;
+  if phifree=[] then
+    prliftfree:=Zn;
+    if freebasisreps<>[] then beep(77782); fi;
+  else
+    prliftfree:=phifree*freebasisreps;
+  fi;
+  if phitorsion=[] then
+    if torsiongensreps<>[] then beep(8331); fi;
+    prlifttorsion:=Zn;
+  else
+    prlifttorsion:=phitorsion*torsiongensreps;
+  fi;
+  if not AreInMQ(In-prliftfree) then beep(752782); fi;
+  if not AreInM(In-prliftfree-prlifttorsion) then beep(7522); fi;
+  #
+  tM:=CopyAppend(matMplusfreebasisreps, torsiongensreps);
+  if RemoveZeroVectsIntMat(HermiteNormalFormIntegerMat(tM))<>In then
+    beep(9292);
+  fi;
+  for ii in [1..Length(thetor)] do
+    gii:=thetor[ii];
+    vii:=torsiongensreps[ii];
+    for nu in [1..gii] do
+      tM:=CopyAdd(matMplusfreebasisreps, nu*vii);
+      ta:=Product(CokerTorsion(tM));
+      if ta<>tororder*GcdInt(gii, nu)/gii then beep(8123); fi;
+    od;
+  od;
+  #
+  return(true);
+end;
+
+
+EasyNormalFAG:= function(A)
+	#
+	# NormalFAG means the representation of finite abelian group
+	# that satisfies the successive-divisibility condision.
+	#
+	local leng, oldD, snf, D,
+	newD, ii;
+	#
+	leng:=Length(A);
+	oldD:=DiagonalMats(List(A, aa->[[aa]]));
+	snf:=SmithNormalFormIntegerMatTransforms(oldD);
+	D:=snf.normal;
+	newD:=[];
+	for ii in [1..leng] do
+		if D[ii][ii]>1 then
+			Add(newD, D[ii][ii]);
+		fi;
+	od;
+	return(newD);
+end;
+
+
+NormalFagElement:=function(fag, tv)
+  local ii, leng;
+  leng:=Length(fag);
+  if not IsIntVect(tv) then beep(692692); fi;
+  if Length(tv)<>leng then beep(29629); fi;
+  return(List([1..leng], ii-> tv[ii] mod fag[ii]));
+end;
+
+
+AllFagElements:=function(fag)
+  local ii, leng, ll, elms;
+  leng:=Length(fag);
+  ll:=List([1..leng], ii->[0..fag[ii]-1]);
+  elms:=Cartesian(ll);
+  if Length(Set(elms))<>Product(fag) then beep(62963); fi;
+  return(elms);
+end;
+
+####################
+#2025/02/19
+####################
+
+NormalFAGrec:= function(A)
+	#
+	# NormalFAG means the representation of finite abelian group
+	# that satisfies the successive-divisibility condition.
+	# based on NormalFAG in DiscriminantForms.txt
+  #
+	local leng, oldD, snf, D, tT, Tinv,
+	newD, told2new, old2new, new2old, ii, fagrec;
+	#
+	leng:=Length(A);
+	oldD:=DiagonalMats(List(A, aa->[[aa]]));
+	snf:=SmithNormalFormIntegerMatTransforms(oldD);
+	D:=snf.normal;
+	Tinv:=InverseMat(snf.coltrans);
+	tT:=TransposedMat(snf.coltrans);
+	newD:=[];
+	told2new:=[];
+	new2old:=[];
+	for ii in [1..leng] do
+		if D[ii][ii]>1 then
+			Add(newD, D[ii][ii]);
+			Add(new2old, Tinv[ii]);
+			Add(told2new, tT[ii]);
+		fi;
+	od;
+	old2new:=TransposedMatMutable(told2new);
+	MatmodDiscg(new2old, A);
+	MatmodDiscg(old2new, newD);
+  fagrec:=rec(
+    newD:=newD,
+    old2new:=old2new,
+    new2old:=new2old
+  );
+	return(fagrec);
+end;
+
+
+#end

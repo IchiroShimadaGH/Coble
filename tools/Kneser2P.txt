@@ -1,0 +1,162 @@
+#Read("Kneser2P.txt"); #P is print
+
+RandomFindvs:=function(Gram, p)
+	#
+	local n, tv, aa, bb, tv2, sol;
+	#
+	n:=Length(Gram);
+	while true do
+		tv:=RandomVect(n) mod p;
+		aa:=tv*Gram*tv;
+		if aa mod p =0 then
+			bb:=-aa/p/2 mod p;
+			tv2:=SolAbModp([tv*Gram], [bb], p).asol;
+			sol:=tv+p*tv2;
+			if sol*Gram*sol mod p^2<>0 then beep(44233); fi;
+			if not IsZeroVect(sol mod p) then
+				return(sol);
+			fi;
+		fi;
+	od;
+end;
+
+DoesContainARoot:=function(posGram)
+  return(ShortestVectors(posGram, 2).vectors<>[]);
+end;
+
+
+Kneighbor:=function(Gram, v, p, det)
+	local n, zv, Lv, newbasis, newGram;
+	#
+	n:=Length(Gram);
+	Lv:=SolAbModp([v*Gram], [0], p).nullvects;
+	newbasis:=p^2*IdentityMat(n);
+	Append(newbasis, p*Lv);
+	Add(newbasis, v);
+	newbasis:=HermiteNormalFormIntegerMat(newbasis);
+	newbasis:=RemoveZeroVectsIntMat(newbasis);
+	newGram:=(1/p^2)*TMTTmult(newbasis, Gram);
+	if not IsEvenLattice(newGram) then beep(53443); fi;
+	if DeterminantIntMat(newGram)<>det then beep(43332); fi;
+	return(newGram);
+end;
+
+#AreIsomPosLats:=function(lattype1, lattype2, seed,  inivsdepth, initab)
+#MakeType:=function(tGram)
+
+Kneser2P:=function(Gram, iniseed)
+	#
+	local beep, n, det, p, tp, negcps, rest, mass,
+	localdata, flag, dd, c, types, isnew, seed, ogs, tv, oldGram, newGram,
+	kneserrecs, newogrec, makedonevs, oldrec, newtype, newHGram, fflag, counter;
+	#
+	beep:=function(beepnumb)
+		localbeep("Kneser", beepnumb); Error();
+	end;
+	#
+	seed:=iniseed;
+	#
+	n:=Length(Gram);
+	if SignatureQ(Gram)<>[n,n,0] then beep(6345); fi;
+	det:=DeterminantIntMat(Gram);
+	localdata:=LocalDataRatQF(Gram);
+	dd:=localdata.d0;
+	negcps:=localdata.negativecps;
+	tp:=3;
+	flag:=false;
+	while not flag do
+		if IsPrime(tp) then
+			if det mod tp<>0 then
+				if tp in negcps then c:=-1; else c:=1; fi;
+				if IsZeroRepresentableByFp(tp, n, dd, c) then
+						p:=tp;
+						flag:=true;
+				fi;
+			fi;
+		fi;
+		tp:=tp+1;
+	od;
+	#
+	#Printn("p found", p);
+	#
+	makedonevs:=function(tv, ogrec)
+		local orb, gensmodp, tvgii, xx, yy, ccc;
+		gensmodp:=List(ogrec.gens, xx->List(xx, yy->yy mod p));
+		orb:=[];
+		ccc:=0;
+		tvgii:=function(tvg, ii)
+			local tg;
+			ccc:=ccc+1;
+			if ccc mod 1000=0 then
+				orb:=Set(orb);
+			fi;
+			if ii>Length(gensmodp) then
+				Add(orb, tvg mod p);
+				return();
+			fi;
+			for tg in gensmodp[ii] do
+				tvgii(tvg*tg mod p, ii+1);
+			od;
+		end;
+		tvgii(tv, 1);
+		orb:=Set(orb);
+		Printn("makedonev done", Length(orb));
+		return(orb);
+	end;
+	#
+	mass:=Mass(Gram);
+	Printn("mass", mass);
+	newogrec:=OGPosLat(Gram, 1,1);
+	newogrec.donevs:=[];
+	newogrec.type:=MakeType(Gram);
+	kneserrecs:=[newogrec];
+	rest:=mass-1/newogrec.order;
+	Printn("order", newogrec.order, "rest", rest);
+	#
+	isnew:=function(newtype)
+		local  oldtype, tg, oldrec;
+		for oldrec in kneserrecs do
+			tg:=AreIsomPosLats(oldrec.type, newtype, seed,  1, 1000); #1000 is the tab
+			if tg<>false then return(false); fi;
+		od;
+		if Mass(newGram)<>mass then beep(443445); fi;
+		return(true);
+	end;
+	#
+	fflag:=false;
+	counter:=0;
+	while rest>0 and not fflag do
+		counter:=counter+1;
+		Reset(GlobalMersenneTwister, seed);
+		oldrec:=Random(kneserrecs);
+		tv:=RandomFindvs(oldrec.Gram, p);
+		if not tv mod p in oldrec.donevs then
+			newGram:=Kneighbor(oldrec.Gram, tv, p, det);
+			newtype:=MakeType(newGram);
+			Append(oldrec.donevs, makedonevs(tv, oldrec));
+			if isnew(newtype) then Printn("new", counter);
+				newogrec:=OGPosLat(newGram, seed,1);
+				newogrec.donevs:=[];
+				rest:=rest-1/newogrec.order;
+				Printn("order", newogrec.order, "rest", rest);
+				newogrec.type:=newtype;
+				Add(kneserrecs, newogrec);
+				if not DoesContainARoot(newGram) then
+					Printn("counter", counter, newGram);
+					#fflag:=true;
+					newHGram:=-newGram;
+				fi;
+			else
+				Printn("not new", counter);
+			fi;
+		fi;
+		seed:=seed+1;
+	od;
+	if fflag then return(newHGram); fi;
+	if rest<>0 then beep(326523653); fi;
+	return(false);
+end;
+
+
+
+#end

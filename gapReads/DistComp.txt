@@ -1,0 +1,90 @@
+##############################
+
+#ANNW
+_DistCompStatus:=[];
+
+DistCompControl:=function(number_of_threads, number_of_inputs, intervalsec)
+	local donenumbs, onnumbs, numb, fn, flag, pcnumb,  dtnumb, st, 
+	dtflag, results, xx, beep, cc;
+	#
+	beep:=function(beepnumb)
+		Printn("wrong in DistCompControl", beepnumb); Error();
+	end;
+	#
+	donenumbs:=[];
+	onnumbs:=[1..number_of_threads];
+	results:=List([1..number_of_inputs], ii->"not yet");
+	for numb in [1..number_of_threads] do
+		fn:=Concatenation("./DistComp/process", String(numb), ".txt");
+		PrintTo(fn, "_DistCompStatus:=", [numb, "on"], ";\n");
+	od;
+	flag:=true;
+	cc:=0;
+	while flag do
+		flag:=false;
+		for pcnumb in [1..number_of_threads] do
+			fn:=Concatenation("./DistComp/process", String(pcnumb), ".txt");
+			Read(fn);
+			if _DistCompStatus[2]="done" then
+				Printn("___DistCompControl", pcnumb, _DistCompStatus[1], _DistCompStatus[2]);
+				flag:=true;
+				results[_DistCompStatus[1]]:=[_DistCompStatus[1], _DistCompStatus[3]];
+				Add(donenumbs, _DistCompStatus[1]);
+				#
+				savedataas(results, "DistCompTempResults");
+				#
+				dtflag:=false;
+				for dtnumb in [1..number_of_inputs] do
+					if (not dtnumb in donenumbs) and (not dtnumb in onnumbs)  then 
+						onnumbs[pcnumb]:=dtnumb;
+						PrintTo(fn, "_DistCompStatus:=", [dtnumb, "on"], ";\n");
+						dtflag:=true;
+						Printn("___DistCompControl", pcnumb, dtnumb, "on");
+						break; #from for dtnumb in [1..number_of_inputs]
+					fi;
+				od;
+				if not dtflag then
+					PrintTo(fn, "_DistCompStatus:=", [-1, "stop"], ";\n");
+				fi;
+			elif _DistCompStatus[2]="on" then
+				flag:=true;
+			else if _DistCompStatus[2]<>"stop" then beep(1); fi;
+			fi;	
+		od;
+		st:=Runtime();
+		while Runtime()-st < 1000*intervalsec do
+			#ReturnNothing();
+		od;
+		cc:=cc+1;
+		if cc mod 100= 0 then
+			Printn("___DistCompControl__onnumbs", onnumbs);
+		fi;
+	od;
+	if not IsEqualSet(donenumbs, [1..number_of_inputs]) then
+		beep(2);
+	fi;
+	if List(results, xx->xx[1])<>[1..number_of_inputs] then
+		beep(3);
+	fi;
+	return(List(results, xx->xx[2]));
+end;
+
+
+DistCompWorker:=function(threadnumb, inputs, process,  intervalsec)
+	local fn, result, st;
+	fn:=Concatenation("./DistComp/process", String(threadnumb), ".txt");
+	Read(fn);
+	while _DistCompStatus[2]<>"stop" do
+		if _DistCompStatus[2]="on" then
+			Printn("start DistCompWorker", _DistCompStatus[1]);
+			result:=process(inputs[_DistCompStatus[1]]);
+			PrintTo(fn, "_DistCompStatus:=", [_DistCompStatus[1], "done", result], ";\n");
+			Printn("____________________");
+		fi;
+		st:=Runtime();
+		while Runtime()-st < 1000*intervalsec do
+			#ReturnNothing();
+		od;
+		Read(fn);
+	od;
+end;

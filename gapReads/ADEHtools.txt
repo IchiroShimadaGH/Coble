@@ -1,0 +1,254 @@
+#Read("ADEHtools.txt");
+
+
+
+
+
+
+
+##############
+
+ADEHrank:=function(typelist)
+	return(Sum(List(typelist, tR->ADEHrec.(tR).rank)));
+end;
+
+ADEHGram:=function(typelist)
+	return(DiagonalMats(List(typelist, tR->ADEHrec.(tR).Gram)));
+end;
+
+ADEHdualGram:=function(typelist)
+	return(DiagonalMats(List(typelist, tR->ADEHrec.(tR).dualGram)));
+end;
+
+ADEHdisc:=function(typelist)
+	return(Product(List(typelist, tR->ADEHrec.(tR).disc)));
+end;
+
+ADEHdiscg:=function(typelist)
+	return(Concatenation(List(typelist, tR->ADEHrec.(tR).discg)));
+end;
+
+
+##############
+# Pos and Neg are separated 2017 Aug 21
+###################
+
+PosADEHdiscf:=function(typelist)
+	return(DiagonalMats(List(typelist, tR->ADEHrec.(tR).discf)));
+end;
+
+NegADEHdiscf:=function(typelist)
+	return(CopyNormalDiscf(DiagonalMats(List(typelist, tR->(-1)*ADEHrec.(tR).discf))));
+end;
+
+ADEHreps:=function(typelist)
+	local tR, iniE8flag, ii, newreps;
+	tR:=typelist[1];
+	if tR="E8" then
+		iniE8flag:=true;
+		newreps:=NullMat(1, 8); # dummy row
+	else
+		iniE8flag:=false;
+		newreps:=ADEHrec.(tR).reps;
+	fi;
+	for ii in [2..Length(typelist)] do
+		tR:=typelist[ii];
+		if tR="E8" then
+			newreps:=ConcatMats(newreps, NullMat(Length(newreps), 8));
+		else
+			newreps:=DiagonalMats([newreps, ADEHrec.(tR).reps]);
+		fi;
+	od;
+	if iniE8flag then
+		Remove(newreps, 1);  # remove the dummy row
+	fi;
+	return(newreps);
+end;
+
+ADEHreps_dual:=function(typelist)
+	local tR, iniE8flag, ii, newrepsdual;
+	tR:=typelist[1];
+	if tR="E8" then
+		iniE8flag:=true;
+		newrepsdual:=NullMat(1, 8); # dummy row
+	else
+		iniE8flag:=false;
+		newrepsdual:=ADEHrec.(tR).reps_dual;
+	fi;
+	for ii in [2..Length(typelist)] do
+		tR:=typelist[ii];
+		if tR="E8" then
+			newrepsdual:=ConcatMats(newrepsdual, NullMat(Length(newrepsdual), 8));
+		else
+			newrepsdual:=DiagonalMats([newrepsdual, ADEHrec.(tR).reps_dual]);
+		fi;
+	od;
+	if iniE8flag then
+		Remove(newrepsdual, 1);  # remove the dummy row
+	fi;
+	return(newrepsdual);
+end;
+
+
+ADEHproj:=function(typelist)
+	local tR, iniE8flag, ii, newproj;
+	tR:=typelist[1];
+	if tR="E8" then
+		iniE8flag:=true;
+		newproj:=NullMat(8, 1); # dummy column
+	else
+		iniE8flag:=false;
+		newproj:=ADEHrec.(tR).proj;
+	fi;
+	for ii in [2..Length(typelist)] do
+		tR:=typelist[ii];
+		if tR="E8" then
+			newproj:=StackMats(newproj, NullMat(8, Length(newproj[1])));
+		else
+			newproj:=DiagonalMats([newproj, ADEHrec.(tR).proj]);
+		fi;
+	od;
+	if iniE8flag then
+		List(newproj, vv->Remove(vv, 1));  # remove the dummy column
+	fi;
+	if IsEqualSet(newproj, [[]]) then newproj:=[[]]; fi;
+	return(newproj);
+end;
+
+
+ADEHproj_dual:=function(typelist)
+	local tR, iniE8flag, ii, newprojdual;
+	tR:=typelist[1];
+	if tR="E8" then
+		iniE8flag:=true;
+		newprojdual:=NullMat(8, 1); # dummy column
+	else
+		iniE8flag:=false;
+		newprojdual:=ADEHrec.(tR).proj_dual;
+	fi;
+	for ii in [2..Length(typelist)] do
+		tR:=typelist[ii];
+		if tR="E8" then
+			newprojdual:=StackMats(newprojdual, NullMat(8, Length(newprojdual[1])));
+		else
+			newprojdual:=DiagonalMats([newprojdual, ADEHrec.(tR).proj_dual]);
+		fi;
+	od;
+	if iniE8flag then
+		List(newprojdual, vv->Remove(vv, 1));  # remove the dummy column
+	fi;
+	if IsEqualSet(newprojdual, [[]]) then newprojdual:=[[]]; fi;
+	return(newprojdual);
+end;
+
+##############
+# Pos and Neg are separated 2017 Aug 21
+###################
+
+
+PosADEHdiscrec:=function(typelist)
+	return(
+		rec(
+			discg:=ADEHdiscg(typelist),
+			discf:=PosADEHdiscf(typelist),
+			reps:=ADEHreps(typelist),
+			proj:=ADEHproj(typelist),
+			reps_dual:=ADEHreps_dual(typelist),
+			proj_dual:=ADEHproj_dual(typelist)
+		)
+	);
+end;
+
+NegADEHdiscrec:=function(typelist)
+	local newprojdual, discg;
+	discg:=ADEHdiscg(typelist);
+	newprojdual:=CopyMatmodDiscg((-1)*ADEHproj_dual(typelist), discg);
+	return(
+		rec(
+			discg:=discg,
+			discf:=NegADEHdiscf(typelist),
+			reps:=ADEHreps(typelist),
+			proj:=ADEHproj(typelist),
+			reps_dual:=(-1)*ADEHreps_dual(typelist),
+			proj_dual:=newprojdual
+		)
+	);
+end;
+
+
+ADEHroots:=function(typelist)
+	if not 'H' in List(typelist, tR->ADEHrec.(tR).type) then 
+		return(DiagonalMats(List(typelist, tR->ADEHrec.(tR).roots)));
+	else
+		return([]);
+	fi;
+end;
+
+
+ADEHrootnumb:=function(typelist)
+	if not 'H' in List(typelist, tR->ADEHrec.(tR).type) then 
+		return(Sum(List(typelist, tR->ADEHrec.(tR).rootnumb)));
+	else
+		return(0);
+	fi;
+end;
+
+
+indecompADEsorter:=function(rt1, rt2)
+	local pos1, pos2;
+	pos1:=Position(theADEHlist, rt1);
+	pos2:=Position(theADEHlist, rt2);
+	if pos1<pos2 then return(true);
+	elif pos1>pos2 then return(false);
+	fi;
+	return(true);
+end;
+
+
+ADEsorter:=function(typelist1, typelist2)
+	local rank1, rank2, rt1, rt2, pos1, pos2, ii;
+	rank1:=ADEHrank(typelist1);
+	rank2:=ADEHrank(typelist2);
+	if rank1>rank2 then return(true);
+	elif rank1<rank2 then return(false);
+	else
+		for ii in [1..Minimum(Length(typelist1), Length(typelist2))] do
+			rt1:=typelist1[ii];
+			rt2:=typelist2[ii];
+			if rt1<>rt2 then
+				pos1:=Position(theADEHlist, rt1);
+				pos2:=Position(theADEHlist, rt2);
+				if pos1<pos2 then return(true);
+				elif pos1>pos2 then return(false);
+				fi;
+			fi;
+		od;
+	fi;
+	return(true);
+end;
+
+###############################
+
+ADElatex:=function(ADEtype)
+	local  tR, chunks, str, pos, tRcc, cc, r;
+	chunks:=toMultiSet(ADEtype);
+	str:=[];
+	pos:=1;
+	for tRcc in chunks do
+		if pos>1 then Add(str, '+'); fi;
+		cc:=tRcc[2];
+		tR:=tRcc[1];
+		if cc>1 then
+			Append(str, String(cc));
+		fi;
+		Add(str, ADEHrec.(tR).type);
+		Append(str, "_{");
+		r:=ADEHrec.(tR).rank;
+		Append(str, String(r));
+		Append(str, "}");
+		pos:=pos+1;
+	od;
+	return(str);
+end;
+
+

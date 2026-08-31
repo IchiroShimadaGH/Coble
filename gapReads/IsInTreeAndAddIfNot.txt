@@ -1,0 +1,240 @@
+#Read("IsInTreeAndAddIfNot.txt");
+
+#tree is rec(nodes:=[], subtrees:=[]);
+
+IsInTreeAndAddIfNot:=function(tree, tv)
+  #
+  local flag, leng, task;
+  #
+  flag:=true;
+  leng:=Length(tv);
+  #
+  task:=function(pos, ttree)
+    #
+    local aa,aapos, newttree;
+    #
+    if pos>leng+1 then
+      return();
+    fi;
+    if pos=leng+1 then
+      aa:="eov"; # end of a vector
+    else
+      aa:=tv[pos];
+    fi;
+    if flag then
+      if aa in ttree.nodes then
+        aapos:=Position(ttree.nodes, aa);
+        newttree:=ttree.subtrees[aapos];
+      else
+        flag:=false;
+        Add(ttree.nodes, aa);
+        newttree:=rec(nodes:=[], subtrees:=[]);
+        Add(ttree.subtrees, newttree);
+      fi;
+    else
+      Add(ttree.nodes, aa);
+      newttree:=rec(nodes:=[], subtrees:=[]);
+      Add(ttree.subtrees, newttree);
+    fi;
+    task(pos+1, newttree);
+  end;
+  task(1, tree);
+  return(flag);
+end;
+
+NopsTree:=function(tree)
+  local nops, pos, aa;
+  nops:=0;
+  pos:=0;
+  for aa in tree.nodes do
+    pos:=pos+1;
+    if aa="eov" then
+      nops:=nops+1;
+    else
+      nops:=nops+NopsTree(tree.subtrees[pos]);
+    fi;
+  od;
+  return(nops);
+end;
+
+IsInTreeAndAddDataIfNot:=function(tree, tv, data)
+  #
+  #
+  # return false if it is not in the tree,
+  # it DOES add tv in the tree and add the data in the tree.
+  #
+  local flag, leng, task, tdata;
+  #
+  flag:=true;
+  leng:=Length(tv);
+  #
+  task:=function(pos, ttree)
+    #
+    local aa,aapos, newttree;
+    #
+    if pos>leng+1 then
+      return();
+    fi;
+    if pos=leng+1 then
+      aa:="eov"; # end of a vector
+    else
+      aa:=tv[pos];
+    fi;
+    if flag then
+      if aa in ttree.nodes then
+        aapos:=Position(ttree.nodes, aa);
+        newttree:=ttree.subtrees[aapos];
+        if aa="eov" then
+          tdata:=newttree.data;
+        fi;
+      else
+        flag:=false;
+        Add(ttree.nodes, aa);
+        if aa<>"eov" then
+          newttree:=rec(nodes:=[], subtrees:=[]);
+        else
+          newttree:=rec(nodes:=[], subtrees:=[], data:=data);
+        fi;
+        Add(ttree.subtrees, newttree);
+      fi;
+    else
+      Add(ttree.nodes, aa);
+      if aa<>"eov" then
+        newttree:=rec(nodes:=[], subtrees:=[]);
+      else
+        newttree:=rec(nodes:=[], subtrees:=[], data:=data);
+      fi;
+      Add(ttree.subtrees, newttree);
+    fi;
+    task(pos+1, newttree);
+  end;
+  task(1, tree);
+  if flag then
+    return(tdata);
+  else
+    return(false);
+  fi;
+end;
+
+################# Add 2022/04/09
+#Read("NewIsInTreeTools.txt");
+#IsInTreeAndAddIfNot
+#IsInTreeAndAddDataIfNot
+#NopsTree
+##################
+
+IsInTree:=function(tree, tv)
+  #
+  local flag, leng, task,newttree;
+  #
+  flag:=true;
+  leng:=Length(tv);
+  #
+  task:=function(pos, ttree)
+    #
+    local aa,aapos;
+    #
+    if pos=leng+1 then
+      aa:="eov"; # end of a vector
+    elif pos<=leng then
+      aa:=tv[pos];
+    else
+      return();
+    fi;
+    if aa in ttree.nodes then
+      aapos:=Position(ttree.nodes, aa);
+      newttree:=ttree.subtrees[aapos];
+			task(pos+1, newttree);
+    else
+      flag:=false;
+			return();
+    fi;
+  end;
+  task(1, tree);
+  return(flag);
+end;
+
+
+IsInTreeAndGetDataIfItIs:=function(tree, tv)
+  #
+  # return false if tv is not in the tree, and
+  # not add tv in the tree.
+  #
+  local flag, leng, task, tdata;
+  #
+  flag:=true;
+  leng:=Length(tv);
+  #
+  task:=function(pos, ttree)
+    #
+    local aa,aapos, newttree;
+    #
+    if pos=leng+1 then
+      aa:="eov"; # end of a vector
+    elif pos<=leng then
+      aa:=tv[pos];
+    else
+      return();
+    fi;
+    if aa in ttree.nodes then
+      aapos:=Position(ttree.nodes, aa);
+      newttree:=ttree.subtrees[aapos];
+      if aa="eov" then
+        tdata:=newttree.data;
+      else
+        task(pos+1, newttree);
+      fi;
+    else
+      flag:=false;
+			return();
+    fi;
+  end;
+  task(1, tree);
+  if flag then
+    return(tdata);
+  else
+    return(false);
+  fi;
+end;
+
+ElmsInTree:=function(ttree, arg...)
+  #
+  local beep, LL, ttask, stask, nopsarg;
+  #
+  beep:=function(beepnumb)
+    localbeep("ElmsInTree", beepnumb); Error();
+  end;
+  #
+  if Length(arg)=0 then
+    LL:=[];
+    ttask:=function(tv) Add(LL, tv); end;
+    nopsarg:=1;
+  elif Length(arg)=1 then
+    ttask:=arg[1];
+    nopsarg:=NumberArgumentsFunction(ttask);
+    if not nopsarg in [1,2] then beep(69866); fi;
+  else beep(63567);
+  fi;
+  #
+  stask:=function(partial, subtree)
+    local pos, aa;
+    pos:=0;
+    for aa in subtree.nodes do
+      pos:=pos+1;
+      if aa="eov" then
+        if nopsarg=1 then ttask(partial);
+        else ttask(partial, subtree.subtrees[pos].data);
+        fi;
+      else
+        stask(CopyAdd(partial, aa), subtree.subtrees[pos]);
+      fi;
+    od;
+  end;
+  #
+  stask([], ttree);
+  #
+  if Length(arg)=0 then return(LL); else return(); fi;
+end;
+
+
+#end

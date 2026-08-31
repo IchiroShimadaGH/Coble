@@ -1,0 +1,99 @@
+#Read("AdjTools.txt");
+
+IsRatCurve:=function(vS)
+  local nS, aa, a, avS;
+  nS:=vS*GramS*vS;
+  aa:=-2/nS;
+  a:=SqRoot(aa); #in gaptools.txt
+  if IsInt(a) then
+    avS:=a*vS;
+    if IsIntVect(avS) and avS*GramS*avS=-2 then
+      return(true);
+    fi;
+  fi;
+  return(false);
+end;
+
+
+MoveToTheOppositeChamber:=function(LGrec, nRvRsrec, nowweyl, rS)
+  #
+  local beep, tg, GramL, GramS, GramSdual, embSdual, nowweyldual,vRInL,
+  rSdual, rSdualprim, primnS, passingLwalls, kk, kkprinmnS, kkrSdualprim,
+  nR, vRInLs, vL, ss, perturbdegs, kkprimnS, tgS, reflmatL, id26, kkrSprimInL, embS;
+  #
+  beep:=function(beepnumb)
+    localbeep("MoveToTheOppositeChamber", beepnumb); Error();
+  end;
+  #
+  GramL:=LGrec.Gram;
+  GramS:=LGrec.Gram1;
+  GramSdual:=LGrec.Gram1dual;
+  embSdual:=LGrec.emb1_dual;
+  # in terms of the dual basis of Sdual to the standard basis of L26
+  embS:=LGrec.emb1;
+  # in terms of dual basis of Sdual to the standard basis of L26
+  nowweyldual:=nowweyl*GramL;
+  #
+  rSdual:=rS*GramS;
+  if not IsIntVect(rSdual) then beep(68821); fi;
+  rSdualprim:=MakePrimitiveIntVect(rSdual)[2];
+  primnS:=rSdualprim*GramSdual*rSdualprim;
+  if not primnS<0 then beep(188127); fi;
+  #
+  passingLwalls:=[];
+  kk:=0;
+  kkprimnS:=0;
+  kkrSdualprim:=MakeZeroVect(Length(GramS));
+  while kkprimnS>=-2 do
+    if kkprimnS=-2 then beep(6916817); fi;
+    # (rS)\sperp should not be ((-2)-vect)\sperp
+    nR:=-2-kkprimnS;
+    if nR in nRvRsrec.nRs then
+      kkrSprimInL:=kkrSdualprim*embSdual;
+      vRInLs:=nRvRsrec.vRInLss[SinglePosition(nRvRsrec.nRs, nR)];
+      for vRInL in vRInLs do
+        vL:=kkrSprimInL+vRInL;
+        if vL*GramL*vL<>-2 then beep(1881181); fi;
+        if IsIntVect(vL) then
+          ss:=nowweyldual*vL;
+          if ss>0 then
+            Add(passingLwalls, vL);
+          elif ss<0 then
+            Add(passingLwalls, -vL);
+          else beep(616191);
+          fi;
+        fi;
+      od;
+    fi;
+    #
+    kk:=kk+1;
+    kkprimnS:=kk^2*primnS;
+    kkrSdualprim:=kkrSdualprim+rSdualprim;
+    #
+  od;
+  #
+  if passingLwalls=[] then beep(91911); fi;
+  passingLwalls:=Set(passingLwalls);
+  Printn("ADE type of passingLwalls", GetRootType(GramL, passingLwalls));
+  #
+  perturbdegs:=List(passingLwalls, tr->tr/(nowweyldual*tr));
+  SortParallel(perturbdegs, passingLwalls);
+  #
+  id26:=IdentityMat(26);
+  reflmatL:=function(rv)
+    local tv, rvdual;
+    rvdual:=rv*GramL;
+    return(List(id26, tv->tv+(tv*rvdual)*rv));
+  end;
+  tg:=Product(passingLwalls, reflmatL);
+  #
+  if TMTTmult(tg, GramL)<>GramL then beep(551852); fi;
+  #
+  return(tg);
+end;
+
+
+
+
+
+#end;

@@ -1,0 +1,342 @@
+#Read("./gapReads/EasyBorcherds.txt");
+
+#Read("./gapReads/ADEautconfig.txt");
+
+
+globalprintlevel:=2;
+globalchecklevel:=2;
+
+
+
+
+Make_nRvRs:=function(tGramRdual)
+	#
+	# make the list of [nR, the list of int vects in tGramRdual with sqnorm nR],
+	# where -2 < nR <= 0.
+	#
+	local svrec;
+	svrec:=ShortestVectors((-1)*tGramRdual, 2);
+	if Length(svrec.vectors)=0 then Printn("wrong in Make_nRvRs"); Error(); fi;
+	return(ClassifyByTags(MakeFullShortestVectors(tGramRdual, svrec), vv->vv*tGramRdual*vv));
+end;
+
+Make_nRvRinLs:=function(thenRvRs, LGrec)
+	local thenRvRinLs, nRvRs;
+	thenRvRinLs:=[];
+	for nRvRs in thenRvRs do
+		Add(thenRvRinLs, [nRvRs[1], List(nRvRs[2], xx->xx*LGrec.emb2_dual)]);
+	od;
+	return(thenRvRinLs);
+end;
+
+
+Make_nRaRembvRs:=function(tw, LGrec, thenRvRs)
+	#
+	# make the list of [nR, the list [aR, the list of embL(v)]] (tree),
+	# where v is a vector in Rdual such that
+	# sqnorm is nR and reldeg with repect to tw is aR.
+	#
+	# used in Make_navSdata() below.
+	#
+	local twR, twdeg, ttlist, nRvRs, tlist, aRvss, aRvs;
+	#
+	twR:=tw*LGrec.proj2;
+	twdeg:=function(vv) return(vv*twR); end;
+	# vv will be elements of GramRdual.
+	#
+	ttlist:=[];
+	for nRvRs in thenRvRs do
+		aRvss:=ClassifyByTags(List(nRvRs[2]), twdeg);
+		for aRvs in aRvss do #aRvs[2] is an element of Rdual
+			Apply(aRvs[2], vv->vv*LGrec.emb2_dual);
+		od;
+		Add(ttlist, [nRvRs[1], aRvss]);
+	od;
+	return(ttlist);
+end;
+
+
+
+check_nRaRembvRs:=function(tw,  LGrec, tnRaRembvRslist)
+	#
+	# tnRaRembvRslist is made by Make_nRaRembvRs.
+	# used in Make_navSdata(), after Make_nRaRembvRs.
+	#
+	local beep, GramRdual,svrec, tlist, t2list, navs, nR, avs, aR, v, twdual,
+	GramL;
+	#
+	beep:=function(beepn) Printn("wrong in check_nRaRembvRs", beepn);Error(); end;
+	#
+	GramRdual:=LGrec.Gram2dual;
+	svrec:=ShortestVectors((-1)*GramRdual, 2);
+	tlist:=MakeFullShortestVectors(GramRdual, svrec);
+	Apply(tlist, vv->vv*LGrec.emb2_dual);
+	t2list:=[];
+	GramL:=LGrec.Gram;
+	twdual:=tw*GramL;
+	for navs in tnRaRembvRslist do
+		nR:=navs[1];
+		for avs in navs[2] do
+			aR:=avs[1];
+			for v in avs[2] do
+				if v*GramL*v<>nR then beep(1); fi;
+				if twdual*v<>aR then beep(2); fi;
+				Add(t2list, CopyVect(v));
+			od;
+		od;
+	od;
+	if not IsEqualSet(tlist, t2list) then beep(0); Error(); fi;
+	#if globalprintlevel>1 then
+	#	Printn("check_nRaRembvRs done: this should be removed");
+	#fi;
+	return(true);
+end;
+
+
+navSdata_sorter:=function(a, b)
+	#
+	# The order of navSdata should be UNIQUE.
+	# tags are all distinct by the definition.
+	#
+	local taga, tagb;
+	taga:=a[1]; tagb:=b[1];
+	if taga[5]<tagb[5] then return(true); # number of vectors in SXdual
+	elif taga[5]>tagb[5] then return(false);
+	else
+		if taga[1]<tagb[1] then return(true);  # nS
+		elif taga[1]>tagb[1] then return(false);
+		else
+			if taga[2]<tagb[2] then return(true); # aS
+			elif taga[2]>tagb[2] then return(false);
+			else
+				if taga[3]<tagb[3] then return(true);
+				# gcd of the components of a vector in SXdual
+				elif taga[3]>tagb[3] then return(false);
+				else
+					if taga[4]<tagb[4] then return(true);
+					# number of rL for each vector in SXdual
+					elif taga[4]>tagb[4] then return(false);
+					else
+						Printn("in navSdata_sorter:");
+						## tags are all distinct by the definition.
+						Error();
+					fi;
+				fi;
+			fi;
+		fi;
+	fi;
+	return(true);
+end;
+
+
+check_navSdata:=function(navSdata, LGrec, tw)
+	local beep, GramL, GramSdual, twdual, twS, navS, nS, aS, gcd, nopslift,
+	nopsvect, rSrLs, rSdual, rL, tnavSdata;
+	#
+	beep:=function(beepn) Printn("wrong in check_navSdata", beepn);Error(); end;
+	#
+	GramL:=LGrec.Gram;
+	GramSdual:=LGrec.Gram1dual;
+	twdual:=tw*GramL;
+	twS:=tw*LGrec.proj1;
+	for navS in navSdata do
+		nS:=navS[1][1];
+		aS:=navS[1][2];
+		gcd:=navS[1][3];
+		nopslift:=navS[1][4];
+		nopsvect:=navS[1][5];
+		if Length(navS[2])<>nopsvect then beep(1); fi;
+		if nS>=0 then beep(2); fi;
+		for rSrLs in navS[2] do
+			rSdual:=rSrLs[1];
+			if gcd<>Lgcd(rSdual) then beep(3); fi;
+			if nopslift<>Length(rSrLs[2]) then beep(4); fi;
+			if rSdual*GramSdual*rSdual<>nS then beep(8); fi;
+			if rSdual*twS<>aS then beep(9); fi;
+			for rL in rSrLs[2] do
+				if rL*GramL*rL<>-2 then beep(5); fi;
+				if rL*twdual<>1 then beep(6); fi;
+				if rL*LGrec.proj1_dual<>rSdual  then beep(7); fi;
+			od;
+		od;
+	od;
+	#
+	tnavSdata:=List(navSdata);
+	Sort(tnavSdata, navSdata_sorter);
+	if tnavSdata<>navSdata then
+		beep(10);
+	fi;
+	#if globalprintlevel>1 then
+	#	Printn("check_navSdata done: this should be removed");
+	#fi;
+	return(true);
+end;
+
+Make_navSdata:=function(tw, LGrec, thenRvRs)
+	#
+	#
+	# The output is navSdata,
+	# a list of navS sorted by navSdata_sorter.
+	#
+	# Each item navS in navSdata is
+	# a pairs of
+	# navS[1] =[nS, aS, gcd, nopslift, nopsvect] (called tag)
+	# and a list navS[2] of [a vector vS in Sdual, lifts of vS in L].
+	# nS:=navS[1][1];
+	# aS:=navS[1][2];
+	# gcd:=navS[1][3];
+	# nopslift:=navS[1][4];
+	# nopsvect:=navS[1][5];
+	#
+	# if Length(navS[2])<>nopsvect then beep(1); fi;
+	# See check_navSdata for the meaning.
+	#
+	#
+	#
+	local nRaRembvRs, twSdual, nRvRs, embSdualL, navSdata, navs, avs, aR, aS, nrSs,
+	arSs, nR, embrRs, nS, tlist, task, tagfunc, addnops_to_tag, tlistwithtags;
+	#
+	twSdual:=tw*LGrec.proj1_dual;
+	embSdualL:=LGrec.emb1_dual;
+	#
+	#Make_nRaRembvRs:=function(tw, LGrec, thenRvRs)
+	#
+	nRaRembvRs:=Make_nRaRembvRs(tw, LGrec, thenRvRs);
+	if globalchecklevel>0 then
+		#
+		#check_nRaRembvRs:=function(tw,  LGrec, tnRaRembvRslist)
+		#
+		check_nRaRembvRs(tw, LGrec,  nRaRembvRs);
+	fi;
+	navSdata:=[];
+	#
+	for navs in nRaRembvRs do
+		nR:=navs[1];
+		nS:=-2-nR;
+		if nS<0 then
+			for avs in navs[2] do
+				aR:=avs[1];
+				embrRs:=avs[2];
+				aS:=1-aR;
+				tlist:=[];
+				task:=function(trS)
+					local tembtrS,  tembrR, trL, trLs;
+					tembtrS:=trS*embSdualL;
+					trLs:=[];
+					for tembrR in embrRs do
+						trL:=tembtrS+tembrR;
+						if IsIntVect(trL) then
+							Add(trLs, trL);
+						fi;
+					od;
+					if trLs<>[] then
+						Add(tlist, [CopyVect(trS), trLs]);
+					fi;
+				end;
+				AffES(LGrec.Gram1dual, twSdual, aS, nS, true, task);
+				if Length(tlist)>0 then
+					tagfunc:=function(rSrLs)
+						return([nS, aS, Lgcd(rSrLs[1]), Length(rSrLs[2])]);
+					end;
+					tlistwithtags:=ClassifyByTags(tlist, tagfunc);
+					addnops_to_tag:=function(taglist)
+						taglist[1][5]:=Length(taglist[2]);
+						return(taglist);
+					end;
+					Apply(tlistwithtags, addnops_to_tag);
+					Append(navSdata, tlistwithtags);
+				fi;
+			od;
+		fi;
+	od;
+	Sort(navSdata, navSdata_sorter);
+	if globalchecklevel>0 then
+		#check_navSdata:=function(navSdata, LGrec, tw)
+		check_navSdata(navSdata, LGrec, tw);
+	fi;
+	return(navSdata);
+end;
+
+BorcherdsSelectWalls:=function(tlinforms)
+	#
+	# The input should be normalized as
+	# tlinforms=Set(tlinforms, lf->GetPrimitiveIntVect(lf));
+	# and does not contain a zerovector.
+	#
+	# The list of elements of tlinforms
+	# that define a wall of the cone defined by x*tfl>=0 for all tfl in tlinforms.
+	#
+	local beep, dim, tlf, walllfs, lf, wallflag,  st, ntlinforms, sst2, ccc,
+	cPrintn, n2tlinforms;
+	#
+	beep:=function(numb)
+		Printn("wrong BorcherdsSelectWalls", numb); Error();
+	end;
+	#
+	#
+	if globalprintlevel>0 then
+		cPrintn:=function(arg) Printn(arg); end;
+	else
+		cPrintn:=function(arg)  end;
+	fi;
+	#
+	ntlinforms:=Set(tlinforms, GetPrimitiveIntVect);
+	n2tlinforms:=Set(tlinforms, GetPrimitiveIntVect);
+	#
+	dim:=Length(ntlinforms[1]);
+	#
+	sst2:=Runtime();
+	#cPrintn("_____start BorcherdsSelectWalls", Length(tlinforms));
+	#
+	if Length(ntlinforms)=dim then
+		#
+		# tlinforms defines the cone over a simplex. #Added 2018 01/21
+		#
+		#cPrintn("_____done BorcherdsSelectWalls", Length(walllfs), StringTime(Runtime()-sst2));
+		return(ntlinforms);
+	fi;
+	#
+	walllfs:=[];
+	ccc:=0;
+	for tlf in n2tlinforms do
+		#
+		# Since we use SubtractSet and AddSet to ntlinforms,
+		# we cannot write "for tlf in ntlinforms do" #Added 2018/07/21
+		#
+		ccc:=ccc+1;
+		SubtractSet(ntlinforms, [tlf]); #Add tfl back below.
+		if Rank(ntlinforms)<dim then
+			#
+			# if removed then the rest is not bounded;
+			# hence tlf defines a wall. #Added 2018 01/21
+			#
+			wallflag:=[true];
+		else
+			#IsAWall:=function(vs, w, checklevel) #in LatticeTools
+			wallflag:=IsAWall(ntlinforms, tlf, 1);
+		fi;
+		if wallflag[1] then
+			Add(walllfs, tlf);
+			AddSet(ntlinforms, tlf); #ntlinforms should be a SET.
+			#
+			# No need to put tlf back if not wallflag[1]
+			#
+		fi;
+		#
+		if ccc mod 1000 =0 then
+			cPrintn("_____in BorcherdsSelectWalls", ccc, "in", Length(tlinforms), Length(walllfs), StringTime(Runtime()-sst2));
+		fi;
+	od;
+	#
+	#cPrintn("_____done BorcherdsSelectWalls", Length(walllfs), StringTime(Runtime()-sst2));
+	#
+	walllfs:=Set(walllfs);
+	return(walllfs);
+end;
+
+MakeWalls:=function(navSdata, LGrec)
+	local deflfs, xx, yy, walllfs;
+	deflfs:=Set(Concatenation(List(navSdata, xx->List(xx[2], yy->yy[1]))));
+	walllfs:=BorcherdsSelectWalls(deflfs);
+	return(walllfs*LGrec.Gram1dual);
+end;

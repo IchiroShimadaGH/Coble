@@ -1,0 +1,28 @@
+#Read("AutCobleTools.txt");
+
+FindRatsOnK3:=function(GramSX, ample, uptodeg)
+  local rats, extradeg, ratsdual, task, tdeg;
+  #
+  extradeg:=0;
+  rats:=[];
+  ratsdual:=[];
+  tdeg:=0;
+  #
+  task:=function(tv)
+    local tvdual;
+    for tvdual in ratsdual do
+      if tvdual*tv<0 then return(); fi;
+    od;
+    Add(rats, tv);
+    Add(ratsdual, tv*GramSX);
+    return();
+  end;
+  #
+  while tdeg<uptodeg do
+    tdeg:=tdeg+1;
+    AffES(GramSX, ample, tdeg, -2, true, task);
+    Printn("tdeg", tdeg, Length(rats));
+  od;
+  #
+  return(rats);
+end;

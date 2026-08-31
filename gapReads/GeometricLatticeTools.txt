@@ -1,0 +1,1871 @@
+#Read("./gapReads/GeometricLatticeTools.txt");
+
+
+Make_OrthogonalRoots:=function(GramS, pol)
+	return(AffESstd(GramS, pol, 0, -2, true));
+end;
+
+
+FindRoottype:=function(rank, disc, rootnumb)
+	local rttypes;
+	rttypes:=[];
+	if rootnumb=rank*(rank+1) then
+		if disc=rank+1 then
+			Add(rttypes, Concatenation("A", String(rank)));
+		fi;
+	fi;
+	if rootnumb=2*rank*(rank-1) then
+		if rank>=4 and disc=4 then
+			Add(rttypes, Concatenation("D", String(rank)));
+		fi;
+	fi;
+	if rootnumb=72 then
+		if rank=6 and disc=3 then
+			Add(rttypes, "E6");
+		fi;
+	fi;
+	if rootnumb=126 then
+		if rank=7 and disc=2 then
+			Add(rttypes, "E7");
+		fi;
+	fi;
+	if rootnumb=240 then
+		if rank=8 and disc=1 then
+			Add(rttypes, "E8");
+		fi;
+	fi;
+	if rttypes=[] then
+		Printn("no such root type", rank, disc, rootnumb); Error();
+	elif Length(rttypes)>1 then
+		Printn("cannot determine root type", rank, disc, rootnumb, rttypes); Error();
+	fi;
+	return(rttypes[1]);
+end;
+
+
+
+Make_OrthogonalRootSystem:=function(GramS, pol, perturbvects_or_ample)
+	#
+	# the result is the list of
+	# [root_type,
+	# list of roots sorted accroding to the standard Dynkin (in ADEHrec)].
+	#
+	local posRspol, Rspol, isposdeg, perturbvectsdual,  degsorter, orbs,
+	kk, jj, mm, tr, tr2, tr3, trdeg, tr2deg, tr3deg, nz, orb, connjob,
+	indecomproots, rttype, tGram, ADEGram, isom, data, r, rdual, decompflag,
+	dones, originalposRspol, rtnumb;
+	#
+	Rspol:=Make_OrthogonalRoots(GramS, pol);
+	if Rspol=[] then return([]); fi;
+	if perturbvects_or_ample=[] then Printn("we need perturbvects_or_ample"); Error(); fi;
+	#
+	if IsList(perturbvects_or_ample[1]) then
+		perturbvectsdual:=perturbvects_or_ample*GramS;
+	else
+		perturbvectsdual:=[perturbvects_or_ample]*GramS;
+	fi;
+	#
+	#
+	isposdeg:=function(v)
+		local pvdual, deg;
+		for pvdual in perturbvectsdual do
+			deg:=pvdual*v;
+			if deg>0 then return(true);
+			elif deg<0 then return(false);
+			fi;
+		od;
+		Printn("wrong perturbvects"); Error();
+		return(true);
+	end;
+	#
+	#posRspol:=Filtered(Make_OrthogonalRoots(GramS, pol), isposdeg); #corrected 2017 May 16
+	posRspol:=Filtered(Rspol, isposdeg);
+	#Printn(TMTTmult(posRspol, GramS));
+	# this will be changed
+	#
+	#
+	originalposRspol:=CopyMat(posRspol);
+	dones:=[];
+	#
+	rtnumb:=0;
+	data:=[];
+	#
+	while Length(posRspol)>0 do
+		r:=Remove(posRspol);
+		orb:=[r];
+		connjob:=function(tr, trdual)
+			local ttr2, intnumb;
+			for ttr2 in CopyMat(posRspol) do
+				if ttr2 in posRspol then
+					intnumb:=ttr2*trdual;
+					if AbsInt(intnumb)=1 then
+						Add(orb, Remove(posRspol, Position(posRspol, ttr2)));
+						#ttr2dual:=ttr2*GramS;
+						connjob(ttr2, ttr2*GramS);
+					elif intnumb<>0 then Printn("wrong intnumb in connjob"); Error();
+					fi;
+				fi;
+			od;
+		end;
+		#
+		connjob(r, r*GramS);
+		#
+		#Printn(Length(orb));
+		#
+		degsorter:=function(v1, v2)
+			local diffv, pvdual, deg;
+			diffv:=v1-v2;
+			for pvdual in perturbvectsdual do
+				deg:=pvdual*diffv;
+				if deg<0 then return(true);
+				elif deg>0 then return(false);
+				fi;
+			od;
+			return(true);
+		end;
+		#
+		Append(dones, orb);
+		Sort(orb, degsorter);
+		#
+		indecomproots:=[];
+		for kk in [1..Length(orb)] do
+			tr:=orb[kk];
+			trdeg:=perturbvectsdual*tr;
+			decompflag:=false;
+			#
+			for jj in [1..kk-1] do
+				tr2:=orb[jj];
+				tr2deg:=perturbvectsdual*tr2;
+				for mm in [1..jj] do
+					tr3:=orb[mm];
+					tr3deg:=perturbvectsdual*tr3;
+					nz:=IniValnzErrorFree(tr2deg+tr3deg-trdeg);
+					if nz>0 then break; fi; #for mm in
+					if nz=0 then
+						if tr2+tr3=tr then decompflag:=true; break; fi; #for mm in
+					fi;
+				od;
+				if decompflag then break; fi; #for jj in
+			od;
+			if not decompflag then Add(indecomproots, tr); fi;
+		od;
+		#
+		tGram:=TMTTmult(indecomproots, GramS);
+		rttype:=FindRoottype(Length(indecomproots), AbsInt(DeterminantIntMat(tGram)), 2*Length(orb));
+		ADEGram:=(-1)*ADEHrec.(rttype).Gram;
+		isom:=FindASubconfig(tGram, ADEGram); #function(targetM, bigM)
+		if isom=false or isom=fail then
+			Printn("wrong in Make_PosOrthogonalRoots"); Error();
+		fi;
+		SortParallel(isom, indecomproots);
+		#
+		# SortParallel( list1, list2)
+		# sorts  list1 in increasing order just as Sort  does.
+		# In parallel it applies the same exchanges that are necessary
+		# to sort list1 to list2.
+		#
+		# added on 5 May 2016.
+		if TMTTmult(indecomproots, GramS)<>ADEGram then
+			Printn("wrong in Make_PosOrthogonalRoots",  7); Error();
+		fi;
+		#
+		rtnumb:=rtnumb+ADEHrec.(rttype).rootnumb;
+		#
+		Add(data, [rttype, indecomproots]);
+		#
+	od;
+	#
+	# added on 5 May 2016.
+	Sort(data, function(xx, yy) return(indecompADEsorter(xx[1], yy[1])); end);
+	#
+	if not IsEqualSet(originalposRspol, dones) then Printn("wrong in Make_PosOrthogonalRoots 2"); Error(); fi;
+	if rtnumb<>2*Length(originalposRspol) then Printn("wrong in Make_PosOrthogonalRoots 3"); Error(); fi;
+	#
+	return(data);
+	#
+end;
+
+
+#######################
+
+HoloSphereLattice:=function(Gram, f)
+	#
+	# Let Gram be a Gram matrix of a hyperbolic lattice (signature (1, rank-1))
+	# and f is a (non-zero) primitive vector such that f^2=0.
+	# This function returns a record HSrec on the structure of
+	# the negative-definite lattice  <f>^{\perm}/<f>:
+	#
+	# HSrec.basis: a list of vectors in <f>^{\perm} whose projection to <f>^{\perm}/<f>
+	# form a bsis of <f>^{\perm}/<f>.
+	# HSrec.Gram: the Gram matrix of <f>^{\perm}/<f> with respect to this basis.
+	#
+	#
+	local Gf, hnfrec, ff;
+	Gf:=TransposedMat([Gram*f]);
+	hnfrec:=HermiteNormalFormIntegerMatTransform(Gf);
+	ff:=hnfrec.rowtrans[1];
+	return(OrthogonalComp([f,ff], Gram));
+end;
+
+########## Added on 5 May 2016
+
+
+RootType:=function(rank, disc)
+	local name, names;
+	names:=[];
+	for name in RecNames(ADEHrec) do
+		if ADEHrec.(name).rank=rank and ADEHrec.(name).disc=disc then
+			Add(names, name);
+		fi;
+	od;
+	if Length(names)<>1 then
+		Printn("wrong in RootType", rank, disc);
+		Printn("names", names);
+		Error();
+	fi;
+	return(names[1]);
+end;
+
+newRootType:=function(mcGram)
+	#
+	# mcGram is a positive-definite indecomp ADE-matrix.
+	#
+	local rk, disc, tname, stdGram, isomperm;
+	rk:=Length(mcGram);
+	disc:=DeterminantIntMat(mcGram);
+	tname:=RootType(rk, disc);
+	stdGram:=ADEHrec.(tname).Gram;
+	isomperm:=FindASubconfig(stdGram, mcGram);
+	if isomperm=false or isomperm=fail then
+		Printn("wrong in newRootType"); Error();
+	fi;
+	return([tname, isomperm]);
+end;
+
+affineRootType:=function(mcGram) # minus of the Gram of the component
+	local name, rank, stdGram, isomperm;
+	rank:=Length(mcGram)-1;
+	for name in RecNames(affineADErec) do
+		if affineADErec.(name).rank=rank then
+			stdGram:=affineADErec.(name).Gram;
+			isomperm:=FindASubconfig(stdGram, mcGram);
+			if isomperm<>false and isomperm<>fail  then
+				return([name, isomperm]);
+			fi;
+		fi;
+	od;
+	Printn("wrong in affineRootType", rank); Error();
+	return(fail);
+end;
+
+
+_MTCsFromMTVs:=function(GramS, ample, mtvs)
+	#
+	# MTVs is the list of all (-2)-vectors  of
+	# divisors effective or anti-effective
+	# in a sublattice that is generated by MTC, where
+	# MTCs is the subset of classes of (-2)-curves,
+	# that is the classes of smooth rational curves.
+	#
+	local ampledual, beep, degvss, tdegs, posvss, tlist,
+	irredss, isirred, tpos, tv, newirreds, irreds;
+	#
+	beep:=function(n)
+		Printn("MTCsFromMTVs", n); Error();
+	end;
+	#
+	ampledual:=ample*GramS;
+	degvss:=ClassifyByTags(mtvs, tv->tv*ampledual);
+	#
+	#ClassifyByTags:=function(list, tagfunc)  in gaptools.txt
+	#
+	tdegs:=List(degvss, xx->xx[1]);
+	#
+	if not IsSortedList(tdegs) then beep(0); fi;
+	posvss:=[]; #this pos is positive
+	for tlist in degvss do
+		if tlist[1]>0 then Add(posvss, tlist[2]);fi;
+		if tlist[1]=0 then beep(1); fi;
+	od;
+	#
+	irredss:=[];
+	#
+	isirred:=function(v, pos) # this pos is position
+		local flag, vdual,ii, tv;
+		vdual:=v*GramS;
+		flag:=true;
+		for ii in [1..pos-1] do
+			for tv in irredss[ii] do
+				if tv*vdual<0 then
+					flag:=false; break;  # from for tv in irredss[ii]
+				fi;
+			od;
+			if not flag then break; fi; # from  for ii in [1..pos-1] do
+		od;
+		return(flag);
+	end;
+	#
+	for tpos in [1..Length(posvss)] do
+		newirreds:=[];
+		for tv in posvss[tpos] do
+			if isirred(tv, tpos) then
+				Add(newirreds, tv);
+			fi;
+		od;
+		#
+		Add(irredss, newirreds);
+	od;
+	#
+	irreds:=Concatenation(irredss);
+	if RankMat(irreds)<>RankMat(mtvs) then beep(21); fi;
+	#
+	return(irreds);
+end;
+
+
+
+
+
+RootTypeFromIrredCurves:=function(GramS, irredss)
+	#
+	local beep, connectedcomps, irredv, newcomp,
+	irredvdual, newconnectedcomps, comp, connflag,
+	irredv2, intnumb, ii,cr,cdisc,rtype,newvs, name,
+	compiidual, jj, tvs, isomperm, cGram, stdGram, mGramS;
+	#
+	beep:=function(n)
+		Printn("wrong RootTypeFromIrredCurves", n); Error();
+	end;
+	#
+	connectedcomps:=[];
+	for irredv in irredss do
+		newcomp:=[irredv];
+		irredvdual:=irredv*GramS;
+		newconnectedcomps:=[];
+		for comp in connectedcomps do
+			connflag:=false;
+			for irredv2 in comp do
+				intnumb:=irredvdual*irredv2;
+				if intnumb>0 then
+					connflag:=true; break; # from for irredv2 in comp
+				elif intnumb<0 then beep(25);
+				fi;
+			od;
+			if connflag then
+				Append(newcomp, comp);
+			else
+				Add(newconnectedcomps, comp);
+			fi;
+		od;
+		Add(newconnectedcomps, newcomp);
+		connectedcomps:=newconnectedcomps;
+		Unbind(newconnectedcomps);
+	od;
+	if Sum(List(connectedcomps, Length))<>Length(irredss) then beep(3); fi;
+	#
+	for ii in [1..Length(connectedcomps)] do
+		compiidual:=TransposedMat(connectedcomps[ii]*GramS);
+		for jj in [ii+1..Length(connectedcomps)] do
+			if not IsZeroMat(connectedcomps[jj]*compiidual) then
+				beep(7);
+			fi;
+		od;
+	od;
+	#
+	tvs:=[];
+	mGramS:=(-1)*GramS;
+	for comp in connectedcomps do
+		cr:=Length(comp);
+		cdisc:=DeterminantMat(TMTTmult(comp, mGramS));
+		name:=RootType(cr, cdisc);
+		stdGram:=(-1)*ADEHrec.(name).Gram;
+		cGram:=TMTTmult(comp, GramS);
+		isomperm:=FindASubconfig(stdGram, cGram); # not cGram, stdGram !!
+		if isomperm=false or isomperm=fail then beep(10); fi;
+		newvs:=List(isomperm, ii->comp[ii]);
+		if TMTTmult(newvs, GramS)<>stdGram then beep(20); fi;
+		Add(tvs, [name, newvs]);
+	od;
+	#
+	Sort(tvs, function(xx, yy) return(indecompADEsorter(xx[1], yy[1])); end);
+	#
+	return(tvs);
+end;
+
+
+AffineRootTypeFromIrredCurves:=function(GramS, irredss)
+	#
+	local beep, connectedcomps, irredv, newcomp,
+	irredvdual, newconnectedcomps, comp, connflag,
+	irredv2, intnumb, ii,cr,cdisc,rtype,newvs, name,
+	compiidual, jj, tvs, nameisomperm, mcGram, stdGram, mGramS;
+	#
+	beep:=function(n)
+		Printn("wrong AffineRootTypeFromIrredCurves", n); Error();
+	end;
+	#
+	connectedcomps:=[];
+	for irredv in irredss do
+		newcomp:=[irredv];
+		irredvdual:=irredv*GramS;
+		newconnectedcomps:=[];
+		for comp in connectedcomps do
+			connflag:=false;
+			for irredv2 in comp do
+				intnumb:=irredvdual*irredv2;
+				if intnumb>0 then
+					connflag:=true; break; # from for irredv2 in comp
+				elif intnumb<0 then beep(25);
+				fi;
+			od;
+			if connflag then
+				Append(newcomp, comp);
+			else
+				Add(newconnectedcomps, comp);
+			fi;
+		od;
+		Add(newconnectedcomps, newcomp);
+		connectedcomps:=newconnectedcomps;
+		Unbind(newconnectedcomps);
+	od;
+	if Sum(List(connectedcomps, Length))<>Length(irredss) then beep(3); fi;
+	#
+	for ii in [1..Length(connectedcomps)] do
+		compiidual:=TransposedMat(connectedcomps[ii]*GramS);
+		for jj in [ii+1..Length(connectedcomps)] do
+			if not IsZeroMat(connectedcomps[jj]*compiidual) then
+				beep(7);
+			fi;
+		od;
+	od;
+	#
+	tvs:=[];
+	mGramS:=(-1)*GramS;
+	for comp in connectedcomps do
+		mcGram:=(-1)*TMTTmult(comp, GramS);
+		nameisomperm:=affineRootType(mcGram); # not cGram, stdGram !!
+		newvs:=List(nameisomperm[2], ii->comp[ii]);
+		name:=nameisomperm[1];
+		if TMTTmult(newvs, GramS)<>(-1)*affineADErec.(name).Gram then
+			beep(20);
+		fi;
+		Add(tvs, [name, newvs]);
+	od;
+	#
+	Sort(tvs, function(xx, yy) return(indecompADEsorter(xx[1], yy[1])); end);
+	#
+	return(tvs);
+end;
+
+GeomRootType:=function(GramS, h, ample)
+	#
+	# GramS is an intersection matrix of signature (1, r-1),
+	# h is a polarization with h^2>0
+	# and ample is an ample polarization.
+	# The output is the list of [type, the list of h-exceptional classes].
+	# the list of h-exceptional classes is given
+	# in such a way that the Gram matrix of h-exceptional classes
+	# is as ADEHrec.
+	#
+	#
+	local beep, mtvs, irreds, tvs;
+	#
+	beep:=function(n)
+		Printn("wrong GeomRootType", n); Error();
+	end;
+	#
+	mtvs:=AffESstd(GramS, h, 0, -2, true);
+	if mtvs=[] then
+		return([0, []]);
+	fi;
+	irreds:=_MTCsFromMTVs(GramS, ample, mtvs);
+	#
+	#
+	tvs:=RootTypeFromIrredCurves(GramS, irreds);
+	# already sorted
+	#
+	return(tvs);
+	#
+end;
+
+GeomRootTypeElliptic:=function(GramS, fib, ample)
+	#
+	# GramS is an intersection matrix of signature (1, r-1),
+	# f is a PRIMITIVE nef class with f^2=0
+	# and ample is an ample polarization.
+	# f induces an elliptic fibration phi.
+	# The output is the list of
+	# [type,
+	# the list of classes of nodal curves contained in a fiber of phi].
+	# the list of the classses of nodal curves is given
+	# in such a way that the Gram matrix of classes
+	# is as ADEHrec.Gram.
+	#
+	#
+	local beep, mtvs, irreds, tvs, dd, maxdd, newmtvs;
+	#
+	beep:=function(n)
+		Printn("wrong GeomRootTypeElliptic", n); Error();
+	end;
+	#
+	Printn("GeomRootTypeElliptic has not yet checked");
+	#
+	if not IsPrimitiveVect(fib) then beep(0); fi;
+	#
+	mtvs:=[];
+	#
+	maxdd:=ample*GramS*fib;
+	Printn("maxdd", maxdd);
+	for dd in [1..maxdd] do
+		newmtvs:=AffESLargeCodimstd(GramS, [[fib, 0], [ample, dd]],  -2, true);
+		Printn("dd nops", dd, Length(newmtvs));
+		Append(mtvs, newmtvs);
+	od;
+	#
+	# for debug
+	if Set(List(mtvs, tv->tv*GramS*fib))<>[0] then beep(1000); fi;
+	if Set(List(mtvs, tv->tv*GramS*tv))<>[-2] then beep(1010); fi;
+	Printn("reldegs", Set(List(mtvs, tv->tv*GramS*ample)));
+	#
+	if mtvs=[] then
+		return([0, []]);
+	fi;
+	irreds:=_MTCsFromMTVs(GramS, ample, mtvs);
+	#
+	#
+	tvs:=AffineRootTypeFromIrredCurves(GramS, irreds);
+	#
+	return(tvs);
+	#
+end;
+
+RatInvolutionMat:=function(GramS, th, pullbacks, geomroots, checklevel)
+	#
+	# th is a polarization that induces an involution.
+	# pullbacks is a vector of the pull-back of the quotient rational surface.
+	# If quot is P^2, then [the pull-back of a line].
+	# For an elliptic inversion,
+	# th:= 3*fiber+zerosection;
+	# pullbacks:=[fiber, zerosection];
+	#
+	local tcomp,  tk, invariantvs, rt, tn, ade, excepvs, beep,
+	antiinvariantvs, diminv, dimantiinv, M, Msprime, orthorec, E6inv, S;
+	#
+	beep:=function(n)
+		Printn("wrong RatInvolutionMat", n); Error();
+	end;
+	#
+	invariantvs:=List(pullbacks);
+	#
+	if geomroots<>[ 0, [  ] ] then
+		for tcomp in geomroots do
+			rt:=tcomp[1];
+			tn:=ADEHrec.(rt).rank;
+			ade:=ADEHrec.(rt).type;
+			excepvs:=tcomp[2];
+			if ade='A' then
+				if tn mod 2 =1 then
+					Add(invariantvs, excepvs[(tn+1)/2]);
+				fi;
+				for tk in [1..FloorRat(tn/2)] do
+					Add(invariantvs, excepvs[tk]+excepvs[tn+1-tk]);
+				od;
+			elif ade='D' then
+				if tn mod 2=0 then
+					Append(invariantvs, excepvs);
+				else
+					Add(invariantvs, excepvs[1]+excepvs[2]);
+					Append(invariantvs, List([3..tn], kk->excepvs[kk]));
+				fi;
+			elif ade='E' then
+				if tn=6 then
+					E6inv:=[excepvs[1], excepvs[4], excepvs[2]+excepvs[6], excepvs[3]+excepvs[5]];
+					Append(invariantvs, E6inv);
+				elif tn=7 then
+					Append(invariantvs, excepvs);
+				elif tn=8 then
+					Append(invariantvs, excepvs);
+				fi;
+			else
+				beep(0);
+			fi;
+		od;
+	fi;
+	#
+	if RankMat(invariantvs)<>Length(invariantvs) then beep(1); fi;
+	#
+	orthorec:=OrthogonalComp(invariantvs, GramS);
+	#
+	antiinvariantvs:=orthorec.basis;
+	diminv:=Length(invariantvs);
+	dimantiinv:=Length(antiinvariantvs);
+	S:=StackMats(invariantvs, antiinvariantvs);
+	#
+	if dimantiinv>0 then #Corrected 2022/03/03
+		Msprime:=DiagonalMats([IdentityMat(diminv), (-1)*IdentityMat(dimantiinv)]);
+	else
+		Msprime:=IdentityMat(diminv);
+	fi;
+	M:=InverseMat(S)*Msprime*S;
+	#
+	if checklevel>0 then
+		if not IsIntMat(M) then beep(2); fi;
+		if M*M<>IdentityMat(Length(GramS)) then beep(3); fi;
+		if TMTTmult(M, GramS)<>GramS then beep(4); fi;
+		if (th*M*GramS)*th<=0 then beep(5); fi;
+		if pullbacks<>pullbacks*M then beep(6); fi;
+		if geomroots<>[ 0, [  ] ] then
+			for tcomp in geomroots do
+				if not IsEqualSet(tcomp[2], tcomp[2]*M) then beep(7); fi;
+			od;
+		fi;
+	fi;
+	if checklevel>1 then
+		if SeparatingVects(GramS, th, th*M, -2) <>[] then beep(8); fi;
+	fi;
+	#
+	return(M);
+	#
+end;
+
+####################
+# Added on 15 Jan 2018
+####################
+
+SeparatingRatVects:=function(GramS, pol, v, d)
+	# GramS is a Gram matrix of a hyperbolic lattice.
+	# pol and v are RATIONAL vectors of positive square norm in the same positive cone.
+	#
+	# This function returns the list of all [ri, ti] such that ri is a vector
+	# in the lattice GramS satisfying
+	# (ri, pol)>0, (ri, v)<0,  (ri, ri)=d, and
+	# and (pol+ti*v, ri)=0, where ti are positive real numbers.
+	# When pol is pol, the input d=-2 gives a criterion for nef.
+	#
+	local intpol, intv, beep, intpoldata, intvdata,
+	apol, av, rescale, tsepvs, sepvs,trt, tr, trdual,
+	tt, newtt;
+	#
+	beep:=function(numb)
+		Printn("wrong SeparatingRatVects", numb); Error();
+	end;
+	#
+	intpoldata:=MakePrimitiveRatVect(pol);
+	intvdata:=MakePrimitiveRatVect(v);
+	apol:=intpoldata[1];
+	av:=intvdata[1];
+	if apol<=0 then beep(-1); fi;
+	if av<=0 then beep(-2); fi;
+	intpol:=intpoldata[2];
+	intv:=intvdata[2];
+	if apol*intpol<>pol then beep(1); fi;
+	if av*intv<>v then beep(2); fi;
+	rescale:=apol/av;
+	tsepvs:=SeparatingVects(GramS, intpol, intv, d); #Ints!
+	sepvs:=[];
+	for trt in tsepvs do
+		tr:=trt[1];
+		trdual:=tr*GramS;
+		if tr*trdual<>d then beep(34567); fi;
+		tt:=trt[2];
+		newtt:=rescale*tt;
+		if trdual*(pol+newtt*v)<>0 then
+			beep(54738);
+		fi;
+		Add(sepvs, [tr, newtt]);
+	od;
+	return(sepvs);
+end;
+
+Ckeck_SeparatingRatVects_mt:=function(Gram, pol, v)
+	#
+	local beep, revseps, tv, ii, rrtt, d;
+	#
+	d:=-2;
+	beep:=function(n) Printn("wrong in Ckeck_SeparatingVects_mt", n, "\n"); Error(); end;
+	revseps:=Reversed(SeparatingRatVects(Gram, pol, v, d));
+	tv:=CopyVect(v);
+	ii:=0;
+	Printn("nops revseps", Length(revseps));
+	if not IsDuplicateFree(List(revseps, xx->xx[2])) then
+		return(fail);
+	fi;
+	for rrtt in revseps do
+		ii:=ii+1;
+		if rrtt[1]*Gram*rrtt[1]<>d then beep(1); fi;
+		if rrtt[1]*Gram*(pol+rrtt[2]*v)<>0 then beep(2); fi;
+		if not IsIntVect(rrtt[1]) then beep(3); fi;
+		tv:=mtReflection(tv, Gram, rrtt[1]);
+	od;
+	if Length(SeparatingRatVects(Gram, pol, tv, d))<>0 then
+		beep(4);
+	fi;
+	return(true);
+end;
+
+MakeRandomRatv:=function(Gram, ample, par, denom)
+	local v;
+	v:=RandomVect(Length(Gram[1]))+RandomVect(Length(Gram[1]))/Random([1..denom]);
+	while true do
+		if v*Gram*v<=0 then
+			v:=v+par*ample;
+		else
+			return(v);
+		fi;
+	od;
+end;
+
+#########################
+# Added on 15 Jan 2018 Part 2
+##########################
+
+
+makeConnComps:=function(Gram, theroots) #
+	local beep, conns, tr, trdual, newconns, trconn, conn, trflag, ttr;
+	#
+	beep:=function(numb)
+		Printn("wrong in makeConnComps", numb);
+		Error();
+	end;
+	#
+	conns:=[];
+	for tr in theroots do
+		trdual:=tr*Gram;
+		newconns:=[];
+		trconn:=[tr];
+		for conn in conns do
+			trflag:=false;
+			for ttr in conn do
+				if ttr*trdual<>0 then
+					Append(trconn, conn);
+					trflag:=true;
+					break; #from for ttr in conn do
+				fi;
+			od;
+			if not trflag then
+				Add(newconns, conn);
+			fi;
+		od;
+		Add(newconns, trconn);
+		conns:=newconns;
+	od;
+	if Sum(conns, Length)<>Length(theroots) then
+		beep(555);
+	fi;
+	if not IsEqualSet(Concatenation(conns), theroots) then
+		beep(55233);
+	fi;
+	return(conns);
+end;
+
+
+RootTypeFromtheroots:=function(Gram, theroots)
+	local conns, types, conn, bigGramconn,
+	trec, Gramconn, rank, disc, kk, typesconns,
+	xx, yy, tsorter;
+	#
+	conns:=makeConnComps(Gram, theroots);
+	types:=[];
+	for conn in conns do
+		bigGramconn:=TMTTmult(conn, Gram);
+		trec:=LatticeGens2Gram(bigGramconn);
+		checkLatticeGens2Gram(bigGramconn, trec);
+		Gramconn:=trec.Gram;
+		rank:=Length(Gramconn);
+		disc:=AbsInt(DeterminantIntMat(Gramconn));
+		Add(types, FindRoottype(rank, disc, Length(conn)));
+	od;
+	typesconns:=[];
+	for kk in [1..Length(types)] do
+		Add(typesconns, [types[kk], conns[kk]]);
+	od;
+	tsorter:=function(xx, yy)
+		return(indecompADEsorter(xx[1], yy[1]));
+	end;
+	Sort(typesconns,tsorter);
+	#
+	return(typesconns);
+end;
+
+IsInvol:=function(GramS, tg)
+	local beep, Idr;
+	#
+	beep:=function(n)
+		Printn("wrong in IsInvol", n); Error();
+	end;
+	if TMTTmult(tg, GramS)<>GramS then beep(1); fi;
+	Idr:=IdentityMat(Length(GramS));
+	if tg*tg<>Idr then return(false); fi;
+	return(true);
+end;
+
+
+MakeEnriquesRec:=function(GramSX, tg)
+	#
+	# GramSX is the Gram matrix of the covering K3.
+	# tg is an involution.
+	#
+	local beep, Idr, emb, GramSSY, r, GramSY, GramSXdual,
+	PSSYSX, PSSYSXG, Enrrec, minusfours, embSSYtoSX,
+	projSXdualtoSSYdual, projSXtoSSY, embSSYdualtoSXdual, MinusFoursInSX,
+	Id10, GramSYdual, IdP, GramP, GramPdual, projSXdualtoPdual, projSXtoP,
+	embPdualtoSXdual, embPtoSX;
+	#
+	beep:=function(n)
+		Printn("wrong in MakeEnrquesRec", n); Error();
+	end;
+	#
+	r:=Length(GramSX);
+	GramSXdual:=InverseMat(GramSX);
+	Idr:=IdentityMat(r);
+	Id10:=IdentityMat(10);
+	IdP:=IdentityMat(r-10);
+	#
+	# for check
+	if not IsInvol(GramSX, tg) then beep(1); fi;
+	#
+	emb:=OrthogonalComp(TransposedMat(tg-Idr),  Idr);
+	#
+	# for check
+	if not emb.basis*tg=emb.basis then
+		beep(2);
+	fi;
+	#
+	if Length(emb.basis)<>10 then return(false); fi;
+	GramSSY:=TMTTmult(emb.basis, GramSX);
+	#
+	# for check
+	if SignatureQ(GramSSY)<>[10, 1, 9] then
+		beep(4);
+	fi;
+	#
+	GramSY:=(1/2)*GramSSY; #(1/2) is importatnt.
+	if not IsEvenLattice(GramSY) then return(false); fi;
+	if DeterminantMat(GramSY)<>-1 then return(false); fi;
+	GramSYdual:=InverseMat(GramSY);
+	#
+	PSSYSX:=OrthogonalComp(emb.basis, GramSX);
+	GramP:=PSSYSX.Gram;
+	if ShortestVectors((-1)*GramP, 2).vectors<>[] then
+		# No root condition
+		return(false);
+	fi;
+	minusfours:=ShortestVectors((-1)*GramP, 4).vectors;
+	minusfours:=Concatenation(minusfours, (-1)*minusfours);
+	#
+	embSSYtoSX:=emb.basis;
+	projSXdualtoSSYdual:=TransposedMat(embSSYtoSX);
+	projSXtoSSY:=GramSX*projSXdualtoSSYdual*InverseMat(GramSSY);
+	embSSYdualtoSXdual:=TransposedMat(projSXtoSSY);
+	#
+	GramPdual:=InverseMat(GramP);
+	embPtoSX:=PSSYSX.basis;
+	projSXdualtoPdual:=TransposedMat(embPtoSX);
+	projSXtoP:=GramSX*projSXdualtoPdual*GramPdual;
+	embPdualtoSXdual:=TransposedMat(projSXtoP);
+	#
+	if TMTTmult(embSSYtoSX, GramSX)<>GramSSY then  beep(8822); fi;
+	if TMTTmult(embSSYdualtoSXdual, GramSXdual)<>(1/2)*GramSYdual then beep(3); fi;
+	if embSSYtoSX*projSXtoSSY<>Id10 then beep(4); fi;
+	if embSSYdualtoSXdual*projSXdualtoSSYdual<>Id10 then beep(5); fi;
+	#
+	if TMTTmult(embPtoSX, GramSX)<>GramP then  beep(88211); fi;
+	if TMTTmult(embPdualtoSXdual, GramSXdual)<>GramPdual then beep(31); fi;
+	if embPtoSX*projSXtoP<>IdP then beep(41); fi;
+	if embPdualtoSXdual*projSXdualtoPdual<>IdP then beep(51); fi;
+	#
+	MinusFoursInSX:=minusfours*embPtoSX;
+	#
+	if not IsZeroMat(embPtoSX*projSXtoSSY) then beep(60); fi;
+	if not IsZeroMat(embSSYtoSX*projSXtoP) then beep(61); fi;
+	if not IsZeroMat(embPtoSX*GramSX*TransposedMat(embSSYtoSX)) then beep(62); fi;
+	#
+	Enrrec:=rec();
+	Enrrec.invol:=tg;
+	Enrrec.embSSYtoSX:=embSSYtoSX;
+	Enrrec.embSSYdualtoSXdual:=embSSYdualtoSXdual;
+	Enrrec.projSXtoSSY:=projSXtoSSY;
+	Enrrec.projSXdualtoSSYdual:=projSXdualtoSSYdual;
+	Enrrec.GramSX:=GramSX;
+	Enrrec.GramSSY:=GramSSY;
+	Enrrec.GramSY:=GramSY;
+	Enrrec.GramSYdual:=GramSYdual;
+	#
+	Enrrec.GramP:=GramP;
+	Enrrec.GramPdual:=GramPdual;
+	Enrrec.embPdualtoSXdual:=embPdualtoSXdual;
+	Enrrec.embPtoSX:=embPtoSX;
+	Enrrec.projSXtoP:=projSXtoP;
+	Enrrec.projSXdualtoPdual:=projSXdualtoPdual;
+	#
+	Enrrec.MinusFoursInP:=minusfours;
+	Enrrec.MinusFoursInSX:=MinusFoursInSX;
+	#
+	return(Enrrec);
+end;
+
+checkEnriquesRec:=function(Enrrec)
+	local beep, GramSX, invol, Idr,GramSSY, r, GramSY, GramSXdual,
+	PSSYSX, PSSYSXG,  minusfours, embSSYtoSX,
+	projSXdualtoSSYdual, projSXtoSSY, embSSYdualtoSXdual, MinusFoursInSX,
+	Id10, GramSYdual, IdP, GramP, GramPdual, projSXdualtoPdual, projSXtoP,
+	embPdualtoSXdual, embPtoSX, MinusFoursInP, tv;
+	#
+	beep:=function(beepnumb)
+		Printn("wrong in checkEnriquesRec", beepnumb); Error();
+	end;
+	#
+	invol:=Enrrec.invol;
+	embSSYtoSX:=Enrrec.embSSYtoSX;
+	embSSYdualtoSXdual:=Enrrec.embSSYdualtoSXdual;
+	projSXtoSSY:=Enrrec.projSXtoSSY;
+	projSXdualtoSSYdual:=Enrrec.projSXdualtoSSYdual;
+	GramSX:=Enrrec.GramSX;
+	GramSSY:=Enrrec.GramSSY;
+	GramSY:=Enrrec.GramSY;
+	GramSYdual:=Enrrec.GramSYdual;
+	#
+	GramP:=Enrrec.GramP;
+	GramPdual:=Enrrec.GramPdual;
+	embPdualtoSXdual:=Enrrec.embPdualtoSXdual;
+	embPtoSX:=Enrrec.embPtoSX;
+	projSXtoP:=Enrrec.projSXtoP;
+	projSXdualtoPdual:=Enrrec.projSXdualtoPdual;
+	#
+	MinusFoursInP:=Enrrec.MinusFoursInP;
+	MinusFoursInSX:=Enrrec.MinusFoursInSX;
+	#
+	r:=Length(GramSX);
+	Idr:=IdentityMat(r);
+	Id10:=IdentityMat(10);
+	IdP:=IdentityMat(r-10);
+	#
+	if invol*invol<>Idr then beep(10); fi;
+	if TMTTmult(invol, GramSX)<>GramSX then beep(20); fi;
+	#
+	GramSXdual:=InverseMat(GramSX);
+	if TMTTmult(embSSYtoSX, GramSX)<>GramSSY then  beep(30); fi;
+	if TMTTmult(embSSYdualtoSXdual, GramSXdual)<>(1/2)*GramSYdual then beep(40); fi;
+	if embSSYtoSX*projSXtoSSY<>Id10 then beep(50); fi;
+	if embSSYdualtoSXdual*projSXdualtoSSYdual<>Id10 then beep(60); fi;
+	#
+	if GramP*GramPdual<>IdP then beep(700); fi;
+	if TMTTmult(embPtoSX, GramSX)<>GramP then  beep(70); fi;
+	if TMTTmult(embPdualtoSXdual, GramSXdual)<>GramPdual then beep(80); fi;
+	if embPtoSX*projSXtoP<>IdP then beep(90); fi;
+	if embPdualtoSXdual*projSXdualtoPdual<>IdP then beep(100); fi;
+	#
+	#
+	if not IsZeroMat(embPtoSX*projSXtoSSY) then beep(110); fi;
+	if not IsZeroMat(embSSYtoSX*projSXtoP) then beep(120); fi;
+	if not IsZeroMat(embPtoSX*GramSX*TransposedMat(embSSYtoSX)) then beep(130); fi;
+	#
+	if Set(MinusFoursInP, tv->tv*GramP*tv)<>[-4] then beep(140); fi;
+	if Set(MinusFoursInSX, tv->tv*GramSX*tv)<>[-4] then beep(140); fi;
+	if MinusFoursInP*embPtoSX <> MinusFoursInSX then beep(150); fi;
+	#
+	return(true);
+end;
+
+FindRootTypeFromRoots:=function(GramS, rs)
+	# rs form a fundamental root system
+	local beep, conncomps, ii, newconncomps, intns,
+	newcomp, oldcomp, rsdual, bigM, rootnumb,
+	adetypes, comp, rr, compvs, compGram, disc, roots;
+	#
+	#
+	beep:=function(numb)
+		Printn("wrong FindRootTypeFromRoots", numb); Error();
+	end;
+	#
+	if rs=[] then return([]);fi;
+	#
+	if Length(rs)<>Rank(rs) then
+		beep(9191911);
+	fi;
+	rsdual:=rs*GramS;
+	bigM:=rs*TransposedMat(rsdual);
+	conncomps:=[];
+	for ii in [1..Length(rs)] do
+		newconncomps:=[];
+		intns:=bigM[ii];
+		newcomp:=[ii];
+		for oldcomp in conncomps do
+			if 1 in List(oldcomp, jj->intns[jj]) then
+				Append(newcomp, oldcomp);
+			else
+				Add(newconncomps, oldcomp);
+			fi;
+		od;
+		Add(newconncomps, newcomp);
+		conncomps:=newconncomps;
+	od;
+	if not IsDuplicateFree(Flat(conncomps)) then beep(14028); fi;
+	if not IsEqualSet(Flat(conncomps), [1..Length(rs)]) then beep(14035); fi;
+	#
+	adetypes:=[];
+	for comp in conncomps do
+		rr:=Length(comp);
+		compvs:=List(comp, ii->rs[ii]);
+		compGram:=TMTTmult(compvs, GramS);
+		disc:=AbsInt(DeterminantIntMat(compGram));
+		roots:=IntVectsQFstd((-1)*compGram, MakeZeroVect(rr), -2, true);
+		rootnumb:=Length(roots);
+		Add(adetypes, FindRoottype(rr, disc, rootnumb));
+	od;
+	#
+	return(adetypes);
+end;
+
+MakeEllFibrecK3:=function(GramS, tf, tz, tample)
+	local singfibs, tfdual, tzdual,adetype,
+	MWtor, MWtorvs, inversion, xx, triv, MWrank,
+	tcv, tpol, theta, tcomp, ellfibrec, beep, singtypes;
+	#
+	#
+	beep:=function(numb)
+		Printn("wrong input, EllFibrecK3", numb); Error();
+	end;
+	#
+	tfdual:=tf*GramS;
+	tzdual:=tz*GramS;
+	if tfdual*tf<>0 then beep(-1);fi;
+	if tzdual*tz<>-2 then beep(-2);fi;
+	if tfdual*tz<>1 then beep(-3);fi;
+	if tfdual*tample<=0 then beep(-4);fi;
+	if tzdual*tample<=0 then beep(-5);fi;
+	#
+	tpol:=3*tf+tz;
+	#GeomRootType:=function(GramS, h, ample)
+	singfibs:=GeomRootType(GramS, tpol, tample);
+	if singfibs[1]<>0 then
+		for tcomp in singfibs do
+				theta:=affineADErec.(tcomp[1]).theta;
+				tcv:=tf-theta*tcomp[2];
+				Add(tcomp, tcv);
+		od;
+	else
+		if singfibs<>[0, []] then beep(9692); fi;
+	fi;
+	#
+	#RatInvolutionMat:=function(GramS, th, pullbacks, geomroots, checklevel)
+	inversion:=RatInvolutionMat(GramS, tpol, [tf, tz], singfibs, 0);
+	triv:=[tz, tf];
+	if singfibs[1]<>0 then
+		Append(triv, Concatenation(List(singfibs, xx->xx[2])));
+	fi;
+	MWtor:=CokerTorsion(triv);
+	if singfibs[1]<>0 then
+		MWrank:=Length(GramS)-Sum(singfibs, xx->Length(xx[2]))-2; #-2 is added on 2022/Jan/24
+		singtypes:=List(singfibs, xx->xx[1]);
+	else
+		MWrank:=Length(GramS)-2;
+		singtypes:=0;
+	fi;
+	#
+	ellfibrec:=rec(
+		f:=List(tf),
+		z:=List(tz),
+		singfibs:=singfibs,
+		singtypes:=singtypes,
+		MWtor:=MWtor,
+		MWrank:=MWrank,
+		inversion:=inversion
+	);
+	return(ellfibrec);
+end;
+
+checkEllFibrecK3:=function(ellfibrec, GramS, tf, tz, tample)
+	local beep, M, tfdual, tzdual, tv, tcv, tcomp, tampledual,
+	tsigma, orderM;
+	#
+	#
+	beep:=function(numb)
+		Printn("wrong checkEllFibrecK3", numb); Error(); return(false);
+	end;
+	#
+	tfdual:=tf*GramS;
+	tzdual:=tz*GramS;
+	tampledual:=tample*GramS;
+	#
+	M:=ellfibrec.inversion;
+	#
+	if not IsIntMat(M) then beep(2); fi;
+	orderM:=Order(M);
+	#if Order(M)<>2 then beep(3); fi;
+	if not orderM in [1,2] then beep(3); fi;
+	#corrected on 2022/Mar/04
+	if TMTTmult(M, GramS)<>GramS then beep(4); fi;
+	if tf*M<>tf then beep(5); fi;
+	if tz*M<>tz then beep(6); fi;
+	#corrected on 2022/Mar/04
+	if ellfibrec.singfibs=[0,[]] then
+		tsigma:=0;
+	else
+		tsigma:=ADEHrank(ellfibrec.singtypes);
+	fi;
+	if ellfibrec.MWrank+tsigma+2<>Length(GramS) then beep(828281); fi;
+	#added on 2022/Jan/24
+	#
+	if ellfibrec.singfibs<>[0,[]] then #corrected on 2022/Mar/04
+		for tcomp in ellfibrec.singfibs do
+			if not IsEqualSet(tcomp[2], tcomp[2]*M) then beep(700); fi;
+			if Set(tcomp[2]*tfdual)<>[0] then beep(701); fi;
+			if Set(tcomp[2]*tzdual)<>[0] then beep(702); fi;
+			if tcomp[3]*tzdual<>1 then beep(703); fi;
+			if Set(tcomp[2], tv->tv*GramS*tv)<>[-2] then beep(703); fi;
+			if true in List(tcomp[2], tv->tv*tampledual<=0) then beep(704); fi;
+			tcv:=tcomp[3];
+			if tcv*M<>tcv then beep(708); fi;
+			if tcv*tfdual<>0 then beep(705); fi;
+			if tcv*tzdual<>1 then beep(706); fi;
+			if tcv*GramS*tcv<>-2 then beep(707); fi;
+			if tcv*tampledual<=0 then beep(709); fi;
+		od;
+	fi;
+	if SeparatingVects(GramS, tample, tample*M, -2) <>[] then beep(8); fi;
+	return(true);
+end;
+
+
+####################
+# Added on 2018 07 12
+####################
+
+
+
+
+
+
+MakeRandomAmple:=function(GramS, posvect, trial)
+	#
+	local rho, tL, cc, kk, vv, flag, tvv, tampledeg,
+	theampledeg, theample, tt, roots;
+	#
+	rho:=Length(GramS);
+	if posvect*GramS*posvect<=0 then
+		beep(3653536);
+	fi;
+	tL:=[-1,0,1];
+	cc:=0;
+	kk:=2;
+	tt:=0;
+	theampledeg:=infinity;
+	while tt<trial and (tt=0 or cc<=2000) and theampledeg>20 do
+		cc:=cc+1;
+		if cc mod 10 =0 then
+			Append(tL, [-kk, kk]);
+			kk:=kk+1;
+		fi;
+		vv:=RandomVectfromL(rho, tL);
+		flag:=false;
+		tvv:=vv;
+		while not flag do
+			if tvv*GramS*tvv<=0 then
+				tvv:=tvv+posvect;
+			else
+				flag:=true;
+			fi;
+		od;
+		roots:=AffESstd(GramS, tvv, 0, -2, true);
+		tampledeg:=tvv*GramS*tvv;
+		if roots=[] then
+			if tampledeg<theampledeg then
+				theample:=tvv;
+				theampledeg:=tampledeg;
+				tt:=tt+1;
+				Printn("found", cc, tt, theampledeg);
+			fi;
+		else
+			#Printn("roots", Length(roots), tampledeg, theampledeg, kk);
+		fi;
+	od;
+	MakePrimitiveVect(theample);
+	return(theample);
+end;
+
+
+MakeNefs:=function(GramS, posvect, ample, size)
+	#
+	local beep, rho, refl, tL, cc, kk, vv, flag, tvv,
+	tt, sepssorter, seps, nefs, tp, rt, counter;
+	#
+	beep:=function(numb)
+		Printn("wrong in MakeNefs", numb); Error();
+	end;
+	#
+	rho:=Length(GramS);
+	if posvect*GramS*posvect<=0 then
+		beep(36538685);
+	fi;
+	#
+	refl:=function(x, r)
+		return(x+(x*GramS*r)*r);
+	end;
+	#
+	sepssorter:=function(rt1, rt2)
+		local t1, t2, r1, r2;
+		t1:=rt1[2];
+		t2:=rt2[2];
+		if t1>t2 then return(true);
+		elif t1<t2 then return(false);
+		else
+			r1:=rt1[1];
+			r2:=rt2[1];
+			if r1>r2 then return(true);
+			elif r1<r2 then return(false);
+			else
+				beep(351136);
+			fi;
+		fi;
+		beep(41747141);
+	end;
+	#
+	tL:=[-1,0,1];
+	cc:=0;
+	kk:=2;
+	nefs:=[];
+	while Length(nefs)<size do
+		cc:=cc+1;
+		if cc mod 100 =0 then
+			Printn("in MakeNefs", Length(nefs));
+			Append(tL, [-kk, kk]);
+			kk:=kk+1;
+		fi;
+		vv:=RandomVectfromL(rho, tL);
+		flag:=false;
+		tvv:=vv;
+		while not flag do
+			if tvv*GramS*tvv<=0 then
+				tvv:=tvv+posvect;
+			else
+				flag:=true;
+			fi;
+		od;
+		MakePrimitiveVect(tvv);
+		seps:=SeparatingVects(GramS, ample, tvv, -2);
+		counter:=0;
+		while seps<>[] and counter<10 do
+			if counter>1 then Printn("counter", counter, Length(nefs)); fi;
+			Sort(seps, sepssorter);
+			tvv:=List(tvv);
+			for rt in seps do
+				tvv:=refl(tvv, rt[1]);
+			od;
+			MakePrimitiveVect(tvv);
+			seps:=SeparatingVects(GramS, ample, tvv, -2);
+			counter:=counter+1;
+		od;
+		if seps=[] then
+			Add(nefs, tvv);
+		else
+			Printn("seps counter", counter, Length(seps));
+		fi;
+	od;
+	nefs:=Set(nefs);
+	Printn("Length(nefs)", Length(nefs));
+	for tt in [1..size] do
+		tp:=RandomChooseFromL(nefs, 2);
+		seps:=SeparatingVects(GramS, tp[1], tp[2], -2);
+		if seps<>[] then beep(474764646); fi;
+	od;
+	return(nefs);
+end;
+
+
+
+IsRSp:=function(GramRS, p)
+	if not IsEvenLattice(GramRS) then beep(52929); fi;
+	if SignatureQ(GramRS)<>[22, 1, 21] then beep(2388); fi;
+	if CokerTorsion(GramRS)<>[p,p] then beep(282828); fi;
+	return(true);
+end;
+
+######################
+# 2018 September
+######################
+
+
+GetRootType:=function(Gram, roots)
+	#
+	# Gram may have any sign.
+	# roots are set of -2 vectors.
+	# type is the root type of the root lattice generated by roots.
+	#
+	local beep, conns, type, conn,
+	rank, basis, subGram, sgn, disc, rootnumb;
+	beep:=function(beepnumb);
+		Printn("wrong GetRootType", beepnumb); Error();
+	end;
+	#
+	conns:=makeConnComps(Gram, roots);
+	type:=[];
+	for conn in conns do
+		rank:=Rank(conn);
+		basis:=RemoveZeroVectsIntMat(HermiteNormalFormIntegerMat(conn));
+		subGram:=TMTTmult(basis, Gram);
+		sgn:=SignatureQ(subGram);
+		if sgn=[rank, rank,0] then
+		elif sgn=[rank, 0, rank] then
+			subGram:=-subGram;
+		else
+			beep(188182);
+		fi;
+		disc:=AbsInt(DeterminantIntMat(subGram));
+		#rootnumb:=2*Length(ShortestVectors(subGram, 2).vectors);
+		rootnumb:=Length(VectorsListInPosLat(subGram, 2));
+		Add(type, FindRoottype(rank, disc, rootnumb));
+	od;
+	Sort(type);
+	return(type);
+end;
+
+
+FindAStdRootSystemPosL:=function(GramP, randomseed)
+	#
+	local beep, roots, controlvdual, degs,
+	stdroots, pos, tr, deg, prevtr, flag, trdual,
+	stdrootconns, conn, conns, stdconns, stdconn,
+	rank, disc, type,tconn,  connflag,
+	Gramstdconn, tv, ii, anisom, controlv, tt,
+	xx, controlvflag, tvdual, n, negroots, newstdconn;
+	#
+	beep:=function(beepnumb)
+		Printn("wrong FindAStdRootSystemPosL", beepnumb); Error();
+	end;
+	#
+	Reset(GlobalMersenneTwister,randomseed);
+	#
+	roots:=ShortestVectors(GramP, 2).vectors;
+	if roots=[] then
+		return([[], "null"]);
+	fi;
+	#
+	n:=Length(GramP);
+	controlvflag:=false;
+	tv:=RandomVect(n);
+	for tt in [1..n*1000] do
+		tv:=2*tv+RandomVect(n);
+		tvdual:=tv*GramP;
+		degs:=List(roots, tr->tvdual*tr);
+		if (not 0 in degs) and Set(toMultiSet(degs), xx->xx[2])=[1] then
+			controlv:=List(tv);
+			controlvflag:=true;
+			break;
+		fi;
+	od;
+	if not controlvflag then
+		Printn("cannot FindAControlevPosL");
+		Error();
+	fi;
+	#
+	Append(roots, -roots);
+	#
+	#
+	controlvdual:=controlv*GramP;
+	degs:=List(roots, tr->controlvdual*tr);
+	if 0 in degs then
+		beep(1);
+	fi;
+	SortParallel(degs, roots);
+	#
+	#Printn(Length(roots), toMultiSet(degs));
+	pos:=0;
+	negroots:=[];
+	for tr in roots do
+		pos:=pos+1;
+		deg:=degs[pos];
+		if deg<0 then
+			Add(negroots, tr);
+		fi;
+	od;
+	stdroots:=[];
+	pos:=0;
+	for tr in Reversed(negroots) do
+		pos:=pos+1;
+		deg:=degs[pos];
+		trdual:=tr*GramP;
+		flag:=true;
+		for prevtr in stdroots do
+			if trdual*prevtr>0 then
+				flag:=false;
+				break; #from for prevtr in stdroots do
+			fi;
+		od;
+		if flag then
+			Add(stdroots, tr);
+		fi;
+	od;
+	#Printn(Length(stdroots));
+	#
+	conns:=makeConnComps(GramP, roots);
+	stdconns:=makeConnComps(GramP, stdroots);
+	#
+	stdrootconns:=[];
+	for stdconn in stdconns do
+		Gramstdconn:=TMTTmult(stdconn, GramP);
+		disc:=AbsInt(DeterminantIntMat(Gramstdconn));
+		rank:=Length(stdconn);
+		connflag:=false;
+		for tconn in conns do
+			if IsSubset(tconn, stdconn) then
+				connflag:=true;
+				conn:=tconn;
+			fi;
+		od;
+		if not connflag then
+			beep(166162);
+		fi;
+		type:=FindRoottype(rank, disc, Length(conn));
+		anisom:=FindASubconfig(ADEHrec.(type).Gram, TMTTmult(stdconn, GramP));
+		if anisom=fail or anisom=false then
+			beep(15577171);
+		fi;
+		newstdconn:=List(anisom, ii->stdconn[ii]);
+		if ADEHrec.(type).Gram<>TMTTmult(newstdconn, GramP) then
+			beep(91122);
+		fi;
+		Add(stdrootconns, [type, newstdconn]);
+	od;
+	#
+	return([stdrootconns, controlv]);
+end;
+
+
+####### Added on 2021 10 16
+
+
+IsAmple:=function(Gram, tample)
+  if tample*Gram*tample<=0 then return(false); fi;
+    #AffESstd:=function(SQ, vec, reldeg, norm, isES)
+  if AffESstd(Gram, tample, 0, -2, true)<>[] then return(false); fi;
+  return(true);
+end;
+
+IsAmpleDeg:=function(Gram, tample, deg)
+  if tample*Gram*tample<>deg then return(false); fi;
+    #AffESstd:=function(SQ, vec, reldeg, norm, isES)
+  if AffESstd(Gram, tample, 0, -2, true)<>[] then return(false); fi;
+  return(true);
+end;
+
+EasyRandomAmple:=function(Gram, vseed, scale)
+  local leng, cc, tv, ttv, ss;
+  leng:=Length(vseed);
+  tv:=vseed;
+  if tv*Gram*tv<=0 then beep(146156); fi;
+  cc:=0;
+  while cc<10 do
+    if IsAmple(Gram, tv) then return(tv); fi;
+    ttv:=scale*tv+RandomVectfromL(leng, [-1,1]);
+    ss:=scale;
+    while ttv*Gram*ttv<=0 do
+      ttv:=ss*tv+RandomVectfromL(leng, [-1,1]);
+      ss:=ss+1;
+      if ss>1000 then beep(69816891); fi;
+    od;
+    tv:=ttv;
+    cc:=cc+1;
+  od;
+  return(fail);
+end;
+
+NewRatInvolutionMat:=function(GramS, th, pullbacks, geomroots, checklevel)
+	#
+	# th is a polarization that induces an involution.
+	# pullbacks is a vector of the pull-back of the quotient rational surface.
+	# If quot is P^2, then [the pull-back of a line].
+	# For an elliptic inversion,
+	# th:= 3*fiber+zerosection;
+	# pullbacks:=[fiber, zerosection];
+  # geomroots should be prepared by
+  # GeomRootType(GramS, th, tample);
+	#
+	local tcomp,  tk, invariantvs, rt, tn, ade, excepvs, beep,
+	antiinvariantvs, diminv, dimantiinv, M, Msprime, orthorec, E6inv, S;
+	#
+	beep:=function(n)
+		Printn("wrong NewRatInvolutionMat", n); Error();
+	end;
+	#
+	invariantvs:=List(pullbacks);
+	#
+	if geomroots<>[ 0, [  ] ] then
+		for tcomp in geomroots do
+			rt:=tcomp[1];
+			tn:=ADEHrec.(rt).rank;
+			ade:=ADEHrec.(rt).type;
+			excepvs:=tcomp[2];
+			if ade='A' then
+				if tn mod 2 =1 then
+					Add(invariantvs, excepvs[(tn+1)/2]);
+				fi;
+				for tk in [1..FloorRat(tn/2)] do
+					Add(invariantvs, excepvs[tk]+excepvs[tn+1-tk]);
+				od;
+			elif ade='D' then
+				if tn mod 2=0 then
+					Append(invariantvs, excepvs);
+				else
+					Add(invariantvs, excepvs[1]+excepvs[2]);
+					Append(invariantvs, List([3..tn], kk->excepvs[kk]));
+				fi;
+			elif ade='E' then
+				if tn=6 then
+					E6inv:=[excepvs[1], excepvs[4], excepvs[2]+excepvs[6], excepvs[3]+excepvs[5]];
+					Append(invariantvs, E6inv);
+				elif tn=7 then
+					Append(invariantvs, excepvs);
+				elif tn=8 then
+					Append(invariantvs, excepvs);
+				fi;
+			else
+				beep(0);
+			fi;
+		od;
+	fi;
+	#
+	if RankMat(invariantvs)<>Length(invariantvs) then beep(1); fi;
+	#
+	orthorec:=OrthogonalComp(invariantvs, GramS);
+	#
+	antiinvariantvs:=orthorec.basis;
+	diminv:=Length(invariantvs);
+	dimantiinv:=Length(antiinvariantvs);
+	S:=StackMats(invariantvs, antiinvariantvs);
+	#
+	if dimantiinv>0 then
+		Msprime:=DiagonalMats([IdentityMat(diminv), (-1)*IdentityMat(dimantiinv)]);
+		M:=InverseMat(S)*Msprime*S;
+	else
+		Printn("the involution acts trivially on SX");
+		M:=IdentityMat(diminv);
+	fi;
+	#
+	if checklevel>0 then
+		if not IsIntMat(M) then beep(2); fi;
+		if M*M<>IdentityMat(Length(GramS)) then beep(3); fi;
+		if TMTTmult(M, GramS)<>GramS then beep(4); fi;
+		if (th*M*GramS)*th<=0 then beep(5); fi;
+		if pullbacks<>pullbacks*M then beep(6); fi;
+		if geomroots<>[ 0, [  ] ] then
+			for tcomp in geomroots do
+				if not IsEqualSet(tcomp[2], tcomp[2]*M) then beep(7); fi;
+			od;
+		fi;
+	fi;
+	if checklevel>1 then
+		if SeparatingVects(GramS, th, th*M, -2) <>[] then beep(8); fi;
+	fi;
+	#
+	return(M);
+	#
+end;
+
+
+RatInvolRecP2:=function(GramS, h2, tample)
+	local involrec, th, geomroots, M;
+	geomroots:=GeomRootType(GramS, h2, tample);
+	M:=NewRatInvolutionMat(GramS, h2,  [h2],  geomroots, 1);
+	involrec:=rec(
+		type:="double plane",
+		GramSX:=GramS,
+		invol:=M,
+		ample:=tample,
+		h2:=h2,
+		geomroots:=geomroots
+	);
+	return(involrec);
+end;
+
+RatInvolRecEll:=function(GramS, fib, zerosection, tample)
+	local involrec, th, geomroots, M;
+	th:=3*fib+zerosection;
+	geomroots:=GeomRootType(GramS, th, tample);
+	M:=NewRatInvolutionMat(GramS, th,  [fib, zerosection], geomroots, 1);
+	involrec:=rec(
+		type:="elliptic K3",
+		GramSX:=GramS,
+		invol:=M,
+		ample:=tample,
+		fiber:=fib,
+		zerosection:=zerosection,
+		geomroots:=geomroots
+	);
+	return(involrec);
+end;
+
+
+
+######### Add 2022/04/09
+
+
+
+
+FindRatsOnK3:=function(GramSX, ample, uptodeg)
+  local rats, extradeg, ratsdual, task, tdeg;
+  #
+  extradeg:=0;
+  rats:=[];
+  ratsdual:=[];
+  tdeg:=0;
+  #
+  task:=function(tv)
+    local tvdual;
+    for tvdual in ratsdual do
+      if tvdual*tv<0 then return(); fi;
+    od;
+    Add(rats, tv);
+    Add(ratsdual, tv*GramSX);
+    return();
+  end;
+  #
+  while tdeg<uptodeg do
+    tdeg:=tdeg+1;
+    AffES(GramSX, ample, tdeg, -2, true, task);
+    Printn("tdeg", tdeg, Length(rats));
+  od;
+  #
+  return(rats);
+end;
+
+
+
+MoveToTheSameChamber:=function(Gram, vwillbemoved, vtarget)
+  #
+  local beep, seprts, vmoved, movingg, rank, seprtssorter,
+  idr, rt, reflmat, vtargetdual, xx;
+  #
+  beep:=function(beepnumb)
+    localbeep("MoveToTheSameChamber", beepnumb); Error();
+  end;
+  #
+  rank:=Length(Gram);
+  idr:=IdentityMat(rank);
+  reflmat:=function(rv)
+    local tv, rvdual;
+    rvdual:=rv*Gram;
+    return(List(idr, tv->tv+(tv*rvdual)*rv));
+  end;
+  #
+  vtargetdual:=vtarget*Gram;
+  seprts:=SeparatingVects(Gram, vwillbemoved, vtarget, -2);
+  seprtssorter:=List(seprts, xx->[xx[2], -xx[1]/(xx[1]*vtargetdual)]);
+  #
+  # Here we use infinitesimal perturbation.
+  #
+  #Printn("seprts", Length(seprts), "ts", Length(Set(seprts, xx->xx[2])));
+  SortParallel(seprtssorter, seprts);
+  #
+  movingg:=IdentityMat(rank);
+  for rt in seprts do
+    movingg:=movingg*reflmat(rt[1]);
+  od;
+  #
+  if not IsIntMat(movingg) then beep(691698); fi;
+  if TMTTmult(movingg, Gram)<>Gram then beep(57816781); fi;
+  #
+  vmoved:=vwillbemoved*movingg;
+  if SeparatingVects(Gram, vmoved, vtarget, -2)<>[] then
+    beep(5751761);
+  fi;
+  return(movingg);
+end;
+
+
+OrthoRoots:=function(Gram, vs)
+  local orthorec, svs,roots, tv, beep;
+  beep:=function(beepnumb)
+    localbeep("OrthoRoots", beepnumb); Error();
+  end;
+  orthorec:=OrthogonalCompRec(Gram, vs);
+  svs:=ShortestVectors((-1)*orthorec.Gram, 2).vectors;
+  if svs=[] then return([]);fi;
+  roots:=svs*orthorec.basis;
+  roots:=Union(roots, -roots);
+  if Set(roots, tv->tv*Gram*tv)<>[-2] then beep(81112); fi;
+  return(roots);
+end;
+
+
+# PrimitivelyEmbeddableInK3Lattice is in Genera.txt
+
+#######
+
+IsIrredRat:=function(GramS, ampleS, tr)
+  local beep, tp, passrs, seps, deg;
+  #
+  beep:=function(beepnumb)
+    localbeep("IsIrredRat", beepnumb); Error();
+  end;
+  #
+  deg:=ampleS*GramS*tr;
+  if deg<=0 then return(false); fi; #changed on 2024/12/16
+  tp:=ampleS+(deg)*tr/2;
+  tp:=GetPrimitiveIntVect(tp);
+  passrs:=OrthoRoots(GramS, [tp]);
+  if not IsEqualSet(passrs, [tr, -tr]) then return(false); fi;
+  seps:=SeparatingVects(GramS, tp, ampleS, -2);
+  if seps<>[] then return(false); fi;
+  #
+  return(true);
+end;
+
+NewIsIrredRat:=function(GramS, manyamples, tr)
+  local beep, nops, trdual, tps, poss, degs, tample, ii,
+  initp, passrs, seps, ta, initpdual, tpdual, minta, mintp,
+  tdeg, mindeg, inita, tp;
+  #
+  beep:=function(beepnumb)
+    localbeep("NewIsIrredRat", beepnumb); Error();
+  end;
+  #
+  nops:=Length(manyamples);
+  trdual:=tr*GramS;
+  if trdual*tr<>-2 then beep(1827); fi;
+  if trdual*manyamples[1]<=0 then return(false); fi; #changed on 2024/12/16
+  #
+  tps:=List(manyamples, ta->GetPrimitiveIntVect(ta+(ta*trdual)*tr/2));
+  mindeg:=infinity;
+  for tp in tps do
+    tpdual:=tp*GramS;
+    for ta in manyamples do
+      tdeg:=tpdual*ta;
+      if tdeg<mindeg then
+        mindeg:=tdeg;
+        mintp:=tp;
+        minta:=ta;
+      fi;
+    od;
+  od;
+  passrs:=OrthoRoots(GramS, [mintp]);
+  if not IsEqualSet(passrs, [tr, -tr]) then return(false); fi;
+  #Printn("______ in NewIsIrredRat:startse deg=", mindeg);
+  seps:=SeparatingVects(GramS, minta, mintp, -2);
+  if seps<>[] then
+    #Printn(false);
+    return(false);
+  else
+    #Printn(true);
+    return(true);
+  fi;
+  #
+end;
+
+
+IsEllfNef:=function(GramS, ampleS, ellf)
+  local beep, ellfdual, degf, ample2, seps;
+  beep:=function(beepnumb)
+    localbeep("IsEllfNef", beepnumb); Error();
+  end;
+  ellfdual:=ellf*GramS;
+  if ellfdual*ellf<>0 then beep(77972); fi;
+  degf:=ellfdual*ampleS;
+  if degf<=0 then beep(222982); fi;
+  ample2:=GetPrimitiveIntVect(ampleS+degf*ellf);
+  if OrthoRoots(GramS, [ample2])<>[] then return(false); fi;
+  seps:=SeparatingVects(GramS, ampleS, ample2, -2);
+  if seps<>[] then return(false); fi;
+  return(true);
+end;
+
+DoesKeepTheNef:=function(GramS, amples, tg)
+  local amplestg, mindeg, atg, atgdual, aa, ddeg, minpair;
+  amplestg:=amples*tg;
+  mindeg:=infinity;
+  for atg in amplestg do
+    atgdual:=atg*GramS;
+    for aa in amples do
+      ddeg:=atgdual*aa;
+      if ddeg<mindeg then
+        mindeg:=ddeg;
+        minpair:=[atg, aa];
+      fi;
+    od;
+  od;
+  return(SeparatingVects(GramS, minpair[1], minpair[2], -2)=[]);
+end;
+
+#######
+# 2025/02/19
+#######
+
+IsEnriquesInvolLat:=function(Gram, tg)
+	local Idr, tinvariant, tinvariantGram, htinvariantGram,
+	r, halftinvariantGram, tantiinvariant,
+	beep, tantiinvariantGram, orthorec;
+	#
+	beep:=function(beepnumb)
+   		localbeep("IsEnriquesInvol", beepnumb); Error();
+    end;
+ 	#
+ 	r:=Length(Gram);
+	Idr:=IdentityMat(r);
+	if Order(tg)<>2 then return(false); fi;
+	if TMTTmult(tg, Gram)<>Gram then beep(57625762); fi;
+	tinvariant:=NullspaceIntMat(tg-Idr);
+	if tinvariant*tg<>tinvariant then beep(67272); fi;
+	if Length(tinvariant)<>10 then return(false); fi;
+	tinvariantGram:=TMTTmult(tinvariant, Gram);
+ 	htinvariantGram:=(1/2)*tinvariantGram;
+	if not IsIntMat(htinvariantGram) then
+    	return(false);
+ 	fi;
+	if SignatureQ(tinvariantGram)<>[10, 1, 9] then
+		return(false);
+  	fi;
+	if DeterminantIntMat(htinvariantGram)<>-1 then
+    	return(false);
+  	fi;
+ 	orthorec:=OrthogonalCompRec(Gram, tinvariant);
+	tantiinvariant:=orthorec.basis;
+	tantiinvariantGram:=orthorec.Gram;
+ 	if SignatureQ(tantiinvariantGram)<>[r-10, 0, r-10] then beep(9921); fi;
+	if ShortestVectors(-tantiinvariantGram, 2).vectors<>[] then return(false); fi;
+	return(true);
+end;
+
+FindRatsOnK3ByNefPol:=function(GramSX, pol, orthorats, uptodeg, tempratsname)
+  local rats, extradeg, ratsdual, task, tdeg;
+  #
+  extradeg:=0;
+  rats:=List(orthorats);
+  ratsdual:=rats*GramSX;
+  tdeg:=0;
+  #
+  task:=function(tv)
+    local tvdual;
+    for tvdual in ratsdual do
+      if tvdual*tv<0 then return(); fi;
+    od;
+    Add(rats, tv);
+    Add(ratsdual, tv*GramSX);
+    return();
+  end;
+  #
+  while tdeg<uptodeg do
+    tdeg:=tdeg+1;
+    AffES(GramSX, pol, tdeg, -2, true, task);
+    Printn("tdeg", tdeg, Length(rats));
+    savedataas(rats, Concatenation(tempratsname, String(tdeg)));
+  od;
+  #
+  return(rats);
+end;
+
+IsInAut:=function(GramS, discSrec, periodpreservingqgs, manyamples, tg)
+  if not IsIntMat(tg) then return(false); fi;
+  if TMTTmult(tg, GramS)<>GramS then return(false); fi;
+  if not OLtoOqL(tg, discSrec) in periodpreservingqgs then
+    return(false);
+  fi;
+  if not DoesKeepTheNef(GramS, manyamples, tg) then
+    return(false);
+  fi;
+  return(true);
+end;
+
+
+
+
+##### end

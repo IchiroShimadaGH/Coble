@@ -1,0 +1,443 @@
+#Read("EchelonMat.txt");
+
+#
+# The  operations below should be moved to LinearAlgebra.
+# These are destructive on the matrix M.
+#
+
+MatRowScMult:=function(M, ii, aa)
+	M[ii]:=aa*M[ii];
+end;
+
+MatColScMult:=function(M, ii, aa)
+	local vv;
+	for vv in M do
+		vv[ii]:=aa*vv[ii];
+	od;
+end;
+
+MatRowColScMult:=function(M, ii, aa)
+	MatRowScMult(M, ii, aa);
+	MatColScMult(M, ii, aa);
+end;
+
+
+MatRowSwap:=function(M, ii, jj)
+	local vv;
+	vv:=M[ii];
+	M[ii]:=M[jj];
+	M[jj]:=vv;
+end;
+
+MatColSwap:=function(M, ii, jj)
+	local vv, taa;
+	for vv in M do
+		taa:=vv[ii];
+		vv[ii]:=vv[jj];
+		vv[jj]:=taa;
+	od;
+end;
+
+MatRowColSwap:=function(M, ii, jj)
+	MatRowSwap(M, ii, jj);
+	MatColSwap(M, ii, jj);
+end;
+
+MatAddRows:=function(M, ii, aa, jj) #M[ii] becomes M[ii]+aa*M[jj] (ii<>jj)
+	local vv;
+	M[ii]:=M[ii]+aa*M[jj];
+end;
+
+MatAddCols:=function(M, ii, aa, jj)
+	local vv;
+	for vv in M do
+		vv[ii]:=vv[ii]+aa*vv[jj];
+	od;
+end;
+
+MatAddRowsCols:=function(M, ii, aa, jj)
+	MatAddRows(M, ii, aa, jj);
+	MatAddCols(M, ii, aa, jj);
+end;
+
+############################
+
+IniPosnzF:=function(v)
+	local ii;
+	for ii in [1..Length(v)] do
+		if not IsZero(v[ii]) then return(ii); fi;
+	od;
+	Printn("input to IniPosnz should be non-zero vector");Error();
+	return(-1);
+end;
+
+IniPosnzFErrorFree:=function(v)
+	local ii;
+	for ii in [1..Length(v)] do
+		if not IsZero(v[ii]) then return(ii); fi;
+	od;
+	return(-1);
+end;
+
+IniValnzF:=function(v)
+	local xx;
+	for xx in v do
+		if not IsZero(xx) then return(xx); fi;
+	od;
+	Printn("input to IniValnz should be non-zero vector");Error();
+	return(0);
+end;
+
+IniValnzFErrorFree:=function(v)
+	local xx;
+	for xx in v do
+		if not IsZero(xx) then return(xx); fi;
+	od;
+	return(0);
+end;
+
+#####################
+
+
+IsZeroVectF:=function(v)
+	local aa;
+	for aa in v do
+		if not IsZero(aa) then return(false); fi;
+	od;
+	return(true);
+end;
+
+IsZeroMatF:=function(M)
+	local vv;
+	for vv in M do
+		if not IsZeroVectF(vv) then return(false); fi;
+	od;
+	return(true);
+end;
+
+####################
+
+IsEchelonMat:=function(A)
+	local ininzposs, tininzposs, vii, v, jj, ii;
+	ininzposs:=[];
+	vii:=0;
+	for v in A  do
+		vii:=vii+1;
+		for jj in [1..Length(v)] do
+			if not IsZero(v[jj]) then
+				if not IsOne(v[jj]) then return(false); fi;
+				Add(ininzposs, jj);
+				for ii in [1..Length(A)] do 
+					if ii<>vii then
+						if not IsZero(A[ii][jj]) then return(false); fi;
+					fi;
+				od;
+				break; # from for jj in [1..Length(v)] do
+			fi;
+		od;
+	od;
+	if not IsDuplicateFree(ininzposs) then return(false); fi;
+	tininzposs:=List(ininzposs);
+	Sort(ininzposs);
+	if ininzposs<>tininzposs then  return(false); fi;
+	return(ininzposs); 
+end;
+
+EchelonMat:=function(A, F) 
+	#
+	# A is a matrix with components in the field F 
+	#
+	local  oA, tA, rowdimA, coldimA, S, ii,jj,kk, r,  beep,
+	aa,mm,iszerodowntAflag, nzpos, newv, iniposs, solv, sols, pos, 
+	trec;
+	#
+	beep:=function(n) Printn("wrong in EchelonMat", n); Error(); end; 
+	#
+	rowdimA:=Length(A);
+	coldimA:=Length(A[1]);
+	#
+	oA:=One(F)*List(A);
+	tA:=One(F)*List(A);
+	S:=One(F)*IdentityMat(rowdimA);
+	#
+	
+	ii:=1;
+	jj:=1;
+	while ii<=rowdimA and jj<=coldimA do
+		iszerodowntAflag:=true;
+		for kk in [ii..rowdimA] do
+			if not IsZero(tA[kk][jj]) then
+				iszerodowntAflag:=false;
+				nzpos:=kk;
+				break; # from for kk in [ii..rowdimA]
+			fi;
+		od;
+		if iszerodowntAflag then 
+			jj:=jj+1;
+		else
+			if ii<>nzpos then 
+				MatRowSwap(tA, nzpos, ii); 
+				MatRowSwap(S, nzpos, ii); 
+			fi;
+			aa:=1/tA[ii][jj];
+			MatRowScMult(tA, ii, aa);
+			MatRowScMult(S, ii, aa);
+			for kk in [1..rowdimA] do
+				if kk<>ii then 
+					mm:=tA[kk][jj];
+					MatAddRows(tA, kk, -mm, ii);
+					MatAddRows(S, kk, -mm, ii);
+				fi;
+			od;
+			ii:=ii+1;
+			jj:=jj+1;
+		fi;
+		#PrintTo("auxEchelonMat.txt", S, tA);
+	od;
+	#
+	#
+	PrintTo("auxEchelonMat.txt", S, tA);
+	if Set(List(Flat(S*A-tA), IsZero))<>[true] then beep(2); fi;
+	iniposs:=IsEchelonMat(tA);
+	if iniposs=false then beep(3); fi;
+	r:=Length(iniposs);
+	#
+	sols:=[];
+	for ii in [1..coldimA] do
+		if not ii in iniposs then
+			solv:=MakeVectei(coldimA, ii);
+			for jj in [1..ii-1] do
+				if jj in iniposs then
+					pos:=Position(iniposs, jj);
+					solv[jj]:=-tA[pos][ii];
+				fi;
+			od;
+			if not IsZeroVectF(oA*solv) then beep(4); fi;
+			Add(sols, solv);
+		fi;
+	od;
+	#
+	#
+	trec:=rec(
+		characteristic:=Characteristic(F),
+		echelonmat:=tA,
+		transformation:=S,
+		rank:=r,
+		steps:=iniposs,
+		solutions:=sols #the ROW vectors of sols is the solution of A*x=0
+	);
+	return(trec);
+end;
+
+#####################
+
+
+EchelonMatModp:=function(A, p) 
+	#
+	local  tA, rowdimA, coldimA, S, ii,jj,kk, r,  beep,xx,
+	aa,mm,iszerodowntAflag, nzpos, newv, iniposs, solv, sols, pos, trec;
+	#
+	beep:=function(n) Printn("wrong in EchelonMatModp", n); Error(); end; 
+	#
+	rowdimA:=Length(A);
+	coldimA:=Length(A[1]);
+	#
+	tA:=List(A) mod p;
+	S:=IdentityMat(rowdimA) mod p;
+	#
+	ii:=1;
+	jj:=1;
+	while ii<=rowdimA and jj<=coldimA do
+		iszerodowntAflag:=true;
+		for kk in [ii..rowdimA] do
+			if not IsZero(tA[kk][jj]) then
+				iszerodowntAflag:=false;
+				nzpos:=kk;
+				break; # from for kk in [ii..rowdimA]
+			fi;
+		od;
+		if iszerodowntAflag then 
+			jj:=jj+1;
+		else
+			if ii<>nzpos then 
+				MatRowSwap(tA, nzpos, ii); 
+				MatRowSwap(S, nzpos, ii); 
+			fi;
+			aa:=1/tA[ii][jj] mod p;
+			MatRowScMult(tA, ii, aa);
+			MatRowScMult(S, ii, aa);
+			for kk in [1..rowdimA] do
+				if kk<>ii then 
+					mm:=tA[kk][jj];
+					MatAddRows(tA, kk, -mm, ii);
+					MatAddRows(S, kk, -mm, ii);
+				fi;
+			od;
+			ii:=ii+1;
+			jj:=jj+1;
+		fi;
+		S:=S mod p;
+		tA:=tA mod p;
+	od;
+	#
+	if not IsZeroMat( (S*A-tA) mod p) then beep(2); fi;
+	iniposs:=IsEchelonMat(tA);
+	if iniposs=false then beep(3); fi;
+	r:=Length(iniposs);
+	#
+	sols:=[];
+	for ii in [1..coldimA] do
+		if not ii in iniposs then
+			solv:=MakeVectei(coldimA, ii);
+			for jj in [1..ii-1] do
+				if jj in iniposs then
+					pos:=Position(iniposs, jj);
+					solv[jj]:=-tA[pos][ii] mod p;
+				fi;
+			od;
+			if not IsZeroVect(A*solv mod p) then beep(4); fi;
+			Add(sols, solv);
+		fi;
+	od;
+	#
+	trec:=rec(
+		p:=p,
+		echelonmat:=tA,
+		transformation:=S,
+		rank:=r,
+		steps:=iniposs,
+		solutions:=sols #the ROW vectors of sols is the solution of A*x=0
+	);
+	return(trec);
+end;
+
+SolAbModp:=function(A, b, p) 
+	local solrec, beep, trec, MM, Sb, steps, rankA, ii, sol0, kk;
+	#
+	beep:=function(aa) Printn("wrong in SolAbModp", aa); Error(); end; 
+	#
+	trec:=EchelonMatModp(A, p);
+	MM:=trec.echelonmat;
+	Sb:=(trec.transformation)*b mod p;
+	steps:=trec.steps;
+	rankA:=trec.rank;
+	#
+	for ii in [rankA+1..Length(Sb)] do
+		if Sb[ii] mod p <>0 then
+			return(fail);
+		fi;
+	od;
+	#
+	sol0:=MakeZeroVect(Length(A[1])); 
+	for kk in [1..Length(steps)] do
+		sol0[steps[kk]]:=Sb[kk];
+	od;
+	#
+	if not IsZeroVect((A*sol0-b) mod p) then beep(1); fi;
+	solrec:=rec(
+		asol:=sol0,
+		nullvects:=trec.solutions  #the ROW vectors of sols is the solution of A*x=0
+	);
+	return(solrec);
+end;
+
+#####################
+
+#########################
+
+DiagonalizeSymRatMat:=function(G)
+	# 
+	# G is a nondegenerate  symetric matricx with components in Q.
+	# S is an invertible matrix such that S*G*tS is a diagonal matrix.
+	#
+	local beep, n, newG, S, ii, jj, pos, aa, mm, pos2;
+	#
+	beep:=function(numb) Printn("wrong DiagonalizeSymRatMat", numb); Error(); end;
+	n:=Length(G);
+	newG:=CopyMat(G);
+	S:=IdentityMat(n);
+	for ii in [1..n] do
+		pos:=0;
+		for jj in [ii..n] do
+			if newG[jj][jj]<>0 then pos:=jj; break; fi;
+		od;
+		if pos<>0 and pos<>ii  then
+			MatRowColSwap(newG, ii, pos); 
+			MatRowSwap(S, ii, pos);
+		elif pos=0 then 
+			pos2:=0;
+			for jj in [ii..n] do
+				if newG[ii][jj]<>0 then pos2:=jj; break; fi;
+			od;
+			if pos2=0 then beep(10); fi;
+			mm:=newG[ii][pos2];
+			MatAddRowsCols(newG, ii, mm, pos2); # (ii) := (ii) + mm* (pos)
+			MatAddRows(S, ii, mm, pos2);
+		fi;
+		aa:=newG[ii][ii];
+		if aa=0 then beep(20); fi;
+		for jj in [ii+1..n] do
+			mm:=-newG[ii][jj]/aa;
+			MatAddRowsCols(newG, jj, mm, ii); # (jj) := (jj) + mm* (ii)
+			MatAddRows(S, jj, mm, ii);
+		od;
+	od;
+	if not IsDiagonalMat(newG) then beep(100); fi;
+	if TMTTmult(S, G)<>newG then beep(200); fi;
+	return([S, newG]);
+end;
+
+##################
+
+easyEchelonMat:=function(A, F) 
+	#
+	# A is a matrix with components in the field F 
+	#
+	local  oA, tA, rowdimA, coldimA, S, ii,jj,kk, r,  beep,
+	aa,mm,iszerodowntAflag, nzpos, newv, iniposs, solv, sols, pos, 
+	trec;
+	#
+	beep:=function(n) Printn("wrong in easyEchelonMat", n); Error(); end; 
+	#
+	rowdimA:=Length(A);
+	coldimA:=Length(A[1]);
+	#
+	oA:=One(F)*List(A);
+	tA:=One(F)*List(A);
+	S:=One(F)*IdentityMat(rowdimA);
+	#
+	
+	ii:=1;
+	jj:=1;
+	while ii<=rowdimA and jj<=coldimA do
+		iszerodowntAflag:=true;
+		for kk in [ii..rowdimA] do
+			if not IsZero(tA[kk][jj]) then
+				iszerodowntAflag:=false;
+				nzpos:=kk;
+				break; # from for kk in [ii..rowdimA]
+			fi;
+		od;
+		if iszerodowntAflag then 
+			jj:=jj+1;
+		else
+			if ii<>nzpos then 
+				MatRowSwap(tA, nzpos, ii);  
+			fi;
+			aa:=1/tA[ii][jj];
+			MatRowScMult(tA, ii, aa);
+			MatRowScMult(S, ii, aa);
+			for kk in [1..rowdimA] do
+				if kk<>ii then 
+					mm:=tA[kk][jj];
+					MatAddRows(tA, kk, -mm, ii);
+				fi;
+			od;
+			ii:=ii+1;
+			jj:=jj+1;
+		fi;
+	od;
+	#
+	#
+	return(tA);
+end;

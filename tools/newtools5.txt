@@ -1,0 +1,60 @@
+#Read("newtools5.txt");
+
+
+id10:=IdentityMat(10);
+
+ReflectionL10:=function(twall)
+  local twalldual, tv;
+  twalldual:=twall*GramL10;
+  return(List(id10, tv->tv+(twalldual*tv)*twall));
+end;
+
+Getirec:=function(irecname)
+  local irec;
+  for irec in irecs do
+    if irec.name=irecname then return(irec); fi;
+  od;
+  beep(1964318712876);
+  return(fail);
+end;
+
+
+StdAutDiscg:=function(gg, discg) #gg is an element of Aut(discg)
+  #
+  local tv, aa, newgg, newtv, kk, intaa, fracaa;
+  newgg:=[];
+  for tv in gg do
+    newtv:=[];
+    kk:=0;
+    for aa in tv do
+      kk:=kk+1;
+      intaa:=FloorRat(aa);
+      fracaa:=aa-intaa;
+      Add(newtv, (intaa mod discg[kk])+fracaa);
+    od;
+    Add(newgg, newtv);
+  od;
+  #
+  return(newgg);
+end;
+
+
+ConnNumbs:=function(tM)
+	local conns, kk, tv, newconn, others, conn, ii;
+	conns:=[];
+	for kk in [1..Length(tM)] do
+		tv:=tM[kk];
+		newconn:=[kk];
+		others:=[];
+		for conn in conns do
+			if Set(conn, ii->tv[ii])=[0] then
+				Add(others, conn);
+			else
+				Append(newconn, conn);
+			fi;
+		od;
+		Add(others, newconn);
+		conns:=others;
+	od;
+	return(conns);
+end;

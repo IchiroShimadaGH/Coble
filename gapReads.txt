@@ -1,0 +1,90 @@
+#Read("gapReads.txt");
+
+__debugflag:=false;
+Print("__debugflag ", __debugflag, "\n");
+
+
+Read("gapReads/gapreReads.txt");
+
+
+
+
+logfn:="";
+wspfn:="";
+sessionnumb:=0;
+
+SetRecordFiles:=function()
+	#
+	# change on 2025/04/27
+	#
+	local date, path, str, a, L, aa;
+	path := DirectoriesSystemPrograms();
+	date := Filename( path, "date" );
+	str := "";
+	a := OutputTextString(str,true);
+	Process( DirectoryCurrent(), date, InputTextNone(), a, ["+%Y-%m-%d %H:%M:%S"] );
+	L:=[];
+	for aa in str do
+		if IsDigitChar(aa) then Add(L, aa); fi;
+	od;
+	CloseStream(a);
+	sessionnumb:= EvalString(L);
+	#wspfn:=Concatenation(["gapwsps/gapwsp", L, ".gwsp"]);
+	#SaveOnExitFile:=wspfn;
+	if IsBoundGlobal("SaveOnExitFile") then
+		UnbindGlobal("SaveOnExitFile");
+	fi;
+	logfn:=Concatenation(["gaplogs/gaplog", L, ".txt"]);
+	LogTo(logfn);
+end;
+
+SetRecordFiles();
+
+Printn("sessionnumb ", sessionnumb);
+
+myfunctionsnamelist:=NamesUserGVars( );
+for name in myfunctionsnamelist do
+	if not IsReadOnlyGlobal(name) then
+		MakeReadOnlyGlobal(name);
+	fi;
+od;
+
+debugvar1:=0;
+debugvar2:=0;
+debugvar3:=0;
+debugvar4:=0;
+debugvar5:=0;
+debugvar6:=0;
+
+
+_totalruntime:=Runtime();
+
+StopWatch:=function(numb)
+	Printn("jobnumb", numb, "time", StringTime(Runtime()-_totalruntime));
+	_totalruntime:=Runtime();
+end;
+
+ResetStopWatch:=function()
+	_totalruntime:=Runtime();
+end;
+
+MakeReadOnlyGlobal("StopWatch");
+
+#############
+# 2021 Feb 20
+#############
+
+randseedreset:=function(arg)
+	if Length(arg)=0 then
+		Reset(GlobalMersenneTwister, sessionnumb);
+	elif Length(arg)=1 then
+		Reset(GlobalMersenneTwister, arg);
+	else Printn("wrong input in seedreset"); Error();
+	fi;
+end;
+
+#############
+# 2022 Apr 14
+#############
+
+ MakeReadWriteGlobal("_rdflag");

@@ -1,0 +1,482 @@
+IsStandardBasisOfCode:=function(basisofcode)
+	local dim;
+	dim:=Length(basisofcode);
+	return(SubMatrix(basisofcode, [1..dim], [1..dim])=IdentityMat(dim));
+end;
+
+
+
+
+Codewords:=function(basis, thebsn)
+	local dim, leng,codewords, codewordsjob;
+	dim:=Length(basis);
+	leng:=Length(basis[1]);
+	codewords:=[];
+	codewordsjob:=function(v, pos)
+		#
+		# ternary branch by adding basis[pos+1] or not
+		#
+		local  aa, newv;
+		if pos=dim then
+			Add(codewords, v);
+		else
+			newv:=basis[pos+1];
+			for aa in [0..thebsn-1] do
+				codewordsjob((v+ aa*newv) mod thebsn, pos+1);
+			od;
+		fi;
+	end;
+	codewordsjob(MakeZeroVect(leng), 0);
+	codewords:=Set(codewords); #We need this because of syzygy
+	return(codewords);
+end;
+
+WeightDistributionCodewords:=function(cws)
+	local leng, cw, wt, wts;
+	leng:=Length(cws[1]);
+	wts:=List(cws, cw->leng-NumbOccur(0, cw));
+	return(List(Set(wts), wt->[wt, NumbOccur(wt, wts)]));
+end;
+
+WeightDistribution:=function(basis, thebsn)
+	return(WeightDistributionCodewords(Codewords(basis, thebsn)));
+end;
+
+#####################
+
+
+FindAnIsomOfCodes:=function(stdbasisofcode1, stdbasisofcode2, codewords1, codewords2, thebsn)
+	#
+	# stdbasisofcode is a basis of code of the form [Id|M].
+	#
+	local bigM, targetM, v1, v2, isom, task, flag, bijectionjob,
+	dim, dim2, Iddim, head, leng, MonomialTransformationjob, thess, 
+	thepairs, s, aa, nopscws, Tcws1, kk;
+	#
+	leng:=Length(stdbasisofcode1[1]);
+	dim:=Length(stdbasisofcode1);
+	#
+	if not IsStandardBasisOfCode(stdbasisofcode1) then 
+		Printn("wrong input in FindAnIsomOfCodes"); Error();
+	fi;
+	if not IsStandardBasisOfCode(stdbasisofcode2) then 
+		Printn("wrong input in FindAnIsomOfCodes"); Error();
+	fi;
+	#
+	if Length(stdbasisofcode2)<>dim then return(fail); fi;
+	nopscws:=Length(codewords1);
+	if nopscws<>Length(codewords2) then return(fail); fi;
+	#
+	head:=function(cw)
+		local pos;
+		return(List([1..dim], pos->cw[pos]));
+	end;
+	#
+	bijectionjob:=function(emb)
+		local pos, mappedbasis1, newpos, tbij, cw1;
+		mappedbasis1:=List(emb, pos->codewords2[pos]);
+		tbij:=[];
+		for cw1 in codewords1 do
+			newpos:=Position(codewords2, head(cw1)*mappedbasis1 mod thebsn);
+			if newpos=fail then  return(fail); fi;
+			Add(tbij, newpos);
+		od;
+		if CopySort(tbij)<>[1..nopscws] then return(fail); fi;
+		return(tbij);
+	end;
+	#
+	thess:=[];
+	thepairs:=[];
+	for s in [1..thebsn] do
+		if Gcd(s, thebsn)=1 then
+			Add(thess, s);
+			Add(thepairs, List([0..thebsn-1], aa->[aa, (aa*s) mod thebsn]));
+		fi;
+	od;
+	if not IsDuplicateFree(thepairs) then Printn("wrong FindIsomCode"); Error(); fi;
+	#
+	Tcws1:=TransposedMat(codewords1);
+	#
+	MonomialTransformationjob:=function(tbij)
+		local monts,  Tpermedcws2, montjob, tgmat, montflag;
+		#
+		Tpermedcws2:=TransposedMat(List(tbij, pos->codewords2[pos]));
+		monts:=[];
+		montflag:=false;
+		montjob:=function(iiss, xposjj)
+			local doneiis, xposkk, newiiss, news, TT, TTset, ii, goodss;
+			if xposjj>leng then 
+				Add(monts, iiss);
+				montflag:=true;
+				return();
+			else
+				doneiis:=List(iiss, iis->iis[1]);
+				for xposkk in [1..leng] do
+					if not xposkk in doneiis then
+						TT:=TransposedMat([Tcws1[xposjj], Tpermedcws2[xposkk]]);
+						TTset:=Set(TT);
+						goodss:=[];
+						for ii in [1..Length(thess)] do
+							if IsSubset(thepairs[ii], TTset) then
+								Add(goodss, thess[ii]);
+							fi;
+						od;
+						for news in goodss do
+							newiiss:=CopyAdd(iiss, [xposkk, news]);
+							montjob(newiiss, xposjj+1);
+							if montflag then break; fi;
+						od;
+					fi;
+					if montflag then break; fi;
+				od;
+			fi;
+		end;
+		#
+		montjob([], 1);
+		#
+		if Length(monts)>1 then 
+			Printn("wrong in MonomialTransformationjob");Error();
+		elif Length(monts)=0 then 
+			if montflag then Printn("wrong2 in MonomialTransformationjob");Error(); fi; 
+			return(fail);
+		elif Length(monts)=1 then 
+			tgmat:=List(monts[1], tiis->tiis[2]*MakeVectei(leng, tiis[1]));
+			return([monts[1],tgmat, PermList(tbij)]);
+		fi;
+	end;
+	#
+	isom:=[];
+	#
+	task:=function(emb)
+		#
+		local tbij, mont;
+		#
+		tbij:=bijectionjob(emb);
+		if tbij=fail then
+			return(false);
+		else
+			mont:=MonomialTransformationjob(tbij);
+			if mont=fail then return(false);
+			else
+				isom:=mont; return(true);
+			fi;
+		fi;
+	end;
+	targetM:=List(stdbasisofcode1, v1->List(stdbasisofcode1, v2->NumbOccur(0, (v1+v2) mod thebsn)));
+	for kk in [1..dim] do targetM[kk][kk]:=NumbOccur(0,stdbasisofcode1[kk]); od;
+	bigM:=List(codewords2, v1->List(codewords2, v2->NumbOccur(0, (v1+v2) mod thebsn)));
+	for kk in [1..nopscws] do bigM[kk][kk]:=NumbOccur(0,codewords2[kk]); od;
+	flag:=FindASubconfigtask(targetM, bigM, task);
+	if flag=fail then return(fail); fi;
+	return(isom);
+end;
+
+FindAllIsomsOfCodes:=function(stdbasisofcode1, stdbasisofcode2, codewords1, codewords2, thebsn)
+	#
+	# stdbasisofcode is a basis of code of the form [Id|M].
+	#
+	# CAUTION!
+	# AllIsoms is not the set of all monomial transforms that maps code1 to code2.
+	# (This set is  FullIsoms, see below)
+	# It is the set of their RESTRICTIONS to code1.
+	#
+	#
+	local bigM, targetM, v1, v2, isoms, task, flag, bijectionjob,
+	dim, dim2, Iddim, head, leng, MonomialTransformationjob, thess, 
+	thepairs, s, aa, nopscws, Tcws1, kk;
+	#
+	leng:=Length(stdbasisofcode1[1]);
+	dim:=Length(stdbasisofcode1);
+	#
+	if not IsStandardBasisOfCode(stdbasisofcode1) then 
+		Printn("wrong input in FindAnIsomOfCodes"); Error();
+	fi;
+	if not IsStandardBasisOfCode(stdbasisofcode2) then 
+		Printn("wrong input in FindAnIsomOfCodes"); Error();
+	fi;
+	#
+	if Length(stdbasisofcode2)<>dim then return([]); fi;
+	nopscws:=Length(codewords1);
+	if nopscws<>Length(codewords2) then return([]); fi;
+	#
+	head:=function(cw)
+		local pos;
+		return(List([1..dim], pos->cw[pos]));
+	end;
+	#
+	bijectionjob:=function(emb)
+		local pos, mappedbasis1, newpos, tbij, cw1;
+		mappedbasis1:=List(emb, pos->codewords2[pos]);
+		tbij:=[];
+		for cw1 in codewords1 do
+			newpos:=Position(codewords2, head(cw1)*mappedbasis1 mod thebsn);
+			if newpos=fail then return(fail); fi;
+			Add(tbij, newpos);
+		od;
+		if CopySort(tbij)<>[1..nopscws] then return(fail); fi;
+		return(tbij);
+	end;
+	#
+	thess:=[];
+	thepairs:=[];
+	for s in [1..thebsn] do
+		if Gcd(s, thebsn)=1 then
+			Add(thess, s);
+			Add(thepairs, List([0..thebsn-1], aa->[aa, (aa*s) mod thebsn]));
+		fi;
+	od;
+	if not IsDuplicateFree(thepairs) then Printn("wrong FindIsomCode"); Error(); fi;
+	Tcws1:=TransposedMat(codewords1);
+	#
+	MonomialTransformationjob:=function(tbij)
+		local monts,  Tpermedcws2, montjob, tgmat, montflag;
+		Tpermedcws2:=TransposedMat(List(tbij, pos->codewords2[pos]));
+		monts:=[];
+		montflag:=false;
+		montjob:=function(iiss, xposjj)
+			local doneiis, xposkk, newiiss, news, TT, TTset, jjj, goodss;
+			if xposjj>leng then 
+				Add(monts, iiss); 
+				montflag:=true;
+			else
+				doneiis:=List(iiss, iis->iis[1]);
+				for xposkk in [1..leng] do
+					if not xposkk in doneiis then
+						TT:=TransposedMat([Tcws1[xposjj], Tpermedcws2[xposkk]]);
+						TTset:=Set(TT);
+						goodss:=[];
+						for jjj in [1..Length(thess)] do
+							if IsSubset(thepairs[jjj], TTset) then
+								Add(goodss, thess[jjj]);
+							fi;
+						od;
+						for news in goodss do
+							newiiss:=CopyAdd(iiss, [xposkk, news]);
+							montjob(newiiss, xposjj+1);
+							if montflag then break; fi;
+						od;
+					fi;
+					if montflag then break; fi;
+				od;
+			fi;
+		end;
+		#
+		montjob([], 1);
+		#
+		if Length(monts)>1 then 
+			Printn("wrong in MonomialTransformationjob");Error();
+		elif Length(monts)=0 then 
+			if montflag then Printn("wrong2 in MonomialTransformationjob");Error(); fi; 
+			return(fail);
+		elif Length(monts)=1 then 
+			tgmat:=List(monts[1], tiis->tiis[2]*MakeVectei(leng, tiis[1]));
+			return([monts[1],tgmat, PermList(tbij)]);
+		fi;
+	end;
+	#
+	isoms:=[];
+	#
+	task:=function(emb)
+		#
+		local tbij, mont;
+		#
+		#
+		tbij:=bijectionjob(emb);
+		if tbij=fail then
+			return();
+		else
+			mont:=MonomialTransformationjob(tbij);
+			if mont=fail then return();
+			else
+				Add(isoms, mont); return();
+			fi;
+		fi;
+	end;
+	#
+	targetM:=List(stdbasisofcode1, v1->List(stdbasisofcode1, v2->NumbOccur(0, (v1+v2) mod thebsn)));
+	for kk in [1..dim] do targetM[kk][kk]:=NumbOccur(0,stdbasisofcode1[kk]); od;
+	bigM:=List(codewords2, v1->List(codewords2, v2->NumbOccur(0, (v1+v2) mod thebsn)));
+	for kk in [1..nopscws] do bigM[kk][kk]:=NumbOccur(0,codewords2[kk]); od;
+	#
+	FindAllSubconfigstask(targetM, bigM, task);
+	return(isoms);
+end;
+
+FindFullIsomsOfCodes:=function(stdbasisofcode1, stdbasisofcode2, codewords1, codewords2, thebsn)
+	#
+	# stdbasisofcode is a basis of code of the form [Id|M].
+	#
+	# CAUTION!
+	# FullIsoms is the set of all monomial transforms that maps code1 to code2.
+	#
+	#
+	#
+	local bigM, targetM, v1, v2, isoms, task, flag, bijectionjob,
+	dim, dim2, Iddim, head, leng, MonomialTransformationjob, thess, 
+	thepairs, s, aa, nopscws, Tcws1, kk;
+	#
+	leng:=Length(stdbasisofcode1[1]);
+	dim:=Length(stdbasisofcode1);
+	#
+	if not IsStandardBasisOfCode(stdbasisofcode1) then 
+		Printn("wrong input in FindAnIsomOfCodes"); Error();
+	fi;
+	if not IsStandardBasisOfCode(stdbasisofcode2) then 
+		Printn("wrong input in FindAnIsomOfCodes"); Error();
+	fi;
+	#
+	if Length(stdbasisofcode2)<>dim then return([]); fi;
+	nopscws:=Length(codewords1);
+	if nopscws<>Length(codewords2) then return([]); fi;
+	#
+	head:=function(cw)
+		local pos;
+		return(List([1..dim], pos->cw[pos]));
+	end;
+	#
+	bijectionjob:=function(emb)
+		local pos, mappedbasis1, newpos, tbij, cw1;
+		mappedbasis1:=List(emb, pos->codewords2[pos]);
+		tbij:=[];
+		for cw1 in codewords1 do
+			newpos:=Position(codewords2, head(cw1)*mappedbasis1 mod thebsn);
+			if newpos=fail then return(fail); fi;
+			Add(tbij, newpos);
+		od;
+		if CopySort(tbij)<>[1..nopscws] then return(fail); fi;
+		return(tbij);
+	end;
+	#
+	thess:=[];
+	thepairs:=[];
+	for s in [1..thebsn] do
+		if Gcd(s, thebsn)=1 then
+			Add(thess, s);
+			Add(thepairs, List([0..thebsn-1], aa->[aa, (aa*s) mod thebsn]));
+		fi;
+	od;
+	if not IsDuplicateFree(thepairs) then Printn("wrong FindIsomCode"); Error(); fi;
+	Tcws1:=TransposedMat(codewords1);
+	#
+	MonomialTransformationjob:=function(tbij)
+		local monts,  Tpermedcws2, montjob, tgmat, montgps, mont;
+		Tpermedcws2:=TransposedMat(List(tbij, pos->codewords2[pos]));
+		monts:=[];
+		montjob:=function(iiss, xposjj)
+			local doneiis, xposkk, newiiss, news, TT, TTset, jjj, goodss;
+			if xposjj>leng then 
+				Add(monts, iiss); 
+			else
+				doneiis:=List(iiss, iis->iis[1]);
+				for xposkk in [1..leng] do
+					if not xposkk in doneiis then
+						TT:=TransposedMat([Tcws1[xposjj], Tpermedcws2[xposkk]]);
+						TTset:=Set(TT);
+						goodss:=[];
+						for jjj in [1..Length(thess)] do
+							if IsSubset(thepairs[jjj], TTset) then
+								Add(goodss, thess[jjj]);
+							fi;
+						od;
+						for news in goodss do
+							newiiss:=CopyAdd(iiss, [xposkk, news]);
+							montjob(newiiss, xposjj+1);
+						od;
+					fi;
+				od;
+			fi;
+		end;
+		#
+		montjob([], 1);
+		#
+		if Length(monts)=0 then return(fail); fi;
+		#
+		montgps:=[];
+		for mont in monts do
+			tgmat:=List(mont, tiis->tiis[2]*MakeVectei(leng, tiis[1]));
+			Add(montgps, [mont,tgmat, PermList(tbij)]);
+		od;
+		#
+		return(montgps);
+	end;
+	#
+	isoms:=[];
+	#
+	task:=function(emb)
+		#
+		local tbij, monts;
+		#
+		#
+		tbij:=bijectionjob(emb);
+		if tbij=fail then
+			return();
+		else
+			monts:=MonomialTransformationjob(tbij);
+			if monts=fail then return();
+			else
+				Append(isoms, monts); return();
+			fi;
+		fi;
+	end;
+	#
+	targetM:=List(stdbasisofcode1, v1->List(stdbasisofcode1, v2->NumbOccur(0, (v1+v2) mod thebsn)));
+	for kk in [1..dim] do targetM[kk][kk]:=NumbOccur(0,stdbasisofcode1[kk]); od;
+	bigM:=List(codewords2, v1->List(codewords2, v2->NumbOccur(0, (v1+v2) mod thebsn)));
+	for kk in [1..nopscws] do bigM[kk][kk]:=NumbOccur(0,codewords2[kk]); od;
+	#
+	FindAllSubconfigstask(targetM, bigM, task);
+	return(isoms);
+end;
+
+RandomMonTrans:=function(leng, unitsmodthebsn)
+	local tM, ii, tch, pos;
+	tM:=[];
+	for ii in [1..leng] do
+		Add(tM, RandomOp(unitsmodthebsn)*MakeVectei(leng, ii));
+	od;
+	tch:=RandomChoose(leng, leng);
+	tM:=List(tch, pos->tM[pos]);
+	return(tM);
+end;
+
+IsMonomialTrans:=function(tM, thebsn)
+	local tposs, leng, tv, flag, pos, aa;
+	leng:=Length(tM);
+	tposs:=[];
+	for tv in tM do
+		flag:=false;
+		pos:=0;
+		for aa in tv do
+			pos:=pos+1;
+			if aa<>0 then
+				flag:=true;
+				Add(tposs, pos);
+				if Gcd(aa, thebsn)<>1 then return(false); fi;
+			fi; 
+		od;
+		if not flag then return(false); fi;
+	od;
+	if CopySort(tposs)<>[1..leng] then return(false); fi;
+	return(true);
+end;
+
+IsIsomOfCodes:=function(cws1, cws2, tM, thebsn)
+	local cws1tM;
+	cws1tM:=List(cws1, vv->(vv*tM) mod thebsn);
+	return(IsEqualSet(cws1tM, cws2));
+end;
+
+IsIsomPermOfCodes:=function(cws1, cws2, tM, tperm, thebsn)
+	local cws1tM, cw1, cw1tM, ii;
+	ii:=0;
+	for cw1 in cws1 do
+		ii:=ii+1;
+		cw1tM:=(cw1*tM) mod thebsn;
+		if cw1tM<>cws2[ii^tperm] then return(false); fi;
+	od;
+	return(true);
+end;
+
+Hamming:=function(codeword)
+	return(Length(Positions(codeword, 1)));
+end;

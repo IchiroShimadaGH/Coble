@@ -1,0 +1,353 @@
+# Read("EasyBorcherdsTools.txt");
+#
+
+MakeThenRvRsRec:=function(embSXLdata) #from NewBorcherdsL26
+	#
+	# make the record for vectors in GramRdual
+  # with -2<=squarenorm <=0
+  # and their embeddings in L26
+	#
+	local beep, svrec, nRs, vRss, vv, vvnR,   nRvRsrec, pos, emb2_dual,
+  vRInLss, vRs, GramL, tGramRdual, LGrec, dd;
+  #
+  beep:=function(beepnumb)
+    localbeep("MakeThenRvRsRec", beepnumb); Error();
+  end;
+  #
+  LGrec:=embSXLdata;
+  GramL:=LGrec.Gram;
+  tGramRdual:=LGrec.Gram2dual;
+  emb2_dual:=LGrec.emb2_dual;
+  dd:=Lgcd(List(Flat(tGramRdual), DenominatorRat));
+  #
+	svrec:=ShortestVectors((-dd)*tGramRdual, 2*dd);
+	if svrec.vectors=[] then Printn("wrong in Make_nRvRs"); Error(); fi;
+  #
+  nRs:=-Set(svrec.norms);
+  Add(nRs, 0);
+	#
+  vRss:=List(nRs, nR->[]);
+  Add(vRss[SinglePosition(nRs, 0)], MakeZeroVect(Length(tGramRdual)));
+  for vv in svrec.vectors do
+    vvnR:=vv*tGramRdual*vv;
+    pos:=SinglePosition(nRs, vvnR);
+    Append(vRss[pos], [vv, -vv]);
+  od;
+  #
+  vRInLss:=List(vRss, vRs->vRs*emb2_dual);
+  #
+	# for check
+	#
+  if List(vRss, vRs->Set(vRs, vv->vv*tGramRdual*vv))<>List(nRs, xx->[xx]) then
+    beep(52527);
+  fi;
+  if false in List(vRss, IsDuplicateFree) then beep(16191); fi;
+  if false in List(vRInLss, IsDuplicateFree) then beep(126191); fi;
+  if List(vRInLss, vRs->Set(vRs, vv->vv*GramL*vv))<>List(nRs, xx->[xx]) then
+    beep(52527);
+  fi;
+  #
+  nRvRsrec:=rec(
+    nRs:=nRs,
+    vRss:=vRss,
+    vRInLss:=vRInLss
+  );
+	return(nRvRsrec);
+end;
+
+
+MakeWallsOfLSCham:=function(embSXLdata, nowweyl)
+  # from  Make_nSaSvSss in NewBorcherdsL26
+	#
+	# nSaSvSss is a list of records
+	# nSaSvSsrec:=rec(nS, aS, vSliftss).
+	# vSliftss is a list of [vS, lifts].
+	#
+  local beep, GramL, GramS, GramSdual, dd, intGramSdual, nowweyldual,
+  wS, wSdual, embSdual, nSaSvSss, Rpos, nR, nS,
+  aRvRInLss, aR, vRInLs, aS, lifts, task, lift, vSliftss, vSlifts, vS,
+  nSaSvSsrec, aRvRInLs, nSaSs, xx, LGrec, nRvRsrec, totalvRInLs, recnames,
+  walls, linforms, nSaSvSs, vSdual, primvSdual, wallsSdual,
+  hnfrec, primvS, wallSs;
+  #
+  beep:=function(beepnumb)
+    localbeep("MakeWallsOfLSCham", beepnumb); Error();
+  end;
+  #
+  recnames:=RecNames(embSXLdata);
+  if not "nRvRsrec" in recnames then
+    embSXLdata.nRvRsrec:=MakeThenRvRsRec(embSXLdata);
+  fi;
+  #
+  nRvRsrec:=embSXLdata.nRvRsrec;
+  LGrec:=embSXLdata;
+  GramL:=LGrec.Gram;
+  GramS:=LGrec.Gram1;
+  GramSdual:=LGrec.Gram1dual;
+  dd:=Lgcd(List(Flat(GramSdual), DenominatorRat));
+  intGramSdual:=dd*GramSdual;
+  nowweyldual:=nowweyl*GramL;
+  wS:=nowweyl*LGrec.proj1;
+  if wS*GramS*wS<=0 then beep(619611); fi;
+  wSdual:=nowweyl*LGrec.proj1_dual;
+  if wSdual<>wS*GramS then beep(158756781); fi;
+  if not IsIntVect(wSdual) then beep(58111); fi;
+  #
+  embSdual:=LGrec.emb1_dual;
+	# emb1_dual:=Gram1dual*emb1: in terms of the STANDARD basis of L and the dual basis of L1
+  #
+  nSaSvSss:=[];
+  walls:=[];
+  #
+  for Rpos in [1..Length(nRvRsrec.nRs)] do
+    nR:=nRvRsrec.nRs[Rpos];
+    if nR=-2 then continue; fi;
+    nS:=-2-nR;
+    if not nS<0 then beep(69816981); fi;
+    totalvRInLs:=nRvRsrec.vRInLss[Rpos];
+    aRvRInLss:=NewClassifyByTags(totalvRInLs, vv->vv*nowweyldual);
+    #
+    for aRvRInLs in aRvRInLss do
+      aR:=aRvRInLs[1];
+      vRInLs:=aRvRInLs[2];
+      aS:=1-aR;
+      #
+      lifts:=[];
+      #
+      task:=function(vInSdual)
+        local vSInL, vRInL, vL;
+        vSInL:=vInSdual*embSdual;
+        for vRInL in vRInLs do
+          vL:=vSInL+vRInL;
+          if IsIntVect(vL) then
+            Add(lifts, vL);
+          fi;
+        od;
+      end;
+      #
+      AffES(intGramSdual, wSdual, dd*aS, dd*nS,  true, task);
+      vSliftss:=NewClassifyByTags(lifts, vv->vv*LGrec.proj1);
+      for vSlifts in vSliftss do # for check
+        vS:=vSlifts[1];
+        if vS*GramS*vS<>nS then beep(62191); fi;
+        if vS*wSdual<>aS then beep(62291); fi;
+        for lift in vSlifts[2] do
+          if lift*nowweyldual<>1 then beep(261112); fi;
+          if lift*GramL*lift<>-2 then beep(91277); fi;
+        od;
+      od;
+      #
+      if vSliftss<>[] then
+        nSaSvSsrec:=rec(
+          nS:=nS,
+          aS:=aS,
+          vSliftss:=vSliftss
+        );
+        Add(nSaSvSss, nSaSvSsrec);
+      fi;
+    od;
+  od;
+  #
+  nSaSs:=List(nSaSvSss, xx->[xx.nS, xx.aS]);
+  SortParallel(nSaSs, nSaSvSss);
+  linforms:=[];
+  for nSaSvSs in nSaSvSss do
+    for vSlifts in nSaSvSs.vSliftss do
+      vS:=vSlifts[1];
+      vSdual:=vS*GramS;
+      primvSdual:=GetPrimitiveIntVect(vSdual);
+      Add(linforms, primvSdual);
+      Add(vSlifts, primvSdual);
+    od;
+  od;
+  #
+  linforms:=Set(linforms);
+  wallsSdual:=SelectWalls(linforms);
+  walls:=[];
+  for primvSdual in wallsSdual do
+    primvS:=primvSdual*GramSdual;
+    lifts:=[];
+    for nSaSvSs in nSaSvSss do
+      for vSlifts in nSaSvSs.vSliftss do
+        if vSlifts[3]=primvSdual then Append(lifts, vSlifts[2]); fi;
+      od;
+    od;
+    if lifts=[] then beep(66729); fi;
+    if Rank(Concatenation([primvS], lifts*LGrec.proj1))<>1 then
+      beep(9921);
+    fi;
+    Add(walls, [primvS, lifts]);
+  od;
+  wallSs:=List(walls, xx->xx[1]);
+  if not IsDuplicateFree(wallSs) then beep(8823); fi;
+  SortParallel(wallSs, walls);
+  #
+  return(walls);
+end;
+
+
+
+MakeAdjWeyl:=function(embSXLdata, nowweyl, wallvect)
+  #
+  local beep, LGrec, nRvRsrec, tg, GramL, GramS, GramSdual, embSdual, nowweyldual,vRInL,
+  rSdualprim, primnS, passingLwalls, kk, kkprinmnS, kkrSdualprim,
+  nR, vRInLs, vL, ss, perturbdegs, kkprimnS, tgS, reflmatL, id26,projLwalls,
+  kkrSprimInL,aa, embS, sqrtaa, sqrtaarSprim, adjrec, rSprim, newweyl, projS,
+  newweyldual, rv, recnames, wallvectdual;
+  #
+  beep:=function(beepnumb)
+    localbeep("MakeAdjRec", beepnumb); Error();
+  end;
+  recnames:=RecNames(embSXLdata);
+  if not "nRvRsrec" in recnames then
+    embSXLdata.nRvRsrec:=MakeThenRvRsRec(embSXLdata);
+  fi;
+  #
+  nRvRsrec:=embSXLdata.nRvRsrec;
+  LGrec:=embSXLdata;
+  #
+  GramL:=LGrec.Gram;
+  GramS:=LGrec.Gram1;
+  GramSdual:=LGrec.Gram1dual;
+  embSdual:=LGrec.emb1_dual;
+  rSprim:=wallvect;
+  # in terms of the dual basis of Sdual to the standard basis of L26
+  embS:=LGrec.emb1;
+	# in terms of the  basis of S to the standard basis of L26
+  projS:=LGrec.proj1;
+	# in terms of the  basis of S to the standard basis of L26
+  nowweyldual:=nowweyl*GramL;
+  wallvectdual:=wallvect*GramS;
+  rSdualprim:=wallvectdual;
+  if not IsIntVect(wallvectdual) then beep(9292); fi;
+  if not IsPrimitiveVect(wallvectdual) then beep(17737); fi;
+  #
+  adjrec:=rec();
+  adjrec.wallvect:=wallvect;
+  primnS:=rSprim*GramS*rSprim;
+  if not primnS<0 then beep(188127); fi;
+  aa:=-2/primnS;
+  sqrtaa:=SqRoot(aa); #in gaptools.txt
+  if IsInt(sqrtaa) then
+    sqrtaarSprim:=sqrtaa*rSprim;
+    if sqrtaarSprim*GramS*sqrtaarSprim<>-2 then beep(19192); fi;
+    if IsIntVect(sqrtaarSprim) then
+      adjrec.israt:=true;
+      adjrec.minus2vector:=sqrtaarSprim;
+      return(adjrec);
+    fi;
+  fi;
+  #
+  adjrec.israt:=false;
+  #
+  passingLwalls:=[];
+  kk:=0;
+  kkprimnS:=0;
+  kkrSdualprim:=MakeZeroVect(Length(GramS));
+  while kkprimnS>=-2 do # kk:=kk+1; kkprimnS:=kk^2*primnS;
+    nR:=-2-kkprimnS;
+    if nR in nRvRsrec.nRs then
+      kkrSprimInL:=kkrSdualprim*embSdual;
+      vRInLs:=nRvRsrec.vRInLss[SinglePosition(nRvRsrec.nRs, nR)];
+      for vRInL in vRInLs do
+        vL:=kkrSprimInL+vRInL;
+        if vL*GramL*vL<>-2 then beep(1881181); fi;
+        if IsIntVect(vL) then
+          if kkprimnS=-2 then beep(6916817); fi;
+          # (rS)^perp should not be ((-2)-vect)^perp
+          ss:=nowweyldual*vL;
+          if ss>0 then
+            Add(passingLwalls, vL);
+          elif ss<0 then
+            Add(passingLwalls, -vL);
+          else beep(616191);
+          fi;
+        fi;
+      od;
+    fi;
+    #
+    kk:=kk+1;
+    kkprimnS:=kk^2*primnS;
+    kkrSdualprim:=kkrSdualprim+rSdualprim;
+    #
+  od;
+  #
+  if passingLwalls=[] then beep(91911); fi;
+  passingLwalls:=Set(passingLwalls);
+  projLwalls:=passingLwalls*projS;
+  Add(projLwalls, wallvect);
+  if Rank(projLwalls)<>1 then beep(919229); fi;
+  #
+  perturbdegs:=List(passingLwalls, tr->tr/(nowweyldual*tr));
+  SortParallel(perturbdegs, passingLwalls);
+  if Set(passingLwalls, tr->tr*GramL*tr)<>[-2] then beep(61981); fi; #check
+  if Set(passingLwalls, tr->tr*nowweyldual>0)<>[true] then beep(622981); fi; #check
+  #adjrec.ADETypepassingLwalls:=Collected(GetRootType(GramL, passingLwalls));
+  #
+	reflmatL:=function(M, rv)
+   	local tv, rvdual;
+  	rvdual:=rv*GramL;
+  	return(List(M, tv->tv+(tv*rvdual)*rv));
+  end;
+  #
+	tg:=IdentityMat(26);
+	for rv in passingLwalls do
+		  tg:=reflmatL(tg, rv);
+	od;
+  if TMTTmult(tg, GramL)<>GramL then beep(551852); fi;
+  #
+  adjrec.opptg:=tg;
+  newweyl:=nowweyl*tg;
+  #if not IsWeylVect(GramL,newweyl) then beep(181822); fi; #check
+  newweyldual:=newweyl*GramL;
+  if Set(passingLwalls, tr->tr*newweyldual<0)<>[true] then beep(6442981); fi; #check
+  if not IsEqualSet(passingLwalls*tg, -passingLwalls) then beep(6422981); fi; #check
+  if newweyl*projS=nowweyl*projS then beep(91912); fi;
+  adjrec.newweyl:=newweyl;
+  #
+  return(adjrec);
+  #
+end;
+
+
+
+
+#### checkers
+
+IsWeylVector:=function(GramL, w)
+	local mG, Gw, w2, hnfrec, orthorec, beep;
+  #
+  beep:=function(beepnumb)
+    localbeep("IsWeylVector", beepnumb); Error();
+  end;
+  #
+	if not IsPrimitiveVect(w) then return(false); fi;
+	if not w*GramL*w=0 then return(false); fi;
+  Gw:=TransposedMat([GramL*w]);
+	hnfrec:=HermiteNormalFormIntegerMatTransform(Gw);
+	w2:=hnfrec.rowtrans[1];
+	orthorec:=OrthogonalCompRec(GramL, [w,w2]);
+  if DeterminantIntMat(orthorec.Gram)<>1 then beep(1263); fi;
+	mG:=(-1)*(orthorec.Gram);
+	if ShortestVectors(mG, 2).vectors<>[] then return(false); fi;
+	return(true);
+end;
+
+
+
+IsInAut:=function(GramS, discS, periodcond, ample, tg)
+  local  beep;
+  #
+  beep:=function(beepnumb)
+    localbeep("IsInAut", beepnumb); Error();
+  end;
+  #
+  if not IsIntMat(tg) then beep(9182982); fi;
+  if TMTTmult(tg, GramS)<>GramS then beep(282982); fi;
+  if not OLtoOqL(tg, discS) in periodcond then beep(4231); fi;
+  if SeparatingVects(GramS, ample, ample*tg, -2)<>[] then beep(69983); fi;
+  return(true);
+end;
+
+
+###

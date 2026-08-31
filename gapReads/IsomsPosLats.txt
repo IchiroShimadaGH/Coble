@@ -1,0 +1,1437 @@
+#Read("IsomsPosLats.txt");
+
+FindMaxNorm:=function(tG)
+  #
+  local n, basis, maxnorm, maxnorm2, mm,
+  U, UtGtU, LLLrec;
+  #
+  n:=Length(tG);
+  basis:=IdentityMat(n);
+  maxnorm:=Maximum(List([1..n], ii->tG[ii][ii]));
+  #
+  mm:=0;
+  while mm<100 do
+    U:=RandomUnimodularMat(n);
+    UtGtU:=TMTTmult(U, tG);
+    LLLrec:=LLLReducedGramMat(UtGtU);
+    #
+    maxnorm2:=Maximum(List([1..n], ii->LLLrec.remainder[ii][ii]));
+    if maxnorm2>=maxnorm then mm:=mm+1; fi;
+    if maxnorm2<maxnorm then
+      mm:=0;
+      basis:=LLLrec.transformation*U;
+      if LLLrec.remainder<>TMTTmult(basis, tG) then beep(474731134); fi;
+      maxnorm:=maxnorm2;
+    fi;
+  od;
+  return(rec(maxnorm:=maxnorm, basis:=basis));
+end;
+
+
+
+
+_symtype:=function(initype) #make initype symmetric
+  #
+  #
+  local  as, ns, aas, aa, naa, newtype;
+  #
+  as:=List(initype, xx->xx[1]);
+  ns:=List(initype, xx->xx[2]);
+  aas:=Union(as, -as);
+  newtype:=[];
+  for aa in aas do
+    naa:=Sum(Positions(as, aa), ii->ns[ii])+Sum(Positions(as, -aa), ii->ns[ii]);
+    Add(newtype, [aa, naa]);
+  od;
+  Sort(newtype);
+  return(newtype);
+end;
+
+
+tomultset_destructive:=function(as)
+  local ans, n, nowa, a, tans, tas;
+  #tas:=List(as);
+  #tans:=ToMultiSet(as);
+  Sort(as);
+  ans:=[];
+  n:=0;
+  nowa:=as[1];
+  for a in as do
+    if a=nowa then n:=n+1;
+    else
+      Add(ans, [nowa,n]);
+      nowa:=a;
+      n:=1;
+    fi;
+  od;
+  Add(ans, [nowa,n]);
+  #if ans<>tans then beep(137427463267); fi;
+  return(ans);
+end;
+
+
+
+TypeDecompS:=function(Gram, S)
+  #
+  # S cap (-S) is empty.
+  # S cup (-S) is charactersitic.
+  #
+  local Sdual, typesvs, ttype, types,
+  fingerprint, type, poss, fp, decomprec, vss,  tv;
+  #
+  Sdual:=S*Gram;
+  typesvs:=[];
+  for tv in S do
+    Add(typesvs, _symtype(tomultset_destructive(Sdual*tv)));
+  od;
+  #
+  # Since S is only a half of a characteristic subset,
+  # we have to make ttype symmetric.
+  #
+  types:=Set(typesvs);
+  fingerprint:=[];
+  vss:=[];
+  for type in types do
+    poss:=Positions(typesvs, type);
+    fp:=[Length(poss), type];
+    Add(fingerprint, fp);
+    Add(vss, List(poss, pos->S[pos]));
+  od;
+  SortParallel(fingerprint, vss);
+  decomprec:=rec(
+    fingerprint:=fingerprint,
+    vss:=vss
+  );
+  return(decomprec);
+end;
+
+
+FindAZBasis:=function(vslist)
+  local basis, lastii, ii, vii, targetrank, singleflag;
+  #
+  targetrank:=Length(vslist[1]);
+  lastii:=0;
+  basis:=[];
+  while Length(basis)<targetrank do
+    for ii in [lastii+1..Length(vslist)] do
+      vii:=vslist[ii];
+      Add(basis, vii);
+      if Rank(basis)=Length(basis) and CokerTorsion(basis)=[] then
+        lastii:=ii;
+        break; #from for ii in
+      else
+        Remove(basis);
+      fi;
+    od;
+  od;
+  #
+  #
+  if Length(basis)<>targetrank then
+    Printn("wrong in FindAZBasis"); Error();
+  fi;
+  if CokerTorsion(basis)<>[] then
+    Printn("wrong in FindAZBasis"); Error();
+  fi;
+  return(basis);
+end;
+
+MakePosLatType:=function(tGram)
+  local maxnormrec, trec, maxnorm, shvs, tS, basis, tb, decomprec, discg;
+  #
+  maxnormrec:=FindMaxNorm(tGram);
+  maxnorm:=maxnormrec.maxnorm;
+  shvs:=ShortestVectors(tGram, maxnorm);
+  tS:=shvs.vectors;
+  #Printn("__in MakePosLatType", maxnorm, Length(tS));
+  basis:=[];
+  for tb in maxnormrec.basis do
+    if tb in tS then Add(basis, tb);
+    elif -tb in tS then Add(basis, -tb);
+    else beep(743743);
+    fi;
+  od;
+  decomprec:=TypeDecompS(tGram, tS);
+  discg:=DiscriminantForm(tGram).discg;
+  #
+  trec:=rec(
+    Gram:=tGram,
+    disc:=DeterminantIntMat(tGram),
+    discg:=NormalFAG(discg)[1], # NormalFAG returns [newD, old2new, new2old]
+    rank:=Length(tGram),
+    maxnorm:=maxnorm,
+    basis:=basis,
+    fingerprint:=decomprec.fingerprint,
+    vss:=decomprec.vss,
+    bases:=[]
+  );
+  return(trec);
+end;
+
+MakeRandomType:=function(tG, offset) #For check
+  local U, tGram, maxnormrec, trec, maxnorm, shvs, tS, basis,
+  tb, decomprec, discg;
+  #
+  U:=RandomUnimodularMat(Length(tG));
+  tGram:=TMTTmult(U, tG);
+  maxnormrec:=FindMaxNorm(tGram);
+  maxnorm:=maxnormrec.maxnorm+offset;
+  shvs:=ShortestVectors(tGram, maxnorm);
+  tS:=shvs.vectors;
+  tS:=Shuffle(tS);
+  #Printn("__in MakeRandomType", maxnorm, Length(tS));
+  basis:=FindAZBasis(tS);
+  decomprec:=TypeDecompS(tGram, tS);
+  discg:=DiscriminantForm(tGram).discg;
+  #
+  trec:=rec(
+    Gram:=tGram,
+    disc:=DeterminantIntMat(tGram),
+    discg:=NormalFAG(discg)[1], # NormalFAG returns [newD, old2new, new2old]
+    rank:=Length(tGram),
+    maxnorm:=maxnorm,
+    basis:=basis,
+    fingerprint:=decomprec.fingerprint,
+    vss:=decomprec.vss,
+    bases:=[]
+  );
+  return(trec);
+end;
+
+
+RandomBasis:=function(trec, seed)
+  local newvss, lengs, newbasis, vs, tvs, new2basis, tb, seed0;
+  #
+  seed0:=State(GlobalMersenneTwister);
+  Reset(GlobalMersenneTwister, seed);
+  Add(trec.bases, trec.basis);
+  newvss:=List(trec.vss, vs->Union(vs, -vs));
+  newvss:=Shuffle(List(newvss, Shuffle));
+  lengs:=List(newvss, Length);
+  SortParallel(lengs, newvss);
+  newbasis:=FindAZBasis(Concatenation(newvss));
+  tvs:=Concatenation(trec.vss);
+  new2basis:=[];
+  for tb in newbasis do
+    if tb in tvs then Add(new2basis, tb);
+    elif -tb in tvs then Add(new2basis, -tb);
+    else beep(5534211);
+    fi;
+  od;
+  Reset(GlobalMersenneTwister, seed0);
+  trec.basis:=new2basis;
+end;
+
+NewRandomBasis:=function(trec, seed)
+  local newvss, n, lengs, newbasis, vs, tvs, new2basis, tb, flag, rcc,
+  newvs, seed0;
+  #
+  seed0:=State(GlobalMersenneTwister);
+  Reset(GlobalMersenneTwister, seed);
+  flag:=false;
+  rcc:=0;
+  n:=Length(trec.basis[1]);
+  while not flag do
+    rcc:=rcc+1;
+    AddSet(trec.bases, trec.basis);
+    newvs:=Union(List(trec.vss, vs->Union(vs, -vs)));
+    #U:=RandomUnimodularMat(n);
+    #Uinv:=InverseMat(U);
+    #newvs:=U*Shuffle(newvs);
+    #newbasis:=Uinv*FindAZBasis(newvs);
+    newvs:=Shuffle(newvs);
+    newbasis:=FindAZBasis(newvs);
+    tvs:=Concatenation(trec.vss);
+    new2basis:=[];
+    for tb in newbasis do
+      if tb in tvs then Add(new2basis, tb);
+      elif -tb in tvs then Add(new2basis, -tb);
+      else beep(5534211);
+      fi;
+    od;
+    if not new2basis in trec.bases then
+      #Printn("___ in NewRandomBasis", rcc);
+      flag:=true;
+    fi;
+  od;
+  Reset(GlobalMersenneTwister, seed0);
+  trec.basis:=new2basis;
+end;
+
+
+################# The Core Part
+
+
+_isomsposlats:=function(latrec1, latrec2, singleflag,  vsdepth, tab)
+  #
+  #
+  local n, Gram1, basis1, target1, basis1dual, basis1inv, Gram2, basis2, target2,
+  b1pos, b1poss, bvss1,bpos, fullbvss1, candidates1,kk, tv, bvss2, fullbvss2,
+  candidates2, makeextensions, extensionnumbs, partialbasis1,   ext,
+  makevectsumsrec, vsrecss1, lowerkk, vbsdual, checkvectsumsrec, partialisoms,
+  partialisomduals, isbs, breakflags, orbs, vsdetects, extdetects, counter,
+  temp1order, temp2order, abortflag, temphorder, newbasis2, anisom, reached,  ii,
+  isomsrec, genskk,  tg, gensseq,   ckk,  imageskk,mm, findjob, tvM;
+  #
+  n:=latrec1.rank;
+  #
+  Gram1:=latrec1.Gram;
+  basis1:=latrec1.basis;
+  target1:=TMTTmult(basis1, Gram1);
+  basis1dual:=basis1*Gram1;
+  basis1inv:=InverseMat(basis1);
+  #
+  Gram2:=latrec2.Gram;
+  basis2:=latrec2.basis;
+  target2:=TMTTmult(basis2, Gram2);
+  #
+  b1pos:=function(tb)
+    local vs;
+    return(SinglePosition(List(latrec1.vss, vs->tb in vs), true));
+  end;
+  b1poss:=List(basis1, b1pos);
+  bvss1:=List(b1poss, bpos->latrec1.vss[bpos]);
+  fullbvss1:=List(bvss1, vs->Union(vs, -vs));
+  candidates1:=[List(bvss1[1], tv->[tv, tv*Gram1])];
+  for kk in [2..n] do
+    Add(candidates1, List(fullbvss1[kk], tv->[tv, tv*Gram1]));
+    #Gram2->Gram1 20191013
+    #The first item is half. From the 2nd, full.
+  od;
+  #
+  bvss2:=List(b1poss, bpos->latrec2.vss[bpos]);
+  fullbvss2:=List(bvss2, vs->Union(vs, -vs));
+  candidates2:=[List(bvss2[1], tv->[tv, tv*Gram2])];
+  for kk in [2..n] do
+    Add(candidates2, List(fullbvss2[kk], tv->[tv, tv*Gram2]));
+  od;
+  #
+  ##############################
+  #
+  makeextensions:=function(kk, vvduals, partial)
+    #
+    #kk-th extensions in vvduals
+    #
+    local intnumbs, tvtvdual, extensions, ii;
+    #
+    if kk=1 then
+      return(vvduals);
+    else
+      extensions:=[];
+      intnumbs:=List([1..kk-1], ii->target1[kk][ii]);
+      for tvtvdual in vvduals do
+        if partial*tvtvdual[2]=intnumbs then
+          Add(extensions, tvtvdual);
+        fi;
+      od;
+      return(extensions);
+    fi;
+  end;
+  #
+  extensionnumbs:=[];
+  partialbasis1:=[];
+  #
+  for kk in [1..n] do
+    ext:=makeextensions(kk, candidates1[kk], partialbasis1);
+    Add(extensionnumbs, Length(ext));
+    Add(partialbasis1, basis1[kk]);
+  od;
+  #
+  #
+  ##############################
+  #
+  #
+  makevectsumsrec:=function(tG, vvs, vbsdual)
+    #
+    local sss, sssSet, vectsums, ss, pos, tbasis, basisposs,
+    sspos, rr, basis, basissss, tv, rest, restsss, T, trec, sssMultiSet, tsumv;
+    #
+    sss:=vvs*TransposedMat(vbsdual);
+    sssMultiSet:=ToMultiSet(sss);
+    sssSet:=Set(sss);
+    vectsums:=List(sssSet, ss->MakeZeroVect(n));
+    pos:=0;
+    for tv in vvs do
+      pos:=pos+1;
+      sspos:=SinglePosition(sssSet, sss[pos]);
+      vectsums[sspos]:=vectsums[sspos]+tv;
+    od;
+    rr:=Rank(vectsums);
+    basis:=FindRankM(vectsums, rr);
+    tbasis:=List(basis);
+    basissss:=[];
+    basisposs:=[];
+    pos:=0;
+    for tsumv in vectsums do
+      pos:=pos+1;
+      if tsumv in tbasis then
+        Add(basissss, sssSet[pos]);
+        Add(basisposs, pos);
+        tbasis:=SetMinus(tbasis, [tsumv]);
+      fi;
+    od;
+    rest:=[];
+    restsss:=[];
+    pos:=0;
+    for tsumv in vectsums do
+      pos:=pos+1;
+      if not pos in basisposs then
+        Add(rest, tsumv);
+        Add(restsss, sssSet[pos]);
+      fi;
+    od;
+    #
+    if not IsDuplicateFreeList(basissss) then beep(423113); fi;
+    if not IsDuplicateFreeList(restsss) then beep(423113); fi;
+    if Intersection(basissss,restsss)<>[] then beep(472231); fi;
+    if Union(basissss,restsss)<>sssSet then beep(462231); fi;
+    #
+    if basis<>[] and rest<>[] then
+      T:=MisXB(rest, basis);
+    else
+      T:=[];
+    fi;
+    trec:=rec(
+      rr:=rr,
+      basis:=basis,
+      sssMultiSet:=sssMultiSet,
+      Gramvectsum:=TMTTmult(basis, tG),
+      basissss:=basissss,
+      rest:=rest,
+      restsss:=restsss,
+      T:=T
+    );
+    return(trec);
+  end;
+  #
+  vsrecss1:=List([1..n], ii->[]);;
+  #
+  if vsdepth>0 then
+    for kk in [2..n] do
+      lowerkk:=Maximum(1, kk-vsdepth);
+      vbsdual:=List([lowerkk..kk], ii->basis1dual[ii]);
+      vsrecss1[kk]:=List(fullbvss1, vvs->makevectsumsrec(Gram1, vvs, vbsdual));
+    od;
+  fi;
+  #
+  checkvectsumsrec:=function(vsrec, tG, vvs, vbsdual)
+    #
+    local sss, sssSet, vectsums, ss, pos,
+    sspos, rr, basis, tv, rest,   sssMultiSet;
+    #
+    sss:=vvs*TransposedMat(vbsdual);
+    sssMultiSet:=ToMultiSet(sss);
+    if vsrec.sssMultiSet<>sssMultiSet then return(false); fi;
+    #
+    sssSet:=Set(sss);
+    vectsums:=List(sssSet, ss->MakeZeroVect(n));
+    pos:=0;
+    for tv in vvs do
+      pos:=pos+1;
+      sspos:=SinglePosition(sssSet, sss[pos]);
+      vectsums[sspos]:=vectsums[sspos]+tv;
+    od;
+    rr:=Rank(vectsums);
+    #
+    if Length(vsrec.basis)<>rr then  return(false); fi;
+    #
+    basis:=[];
+    for ss in vsrec.basissss do
+      sspos:=SinglePosition(sssSet, ss);
+      Add(basis, vectsums[sspos]);
+    od;
+    #
+    if TMTTmult(basis, tG)<>vsrec.Gramvectsum then return(false); fi;
+    # even if basis=[], TMTTmult(basis, tG) is [].
+    #
+    if vsrec.basis<>[] and vsrec.rest<>[] then
+      rest:=[];
+      for ss in vsrec.restsss do
+        sspos:=SinglePosition(sssSet, ss);
+        Add(rest, vectsums[sspos]);
+      od;
+      if rest<>vsrec.T*basis then  return(false); fi;
+    fi;
+    #
+    return(true);
+  end;
+  #
+  #
+  ##############################
+  #
+  partialisoms:=List([1..n], ii->[]);
+  partialisomduals:=List([1..n], ii->[]);
+  isbs:=List([1..n], ii->"not yet");
+  breakflags:=List([1..n], ii->false);
+  orbs:=List([1..n+1], ii->[]);
+  vsdetects:=List([1..n], ii->0);
+  extdetects:=List([1..n], ii->0);
+  #
+  counter:=0;
+  abortflag:=false;
+  temp1order:=1;
+  temp2order:="not yet";
+  newbasis2:="not yet";
+  if singleflag then anisom:="not yet"; fi;
+  reached:=false;
+  #
+  #
+  findjob:=function(kk)
+    local firstfalsepos,tkk,partialisomsupto, ii, extensions,
+    tvtvdual, vsflag, lowerkk, vbsdual, vvspos, vvs;
+    #
+    #######
+    #
+    counter:=counter+1;
+    if counter mod tab=0 then
+      if singleflag then
+        abortflag:=true; #give up
+        for ii in [1..n] do breakflags[ii]:=true; od;
+      else
+        temp2order:=Product(List(orbs, Length));
+        if temp2order=temp1order  then
+          abortflag:=true; #give up
+          for ii in [1..n] do breakflags[ii]:=true; od;
+        else
+          #Printn("_____", temp1order, temp2order);
+          #Printn("_____vsdetects", vsdetects);
+          #Printn("_____extdetects", extdetects);
+          temp1order:=temp2order;
+        fi;
+      fi;
+    fi;
+    #
+    ########
+    #
+    if kk=n+1 then
+      if not reached then
+        reached:=true;
+        newbasis2:=List(partialisoms);
+        if singleflag then
+          for ii in [1..n] do
+            breakflags[ii]:=true;
+            anisom:=basis1inv*newbasis2;
+          od;
+        else
+          for ii in [1..n] do
+            isbs[ii]:=true;
+            Add(orbs[ii], [newbasis2[ii], newbasis2]);
+          od;
+          Append(orbs[n+1], [newbasis2, -newbasis2]);
+        fi;
+      else #if not reached then
+        firstfalsepos:=n+1;
+        for tkk in [1..n] do
+          if not isbs[tkk] then
+            firstfalsepos:=tkk;
+            break;
+          fi;
+        od;
+        if firstfalsepos=n+1 then beep(4742244); fi;
+        Add(orbs[firstfalsepos], [partialisoms[firstfalsepos], List(partialisoms)]);
+        for tkk in [firstfalsepos+1..n] do
+          breakflags[tkk]:=true;
+        od;
+      fi;  #if not reached then
+    else #if kk=n+1 then
+      partialisomsupto:=List([1..kk-1], ii->partialisoms[ii]);
+      extensions:=makeextensions(kk, candidates2[kk], partialisomsupto);
+      if Length(extensions)<>extensionnumbs[kk] then
+        extdetects[kk]:=extdetects[kk]+1; #record the effect
+      else
+        breakflags[kk]:=false;
+        for tvtvdual in extensions do
+          if reached then
+            isbs[kk]:=(tvtvdual[1]=newbasis2[kk]);
+          fi;
+          partialisoms[kk]:=tvtvdual[1];
+          partialisomduals[kk]:=tvtvdual[2];
+          #
+          vsflag:=true;
+          #
+          if vsdepth>0 and kk>=2 then
+            lowerkk:=Maximum(1, kk-vsdepth);
+            vbsdual:=List([lowerkk..kk], ii->partialisomduals[ii]);
+            vvspos:=0;
+            for vvs in fullbvss2 do
+              vvspos:=vvspos+1;
+              if not checkvectsumsrec(vsrecss1[kk][vvspos], Gram2,  vvs, vbsdual) then
+                vsflag:=false;
+                break; #from for vvs in fulltvvs do
+              fi;
+            od;
+          fi;
+          #
+          if vsflag then
+            findjob(kk+1);
+            if breakflags[kk] then
+              break; #from  for tvtvdual in extensions do
+            fi;
+          else
+            vsdetects[kk]:=vsdetects[kk]+1;
+          fi;
+        od;
+      fi;
+    fi; #if kk=n+1 then
+  end;
+  #
+  ################
+  #
+  #Printn("start findjob");
+  findjob(1);
+  #Printn(reached);
+  #
+  #################
+  #
+  if abortflag then
+    isomsrec:=rec(doneflag:=false);
+    #Printn("____give up vsdepth", vsdepth, "tab", tab);
+    return(isomsrec);
+  fi;
+  #
+  ################
+  #
+  #Printn("____finish vsdepth", vsdepth, "tab", tab);
+  #Printn("vsdetects", vsdetects);
+  #Printn("extdetects", extdetects);
+  #
+  isomsrec:=rec(
+    doneflag:=true,
+    singleflag:=singleflag,
+    sourcelat:=StructuralCopy(latrec1),
+    domainlat:=StructuralCopy(latrec2)
+  );
+  #
+  ################
+  #
+  if not reached then
+    isomsrec.isisom:=false;
+    #Printn("____vsdepth", vsdepth);
+    return(isomsrec);
+  else
+    isomsrec.isisom:=true;
+    if singleflag then
+      if TMTTmult(anisom, Gram2)<>Gram1 then beep(466221233); fi;
+      isomsrec.anisom:=anisom;
+      #Printn("____vsdepth", vsdepth);
+      return(isomsrec);
+    else
+      genskk:=List(orbs[n+1], tM->basis1inv*tM);
+      if basis1*genskk[1]<>newbasis2 then beep(4743); fi;
+      if basis1*genskk[2]<>-newbasis2 then beep(4743); fi;
+      for tg in genskk do
+        if TMTTmult(tg, Gram2)<>Gram1 then beep(472723); fi;
+      od;
+      gensseq:=[genskk];
+      for ckk in [0..n-1] do
+        kk:=n-ckk;
+        genskk:=List(orbs[kk], tvM->basis1inv*tvM[2]);
+        imageskk:=List(orbs[kk], tvM->tvM[1]);
+        if List(genskk, tg->basis1[kk]*tg)<>imageskk then beep(4742763); fi;
+        for tg in genskk do
+          if TMTTmult(tg, Gram2)<>Gram1 then beep(472723); fi;
+          for mm in [1..kk-1] do
+            if basis1[mm]*tg<>newbasis2[mm] then beep(7427437); fi;
+          od;
+        od;
+        Add(gensseq, genskk);
+      od;
+      isomsrec.newbasis2:=newbasis2;
+      isomsrec.gensseq:=gensseq;
+      isomsrec.order:=Product(gensseq, Length);
+      #Printn("____vsdepth", vsdepth);
+      return(isomsrec);
+    fi;
+  fi;
+  #
+end;
+
+############################
+
+_IsomPosLats:=function(latrec1, latrec2, seed, inivsdepth, initab)
+  local cc, tt, isomsrec;
+  cc:=0;
+  while true do
+    cc:=cc+1;
+    for tt in [1..10] do
+      #Printn("______gogo");
+      #_isomsposlats:=function(latrec1, latrec2, singleflag,  vsdepth, tab)
+      isomsrec:=_isomsposlats(latrec1, latrec2, true,  cc*inivsdepth,  cc*initab);
+      if isomsrec.doneflag then
+        if not isomsrec.isisom then return(false);
+        else return(isomsrec.anisom);
+        fi;
+      else
+        #Printn("_______give up Isom", cc, tt);
+        #NewRandomBasis(latrec1, seed+100*cc+tt);
+        #NewRandomBasis(latrec2, seed+100*cc+tt);
+        #Printn("_______give up Isom done", cc, tt);
+      fi;
+    od;
+  od;
+end;
+
+_AllIsomsPosLats:=function(latrec1, latrec2, seed, inivsdepth, initab)
+  local cc, tt, isomsrec;
+  cc:=0;
+  while true do
+    cc:=cc+1;
+    for tt in [1..4] do
+      isomsrec:=_isomsposlats(latrec1, latrec2, false,  cc*inivsdepth,  cc*initab);
+      if isomsrec.doneflag then
+        return(isomsrec);
+      else
+        #Printn("____give up AllIsoms", cc, tt);
+        NewRandomBasis(latrec1, seed+100*cc+tt);
+        NewRandomBasis(latrec2, seed+100*cc+tt);
+      fi;
+    od;
+  od;
+end;
+
+
+AllIsomsPosLats:=function(lattype1, lattype2, seed,  inivsdepth, initab)
+  #
+  local revflag, tg, srec, lrec, GramL, tS, newLtypedecomp, newlrec,
+  singleflag, falseallisomsrec, allisomsrec;
+  #
+  falseallisomsrec:=rec(
+    doneflag:=true,
+    singleflag:=false,
+    sourcelat:=StructuralCopy(lattype1),
+    domainlat:=StructuralCopy(lattype2)
+  );
+  #
+  if lattype1.rank<>lattype2.rank then return(falseallisomsrec); fi;
+  if lattype1.disc<>lattype2.disc then return(falseallisomsrec); fi;
+  if lattype1.discg<>lattype2.discg then return(falseallisomsrec); fi;
+  #
+  revflag:=false;
+  #
+  if lattype1.maxnorm<>lattype2.maxnorm then
+    if lattype1.maxnorm>lattype2.maxnorm then
+      srec:=lattype2; lrec:=lattype1;revflag:=true;
+    else
+      srec:=lattype1; lrec:=lattype2;
+    fi;
+    #
+    GramL:=lrec.Gram;
+    tS:=ShortestVectors(GramL, srec.maxnorm).vectors;
+    if Rank(tS)<>lrec.rank then return(false); fi;
+    if CokerTorsion(tS)<>[] then return(false); fi;
+    newLtypedecomp:=TypeDecompS(GramL, tS);
+    if newLtypedecomp.fingerprint<>srec.fingerprint  then return(false); fi;
+    newlrec:=StructuralCopy(lrec);
+    newlrec.fingerprint:=newLtypedecomp.fingerprint;
+    newlrec.vss:=newLtypedecomp.vss;
+    newlrec.basis:=FindAZBasis(Concatenation(newlrec.vss));
+    lrec:=newlrec;
+    #
+  else
+    srec:=lattype1; lrec:=lattype2;
+  fi;
+  #
+  singleflag:=false;
+  if srec.fingerprint<>lrec.fingerprint then
+    return(falseallisomsrec);
+  fi;
+  #
+  if not revflag then
+    allisomsrec:=_AllIsomsPosLats(srec, lrec, seed, inivsdepth, initab);
+  else
+    allisomsrec:=_AllIsomsPosLats(lrec, srec, seed, inivsdepth, initab);
+  fi;
+  #
+  if allisomsrec.isisom=false then
+    return(falseallisomsrec);
+  else
+    allisomsrec.sourcelat:=StructuralCopy(lattype1);
+    allisomsrec.domainlat:=StructuralCopy(lattype2);
+    return(allisomsrec);
+  fi;
+  #
+end;
+
+
+NewOGPosLat:=function(lattype, seed,  inivsdepth, initab)
+  return(AllIsomsPosLats(lattype, lattype, seed,  inivsdepth, initab));
+end;
+
+AreIsomPosLats:=function(lattype1, lattype2, seed,  inivsdepth, initab)
+  #
+  local revflag, tg, srec, lrec, GramL, tS, newLtypedecomp, newlrec,
+  singleflag;
+  #
+  if lattype1.rank<>lattype2.rank then return(false); fi;
+  if lattype1.disc<>lattype2.disc then return(false); fi;
+  if lattype1.discg<>lattype2.discg then return(false); fi;
+  #
+  revflag:=false;
+  #
+  if lattype1.maxnorm<>lattype2.maxnorm then
+    if lattype1.maxnorm>lattype2.maxnorm then
+      srec:=lattype2; lrec:=lattype1;revflag:=true;
+    else
+      srec:=lattype1; lrec:=lattype2;
+    fi;
+    #
+    GramL:=lrec.Gram;
+    tS:=ShortestVectors(GramL, srec.maxnorm).vectors;
+    if tS=[] or Rank(tS)<>lrec.rank then return(false); fi;
+    if CokerTorsion(tS)<>[] then return(false); fi;
+    newLtypedecomp:=TypeDecompS(GramL, tS);
+    if newLtypedecomp.fingerprint<>srec.fingerprint  then return(false); fi;
+    newlrec:=StructuralCopy(lrec);
+    newlrec.fingerprint:=newLtypedecomp.fingerprint;
+    newlrec.vss:=newLtypedecomp.vss;
+    newlrec.basis:=FindAZBasis(Concatenation(newlrec.vss));
+    lrec:=newlrec;
+    #
+  else
+    srec:=lattype1; lrec:=lattype2;
+  fi;
+  #
+  singleflag:=true;
+  if srec.fingerprint<>lrec.fingerprint then
+    return(false);
+  fi;
+  #
+  #Printn("_______go");
+  #
+  #_IsomPosLats:=function(latrec1, latrec2, seed, inivsdepth, initab)
+  tg:=_IsomPosLats(srec, lrec, seed, inivsdepth, initab);
+  if tg=false then
+    return(false);
+  else
+    if revflag then
+      tg:=InverseMat(tg);
+    fi;
+    if TMTTmult(tg, lattype2.Gram)<>lattype1.Gram then
+      beep(4473734);
+    fi;
+    return(tg);
+  fi;
+  #
+end;
+
+##########
+
+
+
+checkAllisomsrec:=function(allisomsrec, randommax)
+  #
+  local beep, tgg, Gram1, Gram2, tgginv, OGlat1gensseq, tg,
+  OGlat1, thh, counter;
+  #
+  beep:=function(beepnumb)
+    localbeep("checkAllisomsrec", beepnumb); Error();
+  end;
+  #
+  Gram1:=allisomsrec.sourcelat.Gram;
+  Gram2:=allisomsrec.domainlat.Gram;
+  #
+  if not allisomsrec.doneflag then beep(57344); fi;
+  if not allisomsrec.isisom then beep(5349994); fi;
+  #
+  for thh in Concatenation(allisomsrec.gensseq) do
+    if TMTTmult(thh, Gram2)<>Gram1 then beep(6775574); fi;
+  od;
+  tgg:=allisomsrec.gensseq[1][1];
+  tgginv:=InverseMat(tgg);
+  if TMTTmult(tgginv, Gram1)<>Gram2 then beep(6339374); fi;
+  OGlat1gensseq:=List(allisomsrec.gensseq, gens->List(gens, th->th*tgginv));
+  for tg in Concatenation(OGlat1gensseq) do
+    if TMTTmult(tg, Gram1)<>Gram1 then beep(4156262); fi;
+  od;
+  if allisomsrec.order<>Product(List(OGlat1gensseq, Length)) then
+    beep(53739);
+  fi;
+  if allisomsrec.order<randommax then
+    OGlat1:=Set(Cartesian(OGlat1gensseq), Product);
+    if Length(OGlat1)<>allisomsrec.order then beep(76733); fi;
+  else
+    counter:=0;
+    while counter<randommax do
+      tg:=Product(List(OGlat1gensseq, Random));
+      if TMTTmult(tg, Gram1)<>Gram1 then beep(4156262); fi;
+      counter:=counter+1;
+    od;
+  fi;
+  #
+  return(true);
+end;
+
+#############
+
+oldTypeDecomp:=function(Gram, S, depth)
+  #
+  #Gram is a Gram matrix of a positive definite lattice of L.
+  #S is a finite subset of L such that
+  #S cap (-S) is empty, and
+  #S cup (-S) is O(L)-invariant.
+  #
+  # Ss:=[S1, ..., Sm]
+  # is a decomposition of S into a disjoint union of Si's
+  # such that Si cup (-Si) is O(L)-invariant for each i.
+  #
+  local size, Sdual, bigGram, decomp, flag, tt, lenposSs,
+  decomprec, thetypes,  posSs, newlenposSs, ttS, typepos, ttype;
+  #
+  size:=Length(S);
+  Sdual:=S*Gram;
+  bigGram:=Sdual*TransposedMat(S);
+  #
+  #Printn("bigGram done", size);
+  #
+  posSs:=[[1..size]];
+  decomp:=function()
+    local types, newposSs, pos, Spos, tposS, initype, type;
+    types:=[];
+    newposSs:=[];
+    for pos in [1..size] do
+      type:=[SinglePosition(List(posSs, ttS->pos in ttS), true)];
+      for tposS in posSs do
+        initype:=ToMultiSet(tposS, ii->bigGram[pos][ii]);
+        Add(type, _symtype(initype));
+      od;
+      if type in types then
+        Add(newposSs[SinglePosition(types, type)], pos);
+      else
+        Add(types, type);
+        Add(newposSs, [pos]);
+      fi;
+    od;
+    SortParallel(types, newposSs);
+    thetypes:=types;
+    posSs:=newposSs;
+  end;
+  #
+  flag:=true;
+  tt:=0;
+  lenposSs:=List(posSs, Length);
+  while flag and tt<depth do
+    tt:=tt+1;
+    decomp();
+    newlenposSs:=List(posSs, Length);
+    if newlenposSs=lenposSs then
+      flag:=false;
+    fi;
+    #Printn(tt, lenposSs, newlenposSs);
+    lenposSs:=newlenposSs;
+  od;
+  #
+  typepos:=0;
+  for ttype in thetypes do
+    typepos:=typepos+1;
+    Add(ttype, Length(posSs[typepos]));
+  od;
+  #
+  decomprec:=rec(
+    types:=thetypes,
+    vvss:=List(posSs, postS->List(postS, pos->S[pos]))
+  );
+  return(decomprec);
+end;
+
+
+_OGPosLat:=function(tG, seed,  vsdepth, tab)
+  local n, basis, maxnorm, ii, shvs,
+  tS, typedecomprec, tvvss, maxnormrec, flags, tbposs,
+  candidates, dualcandidates, isbs, breakflags, orbs,
+  tvectss, basistypelength, norm,  vectss,
+  tb, tV, vectssLength, makepossibleextensions,
+  findjob, extensionnumbers, partialaut,basisinv,
+  kk,  findtype, Idn, gens, trec, types, order, gs, cnn, counter,
+  basisupto, target, tbpos, tvvs, newbasis, vs, trivialcounter,
+  lengtvvss, makevectsumsrec, vsdetects, checkvectsumsrec, vsrecss,
+  partialautdual, fulltvvss, basisdual, lowerkk, vbsdual, horder,
+  extdetects, abortflag, beep, temphorder, seed0;
+  #
+  beep:=function(beepnumb)
+    localbeep("_OGPosLat", beepnumb); Error();
+  end;
+  #
+  seed0:=State(GlobalMersenneTwister);
+  Reset(GlobalMersenneTwister, seed);
+  n:=Length(tG);
+  Idn:=IdentityMat(n);
+  #
+  maxnormrec:=FindMaxNorm(tG);
+  basis:=maxnormrec.basis;
+  maxnorm:=maxnormrec.maxnorm;
+  shvs:=ShortestVectors(tG, maxnorm);
+  tS:=shvs.vectors;
+  #Printn("maxnorm", maxnorm, "tS", Length(tS));
+  #
+  typedecomprec:=oldTypeDecomp(tG, tS, 1);
+  types:=typedecomprec.types;
+  tvvss:=typedecomprec.vvss;
+  #
+  # Make a good basis
+  #
+  tbposs:=[];
+  newbasis:=[];
+  for tb in basis do
+    flags:=List(tvvss, tvvs->(tb in tvvs) or (-tb in tvvs));
+    tbpos:=SinglePosition(flags, true);
+    Add(tbposs, tbpos);
+    if -tb in tvvss[tbpos] then
+      Add(newbasis, -tb);
+    else
+      Add(newbasis, tb);
+    fi;
+  od;
+  #
+  basis:=newbasis;
+  lengtvvss:=List(tbposs, tbpos->Length(tvvss[tbpos]));
+  SortParallel(lengtvvss, basis);
+  #Printn("lengtvvss", lengtvvss);
+  #
+  tbposs:=[]; #remake  tbposs
+  for tb in basis do
+    flags:=List(tvvss, tvvs->tb in tvvs);
+    tbpos:=SinglePosition(flags, true);
+    Add(tbposs, tbpos);
+  od;
+  #
+  #
+  basisinv:=InverseMat(basis);
+  target:=TMTTmult(basis, tG);
+  #
+  fulltvvss:=List(tvvss, tvvs->Union(tvvs, -tvvs));
+  candidates:=[tvvss[tbposs[1]]];
+  for kk in [2..n] do
+    Add(candidates, fulltvvss[tbposs[kk]]);
+  od;
+  dualcandidates:=List(candidates, tV->tV*tG);
+  #Printn("candidates", List(candidates, Length));
+  #
+  #
+  #
+  makepossibleextensions:=function(partial)
+    #
+    local kk, tintnumbs, extensions, tvpos,
+    tvects, tvdual;
+    #
+    if partial=[] then
+      return(List(candidates[1], tv->[tv, tv*tG]));
+    else
+      kk:=Length(partial)+1; # find kk-th extensions
+      tintnumbs:=List([1..kk-1], ii->target[kk][ii]);
+      extensions:=[];
+      tvpos:=0;
+      tvects:=candidates[kk];
+      for tvdual in dualcandidates[kk] do
+        tvpos:=tvpos+1;
+        if partial*tvdual=tintnumbs then
+          Add(extensions, [tvects[tvpos], tvdual]);
+        fi;
+      od;
+      #Printn("####", partial, tintnumbs, extensions);
+      return(extensions);
+    fi;
+  end;
+  #
+  extensionnumbers:=[];
+  for kk in [1..n] do
+    basisupto:=List([1..kk-1], ii->basis[ii]);
+    Add(extensionnumbers, Length(makepossibleextensions(basisupto)));
+  od;
+  #
+  #
+  # vect sums
+  #
+  basisdual:=basis*tG;
+  #
+  makevectsumsrec:=function(vvs, vbsdual)
+    #
+    local sss, sssSet, vectsums, ss, pos, tbasis, basisposs,
+    sspos, rr, basis, basissss, tv, rest, restsss, T, trec, sssMultiSet, tsumv;
+    #
+    sss:=vvs*TransposedMat(vbsdual);
+    sssMultiSet:=ToMultiSet(sss);
+    sssSet:=Set(sss);
+    vectsums:=List(sssSet, ss->MakeZeroVect(n));
+    pos:=0;
+    for tv in vvs do
+      pos:=pos+1;
+      sspos:=SinglePosition(sssSet, sss[pos]);
+      vectsums[sspos]:=vectsums[sspos]+tv;
+    od;
+    rr:=Rank(vectsums);
+    basis:=FindRankM(vectsums, rr);
+    tbasis:=List(basis);
+    basissss:=[];
+    basisposs:=[];
+    pos:=0;
+    for tsumv in vectsums do
+      pos:=pos+1;
+      if tsumv in tbasis then
+        Add(basissss, sssSet[pos]);
+        Add(basisposs, pos);
+        tbasis:=SetMinus(tbasis, [tsumv]);
+      fi;
+    od;
+    rest:=[];
+    restsss:=[];
+    pos:=0;
+    for tsumv in vectsums do
+      pos:=pos+1;
+      if not pos in basisposs then
+        Add(rest, tsumv);
+        Add(restsss, sssSet[pos]);
+      fi;
+    od;
+    #
+    if not IsDuplicateFreeList(basissss) then beep(423113); fi;
+    if not IsDuplicateFreeList(restsss) then beep(423113); fi;
+    if Intersection(basissss,restsss)<>[] then beep(472231); fi;
+    if Union(basissss,restsss)<>sssSet then beep(462231); fi;
+    #
+    if basis<>[] and rest<>[] then
+      T:=MisXB(rest, basis);
+    else
+      T:=[];
+    fi;
+    trec:=rec(
+      rr:=rr,
+      basis:=basis,
+      sssMultiSet:=sssMultiSet,
+      Gramvectsum:=TMTTmult(basis, tG),
+      basissss:=basissss,
+      rest:=rest,
+      restsss:=restsss,
+      T:=T
+    );
+    return(trec);
+  end;
+  #
+  vsrecss:=List([1..n], ii->[]);;
+  #
+  if vsdepth>0 then
+    for kk in [2..n] do
+      lowerkk:=Maximum(1, kk-vsdepth);
+      vbsdual:=List([lowerkk..kk], ii->basisdual[ii]);
+      vsrecss[kk]:=List(fulltvvss, vvs->makevectsumsrec(vvs, vbsdual));
+    od;
+  fi;
+  #
+  checkvectsumsrec:=function(vsrec, vvs, vbsdual)
+    #
+    local sss, sssSet, vectsums, ss, pos,
+    sspos, rr, basis, tv, rest,   sssMultiSet;
+    #
+    sss:=vvs*TransposedMat(vbsdual);
+    sssMultiSet:=ToMultiSet(sss);
+    if vsrec.sssMultiSet<>sssMultiSet then return(false); fi;
+    #
+    sssSet:=Set(sss);
+    vectsums:=List(sssSet, ss->MakeZeroVect(n));
+    pos:=0;
+    for tv in vvs do
+      pos:=pos+1;
+      sspos:=SinglePosition(sssSet, sss[pos]);
+      vectsums[sspos]:=vectsums[sspos]+tv;
+    od;
+    rr:=Rank(vectsums);
+    #
+    if Length(vsrec.basis)<>rr then  return(false); fi;
+    #
+    basis:=[];
+    for ss in vsrec.basissss do
+      sspos:=SinglePosition(sssSet, ss);
+      Add(basis, vectsums[sspos]);
+    od;
+    #
+    if TMTTmult(basis, tG)<>vsrec.Gramvectsum then return(false); fi;
+    # even if basis=[], TMTTmult(basis, tG) is [].
+    #
+    if vsrec.basis<>[] and vsrec.rest<>[] then
+      rest:=[];
+      for ss in vsrec.restsss do
+        sspos:=SinglePosition(sssSet, ss);
+        Add(rest, vectsums[sspos]);
+      od;
+      if rest<>vsrec.T*basis then  return(false); fi;
+    fi;
+    #
+    return(true);
+  end;
+  #
+  #
+  partialaut:=List([1..n], ii->[]);
+  partialautdual:=List([1..n], ii->[]);
+  isbs:=List([1..n], ii->false);
+  breakflags:=List([1..n], ii->false);
+  orbs:=List([1..n], ii->[[basis[ii], Idn]]);
+  vsdetects:=List([1..n], ii->0);
+  extdetects:=List([1..n], ii->0);
+  #
+  counter:=0;
+  trivialcounter:=0;
+  horder:=1;
+  abortflag:=false;
+  temphorder:="not yet";
+  #
+  #
+  #Printn("extensionnumbers", extensionnumbers);
+  #
+  findjob:=function(kk) #find the kk-th extension
+    #
+    local partialautupto, extensions, tv, tg, firstfalsepos, tbkk,
+    tkk, tvtvdual, tvdual,vvs, vvspos,
+    vsflag;
+    #
+    counter:=counter+1;
+    if counter mod tab=0 then
+      temphorder:=Product(List(orbs, Length));
+      #Printn(counter, List(orbs, Length), Product(List(orbs, Length)), "kk", kk);
+      if vsdepth>0 then
+        #Printn("vsdetects", vsdetects);
+      fi;
+      #Printn("extdetects", extdetects);
+      if temphorder  =horder  then
+        abortflag:=true;
+        for ii in [1..n] do breakflags[ii]:=true; od;
+      else
+        horder:=temphorder;
+      fi;
+    fi;
+    #
+    if kk=n+1 then
+      tg:=basisinv*partialaut;
+      #if not IsIntMat(tg) then beep(5533); fi;
+      #if TMTTmult(tg, tG)<>tG then beep(558833); fi;
+      firstfalsepos:=n+1;
+      for tkk in [1..n] do
+        if not isbs[tkk] then
+          firstfalsepos:=tkk;
+          break;
+        fi;
+      od;
+      if firstfalsepos=n+1 then
+        if tg<>Idn and tg<>-Idn then beep(46221); fi;
+        trivialcounter:=trivialcounter+1;
+      else
+        Add(orbs[firstfalsepos], [partialaut[firstfalsepos], tg]);
+        for tkk in [firstfalsepos+1..n] do
+          breakflags[tkk]:=true;
+        od;
+      fi;
+      #
+    else
+      tbkk:=basis[kk];
+      partialautupto:=List([1..kk-1], ii->partialaut[ii]);
+      extensions:=makepossibleextensions(partialautupto);
+      if Length(extensions)<>extensionnumbers[kk] then
+        extdetects[kk]:=extdetects[kk]+1;
+      else
+        breakflags[kk]:=false;
+        for tvtvdual in extensions do
+          isbs[kk]:=(tvtvdual[1]=tbkk);
+          partialaut[kk]:=tvtvdual[1];
+          partialautdual[kk]:=tvtvdual[2];
+          #
+          vsflag:=true;
+          #
+          if vsdepth>0 and kk>=2 then
+            lowerkk:=Maximum(1, kk-vsdepth);
+            vbsdual:=List([lowerkk..kk], ii->partialautdual[ii]);
+            vvspos:=0;
+            for vvs in fulltvvss do
+              vvspos:=vvspos+1;
+              if not checkvectsumsrec(vsrecss[kk][vvspos], vvs, vbsdual) then
+                vsflag:=false;
+                break; #from for vvs in fulltvvs do
+              fi;
+            od;
+          fi;
+          #
+          if vsflag then
+            findjob(kk+1);
+            if breakflags[kk] then
+              break; #from  for tvtvdual in extensions do
+            fi;
+          else
+            vsdetects[kk]:=vsdetects[kk]+1;
+          fi;
+        od;
+      fi;
+    fi;
+  end;
+  #
+  #Printn("start");
+  findjob(1);
+  #
+  if abortflag then
+    trec:=rec(done:=false);
+    #PrintnPrintn("abort", 2*horder);
+    Reset(GlobalMersenneTwister, seed0);
+    return(trec);
+  fi;
+  #
+  if trivialcounter<>1 then beep(77334); fi;
+  #
+  gens:=[];
+  for cnn in [0..n-1] do
+    gs:=List(orbs[n-cnn], xx->xx[2]);
+    vs:=List(orbs[n-cnn], xx->xx[1]);
+    if not IsDuplicateFreeList(vs) then beep(52743); fi;
+    if not IsDuplicateFreeList(gs) then beep(54743); fi;
+    Add(gens, gs);
+  od;
+  Add(gens, [Idn, -Idn]);
+  order:=Product(List(gens, Length));
+  #Printn("finish", order);
+  #Printn("gens", List(gens, Length));
+  if vsdepth>0 then
+    #Printn("vsdetects", vsdetects);
+  fi;
+  #Printn("extdetects", extdetects);
+  #
+  trec:=rec(
+    done:=true,
+    Gram:=tG,
+    maxnorm:=maxnorm,
+    basis:=basis,
+    types:=types,
+    vvss:=tvvss,
+    seed:=seed,
+    gens:=gens,
+    orbs:=orbs,
+    order:=order
+  );
+  Reset(GlobalMersenneTwister, seed0);
+  return(trec);
+end;
+
+
+checkOGrec:=function(OGrec)
+  local Gram, basis, kk, torb, vg, tv, tg, mm, beep;
+  #
+  beep:=function(beepnumb)
+    localbeep("checkOGrec", beepnumb); Error();
+  end;
+  Gram:=OGrec.Gram;
+  basis:=OGrec.basis;
+  kk:=0;
+  for torb in OGrec.orbs do
+    kk:=kk+1;
+    for vg in torb do
+      tv:=vg[1];
+      tg:=vg[2];
+      if not IsIntMat(tg) then beep(744734); fi;
+      if TMTTmult(tg, Gram)<>Gram then beep(174273); fi;
+      for mm in [1..kk-1] do
+        if basis[mm]*tg<>basis[mm] then beep(73421); fi;
+      od;
+      if basis[kk]*tg<>tv then beep(72221); fi;
+    od;
+  od;
+  return(true);
+end;
+
+
+OGPosLat:=function(Gram, iniseed, tab)
+  local n, counter, OGrec;
+  n:=Length(Gram);
+  if TransposedMat(Gram)<>Gram then beep(4477); fi;
+  if SignatureQ(Gram)<>[n,n,0] then beep(74472); fi;
+  #
+  counter:=0;
+  OGrec:=rec(done:=false);
+  while not OGrec.done do
+    counter:=counter+1;
+    #_OGPosLat:=function(Gram, seed, vsdepth, tab)
+    OGrec:=_OGPosLat(Gram, iniseed+counter-1,  counter-1, counter*tab);
+    #Printn("___OGPosLat___", counter);
+  od;
+  checkOGrec(OGrec);
+  return(OGrec);
+end;
+
+
+check2OGrec:=function(OGrec)
+  local gs, tgens;
+  #
+  gs:=[];
+  for tgens in Cartesian(OGrec.gens) do
+    Add(gs, Product(tgens));
+  od;
+  if not IsDuplicateFreeList(gs) then beep(53455); fi;
+  if Length(gs)<>OGrec.order then beep(66442); fi;
+  return(true);
+end;
+
+
+######## Added on 2020Apr29
+
+OGrecToOG:=function(OGrec)
+  local gs, tgens;
+  #
+  gs:=[];
+  for tgens in Cartesian(OGrec.gens) do
+    Add(gs, Product(tgens));
+  od;
+  if not IsDuplicateFreeList(gs) then beep(53455); fi;
+  if Length(gs)<>OGrec.order then beep(66442); fi;
+  return(gs);
+end;
+
+######## Added on 2022Apr09
+
+
+OGrecToOGWithTask:=function(OGrec, task)
+  local gs, tgens, tg;
+  #
+  gs:=[];
+  for tgens in Cartesian(OGrec.gens) do
+		tg:=Product(tgens);
+    task(tg);
+  od;
+  return();
+end;
+
+##### Add 2025/02/19
+
+OGperp:=function(Gram, pol)
+  #
+  #
+  # Gram is a Gram matrix of a hyperbolic lattice
+  # and pol is a vector of positive norm.
+  # This returns the element of the stablilizer group of
+  # pol in OG(Gram).
+  #
+  local beep, perprec, Gramperp, OGperprec, tOGperp,
+  bone, boneinv, theG, tg, bonetg, ttg, trec;
+  #
+  beep:=function(beepnumb)
+    localbeep("OGperp", beepnumb);Error();
+  end;
+  #
+  if pol*Gram*pol<=0 then beep(69286298); fi;
+  perprec:=OrthogonalCompRec(Gram, [pol]);
+  Gramperp:=perprec.Gram;
+  OGperprec:=OGPosLat(-Gramperp, 0, 1);;
+  tOGperp:=OGrecToOG(OGperprec);
+  bone:=Concatenation([pol], perprec.basis);
+  boneinv:=InverseMat(bone);
+  theG:=[];
+  for tg in tOGperp do
+    bonetg:=Concatenation([pol], tg*perprec.basis);
+    ttg:=boneinv*bonetg;
+    if pol*ttg<>pol then beep(58725782); fi;
+    if TMTTmult(ttg, Gram)<>Gram then beep(92627); fi;
+    if IsIntMat(ttg) then
+      Add(theG, ttg);
+    fi;
+  od;
+  trec:=rec(
+    perprec:=perprec,
+    OGperprec:=OGperprec,
+    G:=theG
+  );
+  return(trec);
+end;
+
+
+#end

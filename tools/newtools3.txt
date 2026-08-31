@@ -1,0 +1,119 @@
+#Read("newtools3.txt");
+############
+
+
+ReflectionMatrix:=function(Gram, root)
+	local r, rootdual, tg;
+	r:=Length(Gram[1]);
+	rootdual:=root*Gram;
+	tg:=List(IdentityMat(r), vv->vv+(vv*rootdual)*root);
+	return(tg);
+end;
+
+
+SeparatingRootsNegDef:=function(Gram, allroots, a1, a2)
+	#
+	# Gram is the Gram mat of a negative definite lattice L.
+	# allroots are the set of roots in the lattice L.
+	#
+	# a1 and a2 are not on the root mirror.
+	# aa1:=a1+smallp1, aa2:=a2+smallp2,
+	# where smallp1 and smallp2 are general perturbation vectors.
+	# (r1)\sperp, dots, (rm)\sperp are the set of mirrors of roots
+	# intersecting the line segment a1-a2.
+	# t1, t2, dots, tm are the  positive perturbed real numbers
+	# such that
+	# aa1+ ti*aa2 intersects the mirror (ri)\sperp.
+	# The perturbation vectors are chosen so that
+	# t1, t2, dots, tm are distinct.
+	# [r1, dots, rm] is  sorted in such a way that
+	# t1, t2, dots, tm are increasing.
+	#
+	# perturbed real number is a finite sequence of real numbers a=[a0, dots, an].
+	# We say a>b if there exists an index i<min(length(a), length(b)) such that
+	# aj=bj for j<i and ai>bi.
+	#
+	# In fact, we need to perturb only a1 (not a2).
+	# The perturbation vectors are given deterministically.
+	# duale1, duale2, ....
+	# perturblength is the number of perturbation vectors we used.
+	#
+	local beep, r, a1dual, a2dual, mirrors, tr, mult, orderpr,
+	tot, perturblength, rts, rt;
+	#
+	beep:=function(numb)
+		Printn("wrong SeparatingRootsNegDef", numb); Error();
+	end;
+	#
+	r:=Length(a1);
+	a1dual:=a1*Gram;
+	a2dual:=a2*Gram;
+	#
+	mirrors:=[];
+	for tr in allroots do
+		mult:=(a1dual*tr)*(a2dual*tr);
+		if mult=0 then beep(42); fi;
+		if IniValnz(tr)>0 and mult<0 then
+			Add(mirrors, tr);
+		fi;
+	od;
+	if mirrors=[] then
+		perturblength:=0;
+		return([[], perturblength]);
+	fi;
+	if not IsDuplicateFree(mirrors) then beep(5423666); fi;
+	#
+	#
+	orderpr:=function(rpreal1, rpreal2) #pr is perturbed real
+		local val;
+		val:=IniValnzErrorFree(rpreal1[2]-rpreal2[2]);
+		if val<=0 then return(true);
+		else return(false);
+		fi;
+	end;
+	#
+	#
+	rts:=List(mirrors, tr->[tr, [-(a1dual*tr)/(a2dual*tr)]]);
+	Sort(rts, orderpr);
+	perturblength:=0;
+	while perturblength<r and not IsDuplicateFree(List(rts, xx->xx[2])) do
+		perturblength:=perturblength+1;
+		#pv:=MakeVectei(r, perturblength);
+		for rt in rts do
+			Add(rt[2], -rt[1][perturblength]/(a2dual*rt[1]));
+		od;
+		Sort(rts, orderpr);
+	od;
+	#
+	if  not IsDuplicateFree(List(rts, xx->xx[2])) then
+		beep(66);
+	fi;
+	#
+	return([rts, perturblength]);
+end;
+
+IntoAutDiagramNegADE:=function(Gram, allroots, ample, tg)
+	#
+	# Quotient homomorphism O(Gram) to Aut(ADE-basis) by the Weyl group.
+	#
+	local seproots,seproots2, tgg, rt;
+	#
+	seproots:=SeparatingRootsNegDef(Gram, allroots, ample*tg, ample);
+	seproots:=seproots[1];
+	tgg:=CopyMat(tg);
+	for rt in seproots do
+		tgg:=tgg*ReflectionMatrix(Gram, rt[1]);
+	od;
+	seproots2:=SeparatingRootsNegDef(Gram, allroots, ample*tgg, ample);
+	if seproots2<>[[], 0] then
+		Printn("wrong IntoAutDiagramNegADE"); Error();
+	fi;
+	return(tgg);
+end;
+
+
+#MakeAmpleNegADE:=function(Gramstd)
+#	return(GetPrimitiveIntVect(Sum(InverseMat(Gramstd))));
+#end; #obsolete new one is in newtoos2new.txt
+
+###################

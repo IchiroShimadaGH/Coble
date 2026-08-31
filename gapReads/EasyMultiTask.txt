@@ -1,0 +1,38 @@
+#Read("EasyMultiTask.txt");
+
+
+MakeMTRec:=function( recname, numb)
+  local multtaskrec;
+  multtaskrec:=rec(
+    numb:=numb,
+    remainings:=[1..numb],
+    doings:=[],
+    dones:=[]
+  );
+  savedataas(multtaskrec, recname);
+  return(multtaskrec);
+end;
+
+
+MTGetARemaining:=function(recname)
+  local multtaskrec, obj, objpos, name;
+  readdata(recname);
+  multtaskrec:=EvalString(recname);
+  if multtaskrec.remainings=[] then return(fail); fi;
+  objpos:=multtaskrec.remainings[1];
+  multtaskrec.remainings:=SetMinus(multtaskrec.remainings, [objpos]);
+  Add(multtaskrec.doings, objpos);
+  savedataas(multtaskrec, recname);
+  return(objpos);
+end;
+
+MTAddToDones:=function(recname, objpos)
+  local multtaskrec;
+  readdata(recname);
+  multtaskrec:=EvalString(recname);
+  multtaskrec.doings:=SetMinus(multtaskrec.doings, [objpos]);
+  Add(multtaskrec.dones, objpos);
+  savedataas(multtaskrec, recname);
+end;
+
+#

@@ -1,0 +1,594 @@
+
+############################
+
+RandomOp:=function(L)
+	local pos;
+	pos:=Random([1..Length(L)]);
+	return(StructuralCopy(L[pos]));
+end;
+
+
+
+
+####################
+
+RandomChoose:=function(n, m)
+	local tlist, ch, ii, pos;
+	tlist:=[1..n];
+	ch:=[];
+	for ii in [1..m] do
+		pos:=Random([1..Length(tlist)]);
+		Add(ch, tlist[pos]);
+		Remove(tlist, pos);
+	od;
+	return(ch);
+end;
+
+#######################
+
+
+RandomVect:=function(coldim)
+	local M;
+	M:=RandomMat(1, coldim);
+	return M[1];
+end;
+
+RandomVectfromL:=function(dim, L)
+	local v, ii;
+	v:=[];
+	for ii in [1..dim] do
+		Add(v, RandomOp(L));
+	od;
+	return(v);
+end;
+
+
+
+
+RandomEvenLat:=function(dim)
+	local cc, A, G;
+	cc:=0;
+	while true do
+		A:=RandomMat(dim, dim);
+		G:=A+TransposedMatMutable(A);
+		if DeterminantIntMat(G)<>0 then return(G); fi;
+		cc:=cc+1;
+		if cc>100 then Printn("Cannot produce RandomEvenLat: dim=", dim); Error(); fi;
+	od;
+	return(false);
+end;
+
+RandomEvenPosLatfromL:=function(dim, L)
+	local tG, v;
+	tG:=[];
+	while Length(tG)<dim do
+		v:=RandomVectfromL(dim, L);
+		if (v*v) mod 2 =0 then
+			Add(tG, v);
+			if RankMat(tG)<Length(tG) then
+				Remove(tG);
+			fi;
+		fi;
+	od;
+	return(tG*TransposedMat(tG));
+end;
+
+
+RandomPosdefLat:=function(dim)
+	local cc, A, G;
+	cc:=0;
+	while true do
+		A:=RandomMat(dim, dim);
+		if Determinant(A)<>0 then
+			G:=A*TransposedMatMutable(A);
+			return(G);
+		fi;
+		cc:=cc+1;
+		if cc>100 then Printn("Cannot produce RandomPosdefLat: dim=", dim); Error(); fi;
+	od;
+	return(false);
+end;
+
+
+RandomRat:=function(denom, abs)
+	return Random(-abs*denom, abs*denom)/denom;
+end;
+
+
+RandomRatVect:=function(coldim, denom, abs)
+	local v,ii;
+	v:=[];
+	for ii in [1..coldim] do
+		v[ii]:=RandomRat(denom, abs);
+	od;
+	return v;
+end;
+
+RandomRatMat:=function(rowdim, coldim, denom, abs)
+	local M,ii;
+	M:=[];
+	for ii in [1..coldim] do
+		M[ii]:=RandomRatVect(coldim, denom, abs);
+	od;
+	return M;
+end;
+
+RandomRatLat:=function(dim,  denom, abs)
+	local cc, A, G;
+	cc:=0;
+	while true do
+		A:=RandomRatMat(dim, dim, denom, abs);
+		G:=A+TransposedMat(A);
+		if Determinant(G)<>0 then return(G); fi;
+		cc:=cc+1;
+		if cc>100 then Printn("Cannot produce RandomRatLat: dim=", dim); Error(); fi;
+	od;
+	return(false);
+end;
+
+RandomPosdefRatLat:=function(dim, denom, abs)
+	local cc, A, G;
+	cc:=0;
+	while true do
+		A:=RandomRatMat(dim, dim,  denom, abs);
+		if Determinant(A)<>0 then
+			G:=A*TransposedMat(A);
+			return(G);
+		fi;
+		cc:=cc+1;
+		if cc>100 then Printn("Cannot produce RandomPosdefRatLat: dim=", dim); Error(); fi;
+	od;
+	return(false);
+end;
+
+RandomUnimodMat:=function(m)
+	#
+	# very strangely,  RandomUnimodularMat(1) does not return value!
+	#
+	if m=1 then
+		return(Random([ [[1]], [[-1]] ]));
+	else
+		return(RandomUnimodularMat(m));
+	fi;
+end;
+
+#########################
+
+
+RandomPerhapsDegEvenLatticeFromL:=function(dim, L)
+	# PerhapsDeg is "Perhaps Degenerate"
+	# Caution: not necessarily non-degenerate
+	#
+	local M, a, ii, jj;
+	M:=NullMat(dim, dim);
+	for ii in [1..dim] do
+		M[ii][ii]:=2*Random(L);
+		for jj in [ii+1..dim] do
+			a:=Random(L);
+			M[ii][jj]:=a;
+			M[jj][ii]:=a;
+		od;
+	od;
+	return(M);
+end;
+
+RandomEvenLatticeFromL:=function(dim, L)
+	#
+	local trial, M;
+	for trial in [1..100] do
+		M:=RandomPerhapsDegEvenLatticeFromL(dim, L);
+		if DeterminantIntMat(M)<>0 then return(M); fi;
+	od;
+	Printn("cannot RandomEvenLatticeFromL", dim, L); Error();
+	return([]);
+end;
+
+######################
+
+TestIsMatGroup:=function(G, testnumb)
+	local n, tch, ii, g, ginv, tch2, jj, h;
+	n:=Length(G[1]);
+	if not IdentityMat(n) in G then return(false); fi;
+	tch:=RandomChoose(Length(G), Minimum(Length(G), testnumb));
+	for ii in tch do
+		g:=G[ii];
+		ginv:=Inverse(g);
+		if not ginv in G then return(false); fi;
+		tch2:=RandomChoose(Length(G), Minimum(Length(G), testnumb));
+		for jj in tch2 do
+			h:=G[jj];
+			if not g*h in G then return(false); fi;
+			if not h*g in G then return(false); fi;
+			if not ginv*h in G then return(false); fi;
+			if not h*ginv in G then return(false); fi;
+		od;
+	od;
+	return(true);
+end;
+
+
+TestIsPermGroup:=function(G, trialnumb)
+	local n, id, inv,  trial, trial2, tg, tginv, th, prod;
+	if Length(G)=0 then return(false); fi;
+	n:=Length(G[1]);
+	if not IsDuplicateFree(G) then return(false); fi;
+	id:=[1..n];
+	if not id in G then  return(false); fi;
+	inv:=function(g)
+		return(List(id, xx->Position(g, xx)));
+	end;
+	prod:=function(g, h)
+		return(List(id, xx->h[g[xx]]));
+	end;
+	for trial in [1..trialnumb] do
+		tg:=RandomOp(G);
+		tginv:=inv(tg);
+		if not tginv in G then return(false); fi;
+		for trial2 in [1..trialnumb] do
+			th:=RandomOp(G);
+			if not prod(tg, th) in G then return(false); fi;
+			if not prod(th, tg) in G then return(false); fi;
+			if not prod(tginv, th) in G then return(false); fi;
+			if not prod(th, tginv) in G then return(false); fi;
+		od;
+	od;
+	return(true);
+end;
+
+
+#################
+
+
+RandomMultChoose:=function(L, m)
+	local tlist, ch, ii, pos;
+	ch:=[];
+	for ii in [1..m] do
+		Add(ch, Random(L));
+	od;
+	return(ch);
+end;
+
+##################
+
+###############
+
+
+RandomEvenLatFromL:=function(dim, L)
+	local M, ii, jj, a, cc, tL, dd;
+	M:=NullMat(dim, dim); # for the place holder
+	cc:=0;
+	tL:=List(L);
+	while cc<100 do
+		for ii in [1..dim] do
+			dd:=Random(L);
+			if dd mod 2=0 then
+				M[ii][ii]:=dd;
+			else
+				M[ii][ii]:=dd+Random([1,-1]);
+			fi;
+			for jj in [ii+1..dim] do
+				a:=Random(L);
+				M[ii][jj]:=a;
+				M[jj][ii]:=a;
+			od;
+		od;
+		if DeterminantIntMat(M)<>0 then
+			return(M);
+		else
+			Add(tL, cc);
+			Add(tL, -cc);
+		fi;
+	od;
+	Printn("cannot produce EvenNondegLatFromL", dim); Error();
+end;
+
+############
+
+RandomChooseFromL:=function(L, m)
+	local ch, chL;
+	ch:=RandomChoose(Length(L), m);
+	chL:=List(ch, ii->L[ii]);
+	return(chL);
+end;
+
+############
+
+RandomPermL:=function(L)
+	local ch, chL;
+	ch:=RandomChoose(Length(L), Length(L));
+	chL:=List(ch, ii->L[ii]);
+	return(chL);
+end;
+
+
+################
+# Added on 15 Jan 2018
+################
+
+RandomSymMat:=function(n, range)
+	local M, Range, ii, jj, aa;
+	M:=NullMat(n, n);
+	Range:=[-range..range];
+	for ii in [1..n] do
+		M[ii][ii]:=Random(Range);
+		for jj in [ii+1..n] do
+			aa:=Random(Range);
+			M[ii][jj]:=aa;
+			M[jj][ii]:=aa;
+		od;
+	od;
+	return(M);
+end;
+
+
+RandomChooseFromBigList:=function(list, nops)
+	#
+	local chosen, length, aa, ii, newlist;
+	#
+
+	length:=Length(list);
+	if nops>length then
+		Printn("wrong RandomChooseFromBigList"); Error();
+	fi;
+	if nops=length then
+		newlist:=ShallowCopy(list);
+		Shuffle(newlist);
+		return(newlist);
+	fi;
+	chosen:=[];
+	while Length(chosen)<nops do
+		aa:=Random(1, length);
+		if not aa in chosen then
+			Add(chosen, aa);
+		fi;
+	od;
+	return(List(chosen, ii->list[ii]));
+end;
+
+
+PartialShuffle:=function(list, range)
+	local newlist, n, trange, permediis, cc, ii;
+	n:=Length(list);
+	trange:=List(range);
+	Shuffle(trange);
+	permediis:=[1..n];
+	cc:=0;
+	for ii in [1..n] do
+		if ii in range then
+			cc:=cc+1;
+			permediis[ii]:=trange[cc];
+		fi;
+	od;
+	newlist:=List(permediis, ii->list[ii]);
+	return(newlist);
+end;
+
+
+####################
+# Added on 2018 07 12
+####################
+
+RandomEvenLattice:=function(dim, entries)
+	#
+	local vs, ii, flag, v, jj;
+	#
+	vs:=[];
+	for ii in [1..dim] do
+		flag:=false;
+		while not flag do
+			v:=[];
+			for jj in [1..ii-1] do
+				Add(v, vs[jj][ii]);
+			od;
+			Add(v, 2*Random(entries));
+			for jj in [ii+1..dim] do
+				Add(v, Random(entries));
+			od;
+			Add(vs, v);
+			if Rank(vs)=ii then
+				flag:=true;
+			else
+				Remove(vs);
+			fi;
+		od;
+	od;
+	if not IsEvenLattice(vs) then
+		Printn("wrong RandomEvenLattice");
+		beep(3661122);
+	fi;
+	return(vs);
+end;
+
+
+####################
+# Added on 2019 03 04
+####################
+
+RandomPosVectsInHypLat:=function(Gram, nops, seed)
+	#
+	local beep, posv, posvs, n, iniposvdual,
+	rU, rUinv, tGram, tposv, reldeg, ta, posvdegs;
+	#
+	beep:=function(beepnumb)
+		localbeep("RandomPosVectsInHypLat", beepnumb);
+	end;
+	#
+	Reset(GlobalMersenneTwister, seed);
+	#
+	posvs:=[APosVectInHypLat(Gram)];
+	iniposvdual:=posvs[1]*Gram;
+	n:=Length(Gram);
+	#
+	while Length(posvs)<nops do
+		rU:=RandomUnimodMat(n);
+		rUinv:=InverseMat(rU);
+		tGram:=TMTTmult(rU, Gram);
+		tposv:=APosVectInHypLat(tGram)*rU;
+		reldeg:=iniposvdual*tposv;
+		if reldeg=0 then beep(81818299); fi;
+		if reldeg<0 then
+			tposv:=-tposv;
+		fi;
+		AddSet(posvs, tposv);
+	od;
+	#
+	posvdegs:=List(posvs, ta->ta*Gram*ta);
+	SortParallel(posvdegs, posvs);
+	return(posvs);
+	#
+end;
+
+
+############ Add 2020Apr29
+
+RandomLat:=function(dim, fromL)
+	local G, ii, jj, aa;
+	#
+	G:=NullMat(dim, dim);
+	for ii in [1..dim] do
+		G[ii][ii]:=Random(fromL);
+		for jj in [ii+1..dim] do
+			aa:=Random(fromL);
+			G[ii][jj]:=aa;
+			G[jj][ii]:=aa;
+		od;
+	od;
+	#
+	while DeterminantIntMat(G)=0 do
+		ii:=Random([1..dim]);
+		jj:=Random([1..dim]);
+		aa:=Random(fromL);
+		G[ii][jj]:=aa;
+		G[jj][ii]:=aa;
+	od;
+	#
+	return(G);
+end;
+
+RandomPosLat:=function(dim, fromL)
+	local G, ii, jj, aa, diags, mindiag, pos;
+	#
+	G:=NullMat(dim, dim);
+	diags:=[];
+	#
+	for ii in [1..dim] do
+		aa:=AbsInt(Random(fromL));
+		if aa=0 then aa:=1; fi;
+		G[ii][ii]:=aa;
+		Add(diags, aa);
+		for jj in [ii+1..dim] do
+			aa:=Random(fromL);
+			G[ii][jj]:=aa;
+			G[jj][ii]:=aa;
+		od;
+	od;
+	#
+	while  DeterminantIntMat(G)=0 or SignatureQ(G)<>[dim, dim, 0] do
+		mindiag:=Minimum(diags);
+		pos:=Random(Positions(diags, mindiag));
+		G[pos][pos]:=mindiag+1;
+		diags[pos]:=mindiag+1;
+	od;
+	#
+	return(G);
+end;
+
+
+
+
+RandomEvenNondegLatFromL:=function(dim, L)
+	local M, ii, jj, a, cc, tL, dd;
+	M:=IdentityMat(dim); # for the place holder
+	cc:=0;
+	tL:=List(L);
+	while cc<1000 do
+		for ii in [1..dim] do
+			dd:=Random(L);
+			if dd mod 2=0 then
+				M[ii][ii]:=dd;
+			else
+				M[ii][ii]:=dd+Random([1,-1]);
+			fi;
+			for jj in [ii+1..dim] do
+				a:=Random(L);
+				M[ii][jj]:=a;
+				M[jj][ii]:=a;
+			od;
+		od;
+		if DeterminantIntMat(M)<>0 then
+			return(M);
+		fi;
+		cc:=cc+1;
+	od;
+	Printn("cannot produce EvenNondegLatFromL", dim); Error();
+end;
+
+##########
+# 2021/11/09
+##########
+
+RandomSymMatFromL:=function(n, L)
+	local M, ii, jj, aa;
+	M:=NullMat(n, n);
+	for ii in [1..n] do
+		M[ii][ii]:=Random(L);
+		for jj in [ii+1..n] do
+			aa:=Random(L);
+			M[ii][jj]:=aa;
+			M[jj][ii]:=aa;
+		od;
+	od;
+	return(M);
+end;
+
+
+RandomSymMatFromLSeed:=function(n, L, tseed)
+	local M, ii, jj, aa, inistate;
+	inistate:=Reset(GlobalMersenneTwister, tseed);
+	M:=NullMat(n, n);
+	for ii in [1..n] do
+		M[ii][ii]:=Random(L);
+		for jj in [ii+1..n] do
+			aa:=Random(L);
+			M[ii][jj]:=aa;
+			M[jj][ii]:=aa;
+		od;
+	od;
+	Reset(GlobalMersenneTwister, inistate);
+	return(M);
+end;
+
+##########
+# 2022/04/09
+##########
+
+RandomVectFromL:=function(dim, L)
+	local v, ii;
+	v:=[];
+	for ii in [1..dim] do
+		Add(v, Random(L));
+	od;
+	return(v);
+end;
+
+
+RandomVectFromLSeed:=function(dim, L, tseed)
+	local v, ii, inistate;
+  inistate:=Reset(GlobalMersenneTwister, tseed);
+	v:=[];
+	for ii in [1..dim] do
+		Add(v, Random(L));
+	od;
+	Reset(GlobalMersenneTwister, inistate);
+	return(v);
+end;
+
+##########
+# 2026/03/21
+##########
+
+resetMT:=function(seed)
+	Reset(GlobalMersenneTwister, seed);
+end;
+
+#### end

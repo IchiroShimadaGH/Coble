@@ -1,0 +1,434 @@
+#Read("./gapReads/BorcherdsTools.txt");
+
+
+
+IsWeylVect:=function(GramL, w)
+	local mG;
+	if not IsPrimitiveVect(w) then return(false); fi;
+	if not w*GramL*w=0 then return(false); fi;
+	mG:=(-1)*(HoloSphereLattice(GramL, w).Gram); #In GeometricLatticeTools
+	if Length(ShortestVectors(mG, 2).vectors)>0 then return(false); fi;
+	return(true);
+end;
+
+WeylSprime:=function(GramL, weyl)
+	#
+	local beep, weylsprime, weyldual, Gf, hnfrec, ff, aa, Ubasis;
+	#
+	beep:=function(numb)
+		Printn("wrong WeylSprime", numb); Error();
+	end;
+	#
+	weyldual:=weyl*GramL;
+	Gf:=TransposedMat([weyldual]);
+	hnfrec:=HermiteNormalFormIntegerMatTransform(Gf);
+	ff:=hnfrec.rowtrans[1];
+	if weyldual*ff<>1 then beep(1); fi;
+	aa:=ff*GramL*ff;
+	weylsprime:=ff-(aa/2)*weyl;
+	Ubasis:=[weyl, weylsprime];
+	if TMTTmult(Ubasis, GramL)<>[[0,1],[1,0]] then
+		beep(5533);
+	fi;
+	return(weylsprime);
+	#
+end;
+
+WeylAmple:=function(GramL, weyl)
+	return(2*weyl+WeylSprime(GramL, weyl));
+end;
+
+#######################
+
+##############
+# Added on 16 Jan 2018
+##############
+
+FindAGoodEmbIntoL:=function(GramL, temb, weyl, ampleinS)
+	#
+	local beep, ampleinL, wample, revseps, emb, rrtt, wampledual, ampleinLdual,
+	aa, bb, newampleinL;
+	#
+	beep:=function(numb)
+		Printn("wrong FindAGoodEmb", numb); Error();
+	end;
+	if CokerTorsion(temb)<>[] then
+		beep(10087);
+	fi;
+	ampleinL:=ampleinS*temb;
+	ampleinLdual:=ampleinL*GramL;
+	wample:=WeylAmple(GramL, weyl);
+	wampledual:=wample*GramL;
+	revseps:=Reversed(SeparatingRatVects(GramL, wample, ampleinL, -2));
+	emb:=List(temb);
+	for rrtt in revseps do
+		if rrtt[2]<=0 then beep(4567); fi;
+		if rrtt[1]*GramL*rrtt[1]<>-2 then beep(1); fi;
+		aa:=rrtt[1]*wampledual;
+		bb:=rrtt[1]*ampleinLdual;
+		if aa<=0 then beep(15); fi; #corrected 2018 Sep 24
+		if bb>=0 then beep(16); fi; #corrected 2018 Sep 24
+		if aa+rrtt[2]*bb<>0 then beep(2); fi;
+		if not IsIntVect(rrtt[1]) then beep(3); fi;
+		emb:=emb*mtReflectionMat(GramL, rrtt[1]);
+	od;
+	newampleinL:=ampleinS*emb;
+	if SeparatingRatVects(GramL, wample, newampleinL, -2)<>[] then
+		beep(3456);
+	fi;
+	return(emb);
+end;
+
+#######################
+
+
+
+BCheckUnimodularOverLat:=function(Gram1,  Gram2, discrec1, discrec2, antiisom, OLrec)
+	#
+	#
+	local beep, n1, n2, tn, Gram1inv, Gram2inv, Binv, B, H,G,temb, tproj, ttproj, n;
+	#
+	beep:=function(n) Printn("wrong", n, "checkUnimodularOverLat");  Error(); end;
+	#
+	n1:=Length(Gram1);
+	n2:=Length(Gram2);
+	tn:=n1+n2;
+	Gram1inv:=Inverse(Gram1);
+	Gram2inv:=Inverse(Gram2);
+	Binv:=DiagonalMats([Gram1inv, Gram2inv]);
+	B:=DiagonalMats([Gram1, Gram2]);
+	#
+	H:=OLrec.basis;
+	G:=OLrec.Gram;
+	#Ginv:=Inverse(G);
+	#
+	if not TMTTmult(H, Binv)=G then beep(0); fi;
+	if not IsEvenLattice(G) then beep(1); fi;
+	if not AbsInt(DeterminantIntMat(G))=1 then beep(2); fi;
+	#
+	temb:=OLrec.emb1;
+	tproj:=OLrec.proj1;
+	ttproj:=OLrec.proj2;
+	n:=n1;
+	#
+	if not IsPrimitiveMat(temb) then beep(10); fi;
+	#
+	if RowdimMat(temb)<>n then beep (100); fi;
+	if ColdimMat(temb)<>tn then beep (101); fi;
+	if RowdimMat(tproj)<>tn then beep (102); fi;
+	if ColdimMat(tproj)<>n then beep (103); fi;
+	#
+	if not temb*tproj=IdentityMat(n) then beep(11); fi;
+	if not TMTTmult(temb, G)=Gram1 then beep(12); fi;
+	if not IsZeroMat(temb*ttproj) then beep(13); fi;
+	#
+	#
+	temb:=OLrec.emb2;
+	tproj:=OLrec.proj2;
+	ttproj:=OLrec.proj1;
+	n:=n2;
+	#
+	if not IsPrimitiveMat(temb) then beep(20); fi;
+	#
+	if RowdimMat(temb)<>n then beep (200); fi;
+	if ColdimMat(temb)<>tn then beep (201); fi;
+	if RowdimMat(tproj)<>tn then beep (202); fi;
+	if ColdimMat(tproj)<>n then beep (203); fi;
+	#
+	if not temb*tproj=IdentityMat(n) then beep(21); fi;
+	if not TMTTmult(temb, G)= Gram2 then beep(22); fi;
+	if not IsZeroMat(temb*ttproj) then beep(23); fi;
+	#
+	temb:=OLrec.emb1_dual;
+	tproj:=OLrec.proj1_dual;
+	ttproj:=OLrec.proj2_dual;
+	n:=n1;
+	#
+	if not IsPrimitiveMat(tproj) then beep(30); fi;
+	#
+	if RowdimMat(temb)<>n then beep (300); fi;
+	if ColdimMat(temb)<>tn then beep (301); fi;
+	if RowdimMat(tproj)<>tn then beep (302); fi;
+	if ColdimMat(tproj)<>n then beep (303); fi;
+	#
+	if not temb*tproj=IdentityMat(n) then beep(31); fi;
+	if not TMTTmult(temb, G)= Gram1inv then beep(32); fi;
+	if not IsZeroMat(temb*ttproj) then beep(33); fi;
+	#
+	temb:=OLrec.emb2_dual;
+	tproj:=OLrec.proj2_dual;
+	ttproj:=OLrec.proj1_dual;
+	n:=n2;
+	#
+	if not IsPrimitiveMat(tproj) then beep(40); fi;
+	#
+	if RowdimMat(temb)<>n then beep (400); fi;
+	if ColdimMat(temb)<>tn then beep (401); fi;
+	if RowdimMat(tproj)<>tn then beep (402); fi;
+	if ColdimMat(tproj)<>n then beep (403); fi;
+	#
+	if not temb*tproj=IdentityMat(n) then beep(41); fi;
+	if not TMTTmult(temb, G)= Gram2inv then beep(42); fi;
+	if not IsZeroMat(temb*ttproj) then beep(43); fi;
+	#
+	#
+	return(true);
+end;
+
+
+
+#######################
+# 2018 October 08
+#######################
+
+WeylAmples:=function(GramL, weyl, nops, seed)
+	#
+	local beep, tamples, rU, rUinv, tGram, tweyl,tample, originalseed;
+	#
+	beep:=function(beepnumb)
+		Printn("wrong in WeylAmples", beepnumb); Error();
+	end;
+	#
+	if not IsWeylVect(GramL, weyl) then
+		beep(77912112);
+	fi;
+	#
+	originalseed:=Reset(GlobalMersenneTwister, seed);
+	tamples:=[WeylAmple(GramL, weyl)];
+	while Length(tamples)<nops do
+		rU:=RandomUnimodMat(26);
+		rUinv:=InverseMat(rU);
+		tGram:=TMTTmult(rU, GramL);
+		tweyl:=weyl*rUinv;
+		#if not IsWeylVect(tGram, tweyl) then
+		#	beep(162216828);
+		#fi;
+		tample:=WeylAmple(tGram, tweyl)*rU;
+		if tample*GramL*tample<>4 then
+			beep(158518181);
+		fi;
+		Add(tamples, tample);
+	od;
+	Reset(GlobalMersenneTwister, originalseed); #added on 2022/02/11
+	return(tamples);
+end;
+
+
+IsInConwayCham:=function(GramL26, tweyl, ampleinL,  wamplenops, seed, upto)
+	#
+	local beep, tweylamples,  ampleinLdual,
+	tweylamplesreldegs, cc, tweylample, ta;
+	#
+	beep:=function(beepnumb)
+		localbeep("IsNondegenerate", beepnumb);
+	end;
+	#
+	tweylamples:=Set(WeylAmples(GramL26, tweyl, wamplenops, seed));
+	ampleinLdual:=ampleinL*GramL26;
+	tweylamplesreldegs:=List(tweylamples, ta->ta*ampleinL);
+	SortParallel(tweylamplesreldegs, tweylamples);
+	cc:=0;
+	for tweylample in tweylamples do
+		if SeparatingVects(GramL26, ampleinL,  tweylample, -2)<>[] then
+			return(false);
+		fi;
+		cc:=cc+1;
+		if cc=upto then
+			break;
+		fi;
+	od;
+	return(true);
+end;
+
+
+#######################
+# 2019 March 04
+#######################
+
+
+NiemeierMsets:=List(NiemeierList, toMultiSet);
+
+Findfsprime:=function(GramL, f)
+	#
+	# f is a primitive isotropic vector of GramL.
+	# fsprime is a primitive isotropic vector
+	# such that <f, fsprime>=1.
+	#
+	local beep, fsprime, fdual, Gf, hnfrec, ff, aa, Ubasis;
+	#
+	beep:=function(numb)
+		Printn("wrong Findfsprime", numb); Error();
+	end;
+	#
+	if Lgcd(f)<>1 then
+		beep(2215158881);
+	fi;
+	#
+	fdual:=f*GramL;
+	Gf:=TransposedMat([fdual]);
+	hnfrec:=HermiteNormalFormIntegerMatTransform(Gf);
+	ff:=hnfrec.rowtrans[1];
+	if fdual*ff<>1 then beep(1); fi;
+	aa:=ff*GramL*ff;
+	fsprime:=ff-(aa/2)*f;
+	Ubasis:=[f, fsprime];
+	if TMTTmult(Ubasis, GramL)<>[[0,1],[1,0]] then
+		beep(5533);
+	fi;
+	#
+	return(fsprime);
+end;
+
+FindAWeylVector:=function(GramL26, f, v)
+	#
+	# f is a primitive isotropic vector of L=L26.
+	# Find a weyl vector of L
+	# such that f is contained in the closure of
+	# the corresponding Conway chamber
+	# and small relative degree with respect to v.
+	#
+	local beep, fsprime, embU, Nrec, Id26, findnearestwall, vdual, sepflag, septr,
+	GramN, embNtoL26, typestdroots, weyl,
+	roottype, stdrootss, zv, stdrootsinL26,tv,
+	thetavs, pos, irredtype, ttheta, trank, ttM,
+	tthetav, tconcat, fdual,  tM, ttww, ttwwdual, aa,
+	weyldual,  tweyl, tpassings, trefl, reflection, passings;
+	#
+	Printn("FindAWeylVector in BorcherdsTools is not good: 2019/05/13 in Mainz");
+	#
+	beep:=function(beepnumb)
+		Printn("wrong FindAWeylVector", beepnumb); Error();
+	end;
+	#
+	if f*GramL26*f<>0 then beep(38882211);fi;
+	if f*GramL26*v<=0 then beep(8882211); fi;
+	if v*GramL26*v<=0 then beep(844882211); fi;
+	#
+	fsprime:=Findfsprime(GramL26, f);
+	embU:=[f, fsprime];
+	#
+	Nrec:=OrthogonalComp(embU, GramL26);
+	GramN:=Nrec.Gram;
+	embNtoL26:=Nrec.basis;
+	typestdroots:=FindAStdRootSystemPosL(-GramN, 1)[1];
+	#1 is a randomseed #in PosLattools
+	#FindAStdRootSystemPosL(GramN, 1)[2] is a contorol v
+	if typestdroots=[] then
+		weyl:=List(f);
+		return(weyl);
+	fi;
+	roottype:=List(typestdroots, xx->xx[1]);
+	if not toMultiSet(roottype) in NiemeierMsets then
+		beep(1626772);
+	fi;
+	#Printn( toMultiSet(roottype));
+	#
+	stdrootss:=List(typestdroots, xx->xx[2]);
+	#
+	zv:=fsprime-f; # the zerosection
+	#
+	stdrootsinL26:=Concatenation(stdrootss)*embNtoL26;
+	if Set(stdrootsinL26, tv->tv*GramL26*tv)<>[-2] then beep(587758581); fi;
+	#
+	thetavs:=[];# the vectors corresponding to theta-component
+	pos:=0;
+	for irredtype in roottype do
+		pos:=pos+1;
+		ttheta:=affineADErec.(irredtype).theta;
+		trank:=ADEHrec.(irredtype).rank;
+		ttM:=stdrootss[pos]*embNtoL26;
+		tthetav:=f-ttheta*ttM;
+		if tthetav*GramL26*tthetav<>-2 then beep(441414); fi;
+		Add(ttM, tthetav);
+		if TMTTmult(ttM, GramL26)<>-affineADErec.(irredtype).Gram then beep(3313631); fi;
+		Add(thetavs, tthetav);
+	od;
+	if Set(thetavs, tv->tv*GramL26*tv)<>[-2] then beep(585853381); fi;
+	#
+	fdual:=f*GramL26;
+	tconcat:=Concatenation(stdrootsinL26, thetavs);
+	if Rank(tconcat)<>25 then beep(5118); fi;
+	Add(tconcat, f);
+	if Rank(tconcat)<>25 then beep(58581); fi;
+	#
+	Remove(tconcat); #remove f
+	passings:=List(tconcat);
+	#
+	tM:=List(stdrootsinL26);
+	Add(tM, zv);
+	Add(tM, thetavs[1]); #only one theta makes tM rank 26.
+	if Rank(tM)<>26 then beep(588111111); fi;
+	ttww:=InverseMat(tM*GramL26)*List([1..26], ii->1);
+	ttwwdual:=ttww*GramL26;
+	#
+	aa:=(ttwwdual*ttww)/2/(ttwwdual*f);
+	weyl:=ttww-aa*f;
+	weyldual:=weyl*GramL26;
+	#
+	if weyldual*weyl<>0 then beep(51581818); fi;
+	if Set(passings, tv->tv*weyldual)<>[1] then beep(916196); fi;
+	#
+	if not IsWeylVect(GramL26, weyl) then
+		beep(1211222);
+	fi;
+	#
+	Id26:=IdentityMat(26);
+	reflection:=function(tr)
+		local te, tg;
+		tg:=List(Id26, te->te+(te*GramL26*tr)*tr);
+		if f*tg<>f then beep(551122112211); fi;
+		return(tg);
+	end;
+	#
+	vdual:=v*GramL26;
+	#
+	findnearestwall:=function(tpassings, tweyl)
+		#
+		# find tr in tpassings such that <tweyl+tt*v, tr>=aa+tt*bb=0
+		# has the minimum positive solution tt.
+		#
+		local tweyldual, mintt, tr, aa, bb, tt, mintr;
+		tweyldual:=tweyl*GramL26;
+		mintt:=infinity;
+		for tr in tpassings do
+			aa:=tweyldual*tr;
+			if aa<=0 then beep(181919191); fi;
+			bb:=vdual*tr;
+			if bb<>0 then
+				tt:=-aa/bb;
+				if tt>0 and tt<mintt then
+					mintt:=tt;
+					mintr:=List(tr);
+				fi;
+			fi;
+		od;
+		if mintt=infinity then
+			return(fail);
+		else
+			return(mintr);
+		fi;
+	end;
+	#
+	tpassings:=List(passings);
+	tweyl:=List(weyl);
+	#
+	sepflag:=true;
+	while sepflag do
+		#Printn("___ reflect: reldeg", tweyl*vdual);
+		septr:=findnearestwall(tpassings, tweyl);
+		if septr=fail then
+			sepflag:=false;
+			Printn("___ reflects done: reldeg", tweyl*vdual);
+		else
+			trefl:=reflection(septr);
+			tpassings:=tpassings*trefl;
+			tweyl:=tweyl*trefl;
+		fi;
+	od;
+	#
+	if not IsWeylVect(GramL26, tweyl) then
+		beep(121111222);
+	fi;
+	#
+	return(tweyl);
+end;

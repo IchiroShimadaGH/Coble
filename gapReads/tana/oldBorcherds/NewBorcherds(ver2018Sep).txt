@@ -1,0 +1,1877 @@
+# Read("gapReads/NewBorcherds.txt");
+
+################
+# last update 2018/07/13
+# in TheMostAlgEnr
+################
+################
+# last update 2018/01/19
+################
+
+#####################
+# Global Variables
+#####################
+GramSX:=[]; #ANNW 
+GramSXdual:=[]; #ANNW 
+discSXrec:=[]; #ANNW 
+intGramSXdual:=[]; #ANNW  
+OqSXperiod:=[]; #ANNW
+OqSXliftable:=[]; #ANNW 
+ampleX:=[]; #ANNW 
+ampleXdual:=[]; #ANNW
+GramR:=[]; #ANNW 
+GramRdual:=[]; #ANNW 
+Lrec:=[]; #ANNW 
+GramL:=[]; #ANNW 
+thenRvRs:=[]; #ANNW 
+thenRvRinLs:=[]; #ANNW 
+weyl1:=[]; #ANNW
+
+rankSX:=0; #ANNW
+rankR:=0; #ANNW
+rankL:=0; #ANNW
+IdmatSX:=[]; #ANNW
+
+WeylVectors:=[]; #ANNW
+FingerPrints:=[];#ANNW
+tempChamsData:=[];#ANNW
+
+_mtc:="(-2)-curve"; 
+_nw:="non wall"; 
+_newcham:="new chamber"; 
+
+checklevel:=1;
+printlevel:=1;
+adjchecknumb:=10;
+_datasdir:=Directory("./AutK3datas"); #_datasdir:=tdirname; #ANNW
+periodflag:=true;
+
+# the positive-cone preserving is always checked.
+# periodflag is true, false, or "none"
+# true:  period check in DoesPreservePeriod
+# false: liftability check in DoesPreservePeriod
+# "none": only positive-cone preserving
+#
+# wdata=[weylvector in L, entering wall, weylnumb, level, from which cham] F
+#
+
+BorSeed:=false;
+check_AutSTnops:=infinity;
+minchunk_aa:=1;
+minchunk_bb:=2;
+
+currentreadingweylnumb:=1;
+totalweylnumb:=1;
+currentreadingweylnumb_in_list:=1;
+NEXTweylLISTnumb:=2;
+
+currentreadingweyllist:=WeylVectors;
+currentsavingweyllist:=WeylVectors;
+
+
+savedweyllists:=[]; 
+# the list of the names of the files of savedWeylVectors
+# that are saved in SaveWeylVectors.
+
+savedchamlists:=[]; 
+# the list of the names of the files of savechams***
+
+saveweylstab:=10000;
+savedWeylVectors:=[];
+#####################
+# End of Global Variables
+#####################
+
+
+MinimalBorcherdsRead:=function(tdirname)
+	readdatadir(tdirname, "OqSXperiod");
+	readdatadir(tdirname, "OqSXliftable"); 
+	readdatadir(tdirname, "ampleX");  
+	readdatadir(tdirname, "Lrec"); 
+	readdatadir(tdirname, "weyl1");
+end;
+
+Make_nRvRs:=function(tGramRdual)
+	#
+	# make the list of [nR, the list of int vects in tGramRdual with sqnorm nR],
+	# where -2 < nR <= 0.
+	#
+	local svrec;
+	svrec:=ShortestVectors((-1)*tGramRdual, 2); 
+	if Length(svrec.vectors)=0 then Printn("wrong in Make_nRvRs"); Error(); fi;
+	return(ClassifyByTags(MakeFullShortestVectors(tGramRdual, svrec), vv->vv*tGramRdual*vv));
+end;
+
+PrepareDataBorcherds:=function(tdirname)
+	#
+	local denomGramSXdual, nRvRs;
+	#
+	_datasdir:=tdirname;
+	MinimalBorcherdsRead(tdirname);
+	#
+	WeylVectors:=[[weyl1, , 1, 1, ]];
+	currentreadingweyllist:=WeylVectors;
+	currentsavingweyllist:=WeylVectors;
+	GramL:=Lrec.Gram;
+	GramSX:=TMTTmult(Lrec.emb1, GramL);
+	GramR:=TMTTmult(Lrec.emb2, GramL);
+	rankSX:=Length(GramSX); 
+	rankR:=Length(GramR); 
+	rankL:=Length(GramL); 
+	IdmatSX:=IdentityMat(rankSX); 
+	GramSXdual:=InverseMat(GramSX);
+	GramRdual:=InverseMat(GramR);
+	discSXrec:=DiscriminantForm(GramSX);
+	denomGramSXdual:=discSXrec.discg[Length(discSXrec.discg)];
+	intGramSXdual:=denomGramSXdual*GramSXdual;
+	ampleXdual:=ampleX*GramSX;
+	thenRvRs:=Make_nRvRs(GramRdual);
+	thenRvRinLs:=[];
+	for nRvRs in thenRvRs do
+		Add(thenRvRinLs, [nRvRs[1], List(nRvRs[2], xx->xx*Lrec.emb2_dual)]);
+	od;
+	Printn("rank of SX", rankSX);
+	Printn("discriminant of SX", discSXrec.discg);
+	Printn("degree of ampleX", ampleX*ampleXdual);
+end;
+
+
+
+##############
+
+
+GetWeylData:=function() 
+	# get the currentreadingweylnumb-th weyldata.
+	# currentreadingweylnumb will be incremented.
+	local twdata;
+	if currentreadingweylnumb_in_list<=Length(currentreadingweyllist) then
+		twdata:=currentreadingweyllist[currentreadingweylnumb_in_list];
+	else
+		if NEXTweylLISTnumb<=Length(savedweyllists) then
+			Read(savedweyllists[NEXTweylLISTnumb]);
+			currentreadingweyllist:=savedWeylVectors;
+			NEXTweylLISTnumb:=NEXTweylLISTnumb+1;
+		else
+			if NEXTweylLISTnumb<>Length(savedweyllists)+1 then
+				Printn("wrong NEXTweylLISTnumb"); Error();
+			fi;
+			currentreadingweyllist:=currentsavingweyllist;
+			NEXTweylLISTnumb:=NEXTweylLISTnumb+1; 
+			# currentreadingweyllist dynamically changes as currentsavingweyllist.
+			# Before reseting currentsavingweyllist to be [] in SaveWeylVectors(), 
+			# we have to Unbind(currentsavingweyllist).
+		fi;
+		currentreadingweylnumb_in_list:=1;
+		twdata:=currentreadingweyllist[currentreadingweylnumb_in_list];
+	fi;
+	if twdata[3]<>currentreadingweylnumb then 
+		Printn("I have got a wrong wdata"); Error(); 
+	fi;
+	currentreadingweylnumb:=currentreadingweylnumb+1;
+	currentreadingweylnumb_in_list:=currentreadingweylnumb_in_list+1;
+	return(twdata);
+end;
+
+
+SaveWeylVectors:=function()
+	local fn;
+	if saveweylstab<Length(currentsavingweyllist) then 
+		fn:=Filename(_datasdir, 
+					 Concatenation("saveWeylVectors", 
+					 String(Length(savedweyllists)+1), ".txt"));
+		PrintTo(fn, "savedWeylVectors:=", currentsavingweyllist, ";\n");
+		Add(savedweyllists, fn);
+		savedata(savedweyllists);
+		Unbind(currentsavingweyllist); #This is important.
+		currentsavingweyllist:=[];
+	fi;
+end;
+
+Savesavedchamlists:=function()
+	local fn;
+	fn:=Filename(_datasdir, "savedchamlists.txt");
+	PrintTo(fn, "savedchamlists:=", savedchamlists, ";\n");
+end;
+
+
+#IsWeylVect:=function(w) # used in check_AdjChamsdata
+#	local mG;
+#	if not IsPrimitiveVect(w) then return(false); fi;
+#	if not w*GramL*w=0 then return(false); fi;
+#	mG:=(-1)*(HoloSphereLattice(GramL, w).Gram);
+#	if Length(ShortestVectors(mG, 2).vectors)>0 then return(false); fi;
+#	return(true);
+#end;
+
+
+resetAutK3:=function()
+	WeylVectors:=[[weyl1, , 0, 1]];
+	FingerPrints:=[];
+	tempChamsData:=[];
+	Read("gapReads/AutK3tools.txt");
+	Read("gapReads/Chams.txt");
+end;
+
+#############
+
+Make_nRaRembvRs:=function(tw) 
+	#
+	# make the list of [nR, the list [aR, the list of embL(v)]] (tree),
+	# where v is a vector in Rdual such that 
+	# sqnorm is nR and reldeg with repect to tw is aR.
+	#
+	# used in Make_navSdata() below.
+	# 
+	local twR, twdeg, ttlist, nRvRs, tlist, aRvss, aRvs;
+	#
+	twR:=tw*Lrec.proj2;
+	twdeg:=function(vv) return(vv*twR); end; 
+	# vv will be elements of GramRdual.
+	#
+	ttlist:=[];
+	for nRvRs in thenRvRs do
+		aRvss:=ClassifyByTags(List(nRvRs[2]), twdeg);
+		for aRvs in aRvss do #aRvs[2] is an element of Rdual
+			Apply(aRvs[2], vv->vv*Lrec.emb2_dual);
+		od;
+		Add(ttlist, [nRvRs[1], aRvss]);
+	od;
+	return(ttlist);
+end;
+
+
+check_nRaRembvRs:=function(tw, tnRaRembvRslist)
+	#
+	# tnRaRembvRslist is made by Make_nRaRembvRs.
+	# used in Make_navSdata(), after Make_nRaRembvRs.
+	#
+	local beep, svrec, tlist, t2list, navs, nR, avs, aR, v, twdual;
+	#
+	beep:=function(beepn) Printn("wrong in check_nRaRembvRs", beepn);Error(); end;
+	#
+	svrec:=ShortestVectors((-1)*GramRdual, 2);
+	tlist:=MakeFullShortestVectors(GramRdual, svrec);
+	Apply(tlist, vv->vv*Lrec.emb2_dual);
+	t2list:=[];
+	twdual:=tw*GramL;
+	for navs in tnRaRembvRslist do
+		nR:=navs[1];
+		for avs in navs[2] do
+			aR:=avs[1];
+			for v in avs[2] do
+				if v*GramL*v<>nR then beep(1); fi;
+				if twdual*v<>aR then beep(2); fi;
+				Add(t2list, CopyVect(v));
+			od;
+		od;
+	od;
+	if not IsEqualSet(tlist, t2list) then beep(0); Error(); fi;
+	if printlevel>1 then 
+		Printn("check_nRaRembvRs done: this should be removed");
+	fi;
+	return(true);
+end;
+
+navSdata_sorter:=function(a, b)
+	#
+	# The order of navSdata should be UNIQUE.
+	# tags are all distinct by the definition.
+	#
+	local taga, tagb;
+	taga:=a[1]; tagb:=b[1];
+	if taga[5]<tagb[5] then return(true); # number of vectors in SXdual
+	elif taga[5]>tagb[5] then return(false);
+	else
+		if taga[1]<tagb[1] then return(true);  # nS
+		elif taga[1]>tagb[1] then return(false);
+		else
+			if taga[2]<tagb[2] then return(true); # aS
+			elif taga[2]>tagb[2] then return(false);
+			else
+				if taga[3]<tagb[3] then return(true); 
+				# gcd of the components of a vector in SXdual
+				elif taga[3]>tagb[3] then return(false);
+				else
+					if taga[4]<tagb[4] then return(true); 
+					# number of rL for each vector in SXdual
+					elif taga[4]>tagb[4] then return(false);
+					else
+						Printn("in navSdata_sorter:"); 
+						## tags are all distinct by the definition.
+						Error(); 
+					fi;
+				fi;
+			fi;
+		fi;
+	fi;
+	return(true);
+end;
+
+
+check_navSdata:=function(navSdata, tw)
+	local beep, twdual, twS, navS, nS, aS, gcd, nopslift, 
+	nopsvect, rSrLs, rSdual, rL, tnavSdata;
+	#
+	beep:=function(beepn) Printn("wrong in check_navSdata", beepn);Error(); end;
+	#
+	twdual:=tw*GramL;
+	twS:=tw*Lrec.proj1;
+	for navS in navSdata do
+		nS:=navS[1][1];
+		aS:=navS[1][2];
+		gcd:=navS[1][3];
+		nopslift:=navS[1][4];
+		nopsvect:=navS[1][5];
+		if Length(navS[2])<>nopsvect then beep(1); fi;
+		if nS>=0 then beep(2); fi;
+		for rSrLs in navS[2] do
+			rSdual:=rSrLs[1];
+			if gcd<>Lgcd(rSdual) then beep(3); fi;
+			if nopslift<>Length(rSrLs[2]) then beep(4); fi;
+			if rSdual*GramSXdual*rSdual<>nS then beep(8); fi;
+			if rSdual*twS<>aS then beep(9); fi;
+			for rL in rSrLs[2] do
+				if rL*GramL*rL<>-2 then beep(5); fi;
+				if rL*twdual<>1 then beep(6); fi;
+				if rL*Lrec.proj1_dual<>rSdual  then beep(7); fi;
+			od;
+		od;
+	od;
+	#
+	tnavSdata:=List(navSdata);
+	Sort(tnavSdata, navSdata_sorter);
+	if tnavSdata<>navSdata then
+		beep(10);
+	fi;
+	if printlevel>1 then 
+		Printn("check_navSdata done: this should be removed");
+	fi;
+	return(true);
+end;
+
+
+
+
+Make_navSdata:=function(tw)
+	#
+	#
+	# The output is navSdata,
+	# a list of navS sorted by navSdata_sorter.
+	#
+	# Each item navS in navSdata is 
+	# a pairs of 
+	# navS[1] =[nS, aS, gcd, nopslift, nopsvect] (called tag)
+	# and a list navS[2] of [a vector vS in Sdual, lifts of vS in L].
+	# nS:=navS[1][1];
+	# aS:=navS[1][2];
+	# gcd:=navS[1][3];
+	# nopslift:=navS[1][4];
+	# nopsvect:=navS[1][5];
+	#
+	# if Length(navS[2])<>nopsvect then beep(1); fi;
+	# See check_navSdata for the meaning.
+	# 
+	#
+	#
+	local nRaRembvRs, twSdual, nRvRs, embSdualL, navSdata, navs, avs, aR, aS, nrSs, 
+	arSs, nR, embrRs, nS, tlist, task, tagfunc, addnops_to_tag, tlistwithtags;
+	#
+	twSdual:=tw*Lrec.proj1_dual;
+	embSdualL:=Lrec.emb1_dual;
+	nRaRembvRs:=Make_nRaRembvRs(tw);
+	if checklevel>0 then 
+		check_nRaRembvRs(tw, nRaRembvRs);
+	fi;
+	navSdata:=[];
+	#
+	for navs in nRaRembvRs do
+		nR:=navs[1];
+		nS:=-2-nR;
+		if nS<0 then 
+			for avs in navs[2] do
+				aR:=avs[1];
+				embrRs:=avs[2];
+				aS:=1-aR;
+				tlist:=[];
+				task:=function(trS)
+					local tembtrS,  tembrR, trL, trLs;
+					tembtrS:=trS*embSdualL;
+					trLs:=[];
+					for tembrR in embrRs do
+						trL:=tembtrS+tembrR;
+						if IsIntVect(trL) then
+							Add(trLs, trL);
+						fi;
+					od;
+					if trLs<>[] then 
+						Add(tlist, [CopyVect(trS), trLs]);
+					fi;
+				end;
+				AffES(GramSXdual, twSdual, aS, nS, true, task);
+				if Length(tlist)>0 then 
+					tagfunc:=function(rSrLs)
+						return([nS, aS, Lgcd(rSrLs[1]), Length(rSrLs[2])]);
+					end;
+					tlistwithtags:=ClassifyByTags(tlist, tagfunc);
+					addnops_to_tag:=function(taglist)
+						taglist[1][5]:=Length(taglist[2]);
+						return(taglist);
+					end;
+					Apply(tlistwithtags, addnops_to_tag);
+					Append(navSdata, tlistwithtags);
+				fi;
+			od;
+		fi;
+	od;
+	Sort(navSdata, navSdata_sorter);
+	if checklevel>0 then 
+		check_navSdata(navSdata, tw);
+	fi;
+	return(navSdata);
+end;
+
+Make_MinimalChunk:=function(navSdata)
+	local  bigvs, kk, bigM, basisdual, vv, tn, targetM, minchunkrec;
+	#
+	#
+	bigvs:=List(navSdata[1][2], xx->xx[1]);
+	kk:=1;
+	while RankMat(bigvs)<rankSX do
+		kk:=kk+1;
+		Append(bigvs, List(navSdata[kk][2], xx->xx[1]));
+	od;
+	if RankMat(bigvs)<rankSX then 
+		Printn("wrong in Make_MinimalChunk"); Error(); 
+	fi;
+	bigM:=TMTTmult(bigvs, intGramSXdual);
+	basisdual:=[];
+	for vv in bigvs do
+		Add(basisdual, vv);
+		tn:=RankMat(basisdual);
+		if tn<Length(basisdual) then
+			Remove(basisdual);
+		fi;
+		if tn=rankSX then break; fi;
+	od;
+	targetM:=TMTTmult(basisdual, intGramSXdual);
+	minchunkrec:=rec(
+		numb:=kk,
+		targetM:=targetM,
+		bigM:=bigM,
+		basisdual:=basisdual,
+		bigvs:=bigvs
+	);
+	return(minchunkrec);
+end;
+
+##############################
+# 2018/01/05
+# Find a bigvs good for backtrack search.
+
+##################
+
+###################
+
+
+NewMake_MinimalChunk:=function(navSdata)
+	#
+	# 2018/01/05
+	# Find a bigvs good for backtrack search.
+	#
+	local  bigvs, kk, thekk, bigM, basisdual, vv, tn, targetM, minchunkrec,
+	tbigvs, hightpoint, points, trial, tbigM, tbasisdual, ttargetM,
+	randomminchunktrial, estimatebound, maxpoints, trange, cc, ccrange;
+	#
+	#
+	bigvs:=List(navSdata[1][2], xx->xx[1]);
+	kk:=1;
+	while RankMat(bigvs)<rankSX do
+		kk:=kk+1;
+		Append(bigvs, List(navSdata[kk][2], xx->xx[1]));
+	od;
+	thekk:=kk;
+	if RankMat(bigvs)<rankSX then 
+		Printn("wrong in NewMake_MinimalChunk"); Error(); 
+	fi;
+	#
+	#
+	Reset(GlobalMersenneTwister, BorSeed);
+	#
+	maxpoints:=MakeZeroVect(Length(bigvs));
+	randomminchunktrial:=Length(bigvs);
+	estimatebound:=minchunk_aa*rankSX^2;
+	for trial in [1..randomminchunktrial] do
+		trange:=[1..Minimum(randomminchunktrial-trial+14, Length(bigvs))];
+		ccrange:=Length(bigvs)-Length(trange);
+		for cc in [1..minchunk_bb*ccrange] do
+			if cc>ccrange then 
+				tbigvs:=PartialShuffle(bigvs, [1..randomminchunktrial]);
+			else
+				tbigvs:=PartialShuffle(bigvs, [1..ccrange]);
+			fi;
+			tbigM:=TMTTmult(tbigvs, intGramSXdual);
+			tbasisdual:=[];
+			for vv in tbigvs do
+				Add(tbasisdual, vv);
+				tn:=RankMat(tbasisdual);
+				if tn<Length(tbasisdual) then
+					Remove(tbasisdual);
+				fi;
+				if tn=rankSX then break; fi;
+			od;
+			ttargetM:=TMTTmult(tbasisdual, intGramSXdual);
+			points:=NewFindAllSubconfigsEstimate(ttargetM, tbigM, estimatebound);
+			if points>maxpoints then
+				#Printn("Estimate", trial, ccrange, cc>ccrange,  List([1..10], ii->points[ii]), List([1..10], ii->maxpoints[ii]));
+				maxpoints:=points;
+				bigvs:=tbigvs;
+				bigM:=tbigM;
+				basisdual:=tbasisdual;
+				targetM:=ttargetM;
+			fi;
+			if points[1]=infinity then
+				break; #from for trial in randomminchunktrial do
+			fi;
+		od;
+	od;
+	#
+	minchunkrec:=rec(
+		numb:=thekk,
+		targetM:=targetM,
+		bigM:=bigM,
+		basisdual:=basisdual,
+		bigvs:=bigvs
+	);
+	return(minchunkrec);
+end;
+
+# end of 2018/01/05
+##############################
+
+
+DoesPreservePeriod:=function(tg) # tg in OSX 
+	#
+	# This also check whether tg preserves the positive cone.
+	# When periodflag is false, it only checks the liftability.
+	# When periodflag is"none", it only checks the positive-cone preservation.
+	local disctg;
+	#
+	if ampleXdual*(ampleX*tg)<=0 then return(false); fi;
+	#
+	if periodflag="none" then return(true); fi; 
+	disctg:=CopyMatmodDiscg(discSXrec.reps*tg*discSXrec.proj, discSXrec.discg);
+	if not periodflag then 
+		return(disctg in OqSXliftable);
+	fi;
+	return(disctg in OqSXperiod);
+end;
+
+
+check_AutST:=function(AutSTdata, tweylS)
+	#
+	#AutSTdata:=[[AutS,AutT],[AutSdual, AutTdual]];
+	#
+	local beep, G, gs, gt, gsgt, twSdual, gens, tg, orderG;
+	#
+	beep:=function(beepn) Printn("wrong in check_AutST", beepn);Error(); end;
+	#
+	if AutSTdata[1][1][1]<>IdmatSX then beep(100); fi;
+	if AutSTdata[1][2][1]<>IdmatSX then beep(200); fi;
+	#
+	for gs in AutSTdata[1][1] do
+		if not IsIntMat(gs) then beep(11); fi;
+		if tweylS*gs<>tweylS then beep(12); fi;
+		if TMTTmult(gs, GramSX)<>GramSX then beep(1); fi;
+		for gt in AutSTdata[1][2] do
+			gsgt:=gs*gt;
+			if not DoesPreservePeriod(gsgt) then beep(3); fi;
+			#Add(G, gsgt);
+		od;
+	od;
+	#
+	for gt in AutSTdata[1][2] do
+		if not IsIntMat(gt) then beep(21); fi;
+		if tweylS*gt<>tweylS then beep(22); fi;
+		if TMTTmult(gt, GramSX)<>GramSX then beep(2); fi;
+	od;
+	#
+	#
+	gens:=Concatenation(AutSTdata[2][1], AutSTdata[2][2]);
+	orderG:=Length(AutSTdata[1][1])*Length(AutSTdata[1][2]);
+	#
+	if AutSTdata[2][1]<>List(AutSTdata[1][1], tg->GramSXdual*tg*GramSX) then
+		beep(14);
+	fi;
+	if AutSTdata[2][2]<>List(AutSTdata[1][2], tg->GramSXdual*tg*GramSX) then
+		beep(24);
+	fi;
+	#
+	if orderG<100 then 
+		if Size(Group(gens))<>orderG then
+			beep(4);
+		fi;
+		gens:=Concatenation(AutSTdata[1][1], AutSTdata[1][2]);
+		if Size(Group(gens))<>orderG then
+			beep(8);
+		fi;
+	else
+		twSdual:=tweylS*GramSX;
+		G:=[];
+		for gs in AutSTdata[2][1] do
+			if not IsIntMat(GramSX*gs*GramSXdual) then beep(51); fi;
+			if twSdual*gs<>twSdual then beep(52); fi;
+			if TMTTmult(gs, GramSXdual)<>GramSXdual then beep(5); fi;
+			for gt in AutSTdata[2][2] do
+				if not IsIntMat(GramSX*gt*GramSXdual) then beep(61); fi;
+				if twSdual*gt<>twSdual then beep(62); fi;
+				if TMTTmult(gt, GramSXdual)<>GramSXdual then beep(6); fi;
+				gsgt:=GramSX*gs*gt*GramSXdual;
+				if not (IsIntMat(gsgt) and DoesPreservePeriod(gsgt)) then 
+					beep(7); 
+				fi;
+				#Add(G, gsgt);
+			od;
+		od;
+		#if not TestIsMatGroup(G, 10*checklevel) then beep(8); fi;
+	fi;
+	#
+	#
+	if printlevel>1 then 
+		Printn("check_AutST done: this should be removed: ", "orderG=", orderG);
+	fi;
+	return(true);
+end;
+
+Newcheck_AutST:=function(AutSTdata, tweylS, nops)
+	#
+	#AutSTdata:=[[AutS,AutT],[AutSdual, AutTdual]];
+	#
+	local beep, gs, gt, gsdual, gtdual, gsgt, twSdual, gens, tg, orderG, 
+	checkiisS, checkiisT, ii, jj, nopsS, nopsT;
+	#
+	beep:=function(beepn) Printn("wrong in check_AutST", beepn);Error(); end;
+	#
+	if AutSTdata[1][1][1]<>IdmatSX then beep(100); fi;
+	if AutSTdata[1][2][1]<>IdmatSX then beep(200); fi;
+	nopsS:=Length(AutSTdata[1][1]);
+	nopsT:=Length(AutSTdata[1][2]);
+	if nopsS<>Length(AutSTdata[2][1]) then beep(4677); fi;
+	if nopsT<>Length(AutSTdata[2][2]) then beep(578743); fi;
+	checkiisS:=RandomChooseFromBigList([1..nopsS], Minimum(nops, nopsS));
+	checkiisT:=RandomChooseFromBigList([1..nopsT], Minimum(nops, nopsT));
+	#
+	for ii in checkiisS do
+		gs:=AutSTdata[1][1][ii];
+		gsdual:=AutSTdata[2][1][ii];
+		if GramSXdual*gs*GramSX<>gsdual then
+			beep(4678);
+		fi;
+		if not IsIntMat(gs) then beep(11); fi;
+		if not IsIntMat(gsdual) then beep(111); fi;
+		if tweylS*gs<>tweylS then beep(12); fi;
+		if TMTTmult(gs, GramSX)<>GramSX then beep(1); fi;
+		for jj in checkiisT do
+			gt:=AutSTdata[1][2][jj];
+			gsgt:=gs*gt;
+			if not DoesPreservePeriod(gsgt) then beep(3); fi;
+		od;
+	od;
+	#
+	for ii in checkiisT do
+		gt:=AutSTdata[1][2][ii];
+		gtdual:=AutSTdata[2][2][ii];
+		if GramSXdual*gt*GramSX<>gtdual then
+			beep(4778);
+		fi;
+		if not IsIntMat(gt) then beep(21); fi;
+		if not IsIntMat(gtdual) then beep(211); fi;
+		if tweylS*gt<>tweylS then beep(22); fi;
+		if TMTTmult(gt, GramSX)<>GramSX then beep(2); fi;
+	od;
+	#
+	#
+	if printlevel>1 then 
+		Printn("Newcheck_AutST done: this should be removed: ");
+	fi;
+	return(true);
+end;
+
+Make_TrivialAutST:=function(minimalchunk, tweylS) #tweylS is needed for check
+	return([[[IdmatSX],[IdmatSX]],[[IdmatSX], [IdmatSX]]]);
+end;
+
+Make_AutST:=function(minimalchunk, tweylS) #tweylS is needed for check
+	#
+	# The output is
+	# AutSTdata:=[[AutS,AutT],[AutSdual, AutTdual]];
+	#
+	#
+	local  beep, findjob, n, N, partial, AutSdual, AutTdual, AutS, AutT,
+	basisdualinv, inipartial, Tflag,targetM, bigM,  basisdual, bigvs,
+	AutSTdata, fixedv, orb, tgg, gens, Gdual, counter, ccss, cctt;
+	#
+	#minchunkrec:=rec(
+	#	numb:=kk,
+	#	targetM:=targetM,
+	#	bigM:=bigM,
+	#	basisdual:=basisdual,
+	#	bigvs:=bigvs
+	#);	
+	#
+	beep:=function(beepnumb)
+		Printn("wrong Make_AutST", beepnumb); Error();
+	end;
+	#
+	targetM:=minimalchunk.targetM;
+	bigM:=minimalchunk.bigM;
+	basisdual:=minimalchunk.basisdual;
+	bigvs:=minimalchunk.bigvs;
+	if Rank(basisdual)<>rankSX then beep(156); fi;
+	#
+	N:=Length(bigM); 
+	n:=Length(targetM);
+	partial:=MakeZeroVect(n);
+	basisdualinv:=Inverse(basisdual);
+	AutSdual:=[];
+	AutTdual:=[];
+	AutS:=[];
+	AutT:=[];
+	if bigvs[1]<>basisdual[1] then beep(15151); fi;
+	fixedv:=basisdual[1];#FOR CHECK 2017/10/21
+	#
+	counter:=0;
+	ccss:=0;
+	cctt:=0;
+	findjob:=function(kk)
+		#
+		# When this function is called,
+		# partial has kk correct elements from the top.
+		# This function search for kk+1 st element. 
+		#
+		local targetv, jj, bigvjj, fflag, cc, ii, tg, tgdual;
+		#
+		if kk=n then 
+			tgdual:=basisdualinv*List(partial, xx->bigvs[xx]);
+			tg:=GramSX*tgdual*GramSXdual;
+			if IsIntMat(tg) and DoesPreservePeriod(tg) then
+				counter:=counter+1;
+				#testPrintn("in Make_AutST", counter);
+				if Determinant(tg)=0 then
+					beep(5522);
+				fi;
+				if inipartial=1 then
+					if fixedv*tgdual<>fixedv then beep(5156); fi; #FOR CHECK 2017/10/21
+					Add(AutSdual, tgdual);
+					Add(AutS, tg);
+					ccss:=ccss+1;
+					#Printn("ccss", ccss);
+				fi;
+				if Tflag then
+					Add(AutTdual, tgdual);
+					Add(AutT, tg);
+					Tflag:=false;
+					cctt:=cctt+1;
+					#Printn("cctt", cctt);
+				fi;
+			fi;
+		else
+			targetv:=targetM[kk+1];
+			for jj in [1..N] do
+				#
+				bigvjj:=bigM[jj];
+				partial[kk+1]:=jj;
+				fflag:=true;
+				cc:=0;
+				for ii in partial do
+					cc:=cc+1;
+					if bigvjj[ii]<>targetv[cc] then 
+						fflag:=false; break;
+					fi;
+					if cc=kk+1 then break; fi;
+				od;
+				if fflag then 
+					if kk=0 then inipartial:=partial[1];
+						Tflag:=true;
+					fi;
+					findjob(kk+1);
+				fi;
+				if kk>0 and inipartial>1 and Tflag=false then break; fi; #break from: for jj in [1..N] do
+				#
+			od;
+		fi;
+	end;
+	#
+	findjob(0);
+	if printlevel>0 then 
+		Printn("end Make_AutST findjob: orderG=", Length(AutS)*Length(AutT));
+	fi;
+	#
+	AutSTdata:=[[AutS,AutT],[AutSdual, AutTdual]];
+	#
+	if checklevel>0 then
+		Newcheck_AutST(AutSTdata, tweylS, check_AutSTnops); 
+	fi;
+	#
+	return(AutSTdata);
+end;
+
+check_Orbits:=function(orbits, navSdata)
+	# 
+	# orbits is a list of orbits.
+	# Each orbit is a list of vectors in SXdual.
+	#
+	local vs, vs2, beep, navS, torbit, gcdinv, v;
+	beep:=function(beepn) Printn("wrong in check_Orbits", beepn); Error(); end;
+	#
+	vs:=[];
+	for navS in navSdata do
+		gcdinv:=1/navS[1][3]; # gcd of the components of v
+		Append(vs, List(navS[2], yy->gcdinv*yy[1]));
+	od;
+	vs:=DuplicateFreeList(vs);
+	if RankMat(vs)<>rankSX then beep(1); fi;
+	vs2:=[];
+	for torbit in orbits do
+		Append(vs2, torbit);
+	od;
+	if not IsDuplicateFreeList(vs2) then beep(11); fi;
+	if not IsEqualSet(vs, vs2) then beep(2); fi;
+	for v in vs2 do
+		if not IsPrimitiveVect(v) then beep(3); fi;
+	od;
+	if printlevel>1 then 
+		Printn("check_Orbits done:this should be removed: Number of vs =", 
+			Length(vs), "nopsorbits=", Length(orbits)); 
+	fi;
+	return(true);
+end;
+
+
+Make_Orbits:=function(navSdata, AutST)
+	local orbits, navS, dones, orbit, vSvLs, v, gs, vgs, gt, gcdinv, sorter;
+	orbits:=[];
+	dones:=[];
+	for navS in navSdata do
+		gcdinv:=1/navS[1][3]; # gcd of the components of v
+		for vSvLs in navS[2] do
+			v:=gcdinv*vSvLs[1];
+			if not v in dones then
+				orbit:=[];
+				for gs in AutST[2][1] do # use dual!
+					vgs:=v*gs;
+					for gt in AutST[2][2] do # use dual!
+						Add(orbit, vgs*gt);
+					od;
+				od;
+				orbit:=DuplicateFreeList(orbit);
+				Append(dones, orbit);
+				Add(orbits, orbit);
+			fi;
+		od;
+	od;
+	if checklevel>0 then 
+		check_Orbits(orbits, navSdata);
+	fi;
+	return(orbits);
+end;
+
+
+IsWallMinSubscript:=function(vs, w)
+	# 
+	# this will be used in IsWallBestCoeffs,
+	# when IsWallBestCoeffs gives up after too many pivots.
+	#
+	# We assume that vs is the full rank.
+	# Does the hyperplane w*x=0 intersect with the interior of
+	# the cone defined by v*x>=0 for all v in vs?
+	# This is a problem of linear programming.
+	# The answer is yes if and only if the problem
+	#       minimize w*x
+	#       subject to v*x>=0
+	# has unbounded to -infinity,
+	# or if and only if there exists x0 such that
+	# w*x0<0 and v*x0>=0 for any v in vs, 
+	# or if and only if w can NOT  be written as 
+	# a linear combination of some v's in v with 
+	# positive coefficients.
+	# If true, then it returns [true, x0].
+	# If false, then it returns [false, [coeffs, v's]].
+	#
+	local dic, f, n, nonbasics, svsiis, NBinv, #NBinv is nonbasic inv;
+	counter, entcand, pos, c, tflag, y,evpos, sol, 
+	entvarnumb, entpos, ynumb, leavevarnumb, leavey,a,correcty, pivotfunc,
+	NB;
+	#
+	n:=Length(w);
+	dic:=CopyMat(vs);
+	f:=CopyVect(w);
+	#
+	# initialize
+	#
+	svsiis:=FindSubvsWithRank(vs, rankSX);
+	if svsiis=false then Printn("cannot apply IsWall", RankMat(vs)); Error(); fi;
+	nonbasics:=svsiis[2];
+	NBinv:=Inverse(svsiis[1]);
+	Apply(dic, v->v*NBinv);
+	f:=f*NBinv;
+	#
+	counter:=0;
+	#
+	while counter<10*Length(vs) do
+		#
+		counter:=counter+1;
+		#
+		# find entering
+		#
+		entcand:=[];
+		pos:=0; # position in nonbasiscs
+		for c in f do
+			pos:=pos+1;
+			if c<0 then
+				#
+				tflag:=true;
+				for y in dic do
+					if y[pos]<0 then tflag:=false; break; fi;
+				od;
+				if tflag then #unbound!
+					NBinv:=Inverse(List(nonbasics, xx->vs[xx]));
+					evpos:=MakeVectei(rankSX, pos);
+					sol:=NBinv*evpos;
+					#Printn(counter, "unbound");
+					return([true, sol]);
+				fi;
+				#
+				Add(entcand, nonbasics[pos]);
+			fi;
+		od;
+		#
+		if Length(entcand)=0 then # bound
+			#Printn(counter, "bound");
+			return([false, [f, List(nonbasics, ii->vs[ii])]]);
+		fi;
+		#
+		entvarnumb:=Minimum(entcand);
+		entpos:=Position(nonbasics, entvarnumb);
+		#
+		# find leaving
+		#
+		ynumb:=0;
+		for y in dic do
+			ynumb:=ynumb+1;
+			if y[entpos]<0 then leavevarnumb:=ynumb; leavey:=y; break; fi;
+		od;
+		#
+		# pivot
+		#
+		nonbasics[entpos]:=leavevarnumb;
+		a:=leavey[entpos];
+		correcty:=CopyVect(leavey);
+		correcty[entpos]:=-1;
+		correcty:=(-1/a)*correcty;
+		pivotfunc:=function(yy)
+			local aa;
+			aa:=yy[entpos];
+			yy[entpos]:=0;
+			yy:=yy+aa*correcty;
+			return(yy);
+		end;
+		Apply(dic, pivotfunc);
+		f:=pivotfunc(f);
+		#
+		#  check
+		if counter <0 then 
+			NB:=List(nonbasics, ii->vs[ii]);
+			if dic*NB<>vs then Printn("wrong pivot 1"); Error(); fi;
+			if f*NB<>w then Printn("wrong pivot 2"); Error(); fi;
+			if printlevel>1 then 
+				Printn("pivot check done: this should be removed; counter=", counter); 
+			fi;
+		fi;
+		#
+		#
+		#
+		#
+		#
+	od;
+	#
+	Printn("too many pivots"); Error();
+	#
+end;
+
+
+
+IsWallBestCoeffs:=function(vs, w)
+	#
+	# We assume that vs is the full rank and that
+	# the region defined by w*x>=0 and v*x>=0 for all v in vs 
+	# has an interior point.
+	# Does the hyperplane w*x=0 intersect with the interior of
+	# the cone defined by v*x>=0 for all v in vs?
+	# This is a problem of linear programming.
+	# The answer is yes if and only if the problem
+	#       minimize w*x
+	#       subject to v*x>=0
+	# has unbounded to -infinity,
+	# or if and only if there exists x0 such that
+	# w*x0<0 and v*x0>=0 for any v in vs, 
+	# or if and only if w can NOT  be written as 
+	# a linear combination of some v's in vs with 
+	# positive coefficients.
+	# If true, then it returns [true, x0].
+	# If false, then it returns [false, [coeffs, v's]].
+	#
+	local dic, f, n, nonbasics, svsiis, NBinv, 
+	#NBinv is nonbasic inv;
+	counter, minc,  y,evpos, sol, 
+	entvarnumb, entpos, ynumb, leavevarnumb, leavey,a,correcty, 
+	pivotfunc, NB;
+	#
+	n:=Length(w);
+	dic:=CopyMat(vs);
+	f:=CopyVect(w);
+	#
+	# initialize
+	#
+	svsiis:=FindSubvsWithRank(vs, rankSX);
+	if svsiis=false then 
+		Printn("cannot apply IsWall", RankMat(vs)); Error(); 
+	fi;
+	nonbasics:=svsiis[2];
+	NBinv:=Inverse(svsiis[1]);
+	Apply(dic, v->v*NBinv);
+	f:=f*NBinv;
+	#
+	counter:=0;
+	#
+	while counter<1000 do
+		#
+		counter:=counter+1;
+		#
+		# find entering
+		#
+		minc:=Minimum(f);
+		#
+		if minc>=0 then # bound
+			return([false, [f, List(nonbasics, ii->vs[ii])]]); 
+		fi;
+		#
+		entpos:=Position(f, minc);
+		entvarnumb:=nonbasics[entpos];
+		#
+		# find leaving
+		#
+		ynumb:=0;
+		a:=0;
+		for y in dic do
+			ynumb:=ynumb+1;
+			if y[entpos]<a then 
+				a:=y[entpos];
+				leavevarnumb:=ynumb; 
+				leavey:=y;
+			fi;
+		od;
+		#
+		if a=0 then
+			NBinv:=Inverse(List(nonbasics, xx->vs[xx]));
+			evpos:=MakeVectei(rankSX, entpos);
+			sol:=NBinv*evpos;
+			return([true, sol]); #Printn(counter, "unbound");
+		fi;
+		#
+		# pivot
+		#
+		nonbasics[entpos]:=leavevarnumb;
+		correcty:=CopyVect(leavey);
+		correcty[entpos]:=-1;
+		correcty:=(-1/a)*correcty;
+		pivotfunc:=function(yy)
+			local newy, aacorrecty;
+			aacorrecty:=yy[entpos]*correcty;
+			yy[entpos]:=0;
+			newy:=yy+aacorrecty;
+			return(newy);
+		end;
+		Apply(dic, pivotfunc);
+		f:=pivotfunc(f);
+		#
+		#  check
+		if counter <0 then 
+			NB:=List(nonbasics, ii->vs[ii]);
+			if dic*NB<>vs then Printn("wrong pivot 1"); Error(); fi;
+			if f*NB<>w then Printn("wrong pivot 2"); Error(); fi;
+			if printlevel>1 then 
+				Printn("pivot check done: this should be removed; counter=", counter); 
+			fi;
+		fi;
+		#
+	od;
+	#
+	Printn("too many pivots"); 
+	return(IsWallMinSubscript(vs, w));
+	#
+end;
+
+
+check_Walls:=function(orbits, result)
+	#
+	#
+	local beep, walls, nonwalls, wallsamples, 
+	nonwallsamples, ii, res, 
+	tw, pos, newres, x0, c, vs, v, coeffs, ttw;
+	#
+	beep:=function(beepn) Printn("wrong check_Walls", beepn); Error(); end;
+	#
+	if Length(result)<>Length(orbits) then
+		beep(0);
+	fi;
+	#
+	walls:=[];
+	nonwalls:=[];
+	wallsamples:=[];
+	nonwallsamples:=[];
+	ii:=0;
+	#
+	for res in result do
+		ii:=ii+1;
+		if res[1] then
+			Append(walls, orbits[ii]);
+			Add(wallsamples, RandomOp(orbits[ii]));
+		else
+			Append(nonwalls, orbits[ii]);
+			Add(nonwallsamples, RandomOp(orbits[ii]));
+		fi;
+	od;
+	if RankMat(walls)<>rankSX then beep(1); fi;
+	#
+	for tw in wallsamples do
+		pos:=Position(walls, tw);
+		Remove(walls, pos);
+		#
+		# tw is NOT in walls from now
+		#
+		if RankMat(walls)=rankSX then 
+			# Note that, if RankMat(walls)<rankSX, then tw is a wall.
+			newres:=IsWallBestCoeffs(walls, tw);
+			if not newres[1] then beep(2); fi;
+			x0:=newres[2]; 
+			if tw*x0>=0 then beep(3); fi;
+			for ttw in walls do
+				if ttw*x0<0 then beep(4); fi;
+			od;
+		fi;
+		#
+		# tw returns to walls
+		#
+		Add(walls, tw);
+	od;
+	#
+	#
+	for tw in nonwallsamples do
+		newres:=IsWallBestCoeffs(walls, tw);
+		if newres[1] then beep(5); fi;
+		coeffs:=newres[2][1]; 
+		vs:=newres[2][2];
+		if coeffs*vs<>tw then beep(6); fi;
+		for c in coeffs do if c<0 then beep(7); fi; od;
+		for v in vs do if not v in walls then beep(8); fi;od;
+	od;
+	#
+	if printlevel>1 then 
+		Printn("check_Walls done: this should be removed.");
+	fi;
+	return(true);
+end;
+
+Make_Walls:=function(orbits)
+	local result, ii, torbit, w, vs, jj, st, res, checktrial;
+	result:=[];
+	ii:=0;
+	for torbit in orbits do
+		ii:=ii+1;
+		w:=torbit[1];
+		vs:=[];
+		for jj in [1..Length(orbits)] do
+			if ii<jj or (jj<ii and result[jj][1]) then
+				Append(vs, orbits[jj]);
+			fi;
+		od;
+		if RankMat(vs)<rankSX then 
+			res:=[true, "rank reason"]; 
+		else
+			res:=IsWallBestCoeffs(vs, w); 
+		fi;
+		Add(result, res);
+	od;
+	if checklevel>0 then
+		check_Walls(orbits, result);
+	fi; 
+	return(result);
+end;
+
+
+check_AdjChamsdata:=function(oldweyl, torbits, wallsresult, adjdata)
+	#
+	local beep, ii, tr, newweyl; 
+	#
+	beep:=function(beepn) Printn("wrong in check_AdjChamsdata", beepn); Error(); end;
+	if Length(adjdata)<>Length(torbits) then
+		beep(0);
+	fi;
+	for ii in [1..Length(adjdata)] do
+		if adjdata[ii][1]=_nw then
+			if wallsresult[ii][1]<>false then beep(1); fi;
+		elif adjdata[ii][1]=_mtc then
+			tr:=adjdata[ii][2];
+			if tr*GramSX*tr<>-2 then beep(2); fi;
+			if tr*GramSX*ampleX<=0 then beep(3); fi;
+		elif adjdata[ii][1]=_newcham then
+			newweyl:=adjdata[ii][2];
+			#
+			if checklevel>3 and not IsWeylVect(GramL, newweyl) then 
+				beep(4); 
+			fi;
+		fi;
+	od;
+	if printlevel>1 then 
+		Printn("check_AdjChamsdata done: this should be removed;");
+	fi;
+	return(true);
+end;
+
+
+Make_AdjChamsdata:=function(tweyl, torbits, wallsresult)
+	local beep, adjdata, ii, tvdual, tv, mtcflag, sqnormtv, n, 
+	Rtvs, a, atvdualL, tnorm, nRvRinL,
+	ttv, tr, Rtvsdual, fflag, u, newweyl, reflects, enteringwall, 
+	parats, ttRtvs, trial, ttnewweyl, randscs, Rtvsdual_divided_by_tw, xr,
+	#midweyl, midweylproj, midflag, 
+	#
+	# midpt of weyl and weyl+opptg is not necessarily on SX!
+	# Consider the sphereical A2! 2017/10/28
+	#
+	tvinL, inttvinL, orthowall, orthoroots, ttwall;
+	#
+	beep:=function(beepnumb)
+		Printn("wrong Make_AdjChamsdata", beepnumb); Error();
+	end;
+	#
+	adjdata:=[];
+	for ii in [1..Length(wallsresult)] do
+		tvdual:=torbits[ii][1];
+		if not wallsresult[ii][1] then #not a wall
+			Add(adjdata, [_nw, tvdual]);
+		else
+			tv:=tvdual*GramSXdual;
+			#
+			mtcflag:=false;
+			sqnormtv:=tv*GramSX*tv;
+			n:=RootInt(FloorRat((-2)/sqnormtv));
+			if n*n*sqnormtv=-2 then 
+				if IsIntVect(n*tv) then
+					mtcflag:=true;
+					Add(adjdata, [_mtc, n*tv]);
+				fi;
+			fi;
+			#
+			if not mtcflag then
+				#
+				Rtvs:=[];
+				for a in [0..n] do
+					atvdualL:=a*tvdual*Lrec.emb1_dual;
+					tnorm:=a*a*sqnormtv;
+					for nRvRinL in thenRvRinLs do
+						if nRvRinL[1]+tnorm=-2 then
+							for ttv in nRvRinL[2] do
+								tr:=atvdualL+ttv;
+								if IsIntVect(tr) then
+									#if IniValnz(tr)>0 then
+									#if not -tr in Rtvs then # 2017 Oct 26 correct
+									#
+									# The norm of tr should be -2:
+									#
+									if IniValnz(tr)>0 then
+										Add(Rtvs, tr);
+									else
+										Add(Rtvs, -tr);
+									fi;
+								fi;
+							od;
+						fi;
+					od;
+				od;
+				Rtvs:=Set(Rtvs);
+				Rtvsdual:=List(Rtvs, xr->xr*GramL);
+				Rtvsdual_divided_by_tw:=List(Rtvsdual, xr->xr/(tweyl*xr));
+				if not IsDuplicateFreeList(Rtvsdual_divided_by_tw) then
+					Printn("not DuplicateFreeList in Make_AdjChamsdata 1"); 
+					Error(); 
+				fi;
+				#
+				#
+				#################
+				#
+				#Added 26 Oct 2017
+				#
+				#
+				if checklevel>0 then
+					#Printn("Added 2017/10/28");
+					tvinL:=tv*Lrec.emb1;
+					inttvinL:=Lcm(List(tvinL, DenominatorRat))*tvinL;
+					ttwall:=OrthogonalComp(Concatenation([inttvinL], Lrec.emb2), GramL);
+					orthowall:=OrthogonalComp(ttwall.basis, GramL);
+					if Length(orthowall.basis)<>rankR+1 then beep(262367); fi;
+					orthoroots:=ShortestVectors((-1)*orthowall.Gram, 2).vectors;
+					orthoroots:=orthoroots*orthowall.basis;
+					if Set(orthoroots, ttv->ttv*GramL*ttv)<>[-2] then beep(71726); fi;
+					orthoroots:=Concatenation(orthoroots, (-1)*orthoroots);
+					if not IsEqualSet(orthoroots, Concatenation(Rtvs, (-1)*Rtvs)) then
+						Printn("Rtvs is wrong in Make_AdjChamsdata"); 
+						Error();
+					fi;
+				fi;
+				#
+				################
+				#
+				# 
+				#fflag:=false;
+				#while not fflag do
+				#	u:=RandomVect(rankL);
+				#	randscs:=List(Rtvsdual, xr->(u*xr)/(tweyl*xr));
+				#	if IsDuplicateFreeList(randscs) then
+				#		fflag:=true;
+				#	fi;
+				#od;
+				#
+				# the random vect u above will not be used: 2017/10/05
+				#
+				ttRtvs:=CopyMat(Rtvs); #this will be used in the check below:
+				#
+				#parats:=List(Rtvs, xr->(u*GramL*xr)/(tweyl*GramL*xr));
+				#if not IsDuplicateFreeList(parats) then 
+				#	Printn("not DuplicateFreeList in Make_AdjChamsdata"); 
+				#	Error(); 
+				#fi;
+				#
+				#SortParallel(parats, Rtvs); 
+				# parats will not be used: 2017/10/05
+				#
+				SortParallel(Rtvsdual_divided_by_tw, Rtvs);
+				#Be careful about the order of the args.
+				#We want to sort Rtvs ACCORDING to parats.
+				#
+				newweyl:=CopyVect(tweyl);
+				#
+				#Printn("Rtvs", Length(Rtvs), ii);
+				for tr in Rtvs do
+					if Rank([tr*Lrec.proj1, tv])<>1 then
+						Printn("tr should be perp to the wall in Make_AdjChamsdata"); 
+						Error(); 
+					fi;
+					if tr*GramL*tr<>-2 then 
+						Printn("tr should be -2 in Make_AdjChamsdata"); 
+						Error(); 
+					fi;
+					newweyl:=newweyl+(newweyl*GramL*tr)*tr;
+				od;
+				#
+				enteringwall:=-tvdual;
+				#
+				Add(adjdata, [_newcham, newweyl, enteringwall]);
+				#
+				if checklevel>0 then
+					for trial in [1..adjchecknumb] do
+						fflag:=false;
+						u:=RandomVect(rankL);
+						while not fflag do
+							u:=2*u+RandomVect(rankL);
+							randscs:=List(Rtvsdual, xr->(u*xr)/(tweyl*xr));
+							if IsDuplicateFreeList(randscs) then
+								fflag:=true;
+							fi;
+						od;
+						parats:=List(ttRtvs, xr->(u*GramL*xr)/(tweyl*GramL*xr));
+						SortParallel(parats, ttRtvs); 
+						ttnewweyl:=CopyVect(tweyl);
+						for tr in ttRtvs do
+							ttnewweyl:=ttnewweyl+(ttnewweyl*GramL*tr)*tr;
+						od;
+						if ttnewweyl<>newweyl then 
+							Printn("Different newweyls in Make_AdjChamsdata"); 
+							Error(); 
+						else
+							#Printn("newweyl ok: added  2017 Oct 26"); # added  2017 Oct 26
+						fi;
+					od;
+					if adjchecknumb>0 then 
+						#Printn("newweyl ok done: ii=", ii, "adjchecknumb=", adjchecknumb); # added  2017 Oct 26
+					fi;
+				fi; #if checklevel>0 then
+				#
+			fi; #if not mtcflag then
+		fi; # if not wallsresult[ii][1] then.. else
+		#
+	od;
+	#
+	#
+	if checklevel>0 then 
+		check_AdjChamsdata(tweyl, torbits, wallsresult, adjdata);
+	fi;
+	#
+	return(adjdata);
+end;
+
+
+Make_FingerPrint:=function(numb, navSdata, minchunk, twdata)
+	local FP;
+	FP:=rec(
+		chamnumb:=numb,
+		navstag:=List(navSdata, xx->xx[1]),
+		#
+		#minchunkrec:=rec(
+		#	numb:=kk,
+		#	targetM:=targetM,
+		#	bigM:=bigM,
+		#	basisdual:=basisdual,
+		#	bigvs:=bigvs
+	    #);	
+	    #
+		chunknumb:= minchunk.numb, 
+		dualbasisinv:=InverseMat(minchunk.basisdual),
+		dualbasisGram:=minchunk.targetM,
+		wdata:=twdata
+	);
+	return(FP);
+end;
+
+FindIsom:=function(oldvectsdualinv, targetM, newvectsdual, bigM)
+	#
+	local findjob, n, N, partial, globalfflag, isom;
+	#
+	N:=Length(bigM); 
+	n:=Length(targetM);
+	partial:=MakeZeroVect(n);
+	#Printn("FindIsom", N, n); #added 2017 Oct 26
+	#
+	findjob:=function(kk)
+		#
+		# When this function is called,
+		# partial has kk correct elements from the top;
+		# that is, F(partial[ii], partial[jj])=f(ii, jj) for ii, jj<=kk.
+		# This function search for kk+1 st element. 
+		#
+		local targetv, jj, bigvjj, fflag, cc, ii, tgdual;
+		#
+		if kk=n then 
+			isom:=oldvectsdualinv*List(partial, ii-> newvectsdual[ii]);
+			isom:=GramSX*isom*GramSXdual; #make it non-dual
+			if IsIntMat(isom) and DoesPreservePeriod(isom) then 
+				globalfflag:=true;
+			fi;
+		else
+			targetv:=targetM[kk+1];
+			for jj in [1..N] do
+				#
+				bigvjj:=bigM[jj];
+				partial[kk+1]:=jj;
+				fflag:=true;
+				cc:=0;
+				for ii in partial do
+					cc:=cc+1;
+					if bigvjj[ii]<>targetv[cc] then 
+						fflag:=false; break;
+					fi;
+					if cc=kk+1 then break; fi;
+				od;
+				if fflag then 
+					findjob(kk+1);
+				fi;
+				if globalfflag then break; fi;
+				#
+			od;
+		fi;
+	end;
+	#
+	globalfflag:=false;
+	findjob(0);
+	#
+	if globalfflag=false then return(false);
+	elif globalfflag=true then  return(isom);
+	fi;
+	#
+	Printn("wrong in FindIsom"); Error();
+end;
+
+check_Isom:=function(tweyl, isomres, oldweyl)
+	#
+	# isomres=[oldchamnumb, tg];
+	#
+	local beep,  oldweylS, tweylS, tg, oldchamnumb;
+	beep:=function(beepn) Printn("wrong in check_Isom", beepn); Error(); end;
+	#
+	oldchamnumb:=isomres[1];
+	tg:=isomres[2];
+	if TMTTmult(tg, GramSX)<>GramSX then beep(1); fi;
+	if not DoesPreservePeriod(tg) then beep(11); fi;
+	oldweylS:=oldweyl*Lrec.proj1;
+	tweylS:=tweyl*Lrec.proj1;
+	if oldweylS*tg<>tweylS then beep(2); fi;
+	if printlevel>1 then 
+		Printn("check_Isom done: this should be removed");
+	fi;
+	return(true);
+end;
+
+IsNewCham:=function(tweyl, newFP, allnewvectsdual, newbigM) 
+	#tweyl is needed  for check
+	local oldFP, isom, isomres, cc, nopsFPs;
+	nopsFPs:=Length(FingerPrints);
+	for cc in [0..nopsFPs-1] do
+		oldFP:=FingerPrints[nopsFPs-cc];
+		if newFP.navstag=oldFP.navstag then
+			isom:=FindIsom(oldFP.dualbasisinv, oldFP.dualbasisGram, 
+									      allnewvectsdual, newbigM);
+			if isom<>false then 
+				isomres:=[oldFP.chamnumb, isom];
+				if checklevel>-1 then # Here -1
+			 		check_Isom(tweyl, isomres, oldFP.wdata[1]);
+				fi;
+				return(isomres); 
+			fi;
+		fi;
+	od;
+	return(true);
+end;
+
+check_enteringwall:=function(enteringwall, torbits, twalls)
+	#
+	# used in Make_Cham.
+	# This check is executed always (without regarding checklevel).
+	#
+	local beep, fflag, ii, torb;
+	#
+	beep:=function(beepn) Printn("wrong check_enteringwall", beepn); Error(); end;
+	fflag:=false;
+	ii:=0;
+	for torb in torbits do 
+		ii:=ii+1;
+		if  enteringwall in torb then
+			if twalls[ii][1]=false then beep(1); fi;
+			fflag:=true;
+			break;
+		fi;
+	od;
+	if not fflag then beep(2); fi;
+	#Printn("check_enteringwall done:this should be removed");
+	return(true);
+end;
+
+AdjchamsToChamrec:=function(tweylnumb, ttotalchumnumb, currentlevel, tadjchams, torbits)
+	# currentlevel, tadjchams, torbits) #too long
+	#
+	# prepare data for Chamrec
+	#
+	local innerwalls, outerwalls, newweyls, chamnumb, level, ii, tv;
+	innerwalls:=[];
+	outerwalls:=[];
+	newweyls:=[];
+	chamnumb:=ttotalchumnumb+1;
+	level:=currentlevel+1;
+	for ii in [1..Length(tadjchams)] do
+		if tadjchams[ii][1]=_mtc then
+			Add(outerwalls, [tadjchams[ii][2], Length(torbits[ii])]);
+		elif  tadjchams[ii][1]=_newcham then
+			#
+			# tadjchams is the list of 
+			# [_newcham, newweyl, enteringwall]
+			#
+			#outerwalls:= the list of 
+			#   [ (-2)-vect in  non-dual rep, nops(orbit)]
+			#innerwalls:= the list of 
+			#	[primitive vect in non-dual rep, nops(orbit), 
+			#	cham numb of the other side ].
+			# (primitive means  in dual rep.) 
+			#
+			# newweyl will be appended to WeylVectors, where 
+			# WeylVectors is the list of 
+			# [weyl vector, entreing wall, cham numb, level, fromwhichchumnumb] 
+			#
+			tv:=torbits[ii][1]*GramSXdual;
+			Add(innerwalls, [tv, Length(torbits[ii]), tadjchams[ii][2], chamnumb]);
+			Add(newweyls,[tadjchams[ii][2], tadjchams[ii][3], chamnumb, level, tweylnumb]);
+			# level, tweylnumb]); # too long
+			chamnumb:=chamnumb+1;
+		fi;
+	od;
+	return([outerwalls, innerwalls, newweyls]); 
+end;
+
+
+check_initial_interior:=function(torbits)
+	local  torb, beep, tv;
+	beep:=function(beepn) Printn("wrong check_initial_interior", beepn); Error(); end;
+	for torb in torbits  do
+		for tv in torb do #tv is dual
+			if ampleX*tv<=0 then beep(1); fi;
+		od;
+	od;
+	Printn("check_initial_interior done");
+	return(true);
+end;
+
+Read("gapReads/AutK3Monitor.txt");
+
+Make_Cham:=function()
+	local tweylnumb, wdata, tweyl, tnavSdata, enteringwall, st, tminchunk, FP,
+	isnewres, tAutST, torbits, twalls, tadjchams, Chamrec, level, sst, tadjchams2,
+	tautorder;
+	#
+	#
+	sst:=Runtime();
+	tweylnumb:=currentreadingweylnumb;
+	wdata:=GetWeylData();  
+	# get the currentreadingweylnumb-th wyldata.
+	#currentreadingweylnumb is incremented in GetWeylData();
+	tweyl:=wdata[1];
+	#
+	if wdata[3]<>tweylnumb then Printn("wrong wdata[2]"); Error(); fi;
+	level:=wdata[4];
+	#
+	Chamrec:=rec();
+	#
+	Chamrec.chamnumb:=tweylnumb;
+	Chamrec.weyl:=tweyl;
+	#
+	if tweylnumb>1 then 
+		enteringwall:=wdata[2];
+		Chamrec.fromwhichcham:=wdata[5];
+		Chamrec.enteringwall:=enteringwall;
+	fi;
+	#
+	st:=Runtime();
+	tnavSdata:=Make_navSdata(tweyl);
+	if printlevel>0 then 
+		Printn("Make_navSdata done", List(tnavSdata, xx->xx[1]));
+	fi;
+	time1:=time1+Runtime()-st;
+	#
+	st:=Runtime();
+	if BorSeed<>false then
+		tminchunk:=NewMake_MinimalChunk(tnavSdata);
+		if printlevel>0 then 
+			Printn("NewMake_MinimalChunk done");
+		fi;
+	else
+		tminchunk:=Make_MinimalChunk(tnavSdata);
+		if printlevel>0 then 
+			Printn("Make_MinimalChunk done");
+		fi;
+	fi;
+	#minchunkrec:=rec(
+	#	numb:=kk,
+	#	targetM:=targetM,
+	#	bigM:=bigM,
+	#	basisdual:=basisdual,
+	#	bigvs:=bigvs
+	#);
+	time2:=time2+Runtime()-st;
+	#
+	FP:=Make_FingerPrint(tweylnumb, tnavSdata, tminchunk, wdata);
+	if printlevel>0 then Printn("Make_FingerPrint done"); fi;
+	#
+	if tweylnumb=1 then
+		Chamrec.isnew:=true;
+	else
+		#
+		st:=Runtime(); 
+		isnewres:=IsNewCham(tweyl, FP, tminchunk.bigvs, tminchunk.bigM);
+		#tweyl is needed  for check
+		time3:=time3+Runtime()-st;
+		#
+		if isnewres=true then  Chamrec.isnew:=true;
+		else 
+			Chamrec.isnew:=false;
+			Chamrec.isomwith:=isnewres[1];
+			Chamrec.by:=isnewres[2];
+			Chamrec.time:=Runtime()-sst;
+			if printlevel>1 then 
+				Printn(level, tweylnumb, "___isom with", Chamrec.isomwith,  StringTime(Chamrec.time));
+				# Chamrec.isomwith,  StringTime(Chamrec.time));
+			fi;
+		fi;
+	fi;
+	#
+	if printlevel>0 then Printn("isnew done", Chamrec.isnew); fi;
+	#
+	if Chamrec.isnew then 
+		AddCopy(FingerPrints, FP);
+	fi;
+	#
+	if Chamrec.isnew then 
+		#
+		st:=Runtime();
+		tAutST:=Make_AutST(tminchunk, tweyl*Lrec.proj1);
+		time4:=time4+Runtime()-st;
+		if printlevel>0 then Printn("Make_AutST done"); fi;
+		#
+		st:=Runtime();
+		torbits:=Make_Orbits(tnavSdata, tAutST);
+		time5:=time5+Runtime()-st;
+		if printlevel>0 then Printn("Make_Orbits done"); fi;
+		#
+		st:=Runtime();
+		twalls:=Make_Walls(torbits);
+		time6:=time6+Runtime()-st;
+		if printlevel>0 then Printn("Make_Walls done"); fi;
+		#
+		if tweylnumb=1 then
+			check_initial_interior(torbits);
+		else
+			check_enteringwall(enteringwall, torbits, twalls);
+		fi;
+		#
+		st:=Runtime();
+		tadjchams:=Make_AdjChamsdata(tweyl, torbits, twalls);
+		#
+		time7:=time7+Runtime()-st;
+		tadjchams2:=AdjchamsToChamrec(tweylnumb, totalweylnumb, level, tadjchams, torbits);   
+		#
+		if printlevel>0 then Printn("AdjchamsToChamrec done"); fi;
+		#level, tadjchams, torbits); #too long
+		#
+		# AutSTdata:=[[AutS,AutT],[AutSdual, AutTdual]];
+		#
+		Chamrec.level:=level;
+		tautorder:=Length(tAutST[1][1])*Length(tAutST[1][2]);
+		#Remove(tAutST[1][1], 1); # Remove Id
+		Chamrec.AutS:=tAutST[1][1];
+		#Remove(tAutST[1][2], 1);  # Remove Id
+		Chamrec.AutT:=tAutST[1][2];
+		Chamrec.outerwalls:= tadjchams2[1];
+		Chamrec.innerwalls:= tadjchams2[2];
+		Chamrec.nopsvs:=Sum(List(torbits, Length));
+		Chamrec.time:=Runtime()-sst;
+		# 
+		Append(currentsavingweyllist, tadjchams2[3]);
+		totalweylnumb:=totalweylnumb+Length(tadjchams2[3]);
+		if currentsavingweyllist[Length(currentsavingweyllist)][3]<>totalweylnumb then
+			Printn("wrong totalweylnumb"); Error(); 
+		fi;
+		#
+	fi; #if Chamrec.isnew then 
+	#
+	if Chamrec.isnew then 
+ 		Printn(level, tweylnumb, "new", "aut", tautorder, Chamrec.nopsvs, Length(Chamrec.innerwalls), StringTime(Chamrec.time));
+ 	else 			
+ 		Printn(level, tweylnumb, "<-", Chamrec.isomwith,  StringTime(Chamrec.time)); 		
+ 	fi;
+	#
+	AddCopy(tempChamsData, Chamrec);
+	time9:=time9+Runtime()-sst;
+	if not Chamrec.isnew then return(0);
+	else return(Length(Chamrec.innerwalls));
+	fi;
+end;
+
+Borcherds:=function(tchecklevel, tperiodflag, savetab, tsaveweylstab, datadir, AutSTparameters)
+	#
+	# tchecklevel is 1 if simple Borcherds
+	# and 0 if not simple Borcherds.
+	#
+	# tperiodflag is usually true.
+	# the positive-cone preserving is always checked.
+	# periodflag is true, false, or "none"
+    # true:  period check in DoesPreservePeriod
+    # false: liftability check in DoesPreservePeriod
+    # "none": only positive-cone preserving
+	#
+	# savetab is 1 if simple Borcherds
+	# and large if not simple Borcherds.
+	#
+	# tsaveweylstab is 1 if simple Borcherds
+	# and large if not simple Borcherds.
+	#
+	# The defualt is AutSTparameters=[false, infinity, 0, 0]
+	# if some AutST is large, one should use NewMake_MinimalChunk
+	# by putting some number in BorSeed:=AutSTparameters[1],
+	# and putting
+	# minchunk_aa:=1 or so;
+	# minchunk_bb:=2 or so;
+	# check_AutSTnops:=  100 or so;
+	#
+	#
+	local tweylnumb, st, fn;
+	#
+	checklevel:=tchecklevel;
+	periodflag:=tperiodflag;
+	saveweylstab:=tsaveweylstab;
+	Printn("checklevel:=", checklevel, "periodflag:=", periodflag, "saveweylstab:=", saveweylstab, "adjchecknumb:=", adjchecknumb);
+	#
+	BorSeed:=AutSTparameters[1];
+	check_AutSTnops:=AutSTparameters[2];
+	minchunk_aa:=AutSTparameters[3];
+	minchunk_bb:=AutSTparameters[4];
+	#
+	PrepareDataBorcherds(datadir);
+	#
+	currentreadingweylnumb:=1;
+	totalweylnumb:=1;
+	currentreadingweylnumb_in_list:=1;
+	NEXTweylLISTnumb:=2;
+	savedweyllists:=[]; 
+	# the list of the names of the files of savedWeylVectors
+	# that are saved in SaveWeylVectors.
+	savedchamlists:=[]; 
+	# the list of the names of the files of savechams***
+	savedWeylVectors:=[];
+	#
+	while currentreadingweylnumb<=totalweylnumb do
+		Printn("#######", currentreadingweylnumb, totalweylnumb);
+		Make_Cham();
+		#
+		# get the currentreadingweylnumb-th wyldata and make cham.
+		# currentreadingweylnumb is incremented in Make_Cham();
+		#
+		tweylnumb:=currentreadingweylnumb-1; 
+		#currentreadingweylnumb is incremented in Make_Cham()
+		if  tweylnumb mod savetab =0 then
+			st:=Runtime();
+			fn:=Filename(_datasdir, Concatenation("savechams", String(tweylnumb), ".txt"));
+			PrintTo(fn, "tempChamsData:=", tempChamsData, ";\n");
+			Add(savedchamlists, fn); 
+			Savesavedchamlists();
+			tempChamsData:=[];
+			SaveWeylVectors();
+			fn:=Filename(_datasdir, Concatenation("saveFingerPrints", ".txt"));
+			PrintTo(fn, "FingerPrints:=", FingerPrints, ";\n");
+			time8:=time8+Runtime()-st;
+			AutK3Monitor(tweylnumb);
+		fi;
+		#
+		if printlevel>0 then
+			Printn("----------------------------", tweylnumb, "done");
+		fi;
+		tweylnumb:=tweylnumb+1;
+	od;
+	#
+	if tempChamsData<>[] then 
+		fn:=Filename(_datasdir, Concatenation("savechams", String(totalweylnumb), ".txt"));
+		PrintTo(fn, "tempChamsData:=", tempChamsData, ";\n");
+		Add(savedchamlists, fn); 
+		Savesavedchamlists();
+		tempChamsData:=[];
+		saveweylstab:=0;
+		SaveWeylVectors();
+		fn:=Filename(_datasdir, Concatenation("saveFingerPrints", ".txt"));
+		PrintTo(fn, "FingerPrints:=", FingerPrints, ";\n");
+		AutK3Monitor(totalweylnumb);
+		#
+		Printn("----------------------------", totalweylnumb, "done");
+	fi;
+	#
+end;
+
+
+##############
+
+
+

@@ -1,0 +1,432 @@
+#Read("FaceTools.txt");
+#Read("MakeTotalFaceRecs.txt");
+
+#tempfacerec:=rec(
+#  dim:=dimension of the wall,
+#  codim:=codimension of the wall,
+#  subspacebasis:=basis of the <wall>, dim times (dim+codim) matrix,
+#  restrictedlinforms:=set of rresticted linear forms with respect to subspacebasis
+#                      that define the facet of this face
+#                      all non-zero, all primitive
+#  passingwalls:=poss of passing walls
+#);
+
+
+SelectWalls:=function(linforms)
+	#
+	# The input should be normalized as
+	# linforms=Set(linforms, lf->MakePrimitiveIntVect(lf)[2]);
+	# and does not contain a zerovector.
+	#
+	# The list of elements of linforms
+	# that define a wall of the cone defined by x*tfl>=0 for all tfl in linforms.
+	#
+	local beep, dim, tlf, walllfs, lf, wallflag,  st, nlinforms, tnlinforms;
+	#
+	beep:=function(numb)
+		Printn("wrong SelectWalls"); Error();
+	end;
+	#nlinforms:=Set(linforms, lf->MakePrimitiveIntVect(lf)[2]); #the normalized linforms
+	#if nlinforms<>linforms then beep(4433); fi;
+	#if true in List(nlinforms, IsZeroVect) then beep(5633); fi;
+	#MakePrimitiveIntVect does not work if a zero vector is input.
+	#
+	nlinforms:=List(linforms); #Prevent destroying the input linforms.
+	dim:=Length(nlinforms[1]);
+	#
+	if Length(nlinforms)=dim then
+		#
+		# linforms defines the cone over a simplex. #Added 2018 01/21
+		#
+		return(nlinforms);
+	fi;
+	#
+	walllfs:=[];
+	for tlf in linforms do
+		#
+		# Since we use SubtractSet and AddSet to nlinforms,
+		# we cannot write "for tlf in nlinforms do" #Added 2018/07/21
+		#
+		SubtractSet(nlinforms, [tlf]); #Add tfl back below.
+		if Rank(nlinforms)<dim then
+			#
+			# if removed then the rest is not bounded;
+			# hence tlf defines a wall. #Added 2018 01/21
+			#
+			wallflag:=[true];
+		else
+			#IsAWall:=function(vs, w, checklevel) #in LatticeTools
+			wallflag:=IsAWall(nlinforms, tlf, 1); #IsAWall is in LatticeTools.txt
+			if wallflag="too many pivots" then
+				tnlinforms:=List(nlinforms);
+				Shuffle(tnlinforms);
+				wallflag:=IsAWallCounter(tnlinforms, tlf, 1, 10000);
+				if wallflag="too many pivots" then
+					Printn("Too Many Pivots in SelectWalls");
+					Printn("Too Many Pivots in SelectWalls");
+					beep(0);
+				fi;
+			fi;
+		fi;
+		if wallflag[1] then
+			Add(walllfs, tlf);
+			AddSet(nlinforms, tlf);
+			#
+			# No need to put tlf back if not wallflag[1]
+			#
+		fi;
+	od;
+	return(walllfs);
+end;
+
+
+MakeNewFaces:=function(walldefininglfs, facerec)
+  #
+  local newfacerec, newfacerecs, dim, codim, subspacebasis, restrictedlinforms,
+  lfm,newbasisinsubspace, tnewrestrictedlinforms, newrestrictedlinforms,
+  lf, ipassings, newpassingwalls, plf, newsubspacebasis, ispassings, st,
+  passingwalls, ii;
+  #
+  dim:=facerec.dim;
+  codim:=facerec.codim;
+  subspacebasis:=facerec.subspacebasis;
+  restrictedlinforms:=facerec.restrictedlinforms;
+  passingwalls:=facerec.passingwalls;
+  #
+  newfacerecs:=[];
+  for lfm in restrictedlinforms do
+    newbasisinsubspace:=NullspaceIntMat(List(lfm, aa->[aa]));
+    newsubspacebasis:=newbasisinsubspace*subspacebasis;
+    tnewrestrictedlinforms:=restrictedlinforms*TransposedMat(newbasisinsubspace);
+    newrestrictedlinforms:=[];
+    for lf in tnewrestrictedlinforms do
+      if not IsZeroVect(lf) then
+        plf:=MakePrimitiveIntVect(lf)[2];
+        Add(newrestrictedlinforms, plf);
+      fi;
+    od;
+    newrestrictedlinforms:=Set(newrestrictedlinforms);
+    newrestrictedlinforms:=SelectWalls(newrestrictedlinforms);
+    ispassings:=List(walldefininglfs, tlf->IsZeroVect(newsubspacebasis*tlf));
+    newpassingwalls:=Positions(ispassings, true);
+    #
+    newfacerec:=rec(
+      dim:=dim-1,
+      codim:=codim+1,
+      subspacebasis:=newsubspacebasis,
+      restrictedlinforms:=newrestrictedlinforms,
+      passingwalls:=newpassingwalls
+    );
+    Add(newfacerecs, newfacerec);
+  od;
+  return(newfacerecs);
+end;
+
+MakeTotalFaceRecs:=function(walldefininglfs, mindim, tempsavename, montab)
+  #
+  local inidim, iniwalldefininglfs, inifacerec, lastfacerecs,
+  totalfacerecss, newfacerecs, tnewfacerec, tcodim, treeofpassingwallss,
+  oldfacerec, tnewfacerecs, cc, tcc, st,  aa, lf, tfacerec, tlf;
+  #
+  if walldefininglfs<>Set(walldefininglfs, lf->MakePrimitiveIntVect(lf)[2]) then
+    beep(8515718);
+  fi;
+  inidim:=Length(walldefininglfs[1]);
+  iniwalldefininglfs:=SelectWalls(walldefininglfs);
+  inifacerec:=rec(
+    dim:=inidim,
+    codim:=0,
+    subspacebasis:=IdentityMat(inidim),
+    restrictedlinforms:=iniwalldefininglfs,
+    passingwalls:=[]
+  );
+  #
+  lastfacerecs:=[inifacerec];
+  totalfacerecss:=[lastfacerecs];
+  for tcodim in [1..inidim-mindim] do
+    treeofpassingwallss:=rec(nodes:=[], subtrees:=[]);
+    newfacerecs:=[];
+    cc:=0;
+    tcc:=0;
+    st:=Runtime();
+    for oldfacerec in lastfacerecs do
+      cc:=cc+1;
+      tnewfacerecs:=MakeNewFaces(walldefininglfs, oldfacerec);
+      tcc:=tcc+Length(tnewfacerecs);
+      for tnewfacerec in tnewfacerecs do
+        if not IsInTreeAndAddIfNot(treeofpassingwallss, tnewfacerec.passingwalls) then
+          Add(newfacerecs, tnewfacerec);
+        fi;
+      od;
+      #if cc mod montab=0 then
+      #    Printn("__codim", tcodim, "cc", cc, "in", Length(lastfacerecs), Length(newfacerecs), tcc, StringTime(Runtime()-st));
+      #    st:=Runtime();
+      #fi;
+    od;
+    if Length(newfacerecs)<>NopsTree(treeofpassingwallss) then
+      beep(5626572);
+    fi;
+    #Printn("codim", tcodim, "done", Length(newfacerecs), "tcc", tcc);
+    Add(totalfacerecss, newfacerecs);
+    savedataas(totalfacerecss, tempsavename);
+    lastfacerecs:=newfacerecs;
+  od;
+  tfacerec:=rec(
+    walldefininglfs:=walldefininglfs,
+    totalfacerecss:=totalfacerecss
+  );
+  return(tfacerec);
+end;
+
+##################
+
+Make2NewFaces:=function(walldefininglfs, facerec)
+  #
+  local newfacerec, newfacerecs, dim, codim, subspacebasis, restrictedlinforms,
+  lfm,newbasisinsubspace, tnewrestrictedlinforms, newrestrictedlinforms,
+  lf, ipassings, newpassingwalls, plf, newsubspacebasis, ispassings, st,
+  passingwalls, ii;
+  #
+  dim:=facerec.dim;
+  codim:=facerec.codim;
+  subspacebasis:=facerec.subspacebasis;
+  restrictedlinforms:=facerec.restrictedlinforms;
+  passingwalls:=facerec.passingwalls;
+  #
+  newfacerecs:=[];
+  for lfm in restrictedlinforms do
+    newbasisinsubspace:=NullspaceIntMat(List(lfm, aa->[aa]));
+    newsubspacebasis:=newbasisinsubspace*subspacebasis;
+    #
+    # this is another difference between MakeNewFaces and Make2NewFaces
+    #
+    tnewrestrictedlinforms:=restrictedlinforms*TransposedMat(newbasisinsubspace);
+    newrestrictedlinforms:=[];
+    for lf in tnewrestrictedlinforms do
+      if not IsZeroVect(lf) then
+        plf:=MakePrimitiveIntVect(lf)[2];
+        Add(newrestrictedlinforms, plf);
+      fi;
+    od;
+    newrestrictedlinforms:=Set(newrestrictedlinforms);
+    newrestrictedlinforms:=SelectWalls(newrestrictedlinforms);
+    ispassings:=List(walldefininglfs, tlf->IsZeroVect(newsubspacebasis*tlf));
+    newpassingwalls:=Positions(ispassings, true);
+    #
+    # the following two lines are only for checking:
+    # this is the difference between MakeNewFaces and Make2NewFaces
+    #
+    if not IsSubset(newpassingwalls, passingwalls) then beep(6618992); fi;
+    if Rank(List(newpassingwalls, ii->walldefininglfs[ii]))<>codim+1 then beep(6619982); fi;
+    #
+    newfacerec:=rec(
+      dim:=dim-1,
+      codim:=codim+1,
+      subspacebasis:=newsubspacebasis,
+      restrictedlinforms:=newrestrictedlinforms,
+      passingwalls:=newpassingwalls
+    );
+    Add(newfacerecs, newfacerec);
+  od;
+  return(newfacerecs);
+end;
+
+
+Make2TotalFaceRecs:=function(walldefininglfs, mindim, tempsavename, montab)
+  #
+  local inidim, iniwalldefininglfs, inifacerec, lastfacerecs,concatbasis,
+  totalfacerecss, newfacerecs, tnewfacerec, tcodim, treeofpassingwallss,
+  oldfacerec, tnewfacerecs, cc, tcc, st,  aa, lf, tfacerec, tlf, nops, ff;
+  #
+  if walldefininglfs<>Set(walldefininglfs, lf->MakePrimitiveIntVect(lf)[2]) then
+    beep(8515718);
+  fi;
+  inidim:=Length(walldefininglfs[1]);
+  iniwalldefininglfs:=SelectWalls(walldefininglfs);
+  inifacerec:=rec(
+    dim:=inidim,
+    codim:=0,
+    subspacebasis:=IdentityMat(inidim),
+    restrictedlinforms:=iniwalldefininglfs,
+    passingwalls:=[]
+  );
+  #
+  lastfacerecs:=[inifacerec];
+  totalfacerecss:=[lastfacerecs];
+  #
+  for tcodim in [1..inidim-mindim] do
+    treeofpassingwallss:=rec(nodes:=[], subtrees:=[]);
+    nops:=0;
+    newfacerecs:=[];
+    cc:=0;
+    tcc:=0;
+    st:=Runtime();
+    for oldfacerec in lastfacerecs do
+      cc:=cc+1;
+      tnewfacerecs:=Make2NewFaces(walldefininglfs, oldfacerec);
+      tcc:=tcc+Length(tnewfacerecs);
+      for tnewfacerec in tnewfacerecs do
+        ff:=IsInTreeAndAddDataIfNot(treeofpassingwallss, tnewfacerec.passingwalls, nops+1);
+        if  ff=false then
+          Add(newfacerecs, tnewfacerec);
+          nops:=nops+1;
+        else
+          concatbasis:=Concatenation(tnewfacerec.subspacebasis, newfacerecs[ff].subspacebasis);
+          if Rank(concatbasis)<>tnewfacerec.dim then
+            beep(25827571);
+          fi;
+        fi;
+      od;
+      #if cc mod montab=0 then
+      #    Printn("__codim", tcodim, "cc", cc, "in", Length(lastfacerecs), Length(newfacerecs), tcc, StringTime(Runtime()-st));
+      #    st:=Runtime();
+      #fi;
+    od;
+    if Length(newfacerecs)<>NopsTree(treeofpassingwallss) then
+      beep(5626572);
+    fi;
+    #Printn("codim", tcodim, "done", Length(newfacerecs), "tcc", tcc);
+    Add(totalfacerecss, newfacerecs);
+    savedataas(totalfacerecss, tempsavename);
+    lastfacerecs:=newfacerecs;
+  od;
+  tfacerec:=rec(
+    walldefininglfs:=walldefininglfs,
+    totalfacerecss:=totalfacerecss
+  );
+  return(tfacerec);
+end;
+
+Make3TotalFaceRecs:=function(walldefininglfs, mindim)
+  #
+  local inidim, iniwalldefininglfs, inifacerec, lastfacerecs,concatbasis,
+  totalfacerecss, newfacerecs, tnewfacerec, tcodim, treeofpassingwallss,
+  oldfacerec, tnewfacerecs, cc, tcc, st,  aa, lf, tfacerec, tlf, nops, ff;
+  #
+  if walldefininglfs<>Set(walldefininglfs, lf->MakePrimitiveIntVect(lf)[2]) then
+    beep(8515718);
+  fi;
+  inidim:=Length(walldefininglfs[1]);
+  iniwalldefininglfs:=SelectWalls(walldefininglfs);
+  inifacerec:=rec(
+    dim:=inidim,
+    codim:=0,
+    subspacebasis:=IdentityMat(inidim),
+    restrictedlinforms:=iniwalldefininglfs,
+    passingwalls:=[]
+  );
+  #
+  lastfacerecs:=[inifacerec];
+  totalfacerecss:=[lastfacerecs];
+  #
+  for tcodim in [1..inidim-mindim] do
+    treeofpassingwallss:=rec(nodes:=[], subtrees:=[]);
+    nops:=0;
+    newfacerecs:=[];
+    cc:=0;
+    tcc:=0;
+    st:=Runtime();
+    for oldfacerec in lastfacerecs do
+      cc:=cc+1;
+      tnewfacerecs:=Make2NewFaces(walldefininglfs, oldfacerec);
+      tcc:=tcc+Length(tnewfacerecs);
+      for tnewfacerec in tnewfacerecs do
+        ff:=IsInTreeAndAddDataIfNot(treeofpassingwallss, tnewfacerec.passingwalls, nops+1);
+        if  ff=false then
+          Add(newfacerecs, tnewfacerec);
+          nops:=nops+1;
+        else
+          concatbasis:=Concatenation(tnewfacerec.subspacebasis, newfacerecs[ff].subspacebasis);
+          if Rank(concatbasis)<>tnewfacerec.dim then
+            beep(25827571);
+          fi;
+        fi;
+      od;
+      #if cc mod montab=0 then
+      #    Printn("__codim", tcodim, "cc", cc, "in", Length(lastfacerecs), Length(newfacerecs), tcc, StringTime(Runtime()-st));
+      #    st:=Runtime();
+      #fi;
+    od;
+    if Length(newfacerecs)<>NopsTree(treeofpassingwallss) then
+      beep(5626572);
+    fi;
+    #Printn("codim", tcodim, "done", Length(newfacerecs), "tcc", tcc);
+    Add(totalfacerecss, newfacerecs);
+    #savedataas(totalfacerecss, tempsavename);
+    lastfacerecs:=newfacerecs;
+  od;
+  tfacerec:=rec(
+    walldefininglfs:=walldefininglfs,
+    totalfacerecss:=totalfacerecss
+  );
+  return(tfacerec);
+end;
+
+###### 2024/07/03
+
+Make4TotalFaceRecs:=function(walldefininglfs, mindim, tempsavename)
+  #
+  local inidim, iniwalldefininglfs, inifacerec, lastfacerecs,concatbasis,
+  totalfacerecss, newfacerecs, tnewfacerec, tcodim, treeofpassingwallss,
+  oldfacerec, tnewfacerecs, cc, tcc, st,  aa, lf, tfacerec, tlf, nops, ff;
+  #
+  if walldefininglfs<>Set(walldefininglfs, lf->MakePrimitiveIntVect(lf)[2]) then
+    beep(8515718);
+  fi;
+  inidim:=Length(walldefininglfs[1]);
+  iniwalldefininglfs:=SelectWalls(walldefininglfs);
+  inifacerec:=rec(
+    dim:=inidim,
+    codim:=0,
+    subspacebasis:=IdentityMat(inidim),
+    restrictedlinforms:=iniwalldefininglfs,
+    passingwalls:=[]
+  );
+  #
+  lastfacerecs:=[inifacerec];
+  totalfacerecss:=[lastfacerecs];
+  #
+  for tcodim in [1..inidim-mindim] do
+    treeofpassingwallss:=rec(nodes:=[], subtrees:=[]);
+    nops:=0;
+    newfacerecs:=[];
+    cc:=0;
+    tcc:=0;
+    st:=Runtime();
+    for oldfacerec in lastfacerecs do
+      cc:=cc+1;
+      tnewfacerecs:=Make2NewFaces(walldefininglfs, oldfacerec);
+      tcc:=tcc+Length(tnewfacerecs);
+      for tnewfacerec in tnewfacerecs do
+        ff:=IsInTreeAndAddDataIfNot(treeofpassingwallss, tnewfacerec.passingwalls, nops+1);
+        if  ff=false then
+          Add(newfacerecs, tnewfacerec);
+          nops:=nops+1;
+        else
+          concatbasis:=Concatenation(tnewfacerec.subspacebasis, newfacerecs[ff].subspacebasis);
+          if Rank(concatbasis)<>tnewfacerec.dim then
+            beep(25827571);
+          fi;
+        fi;
+      od;
+      #if cc mod montab=0 then
+      #    Printn("__codim", tcodim, "cc", cc, "in", Length(lastfacerecs), Length(newfacerecs), tcc, StringTime(Runtime()-st));
+      #    st:=Runtime();
+      #fi;
+    od;
+    if Length(newfacerecs)<>NopsTree(treeofpassingwallss) then
+      beep(5626572);
+    fi;
+    Printn("codim", tcodim, "done", Length(newfacerecs), "tcc", tcc);
+    Add(totalfacerecss, newfacerecs);
+    savedataas(totalfacerecss, tempsavename);
+    lastfacerecs:=newfacerecs;
+  od;
+  tfacerec:=rec(
+    walldefininglfs:=walldefininglfs,
+    totalfacerecss:=totalfacerecss
+  );
+  return(tfacerec);
+end;
+
+#end

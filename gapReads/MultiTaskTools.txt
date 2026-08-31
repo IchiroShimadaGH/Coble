@@ -1,0 +1,148 @@
+#Read("gapReads/MultiTaskTools.txt");
+
+MakeNewmtRec:=function(objs, names, recname)
+  local multtaskrec;
+  if Length(objs)<>Length(names) then
+    localbeep("MakeNewMultiTaskRec", 1000); Error();
+  fi;
+  multtaskrec:=rec(
+    objs:=objs,
+    names:=names,
+    remainings:=[1..Length(objs)],
+    doings:=[],
+    dones:=[]
+  );
+  savedataas(multtaskrec, recname);
+  return(multtaskrec);
+end;
+
+
+mtRecGetremainings:=function(recname)
+  local multtaskrec, obj, objpos, name;
+  readdata(recname);
+  multtaskrec:=EvalString(recname);
+  if multtaskrec.remainings=[] then return(fail); fi;
+  objpos:=multtaskrec.remainings[1];
+  multtaskrec.remainings:=SetMinus(multtaskrec.remainings, [objpos]);
+  obj:=multtaskrec.objs[objpos];
+  name:=multtaskrec.names[objpos];
+  Add(multtaskrec.doings, objpos);
+  savedataas(multtaskrec, recname);
+  return([obj, name]);
+end;
+
+mtRecAddToDones:=function(recname, obj)
+  local multtaskrec, objpos;
+  readdata(recname);
+  multtaskrec:=EvalString(recname);
+  objpos:=SinglePosition(multtaskrec.objs, obj);
+  if not objpos in multtaskrec.doings then
+    localbeep("mtRecAddToDones", 2000); Error();
+  fi;
+  multtaskrec.doings:=SetMinus(multtaskrec.doings, [objpos]);
+  Add(multtaskrec.dones, objpos);
+  savedataas(multtaskrec, recname);
+end;
+
+#######
+
+
+
+
+MakeNewMTrec:=function(name, objs)
+  local mtrec;
+	mtrec:=rec(dones:=[], doings:=[], notyets:=List(objs));
+  savedataas(mtrec, name);
+  return();
+end;
+
+
+GetANotYet:=function(name)
+  local mtrec, a;
+  readdata(name);
+  mtrec:=EvalString(name);
+  if mtrec.notyets=[] then
+    return(fail);
+  fi;
+  a:=Remove(mtrec.notyets, 1);
+  Add(mtrec.doings, a);
+  savedataas(mtrec, name);
+  return(a);
+end;
+
+PutToDones:=function(name, a)
+  local mtrec, poss;
+  readdata(name);
+  mtrec:=EvalString(name);
+  if a in mtrec.dones then
+    if a in mtrec.doings then
+      Printn("wrong in PutToDones 0"); Error();
+    fi;
+    if a in mtrec.notyets then
+      Printn("wrong in PutToDones 1"); Error();
+    fi;
+    Printn("Already Done");return();
+  elif a in mtrec.notyets then
+    if a in mtrec.doings then
+      Printn("wrong in PutToDones 00"); Error();
+    fi;
+    Printn("Time Wasted");return();
+  fi;
+  poss:=Positions(mtrec.doings, a);
+  if Length(poss)<>1 then
+    Printn("wrong in PutToDones 2", poss); Error();
+  fi;
+  Remove(mtrec.doings, poss[1]);
+  Add(mtrec.dones, a);
+  savedataas(mtrec, name);
+  return();
+end;
+
+MoveBackToDoings:=function(name, a)
+  local mtrec, poss;
+  readdata(name);
+  mtrec:=EvalString(name);
+  poss:=Positions(mtrec.dones, a);
+  if Length(poss)<>1 then
+    Printn("wrong in MoveBackToDoings 1"); Error();
+  fi;
+  Remove(mtrec.dones, poss[1]);
+  if a in mtrec.doings then
+    Printn("wrong in MoveBackToDoings 2"); Error();
+  fi;
+  Add(mtrec.doings, a);
+  savedataas(mtrec, name);
+  return();
+end;
+
+
+
+
+MoveBackToNotYets:=function(name, a)
+  local mtrec, poss, poss2;
+  readdata(name);
+  mtrec:=EvalString(name);
+  poss:=Positions(mtrec.dones, a);
+  if Length(poss)=1 then
+    Remove(mtrec.dones, poss[1]);
+    Add(mtrec.notyets, a,1);
+    savedataas(mtrec, name);
+    return("in dones");
+  elif poss=[] then
+    poss2:=Positions(mtrec.doings, a);
+    if Length(poss2)<>1 then
+      Printn("wrong in MoveBackToNotYets", 2, poss2); Error();
+    fi;
+    Remove(mtrec.doings, poss2[1]);
+    Add(mtrec.notyets, a,1);
+    savedataas(mtrec, name);
+    return("in doings");
+  else
+    Printn("wrong in MoveBackToNotYets", 1, poss); Error();
+  fi;
+  return();
+end;
+
+
+
+#end

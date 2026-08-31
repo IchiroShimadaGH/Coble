@@ -1,0 +1,98 @@
+#Read("K3tools/FindAnInvol.txt");
+
+
+Read("K3tools/MWGroupOnSX.txt");
+Read("K3tools/InvestigateH2.txt");
+
+
+#FindAnInvol:=function(nyg, GramSX, ampleSX, manyamples, maxreldeg, tempsavename, max)
+FindAnInvol:=function(nyg, GramSX, ampleSX, manyamples, tempsavename, mmax)
+  local beep, invspace, invrank, tped, tpedS, GramInv, orthoproj,
+  tpednorm, nygtask, trec, reldeg, inidist, dg, rraa, rattped, geomtginv,
+  ampleSXnyg, doneh2s, IdSX, ampleSXdual, foundflag;
+  #
+  beep:=function(beepnumb)
+    localbeep("FindAnInvol", beepnumb); Error();
+  end;
+  #
+  if Order(nyg)<>2 then beep(6869836); fi;
+  if TMTTmult(nyg, GramSX)<>GramSX then beep(92991); fi;
+	ampleSXdual:=ampleSX*GramSX;
+  ampleSXnyg:=ampleSX*nyg;
+  #
+	IdSX:=IdentityMat(Length(GramSX));
+  invspace:=NullspaceIntMat(nyg-IdSX);
+  invrank:=Length(invspace);
+  if CokerTorsion(invspace)<>[] then beep(5875873); fi;
+  if invspace*nyg<>invspace  then beep(292992);fi;
+  GramInv:=TMTTmult(invspace, GramSX);
+  if SignatureQ(GramInv)<>[invrank, 1, invrank-1] then beep(19921); fi;
+  orthoproj:=OrthogonalProj(GramSX, invspace);
+  rattped:=ampleSX*orthoproj.proj1;
+  dg:=MakePrimitiveRatVect(rattped);
+  rraa:=1/dg[1];
+  if rraa<=0 then beep(69269826982); fi;
+  tped:=rraa*rattped;
+  if not IsIntVect(tped) then beep(89289); fi;
+  if Lgcd(tped)<>1 then beep(919292); fi;
+  tpedS:=tped*invspace;
+  tpednorm:=tped*GramInv*tped;
+  if tpednorm<=0 then beep(929292); fi;
+  if tpednorm<>tpedS*GramSX*tpedS then beep(9299292); fi;
+  #
+  inidist:=ampleSXdual*ampleSXnyg;
+  Printn("inidist", inidist, "invrank", invrank, "tpednorm", tpednorm);
+  #
+  reldeg:=1;
+  trec:=rec(
+    nyg:=nyg,
+    results:=[]
+  );
+  #
+  doneh2s:=[];
+	foundflag:=0;
+  #AffES:=function(SQ, vec, reldeg, norm, isES, task)
+  #
+  nygtask:=function(tv)
+    local tvS, tg, tvStg, h2rec, geomtg, newdist;
+    tvS:=tv*invspace;
+    if ampleSXdual*tvS<>reldeg/rraa then beep(5772872); fi;
+    if tvS*GramSX*tvS<>2 then beep(9292929); fi;
+    tg:=MoveToTheSameChamber(GramSX, tvS, ampleSX);
+    tvStg:=tvS*tg;
+    if tvStg in doneh2s then return(); fi;
+    Add(doneh2s, tvStg);
+    h2rec:=InvestigateH2(GramSX, tvStg, ampleSX, manyamples);
+    Printn("___________________");
+    Printn("geometricauts", Length(h2rec.geometricauts));
+    for geomtg  in h2rec.geometricauts do
+      newdist:=ampleSXdual*(ampleSXnyg*geomtg);
+      if newdist<inidist then
+        Add(trec.results, rec(h2:=tvStg, geomaut:=geomtg, invflag:=false));
+        savedataas(trec, tempsavename);
+        Printn("found", inidist, "->", newdist, Length(trec.results));
+				foundflag:=foundflag+1;
+      fi;
+      if Order(geomtg)<>2 then
+        geomtginv:=InverseMat(geomtg);
+        newdist:=ampleSXdual*(ampleSXnyg*geomtg);
+        if newdist<inidist then
+          Add(trec.results, rec(h2:=tvStg, geomaut:=geomtg, invflag:=true));
+          savedataas(trec, tempsavename);
+          Printn("found inv", inidist, "->", newdist, Length(trec.results));
+					foundflag:=foundflag+1;
+        fi;
+      fi;
+    od;
+  end;
+  #
+
+  #while reldeg<=maxreldeg do
+	while  foundflag<mmax do
+    AffES(GramInv, tped, reldeg, 2, true, nygtask);
+    reldeg:=reldeg+1;
+  od;
+  #
+  return(trec);
+  #
+end;

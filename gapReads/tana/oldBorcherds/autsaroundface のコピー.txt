@@ -1,0 +1,76 @@
+#Read("autsaroundface.txt");
+
+autsaroundface:=function(GramS, ampleX, innerwalls, theextrags,  facebasis)
+	#
+	local beep, n, Idn, facebasisdual, reldegs, ampleXorbss, gs, isnew, findjob, tg,
+	ampleXgs, ampleXgs2, ampleXdual, ampleXtheextrags, ttg, newreldegs;
+	#
+	beep:=function(beepnumb)
+		Printn("wrong autsaoundface", beepnumb); Error();
+	end;
+	#
+	n:=Length(GramS);
+	Idn:=IdentityMat(n);
+	#
+	ampleXdual:=ampleX*GramS;
+	ampleXtheextrags:=List(theextrags, ttg->ampleX*ttg);
+	facebasisdual:=facebasis*GramS;
+	reldegs:=[];
+	ampleXorbss:=[];
+	gs:=[];
+	#
+	isnew:=function(newampleXtg)
+		local newreldeg, reldegpos, apos;
+		newreldeg:=ampleXdual*newampleXtg;
+		reldegpos:=Position(reldegs, newreldeg);
+		if reldegpos=fail then  
+			Add(reldegs, newreldeg);
+			Add(ampleXorbss, [newampleXtg]);
+			return(true);
+		else
+			apos:=Position(ampleXorbss[reldegpos], newampleXtg);
+			if apos=fail then 
+				Add(ampleXorbss[reldegpos], newampleXtg);
+				return(true);
+			else
+				return(false);
+			fi; 
+		fi;
+		beep(55112);
+	end;
+	#
+	findjob:=function(tg)
+		#
+		local innerwallstg, tvpos, tv, newampleXtg, newtg;
+		#
+		innerwallstg:=innerwalls*tg;
+		tvpos:=0;
+		for tv in innerwallstg do
+			tvpos:=tvpos+1;
+			if IsZeroVect(facebasisdual*tv) then
+				newampleXtg:=ampleXtheextrags[tvpos]*tg;
+				if isnew(newampleXtg) then
+					newtg:=theextrags[tvpos]*tg;
+					Add(gs, newtg);
+					findjob(newtg);
+				fi;
+			fi;
+		od;
+	end;
+	#
+	findjob(Idn);
+	#
+	if not IsDuplicateFree(gs) then beep(516614461); fi;
+	ampleXgs:=List(gs, tg->ampleX*tg);
+	if not IsDuplicateFree(ampleXgs) then beep(5166161); fi;
+	ampleXgs2:=Concatenation(ampleXorbss);
+	if not IsDuplicateFree(ampleXgs2) then beep(225166161); fi;
+	if not IsEqualSet(ampleXgs, ampleXgs2) then beep(88112); fi;
+	if not IsEqualSet(Set(ampleXgs2, tv->ampleXdual*tv), reldegs) then
+		beep(51811);
+	fi;
+	newreldegs:=List(gs, tg->ampleXdual*(ampleX*tg));
+	SortParallel(newreldegs, gs);
+	#
+	return([gs, newreldegs]);
+end;

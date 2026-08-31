@@ -1,0 +1,985 @@
+FindAllSubconfigs:=function(targetM, bigM)
+	#
+	# bigM and targetM are symmetric matrices of size N and n, respectively.
+	# bigM defines a symmetric binary function F on the set [N]={1, ..., N}
+	# by [ii, jj]->bigM[ii][jj].
+	# targetM defines a symmetric binary function f on the set [n]={1, ..., n}
+	# by [ii, jj]->targetM[ii][jj].
+	# This program calculates the set of all (not necessarily injective) maps emb of [n] into [N]
+	# that satisfy F(emb[ii], emb[jj])=f(ii, jj).
+	# Each embedding is presented by the list [emb[1], ..., emb[n]].
+	#
+	#
+	local embs, findjob, n, N, partial;
+	#
+	N:=Length(bigM);
+	n:=Length(targetM);
+	embs:=[];
+	#partial:=MakeZeroVect(n);
+	partial:=[1..n]; #holder: cannot use MakeZeroVect(n) because of the order of reading files
+	#
+	findjob:=function(kk)
+		#
+		# When this function is called,
+		# partial has kk correct elements from the top;
+		# that is, F(partial[ii], partial[jj])=f(ii, jj) for ii, jj<=kk.
+		# This function search for kk+1 st element.
+		#
+		local targetv, jj, bigvjj, fflag, cc, ii;
+		#
+		if kk=n then
+			AddCopy(embs, partial);
+		else
+			targetv:=targetM[kk+1];
+			for jj in [1..N] do
+				#
+				bigvjj:=bigM[jj];
+				partial[kk+1]:=jj;
+				fflag:=true;
+				cc:=0;
+				for ii in partial do # only up to cc=kk+1; see below.
+					cc:=cc+1;
+					if bigvjj[ii]<>targetv[cc] then
+						fflag:=false; break;
+					fi;
+					if cc=kk+1 then break; fi;# break from "for ii in partial do"
+				od;
+				if fflag then
+					findjob(kk+1);
+				fi;
+				#
+			od;
+		fi;
+	end;
+	#
+	findjob(0);
+	#
+	return(embs);
+end;
+
+
+FindASubconfig:=function(targetM, bigM)
+	#
+	# bigM and targetM are symmetric matrices of size N and n, respectively.
+	# bigM defines a symmetric binary function F on the set [N]={1, ..., N}
+	# by [ii, jj]->bigM[ii][jj].
+	# targetM defines a symmetric binary function f on the set [n]={1, ..., n}
+	# by [ii, jj]->targetM[ii][jj].
+	# This program calculates a (not necessarily injective) map
+	# emb of [n] into [N]
+	# that satisfy F(emb[ii], emb[jj])=f(ii, jj).
+	# This embedding is presented by the list [emb[1], ..., emb[n]].
+	#
+	#
+	local anemb, findjob, n, N, partial, gfflag;
+	#
+	N:=Length(bigM);
+	n:=Length(targetM);
+	#partial:=MakeZeroVect(n);
+	partial:=[1..n]; #holder: cannot use MakeZeroVect(n) because of the order of reading files
+	gfflag:=false;
+	#
+	findjob:=function(kk)
+		#
+		# When this function is called,
+		# partial has kk correct elements from the top;
+		# that is, F(partial[ii], partial[jj])=f(ii, jj) for ii, jj<=kk.
+		# This function search for kk+1 st element.
+		#
+		local targetv, jj, bigvjj, fflag, cc, ii;
+		#
+		if kk=n then
+			anemb:=StructuralCopy(partial);
+			gfflag:=true;
+		else
+			targetv:=targetM[kk+1];
+			for jj in [1..N] do
+				#
+				bigvjj:=bigM[jj];
+				partial[kk+1]:=jj;
+				fflag:=true;
+				cc:=0;
+				for ii in partial do # only up to cc=kk+1; see below.
+					cc:=cc+1;
+					if bigvjj[ii]<>targetv[cc] then
+						fflag:=false; break;
+					fi;
+					if cc=kk+1 then break; fi; #break from "for ii in partial do"
+				od;
+				if fflag then
+					findjob(kk+1);
+					if gfflag then break; fi; # break from "for jj in [1..N]"
+				fi;
+				#
+			od;
+		fi;
+	end;
+	#
+	findjob(0);
+	#
+	if gfflag=false then return(fail); fi;
+	return(anemb);
+end;
+
+
+#############
+
+FindASubconfigOrderPreserving:=function(targetM, bigM)
+	#
+	# bigM and targetM are symmetric matrices of size N and n, respectively.
+	# bigM defines a symmetric binary function F on the set [N]={1, ..., N}
+	# by [ii, jj]->bigM[ii][jj].
+	# targetM defines a symmetric binary function f on the set [n]={1, ..., n}
+	# by [ii, jj]->targetM[ii][jj].
+	# This program calculates an order-preserving (and hence injective) map emb of [n] into [N]
+	# that satisfy F(emb[ii], emb[jj])=f(ii, jj).
+	# This embedding is presented by the list [emb[1], ..., emb[n]].
+	#
+	#
+	local anemb, findjob, n, N, partial, gfflag;
+	#
+	N:=Length(bigM);
+	n:=Length(targetM);
+	#partial:=Map(x->0, [1..n]);
+	partial:=List([1..n], x->0);
+	gfflag:=false;
+	#
+	findjob:=function(kk, lastentry)
+		#
+		# When this function is called,
+		# partial has kk correct elements from the top;
+		# that is, F(partial[ii], partial[jj])=f(ii, jj) for ii, jj<=kk.
+		# This function search for kk+1 st element.
+		#
+		local targetv, jj, bigvjj, fflag, cc, ii;
+		#
+		if kk=n then
+			anemb:=List(partial); #ShallowCopy is okay
+			gfflag:=true;
+		else
+			targetv:=targetM[kk+1];
+			for jj in [lastentry+1..N] do
+				#
+				bigvjj:=bigM[jj];
+				partial[kk+1]:=jj;
+				fflag:=true;
+				cc:=0;
+				for ii in partial do # only up to cc=kk+1; see below.
+					cc:=cc+1;
+					if bigvjj[ii]<>targetv[cc] then
+						fflag:=false; break;
+					fi;
+					if cc=kk+1 then break; fi; #break from "for ii in partial do"
+				od;
+				if fflag then
+					findjob(kk+1, jj);
+					if gfflag then break; fi; # break from "for jj in [1..N]"
+				fi;
+				#
+			od;
+		fi;
+	end;
+	#
+	findjob(0, 0);
+	#
+	if gfflag=false then return(fail); fi;
+	return(anemb);
+end;
+
+FindAllSubconfigsOrderPreserving:=function(targetM, bigM)
+	#
+	# bigM and targetM are symmetric matrices of size N and n, respectively.
+	# bigM defines a symmetric binary function F on the set [N]={1, ..., N}
+	# by [ii, jj]->bigM[ii][jj].
+	# targetM defines a symmetric binary function f on the set [n]={1, ..., n}
+	# by [ii, jj]->targetM[ii][jj].
+	# This program calculates the set of all order-preserving (hence injective)  maps emb of [n] into [N]
+	# that satisfy F(emb[ii], emb[jj])=f(ii, jj).
+	# Each embedding is presented by the list [emb[1], ..., emb[n]].
+	#
+	#
+	local embs, findjob, n, N, partial;
+	#
+	N:=Length(bigM);
+	n:=Length(targetM);
+	embs:=[];
+	#partial:=MakeZeroVect(n);
+	partial:=[1..n]; #holder: cannot use MakeZeroVect(n) because of the order of reading files
+	#
+	findjob:=function(kk, lastentry)
+		#
+		# When this function is called,
+		# partial has kk correct elements from the top;
+		# that is, F(partial[ii], partial[jj])=f(ii, jj) for ii, jj<=kk.
+		# This function search for kk+1 st element.
+		#
+		local targetv, jj, bigvjj, fflag, cc, ii;
+		#
+		if kk=n then
+			AddCopy(embs, partial);
+		else
+			targetv:=targetM[kk+1];
+			for jj in [lastentry+1..N] do
+				#
+				bigvjj:=bigM[jj];
+				partial[kk+1]:=jj;
+				fflag:=true;
+				cc:=0;
+				for ii in partial do # only up to cc=kk+1; see below.
+					cc:=cc+1;
+					if bigvjj[ii]<>targetv[cc] then
+						fflag:=false; break;
+					fi;
+					if cc=kk+1 then break; fi;# break from "for ii in partial do"
+				od;
+				if fflag then
+					findjob(kk+1, jj);
+				fi;
+				#
+			od;
+		fi;
+	end;
+	#
+	findjob(0, 0);
+	#
+	return(embs);
+end;
+
+
+#########################
+
+
+FindAllSubconfigstask:=function(targetM, bigM, task)
+	#
+	# bigM and targetM are symmetric matrices of size N and n, respectively.
+	# bigM defines a symmetric binary function F on the set [N]={1, ..., N}
+	# by [ii, jj]->bigM[ii][jj].
+	# targetM defines a symmetric binary function f on the set [n]={1, ..., n}
+	# by [ii, jj]->targetM[ii][jj].
+	# This program calculates the set of all (not necessarily injective) maps emb of [n] into [N]
+	# that satisfy F(emb[ii], emb[jj])=f(ii, jj).
+	# Each embedding is presented by the list [emb[1], ..., emb[n]].
+	#
+	#
+	local embs, findjob, n, N, partial;
+	#
+	N:=Length(bigM);
+	n:=Length(targetM);
+	embs:=[];
+	#partial:=MakeZeroVect(n);
+	partial:=[1..n]; #holder: cannot use MakeZeroVect(n) because of the order of reading files
+	#
+	findjob:=function(kk)
+		#
+		# When this function is called,
+		# partial has kk correct elements from the top;
+		# that is, F(partial[ii], partial[jj])=f(ii, jj) for ii, jj<=kk.
+		# This function search for kk+1 st element.
+		#
+		local targetv, jj, bigvjj, fflag, cc, ii, v;
+		#
+		if kk=n then
+			v:=List(partial);
+			task(v);
+		else
+			targetv:=targetM[kk+1];
+			for jj in [1..N] do
+				#
+				bigvjj:=bigM[jj];
+				partial[kk+1]:=jj;
+				fflag:=true;
+				cc:=0;
+				for ii in partial do # only up to cc=kk+1; see below.
+					cc:=cc+1;
+					if bigvjj[ii]<>targetv[cc] then
+						fflag:=false; break;
+					fi;
+					if cc=kk+1 then break; fi;# break from "for ii in partial do"
+				od;
+				if fflag then
+					findjob(kk+1);
+				fi;
+				#
+			od;
+		fi;
+	end;
+	#
+	findjob(0);
+	#
+	#return(embs);
+end;
+
+FindASubconfigtask:=function(targetM, bigM, task)
+	#
+	# task should return true or false;
+	#
+	# bigM and targetM are symmetric matrices of size N and n, respectively.
+	# bigM defines a symmetric binary function F on the set [N]={1, ..., N}
+	# by [ii, jj]->bigM[ii][jj].
+	# targetM defines a symmetric binary function f on the set [n]={1, ..., n}
+	# by [ii, jj]->targetM[ii][jj].
+	# This program calculates a map emb of [n] into [N]
+	# that satisfy F(emb[ii], emb[jj])=f(ii, jj).
+	# This embedding is presented by the list [emb[1], ..., emb[n]].
+	#
+	#
+	local anemb, findjob, n, N, partial, gfflag;
+	#
+	N:=Length(bigM);
+	n:=Length(targetM);
+	#partial:=MakeZeroVect(n);
+	partial:=[1..n]; #holder: cannot use MakeZeroVect(n) because of the order of reading files
+	gfflag:=false;
+	#
+	findjob:=function(kk)
+		#
+		# When this function is called,
+		# partial has kk correct elements from the top;
+		# that is, F(partial[ii], partial[jj])=f(ii, jj) for ii, jj<=kk.
+		# This function search for kk+1 st element.
+		#
+		local targetv, jj, bigvjj, fflag, cc, ii;
+		#
+		if kk=n then
+			gfflag:=task(List(partial));
+			if gfflag then
+				anemb:=List(partial);
+			fi;
+		else
+			targetv:=targetM[kk+1];
+			for jj in [1..N] do
+				#
+				bigvjj:=bigM[jj];
+				partial[kk+1]:=jj;
+				fflag:=true;
+				cc:=0;
+				for ii in partial do # only up to cc=kk+1; see below.
+					cc:=cc+1;
+					if bigvjj[ii]<>targetv[cc] then
+						fflag:=false; break;
+					fi;
+					if cc=kk+1 then break; fi; #break from "for ii in partial do"
+				od;
+				if fflag then
+					findjob(kk+1);
+					if gfflag then break; fi; # break from "for jj in [1..N]"
+				fi;
+				#
+			od;
+		fi;
+	end;
+	#
+	findjob(0);
+	#
+	#Printn("FindASubconfigtask", gfflag);
+	if gfflag=false then return(fail); fi;
+	return(anemb);
+end;
+
+
+#######################
+# Added in 15 Jan 2018
+#######################
+
+FindAllSubconfigsInidataFix:=function(targetM, bigM, inidata)
+	#
+	# bigM and targetM are symmetric matrices of size N and n, respectively.
+	# bigM defines a symmetric binary function F on the set [N]={1, ..., N}
+	# by [ii, jj]->bigM[ii][jj].
+	# targetM defines a symmetric binary function f on the set [n]={1, ..., n}
+	# by [ii, jj]->targetM[ii][jj].
+	# This program calculates the set of all (not necessarily injective) maps emb of [n] into [N]
+	# that satisfy F(emb[ii], emb[jj])=f(ii, jj).
+	# Each embedding is presented by the list [emb[1], ..., emb[n]].
+	#
+	#
+	local embs, findjob, n, N, partial, ii;
+	#
+	N:=Length(bigM);
+	n:=Length(targetM);
+	embs:=[];
+	#partial:=MakeZeroVect(n);
+	partial:=[1..n]; #holder: cannot use MakeZeroVect(n) because of the order of reading files
+	for ii in [1..Length(inidata)] do
+		partial[ii]:=inidata[ii];
+	od;
+	#
+	findjob:=function(kk)
+		#
+		# When this function is called,
+		# partial has kk correct elements from the top;
+		# that is, F(partial[ii], partial[jj])=f(ii, jj) for ii, jj<=kk.
+		# This function search for kk+1 st element.
+		#
+		local targetv, jj, bigvjj, fflag, cc, ii;
+		#
+		if kk=n then
+			AddCopy(embs, partial);
+		else
+			targetv:=targetM[kk+1];
+			for jj in [1..N] do
+				#
+				bigvjj:=bigM[jj];
+				partial[kk+1]:=jj;
+				fflag:=true;
+				cc:=0;
+				for ii in partial do # only up to cc=kk+1; see below.
+					cc:=cc+1;
+					if bigvjj[ii]<>targetv[cc] then
+						fflag:=false; break;
+					fi;
+					if cc=kk+1 then break; fi;# break from "for ii in partial do"
+				od;
+				if fflag then
+					findjob(kk+1);
+				fi;
+				#
+			od;
+		fi;
+	end;
+	#
+	findjob(Length(inidata));
+	#
+	return(embs);
+end;
+
+FindASubconfigInidataFix:=function(targetM, bigM, inidata)
+	#
+	# bigM and targetM are symmetric matrices of size N and n, respectively.
+	# bigM defines a symmetric binary function F on the set [N]={1, ..., N}
+	# by [ii, jj]->bigM[ii][jj].
+	# targetM defines a symmetric binary function f on the set [n]={1, ..., n}
+	# by [ii, jj]->targetM[ii][jj].
+	# This program calculates a map emb of [n] into [N]
+	# that satisfy F(emb[ii], emb[jj])=f(ii, jj).
+	# This embedding is presented by the list [emb[1], ..., emb[n]].
+	#
+	#
+	local anemb, findjob, n, N, partial, gfflag, ii;
+	#
+	N:=Length(bigM);
+	n:=Length(targetM);
+	#partial:=MakeZeroVect(n);
+	partial:=[1..n]; #holder: cannot use MakeZeroVect(n) because of the order of reading files
+	for ii in [1..Length(inidata)] do
+		partial[ii]:=inidata[ii];
+	od;
+	gfflag:=false;
+	#
+	findjob:=function(kk)
+		#
+		# When this function is called,
+		# partial has kk correct elements from the top;
+		# that is, F(partial[ii], partial[jj])=f(ii, jj) for ii, jj<=kk.
+		# This function search for kk+1 st element.
+		#
+		local targetv, jj, bigvjj, fflag, cc, ii;
+		#
+		if kk=n then
+			anemb:=StructuralCopy(partial);
+			gfflag:=true;
+		else
+			targetv:=targetM[kk+1];
+			for jj in [1..N] do
+				#
+				bigvjj:=bigM[jj];
+				partial[kk+1]:=jj;
+				fflag:=true;
+				cc:=0;
+				for ii in partial do # only up to cc=kk+1; see below.
+					cc:=cc+1;
+					if bigvjj[ii]<>targetv[cc] then
+						fflag:=false; break;
+					fi;
+					if cc=kk+1 then break; fi; #break from "for ii in partial do"
+				od;
+				if fflag then
+					findjob(kk+1);
+					if gfflag then break; fi; # break from "for jj in [1..N]"
+				fi;
+				#
+			od;
+		fi;
+	end;
+	#
+	findjob(Length(inidata));
+	#
+	if gfflag=false then return(fail); fi;
+	return(anemb);
+end;
+
+FindAllSubconfigsEstimate:=function(targetM, bigM, bound)
+	#
+	# bigM and targetM are symmetric matrices of size N and n, respectively.
+	# bigM defines a symmetric binary function F on the set [N]={1, ..., N}
+	# by [ii, jj]->bigM[ii][jj].
+	# targetM defines a symmetric binary function f on the set [n]={1, ..., n}
+	# by [ii, jj]->targetM[ii][jj].
+	# This program calculates the set of all (not necessarily injective) maps emb of [n] into [N]
+	# that satisfy F(emb[ii], emb[jj])=f(ii, jj).
+	# Each embedding is presented by the list [emb[1], ..., emb[n]].
+	#
+	# This function estimate the performance of
+	# FindAllSubconfigs for a fixed [targetM, bigM].
+	# We do FindAllSubconfigs
+	# while nodecounter(the number that findjob is called)<=bound
+	# and calculate point=the sum of (n-kk)^2.
+	# If FindAllSubconfigs reaches end before nodecounter=bound,
+	# the point is infinity.
+	#
+	# The larger the point, the better the pair [targetM, bigM] is.
+	#
+	#
+	local embs, findjob, n, N, partial, point, nodecounter, globalflag;
+	#
+	N:=Length(bigM);
+	n:=Length(targetM);
+	embs:=[];
+	#partial:=MakeZeroVect(n);
+	partial:=[1..n]; #holder: cannot use MakeZeroVect(n) because of the order of reading files
+	#
+	point:=0;
+	nodecounter:=0;
+	globalflag:=false;
+	#
+	findjob:=function(kk)
+		#
+		# When this function is called,
+		# partial has kk correct elements from the top;
+		# that is, F(partial[ii], partial[jj])=f(ii, jj) for ii, jj<=kk.
+		# This function search for kk+1 st element.
+		#
+		local targetv, jj, bigvjj, fflag, cc, ii;
+		#
+		nodecounter:=nodecounter+1;
+		if nodecounter>bound then
+			globalflag:=true;
+			return();
+		fi;
+		point:=point+(n-kk)^2;
+		#
+		if kk=n then
+			AddCopy(embs, partial);
+		else
+			targetv:=targetM[kk+1];
+			for jj in [1..N] do
+				#
+				bigvjj:=bigM[jj];
+				partial[kk+1]:=jj;
+				fflag:=true;
+				cc:=0;
+				for ii in partial do # only up to cc=kk+1; see below.
+					cc:=cc+1;
+					if bigvjj[ii]<>targetv[cc] then
+						fflag:=false; break;
+					fi;
+					if cc=kk+1 then break; fi;# break from "for ii in partial do"
+				od;
+				if fflag then
+					findjob(kk+1);
+					if globalflag then
+						break; #from for jj in [1..N] do
+					fi;
+				fi;
+				#
+			od;
+		fi;
+	end;
+	#
+	findjob(0);
+	#
+	if not globalflag then
+		point:=infinity;
+	fi;
+	#
+	return(point);
+end;
+
+
+NewFindAllSubconfigsEstimate:=function(targetM, bigM, bound)
+	#
+	# bigM and targetM are symmetric matrices of size N and n, respectively.
+	# bigM defines a symmetric binary function F on the set [N]={1, ..., N}
+	# by [ii, jj]->bigM[ii][jj].
+	# targetM defines a symmetric binary function f on the set [n]={1, ..., n}
+	# by [ii, jj]->targetM[ii][jj].
+	# This program calculates the set of all (not necessarily injective) maps emb of [n] into [N]
+	# that satisfy F(emb[ii], emb[jj])=f(ii, jj).
+	# Each embedding is presented by the list [emb[1], ..., emb[n]].
+	#
+	# This function estimate the performance of
+	# FindAllSubconfigs for a fixed [targetM, bigM].
+	# We do FindAllSubconfigs
+	# while nodecounter(the number that findjob is called)<=bound
+	# and calculate points=[the list the numbers that findjob hits each level].
+	# If FindAllSubconfigs reaches end before nodecounter=bound,
+	# the points is [infinity, ****].
+	#
+	# The larger the points in the lex order, the better the pair [targetM, bigM] is.
+	#
+	#
+	local embs, findjob, n, N, partial, points, nodecounter, globalflag, ii;
+	#
+	N:=Length(bigM);
+	n:=Length(targetM);
+	embs:=[];
+	#partial:=MakeZeroVect(n);
+	partial:=List([1..n], ii->0); #holder:
+	points:=List([1..n+1], ii->0);
+	#
+	#cannot use MakeZeroVect(n) because of the order of reading files
+	nodecounter:=0;
+	globalflag:=false;
+	#
+	findjob:=function(kk)
+		#
+		# When this function is called,
+		# partial has kk correct elements from the top;
+		# that is, F(partial[ii], partial[jj])=f(ii, jj) for ii, jj<=kk.
+		# This function search for kk+1 st element.
+		#
+		local targetv, jj, bigvjj, fflag, cc, ii;
+		#
+		nodecounter:=nodecounter+1;
+		if nodecounter>bound then
+			globalflag:=true;
+			return();
+		fi;
+		points[kk+1]:=points[kk+1]+1;
+		#
+		if kk=n then
+			AddCopy(embs, partial);
+		else
+			targetv:=targetM[kk+1];
+			for jj in [1..N] do
+				#
+				bigvjj:=bigM[jj];
+				partial[kk+1]:=jj;
+				fflag:=true;
+				cc:=0;
+				for ii in partial do # only up to cc=kk+1; see below.
+					cc:=cc+1;
+					if bigvjj[ii]<>targetv[cc] then
+						fflag:=false; break;
+					fi;
+					if cc=kk+1 then break; fi;# break from "for ii in partial do"
+				od;
+				if fflag then
+					findjob(kk+1);
+					if globalflag then
+						break; #from for jj in [1..N] do
+					fi;
+				fi;
+				#
+			od;
+		fi;
+	end;
+	#
+	findjob(0);
+	#
+	if not globalflag then
+		points[1]:=infinity;
+	fi;
+	#
+	return(points);
+end;
+
+
+#######################
+# 2019 March 04
+#######################
+
+
+
+IsIsomConfig:=function(config1, config2)
+	#
+	#
+	#
+	local anisom, findjob, n, N, partial, gfflag, ii;
+	#
+	N:=Length(config2);
+	n:=Length(config1);
+	if N<>n then return(false); fi;
+	if toMultiSet(List(config1, toMultiSet))<>toMultiSet(List(config2, toMultiSet)) then
+		 return(false);
+	fi;
+	#
+	#partial:=MakeZeroVect(n);
+	partial:=List([1..n], ii->0); #holder: cannot use MakeZeroVect(n) because of the order of reading files
+	gfflag:=false;
+	#
+	findjob:=function(kk)
+		#
+		# When this function is called,
+		# partial has kk correct elements from the top;
+		# that is, F(partial[ii], partial[jj])=f(ii, jj) for ii, jj<=kk.
+		# This function search for kk+1 st element.
+		#
+		local targetv,  bigvjj, fflag, cc, ii, jj, tflag, iii, jjj, tisom;
+		#
+		if kk=n then
+			tisom:=List(partial);
+			Sort(tisom);
+			if tisom<>[1..n] then return(); fi;
+			tflag:=true;
+			for ii in [1..n] do
+				iii:=partial[ii];
+				for jj in [1..n] do
+					jjj:=partial[jj];
+					if config1[ii][jj]<>config2[iii][jjj] then
+						return();
+					fi;
+				od;
+			od;
+			if tflag then
+				anisom:=List(partial);
+				gfflag:=true;
+			fi;
+		else
+			targetv:=config1[kk+1];
+			for jj in [1..N] do
+				#
+				bigvjj:=config2[jj];
+				partial[kk+1]:=jj;
+				fflag:=true;
+				cc:=0;
+				for ii in partial do # only up to cc=kk+1; see below.
+					cc:=cc+1;
+					if bigvjj[ii]<>targetv[cc] then
+						fflag:=false; break;
+					fi;
+					if cc=kk+1 then break; fi; #break from "for ii in partial do"
+				od;
+				if fflag then
+					findjob(kk+1);
+					if gfflag then break; fi; # break from "for jj in [1..N]"
+				fi;
+				#
+			od;
+		fi;
+	end;
+	#
+	findjob(0);
+	#
+	if gfflag=false then return(false); fi;
+	return(anisom);
+end;
+
+
+#######################
+# Added on June 05 2020
+#######################
+
+
+FindAllSubconfigsWithFilter:=function(targetM, bigM, filter)
+	#
+	# bigM and targetM are symmetric matrices of size N and n, respectively.
+	# bigM defines a symmetric binary function F on the set [N]={1, ..., N}
+	# by [ii, jj]->bigM[ii][jj].
+	# targetM defines a symmetric binary function f on the set [n]={1, ..., n}
+	# by [ii, jj]->targetM[ii][jj].
+	# This program calculates the set of all (not necessarily injective) maps emb of [n] into [N]
+	# that satisfy F(emb[ii], emb[jj])=f(ii, jj).
+	# Each embedding is presented by the list [emb[1], ..., emb[n]].
+	#
+	#
+	local embs, findjob, n, N, partial, ii;
+	#
+	N:=Length(bigM);
+	n:=Length(targetM);
+	embs:=[];
+	#partial:=MakeZeroVect(n);
+	partial:=[1..n]; #holder: cannot use MakeZeroVect(n) because of the order of reading files
+	#
+	findjob:=function(kk)
+		#
+		# When this function is called,
+		# partial has kk correct elements from the top;
+		# that is, F(partial[ii], partial[jj])=f(ii, jj) for ii, jj<=kk.
+		# This function search for kk+1 st element.
+		#
+		local targetv, jj, bigvjj, fflag, cc, ii;
+		#
+		if kk=n then
+			AddCopy(embs, partial);
+		else
+			targetv:=targetM[kk+1];
+			for jj in [1..N] do
+				#
+				bigvjj:=bigM[jj];
+				partial[kk+1]:=jj;
+				fflag:=true;
+				cc:=0;
+				for ii in partial do # only up to cc=kk+1; see below.
+					cc:=cc+1;
+					if bigvjj[ii]<>targetv[cc] then
+						fflag:=false; break;
+					fi;
+					if cc=kk+1 then break; fi;# break from "for ii in partial do"
+				od;
+				if fflag then
+					if filter(partial, kk+1) then
+						findjob(kk+1);
+					fi;
+				fi;
+				#
+			od;
+		fi;
+	end;
+	#
+	findjob(0);
+	#
+	return(embs);
+end;
+
+
+
+##########
+# 2021/11/09
+##########
+
+
+
+FindAllSubconfigsInjective:=function(targetM, bigM)
+	#
+	# bigM and targetM are symmetric matrices of size N and n, respectively.
+	# bigM defines a symmetric binary function F on the set [N]={1, ..., N}
+	# by [ii, jj]->bigM[ii][jj].
+	# targetM defines a symmetric binary function f on the set [n]={1, ..., n}
+	# by [ii, jj]->targetM[ii][jj].
+	# This program calculates the set of all INJECTIVE maps emb of [n] into [N]
+	# that satisfy F(emb[ii], emb[jj])=f(ii, jj).
+	# Each embedding is presented by the list [emb[1], ..., emb[n]].
+	#
+	#
+	local embs, findjob, n, N;
+	#
+	N:=Length(bigM);
+	n:=Length(targetM);
+	embs:=[];
+	#partial:=MakeZeroVect(n);
+	#partial:=[1..n]; #holder: cannot use MakeZeroVect(n) because of the order of reading files
+	#
+	findjob:=function(partial, kk)
+		#
+		# When this function is called,
+		# partial has kk correct elements from the top;
+		# that is, F(partial[ii], partial[jj])=f(ii, jj) for ii, jj<=kk.
+		# This function search for kk+1 st element.
+		#
+		local newpartial, targetv, jj, bigvjj, fflag, cc, ii;
+		#
+		if kk=n then
+			AddCopy(embs, partial);
+		else
+			targetv:=targetM[kk+1];
+      newpartial:=List(partial);
+			for jj in [1..N] do
+        if jj in partial then continue; fi;
+				bigvjj:=bigM[jj];
+				Add(newpartial, jj);
+				fflag:=true;
+				cc:=0;
+				for ii in newpartial do # only up to cc=kk+1; see below.
+					cc:=cc+1;
+					if bigvjj[ii]<>targetv[cc] then
+						fflag:=false; break;
+					fi;
+					#if cc=kk+1 then break; fi;# break from "for ii in partial do"
+				od;
+				if fflag then
+					findjob(newpartial, kk+1);
+				fi;
+        if Remove(newpartial)<>jj then beep(115871587); fi;
+				#
+			od;
+		fi;
+	end;
+	#
+	findjob([], 0);
+	#
+	return(embs);
+end;
+
+
+FindASubconfigInjective:=function(targetM, bigM)
+	#
+	# bigM and targetM are symmetric matrices of size N and n, respectively.
+	# bigM defines a symmetric binary function F on the set [N]={1, ..., N}
+	# by [ii, jj]->bigM[ii][jj].
+	# targetM defines a symmetric binary function f on the set [n]={1, ..., n}
+	# by [ii, jj]->targetM[ii][jj].
+	# This program calculates an INJECTIVE map emb of [n] into [N]
+	# that satisfy F(emb[ii], emb[jj])=f(ii, jj).
+	# This embedding is presented by the list [emb[1], ..., emb[n]].
+	#
+	#
+	local anemb, findjob, n, N,  gfflag;
+	#
+	N:=Length(bigM);
+	n:=Length(targetM);
+	#partial:=MakeZeroVect(n);
+	#partial:=[1..n]; #holder: cannot use MakeZeroVect(n) because of the order of reading files
+	gfflag:=false;
+	#
+	findjob:=function(partial, kk)
+		#
+		# When this function is called,
+		# partial has kk correct elements from the top;
+		# that is, F(partial[ii], partial[jj])=f(ii, jj) for ii, jj<=kk.
+		# This function search for kk+1 st element.
+		#
+		local targetv, jj, bigvjj, fflag, cc, ii, newpartial;
+		#
+		if kk=n then
+			anemb:=StructuralCopy(partial);
+			gfflag:=true;
+		else
+			targetv:=targetM[kk+1];
+      newpartial:=List(partial);
+			for jj in [1..N] do
+        if jj in partial then continue; fi; #Add for injective 2021 Oct 21
+				bigvjj:=bigM[jj];
+				Add(newpartial, jj);
+				fflag:=true;
+				cc:=0;
+				for ii in newpartial do # only up to cc=kk+1; see below.
+					cc:=cc+1;
+					if bigvjj[ii]<>targetv[cc] then
+						fflag:=false; break;
+					fi;
+					#if cc=kk+1 then break; fi; #break from "for ii in partial do"
+				od;
+				if fflag then
+					findjob(newpartial, kk+1);
+					if gfflag then break; fi; # break from "for jj in [1..N]"
+				fi;
+        if Remove(newpartial)<>jj then beep(587331587); fi;
+				#
+			od;
+		fi;
+	end;
+	#
+	findjob([], 0);
+	#
+	if gfflag=false then return(fail); fi;
+	return(anemb);
+end;
+
+
+
+PullBackByEmb:=function(emb, symM)
+  local leng, newM, ii, jj, aa, bb;
+  leng:=Length(emb);
+  newM:=NullMat(leng, leng);
+  for ii in [1..leng] do
+    aa:=emb[ii];
+    newM[ii][ii]:=symM[aa][aa];
+    for jj in [ii+1..leng] do
+      bb:=emb[jj];
+      newM[ii][jj]:=symM[aa][bb];
+      newM[jj][ii]:=symM[bb][aa];
+    od;
+  od;
+  return(newM);
+end;

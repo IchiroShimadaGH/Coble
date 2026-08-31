@@ -1,0 +1,517 @@
+#Read("./gapReads/SingK3tools.txt);
+
+Read("./gapReads/datas/saveGramU3E8.txt");
+Read("./gapReads/datas/saveweylU3E8.txt");
+
+AnEmbTtoE8:=function(GramT)
+	#
+	local GramE8, aa, cc, bb, svs, ii, v1, v1dual, jj, v2, emb, leng,v1v2;
+	#
+	GramE8:=ADEHrec.E8.Gram;
+	aa:=GramT[1][1];
+	cc:=GramT[2][2];
+	bb:=GramT[1][2];
+	svs:=ShortestVectors(GramE8, Maximum(aa, cc));
+	leng:=Length(svs.norms);
+	for ii in [1..leng] do
+		if svs.norms[ii]=aa then
+			v1:=svs.vectors[ii];
+			v1dual:=v1*GramE8;
+			for jj in [1..leng] do
+				if svs.norms[jj]=cc then
+					v2:=svs.vectors[jj];
+					v1v2:=v1dual*v2;
+					if v1v2=bb then
+						emb:=[v1, v2];
+						if CokerTorsion(emb)=[] then
+							return(emb);
+						fi;
+					elif v1v2=-bb then
+						emb:=[v1, -v2];
+						if CokerTorsion(emb)=[] then
+							return(emb);
+						fi;
+					fi;
+				fi;
+			od;
+		fi;
+	od;
+	return(fail);
+end;
+
+NSsingK3:=function(GramT)
+	#
+	local nsrec, beep, GrammE8, GramU, GramS, discS, discT, mdiscT,
+	discisomST, discembS, discembT, olrec, GramH, discisomTS,
+	iddiscS, iddiscT, aa, bb, cc, D, aroot, omega, OGT, OGTperiod, 
+	tg, omegatg, OqT, ImOqOGT,tgdisc, OqTperiod, Kerphi,
+	OqSperiod, OqS, tOqT, tgdS, tgdT;
+	#
+	beep:=function(numb)
+		Printn("wrong NSsingK3", numb); Error();
+	end;
+	#
+	GrammE8:=(-1)*ADEHrec.E8.Gram;
+	GramU:=[[0,1],[1,0]];
+	GramS:=DiagonalMats([GramU, GrammE8, GrammE8, (-1)*GramT]);
+	discS:=DiscriminantForm(GramS);
+	discT:=DiscriminantForm(GramT);
+	mdiscT:=[discT.discg, CopyNormalDiscf((-1)*discT.discf)];
+	discisomST:=GeneralizedAnIsomFQF([discS.discg, discS.discf], mdiscT);
+	discisomTS:=GeneralizedInverseIsomFAG(discS.discg, discT.discg, discisomST);
+	if discisomST=fail then
+		beep(4674762);
+	fi;
+	if CopyNormalDiscf(TMTTmult(discisomST, mdiscT[2]))<>discS.discf then
+		beep(3661222);
+	fi;
+	if CopyNormalDiscf(TMTTmult(discisomTS, discS.discf))<>mdiscT[2] then
+		beep(38871222);
+	fi;
+	iddiscS:=IdentityMat(Length(discS.discg));
+	iddiscT:=IdentityMat(Length(discT.discg));
+	if CopyMatmodDiscg(discisomST*discisomTS, discS.discg)<>iddiscS then 
+		beep(475474);
+	fi;
+	if CopyMatmodDiscg(discisomTS*discisomST, discT.discg)<>iddiscT then 
+		beep(47547114);
+	fi;
+	#MakeLatOverDirectSum:=function(GramS1, discS1, GramS2, discS2, discemb1, discemb2)
+	discembS:=IdentityMat(Length(discS.discg));
+	discembT:=discisomST;
+	olrec:=MakeLatOverDirectSum(GramS, discS, GramT, discT, discembS, discembT);
+	checkMakeLatOverDirectSum(olrec);
+	GramH:=olrec.GramL;
+	if DeterminantIntMat(GramH)<>-1 then beep(47477766); fi;
+	if SignatureQ(GramH)<>[22,3, 19] then beep(6777771); fi;
+	#
+	aa:=GramT[1][1];
+	bb:=GramT[1][2];
+	cc:=GramT[2][2];
+	D:=bb^2-aa*cc;
+	if D>=0 then beep(3653655); fi;
+	aroot:=(-bb+Sqrt(D))/aa;
+	omega:=[aroot, 1];
+	if omega*GramT*omega<>0 then beep(476476); fi;
+	#
+	OGT:=AutPosLat(GramT);  
+	OGTperiod:=[];
+	for tg in OGT do
+		omegatg:=omega*tg;
+		if omegatg[2]<>0 and omegatg[1]/omegatg[2]=aroot then
+			Add(OGTperiod, tg);
+		fi;
+	od;
+	#
+	OqT:=GeneralizedAutFQF([discT.discg, discT.discf]);
+	ImOqOGT:=[];
+	for tg in OGT do
+		tgdisc:=OLtoOqL(tg, discT); 
+		Add(ImOqOGT, tgdisc);
+	od;
+	#
+	OqTperiod:=[];
+	Kerphi:=[];
+	for tg in OGTperiod do
+		tgdisc:=OLtoOqL(tg, discT); 
+		Add(OqTperiod, tgdisc);
+		if tgdisc=iddiscT then
+			Add(Kerphi, tg);
+		fi;
+	od;
+	Printn("Kernel phi", Length(Kerphi));
+	#
+	OqS:=GeneralizedAutFQF([discS.discg, discS.discf]);
+	OqSperiod:=[];
+	tOqT:=[];
+	for tgdS in OqS do
+		tgdT:=CopyMatmodDiscg(discisomTS*tgdS*discisomST, discT.discg);
+		Add(tOqT, tgdT);
+		if tgdT in OqTperiod then
+			Add(OqSperiod, tgdS);
+		fi;
+	od;
+	if not IsEqualSet(tOqT, OqT) then beep(3161612); fi;
+	#
+	nsrec:=rec(
+		GramS:=GramS,
+		GramT:=GramT,
+		discS:=discS,
+		discT:=discT,
+		discisomST:=discisomST,
+		discisomTS:=discisomTS,
+		GramH:=GramH,
+		embSH:=olrec.emb1,
+		embTH:=olrec.emb2,
+		OGT:=OGT,
+		OqT:=OqT, 
+		period:=omega, 
+		OqTpriod:=OqTperiod,
+		ImOqOGT:=ImOqOGT, 
+		Kerphi:=Kerphi,
+		OqS:=OqS,
+		OqSperiod:=OqSperiod
+	);
+	return(nsrec);
+end;
+
+tempCheckUnimodularOverLat:=function(Gram1,  Gram2,   OLrec)
+	#
+	#
+	local beep, n1, n2, tn, Gram1inv, Gram2inv, Binv, B, G,temb, tproj, ttproj, n;
+	#
+	beep:=function(beepn) Printn("wrong", beepn, "checkUnimodularOverLat");  Error(); end;
+	#
+	n1:=Length(Gram1);
+	n2:=Length(Gram2);
+	tn:=n1+n2;
+	Gram1inv:=Inverse(Gram1);
+	Gram2inv:=Inverse(Gram2);
+	Binv:=DiagonalMats([Gram1inv, Gram2inv]);
+	B:=DiagonalMats([Gram1, Gram2]);
+	#
+	G:=OLrec.Gram;
+	#Ginv:=Inverse(G);
+	#
+	if not IsEvenLattice(G) then beep(1); fi;
+	if not AbsInt(DeterminantIntMat(G))=1 then beep(2); fi;
+	#
+	temb:=OLrec.emb1;
+	tproj:=OLrec.proj1;
+	ttproj:=OLrec.proj2;
+	n:=n1;
+	#
+	if not IsPrimitiveMat(temb) then beep(10); fi;
+	#
+	if RowdimMat(temb)<>n then beep (100); fi;
+	if ColdimMat(temb)<>tn then beep (101); fi;
+	if RowdimMat(tproj)<>tn then beep (102); fi;
+	if ColdimMat(tproj)<>n then beep (103); fi;
+	#
+	if not temb*tproj=IdentityMat(n) then beep(11); fi;
+	if not TMTTmult(temb, G)=Gram1 then beep(12); fi;
+	if not IsZeroMat(temb*ttproj) then beep(13); fi;
+	#
+	#
+	temb:=OLrec.emb2;
+	tproj:=OLrec.proj2;
+	ttproj:=OLrec.proj1;
+	n:=n2;
+	#
+	if not IsPrimitiveMat(temb) then beep(20); fi;
+	#
+	if RowdimMat(temb)<>n then beep (200); fi;
+	if ColdimMat(temb)<>tn then beep (201); fi;
+	if RowdimMat(tproj)<>tn then beep (202); fi;
+	if ColdimMat(tproj)<>n then beep (203); fi;
+	#
+	if not temb*tproj=IdentityMat(n) then beep(21); fi;
+	if not TMTTmult(temb, G)= Gram2 then beep(22); fi;
+	if not IsZeroMat(temb*ttproj) then beep(23); fi;
+	#
+	temb:=OLrec.emb1_dual;
+	tproj:=OLrec.proj1_dual;
+	ttproj:=OLrec.proj2_dual;
+	n:=n1;
+	#
+	if not IsPrimitiveMat(tproj) then beep(30); fi;
+	#
+	if RowdimMat(temb)<>n then beep (300); fi;
+	if ColdimMat(temb)<>tn then beep (301); fi;
+	if RowdimMat(tproj)<>tn then beep (302); fi;
+	if ColdimMat(tproj)<>n then beep (303); fi;
+	#
+	if not temb*tproj=IdentityMat(n) then beep(31); fi;
+	if not TMTTmult(temb, G)= Gram1inv then beep(32); fi;
+	if not IsZeroMat(temb*ttproj) then beep(33); fi;
+	#
+	temb:=OLrec.emb2_dual;
+	tproj:=OLrec.proj2_dual;
+	ttproj:=OLrec.proj1_dual;
+	n:=n2;
+	#
+	if not IsPrimitiveMat(tproj) then beep(40); fi;
+	#
+	if RowdimMat(temb)<>n then beep (400); fi;
+	if ColdimMat(temb)<>tn then beep (401); fi;
+	if RowdimMat(tproj)<>tn then beep (402); fi;
+	if ColdimMat(tproj)<>n then beep (403); fi;
+	#
+	if not temb*tproj=IdentityMat(n) then beep(41); fi;
+	if not TMTTmult(temb, G)= Gram2inv then beep(42); fi;
+	if not IsZeroMat(temb*ttproj) then beep(43); fi;
+	#
+	#
+	return(true);
+end;
+
+
+
+MakeLrecsingK3Ver1:=function(nsrec, tembRE8, seed)
+	#
+	#
+	# tembRE8 is an embedding of R to E8.
+	# Default is false.
+	#
+	#
+	local beep, GramT, GramS, GramR, GramL, discSrec, GrammE8, GramE8,
+	GramU, tweyl, twS, twdual, embRE8, Rorthorec,
+	isomTtT, embTE8, Id18, Id26, embSL, embRL, projLS, projLR, weylample,
+	vvS, vvL, refl, sepssorter, ampleflag, roots, embtTE8, posvect, flag, tvv,
+	ampleX, ampleXinL, seps, counter, refls, rt, discisomRS, discisomSR,
+	ImOqROqSperiod, tgd, tM, iddiscR, iddiscS, Borrec, OLrec,
+	ImOqOGR, OGR, OqR, discRrec, GramRdual, tgbar, tg, mdiscRdiscf, dd,
+	OqSliftable, GramSdual, tv;
+	#
+	Reset(GlobalMersenneTwister,seed);
+	#
+	GramT:=nsrec.GramT;
+	GramS:=nsrec.GramS;
+	GramSdual:=InverseMat(GramS);
+	discSrec:=nsrec.discS;
+	#
+	beep:=function(numb)
+		Printn("wrong MakeLrecsingK3Ver1", numb); Error();
+	end;
+	#
+	GrammE8:=(-1)*ADEHrec.E8.Gram;
+	GramU:=[[0,1],[1,0]];
+	GramL:=DiagonalMats([GramU, GrammE8, GrammE8, GrammE8]);
+	if DeterminantIntMat(GramL)<>-1 then beep(3883766); fi;
+	if SignatureQ(GramL)<>[26,1, 25] then beep(674848771); fi;
+	#
+	tv:=[-68, -46, -91, -135, -110, -84, -57, -29];
+	tweyl:=Concatenation([[31, 30], tv, tv, tv]);
+	twdual:=tweyl*GramL;
+	if not IsWeylVect(GramL, tweyl) then #in BorcherdsTools
+		beep(34747471);
+	fi;
+	#
+	GramE8:=ADEHrec.E8.Gram;
+	if tembRE8<>false then
+		embRE8:=List(tembRE8);
+		Rorthorec:=OrthogonalComp(embRE8, GramE8);
+		embtTE8:=Rorthorec.basis;
+		isomTtT:=IsIsomPosLat(GramT, Rorthorec.Gram);
+		if isomTtT=false then beep(47771); fi;
+		embTE8:=isomTtT*embtTE8;
+	else
+		embTE8:=AnEmbTtoE8(GramT, GramE8);
+		embRE8:=OrthogonalComp(embTE8, GramE8).basis;
+	fi;	
+	#
+	#
+	if TMTTmult(embTE8, GramE8)<>GramT then
+		beep(435365);
+	fi;
+	GramR:=TMTTmult(embRE8, GrammE8);
+	#
+	Id18:=IdentityMat(18);
+	embSL:=DiagonalMats([Id18, embTE8]);
+	embRL:=ConcatMats(NullMat(6, 18), embRE8);
+	if TMTTmult(embSL, GramL)<>GramS then beep(311991); fi;
+	if TMTTmult(embRL, GramL)<>GramR then beep(369191); fi;
+	if CokerTorsion(embSL)<>[] then beep(336565); fi;
+	if CokerTorsion(embRL)<>[] then beep(221165); fi;
+	#trec:=rec(
+	#	Gram:=List(GramL),
+	#	Gram1:=Gram1,
+	#	Gram2:=Gram2,
+	#	emb1:=List(emb),
+	#	emb2:=emb2,
+	#	proj1:=proj1,
+	#	proj2:=proj2,
+	#	emb1_dual:=emb1_dual,
+	#	emb2_dual:=emb2_dual,
+	#	proj1_dual:=proj1_dual,
+	#	proj2_dual:=proj2_dual
+	#);
+	#
+	projLS:=OrthogonalProj(GramL, embSL).proj1;
+	projLR:=OrthogonalProj(GramL, embRL).proj1;
+	#
+	weylample:=WeylAmple(GramL, tweyl);
+	twS:=tweyl*projLS;
+	if twS*GramS*twS<=0 then beep(177280000); fi;
+	vvS:=LcmDenom(twS)*twS;
+	MakePrimitiveVect(vvS);
+	vvL:=vvS*embSL;
+	#
+	refl:=function(x, r)
+		return(x+(x*GramL*r)*r);# corrected on 2018 Sep 06: GramS->GramL
+	end;
+	#
+	sepssorter:=function(rt1, rt2)
+		local t1, t2, r1, r2;
+		t1:=rt1[2]; t2:=rt2[2];
+		if t1>t2 then return(true);
+		elif t1<t2 then return(false);
+		else
+			r1:=rt1[1]; r2:=rt2[1];
+			if r1>r2 then return(true);
+			elif r1<r2 then return(false);
+			else beep(351136);
+			fi;
+		fi;
+		beep(41747141);
+	end;
+	#
+	ampleflag:=false;
+	posvect:=Concatenation([1,1], MakeZeroVect(24));
+	Id26:=IdentityMat(26);
+	while not ampleflag do
+		flag:=false;
+		tvv:=vvS;
+		while not flag do
+			if tvv*GramS*tvv<=0 then 
+				tvv:=tvv+posvect;
+			else
+				flag:=true;
+			fi;
+		od;
+		roots:=AffESstd(GramS, tvv, 0, -2, true);
+		if roots=[] then	
+			tvv:=vvL;
+			MakePrimitiveVect(tvv);
+			seps:=SeparatingVects(GramL, weylample, tvv, -2);
+			counter:=0;
+			refls:=Id26;
+			while seps<>[] and counter<10 do
+				Sort(seps, sepssorter);
+				for rt in seps do
+					tvv:=refl(tvv, rt[1]);
+					refls:=List(refls, xx->refl(xx, rt[1]));
+				od;
+				MakePrimitiveVect(tvv);
+				seps:=SeparatingVects(GramL, weylample, tvv, -2);
+				counter:=counter+1;
+			od;
+			if counter=10 then
+				beep(481476146);
+			fi;
+			if counter<9 then
+				ampleflag:=true;
+				ampleXinL:=List(tvv);
+				embSL:=embSL*refls;
+				embRL:=embRL*refls;
+				projLS:=OrthogonalProj(GramL, embSL).proj1;
+				projLR:=OrthogonalProj(GramL, embRL).proj1;
+				ampleX:=ampleXinL*projLS;
+				dd:=LcmDenom(ampleX);
+				ampleX:=dd*ampleX;
+				ampleXinL:=dd*ampleXinL;
+				if ampleX*embSL<>ampleXinL then
+					beep(347474771);
+				fi;
+				if SeparatingVects(GramL, weylample, ampleXinL, -2)<>[] then
+					beep(317314714717);
+				fi;
+			fi;
+		fi;
+		vvS:=2*vvS+RandomVectfromL(20,[-1,0,1]);
+		vvL:=vvS*embSL;
+	od;
+	#
+	Printn("ampleX deg", ampleX*GramS*ampleX);
+	GramRdual:=InverseMat(GramR); 
+	#
+	OLrec:=rec(
+		Gram:=GramL,
+		proj1:=projLS,
+		emb1:=embSL,
+		proj2:=projLR,
+		emb2:=embRL,
+		proj1_dual:=projLS*GramS, # in terms of the STANDARD(!!) basis of OL and the dual basis of L1
+		emb1_dual:=GramSdual*embSL, # in terms of the STANDARD basis of OL and the dual basis of L1
+		proj2_dual:=projLR*GramR, # in terms of the STANDARD basis of OL and the dual basis of L2
+		emb2_dual:=GramRdual*embRL # in terms of the STANDARD basis of OL and the dual basis of L2
+	);
+	#
+	twS:=tweyl*projLS;
+	twS:=LcmDenom(twS)*twS;
+	MakePrimitiveVect(twS);
+	roots:=AffESstd(GramS, twS, 0, -2, true);
+	if roots=[] then
+		seps:=SeparatingVects(GramL, weylample, twS*embSL, -2);
+		if seps=[] then
+			ampleX:=twS;
+			Printn("newampleX deg", ampleX*GramS*ampleX);
+		fi;
+	fi;
+	#
+	tempCheckUnimodularOverLat(GramS, GramR, OLrec);
+	#
+	discRrec:=DiscriminantForm(GramR); 
+	OGR:=AutPosLat((-1)*GramR); 
+	OqR:=AutFQF([discRrec.discg, discRrec.discf]); 
+	ImOqOGR:=[]; #the image of OGR in OqR
+	for tg in OGR do
+		tgbar:=OLtoOqL(tg, discRrec);
+		if not tgbar in ImOqOGR then 
+			Add(ImOqOGR, tgbar);
+		fi;
+	od;
+	#
+	discisomSR:=DiscIsomByUnimodOverlat2(embSL, discSrec, embRL, discRrec);
+	discisomRS:=GeneralizedInverseIsomFAG(discSrec.discg, discRrec.discg, discisomSR);
+	#
+	mdiscRdiscf:=CopyNormalDiscf((-1)*discRrec.discf); 
+	if CopyNormalDiscf(TMTTmult(discisomSR, mdiscRdiscf))<>nsrec.discS.discf then
+		beep(5661222);
+	fi;
+	if CopyNormalDiscf(TMTTmult(discisomRS, discSrec.discf))<>mdiscRdiscf then
+		beep(58871222);
+	fi;
+	iddiscS:=IdentityMat(Length(discSrec.discg));
+	iddiscR:=IdentityMat(Length(discRrec.discg));
+	if CopyMatmodDiscg(discisomSR*discisomRS, discSrec.discg)<>iddiscS then 
+		beep(88475474);
+	fi;
+	if CopyMatmodDiscg(discisomRS*discisomSR, discRrec.discg)<>iddiscR then 
+		beep(47547114);
+	fi;
+	#
+	ImOqROqSperiod:=[]; #the image of OqSXperiod in OqR
+	for tgd in nsrec.OqSperiod do
+		tM:=CopyMat(discisomRS*tgd*discisomSR);
+		MatmodDiscg(tM, discRrec.discg);
+		if not tM in ImOqROqSperiod then 
+			Add(ImOqROqSperiod, tM);
+		fi;
+	od; 
+	#
+	OqSliftable:=[];
+	for tgd in nsrec.OqS do
+		tM:=CopyMat(discisomRS*tgd*discisomSR);
+		MatmodDiscg(tM, discRrec.discg);
+		if tM in ImOqOGR then
+			Add(OqSliftable, tgd);
+		fi;
+	od;
+	#
+	for tgd in nsrec.OqSperiod do
+		if not tgd in OqSliftable then
+			Printn("liftability is not satisfied");
+			beep(447464776);
+		fi;
+	od;
+	#
+	Borrec:=rec(
+		Lrec:=OLrec,
+		nsrec:=nsrec, 
+		ampleX:=ampleX,
+		weyl1:=tweyl,
+		GramR:=GramR, 
+		GramRdual:=GramRdual,
+		OGR:=OGR,
+		OqR:=OqR,
+		discRrec:=discRrec,
+		discisomSR:=discisomSR,
+		discisomRS:=discisomRS,
+		ImOqOGR:=ImOqOGR,
+		ImOqROqSperiod:=ImOqROqSperiod,
+		OqSliftable:=OqSliftable
+	);
+	#
+	return(Borrec);
+end;

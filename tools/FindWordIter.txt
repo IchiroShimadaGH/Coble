@@ -1,0 +1,440 @@
+#Read("FindWordIter.txt");
+# based on #Read("PrepareFindWord7.txt");
+
+
+
+FindWord:=function(gg, gens, gensh2dual, runtimesec)
+  local  vb, tg, flag, vbstree, task, theword, nopsgens,trec,
+  mindeg, minword, inideg, ii, gginv, inivb,tgammas, lastgg,
+  newgens, tgen, tgs,ttword, degsscounter, st,
+  ttpos, id13;
+  #
+  #
+  id13:=IdentityMat(13);
+  flag:=false;
+  vbstree:=rec(nodes:=[], subtrees:=[]);
+  nopsgens:=Length(gens);
+  inivb:=theh2*gg;
+  inideg:=theh2dual*inivb;
+  mindeg:=inideg;
+  minword:=[];
+  degsscounter:=0;
+  st:=Runtime();
+  #
+  task:=function(tword, nowdist, nowvb)
+    local  tg, newvb, newdist, pos, newtword, degs, poss, ttv, newggg, kk, tpos;
+    if flag then return(); fi;
+    if nowdist=2 then
+      flag:=true;
+      return();
+    fi;
+    if Runtime()-st>1000*runtimesec then return(); fi;
+    # for debug
+    #if tword=[] then
+    #  if nowvb<>inivb then beep(43123); fi;
+    #else
+    #  if nowvb<>inivb*Product(List(tword, pos->gens[pos])) then beep(423123); fi;
+    #fi;
+    #
+    pos:=0;
+    degs:=List(gensh2dual, ttv->ttv*nowvb);
+    poss:=[1..nopsgens];
+    SortParallel(degs, poss);
+    degsscounter:=degsscounter+1;
+    kk:=0;
+    for newdist in degs do
+      kk:=kk+1;
+      if newdist>nowdist  then
+        break; #from for newdist in degs do
+      else # newdist<=nowdist
+        pos:=poss[kk];
+        newggg:=gens[pos];
+        if newdist<mindeg then #renew the min record
+          Printn("____", Length(tword), mindeg, "->", newdist, "degsscounter", degsscounter);
+          st:=Runtime();
+          mindeg:=newdist;
+          minword:=CopyAdd(tword, pos);
+          #for debug
+          #if degbytheh2(gg*Product(List(minword, tpos->gens[tpos])))<>mindeg then
+          #  beep(77223);
+          #fi;
+        fi;
+        newvb:=nowvb*newggg;
+        # for debug
+        #if newvb*theh2dual<>newdist then beep(62692); fi;
+        #
+        if not IsInTreeAndAddIfNot(vbstree, newvb) then
+          Add(tword,pos);
+          task(tword, newdist, newvb);
+          Remove(tword);
+        fi;
+      fi;
+    od;
+    degsscounter:=degsscounter-1;
+  end;
+  #
+  task([], inideg, inivb);
+  #
+  if minword=[] then
+    tgammas:=[];
+    lastgg:=List(gg);
+  else
+    tgammas:=List(minword, ttpos->gens[ttpos]);
+    lastgg:=gg*Product(tgammas);
+  fi;
+  if degbytheh2(lastgg)<>mindeg then beep(69862893); fi;
+  if flag then
+    if not (lastgg=id13 or lastgg=theh2invol) then beep(929291); fi;
+  fi;
+  #
+  trec:=rec(
+    flag:=flag,
+    inig:=gg,
+    lastg:=lastgg,
+    inideg:=inideg,
+    lastdeg:=mindeg,
+    gammas:=tgammas
+  );
+  return(trec);
+  #
+end;
+
+
+
+
+FindWordIter:=function(gg, gens, gensh2dual, runtimesec, maxcounter, sgsnumb)
+  #
+  local gginv, flip, beep, inideg, prodmats, checkttrec,
+  ttrec, counter, trec, tb, sgs, ii, id13;
+  #
+  beep:=function(beepnumb)
+    localbeep("FindWordIter", beepnumb); Error();
+  end;
+  #
+  id13:=IdentityMat(13);
+  #
+  gginv:=InverseMat(gg);
+  inideg:=degbytheh2(gg);
+  #
+  flip:=function(ttrec)
+    local newttrec;
+    newttrec:=rec();
+    if ttrec.g=gg then newttrec.g:=gginv;
+    elif ttrec.g=gginv then newttrec.g:=gg;
+    fi;
+    newttrec.A:=ttrec.Binv;
+    newttrec.B:=ttrec.Ainv;
+    newttrec.Ainv:=ttrec.B;
+    newttrec.Binv:=ttrec.A;
+    newttrec.lastg:=InverseMat(ttrec.lastg);
+    newttrec.inideg:=ttrec.inideg;
+    newttrec.lastdeg:=ttrec.lastdeg;
+    newttrec.flag:=ttrec.flag;
+    return(newttrec);
+  end;
+  #
+  prodmats:=function(L)
+    if L=[] then return(id13);
+    else return(Product(L));
+    fi;
+  end;
+  #
+  checkttrec:=function(ttrec)
+    local prodA, prodB, prodAinv, prodBinv, tg, ii, nopsA, nopsB;
+    if ttrec.g<>gg and ttrec.g<>gginv then beep(6296298); fi;
+    nopsA:=Length(ttrec.A);
+    nopsB:=Length(ttrec.B);
+    for ii in [1..nopsA] do
+      if ttrec.A[ii]*ttrec.Ainv[nopsA+1-ii]<>id13 then beep(7253); fi;
+    od;
+    for ii in [1..nopsB] do
+      if ttrec.B[ii]*ttrec.Binv[nopsB+1-ii]<>id13 then beep(4253); fi;
+    od;
+    prodA:=prodmats(ttrec.A);
+    prodB:=prodmats(ttrec.B);
+    prodAinv:=prodmats(ttrec.Ainv);
+    prodBinv:=prodmats(ttrec.Binv);
+    if prodA*prodAinv<>id13 then beep(693698); fi;
+    if prodB*prodBinv<>id13 then beep(633497); fi;
+    if prodA*ttrec.g*prodB<>ttrec.lastg then beep(2269692); fi;
+    if ttrec.lastdeg<>degbytheh2(ttrec.lastg) then beep(62271); fi;
+    if nopsA>0 and Set(ttrec.A, tg->tg in gens)<>[true] then beep(66961); fi;
+    if nopsB>0 and Set(ttrec.B, tg->tg in gens)<>[true] then beep(26961); fi;
+    if nopsA>0 and Set(ttrec.Ainv, tg->tg in gens)<>[true] then beep(669651); fi;
+    if nopsB>0 and Set(ttrec.Binv, tg->tg in gens)<>[true] then beep(826961); fi;
+    if (ttrec.lastdeg=2) <>ttrec.flag then beep(126961); fi;
+    if ttrec.flag then
+      if not (ttrec.lastg=id13 or ttrec.lastg=theh2invol) then beep(329291); fi;
+    fi;
+  end;
+  #
+  ttrec:=rec(
+    g:=gg,
+    A:=[],
+    B:=[],
+    Ainv:=[],
+    Binv:=[],
+    lastg:=gg,
+    inideg:=inideg,
+    lastdeg:=inideg,
+    flag:=false
+  );
+  if inideg=2 then
+    ttrec.flag:=true;
+    return(ttrec);
+  fi;
+  #
+  #
+  counter:=0;
+  while (not ttrec.flag) and counter<maxcounter do
+    Printn("__counter", counter, "deg", ttrec.lastdeg,
+    "nopsA", Length(ttrec.A), "nopsB", Length(ttrec.B));
+    counter:=counter+1;
+    trec:=FindWord(ttrec.lastg, gens, gensh2dual, runtimesec);
+    ttrec.lastg:=trec.lastg;
+    ttrec.lastdeg:=trec.lastdeg;
+    Append(ttrec.B, trec.gammas);
+    for tb in trec.gammas do
+      Add(ttrec.Binv, InverseMat(tb), 1);
+    od;
+    ttrec.flag:=trec.flag;
+    #
+    if (not ttrec.flag) and counter<maxcounter then
+      ttrec:=flip(ttrec);
+      sgs:=List([1..sgsnumb], ii->Random(gens));
+      ttrec.lastg:=ttrec.lastg*prodmats(sgs);
+      ttrec.lastdeg:=degbytheh2(ttrec.lastg);
+      Append(ttrec.B, sgs);
+      for tb in sgs do
+        Add(ttrec.Binv, InverseMat(tb), 1);
+      od;
+    fi;
+  od;
+  #
+  Printn("__ done counter", counter, "deg", ttrec.lastdeg,
+  "nopsA", Length(ttrec.A), "nopsB", Length(ttrec.B));
+  #
+  checkttrec(ttrec);
+  #
+  return(ttrec);
+  #
+end;
+
+
+FindWordNP:=function(gg, gens, gensh2dual, runtimesec)
+  local  vb, tg, flag, vbstree, task, theword, nopsgens,trec,
+  mindeg, minword, inideg, ii, gginv, inivb,tgammas, lastgg,
+  newgens, tgen, tgs,ttword, degsscounter, st,
+  ttpos, id13;
+  #
+  #
+  id13:=IdentityMat(13);
+  flag:=false;
+  vbstree:=rec(nodes:=[], subtrees:=[]);
+  nopsgens:=Length(gens);
+  inivb:=theh2*gg;
+  inideg:=theh2dual*inivb;
+  mindeg:=inideg;
+  minword:=[];
+  degsscounter:=0;
+  st:=Runtime();
+  #
+  task:=function(tword, nowdist, nowvb)
+    local  tg, newvb, newdist, pos, newtword, degs, poss, ttv, newggg, kk, tpos;
+    if flag then return(); fi;
+    if nowdist=2 then
+      flag:=true;
+      return();
+    fi;
+    if Runtime()-st>1000*runtimesec then return(); fi;
+    # for debug
+    #if tword=[] then
+    #  if nowvb<>inivb then beep(43123); fi;
+    #else
+    #  if nowvb<>inivb*Product(List(tword, pos->gens[pos])) then beep(423123); fi;
+    #fi;
+    #
+    pos:=0;
+    degs:=List(gensh2dual, ttv->ttv*nowvb);
+    poss:=[1..nopsgens];
+    SortParallel(degs, poss);
+    degsscounter:=degsscounter+1;
+    kk:=0;
+    for newdist in degs do
+      kk:=kk+1;
+      if newdist>nowdist  then
+        break; #from for newdist in degs do
+      else # newdist<=nowdist
+        pos:=poss[kk];
+        newggg:=gens[pos];
+        if newdist<mindeg then #renew the min record
+          #Printn("____", Length(tword), mindeg, "->", newdist, "degsscounter", degsscounter);
+          st:=Runtime();
+          mindeg:=newdist;
+          minword:=CopyAdd(tword, pos);
+          #for debug
+          #if degbytheh2(gg*Product(List(minword, tpos->gens[tpos])))<>mindeg then
+          #  beep(77223);
+          #fi;
+        fi;
+        newvb:=nowvb*newggg;
+        # for debug
+        #if newvb*theh2dual<>newdist then beep(62692); fi;
+        #
+        if not IsInTreeAndAddIfNot(vbstree, newvb) then
+          Add(tword,pos);
+          task(tword, newdist, newvb);
+          Remove(tword);
+        fi;
+      fi;
+    od;
+    degsscounter:=degsscounter-1;
+  end;
+  #
+  task([], inideg, inivb);
+  #
+  if minword=[] then
+    tgammas:=[];
+    lastgg:=List(gg);
+  else
+    tgammas:=List(minword, ttpos->gens[ttpos]);
+    lastgg:=gg*Product(tgammas);
+  fi;
+  if degbytheh2(lastgg)<>mindeg then beep(69862893); fi;
+  if flag then
+    if not (lastgg=id13 or lastgg=theh2invol) then beep(929291); fi;
+  fi;
+  #
+  trec:=rec(
+    flag:=flag,
+    inig:=gg,
+    lastg:=lastgg,
+    inideg:=inideg,
+    lastdeg:=mindeg,
+    gammas:=tgammas
+  );
+  return(trec);
+  #
+end;
+
+
+FindWordIterNP:=function(gg, gens, gensh2dual, runtimesec, maxcounter, sgsnumb)
+  #
+  local gginv, flip, beep, inideg, prodmats, checkttrec,
+  ttrec, counter, trec, tb, sgs, ii, id13;
+  #
+  beep:=function(beepnumb)
+    localbeep("FindWordIter", beepnumb); Error();
+  end;
+  #
+  id13:=IdentityMat(13);
+  #
+  gginv:=InverseMat(gg);
+  inideg:=degbytheh2(gg);
+  #
+  flip:=function(ttrec)
+    local newttrec;
+    newttrec:=rec();
+    if ttrec.g=gg then newttrec.g:=gginv;
+    elif ttrec.g=gginv then newttrec.g:=gg;
+    fi;
+    newttrec.A:=ttrec.Binv;
+    newttrec.B:=ttrec.Ainv;
+    newttrec.Ainv:=ttrec.B;
+    newttrec.Binv:=ttrec.A;
+    newttrec.lastg:=InverseMat(ttrec.lastg);
+    newttrec.inideg:=ttrec.inideg;
+    newttrec.lastdeg:=ttrec.lastdeg;
+    newttrec.flag:=ttrec.flag;
+    return(newttrec);
+  end;
+  #
+  prodmats:=function(L)
+    if L=[] then return(id13);
+    else return(Product(L));
+    fi;
+  end;
+  #
+  checkttrec:=function(ttrec)
+    local prodA, prodB, prodAinv, prodBinv, tg, ii, nopsA, nopsB;
+    if ttrec.g<>gg and ttrec.g<>gginv then beep(6296298); fi;
+    nopsA:=Length(ttrec.A);
+    nopsB:=Length(ttrec.B);
+    for ii in [1..nopsA] do
+      if ttrec.A[ii]*ttrec.Ainv[nopsA+1-ii]<>id13 then beep(7253); fi;
+    od;
+    for ii in [1..nopsB] do
+      if ttrec.B[ii]*ttrec.Binv[nopsB+1-ii]<>id13 then beep(4253); fi;
+    od;
+    prodA:=prodmats(ttrec.A);
+    prodB:=prodmats(ttrec.B);
+    prodAinv:=prodmats(ttrec.Ainv);
+    prodBinv:=prodmats(ttrec.Binv);
+    if prodA*prodAinv<>id13 then beep(693698); fi;
+    if prodB*prodBinv<>id13 then beep(633497); fi;
+    if prodA*ttrec.g*prodB<>ttrec.lastg then beep(2269692); fi;
+    if ttrec.lastdeg<>degbytheh2(ttrec.lastg) then beep(62271); fi;
+    if nopsA>0 and Set(ttrec.A, tg->tg in gens)<>[true] then beep(66961); fi;
+    if nopsB>0 and Set(ttrec.B, tg->tg in gens)<>[true] then beep(26961); fi;
+    if nopsA>0 and Set(ttrec.Ainv, tg->tg in gens)<>[true] then beep(669651); fi;
+    if nopsB>0 and Set(ttrec.Binv, tg->tg in gens)<>[true] then beep(826961); fi;
+    if (ttrec.lastdeg=2) <>ttrec.flag then beep(126961); fi;
+    if ttrec.flag then
+      if not (ttrec.lastg=id13 or ttrec.lastg=theh2invol) then beep(329291); fi;
+    fi;
+  end;
+  #
+  ttrec:=rec(
+    g:=gg,
+    A:=[],
+    B:=[],
+    Ainv:=[],
+    Binv:=[],
+    lastg:=gg,
+    inideg:=inideg,
+    lastdeg:=inideg,
+    flag:=false
+  );
+  if inideg=2 then
+    ttrec.flag:=true;
+    return(ttrec);
+  fi;
+  #
+  #
+  counter:=0;
+  while (not ttrec.flag) and counter<maxcounter do
+    #Printn("__counter", counter, "deg", ttrec.lastdeg,
+    #"nopsA", Length(ttrec.A), "nopsB", Length(ttrec.B));
+    counter:=counter+1;
+    trec:=FindWordNP(ttrec.lastg, gens, gensh2dual, runtimesec);
+    ttrec.lastg:=trec.lastg;
+    ttrec.lastdeg:=trec.lastdeg;
+    Append(ttrec.B, trec.gammas);
+    for tb in trec.gammas do
+      Add(ttrec.Binv, InverseMat(tb), 1);
+    od;
+    ttrec.flag:=trec.flag;
+    #
+    if (not ttrec.flag) and counter<maxcounter then
+      ttrec:=flip(ttrec);
+      sgs:=List([1..sgsnumb], ii->Random(gens));
+      ttrec.lastg:=ttrec.lastg*prodmats(sgs);
+      ttrec.lastdeg:=degbytheh2(ttrec.lastg);
+      Append(ttrec.B, sgs);
+      for tb in sgs do
+        Add(ttrec.Binv, InverseMat(tb), 1);
+      od;
+    fi;
+  od;
+  #
+  #Printn("__ done counter", counter, "deg", ttrec.lastdeg,
+  #"nopsA", Length(ttrec.A), "nopsB", Length(ttrec.B));
+  #
+  checkttrec(ttrec);
+  #
+  return(ttrec);
+  #
+end;
+
+
+#end

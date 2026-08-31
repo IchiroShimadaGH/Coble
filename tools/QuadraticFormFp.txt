@@ -1,0 +1,97 @@
+#Read("QuadraticFormFp.txt");
+
+OrthogonalCompFp:=function(Gram, subspace, p)
+  local zv;
+  zv:=MakeZeroVect(Length(Gram));
+  return(SolAbModp(subspace*Gram, zv, p).nullvects);
+end;
+
+RepresentativeFp:=function(Gram, a, p)
+  local n, aa, tv, bb, beep, xx;
+  #
+  beep:=function(beepnumb)
+    localbeep("RepresentativeFp", beepnumb); Error();
+  end;
+  #
+  n:=Length(Gram);
+  aa:=a mod p;
+  if n<2 or (n=2 and aa=0) then beep(542745763); fi;
+  while true do
+    tv:=RandomVect(n) mod p;
+    bb:=tv*Gram*tv mod p;
+    if aa=bb then return(tv); fi;
+    if aa<>0 and bb<>0 and Legendre(aa*bb, p)=1 then
+      for xx in [1..p-1] do
+        if xx^2*bb mod p=aa then return(xx*tv); fi;
+      od;
+      beep(54737463);
+    fi;
+  od;
+  #
+end;
+
+
+DiagonalizeGramFp:=function(Gram, prescribeddiags, p, seed)
+  #
+  local beep, n, det, det2, temb, tGram, findv, newbasis;
+  #
+  beep:=function(beepnumb)
+    localbeep("DiagonalizeGramFp", beepnumb); Error();
+  end;
+  #
+  Reset(GlobalMersenneTwister, seed);
+  #
+  n:=Length(Gram);
+  if n<>Length(prescribeddiags) then beep(6631); fi;
+  det:=DeterminantIntMat(Gram) mod p;
+  det2:=Product(prescribeddiags) mod p;
+  if det*det2=0 or Legendre(det*det2, p)<>1 then beep(456737); fi;
+  #
+  temb:=IdentityMat(n);
+  tGram:=Gram;
+  newbasis:=[];
+  #
+  findv:=function()
+    #
+    local targetaa, tv, torthocomp, bb, xx;
+    #
+    #Printn("in", temb, tGram, newbasis);
+    #
+    if Length(tGram)=1 then
+      targetaa:=prescribeddiags[n] mod p;
+      #tv:=temb[1];
+      bb:=tGram[1][1];
+      #if Legendre(targetaa*bb, p)<>1 then beep(52373); fi;
+      for xx in [1..p-1] do
+        if xx^2*bb mod p=targetaa then
+          Add(newbasis, xx*temb[1] mod p);
+          #Printn("out last",  newbasis);
+          return();
+        fi;
+      od;
+      beep(42623);
+    fi;
+    targetaa:=prescribeddiags[Length(newbasis)+1] mod p;
+    tv:=RepresentativeFp(tGram, targetaa, p);
+    torthocomp:=OrthogonalCompFp(tGram, [tv], p);
+    Add(newbasis, tv*temb mod p);
+    #Printn(Length(newbasis));
+    tGram:=TMTTmult(torthocomp, tGram) mod p;
+    temb:=torthocomp*temb mod p;
+    #Printn("out", temb, tGram, newbasis);
+    findv();
+    #
+  end;
+  #
+  findv();
+  #
+  if TMTTmult(newbasis, Gram) mod p<>DiagonalMat(prescribeddiags mod p) then
+    beep(5353773);
+  fi;
+  #
+  return(newbasis);
+end;
+
+
+
+#end

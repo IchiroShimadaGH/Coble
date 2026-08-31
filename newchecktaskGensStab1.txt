@@ -1,0 +1,16 @@
+#Read("newchecktaskGensStab1.txt");
+
+Read("GensStab.txt");
+resetMT(sessionnumb+8);
+
+tt:=0;
+while tt<1000000000 do
+  tt:=tt+1;
+  mm:=Random([5..9]);
+  nn:=Random([50..60]);
+  Printn(tt, mm, nn);
+  newRandomCheckGensStab(mm, nn);
+  Printn("________");
+od;
+
+#####
