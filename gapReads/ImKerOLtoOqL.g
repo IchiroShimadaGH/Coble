@@ -1,6 +1,13 @@
 #Read("ImKerOLtoOqL.g");
 
 
+OqLtoOqLPerm:=function(tqg, discg, vs)
+  local poss, vstqg, ttv, ii, leng;
+  leng:=Length(discg);
+  vstqg:=List(vs*tqg, ttv->List([1..leng], ii-> (ttv[ii] mod discg[ii])));
+  poss:=List(vstqg, ttv->SinglePosition(vs, ttv));
+  return(PermList(poss));
+end;
 
 
 ImOLtoOqL:=function(OGgens, GramL)

@@ -50,27 +50,27 @@ debug0:=function()
 end;
 
 debug1:=function()
-	Read("fordebug1.txt");
+	Read("fordebug1.g");
 end;
 
 debug2:=function()
-	Read("fordebug2.txt");
+	Read("fordebug2.g");
 end;
 
 debug3:=function()
-	Read("fordebug3.txt");
+	Read("fordebug3.g");
 end;
 
 debug4:=function()
-	Read("fordebug4.txt");
+	Read("fordebug4.g");
 end;
 
 debug5:=function()
-	Read("fordebug5.txt");
+	Read("fordebug5.g");
 end;
 
 debug6:=function()
-	Read("fordebug6.txt");
+	Read("fordebug6.g");
 end;
 
 dbg0:=function()
@@ -1114,4 +1114,50 @@ end;
 
 PrintnHline:=function()
     Printn("################");;
+end;
+
+
+#############
+# 2026/08/31
+#############
+
+OrbitdDecompByPerms:=function(nn, perms)
+  #
+  # perms is a list of permutations of [1..nn].
+  # orbs is the list of orbits of the action of Group(permutations) on [1..nn].
+  #
+  local orbs, dones, tg, ii, jj, cc, torb, jjtg, forbs, beep;
+  #
+  beep:=function(beepnumb)
+    localbeep("OrbitdDecompByPerms", beepnumb); Error();
+  end;
+  #
+  orbs:=[];
+  dones:=[];
+  #
+  for ii in [1..nn]  do 
+    if ii in dones then continue; fi;
+    torb:=[ii];
+    cc:=0;
+    for jj in torb do 
+      cc:=cc+1;
+      for tg in perms do 
+        jjtg:=jj^tg;
+        if not jjtg in torb then Add(torb, jjtg); fi;
+      od;
+    od;
+    if cc<>Length(torb) then beep(91919); fi;
+    Add(orbs, torb);
+    Append(dones, torb);
+  od;
+  #
+  Sort(dones);
+  if dones<>[1..nn] then beep(71967981); fi;
+  orbs:=List(orbs, Set);
+  forbs:=Flat(orbs);
+  Sort(forbs);
+  if forbs<>[1..nn] then beep(71955981); fi;
+  #
+  return(orbs);
+  #
 end;

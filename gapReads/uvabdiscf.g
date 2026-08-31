@@ -1,17 +1,13 @@
-# Read("checktools.g");
+# Read("uvabdiscf.g");
 
-Read("paperaffineConway/affineConwayCompdata.txt");
 
-uumat:=[[0,1/2], [1/2,0]];
-vvmat:=[[1,1/2], [1/2, 1]];
-aamat:=[[1/2]];
-bbmat:=[[3/2]];
 
-Read("AutDiscfByStabilizerChain.g");
-Read("OGLat.g");
-Read("ImKerOLtoOqL.g");
+_uumat:=[[0,1/2], [1/2,0]];
+_vvmat:=[[1,1/2], [1/2, 1]];
+_aamat:=[[1/2]];
+_bmat:=[[3/2]];
 
-readdata("isompairs");
+
 
 isisomuvab:=function(uvab1, uvab2)
   local uvab1s, pos, tuvab, tp, tpp, dduvab, nnuvab, xx, 
@@ -33,7 +29,7 @@ isisomuvab:=function(uvab1, uvab2)
   pos:=1;
   while pos<=Length(uvab1s) do 
     tuvab:=uvab1s[pos];
-    for tp in  isompairs do
+    for tp in  uvab_isompairs do
       tpp:=tp;
       dduvab:=tuvab-tpp[1];
       if Set(dduvab, xx->xx>=0)=[true] then 
@@ -62,14 +58,14 @@ uvabvect:=function(discrec)
   if Set(discrec.discg)<>[2] then beep(52875872); fi;
   ntqfrec:=Normalform_fqf(discrec.discg, discrec.discf);
   ntqf:=ntqfrec.decompdata[1].pfqf;
-  tuvab:=List([uumat, vvmat, aamat, bbmat], xx->OccurNumb(ntqf, xx));
+  tuvab:=List([_uumat, _vvmat, _aamat, _bbmat], xx->OccurNumb(ntqf, xx));
   return(tuvab);
 end;
 
 uvab2qf:=function(tuvabvect)
   local dmatslist, uvabmatslist, ii, kk;
   dmatslist:=[];
-  uvabmatslist:=[uumat, vvmat, aamat, bbmat];
+  uvabmatslist:=[_uumat, _vvmat, _aamat, _bbmat];
   ii:=0;
   for kk in tuvabvect do
     ii:=ii+1;
@@ -92,48 +88,9 @@ uvabOqLOrder:=function(tuvabvect)
 end; 
 
 
-###########################3
 
-OrbitdDecompByPerms:=function(nn, perms)
-  #
-  # perms is a list of permutations of [1..nn].
-  # orbs is the list of orbits of the action of Group(permutations) on [1..nn].
-  #
-  local orbs, dones, tg, ii, jj, cc, torb, jjtg, forbs, beep;
-  #
-  beep:=function(beepnumb)
-    localbeep("OrbitdDecompByPerms", beepnumb); Error();
-  end;
-  #
-  orbs:=[];
-  dones:=[];
-  #
-  for ii in [1..nn]  do 
-    if ii in dones then continue; fi;
-    torb:=[ii];
-    cc:=0;
-    for jj in torb do 
-      cc:=cc+1;
-      for tg in perms do 
-        jjtg:=jj^tg;
-        if not jjtg in torb then Add(torb, jjtg); fi;
-      od;
-    od;
-    if cc<>Length(torb) then beep(91919); fi;
-    Add(orbs, torb);
-    Append(dones, torb);
-  od;
-  #
-  Sort(dones);
-  if dones<>[1..nn] then beep(71967981); fi;
-  orbs:=List(orbs, Set);
-  forbs:=Flat(orbs);
-  Sort(forbs);
-  if forbs<>[1..nn] then beep(71955981); fi;
-  #
-  return(orbs);
-  #
-end;
+
+
 
 
 

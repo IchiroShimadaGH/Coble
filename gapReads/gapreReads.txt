@@ -16,10 +16,11 @@ Read("gapReads/datas/saveGramLeechGolay.txt");
 Read("gapReads/datas/saveGramT237.txt");
 Read("gapReads/datas/saveWeylT237.txt");
 Read("gapReads/datas/saveGramU3E8.txt");
-Read("gapReads/datas/saveGramL10.txt");  #Add:2022/04/09
+Read("gapReads/datas/saveGramL10.txt");#Add:2022/04/09
 Read("gapReads/datas/saveweylU3E8.txt");
 Read("gapReads/datas/saveNiemeierList.txt");
 Read("gapReads/datas/saveSmallADETypes.txt");
+Read("gapReads/datas/saveuvab_isompairs.txt");
 Read("gapReads/LatticeTools.txt");
 Read("gapReads/Randoms.txt");
 Read("gapReads/DiscriminantForms.txt");
@@ -35,16 +36,19 @@ Read("gapReads/CodeTools.txt");
 Read("gapReads/GroupTools.txt");
 Read("gapReads/DistComp.txt");
 Read("gapReads/ADEautconfig.txt");
-Read("gapReads/IsomsPosLats.txt");
+#Read("gapReads/IsomsPosLats.txt");#Delete 2026/08/31: replaced by OGPosLat.g
 Read("gapReads/BorcherdsTools.txt");
-Read("gapReads/IsInTreeAndAddIfNot.txt"); #Add:2021/10/16
-Read("gapReads/FaceTools.txt"); #Add:2021/10/16
-#Read("gapReads/MultiTaskTools.txt"); #Add:2022/04/09#Delete 2025/02/19
-Read("gapReads/K3Amples.txt"); #Add:2022/04/09
-#Read("gapReads/MWGroupOnSX.txt"); #Add:2022/04/09
-#Read("gapReads/InvestigateH2.txt"); #Add:2022/04/09
-Read("gapReads/EasyMultiTask.txt"); #Add:2025/02/19
-
+Read("gapReads/IsInTreeAndAddIfNot.txt");#Add:2021/10/16
+Read("gapReads/FaceTools.txt");#Add:2021/10/16
+#Read("gapReads/MultiTaskTools.txt");#Add:2022/04/09#Delete 2025/02/19
+Read("gapReads/K3Amples.txt");#Add:2022/04/09
+#Read("gapReads/MWGroupOnSX.txt");#Add:2022/04/09
+#Read("gapReads/InvestigateH2.txt");#Add:2022/04/09
+Read("gapReads/EasyMultiTask.txt");#Add:2025/02/19
+Read("gapReads/OGLat.g");#Add:2026/08/31
+Read("gapReads/AutDiscfByStabilizerChain.g");#Add:2026/08/31
+Read("gapReads/ImKerOLtoOqL.g");#Add:2026/08/31
+Read("gapReads/ADEDiagramAut.g");#Add:2026/08/31
 
 
 
@@ -55,6 +59,6 @@ for __tempdim in [1..100] do
 od;
 
 
-Unbind(__tempdim); #Add:2022/05/25
+Unbind(__tempdim);#Add:2022/05/25
 Unbind(id);#Add:2022/05/25
 Unbind(idname);#Add:2022/05/25

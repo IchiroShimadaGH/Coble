@@ -219,6 +219,9 @@ Reflection:=function(vv, GramL, r)
 	return(vv-2*((vv*GramL*r)/(r*GramL*r))*r);
 end;
 
+
+
+
 ################
 #
 # added on 2016 Apr 30 from HesseQ2
@@ -707,6 +710,9 @@ mtReflectionMat:=function(Gram, r)
 	return(rM);
 end;
 
+ReflectionMatrix:=function(Gram, r)
+    return(mtReflectionMat(Gram, r));
+end;
 
 
 OrthogonalProj:=function(GramL, emb)

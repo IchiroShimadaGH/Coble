@@ -557,6 +557,8 @@ OLdualtoOqL:=function(tgdual, discrec)
 	return(CopyMatmodDiscg(discrec.reps_dual * tgdual * discrec.proj_dual, discrec.discg));
 end;
 
+
+
 ##################
 
 IsotropicVectsDiscrec:=function(discrec)

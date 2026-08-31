@@ -1,4 +1,4 @@
-#
+#Read("ADEDiagramAut.g");
 
 
 _SmallADEDiagramAutOrder:=function(chunk)

@@ -1,2 +1,16 @@
 sessionnumb  20260831155808 
-gap> 
+gap> Read("gapReads/datas/saveuvab_isompairs.txt");
+Error, file "gapReads/datas/saveuvab_isompairs.txt" must exist and be readable at /usr/local/Cellar/gap/4.15.1/share/gap/lib/files.gi:207 called from
+<function "Read string">( <arguments> )
+ called from read-eval loop at *stdin*:2
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> quit;
+gap> Read("gapReads/datas/saveuvab_isompairs.txt");
+gap> _SmallADEDiagramAutOrder;
+Error, Variable: '_SmallADEDiagramAutOrder' must have a value
+not in any function at *stdin*:3
+gap> SmallADEDiagramAutOrder;
+Error, Variable: 'SmallADEDiagramAutOrder' must have a value
+not in any function at *stdin*:4
+gap> restart();

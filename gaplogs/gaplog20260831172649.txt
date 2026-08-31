@@ -1,0 +1,12 @@
+sessionnumb  20260831172649 
+gap> ADEDiagramAut;
+Error, Variable: 'ADEDiagramAut' must have a value
+not in any function at *stdin*:2
+gap> _SmallADEDiagramAutOrder;
+function( chunk ) ... end
+gap> OGLat;
+function( arg... ) ... end
+gap> uvab_isompairs;
+[ [ [ 2, 0, 0, 0 ], [ 0, 2, 0, 0 ] ], [ [ 0, 0, 4, 0 ], [ 0, 0, 0, 4 ] ], [ [ 0, 1, 0, 1 ], [ 0, 0, 3, 0 ] ], 
+  [ [ 0, 1, 1, 0 ], [ 0, 0, 0, 3 ] ], [ [ 1, 0, 0, 1 ], [ 0, 0, 1, 2 ] ], [ [ 1, 0, 1, 0 ], [ 0, 0, 2, 1 ] ] ]
+gap> 
