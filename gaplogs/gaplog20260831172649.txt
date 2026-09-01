@@ -9,4 +9,12 @@ function( arg... ) ... end
 gap> uvab_isompairs;
 [ [ [ 2, 0, 0, 0 ], [ 0, 2, 0, 0 ] ], [ [ 0, 0, 4, 0 ], [ 0, 0, 0, 4 ] ], [ [ 0, 1, 0, 1 ], [ 0, 0, 3, 0 ] ], 
   [ [ 0, 1, 1, 0 ], [ 0, 0, 0, 3 ] ], [ [ 1, 0, 0, 1 ], [ 0, 0, 1, 2 ] ], [ [ 1, 0, 1, 0 ], [ 0, 0, 2, 1 ] ] ]
+gap> 334620/2;
+167310
+gap> OqLtoOqLPerm:
+Syntax error: ; expected
+OqLtoOqLPerm:
+            ^
+gap> OqLtoOqLPerm;
+function( tqg, discg, vs ) ... end
 gap> 

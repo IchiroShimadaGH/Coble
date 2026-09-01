@@ -1,0 +1,6 @@
+sessionnumb  20260901130450 
+gap> Read("Task20260901Ua.g");
+[ 2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2 ] 
+Error, Variable: 'uvabvect' must have a value
+not in any function at Task20260901Ua.g:13
+gap> restart();

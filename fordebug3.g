@@ -1,18 +1,43 @@
-#Read("CheckPaper11.g");
-
-Read("paperaffineConway/affineConwayCompdata.txt");
-Read("AutDiscfByStabilizerChain.txt");
-Read("checktools.g");
+#Read("Task20260901Uc.g");
 
 
 
+mindeg:=infinity;
+LampleSs:=[];
+
+while Length(LampleSs)<1000 do
+  rv:=RandomVectFromL(11, [-2, -1,-1,0,1,  1, 2]);
+  kk:=0;
+  cvRss:=[];
+  while true do 
+    kk:=kk+1;
+    bS:=kk*aS+rv;
+    if bS*GramS*bS>0 then
+      bSL:=bS*embS;
+      tvs:=AffESstd(GramL,  bSL, 0, -2, true);;
+      cvRs:=Collected(List(tvs*projR, tx->tx*GramR*tx));
+      newdeg:=bS*GramS*bS;
+      Printn(newdeg,  cvRs, Length(LampleSs), mindeg);
+      if cvRs=[[-2, nrR]] then 
+        if newdeg<mindeg then 
+          LampleS:=bS;
+          mindeg:=newdeg;
+          savedata(LampleS);
+        fi;
+        mindeg:=Minimum(newdeg, mindeg);
+        Add(LampleSs, bS); break; 
+      else 
+        if cvRs in cvRss then break; 
+        else 
+          Add(cvRss, cvRs);
+        fi;
+      fi;
+    fi;
+  od;
+od;
+
+Printn(List(LampleSs, tv->tv*GramS*tv));
 
 
-tG:=erecs[3].minusrec.Gram;
-ttG:=2*InverseMat(tG);
-SignatureQ(ttG);
-if ShortestVectors(ttG, 1).vectors<>[] then beep(81881); fi;
 
 
-Printn("Check the norbit decomp by stabilizer");
-Printn("_______________ 2026/08/20/12:00");
