@@ -4,8 +4,8 @@ GeneralStabChain:=function(inibiis, bigmat)
   #
   local beep, nn,NN,  targetmat, ii, jj, orbits, orbit,
   candidatess, candidates,  extendtask, reachflag, foundpiis, 
-  aii, bii, lev, inipiis, 
-  xx, yy, kk, tv;
+  aii, bii, lev, inipiis, sscandidatess, sscandidates,
+  xx, yy, kk, tv, vyy, targetv, fflag, fingerprints, pos;
   #
   beep:=function(beepnumb)
     localbeep("GeneralStabChain", beepnumb);Error();
@@ -28,15 +28,45 @@ GeneralStabChain:=function(inibiis, bigmat)
     Add(candidatess, candidates);
   od;
   #
+  sscandidatess:=[];
+  for jj in [1..nn] do
+    if nn=1 then 
+      sscandidates:=List(candidatess[1]);
+    else 
+      sscandidates:=[];
+      targetv:=targetmat[jj];
+      for yy in candidatess[jj] do 
+        vyy:=bigmat[yy];
+        if targetv[jj]<>vyy[yy]  then beep(33211); fi; #for check 
+        fflag:=true;
+        for pos in [1..jj-1] do 
+          if targetv[pos]<>vyy[inibiis[pos]] then
+            fflag:=false; break; #from for pos in [1..nn-1] do 
+          fi;
+        od;
+        if fflag then 
+          Add(sscandidates, yy);
+        fi;
+      od;
+    fi;
+    Add(sscandidatess, sscandidates);
+  od;
+  #
+  fingerprints:=List(sscandidatess, Length);
+  #
   reachflag:=false;
-  foundpiis:=[];
+  foundpiis:=[];#just a holder
   extendtask:=function(piis, leng)
-    local targetv, yy, yyv, fflag, pos, tii;
+    local targetv, yy, yyv, fflag, pos, tii, piismat,
+    newsscandidates;
     if leng=nn then 
       reachflag:=true; 
+      piismat:=List(piis, ii->List(piis, jj->bigmat[ii][jj])); #for check
+      if piismat<>targetmat then beep(31198); fi; #for check
       foundpiis:=List(piis);
     else 
       targetv:=targetmat[leng+1];
+      newsscandidates:=[];
       for yy in candidatess[leng+1] do 
         yyv:=bigmat[yy];
         fflag:=true;
@@ -49,12 +79,18 @@ GeneralStabChain:=function(inibiis, bigmat)
           fi;
         od;
         if fflag then 
-          Add(piis, yy);
-          extendtask(piis, leng+1);
-          if Remove(piis)<>yy then beep(999121); fi;
-          if reachflag then 
-            break; # from for yy in candidatess[leng+1] do 
-          fi;
+          Add(newsscandidates, yy);
+        fi;
+      od;
+      if Length(newsscandidates)<>fingerprints[leng+1] then 
+        return(true);
+      fi;
+      for yy in newsscandidates do 
+        Add(piis, yy);
+        extendtask(piis, leng+1);
+        if Remove(piis)<>yy then beep(999121); fi;
+        if reachflag then 
+          break; # from  for yy in newsscandidates do
         fi;
       od;
     fi;
@@ -65,7 +101,7 @@ GeneralStabChain:=function(inibiis, bigmat)
   for lev in [1..nn] do
     inipiis:=List([1..lev-1], jj->inibiis[jj]);
     orbit:=[];
-    for xx in candidatess[lev] do 
+    for xx in sscandidatess[lev] do 
       reachflag:=false;
       Add(inipiis, xx);
       extendtask(inipiis, lev);
@@ -81,9 +117,9 @@ GeneralStabChain:=function(inibiis, bigmat)
   return(orbits);
 end;
 
-AutDiscfByGeneralStabChain:=function(arg...)
+AutDiscfByGeneralStabChain:=function(arg)
   local beep, discv, discg, discf, vs, bigmat, orbits, gens, gensperm, orbit,
-  piis, tg, kk, ii, size, autqrec, tw, tgp;
+  piis, tg, kk, ii, size, autqrec, tw, tgp, leng, inibiis, tv;
   #
   #
   beep:=function(beepnumb)
@@ -94,13 +130,25 @@ AutDiscfByGeneralStabChain:=function(arg...)
     discg:=arg[1];
     discf:=arg[2];
   elif Length(arg)=1 then 
-    discg:=arg.discg;
-    discf:=arg.discf;
+    discg:=arg[1].discg;
+    discf:=arg[1].discf;
   else beep(33911);
+  fi;
+  if discg=[] then 
+    autqrec:=rec(
+      discg:=discg,
+      discf:=discf,
+      gens:=[], 
+      gensperm:=[],
+      size:=1
+    );
+    return(autqrec);
   fi;
   vs:=Cartesian(List(discg, kk->[0..kk-1]));
   bigmat:=CopyNormalDiscf(TMTTmult(vs, discf));
-  orbits:=GeneralStabChain(discf, bigmat);
+  leng:=Length(discg);
+  inibiis:=List(IdentityMat(leng), tv->Position(vs, tv));
+  orbits:=GeneralStabChain(inibiis, bigmat);
   #
   gens:=[];
   gensperm:=[];
@@ -121,13 +169,15 @@ AutDiscfByGeneralStabChain:=function(arg...)
       if discf<>CopyNormalDiscf(TMTTmult(tg, discf)) then 
         beep(787711);
       fi;
+      AddSet(gens, tg);
+      tgp:=PermList(List(List(vs*tg, discv), tw->Position(vs, tw)));
+      if List(inibiis, xx->xx^tgp)<>piis then beep(767687); fi;
+      AddSet(gensperm, tgp);
     od; 
-    Add(gens, tg);
-    tgp:=PermList(List(List(vs*tg, discv), tw->Position(vs, tw)));
-    Add(gensperm, tgp);
   od;
   #
   size:=Size(Group(gensperm));
+  if size<>Product(List(orbits, Length)) then beep(88811); fi;
   #
   autqrec:=rec(
     discg:=discg,
