@@ -7,7 +7,7 @@ for tt in [1..10000] do
   for kk in [1..2] do  
     L:=Union([-kk..kk], [0,0,0,0,0,0,0,0]);
     for dim in [2..6] do 
-      tGram:=6*RandomEvenLatticeFromL(dim, L);
+      tGram:=2*RandomEvenLatticeFromL(dim, L);
       tdet:=AbsInt(DeterminantIntMat(tGram));
       if tdet>3000 or tdet=1 then continue; fi;# in  for dim in [2..10] do 
       tdisc:=DiscriminantForm(tGram);

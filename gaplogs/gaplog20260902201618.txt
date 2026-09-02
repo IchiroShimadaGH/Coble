@@ -2879,3 +2879,26 @@ gap> Read("GeneralStabChainCheckTask1.g");
 2 kk 2 dim 2 disc [ 6, 6 ] size 8 
 2 kk 2 dim 3 disc [ 6, 6, 48 ] size 768 
 3 kk 1 dim 2 disc [ 6, 18 ] size 72 
+3 kk 1 dim 3 disc [ 6, 6, 72 ] size 6912 
+3 kk 2 dim 2 disc [ 6, 6 ] size 8 
+Error, user interrupt in
+  res[i] := func( C[i] )
+ ; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from 
+List( m1, function ( row )
+      return PROD_VECTOR_MATRIX( row, m2 );
+  end ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3640 called from
+T * M * TransposedMat( T ) at gapReads/LinearAlgebra.txt:252 called from
+TMTTmult( vs, discf ) at GeneralStabChain.g:149 called from
+AutDiscfByGeneralStabChain( ttdisc.discg, ttdisc.discf 
+ ) at GeneralStabChainCheckTask1.g:27 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at GeneralStabChainCheckTask1.g:34
+you can 'return;'
+brk> quit;
+gap> Read("GeneralStabChainCheckTask1.g");
+1 kk 1 dim 2 disc [ 2, 2 ] size 2 
+1 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+1 kk 1 dim 4 disc [ 2, 2, 4, 8 ] size 192 
+1 kk 1 dim 5 disc [ 2, 2, 4, 4, 8 ] size 6144 
+1 kk 2 dim 2 disc [ 2, 6 ] size 12 
+1 kk 2 dim 3 disc [ 2, 6, 12 ] size 48 
