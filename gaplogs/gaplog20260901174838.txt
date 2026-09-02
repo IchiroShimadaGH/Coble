@@ -58,4 +58,111 @@ beep(56;)
 gap> Read("Task20260901Ud.g");
 72 6 
 226 0 
-gap> 
+gap> Read("Task20260901Ud.g");
+72 6 
+226 0 
+gap>  SeparatingVects;
+function( GramS, pol, v, d ) ... end
+gap> Read("Task20260902Ua.g");
+Error, Variable: 'GraL' must have a value
+not in any function at Task20260902Ua.g:32
+gap> Read("Task20260902Ua.g");
+wrong_input_separatingvects 
+polnorm,degv,vnorm -1322 3759 226 
+Error,  at gapReads/IntegerVectorsQF.txt:440 called from
+<function "SeparatingVects">( <arguments> )
+ called from read-eval loop at Task20260902Ua.g:32
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> quit;
+gap> Read("Task20260902Ua.g");
+gap> Read("Task20260902Ua.g");
+Error, no method found! For debugging hints type ?Recovery from NoMethodFound
+Error, no 1st choice method found for `Rank' on 1 arguments at /usr/local/Cellar/gap/4.15.1/share/gap/lib/methsel2.g:250 called from
+Rank( ratsL ) at Task20260902Ua.g:41 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260902Ua.g:42
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260902Ua.g");
+1 0 
+2 22 22 
+3 5 26 
+gap> AXisB;
+function( A, B ) ... end
+gap> Read("Task20260902Ua.g");
+1 0 
+2 22 22 
+3 5 26 
+Error, Variable: 'ratsLduals' must have a value
+not in any function at Task20260902Ua.g:54
+gap> Read("Task20260902Ua.g");
+1 0 
+2 22 22 
+3 5 26 
+gap> weyl0;
+[ 71, 23, 31, 27, 19, 11, 13, 21, 9, 31, 25, -69, -72, -28, -90, -32, -38, -34, 1, -23, 1, -19, 1, -75, 1, -79 ]
+gap> if weyl0*GramL*aL<=0 then beep(66152); fi;
+gap> savedata(weyl0);
+gap> Read("Task20260902Ub.g");
+Syntax warning: Unbound global variable in Task20260902Ub.g:18
+  dd:=Llcm(List(Flat(tGramRdual), DenominatorRat));
+                     ^^^^^^^^^^
+Syntax warning: Unbound global variable in Task20260902Ub.g:20
+	svrec:=ShortestVectors((-dd)*tGramRdual, 2*dd);
+	                             ^^^^^^^^^^
+Syntax warning: Unbound global variable in Task20260902Ub.g:30
+    vvnR:=vv*tGramRdual*vv;
+             ^^^^^^^^^^
+Syntax warning: Unbound global variable in Task20260902Ub.g:39
+  if List(vRss, vRs->Set(vRs, vv->vv*tGramRdual*vv))<>List(nRs, xx->[xx]) then
+                                     ^^^^^^^^^^
+Error, Variable: 'tGramRdual' must have an assigned value in
+  dd := Llcm( List( Flat( tGramRdual ), DenominatorRat ) ); at Task20260902Ub.g:18 called from 
+<function "Make_nRvRsRec">( <arguments> )
+ called from read-eval loop at Task20260902Ub.g:57
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260902Ub.g");
+gap> Read("Task20260902Ub.g");
+Error, Variable: 'nRvRsrec' must have an assigned value in
+  Printn( nRvRsrec.nRs[pos], Length( nRvRsrec.vRss ) ); at Task20260902Ub.g:61 called from 
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260902Ub.g:62
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260902Ub.g");
+-2 5 
+-3/2 5 
+-1 5 
+-1/2 5 
+0 5 
+gap> Read("Task20260902Ub.g");
+-2 5230 
+-3/2 952 
+-1 132 
+-1/2 14 
+0 1 
+gap> Read("Task20260902Ub.g");
+-3/2 952 
+-1 132 
+-1/2 14 
+0 1 
+gap> Read("Task20260902Ub.g");
+We prepare thenRvRsrec and discSrec 
+thenRvRsrec 
+-3/2 952 
+-1 132 
+-1/2 14 
+0 1 
+gap> Read("Task20260902Ub.g");
+We prepare thenRvRsrec and discSrec 
+thenRvRsrec 
+-3/2 952 
+-1 132 
+-1/2 14 
+0 1 
+gap> Read("Task20260902Uc.g");
+Error, Variable: 'Rtype' must have a value
+not in any function at Task20260902Uc.g:13
+gap> Read("Make_nSaSvSss.g");

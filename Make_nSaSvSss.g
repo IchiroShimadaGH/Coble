@@ -1,6 +1,6 @@
-Read("Make_nSaSvSss.g");
+#Read("Make_nSaSvSss.g");
 
-Make_nSaSvSss:=function(embSXLdata, nowweyl)
+Make_nSaSvSss:=function(Borrec, nowweyl)
 	#
 	# nSaSvSss is a list of records
 	# nSaSvSsrec:=rec(nS, aS, vSliftss).
@@ -15,22 +15,22 @@ Make_nSaSvSss:=function(embSXLdata, nowweyl)
     localbeep("Make_nSaSvSss", beepnumb); Error();
   end;
   #
-  nRvRsrec:=embSXLdata.nRvRsrec; # will be made in BorchardsL26AF
-  LGrec:=embSXLdata.LGrec;
-  GramL:=LGrec.Gram;
-  GramS:=LGrec.Gram1;
-  GramSdual:=LGrec.Gram1dual;
-  dd:=Lgcd(List(Flat(GramSdual), DenominatorRat));
+  nRvRsrec:=Borrec.nRvRsrec; # will be made in BorchardsL26AF
+  GramL:=Borrec.GramL;
+  GramS:=Borrec.GramS;
+  GramSdual:=Borrec.GramSdual;
+  dd:=Llcm(List(Flat(GramSdual), DenominatorRat));
   intGramSdual:=dd*GramSdual;
+  if not IsIntMat(intGramSdual) then beep(88811); fi;
   nowweyldual:=nowweyl*GramL;
-  wS:=nowweyl*LGrec.proj1;
+  wS:=nowweyl*Borrec.projS;
   if wS*GramS*wS<=0 then beep(619611); fi;
-  wSdual:=nowweyl*LGrec.proj1_dual;
+  wSdual:=nowweyl*Borrec.projSdual;
   if wSdual<>wS*GramS then beep(158756781); fi;
   if not IsIntVect(wSdual) then beep(58111); fi;
   #
-  embSdual:=LGrec.emb1_dual;
-	#in terms of the STANDARD basis of L and the dual basis of L1
+  embSdual:=Borrec.embSdual;
+	#in terms of the STANDARD basis of L and the dual basis of Sdual
   #
   nSaSvSss:=[];
   #
@@ -40,7 +40,7 @@ Make_nSaSvSss:=function(embSXLdata, nowweyl)
     nS:=-2-nR;
     if not nS<0 then beep(69816981); fi;
     totalvRInLs:=nRvRsrec.vRInLss[Rpos];
-    aRvRInLss:=NewClassifyByTags(totalvRInLs, vv->vv*nowweyldual);
+    aRvRInLss:=NewClassifyByTags(totalvRInLs, vv->vv*nowweyldual);#in gaptools
     #
     for aRvRInLs in aRvRInLss do
       aR:=aRvRInLs[1];
@@ -61,7 +61,7 @@ Make_nSaSvSss:=function(embSXLdata, nowweyl)
       end;
       #
       AffES(intGramSdual, wSdual, dd*aS, dd*nS,  true, task);
-      vSliftss:=NewClassifyByTags(lifts, vv->vv*LGrec.proj1);
+      vSliftss:=NewClassifyByTags(lifts, vv->vv*Borrec.projS);##in gaptools
       for vSlifts in vSliftss do # for check
         vS:=vSlifts[1];
         if vS*GramS*vS<>nS then beep(62191); fi;
@@ -80,6 +80,8 @@ Make_nSaSvSss:=function(embSXLdata, nowweyl)
         );
         Add(nSaSvSss, nSaSvSsrec);
         #Printn("nS", nS, "aS", aS, "nops", Length(vSliftss));
+      else 
+        #Printn("nS", nS, "aS", aS, "nops", 0);
       fi;
     od;
   od; #the end of for Rpos in [1..Length(nRvRsrec.nRs)] do
@@ -88,3 +90,8 @@ Make_nSaSvSss:=function(embSXLdata, nowweyl)
   SortParallel(nSaSs, nSaSvSss);
   return(nSaSvSss);
 end; #the end of Make_nSaSvSss.
+
+
+
+
+####

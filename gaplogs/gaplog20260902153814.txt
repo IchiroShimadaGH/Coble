@@ -1,0 +1,10 @@
+sessionnumb  20260902153814 
+gap> Make_nSaSvSss;
+Error, Variable: 'Make_nSaSvSss' must have a value
+not in any function at *stdin*:2
+gap> readdata("Borrec");
+gap> Read("Make_nSaSvSss.g");
+gap> Read("Task20260902Ub.g");
+Error, Variable: 'GramR' must have a value
+not in any function at Task20260902Ub.g:59
+gap> 

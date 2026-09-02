@@ -1,0 +1,3 @@
+sessionnumb  20260902153744 
+gap> readdata("Borrec");
+gap> Read("Make_nSaSvSss.g");

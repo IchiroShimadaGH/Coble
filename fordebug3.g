@@ -1,6 +1,6 @@
-#Read("Task20260901Uc.g");
+#Read("Task20260902Ud.g");
 
-
+nSaSvSss0:=Make_nSaSvSss(Borrec, Borrec.weyl0);
 
 mindeg:=infinity;
 LampleSs:=[];

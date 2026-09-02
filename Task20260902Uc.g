@@ -1,6 +1,9 @@
 
 #Read("Task20260902Uc.g");
 
+readdata("weyl0");
+readdata("discSrec");
+readdata("thenRvRsrec");
 
 Borrec:=rec(
   GramS:=GramS, 
@@ -29,6 +32,8 @@ Borrec:=rec(
 
 Borrec.embSdual:=Borrec.GramSdual*Borrec.embS;
 Borrec.embRdual:=Borrec.GramRdual*Borrec.embR;
+Borrec.projSdual:=Borrec.projS*Borrec.GramS;
+Borrec.projRdual:=Borrec.projR*Borrec.GramR;
 
 Borrec.nRvRsrec:=thenRvRsrec;
 
