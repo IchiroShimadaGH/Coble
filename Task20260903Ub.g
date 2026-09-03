@@ -1,8 +1,8 @@
 #Read("Task20260903Ub.g");
 
-# readdata("Borrec");
-# readdata("nSaSvSss0");
-# readdata("autchamrec0");
+readdata("Borrec");
+readdata("nSaSvSss0");
+readdata("autchamrec0");
 
 #Read("BorcherdsSelectWalls.g");
 Read("Walls.g");
@@ -50,7 +50,7 @@ walls0lf:=BorcherdsSelectWalls(twalls0lf);
 
 if walls0lf<>twalls0lf then beep(919911); fi;
 
-wallsresults:=Make_Walls(Borrec, autchamrec0.periodorbs);
+wallsresults:=Make_Walls(Borrec, autchamrec0.periodorbs*GramS);
 
 if Set(wallsresults, xx->xx[1]) <>[true] then beep(887711); fi;
 

@@ -3611,3 +3611,771 @@ gap> Read("GeneralStabChainCheckTask1.g");
 2 kk 1 dim 6 disc [ 2, 2, 2, 2, 2, 26 ] size 103680 
 2 kk 2 dim 2 disc [ 4, 4 ] size 4 
 2 kk 2 dim 3 disc [ 2, 2, 40 ] size 32 
+2 kk 2 dim 4 disc [ 2, 2, 12, 24 ] size 768 
+3 kk 1 dim 2 disc [ 2, 2 ] size 2 
+3 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+3 kk 1 dim 4 disc [ 2, 2, 2, 26 ] size 240 
+3 kk 1 dim 5 disc [ 2, 2, 2, 2, 36 ] size 2880 
+3 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 12 ] size 184320 
+3 kk 2 dim 2 disc [ 2, 2 ] size 2 
+3 kk 2 dim 3 disc [ 2, 2, 24 ] size 96 
+3 kk 2 dim 4 disc [ 2, 2, 4, 4 ] size 96 
+3 kk 2 dim 5 disc [ 2, 2, 2, 2, 80 ] size 4608 
+4 kk 1 dim 2 disc [ 2, 6 ] size 12 
+4 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+4 kk 1 dim 4 disc [ 2, 2, 4, 4 ] size 192 
+4 kk 1 dim 5 disc [ 2, 2, 2, 2, 4 ] size 1440 
+4 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 4 ] size 46080 
+4 kk 2 dim 2 disc [ 4, 4 ] size 8 
+4 kk 2 dim 3 disc [ 4, 4, 16 ] size 128 
+4 kk 2 dim 4 disc [ 2, 2, 4, 12 ] size 384 
+5 kk 1 dim 2 disc [ 4, 4 ] size 4 
+5 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+5 kk 1 dim 4 disc [ 2, 2, 2, 10 ] size 240 
+5 kk 1 dim 5 disc [ 2, 2, 2, 2, 4 ] size 1440 
+5 kk 1 dim 6 disc [ 2, 2, 2, 2, 2, 38 ] size 103680 
+5 kk 2 dim 2 disc [ 2, 6 ] size 12 
+5 kk 2 dim 3 disc [ 2, 2, 56 ] size 96 
+5 kk 2 dim 4 disc [ 2, 2, 4, 36 ] size 384 
+6 kk 1 dim 2 disc [ 2, 6 ] size 12 
+6 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+6 kk 1 dim 4 disc [ 2, 2, 8, 8 ] size 2304 
+6 kk 1 dim 5 disc [ 2, 2, 4, 4, 12 ] size 18432 
+6 kk 1 dim 6 disc [ 2, 2, 2, 2, 8, 8 ] size 147456 
+6 kk 2 dim 2 disc [ 4, 20 ] size 24 
+6 kk 2 dim 3 disc [ 2, 2, 32 ] size 16 
+6 kk 2 dim 4 disc [ 2, 2, 4, 68 ] size 192 
+6 kk 2 dim 5 disc [ 2, 2, 2, 2, 120 ] size 9216 
+7 kk 1 dim 2 disc [ 4, 4 ] size 8 
+7 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+7 kk 1 dim 4 disc [ 2, 2, 2, 2 ] size 72 
+7 kk 1 dim 5 disc [ 2, 2, 4, 4, 16 ] size 12288 
+7 kk 1 dim 6 disc [ 2, 2, 2, 2, 2, 18 ] size 80640 
+7 kk 2 dim 2 disc [ 4, 8 ] size 8 
+7 kk 2 dim 3 disc [ 4, 4, 8 ] size 96 
+7 kk 2 dim 4 disc [ 2, 2, 4, 28 ] size 2304 
+7 kk 2 dim 5 disc [ 2, 2, 2, 2, 112 ] size 4608 
+8 kk 1 dim 2 disc [ 2, 2 ] size 2 
+8 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+8 kk 1 dim 4 disc [ 2, 2, 4, 8 ] size 192 
+8 kk 1 dim 5 disc [ 2, 2, 2, 2, 8 ] size 3840 
+8 kk 1 dim 6 disc [ 2, 2, 2, 2, 2, 30 ] size 161280 
+8 kk 2 dim 2 disc [ 2, 10 ] size 12 
+8 kk 2 dim 3 disc [ 2, 2, 28 ] size 24 
+8 kk 2 dim 4 disc [ 2, 2, 4, 108 ] size 768 
+8 kk 2 dim 5 disc [ 2, 2, 2, 2, 4 ] size 1440 
+9 kk 1 dim 2 disc [ 2, 2 ] size 2 
+9 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+9 kk 1 dim 4 disc [ 2, 2, 2, 2 ] size 72 
+9 kk 1 dim 5 disc [ 2, 2, 2, 2, 4 ] size 1440 
+9 kk 1 dim 6 disc [ 2, 2, 2, 2, 2, 2 ] size 40320 
+9 kk 2 dim 2 disc [ 4, 12 ] size 16 
+9 kk 2 dim 3 disc [ 2, 2, 12 ] size 24 
+9 kk 2 dim 4 disc [ 2, 2, 4, 28 ] size 384 
+9 kk 2 dim 5 disc [ 2, 2, 2, 2, 136 ] size 7680 
+10 kk 1 dim 2 disc [ 4, 4 ] size 8 
+10 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+10 kk 1 dim 4 disc [ 2, 2, 8, 8 ] size 1536 
+10 kk 1 dim 5 disc [ 2, 2, 2, 2, 88 ] size 7680 
+10 kk 1 dim 6 disc [ 2, 2, 2, 2, 2, 58 ] size 103680 
+10 kk 2 dim 2 disc [ 4, 8 ] size 8 
+10 kk 2 dim 3 disc [ 2, 2, 12 ] size 24 
+10 kk 2 dim 4 disc [ 2, 2, 4, 92 ] size 384 
+11 kk 1 dim 2 disc [ 2, 6 ] size 12 
+11 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+11 kk 1 dim 4 disc [ 2, 2, 2, 2 ] size 72 
+11 kk 1 dim 5 disc [ 2, 2, 2, 2, 20 ] size 2880 
+11 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 16 ] size 92160 
+11 kk 2 dim 2 disc [ 2, 2 ] size 2 
+11 kk 2 dim 3 disc [ 4, 4, 16 ] size 384 
+11 kk 2 dim 4 disc [ 2, 2, 8, 32 ] size 512 
+12 kk 1 dim 2 disc [ 2, 6 ] size 12 
+12 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+12 kk 1 dim 4 disc [ 2, 2, 4, 4 ] size 96 
+12 kk 1 dim 5 disc [ 2, 2, 2, 2, 32 ] size 2304 
+12 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 12 ] size 92160 
+12 kk 2 dim 2 disc [ 2, 30 ] size 8 
+12 kk 2 dim 3 disc [ 2, 2, 24 ] size 32 
+12 kk 2 dim 4 disc [ 2, 2, 2, 10 ] size 240 
+12 kk 2 dim 5 disc [ 2, 2, 2, 6, 24 ] size 9216 
+12 kk 2 dim 6 disc [ 2, 2, 2, 2, 8, 8 ] size 147456 
+13 kk 1 dim 2 disc [ 2, 2 ] size 2 
+13 kk 1 dim 3 disc [ 2, 2, 12 ] size 24 
+13 kk 1 dim 4 disc [ 2, 2, 2, 6 ] size 240 
+13 kk 1 dim 5 disc [ 2, 2, 2, 2, 76 ] size 2880 
+13 kk 2 dim 2 disc [ 4, 8 ] size 8 
+13 kk 2 dim 3 disc [ 2, 2, 4 ] size 12 
+13 kk 2 dim 4 disc [ 2, 2, 2, 26 ] size 240 
+13 kk 2 dim 5 disc [ 2, 2, 2, 2, 76 ] size 2880 
+13 kk 2 dim 6 disc [ 2, 2, 2, 2, 2, 70 ] size 207360 
+14 kk 1 dim 2 disc [ 4, 4 ] size 8 
+14 kk 1 dim 3 disc [ 2, 2, 16 ] size 48 
+14 kk 1 dim 4 disc [ 2, 2, 2, 18 ] size 144 
+14 kk 1 dim 5 disc [ 2, 2, 2, 2, 4 ] size 1440 
+14 kk 1 dim 6 disc [ 2, 2, 2, 2, 2, 10 ] size 103680 
+14 kk 2 dim 2 disc [ 4, 12 ] size 16 
+14 kk 2 dim 3 disc [ 2, 2, 40 ] size 96 
+14 kk 2 dim 4 disc [ 2, 2, 4, 140 ] size 384 
+15 kk 1 dim 2 disc [ 2, 2 ] size 2 
+15 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+15 kk 1 dim 4 disc [ 2, 2, 4, 8 ] size 192 
+15 kk 1 dim 5 disc [ 2, 2, 2, 2, 24 ] size 7680 
+15 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 20 ] size 245760 
+15 kk 2 dim 2 disc [ 4, 4 ] size 8 
+15 kk 2 dim 3 disc [ 2, 2, 152 ] size 32 
+15 kk 2 dim 4 disc [ 2, 2, 12, 12 ] size 384 
+15 kk 2 dim 5 disc [ 2, 2, 2, 2, 32 ] size 2304 
+15 kk 2 dim 6 disc [ 2, 2, 2, 2, 4, 8 ] size 92160 
+16 kk 1 dim 2 disc [ 4, 4 ] size 4 
+16 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+16 kk 1 dim 4 disc [ 2, 2, 2, 2 ] size 72 
+16 kk 1 dim 5 disc [ 2, 2, 2, 2, 36 ] size 2880 
+16 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 12 ] size 245760 
+16 kk 2 dim 2 disc [ 2, 6 ] size 12 
+16 kk 2 dim 3 disc [ 4, 4, 4 ] size 32 
+17 kk 1 dim 2 disc [ 2, 6 ] size 12 
+17 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+17 kk 1 dim 4 disc [ 2, 2, 8, 8 ] size 1536 
+17 kk 1 dim 5 disc [ 2, 2, 2, 2, 68 ] size 2880 
+17 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 4 ] size 73728 
+17 kk 2 dim 2 disc [ 2, 2 ] size 2 
+17 kk 2 dim 3 disc [ 2, 6, 36 ] size 144 
+18 kk 1 dim 2 disc [ 2, 10 ] size 12 
+18 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+18 kk 1 dim 4 disc [ 2, 2, 2, 10 ] size 240 
+18 kk 1 dim 5 disc [ 2, 2, 2, 2, 96 ] size 7680 
+18 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 40 ] size 184320 
+18 kk 2 dim 2 disc [ 2, 2 ] size 2 
+18 kk 2 dim 3 disc [ 4, 4, 8 ] size 96 
+18 kk 2 dim 4 disc [ 2, 2, 2, 70 ] size 480 
+19 kk 1 dim 2 disc [ 2, 2 ] size 2 
+19 kk 1 dim 3 disc [ 2, 2, 8 ] size 16 
+19 kk 1 dim 4 disc [ 2, 2, 2, 10 ] size 240 
+19 kk 1 dim 5 disc [ 2, 2, 2, 2, 40 ] size 7680 
+19 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 32 ] size 184320 
+19 kk 2 dim 2 disc [ 2, 34 ] size 4 
+19 kk 2 dim 3 disc [ 4, 4, 8 ] size 96 
+19 kk 2 dim 4 disc [ 2, 2, 4, 72 ] size 384 
+20 kk 1 dim 2 disc [ 2, 10 ] size 12 
+20 kk 1 dim 3 disc [ 2, 2, 24 ] size 96 
+20 kk 1 dim 4 disc [ 2, 2, 4, 8 ] size 192 
+20 kk 1 dim 5 disc [ 2, 2, 2, 2, 72 ] size 7680 
+20 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 12 ] size 92160 
+20 kk 2 dim 2 disc [ 4, 12 ] size 16 
+20 kk 2 dim 3 disc [ 2, 2, 20 ] size 24 
+20 kk 2 dim 4 disc [ 2, 2, 4, 4 ] size 128 
+21 kk 1 dim 2 disc [ 4, 4 ] size 4 
+21 kk 1 dim 3 disc [ 2, 2, 16 ] size 48 
+21 kk 1 dim 4 disc [ 2, 2, 4, 24 ] size 384 
+21 kk 1 dim 5 disc [ 2, 2, 2, 2, 52 ] size 2880 
+21 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 20 ] size 92160 
+21 kk 2 dim 2 disc [ 4, 4 ] size 4 
+21 kk 2 dim 3 disc [ 2, 2, 4 ] size 12 
+21 kk 2 dim 4 disc [ 2, 2, 4, 56 ] size 384 
+21 kk 2 dim 5 disc [ 2, 2, 2, 2, 120 ] size 9216 
+22 kk 1 dim 2 disc [ 2, 2 ] size 2 
+22 kk 1 dim 3 disc [ 2, 2, 24 ] size 96 
+22 kk 1 dim 4 disc [ 2, 2, 2, 6 ] size 240 
+22 kk 1 dim 5 disc [ 2, 2, 2, 2, 16 ] size 3840 
+22 kk 1 dim 6 disc [ 2, 2, 2, 2, 12, 12 ] size 368640 
+22 kk 2 dim 2 disc [ 4, 4 ] size 4 
+22 kk 2 dim 3 disc [ 4, 4, 4 ] size 32 
+22 kk 2 dim 4 disc [ 2, 2, 2, 30 ] size 288 
+22 kk 2 dim 5 disc [ 2, 2, 2, 2, 100 ] size 2880 
+23 kk 1 dim 2 disc [ 2, 10 ] size 12 
+23 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+23 kk 1 dim 4 disc [ 2, 2, 4, 4 ] size 96 
+23 kk 1 dim 5 disc [ 2, 2, 2, 2, 4 ] size 1440 
+23 kk 2 dim 2 disc [ 4, 12 ] size 16 
+23 kk 2 dim 3 disc [ 2, 2, 28 ] size 24 
+23 kk 2 dim 4 disc [ 2, 2, 2, 50 ] size 144 
+24 kk 1 dim 2 disc [ 2, 2 ] size 2 
+24 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+24 kk 1 dim 4 disc [ 2, 2, 8, 16 ] size 1536 
+24 kk 1 dim 5 disc [ 2, 2, 2, 2, 12 ] size 2880 
+24 kk 1 dim 6 disc [ 2, 2, 2, 2, 2, 14 ] size 80640 
+24 kk 2 dim 2 disc [ 2, 10 ] size 12 
+24 kk 2 dim 3 disc [ 2, 2, 56 ] size 32 
+24 kk 2 dim 4 disc [ 2, 2, 2, 114 ] size 288 
+25 kk 1 dim 2 disc [ 2, 10 ] size 12 
+25 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+25 kk 1 dim 4 disc [ 2, 2, 4, 4 ] size 192 
+25 kk 1 dim 5 disc [ 2, 2, 2, 2, 32 ] size 2304 
+25 kk 1 dim 6 disc [ 2, 2, 2, 2, 2, 6 ] size 103680 
+25 kk 2 dim 2 disc [ 2, 14 ] size 4 
+25 kk 2 dim 3 disc [ 4, 4, 16 ] size 128 
+25 kk 2 dim 4 disc [ 2, 2, 2, 50 ] size 144 
+26 kk 1 dim 2 disc [ 2, 2 ] size 2 
+26 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+26 kk 1 dim 4 disc [ 2, 2, 2, 22 ] size 240 
+26 kk 1 dim 5 disc [ 2, 2, 2, 2, 16 ] size 3840 
+26 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 24 ] size 184320 
+26 kk 2 dim 2 disc [ 2, 14 ] size 4 
+26 kk 2 dim 3 disc [ 2, 2, 32 ] size 16 
+26 kk 2 dim 4 disc [ 2, 2, 2, 354 ] size 288 
+26 kk 2 dim 5 disc [ 2, 2, 2, 2, 104 ] size 4608 
+27 kk 1 dim 2 disc [ 2, 2 ] size 2 
+27 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+27 kk 1 dim 4 disc [ 2, 2, 2, 38 ] size 240 
+27 kk 1 dim 5 disc [ 2, 2, 4, 4, 4 ] size 3072 
+27 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 36 ] size 92160 
+27 kk 2 dim 2 disc [ 4, 20 ] size 24 
+27 kk 2 dim 3 disc [ 4, 4, 20 ] size 192 
+27 kk 2 dim 4 disc [ 2, 2, 2, 14 ] size 144 
+27 kk 2 dim 5 disc [ 2, 2, 2, 2, 48 ] size 4608 
+28 kk 1 dim 2 disc [ 4, 4 ] size 8 
+28 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+28 kk 1 dim 4 disc [ 2, 2, 2, 10 ] size 240 
+28 kk 1 dim 5 disc [ 2, 2, 2, 2, 4 ] size 1440 
+28 kk 1 dim 6 disc [ 2, 2, 2, 2, 2, 22 ] size 103680 
+28 kk 2 dim 2 disc [ 8, 8 ] size 16 
+28 kk 2 dim 3 disc [ 2, 2, 8 ] size 16 
+28 kk 2 dim 4 disc [ 2, 2, 4, 12 ] size 384 
+29 kk 1 dim 2 disc [ 2, 10 ] size 12 
+29 kk 1 dim 3 disc [ 4, 4, 4 ] size 32 
+29 kk 1 dim 4 disc [ 2, 2, 6, 6 ] size 288 
+29 kk 1 dim 5 disc [ 2, 2, 2, 2, 4 ] size 1440 
+29 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 28 ] size 92160 
+29 kk 2 dim 2 disc [ 2, 18 ] size 4 
+29 kk 2 dim 3 disc [ 2, 2, 84 ] size 48 
+29 kk 2 dim 4 disc [ 2, 2, 4, 20 ] size 768 
+29 kk 2 dim 5 disc [ 2, 2, 2, 2, 172 ] size 2880 
+30 kk 1 dim 2 disc [ 4, 4 ] size 4 
+30 kk 1 dim 3 disc [ 2, 2, 24 ] size 96 
+30 kk 1 dim 4 disc [ 2, 2, 2, 14 ] size 144 
+30 kk 1 dim 5 disc [ 2, 2, 2, 2, 28 ] size 2880 
+30 kk 1 dim 6 disc [ 2, 2, 2, 2, 2, 18 ] size 80640 
+30 kk 2 dim 2 disc [ 4, 8 ] size 8 
+30 kk 2 dim 3 disc [ 2, 2, 4 ] size 12 
+30 kk 2 dim 4 disc [ 2, 2, 4, 4 ] size 128 
+31 kk 1 dim 2 disc [ 2, 2 ] size 2 
+31 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+31 kk 1 dim 4 disc [ 2, 2, 4, 8 ] size 192 
+31 kk 1 dim 5 disc [ 2, 2, 2, 2, 88 ] size 7680 
+31 kk 2 dim 2 disc [ 4, 12 ] size 16 
+31 kk 2 dim 3 disc [ 2, 2, 72 ] size 32 
+31 kk 2 dim 4 disc [ 2, 2, 12, 24 ] size 768 
+32 kk 1 dim 2 disc [ 2, 6 ] size 12 
+32 kk 1 dim 3 disc [ 2, 2, 24 ] size 96 
+32 kk 1 dim 4 disc [ 2, 2, 2, 10 ] size 240 
+32 kk 1 dim 5 disc [ 2, 2, 2, 2, 28 ] size 2880 
+32 kk 1 dim 6 disc [ 2, 2, 2, 2, 6, 18 ] size 622080 
+32 kk 2 dim 2 disc [ 4, 12 ] size 24 
+32 kk 2 dim 3 disc [ 2, 2, 12 ] size 24 
+32 kk 2 dim 4 disc [ 2, 2, 4, 8 ] size 192 
+33 kk 1 dim 2 disc [ 2, 6 ] size 12 
+33 kk 1 dim 3 disc [ 2, 2, 24 ] size 96 
+33 kk 1 dim 4 disc [ 2, 2, 2, 2 ] size 72 
+33 kk 1 dim 5 disc [ 2, 2, 2, 2, 36 ] size 2880 
+33 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 16 ] size 92160 
+33 kk 2 dim 2 disc [ 2, 14 ] size 4 
+33 kk 2 dim 3 disc [ 2, 2, 16 ] size 48 
+33 kk 2 dim 4 disc [ 2, 2, 4, 4 ] size 192 
+33 kk 2 dim 5 disc [ 2, 2, 4, 4, 4 ] size 3072 
+34 kk 1 dim 2 disc [ 2, 2 ] size 2 
+34 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+34 kk 1 dim 4 disc [ 2, 2, 4, 12 ] size 768 
+34 kk 1 dim 5 disc [ 2, 2, 2, 2, 20 ] size 2880 
+34 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 16 ] size 92160 
+34 kk 2 dim 2 disc [ 2, 2 ] size 2 
+34 kk 2 dim 3 disc [ 4, 4, 4 ] size 32 
+34 kk 2 dim 4 disc [ 2, 2, 4, 4 ] size 96 
+35 kk 1 dim 2 disc [ 2, 6 ] size 12 
+35 kk 1 dim 3 disc [ 2, 2, 16 ] size 48 
+35 kk 1 dim 4 disc [ 2, 2, 2, 10 ] size 240 
+35 kk 1 dim 5 disc [ 2, 2, 2, 2, 24 ] size 4608 
+35 kk 1 dim 6 disc [ 2, 2, 2, 2, 2, 18 ] size 80640 
+35 kk 2 dim 2 disc [ 2, 2 ] size 2 
+35 kk 2 dim 3 disc [ 4, 4, 8 ] size 96 
+35 kk 2 dim 4 disc [ 2, 2, 4, 72 ] size 384 
+36 kk 1 dim 2 disc [ 2, 2 ] size 2 
+36 kk 1 dim 3 disc [ 2, 2, 8 ] size 16 
+36 kk 1 dim 4 disc [ 2, 2, 8, 8 ] size 1536 
+36 kk 1 dim 5 disc [ 2, 2, 2, 2, 24 ] size 7680 
+36 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 8 ] size 92160 
+36 kk 2 dim 2 disc [ 4, 12 ] size 16 
+36 kk 2 dim 3 disc [ 2, 2, 12 ] size 24 
+36 kk 2 dim 4 disc [ 2, 2, 4, 124 ] size 256 
+37 kk 1 dim 2 disc [ 2, 6 ] size 12 
+37 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+37 kk 1 dim 4 disc [ 2, 2, 2, 10 ] size 240 
+37 kk 1 dim 5 disc [ 2, 2, 2, 2, 4 ] size 1440 
+37 kk 1 dim 6 disc [ 2, 2, 2, 2, 2, 54 ] size 103680 
+37 kk 2 dim 2 disc [ 2, 30 ] size 8 
+37 kk 2 dim 3 disc [ 2, 2, 8 ] size 16 
+37 kk 2 dim 4 disc [ 2, 2, 2, 78 ] size 288 
+38 kk 1 dim 2 disc [ 4, 4 ] size 4 
+38 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+38 kk 1 dim 4 disc [ 2, 2, 2, 2 ] size 72 
+38 kk 1 dim 5 disc [ 2, 2, 2, 2, 4 ] size 1440 
+38 kk 2 dim 2 disc [ 2, 2 ] size 2 
+38 kk 2 dim 3 disc [ 2, 2, 36 ] size 24 
+38 kk 2 dim 4 disc [ 2, 2, 4, 28 ] size 192 
+39 kk 1 dim 2 disc [ 2, 2 ] size 2 
+39 kk 1 dim 3 disc [ 2, 2, 8 ] size 16 
+39 kk 1 dim 4 disc [ 2, 2, 4, 4 ] size 96 
+39 kk 1 dim 5 disc [ 2, 2, 2, 2, 20 ] size 2880 
+39 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 12 ] size 184320 
+39 kk 2 dim 2 disc [ 4, 8 ] size 8 
+39 kk 2 dim 3 disc [ 2, 6, 36 ] size 144 
+39 kk 2 dim 4 disc [ 2, 2, 4, 116 ] size 192 
+39 kk 2 dim 5 disc [ 2, 2, 2, 2, 100 ] size 2880 
+40 kk 1 dim 2 disc [ 4, 4 ] size 4 
+40 kk 1 dim 3 disc [ 2, 2, 24 ] size 96 
+40 kk 1 dim 4 disc [ 2, 2, 4, 4 ] size 128 
+40 kk 1 dim 5 disc [ 2, 2, 2, 2, 20 ] size 2880 
+40 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 4 ] size 46080 
+40 kk 2 dim 2 disc [ 4, 4 ] size 4 
+40 kk 2 dim 3 disc [ 2, 2, 4 ] size 12 
+40 kk 2 dim 4 disc [ 2, 2, 4, 100 ] size 384 
+40 kk 2 dim 5 disc [ 2, 2, 2, 2, 104 ] size 4608 
+41 kk 1 dim 2 disc [ 2, 2 ] size 2 
+41 kk 1 dim 3 disc [ 2, 2, 16 ] size 48 
+41 kk 1 dim 4 disc [ 2, 2, 4, 12 ] size 192 
+41 kk 1 dim 5 disc [ 2, 2, 2, 2, 8 ] size 2304 
+41 kk 1 dim 6 disc [ 2, 2, 2, 2, 6, 18 ] size 622080 
+41 kk 2 dim 2 disc [ 2, 14 ] size 4 
+41 kk 2 dim 3 disc [ 2, 2, 16 ] size 48 
+41 kk 2 dim 4 disc [ 2, 2, 2, 50 ] size 144 
+42 kk 1 dim 2 disc [ 2, 2 ] size 2 
+42 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+42 kk 1 dim 4 disc [ 2, 2, 4, 4 ] size 192 
+42 kk 1 dim 5 disc [ 2, 2, 2, 2, 4 ] size 1440 
+42 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 12 ] size 184320 
+42 kk 2 dim 2 disc [ 4, 4 ] size 8 
+42 kk 2 dim 3 disc [ 2, 2, 32 ] size 16 
+42 kk 2 dim 4 disc [ 2, 2, 2, 34 ] size 144 
+43 kk 1 dim 2 disc [ 2, 2 ] size 2 
+43 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+43 kk 1 dim 4 disc [ 2, 2, 4, 8 ] size 192 
+43 kk 1 dim 5 disc [ 2, 2, 2, 2, 8 ] size 3840 
+43 kk 2 dim 2 disc [ 4, 12 ] size 16 
+43 kk 2 dim 3 disc [ 2, 2, 20 ] size 24 
+43 kk 2 dim 4 disc [ 2, 2, 2, 30 ] size 288 
+44 kk 1 dim 2 disc [ 2, 2 ] size 2 
+44 kk 1 dim 3 disc [ 2, 2, 12 ] size 24 
+44 kk 1 dim 4 disc [ 2, 2, 2, 18 ] size 144 
+44 kk 1 dim 5 disc [ 2, 2, 2, 2, 72 ] size 7680 
+44 kk 1 dim 6 disc [ 2, 2, 2, 2, 2, 90 ] size 207360 
+44 kk 2 dim 2 disc [ 2, 2 ] size 2 
+44 kk 2 dim 3 disc [ 2, 2, 4 ] size 12 
+44 kk 2 dim 4 disc [ 4, 4, 4, 28 ] size 3072 
+45 kk 1 dim 2 disc [ 2, 2 ] size 2 
+45 kk 1 dim 3 disc [ 2, 2, 16 ] size 48 
+45 kk 1 dim 4 disc [ 2, 2, 2, 14 ] size 144 
+45 kk 1 dim 5 disc [ 2, 2, 2, 2, 24 ] size 7680 
+45 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 24 ] size 184320 
+45 kk 2 dim 2 disc [ 4, 4 ] size 4 
+45 kk 2 dim 3 disc [ 4, 4, 8 ] size 64 
+45 kk 2 dim 4 disc [ 2, 2, 2, 158 ] size 144 
+45 kk 2 dim 5 disc [ 2, 2, 2, 6, 12 ] size 5760 
+46 kk 1 dim 2 disc [ 2, 2 ] size 2 
+46 kk 1 dim 3 disc [ 2, 2, 24 ] size 96 
+46 kk 1 dim 4 disc [ 2, 2, 2, 6 ] size 240 
+46 kk 1 dim 5 disc [ 2, 2, 4, 4, 4 ] size 3072 
+46 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 40 ] size 184320 
+46 kk 2 dim 2 disc [ 2, 18 ] size 4 
+46 kk 2 dim 3 disc [ 2, 2, 40 ] size 96 
+46 kk 2 dim 4 disc [ 2, 2, 4, 4 ] size 128 
+46 kk 2 dim 5 disc [ 2, 2, 4, 4, 40 ] size 12288 
+47 kk 1 dim 2 disc [ 2, 2 ] size 2 
+47 kk 1 dim 3 disc [ 2, 2, 8 ] size 48 
+47 kk 1 dim 4 disc [ 2, 2, 2, 2 ] size 72 
+47 kk 1 dim 5 disc [ 2, 2, 2, 2, 8 ] size 2304 
+47 kk 1 dim 6 disc [ 2, 2, 2, 2, 8, 8 ] size 737280 
+47 kk 2 dim 2 disc [ 4, 4 ] size 4 
+47 kk 2 dim 3 disc [ 2, 2, 20 ] size 24 
+47 kk 2 dim 4 disc [ 2, 2, 12, 12 ] size 9216 
+48 kk 1 dim 2 disc [ 4, 4 ] size 4 
+48 kk 1 dim 3 disc [ 2, 2, 12 ] size 24 
+48 kk 1 dim 4 disc [ 2, 2, 4, 4 ] size 96 
+48 kk 1 dim 5 disc [ 2, 2, 2, 2, 56 ] size 7680 
+48 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 4 ] size 73728 
+48 kk 2 dim 2 disc [ 4, 4 ] size 8 
+48 kk 2 dim 3 disc [ 2, 2, 52 ] size 24 
+48 kk 2 dim 4 disc [ 2, 2, 4, 52 ] size 384 
+48 kk 2 dim 5 disc [ 2, 2, 2, 6, 12 ] size 5760 
+49 kk 1 dim 2 disc [ 4, 4 ] size 4 
+49 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+49 kk 1 dim 4 disc [ 2, 2, 2, 10 ] size 240 
+49 kk 1 dim 5 disc [ 2, 2, 2, 2, 8 ] size 2304 
+49 kk 2 dim 2 disc [ 2, 34 ] size 4 
+49 kk 2 dim 3 disc [ 4, 4, 24 ] size 128 
+49 kk 2 dim 4 disc [ 2, 2, 12, 36 ] size 1152 
+50 kk 1 dim 2 disc [ 2, 10 ] size 12 
+50 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+50 kk 1 dim 4 disc [ 2, 2, 2, 26 ] size 240 
+50 kk 1 dim 5 disc [ 2, 2, 2, 2, 60 ] size 5760 
+50 kk 1 dim 6 disc [ 2, 2, 2, 2, 2, 2 ] size 40320 
+50 kk 2 dim 2 disc [ 4, 8 ] size 8 
+50 kk 2 dim 3 disc [ 2, 2, 12 ] size 24 
+50 kk 2 dim 4 disc [ 2, 2, 4, 24 ] size 384 
+51 kk 1 dim 2 disc [ 4, 4 ] size 4 
+51 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+51 kk 1 dim 4 disc [ 2, 2, 2, 6 ] size 240 
+51 kk 1 dim 5 disc [ 2, 2, 2, 2, 16 ] size 3840 
+51 kk 1 dim 6 disc [ 2, 2, 2, 2, 2, 50 ] size 80640 
+51 kk 2 dim 2 disc [ 4, 8 ] size 8 
+51 kk 2 dim 3 disc [ 2, 10, 20 ] size 144 
+51 kk 2 dim 4 disc [ 2, 2, 2, 110 ] size 288 
+51 kk 2 dim 5 disc [ 2, 2, 2, 2, 52 ] size 2880 
+52 kk 1 dim 2 disc [ 2, 2 ] size 2 
+52 kk 1 dim 3 disc [ 2, 2, 12 ] size 24 
+52 kk 1 dim 4 disc [ 2, 2, 2, 10 ] size 240 
+52 kk 1 dim 5 disc [ 2, 2, 2, 2, 88 ] size 7680 
+52 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 4 ] size 73728 
+52 kk 2 dim 2 disc [ 8, 8 ] size 16 
+52 kk 2 dim 3 disc [ 4, 4, 4 ] size 32 
+52 kk 2 dim 4 disc [ 2, 2, 8, 56 ] size 512 
+53 kk 1 dim 2 disc [ 2, 2 ] size 2 
+53 kk 1 dim 3 disc [ 2, 2, 16 ] size 48 
+53 kk 1 dim 4 disc [ 2, 2, 2, 18 ] size 144 
+53 kk 1 dim 5 disc [ 2, 2, 2, 2, 8 ] size 2304 
+53 kk 1 dim 6 disc [ 2, 2, 2, 2, 2, 54 ] size 103680 
+53 kk 2 dim 2 disc [ 2, 10 ] size 12 
+53 kk 2 dim 3 disc [ 4, 4, 8 ] size 64 
+53 kk 2 dim 4 disc [ 2, 2, 4, 172 ] size 384 
+53 kk 2 dim 5 disc [ 2, 2, 2, 2, 28 ] size 2880 
+54 kk 1 dim 2 disc [ 2, 2 ] size 2 
+54 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+54 kk 1 dim 4 disc [ 2, 2, 2, 2 ] size 72 
+54 kk 1 dim 5 disc [ 2, 2, 4, 4, 4 ] size 3072 
+54 kk 1 dim 6 disc [ 2, 2, 2, 2, 2, 74 ] size 103680 
+54 kk 2 dim 2 disc [ 4, 4 ] size 4 
+54 kk 2 dim 3 disc [ 2, 2, 28 ] size 24 
+54 kk 2 dim 4 disc [ 2, 2, 4, 12 ] size 192 
+54 kk 2 dim 5 disc [ 2, 2, 2, 2, 36 ] size 2880 
+55 kk 1 dim 2 disc [ 4, 4 ] size 4 
+55 kk 1 dim 3 disc [ 2, 2, 8 ] size 16 
+55 kk 1 dim 4 disc [ 2, 2, 6, 6 ] size 288 
+55 kk 1 dim 5 disc [ 2, 2, 2, 2, 40 ] size 7680 
+55 kk 1 dim 6 disc [ 2, 2, 2, 2, 2, 22 ] size 103680 
+55 kk 2 dim 2 disc [ 4, 20 ] size 24 
+55 kk 2 dim 3 disc [ 2, 2, 12 ] size 24 
+55 kk 2 dim 4 disc [ 2, 2, 8, 8 ] size 256 
+55 kk 2 dim 5 disc [ 2, 2, 2, 2, 44 ] size 2880 
+56 kk 1 dim 2 disc [ 2, 10 ] size 12 
+56 kk 1 dim 3 disc [ 2, 2, 20 ] size 24 
+56 kk 1 dim 4 disc [ 2, 2, 2, 2 ] size 72 
+56 kk 1 dim 5 disc [ 2, 2, 2, 2, 12 ] size 2880 
+56 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 4 ] size 46080 
+56 kk 2 dim 2 disc [ 2, 14 ] size 4 
+56 kk 2 dim 3 disc [ 2, 2, 16 ] size 16 
+56 kk 2 dim 4 disc [ 2, 2, 2, 38 ] size 240 
+57 kk 1 dim 2 disc [ 2, 2 ] size 2 
+57 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+57 kk 1 dim 4 disc [ 2, 2, 2, 6 ] size 240 
+57 kk 1 dim 5 disc [ 2, 2, 2, 2, 68 ] size 2880 
+57 kk 2 dim 2 disc [ 4, 20 ] size 24 
+57 kk 2 dim 3 disc [ 2, 6, 12 ] size 48 
+57 kk 2 dim 4 disc [ 2, 2, 2, 234 ] size 480 
+58 kk 1 dim 2 disc [ 2, 2 ] size 2 
+58 kk 1 dim 3 disc [ 2, 2, 24 ] size 96 
+58 kk 1 dim 4 disc [ 2, 2, 2, 10 ] size 240 
+58 kk 1 dim 5 disc [ 2, 2, 2, 2, 12 ] size 2880 
+58 kk 2 dim 2 disc [ 2, 14 ] size 4 
+58 kk 2 dim 3 disc [ 4, 4, 12 ] size 192 
+58 kk 2 dim 4 disc [ 2, 2, 4, 32 ] size 384 
+59 kk 1 dim 2 disc [ 2, 6 ] size 12 
+59 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+59 kk 1 dim 4 disc [ 2, 2, 2, 10 ] size 240 
+59 kk 1 dim 5 disc [ 2, 2, 2, 2, 44 ] size 2880 
+59 kk 1 dim 6 disc [ 2, 2, 2, 2, 2, 42 ] size 207360 
+59 kk 2 dim 2 disc [ 4, 4 ] size 8 
+59 kk 2 dim 3 disc [ 4, 4, 8 ] size 96 
+59 kk 2 dim 4 disc [ 2, 2, 4, 64 ] size 384 
+59 kk 2 dim 5 disc [ 2, 2, 2, 2, 68 ] size 2880 
+60 kk 1 dim 2 disc [ 2, 2 ] size 2 
+60 kk 1 dim 3 disc [ 2, 2, 8 ] size 48 
+60 kk 1 dim 4 disc [ 2, 2, 2, 6 ] size 240 
+60 kk 1 dim 5 disc [ 2, 2, 2, 2, 40 ] size 7680 
+60 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 24 ] size 184320 
+60 kk 2 dim 2 disc [ 2, 2 ] size 2 
+60 kk 2 dim 3 disc [ 2, 2, 12 ] size 24 
+60 kk 2 dim 4 disc [ 2, 2, 4, 28 ] size 384 
+60 kk 2 dim 6 disc [ 2, 2, 2, 2, 4, 8 ] size 92160 
+61 kk 1 dim 2 disc [ 2, 2 ] size 2 
+61 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+61 kk 1 dim 4 disc [ 2, 2, 2, 10 ] size 240 
+61 kk 1 dim 5 disc [ 2, 2, 2, 2, 24 ] size 7680 
+61 kk 1 dim 6 disc [ 2, 2, 2, 2, 2, 58 ] size 103680 
+61 kk 2 dim 2 disc [ 2, 18 ] size 4 
+61 kk 2 dim 3 disc [ 2, 2, 16 ] size 16 
+61 kk 2 dim 5 disc [ 2, 2, 2, 2, 112 ] size 4608 
+62 kk 1 dim 2 disc [ 2, 2 ] size 2 
+62 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+62 kk 1 dim 4 disc [ 2, 2, 2, 38 ] size 240 
+62 kk 1 dim 5 disc [ 2, 2, 2, 2, 156 ] size 5760 
+62 kk 1 dim 6 disc [ 2, 2, 2, 2, 2, 2 ] size 40320 
+62 kk 2 dim 2 disc [ 2, 2 ] size 2 
+62 kk 2 dim 3 disc [ 2, 2, 16 ] size 48 
+62 kk 2 dim 4 disc [ 2, 2, 4, 28 ] size 2304 
+62 kk 2 dim 5 disc [ 2, 2, 4, 4, 12 ] size 6144 
+63 kk 1 dim 2 disc [ 2, 10 ] size 12 
+63 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+63 kk 1 dim 4 disc [ 2, 2, 2, 6 ] size 240 
+63 kk 1 dim 5 disc [ 2, 2, 2, 2, 16 ] size 3840 
+63 kk 1 dim 6 disc [ 2, 2, 2, 2, 2, 14 ] size 80640 
+63 kk 2 dim 2 disc [ 4, 4 ] size 8 
+63 kk 2 dim 3 disc [ 2, 2, 72 ] size 32 
+63 kk 2 dim 4 disc [ 2, 2, 4, 88 ] size 384 
+64 kk 1 dim 2 disc [ 2, 6 ] size 12 
+64 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+64 kk 1 dim 4 disc [ 2, 2, 4, 4 ] size 96 
+64 kk 1 dim 5 disc [ 2, 2, 2, 2, 20 ] size 2880 
+64 kk 2 dim 2 disc [ 4, 4 ] size 8 
+64 kk 2 dim 3 disc [ 4, 4, 20 ] size 192 
+64 kk 2 dim 4 disc [ 2, 2, 8, 8 ] size 256 
+65 kk 1 dim 2 disc [ 2, 2 ] size 2 
+65 kk 1 dim 3 disc [ 2, 2, 16 ] size 48 
+65 kk 1 dim 4 disc [ 2, 2, 4, 4 ] size 192 
+65 kk 1 dim 5 disc [ 2, 2, 2, 2, 20 ] size 2880 
+65 kk 2 dim 2 disc [ 2, 2 ] size 2 
+65 kk 2 dim 3 disc [ 2, 2, 16 ] size 16 
+65 kk 2 dim 4 disc [ 2, 2, 4, 8 ] size 192 
+66 kk 1 dim 2 disc [ 2, 2 ] size 2 
+66 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+66 kk 1 dim 4 disc [ 2, 2, 4, 4 ] size 192 
+66 kk 1 dim 5 disc [ 2, 2, 2, 2, 24 ] size 7680 
+66 kk 1 dim 6 disc [ 2, 2, 2, 2, 2, 6 ] size 103680 
+66 kk 2 dim 2 disc [ 4, 12 ] size 16 
+66 kk 2 dim 3 disc [ 2, 2, 32 ] size 16 
+66 kk 2 dim 4 disc [ 2, 2, 2, 22 ] size 240 
+67 kk 1 dim 2 disc [ 2, 2 ] size 2 
+67 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+67 kk 1 dim 4 disc [ 2, 2, 4, 12 ] size 384 
+67 kk 1 dim 5 disc [ 2, 2, 2, 2, 32 ] size 3840 
+67 kk 2 dim 2 disc [ 2, 18 ] size 4 
+67 kk 2 dim 3 disc [ 4, 4, 12 ] size 192 
+67 kk 2 dim 4 disc [ 2, 2, 2, 30 ] size 288 
+67 kk 2 dim 6 disc [ 2, 2, 2, 2, 2, 6 ] size 103680 
+68 kk 1 dim 2 disc [ 2, 2 ] size 2 
+68 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+68 kk 1 dim 4 disc [ 2, 2, 2, 2 ] size 72 
+68 kk 1 dim 5 disc [ 2, 2, 2, 2, 20 ] size 2880 
+68 kk 2 dim 2 disc [ 2, 18 ] size 4 
+68 kk 2 dim 3 disc [ 2, 2, 4 ] size 12 
+68 kk 2 dim 4 disc [ 2, 2, 2, 30 ] size 288 
+68 kk 2 dim 5 disc [ 2, 2, 2, 2, 12 ] size 2880 
+69 kk 1 dim 2 disc [ 2, 6 ] size 12 
+69 kk 1 dim 3 disc [ 2, 2, 12 ] size 24 
+69 kk 1 dim 4 disc [ 2, 2, 2, 6 ] size 240 
+69 kk 1 dim 5 disc [ 2, 2, 2, 2, 52 ] size 2880 
+69 kk 2 dim 2 disc [ 2, 2 ] size 2 
+69 kk 2 dim 3 disc [ 2, 2, 128 ] size 16 
+69 kk 2 dim 4 disc [ 2, 2, 4, 4 ] size 192 
+70 kk 1 dim 2 disc [ 2, 6 ] size 12 
+70 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+70 kk 1 dim 4 disc [ 2, 2, 2, 26 ] size 240 
+70 kk 1 dim 5 disc [ 2, 2, 2, 2, 56 ] size 7680 
+70 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 4 ] size 46080 
+70 kk 2 dim 2 disc [ 4, 4 ] size 4 
+70 kk 2 dim 3 disc [ 2, 2, 92 ] size 24 
+71 kk 1 dim 2 disc [ 2, 2 ] size 2 
+71 kk 1 dim 3 disc [ 2, 2, 8 ] size 16 
+71 kk 1 dim 4 disc [ 2, 2, 2, 2 ] size 72 
+71 kk 1 dim 5 disc [ 2, 2, 4, 4, 4 ] size 3072 
+71 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 40 ] size 184320 
+71 kk 2 dim 2 disc [ 8, 8 ] size 16 
+71 kk 2 dim 3 disc [ 2, 2, 16 ] size 16 
+71 kk 2 dim 4 disc [ 2, 2, 4, 56 ] size 384 
+71 kk 2 dim 5 disc [ 2, 2, 2, 2, 16 ] size 2304 
+72 kk 1 dim 2 disc [ 2, 10 ] size 12 
+72 kk 1 dim 3 disc [ 2, 2, 8 ] size 16 
+72 kk 1 dim 4 disc [ 2, 2, 4, 4 ] size 96 
+72 kk 1 dim 5 disc [ 2, 2, 2, 2, 8 ] size 3840 
+72 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 8 ] size 92160 
+72 kk 2 dim 2 disc [ 2, 2 ] size 2 
+72 kk 2 dim 3 disc [ 2, 2, 88 ] size 32 
+72 kk 2 dim 4 disc [ 2, 2, 8, 8 ] size 256 
+73 kk 1 dim 2 disc [ 2, 2 ] size 2 
+73 kk 1 dim 3 disc [ 2, 2, 20 ] size 24 
+73 kk 1 dim 4 disc [ 2, 2, 4, 12 ] size 768 
+73 kk 1 dim 5 disc [ 2, 2, 2, 2, 4 ] size 1440 
+73 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 12 ] size 245760 
+73 kk 2 dim 2 disc [ 2, 10 ] size 12 
+73 kk 2 dim 3 disc [ 2, 2, 4 ] size 12 
+73 kk 2 dim 4 disc [ 2, 2, 4, 124 ] size 384 
+74 kk 1 dim 2 disc [ 2, 10 ] size 12 
+74 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+74 kk 1 dim 4 disc [ 2, 2, 2, 6 ] size 240 
+74 kk 1 dim 5 disc [ 2, 2, 2, 2, 4 ] size 1440 
+74 kk 1 dim 6 disc [ 2, 2, 2, 2, 12, 12 ] size 2949120 
+74 kk 2 dim 2 disc [ 4, 4 ] size 8 
+74 kk 2 dim 3 disc [ 2, 2, 12 ] size 24 
+74 kk 2 dim 4 disc [ 2, 2, 4, 68 ] size 192 
+74 kk 2 dim 5 disc [ 2, 2, 2, 2, 132 ] size 5760 
+74 kk 2 dim 6 disc [ 2, 2, 2, 2, 4, 12 ] size 184320 
+75 kk 1 dim 2 disc [ 2, 10 ] size 12 
+75 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+75 kk 1 dim 4 disc [ 2, 2, 4, 4 ] size 128 
+75 kk 1 dim 5 disc [ 2, 2, 2, 2, 12 ] size 2880 
+75 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 20 ] size 92160 
+75 kk 2 dim 2 disc [ 4, 4 ] size 4 
+75 kk 2 dim 3 disc [ 2, 2, 12 ] size 24 
+75 kk 2 dim 4 disc [ 2, 6, 12, 12 ] size 9216 
+75 kk 2 dim 5 disc [ 2, 2, 4, 4, 32 ] size 12288 
+76 kk 1 dim 2 disc [ 2, 2 ] size 2 
+76 kk 1 dim 3 disc [ 2, 2, 16 ] size 48 
+76 kk 1 dim 4 disc [ 2, 2, 2, 22 ] size 240 
+76 kk 1 dim 5 disc [ 2, 2, 2, 2, 12 ] size 2880 
+76 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 20 ] size 184320 
+76 kk 2 dim 2 disc [ 4, 4 ] size 8 
+76 kk 2 dim 3 disc [ 2, 2, 40 ] size 32 
+76 kk 2 dim 4 disc [ 2, 2, 4, 68 ] size 192 
+77 kk 1 dim 2 disc [ 2, 2 ] size 2 
+77 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+77 kk 1 dim 4 disc [ 2, 2, 4, 28 ] size 2304 
+77 kk 1 dim 5 disc [ 2, 2, 2, 6, 12 ] size 5760 
+77 kk 1 dim 6 disc [ 2, 2, 2, 2, 8, 8 ] size 147456 
+77 kk 2 dim 2 disc [ 2, 2 ] size 2 
+77 kk 2 dim 3 disc [ 4, 12, 12 ] size 768 
+77 kk 2 dim 4 disc [ 2, 2, 2, 82 ] size 144 
+77 kk 2 dim 5 disc [ 2, 2, 2, 2, 128 ] size 2304 
+78 kk 1 dim 2 disc [ 2, 2 ] size 2 
+78 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+78 kk 1 dim 4 disc [ 2, 2, 4, 4 ] size 192 
+78 kk 1 dim 5 disc [ 2, 2, 2, 2, 4 ] size 1440 
+78 kk 1 dim 6 disc [ 2, 2, 2, 2, 8, 8 ] size 491520 
+78 kk 2 dim 2 disc [ 4, 4 ] size 8 
+78 kk 2 dim 3 disc [ 4, 4, 20 ] size 192 
+78 kk 2 dim 4 disc [ 2, 2, 12, 12 ] size 768 
+79 kk 1 dim 2 disc [ 2, 2 ] size 2 
+79 kk 1 dim 3 disc [ 2, 2, 16 ] size 48 
+79 kk 1 dim 4 disc [ 2, 2, 2, 2 ] size 72 
+79 kk 1 dim 5 disc [ 2, 2, 2, 2, 36 ] size 2880 
+79 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 16 ] size 92160 
+79 kk 2 dim 2 disc [ 4, 4 ] size 8 
+79 kk 2 dim 3 disc [ 2, 2, 152 ] size 32 
+79 kk 2 dim 5 disc [ 2, 2, 2, 2, 136 ] size 4608 
+80 kk 1 dim 2 disc [ 2, 2 ] size 2 
+80 kk 1 dim 3 disc [ 2, 2, 16 ] size 48 
+80 kk 1 dim 4 disc [ 2, 2, 2, 6 ] size 240 
+80 kk 1 dim 5 disc [ 2, 2, 2, 2, 16 ] size 3840 
+80 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 32 ] size 184320 
+80 kk 2 dim 2 disc [ 2, 2 ] size 2 
+80 kk 2 dim 3 disc [ 2, 2, 60 ] size 48 
+80 kk 2 dim 4 disc [ 2, 2, 2, 2 ] size 72 
+80 kk 2 dim 5 disc [ 2, 2, 4, 4, 44 ] size 6144 
+80 kk 2 dim 6 disc [ 2, 2, 2, 2, 4, 20 ] size 245760 
+81 kk 1 dim 2 disc [ 2, 10 ] size 12 
+81 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+81 kk 1 dim 4 disc [ 2, 2, 4, 4 ] size 96 
+81 kk 1 dim 5 disc [ 2, 2, 2, 2, 4 ] size 1440 
+81 kk 1 dim 6 disc [ 2, 2, 2, 2, 2, 38 ] size 103680 
+81 kk 2 dim 2 disc [ 2, 18 ] size 4 
+81 kk 2 dim 3 disc [ 2, 2, 4 ] size 12 
+81 kk 2 dim 4 disc [ 2, 2, 4, 20 ] size 192 
+82 kk 1 dim 2 disc [ 2, 2 ] size 2 
+82 kk 1 dim 3 disc [ 2, 2, 16 ] size 48 
+82 kk 1 dim 4 disc [ 2, 2, 4, 4 ] size 1152 
+82 kk 1 dim 5 disc [ 2, 2, 2, 2, 16 ] size 2304 
+82 kk 1 dim 6 disc [ 2, 2, 2, 2, 2, 78 ] size 161280 
+82 kk 2 dim 2 disc [ 2, 14 ] size 4 
+82 kk 2 dim 3 disc [ 2, 2, 48 ] size 32 
+82 kk 2 dim 4 disc [ 2, 2, 4, 36 ] size 192 
+82 kk 2 dim 5 disc [ 2, 2, 2, 2, 64 ] size 2304 
+83 kk 1 dim 2 disc [ 2, 2 ] size 2 
+83 kk 1 dim 3 disc [ 2, 2, 12 ] size 24 
+83 kk 1 dim 4 disc [ 2, 2, 4, 12 ] size 192 
+83 kk 1 dim 5 disc [ 2, 2, 2, 2, 16 ] size 3840 
+83 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 4 ] size 368640 
+83 kk 2 dim 2 disc [ 4, 4 ] size 4 
+83 kk 2 dim 3 disc [ 2, 2, 88 ] size 32 
+83 kk 2 dim 4 disc [ 2, 2, 4, 108 ] size 384 
+84 kk 1 dim 2 disc [ 2, 6 ] size 12 
+84 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+84 kk 1 dim 4 disc [ 2, 2, 4, 4 ] size 96 
+84 kk 1 dim 5 disc [ 2, 2, 2, 2, 12 ] size 2880 
+84 kk 1 dim 6 disc [ 2, 2, 2, 2, 2, 18 ] size 80640 
+84 kk 2 dim 2 disc [ 2, 14 ] size 4 
+84 kk 2 dim 3 disc [ 2, 2, 48 ] size 32 
+84 kk 2 dim 4 disc [ 2, 2, 4, 20 ] size 192 
+85 kk 1 dim 2 disc [ 2, 2 ] size 2 
+85 kk 1 dim 3 disc [ 2, 2, 8 ] size 16 
+85 kk 1 dim 4 disc [ 2, 2, 2, 2 ] size 72 
+85 kk 1 dim 5 disc [ 2, 2, 2, 2, 12 ] size 2880 
+85 kk 1 dim 6 disc [ 2, 2, 2, 2, 2, 50 ] size 80640 
+85 kk 2 dim 2 disc [ 4, 4 ] size 4 
+85 kk 2 dim 3 disc [ 2, 2, 56 ] size 32 
+85 kk 2 dim 4 disc [ 2, 2, 2, 46 ] size 144 
+86 kk 1 dim 2 disc [ 4, 4 ] size 4 
+86 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+86 kk 1 dim 4 disc [ 2, 2, 2, 6 ] size 240 
+86 kk 1 dim 5 disc [ 2, 2, 2, 2, 16 ] size 3840 
+86 kk 1 dim 6 disc [ 2, 2, 2, 2, 2, 58 ] size 103680 
+86 kk 2 dim 2 disc [ 2, 10 ] size 12 
+86 kk 2 dim 3 disc [ 2, 2, 8 ] size 16 
+86 kk 2 dim 4 disc [ 2, 2, 6, 6 ] size 288 
+87 kk 1 dim 2 disc [ 2, 6 ] size 12 
+87 kk 1 dim 3 disc [ 2, 2, 16 ] size 48 
+87 kk 1 dim 4 disc [ 2, 2, 2, 6 ] size 240 
+87 kk 1 dim 5 disc [ 2, 2, 2, 2, 24 ] size 7680 
+87 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 4 ] size 46080 
+87 kk 2 dim 2 disc [ 2, 18 ] size 4 
+87 kk 2 dim 3 disc [ 4, 4, 12 ] size 192 
+87 kk 2 dim 4 disc [ 2, 2, 4, 108 ] size 384 
+87 kk 2 dim 5 disc [ 2, 2, 2, 2, 44 ] size 2880 
+88 kk 1 dim 2 disc [ 2, 10 ] size 12 
+88 kk 1 dim 3 disc [ 2, 2, 16 ] size 48 
+88 kk 1 dim 4 disc [ 2, 2, 4, 8 ] size 192 
+88 kk 1 dim 5 disc [ 2, 2, 4, 4, 4 ] size 3072 
+88 kk 2 dim 2 disc [ 4, 4 ] size 8 
+88 kk 2 dim 3 disc [ 2, 2, 24 ] size 96 
+88 kk 2 dim 4 disc [ 2, 2, 4, 36 ] size 192 
+88 kk 2 dim 5 disc [ 2, 2, 2, 2, 176 ] size 4608 
+89 kk 1 dim 2 disc [ 4, 4 ] size 8 
+89 kk 1 dim 3 disc [ 2, 2, 16 ] size 48 
+89 kk 1 dim 4 disc [ 2, 2, 2, 2 ] size 72 
+89 kk 1 dim 5 disc [ 2, 2, 2, 6, 24 ] size 30720 
+89 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 12 ] size 184320 
+89 kk 2 dim 2 disc [ 8, 8 ] size 16 
+89 kk 2 dim 3 disc [ 4, 8, 8 ] size 128 
+89 kk 2 dim 4 disc [ 2, 2, 4, 28 ] size 192 
+89 kk 2 dim 5 disc [ 2, 2, 2, 2, 16 ] size 2304 
+90 kk 1 dim 2 disc [ 4, 4 ] size 8 
+90 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+90 kk 1 dim 4 disc [ 2, 2, 4, 4 ] size 96 
+90 kk 1 dim 5 disc [ 2, 2, 2, 2, 56 ] size 7680 
+90 kk 1 dim 6 disc [ 2, 2, 2, 2, 2, 66 ] size 161280 
+90 kk 2 dim 2 disc [ 2, 2 ] size 2 
+90 kk 2 dim 3 disc [ 4, 4, 16 ] size 128 
+90 kk 2 dim 4 disc [ 2, 2, 2, 110 ] size 288 
+90 kk 2 dim 5 disc [ 4, 4, 4, 4, 4 ] size 147456 
+90 kk 2 dim 6 disc [ 2, 2, 2, 2, 4, 20 ] size 184320 
+91 kk 1 dim 2 disc [ 4, 4 ] size 4 
+91 kk 1 dim 3 disc [ 2, 2, 16 ] size 48 
+91 kk 1 dim 4 disc [ 2, 2, 4, 4 ] size 96 
+91 kk 1 dim 5 disc [ 2, 2, 2, 2, 4 ] size 1440 
+91 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 36 ] size 184320 
+91 kk 2 dim 2 disc [ 2, 10 ] size 12 
+91 kk 2 dim 3 disc [ 2, 2, 24 ] size 32 
+91 kk 2 dim 4 disc [ 2, 2, 4, 44 ] size 192 
+92 kk 1 dim 2 disc [ 2, 10 ] size 12 
+92 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+92 kk 1 dim 4 disc [ 2, 2, 4, 8 ] size 192 
+92 kk 1 dim 5 disc [ 2, 2, 4, 4, 4 ] size 3072 
+92 kk 1 dim 6 disc [ 2, 2, 2, 2, 2, 46 ] size 80640 
+92 kk 2 dim 2 disc [ 4, 4 ] size 4 
+92 kk 2 dim 3 disc [ 2, 2, 40 ] size 32 
+92 kk 2 dim 4 disc [ 2, 2, 4, 8 ] size 192 
+93 kk 1 dim 2 disc [ 2, 2 ] size 2 
+93 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+93 kk 1 dim 4 disc [ 2, 2, 4, 4 ] size 192 
+93 kk 1 dim 5 disc [ 2, 2, 2, 2, 24 ] size 7680 
+93 kk 1 dim 6 disc [ 2, 2, 2, 2, 4, 16 ] size 92160 
+93 kk 2 dim 2 disc [ 4, 4 ] size 4 
+93 kk 2 dim 3 disc [ 2, 2, 56 ] size 32 
+93 kk 2 dim 4 disc [ 2, 2, 2, 46 ] size 144 
+94 kk 1 dim 2 disc [ 4, 4 ] size 4 
+94 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+94 kk 1 dim 4 disc [ 2, 2, 2, 10 ] size 240 
+94 kk 1 dim 5 disc [ 2, 2, 2, 2, 20 ] size 2880 
+94 kk 1 dim 6 disc [ 2, 2, 2, 2, 2, 6 ] size 103680 
+94 kk 2 dim 2 disc [ 4, 12 ] size 24 
+94 kk 2 dim 3 disc [ 2, 2, 48 ] size 32 
+94 kk 2 dim 4 disc [ 2, 2, 4, 40 ] size 384 
+95 kk 1 dim 2 disc [ 2, 2 ] size 2 
+95 kk 1 dim 3 disc [ 2, 2, 4 ] size 12 
+95 kk 1 dim 4 disc [ 2, 2, 2, 2 ] size 72 
+95 kk 1 dim 5 disc [ 2, 2, 2, 2, 36 ] size 2880 
