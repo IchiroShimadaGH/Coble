@@ -32,6 +32,16 @@ savedata:=function(obj)
 	PrintTo(fn, name, ":=", obj, ";\n");
 end;
 
+savedatap:=function(obj)
+	local fn,name;
+	name:=FindNameGlobal(obj);
+	fn:=Filename(Directory("./gapsaves"), Concatenation("save", name, ".txt"));
+	#Printn("save a research data ", name, ": overwriting?", IsExistingFile(fn));
+	PrintTo(fn, name, ":=", obj, ";\n");
+    Printn("saved the data", name);
+end;
+
+
 savedatadir:=function(dirname, obj)
 	local fn,name;
 	name:=FindNameGlobal(obj);

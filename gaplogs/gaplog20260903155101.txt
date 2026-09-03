@@ -1,0 +1,3 @@
+sessionnumb  20260903155101 
+gap> Read("Task20260903Ub.g");
+gap> 
