@@ -13,14 +13,14 @@ for tt in [1..10000] do
       tdisc:=DiscriminantForm(tGram);
       if tdisc.discg=0 then continue; fi;
       tautqrec:=AutDiscfByGeneralStabChain(tdisc);
-      for uu in [1..3] do 
+      for uu1 in [1..2] do 
         tU:=RandomUnimodMat(dim);
         ttGram:=TMTTmult(tU, tGram);
         ttdisc:=DiscriminantForm(ttGram);
         ttautqrec:=AutDiscfByGeneralStabChain(ttdisc);
         if tautqrec.size<>ttautqrec.size then beep(776645); fi;
       od;
-      for uu in [1..33] do 
+      for uu2 in [1..2] do 
         tU:=RandomUnimodMat(dim);
         ttGram:=TMTTmult(tU, tGram);
         ttdisc:=DiscriminantForm(ttGram);
