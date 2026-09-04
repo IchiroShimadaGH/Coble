@@ -2547,3 +2547,28 @@ Calculated by BorcherdsSelectWalls and by Make_Walls.
 __________________________ 
 w0S:=Borrec.weyl0*Borrec.projS is an interior point of cham 0. 
 gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> RecNames(Borrec);
+[ "GramL", "GramS", "GramR", "GramRdual", "GramSdual", "Rtype", "aL", "aR", "aRL", "aS", "aSL", "anisomdiscSR", "discR", "discS", "discSrec", 
+  "embR", "embRdual", "embS", "embSdual", "hS", "hSL", "nRvRsrec", "projR", "projRdual", "projS", "projSdual", "weyl0", "priodcond" ]
+gap> RecNames(Borrec.nRvRsrec);
+[ "nRs", "vRInLss", "vRss" ]
+gap> Borrec.nRvRsrec.nR;
+Error, Record Element: '<rec>.nR' must have an assigned value
+not in any function at *stdin*:70
+type 'quit;' to quit to outer loop
+brk> Borrec.nRvRsrec.nRs;
+[ -2, -3/2, -1, -1/2, 0 ]
+brk> quit;
+gap> OrthogonalCompRec;
+function( Gram, B ) ... end
+gap> Read("Adj.g");
+Error, Variable: 'IsWeylVect' is read only
+not in any function at Adj.g:12
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> quit;

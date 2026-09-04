@@ -54,7 +54,7 @@ AdjWeyl:=function(Borrec, tweyl, defv)
   # with norm between -2 and 0, inclusive.
   #
   rLs:=[];
-  for aa in [0..Int(mm)] do
+  for aa in [0..mm] do
     aadefvL:=aa*defv*Borrec.embS;
     aanrmv:=aa*aa*nrmv;
     #
@@ -96,7 +96,6 @@ AdjWeyl:=function(Borrec, tweyl, defv)
   if not IsDuplicateFreeList(rLsdual_divided_by_tw) then
     beep(661231);
   fi;
-  SortParallel(rLsdual_divided_by_tw, rLs);
   #
   newweyl:=List(tweyl);
   for tr in rLs do

@@ -1,3 +1,10 @@
 sessionnumb  20260903155101 
 gap> Read("Task20260903Ub.g");
+gap> Sqroot;
+Error, Variable: 'Sqroot' must have a value
+not in any function at *stdin*:4
+gap> SqRoot(4);
+2
+gap> Int(SqRoot(1/4));
+0
 gap> 

@@ -1,34 +1,37 @@
-#Read("GeneralStabChainCheckTask1.g");
-
-Read("GeneralStabChain.g");
 
 
-for tt in [1..10000] do
-  for kk in [3..5] do  
-    L:=[-kk..kk];
-    for dim in [2..10] do 
-      tGram:=RandomEvenLatticeFromL(dim, L);
-      tdisc:=DiscriminantForm(tGram);
-      if tdisc.discg=0 then continue; fi;
-      tautqrec:=AutDiscfByGeneralStabChain(tdisc);
-      for uu in [1..3] do 
-        tU:=RandomUnimodMat(dim);
-        ttGram:=TMTTmult(tU, tGram);
-        ttdisc:=DiscriminantForm(ttGram);
-        ttautqrec:=AutDiscfByGeneralStabChain(ttdisc);
-        if tautqrec.size<>ttautqrec then beep(776645); fi;
+check_nSaSvSss:=function(Borrec,  tweyl, nSaSvSss)
+	local beep, twdual, twS, navS, nS, aS, navSrec,
+	vSlifts, vS, lifts,  vSdual, rL, vSliftss, twSdual, GramL;
+	#
+	beep:=function(beepn) 
+    localbeep("check_nSaSvSss", beepn);Error(); 
+  end;
+	#
+  GramL:=Borrec.GramL;
+	twdual:=tweyl*GramL;
+	twS:=tweyl*Borrec.projS;
+  twSdual:=twS*Borrec.GramS;
+	for navSrec in nSaSvSss do
+		nS:=navSrec.nS;
+		aS:=navSrec.aS;
+    vSliftss:=navSrec.vSliftss;
+		if nS>=0 then beep(2); fi;
+		for vSlifts in vSliftss do
+      vS:=vSlifts[1];
+      lifts:=vSlifts[2];
+      vSdual:=vS*Borrec.GramS;
+      if vS*twSdual<>aS then beep(91919); fi;
+      if vSdual*vS<>nS then beep(99991); fi;
+      for rL in lifts do 
+        if rL*Borrec.projS<>vS then beep(2311); fi;
+        if rL*GramL*rL<>-2 then beep(5); fi;
+        if rL*twdual<>1 then beep(221); fi; koko(1);
       od;
-      for uu in [1..33] do 
-        tU:=RandomUnimodMat(dim);
-        ttGram:=TMTTmult(tU, tGram);
-        ttdisc:=DiscriminantForm(ttGram);
-        ttautqrec:=AutDiscfByGeneralStabChain(ttdisc.discg, ttdisc.discf);
-        if tautqrec.size<>ttautqrec then beep(736645); fi;
-      od;
-      Printn(tt, kk, dim, Product(tdisc.discg), tautqrec.size<);
-    od;
-  od;
-od;
+		od;
+	od;
+	#  
+	return(true);
+end;
 
-
-
+check_nSaSvSss(Borrec, weyl0, nSaSvSss0);
