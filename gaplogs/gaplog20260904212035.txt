@@ -1,0 +1,140 @@
+sessionnumb  20260904212035 
+gap> GramD6:=ADEHGram(["D6"]);
+[ [ 2, 0, -1, 0, 0, 0 ], [ 0, 2, -1, 0, 0, 0 ], [ -1, -1, 2, -1, 0, 0 ], 
+  [ 0, 0, -1, 2, -1, 0 ], [ 0, 0, 0, -1, 2, -1 ], [ 0, 0, 0, 0, -1, 2 ] ]
+gap> discD6:=DiscriminantForm(GramD6);
+rec( discf := [ [ 3/2, 1/2 ], [ 1/2, 1 ] ], discg := [ 2, 2 ], 
+  proj := [ [ 2, 0 ], [ 2, 2 ], [ -2, -2 ], [ 0, 2 ], [ 0, -2 ], [ 0, 2 ] ], 
+  proj_dual := [ [ 1, 0 ], [ 1, 1 ], [ 0, 0 ], [ 0, 1 ], [ 0, 0 ], [ 0, 1 ] ],
+  reps := [ [ 1/2, 0, 0, 1/2, 0, 1/2 ], [ 1/2, 1/2, 0, 0, 0, 0 ] ], 
+  reps_dual := [ [ 1, 0, -1, 1, -1, 1 ], [ 1, 1, -1, 0, 0, 0 ] ] )
+gap> uvabvect(discD6);
+[ 0, 0, 0, 2 ]
+gap> Read("Task20260904Ha.g");
+Error, Variable: 'OdentityMat' must have a value
+not in any function at Task20260904Ha.g:8
+gap> Read("Task20260904Ha.g");
+Syntax error: ; expected in Task20260904Ha.g:11
+autb4:=AutFQF(b4);
+^^^^^
+gap> Read("Task20260904Ha.g");
+gap> anisom;
+[ [ 0, 1, 1, 1 ], [ 1, 0, 1, 1 ], [ 1, 1, 0, 1 ], [ 1, 1, 1, 0 ] ]
+gap> Length(autb4);
+24
+gap> NegADEHdiscrec(["H2", "A1"]);
+rec( discf := [ [ 1/2, 0 ], [ 0, 3/2 ] ], discg := [ 2, 2 ], 
+  proj := [ [ -2, 0 ], [ 0, 2 ] ], proj_dual := [ [ 1, 0 ], [ 0, 1 ] ], 
+  reps := [ [ -1/2, 0 ], [ 0, 1/2 ] ], reps_dual := [ [ -1, 0 ], [ 0, -1 ] ] )
+gap> Read("Task20260904Hb.g");
+Syntax error: ; expected in Task20260904Hb.g:18
+Rtype:=["D6"];
+^^^^^
+gap> Read("Task20260904Hb.g");
+gap> Display(mdiscR.discf);
+[ [  3/2,  1/2,    0,    0,    0,    0,    0,    0,    0,    0,    0 ],
+  [  1/2,    1,    0,    0,    0,    0,    0,    0,    0,    0,    0 ],
+  [    0,    0,  1/2,    0,    0,    0,    0,    0,    0,    0,    0 ],
+  [    0,    0,    0,  1/2,    0,    0,    0,    0,    0,    0,    0 ],
+  [    0,    0,    0,    0,  1/2,    0,    0,    0,    0,    0,    0 ],
+  [    0,    0,    0,    0,    0,  1/2,    0,    0,    0,    0,    0 ],
+  [    0,    0,    0,    0,    0,    0,  1/2,    0,    0,    0,    0 ],
+  [    0,    0,    0,    0,    0,    0,    0,  1/2,    0,    0,    0 ],
+  [    0,    0,    0,    0,    0,    0,    0,    0,  1/2,    0,    0 ],
+  [    0,    0,    0,    0,    0,    0,    0,    0,    0,  1/2,    0 ],
+  [    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,  1/2 ] ]
+gap> IsomFQF([[2,2], (3/2)*IdentityMat(2)], 
+> [[2,2], [[3/2, 1/2], [1/2, 1]]);
+Syntax error: ] expected
+[[2,2], [[3/2, 1/2], [1/2, 1]]);
+                              ^
+gap> IsomFQF([[2,2], (3/2)*IdentityMat(2)], 
+> [[2,2], [[3/2, 1/2], [1/2, 1]]]);
+[ [ [ 1, 0 ], [ 1, 1 ] ], [ [ 1, 1 ], [ 1, 0 ] ] ]
+gap> TMTTmult(isomSR, mdiscR.discf)
+Error, Variable: 'isomSR' must have a value
+not in any function at *stdin*:18
+> ;
+gap> CopyNormalDiscf;
+function( discf ) ... end
+gap> Read("Task20260904Hb.g");
+wrong global beep 919191 
+Error,  at gapReads/gaptools.txt:139 called from
+<function "beep">( <arguments> )
+ called from read-eval loop at Task20260904Hb.g:38
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> CopyNormalDiscf(TMTTmult(isomSR, mdiscR.discf));
+[ [ 1, 0, 1/2, 0, 0, 0, 0, 0, 0, 0, 0 ], 
+  [ 0, 3/2, 1/2, 0, 0, 0, 0, 0, 0, 0, 0 ], 
+  [ 1/2, 1/2, 3/2, 0, 0, 0, 0, 0, 0, 0, 0 ], 
+  [ 0, 0, 0, 3/2, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 3/2, 0, 0, 0, 0, 0, 0 ]
+    , [ 0, 0, 0, 0, 0, 3/2, 0, 0, 0, 0, 0 ], 
+  [ 0, 0, 0, 0, 0, 0, 3/2, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 3/2, 0, 0, 0 ]
+    , [ 0, 0, 0, 0, 0, 0, 0, 0, 3/2, 0, 0 ], 
+  [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 3/2, 0 ], 
+  [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3/2 ] ]
+brk> discS.discf;
+[ [ 1/2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 3/2, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+    , [ 0, 0, 3/2, 0, 0, 0, 0, 0, 0, 0, 0 ], 
+  [ 0, 0, 0, 3/2, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 3/2, 0, 0, 0, 0, 0, 0 ]
+    , [ 0, 0, 0, 0, 0, 3/2, 0, 0, 0, 0, 0 ], 
+  [ 0, 0, 0, 0, 0, 0, 3/2, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 3/2, 0, 0, 0 ]
+    , [ 0, 0, 0, 0, 0, 0, 0, 0, 3/2, 0, 0 ], 
+  [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 3/2, 0 ], 
+  [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3/2 ] ]
+brk> quit;
+gap> Read("Task20260904Hb.g");
+wrong global beep 922291 
+Error,  at gapReads/gaptools.txt:139 called from
+<function "beep">( <arguments> )
+ called from read-eval loop at Task20260904Hb.g:44
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> quit;
+gap> Read("Task20260904Hb.g");
+gap> OGRrec:=OGLat(mGramR);;
+Error, user interrupt in
+  q := gram[j][k]
+ ; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/zlattice.gi:1088 called from 
+LLLReducedGramMat( GramL ) at gapReads/OGLat.g:26 called from
+<function "OGLat">( <arguments> )
+ called from read-eval loop at *stdin*:22
+you can 'return;'
+brk> quit;
+gap> mGramR:=ADEHGram(Rtype);
+[ [ 2, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], 
+  [ 0, 2, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], 
+  [ -1, -1, 2, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], 
+  [ 0, 0, -1, 2, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], 
+  [ 0, 0, 0, -1, 2, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], 
+  [ 0, 0, 0, 0, -1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], 
+  [ 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0 ], 
+  [ 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0 ], 
+  [ 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0 ], 
+  [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0 ], 
+  [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0 ], 
+  [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0 ], 
+  [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0 ], 
+  [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0 ], 
+  [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2 ] ]
+gap> OGRrec:=OGLat(mGramR);;
+gap> OGRrec.size<>WeylGroupOrder(Rtype)*Factorial(9)*2;
+Error, Record Element: '<rec>.size' must have an assigned value
+not in any function at *stdin*:24
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> OGRrec.order<>WeylGroupOrder(Rtype)*Factorial(9)*2
+> ;
+false
+gap> OGRrec.order;
+8561413324800
+gap> WeylGroupOrder(Rtype)*Factorial(9)*2;
+8561413324800
+gap> uvabOqLOrder([0,0,1,10]);
+46998591897600
+gap> 46998591897600/Factorial(9)/2;
+64757760
+gap> uvabOqLOrder([0,0,0,2]);
+2
+gap> 

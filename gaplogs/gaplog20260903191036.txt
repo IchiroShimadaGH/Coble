@@ -19070,4 +19070,4 @@ gap> RecNames(aa);
 [ "nRs", "vRInLss", "vRss" ]
 gap> aa.nRs;
 [ -2, -3/2, -1, -1/2, 0 ]
-gap> 
+gap> quit;
