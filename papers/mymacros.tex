@@ -1,0 +1,218 @@
+%\input mymacros.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   MY MACROS: start 2025 Aug 12
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% erase: for temporarily removing text from output
+\newcommand{\erase}[1]{}
+
+% ----- Theorem-like environments -----
+% Plain style: italic body, bold heading
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]       % Main theorem environment
+\newtheorem{lemma}[theorem]{Lemma}           % Lemma, shares numbering with theorem
+\newtheorem{proposition}[theorem]{Proposition} % Proposition, shares numbering
+\newtheorem{corollary}[theorem]{Corollary}   % Corollary, shares numbering
+
+% Definition style: upright body, bold heading
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition} % Definition, shares numbering
+\newtheorem{example}[theorem]{Example}       % Example
+\newtheorem{algorithm}[theorem]{Algorithm}   % Algorithm description
+\newtheorem{claim}[theorem]{Claim}           % Claim
+\newtheorem{construction}[theorem]{Construction} % Construction
+
+% Remark style: upright body, italic heading
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}         % Remark
+
+% Number equations, tables, and figures by section
+\numberwithin{equation}{section}
+\numberwithin{table}{section}
+\numberwithin{figure}{section}
+
+% Change QED symbol for end of proof
+\newcommand{\qedbox}{\hfill {$\Box$}}
+
+% ----- FONT SHORTCUTS -----
+% Blackboard bold (mathbb)
+\newcommand{\bbA}{\mathord{\mathbb{A}}}
+\newcommand{\BB}{\mathord{\mathbb{B}}}
+\newcommand{\CC}{\mathord{\mathbb{C}}}
+\newcommand{\DD}{\mathord{\mathbb{D}}}
+\newcommand{\EE}{\mathord{\mathbb{E}}}
+\newcommand{\FF}{\mathord{\mathbb{F}}}
+\newcommand{\GG}{\mathord{\mathbb{G}}}
+\newcommand{\HH}{\mathord{\mathbb{H}}}
+\newcommand{\II}{\mathord{\mathbb{I}}}
+\newcommand{\JJ}{\mathord{\mathbb{J}}}
+\newcommand{\KK}{\mathord{\mathbb{K}}}
+\newcommand{\LL}{\mathord{\mathbb{L}}}
+\newcommand{\MM}{\mathord{\mathbb{M}}}
+\newcommand{\NN}{\mathord{\mathbb{N}}}
+\newcommand{\OO}{\mathord{\mathbb{O}}}
+\newcommand{\PP}{\mathord{\mathbb{P}}}
+\newcommand{\QQ}{\mathord{\mathbb{Q}}}
+\newcommand{\RR}{\mathord{\mathbb{R}}}
+\newcommand{\bbSS}{\mathord{\mathbb{S}}}
+\newcommand{\TT}{\mathord{\mathbb{T}}}
+\newcommand{\UU}{\mathord{\mathbb{U}}}
+\newcommand{\VV}{\mathord{\mathbb{V}}}
+\newcommand{\WW}{\mathord{\mathbb{W}}}
+\newcommand{\XX}{\mathord{\mathbb{X}}}
+\newcommand{\YY}{\mathord{\mathbb{Y}}}
+\newcommand{\ZZ}{\mathord{\mathbb{Z}}}
+
+% Calligraphic letters (mathcal)
+\newcommand{\AAA}{\mathord{\mathcal{A}}}
+\newcommand{\BBB}{\mathord{\mathcal{B}}}
+\newcommand{\CCC}{\mathord{\mathcal{C}}}
+\newcommand{\DDD}{\mathord{\mathcal{D}}}
+\newcommand{\EEE}{\mathord{\mathcal{E}}}
+\newcommand{\FFF}{\mathord{\mathcal{F}}}
+\newcommand{\GGG}{\mathord{\mathcal{G}}}
+\newcommand{\HHH}{\mathord{\mathcal{H}}}
+\newcommand{\III}{\mathord{\mathcal{I}}}
+\newcommand{\JJJ}{\mathord{\mathcal{J}}}
+\newcommand{\KKK}{\mathord{\mathcal{K}}}
+\newcommand{\LLL}{\mathord{\mathcal{L}}}
+\newcommand{\MMM}{\mathord{\mathcal{M}}}
+\newcommand{\NNN}{\mathord{\mathcal{N}}}
+\newcommand{\OOO}{\mathord{\mathcal{O}}}
+\newcommand{\PPP}{\mathord{\mathcal{P}}}
+\newcommand{\QQQ}{\mathord{\mathcal{Q}}}
+\newcommand{\RRR}{\mathord{\mathcal{R}}}
+\newcommand{\SSS}{\mathord{\mathcal{S}}}
+\newcommand{\TTT}{\mathord{\mathcal{T}}}
+\newcommand{\UUU}{\mathord{\mathcal{U}}}
+\newcommand{\VVV}{\mathord{\mathcal{V}}}
+\newcommand{\WWW}{\mathord{\mathcal{W}}}
+\newcommand{\XXX}{\mathord{\mathcal{X}}}
+\newcommand{\YYY}{\mathord{\mathcal{Y}}}
+\newcommand{\ZZZ}{\mathord{\mathcal{Z}}}
+
+
+% Fraktur letters (mathfrak)
+\newcommand{\SSSS}{\mathord{\mathfrak{S}}}    % Symmetric group symbol
+\newcommand{\AAAA}{\mathord{\mathfrak{A}}}    % Alternating group symbol
+
+%For vectors
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+
+% ----- ARROWS -----
+
+%ARROWS
+
+\newcommand{\maprightsp}[1]{\xrightarrow{\smash{#1}}}
+\newcommand{\mapleftsp}[1]{\xleftarrow{\smash{#1}}}
+\newcommand{\maprightsb}[1]{\xrightarrow[\smash{#1}]{}}
+\newcommand{\maplefts}[1]{\xleftarrow[\smash{#1}]{}}
+
+\newcommand{\inj}{\hookrightarrow}
+\providecommand{\twoheadrightarrow}{\mathrel{\rightarrow\!\!\!\!\rightarrow}}
+\newcommand{\surj}{\twoheadrightarrow}
+
+\newcommand{\isom}{\xrightarrow{\raise -3pt \hbox{\scriptsize $\sim$} }}
+
+
+% Vertical arrows
+\newcommand{\mapdown}{\mathrel{\downarrow}}
+\newcommand{\mapdownleft}[1]{\mathrel{\llap{\scriptstyle#1\;}\downarrow}}
+
+
+% ----- SET NOTATION -----
+\newcommand{\set}[2]{\{\,{#1}\mid {#2} \,\}}           % { x | condition }
+\newcommand{\bigset}[2]{\left\{\; {#1} \; \left\vert \; {#2} \;  \right.\right \}}
+\newcommand{\bigsetR}[2]{\left\{\; \left. {#1} \; \right\vert \; {#2} \;  \right \}}
+
+\newcommand{\angs}[1]{\langle {#1}  \rangle}           % < x >
+
+
+% ----- COMMON SYMBOLS -----
+\newcommand{\wt}{\widetilde}
+\newcommand{\ol}{\overline}
+\newcommand{\tensor}{\otimes}
+\newcommand{\inv}{^{-1}}                 % superscript -1
+\newcommand{\dual}{^{\vee}}               % dual vector space
+\newcommand{\comp}{^{\wedge}}             % complement or wedge power
+
+% Primes and related notations
+\newcommand{\pprime}{\prime\prime}
+\newcommand{\sprime}{^{\prime}}
+\newcommand{\sprimeinv}{^{\prime-1}}
+\newcommand{\spar}[1]{^{(#1)}}
+\newcommand{\spprime}{^{\prime\prime}}
+\newcommand{\spcirc}{^{\mathord{\circ}}}
+\newcommand{\sptimes}{^{\times}}
+\newcommand{\sperp}{^{\perp}}
+
+% Group theory and algebra notation
+\newcommand{\fiberproduct}{\Box}            % fibre product symbol
+\newcommand{\semidirectproduct}{\rtimes}    % semidirect product
+\newcommand{\semidirectproductrev}{\ltimes} 
+
+% Boundary and derivative
+\newcommand{\bdr}{\partial\,}
+\newcommand{\der}{\partial}
+
+% Math operators (upright text in math mode)
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Image}{Im}
+\DeclareMathOperator{\Sing}{Sing}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Stab}{Stab}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Coker}{Coker}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\pr}{pr}
+\DeclareMathOperator{\disc}{disc}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\characteristic}{char}
+\DeclareMathOperator{\length}{leng} % 'leng' probably intended as 'length'
+
+% Sheaf Hom
+\newcommand{\sheafHom}{\mathord{\mathcal {Hom}}}
+
+% Classical groups
+\newcommand{\GL}{\mathord{\mathrm{GL}}}
+\newcommand{\SL}{\mathord{\mathrm{SL}}}
+\newcommand{\PGU}{\mathord{\mathrm{PGU}}}
+\newcommand{\PSU}{\mathord{\mathrm{PSU}}}
+\newcommand{\PGL}{\mathord{\mathrm{PGL}}}
+\newcommand{\PSL}{\mathord{\mathrm{PSL}}}
+\newcommand{\OG}{\mathord{\mathrm{O}}}
+\newcommand{\UG}{\mathord{\mathrm{U}}}
+\newcommand{\SO}{\mathord{\mathrm{SO}}}
+\newcommand{\SU}{\mathord{\mathrm{SU}}}
+
+% Identity map
+\newcommand{\id}{\mathord{\mathrm{id}}}
+\newcommand{\Id}{\mathord{\mathrm{Id}}}
+
+% Common notation shortcuts
+\newcommand{\Pt}{\PP^2}                      % Projective plane
+\newcommand{\Qbar}{\overline{\QQ}}           % Algebraic closure of Q
+\newcommand{\pione}{\pi_1}  % Fundamental group
+
+% Inner product or pairing
+\newcommand{\intf}[1]{\langle #1 \rangle}
+
+% Transpose symbol
+\newcommand{\transpose}{{}^{\mathrm{T}}}
+
+% Vertical spacing helpers (artificially increase the vertical spacing )
+\newcommand{\mystruth}[1]{\phantom{\llap{\vrule height #1}}}
+\newcommand{\mystrutd}[1]{\phantom{\llap{\vrule depth #1}}}
+\newcommand{\mystruthd}[2]{\phantom{\llap{\vrule  height #1 depth #2}}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   END OF MY MACROS
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

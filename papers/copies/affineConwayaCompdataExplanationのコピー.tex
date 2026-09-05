@@ -1,0 +1,282 @@
+% !TEX program = pdflatex
+
+%%%%%%%%%%%%%%%%%%%%
+% affineConwayCompData.tex
+%%%%%%%%%%%%%%%%%%%%%
+
+\pdfoutput=1 %When you use pdflatex
+\documentclass{amsart} %When you use pdflatex
+%\documentclass[dvipdfmx]{amsart} %When you use uplatex + dvipdfmx
+
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary {arrows.meta}
+\usetikzlibrary {bending}
+\usetikzlibrary{intersections}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{enumerate}
+\usepackage{graphicx}
+
+\usepackage{hyperref}
+\hypersetup{
+ colorlinks = true,
+ linkcolor = blue,
+ filecolor = blue,
+ urlcolor = blue,
+ citecolor = blue,
+}
+\hypersetup{unicode=true}
+
+%\newcommand{\secK3}{\texorpdfstring{$K3$}{K3}}
+\renewcommand{\baselinestretch}{1.4}
+
+\usepackage{bm}
+%\usepackage{enumerate}
+\usepackage{enumitem}
+
+\input mymacros
+\input mymacrosaffineConway
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\title[[Involutions in the affine Conway group: Computational data]
+{Involutions in the affine Conway group: Computational data}
+
+
+\author{Ichiro Shimada}
+\address{Department of Mathematics,
+Graduate School of Science,
+Hiroshima University,
+1-3-1 Kagamiyama,
+Higashi-Hiroshima,
+739-8526 JAPAN}
+\email{ichiro-shimada@hiroshima-u.ac.jp}
+\thanks{Supported by JSPS KAKENHI Grant Number~20H00112, 23K20209, and 23H00081}
+
+%超平面配置に関連する離散構造の拡張、深化とその応用
+%23H00081
+%代数幾何学の計算機による研究の新展開
+%23K20209
+%格子、保型形式とK3曲面、エンリケス曲面の研究
+%20H00112
+\maketitle
+%
+%
+% 
+In the  files
+\begin{itemize}
+\item  \tname{affineConwayCompdata.txt} (??KB), 
+%\item  \tname{OrbitDecompbarDelta.txt} (7.4 MB), 
+%\item  \tname{OrbitDecompDelta.txt}  (5.3 MB), and 
+%\item  \tname{F19model.txt} (2 KB), 
+\end{itemize}
+ we present  the computational data used in the preprint 
+\begin{itemize}
+\item 
+Ichiro Shimada.  Involutions in the affine {C}onway group. Preprint.
+  \end{itemize}
+This document explains the structure and contents of the data.
+Some parts of the data are formatted using the {\tt Record} format of {\tt GAP}.
+In the following, we freely use the notation introduced in the preprint above.
+%
+\par
+Elements of a vector space are given by \emph{row} vectors.
+A linear map is expressed by the multiplication of a matrix from the \emph{right}.
+%
+\section{Contents of \tname{affineConwayCompdata.txt}}
+%
+In the following, we arrange the elements of $\Omega=\PP^1(\FF_{23})$ in order as 
+\[
+\infty, 0, 1,2 , \dots, 22, 
+\]
+and we  assign an order to the standard  basis of 
+$\FF_2^{\Omega}\cong \FF_2^{24}$ or of $\ZZ^{\Omega}\cong \ZZ^{24}$
+accordingly.
+Hence, 
+for example, the vector $v_{\infty}\in \ZZ^{\Omega}$ is $[1, 0, \dots, 0]$
+and $v_{22}\in \ZZ^{\Omega}$ is $[0, \dots, 0, 1]$.
+%
+\begin{itemize}
+%
+\item \tname{theOmega} is the list
+$\tt{[infinity, 0,1,2,\dots, 22]}$.
+%
+\item \tname{GolayVects} is the extended binary Golay code $\Golay\subset \FF_2^{24}$
+constructed by the method in~\cite[Chapter~10.2]{TheCSbook}.
+This data is the list of $2^{12}=4096$ codewords of $\Golay$.
+Each codeword is a vector of length $24$
+  with coefficients in $\{0, 1\}$.
+  %
+  \item \tname{GolayWords} is another expression of \tname{GolayVects}.
+Each codeword is expressed as a subset of \tname{theOmega}.
+%
+\item \tname{LeechBasis} gives a basis of the Leech lattice $\Lambda\subset \ZZ^{\Omega}$
+constructed by the method in~\cite[Chapter~10.3]{TheCSbook}.
+This data \tname{LeechBasis}  is a list of $24$ vectors in $\ZZ^{\Omega}$.
+%
+\item \tname{LeechGram} is the Gram matrix of  $\Lambda$
+with respect to \tname{LeechBasis}. We have
+\[
+\mathtt{LeechGram} =\frac{1}{8}\cdot \mathtt{LeechBasis}\cdot{}^{t} \mathtt{LeechBasis}.
+\]
+%
+\item \tname{epsilonrecs} is the list of $4$ records,
+each of which describes the involution $\vep_n=\vep(C_n)\in \dotz$
+for $n=8, 12, 16, 24$.
+%(Caution: not epsilonrecs,  but epsilonrecs.)
+Each record has the following items.
+%
+%
+\begin{itemize}
+%
+\item \tname{n} is $n\in \{8, 12, 16, 24\}$.
+%
+\item \tname{Cvect} is the codeword $C_n\in \Golay(n)$ such that $\vep_n=\vep(C)$,
+which is an element of \tname{GolayVects}.
+%
+\item \tname{Cword} is the  element of \tname{GolayWords} corresponding to \tname{Cvect}.
+%
+\item \tname{mat} is the matrix representation of $\vep_n\in \dotz$
+with respect to the basis  \tname{LeechBasis} of $\Leech$.
+%
+\item \tname{plusbasis} is a basis of $\Leech(\vep_n, +)$,
+which is a list of $(24-n)$ vectors in $\Leech$,
+each of which is written in terms of  the basis  \tname{LeechBasis}.
+(When $n=24$, this item is the null list $[\phantom{a}]$.)
+%
+\item \tname{plusOGrec}  is the record describing 
+$\OG(\Leech(\vep_n, +))$ by the format explained in the next section,
+with the initial basis $[e_1, \dots, e_m]$ is given by  \tname{plusbasis}.
+%
+\item \tname{minusbasis} is a basis of $\Leech(\vep_n, -)$,
+which is a list of $n$ vectors in $\Leech$. 
+(When $n=24$, this item is the list of row vectors of $\Id_{24}$.)
+%
+\item \tname{minusOGrec}  is the record describing 
+$\OG(\Leech(\vep_n, -))$ by the format explained in the next section,
+with the initial basis $[e_1, \dots, e_m]$ is given by  \tname{minusbasis}.
+%
+\item \tname{piepsilon} is  the matrix representation of
+$\pi_{\vep_n}\colon \Leech \to \Leech(\vep_n, -)$
+with respect to the bases  \tname{LeechBasis} of $\Leech$
+and \tname{minusbasis} of $\Leech(\vep_n, -)$.
+ \end{itemize}
+%
+\item \tname{K16} is the kernel of the natural homomorphism $\OG(\Leech(\vep_{16}, -)) \to \OG(q_{16})$.
+This data \tname{K16}  is a  list of $512$  matrices
+expressing isometries of $\Leech(\vep_{16}, -)$ 
+given by the Gram matrix  \tname{erec16.minusOGrec.Gram},
+where \tname{erec16} is the third element of the list \tname{epsilonrecs}.
+
+%
+ \end{itemize}
+%
+%
+\section{The calculation of $\OG(M)$ for a positive-definite lattice $M$}
+%
+Let $M$ be a positive-definite lattice.
+The finite group $\OG(M)$ is described by the method of \emph{stabilizer chain}.
+This method provides us with the order and a finite generating set of $\OG(M)$.
+\par
+Let $m$ be the rank of $M$.
+We fix a basis $[e_1, \dots, e_m]$ of $M$.
+Elements of $M$ are expressed by vectors 
+with respect to this basis, and 
+elements of  $\OG(M)$ are expressed by matrices
+with respect to this basis.
+We choose another  basis $[b_1, \dots, b_m]$ of $M$.
+For the computation,
+ it is better to choose $[b_1, \dots, b_m]$
+ consisting of \emph{short}  vectors.
+ For $i=0, \dots, m$, 
+we put
+\[
+\Sigma_i:=\set{g\in \OG(M)}{b_1^g=b_1, \dots, b_i^g=b_i},
+\]
+and consider the chain 
+\[
+\OG(M)=\Sigma_0\supset \dots\supset \Sigma_m=\{\Id\}.
+\]
+Then we have a natural bijection between 
+the orbit 
+\[
+b_i^{\Sigma_{i-1}}=\set{b_i^g}{g\in \Sigma_{i-1}}
+\]
+ of $b_i$ by 
+the group $\Sigma_{i-1}$ and 
+the set $\Sigma_i\backslash \Sigma_{i-1}$.
+We choose a subset 
+$R_i \subset \Sigma_{i-1}$ such that the  projection 
+$\Sigma_{i-1} \to\Sigma_i\backslash \Sigma_{i-1}$ gives a bijection
+\[
+R_i\;\;\cong\;\;  \Sigma_i\backslash \Sigma_{i-1}.
+\]
+For $i=1$, since $-\Id\in \Sigma_0$,
+we have a subset $R_1\sprime \subset R_1$ such that
+\[
+R_1=R_1\sprime\cup (-R_1\sprime),
+\qquad
+R_1\sprime\cap (-R_1\sprime)=\emptyset.
+\]
+Then each element 
+$g\in \OG(M)$ 
+is written uniquely as 
+\[
+g=r_m \cdots r_2 r_1\sprime \delta \qquad
+ (r_m\in R_m,\;  \dots, \; r_2\in R_2, \;\; r_1\sprime\in R_1\sprime,\;\;  \delta\in \{\pm \Id\}).
+\]
+In particular,  the order of $\OG(M)$ is equal %to the product of sizes of these $R_i$,
+\[
+2\,|R_m|\cdot \cdots \cdot|R_2| \cdot |R_1\sprime|, 
+\]
+and $\OG(M)$ is generated by the union 
+\[
+R_m\, \cup\, \cdots\,  \cup \,R_2\,\cup\, R_1\sprime\,\cup\,  \{- \Id\}.
+\]
+\erase{
+\par
+The old \tname{OGPosLat} 
+returns a recond whose items contains 
+%
+\begin{itemize}
+\item \tname{Gram} is the Gram matrix of $M$ with respect to the basis $[e_1, \dots, e_m]$.
+\item \tname{basis} is a  basis $[b_1, \dots, b_m]$ of $M$.
+\item \tname{gens} is the list $[R_m, \dots, R_2,  R_1\sprime, \{\pm  \Id\}]$.
+\item \tname{orbs}   is the list $[S\sprime_1, S_2, \dots, S_m]$,
+where $S_1\sprime$ is the list  of the pairs $[b_1^g, g]$,
+where $g$ runs through $R_1\sprime$, and  for $i=2, \dots, m$, 
+the list $S_i$ consists of  pairs $[b_i^g, g]$, 
+where $g$ runs through $R_i$.
+\item \tname{order} is the order of $\OG(M)$.
+\end{itemize}
+%
+}
+\par
+The new \tname{MakeOGrec} makes from  the result of \tname{OGPosLat}  
+a record \tname{OMrec}.
+The record \tname{OMrec} describing $\OG(M)$
+has the following items.
+%
+\begin{itemize}
+\item \tname{Gram} is the Gram matrix of $M$ with respect to the basis $[e_1, \dots, e_m]$.
+\item \tname{bs} is a  basis $[b_1, \dots, b_m]$ of $M$.
+\item \tname{Rs} is the list $[R_1\sprime, R_2, \dots, R_m]$ 
+of sets $R_1\sprime$ and $R_i $ for $i=2, \dots, m$.
+\item \tname{order} is the order of $\OG(M)$.
+\end{itemize}
+
+%
+\bibliographystyle{plain}
+\bibliography{myrefsaffineConway}
+%
+\end{document}
+
+

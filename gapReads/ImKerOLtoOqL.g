@@ -1,6 +1,12 @@
 #Read("ImKerOLtoOqL.g");
 
 
+VsDiscg:=function(discg)
+  local ii;
+  return(Cartesian(List(discg, ii->[0..ii-1])));
+end;
+
+
 OqLtoOqLPerm:=function(tqg, discg, vs)
   local poss, vstqg, ttv, ii, leng;
   leng:=Length(discg);

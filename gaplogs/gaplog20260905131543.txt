@@ -1,0 +1,23 @@
+sessionnumb  20260905131543 
+gap> Read("Task20260904Hb.g");
+gap> Read("Task20260905Ua.g");
+Error, user interrupt in
+  q := gram[j][k]; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/zlattice.gi:1088 called from 
+LLLReducedGramMat( b ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/zlattice.gi:1346 called from
+<function "ShortestVectors">( <arguments> )
+ called from read-eval loop at Task20260905Ua.g:6
+you can 'return;'
+brk> quit;
+gap> Error, no method found! For debugging hints type ?Recovery from NoMethodFound
+Error, no 1st choice method found for `[]' on 2 arguments at /usr/local/Cellar/gap/4.15.1/share/gap/lib/methsel2.g:250 called from
+if PositionSublist( hist[n], start ) = 1 then
+    GAPInfo.History.Pos := n;
+    GAPInfo.History.Last := n;
+    return [ 1, Length( l[3] ) + 1, hist[n], l[4] ];
+fi; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/cmdledit.g:611 called from
+GAPInfo.CommandLineEditFunctions.Functions.(l[2])( l ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/cmdledit.g:351 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at *stdin*:3
+type 'quit;' to quit to outer loop
+brk> quit;
+quit;

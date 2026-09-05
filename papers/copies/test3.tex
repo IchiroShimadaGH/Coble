@@ -1,0 +1,24 @@
+\documentclass[a4paper,10pt,dvipdfmx]{jsarticle}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage{forest}
+%
+\begin{document}
+\begin{forest}
+for tree={draw}
+[Codim2FacesRecs
+  [orb]
+  [type]
+  [Dfrec
+     [f]
+     [Drecs
+        [g]
+        [passingvs]
+        [isinVX]
+     ]
+     [rats]
+     [adjmat]
+  ]
+]
+\end{forest}
+\end{document}

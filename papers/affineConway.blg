@@ -1,0 +1,54 @@
+This is upBibTeX, Version 0.99e-j0.36-u2.02 (utf8.uptex) (TeX Live 2026)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: affineConway.aux
+The style file: plain.bst
+Database file #1: myrefsaffineConway.bib
+Warning--there's a number but no volume in MR1654763
+Warning--empty booktitle in MR1484483
+Warning--can't use both volume and number fields in MR1484483
+Warning--empty publisher in MR1484483
+Warning--there's a number but no volume in MR3456710
+Warning--empty journal in affConwayCompdata
+You've used 25 entries,
+            2118 wiz_defined-function locations,
+            682 strings with 7944 characters,
+and the built_in function-call counts, 7901 in all, are:
+= -- 824
+> -- 238
+< -- 5
++ -- 103
+- -- 72
+* -- 564
+:= -- 1291
+add.period$ -- 80
+call.type$ -- 25
+change.case$ -- 109
+chr.to.int$ -- 0
+cite$ -- 31
+duplicate$ -- 292
+empty$ -- 687
+format.name$ -- 72
+if$ -- 1644
+int.to.chr$ -- 0
+int.to.str$ -- 25
+missing$ -- 26
+newline$ -- 131
+num.names$ -- 48
+pop$ -- 87
+preamble$ -- 1
+purify$ -- 87
+quote$ -- 0
+skip$ -- 189
+stack$ -- 0
+substring$ -- 729
+swap$ -- 42
+text.length$ -- 5
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 94
+warning$ -- 6
+while$ -- 86
+width$ -- 27
+write$ -- 281
+is.kanji.str$ -- 0
+(There were 6 warnings)

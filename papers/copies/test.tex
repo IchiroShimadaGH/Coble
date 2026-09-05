@@ -1,0 +1,83 @@
+% !TEX program = pdflatex
+
+%%%%%%%%%%%%%%%%%%%%
+%affineConway.tex
+%%%%%%%%%%%%%%%%%%%%%
+
+\pdfoutput=1 %When you use pdflatex
+\documentclass{amsart} %When you use pdflatex
+
+
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary {arrows.meta}
+\usetikzlibrary {bending}
+\usetikzlibrary{intersections}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{enumerate}
+\usepackage{graphicx}
+
+\usepackage{hyperref}
+\hypersetup{
+ colorlinks = true,
+ linkcolor = blue,
+ filecolor = blue,
+ urlcolor = blue,
+ citecolor = blue,
+}
+\hypersetup{unicode=true}
+
+%\newcommand{\secK3}{\texorpdfstring{$K3$}{K3}}
+\renewcommand{\baselinestretch}{1.2}
+
+\usepackage{bm}
+%\usepackage{enumerate}
+\usepackage{enumitem}
+
+
+\input mymacros
+\input mymacrosaffineConway
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+More precisely,
+we carry out the following computations:
+%
+\begin{itemize}
+\item 
+We calculate the natural homomorphism $\OG(\Lminus)\to \OG(\qminus)$,
+and obtain an upper bound for the index $[\OG(\Lplus, \PPPplus): \vGam]$
+by Proposition~\ref{prop:vGamindex}.
+In fact,
+we calculate the exact value of this index except for the case $ \gamma=(\vep_{12}, 0)$.
+\item 
+We  compute the finite sets $\tilXi_{\tau}$ and $\Xitau$
+defined in~\eqref{eq:tilXi} and~\eqref{eq:Xi}.
+\item 
+We confirm that $\MMM(D_0)=\tilwalls (D_0)$ holds
+by showing that $\Xi_{\tau}$ satisfies  condition~\ref{eq:nnell}
+in Corollary~\ref{cor:MMMtilwalls}.
+\item 
+We calculate a finite generating set of 
+the subgroup $\Sigma_{\vep}([\tau])$ of $\Cen(\dotz, \vep)$,
+and compute the orbit decomposition of  $\Xi_{\tau}$ under the action of $\Sigma_{\vep}([\tau])$.
+Thus we obtain 
+the $\Stab_{\vGam}(D_0)$-orbits in $\walls(D_0)$
+by Remark~\ref{rem:orbitss}.
+\item
+For each $\Stab_{\vGam}(D_0)$-orbit in $\walls(D_0)$,
+we compute by Lemma~\ref{lem:wallfiber} the  fiber of $\mu\colon \tilwalls(D_0)\to \walls(D_0)$
+over a representative of the orbit.
+\end{itemize}
+%
+The results are summarized in Table~\ref{table:Xis}.
+%
+\end{document}
+
+
