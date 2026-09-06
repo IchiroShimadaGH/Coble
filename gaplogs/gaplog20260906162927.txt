@@ -1,0 +1,10 @@
+sessionnumb  20260906162927 
+gap> debug0();
+Error, file "fordebug0.txt" must exist and be readable at /usr/local/Cellar/gap/4.15.1/share/gap/lib/files.gi:207 called from
+Read( "fordebug0.txt" ); at gapReads/gaptools.txt:49 called from
+<function "debug0">( <arguments> )
+ called from read-eval loop at *stdin*:19
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> quit;
+gap> restart();

@@ -6,7 +6,7 @@ VssRec:=function(GramL, nrmcandidate)
   # If nrmcandidate is the minimal norm such that
   # the vevtors v with v^2 <=nrmcandidate generate L,
   # then this returms vssrec;
-  # elif nrmcandidate is too large (not minimal)  then it return (false));
+  # elif nrmcandidate is too large (not minimal)  then it return (false);
   # elif nrmcandidate is too small,  then it beeps.
   #
   local nn, svsrec, nrmsset, vects, vss, tvs, tnrm, 
@@ -50,13 +50,14 @@ BasisRec:=function(GramL, trialnumb)
   local nn, norm, tU, tt,GramL2,  LLLrec, basis, ii,  
   basisnrms,fflag,  maxnrm,  tbasisnrms, 
   fingerprints, newGram, getvs, trec, jj, kk, tintnumbs,
-  tbasisdual, tv, tvs, fp, tbasis, minbasis,
-  nrmcandidate, ttintnumbs;
+  tbasisdual, tv, tvs, fp, tbasis, thebasis,
+  nrmcandidate, ttintnumbs, maxbasisrrms,  tmaxbasisnrms;
   #
   nn:=Length(GramL);
   if SignatureQ(GramL)<>[nn, nn, 0] then beep(665522); fi;
   fflag:=false;
   basisnrms:=[];
+  maxbasisrrms:=infinity;
   while not fflag do
     for tt in [1..trialnumb] do
       tU:=RandomUnimodMat(nn);
@@ -66,46 +67,51 @@ BasisRec:=function(GramL, trialnumb)
       #newGram:=LLLrec.remainder;
       #if newGram<>TMTTmult(basis, GramL2) then beep(11211); fi;
       tbasisnrms:=List([1..nn], ii->LLLrec.remainder[ii][ii]);
-      Sort(tbasisnrms);
-      if basisnrms=[] or basisnrms[nn]>tbasisnrms[nn] or 
-      (basisnrms[nn]=tbasisnrms[nn] and basisnrms>tbasisnrms) then
-        basisnrms:=tbasisnrms;
-        minbasis:=tbasis*tU;
+      tmaxbasisnrms:=Maximum(tbasisnrms);
+      if basisnrms=[] or 
+        maxbasisrrms> tmaxbasisnrms or 
+       (maxbasisrrms= tmaxbasisnrms and basisnrms>tbasisnrms) then
+        thebasis:=tbasis*tU;
+        basisnrms:=List(tbasisnrms);
+        maxbasisrrms:= tmaxbasisnrms;
       fi;
     od;
-    nrmcandidate:=basisnrms[nn];
+    nrmcandidate:=maxbasisrrms;
     trec:=VssRec(GramL, nrmcandidate);
-    #
-    getvs:=function(tnrm)
-      return(trec.vss[SinglePosition(trec.nrmsset, tnrm)]);
-    end;
-    #
-    fingerprints:=[Length(getvs(basisnrms[1]))];
-    #
-    newGram:=TMTTmult(minbasis, GramL);
-    #
-    for jj in [2..nn] do 
-      tintnumbs:=List([1..jj-1], kk->newGram[jj][kk]);
-      tvs:=getvs(Length(getvs(basisnrms[jj])));
-      tbasisdual:=List([1..jj-1], kk->basis[kk])*GramL;
-      fp:=0;
-      for tv in tvs do 
-        ttintnumbs:=tbasisdual*tv;
-        if ttintnumbs=tintnumbs  then fp:=fp+1; 
-        elif ttintnumbs=-tintnumbs  then fp:=fp+1; 
-        fi;
-      od;
-      Add(fingerprints, fp);
-    od;
-    #
-    #
-    if trec<>false then 
-      trec.basisnrms:=basisnrms;
-      trec.basis:=minbasis;
-      trec.newGram:=newGram;
-      trec.fingerprints:=fingerprints;
-    fi;
+    if trec<>false then fflag:=true; fi;
   od;
+  #
+  getvs:=function(tnrm)
+    return(trec.vss[SinglePosition(trec.nrmsset, tnrm)]);
+  end;
+  #
+  fingerprints:=[Length(getvs(basisnrms[1]))];
+  #
+  newGram:=TMTTmult(thebasis, GramL);
+  if List([1..nn], kk->newGram[kk][kk])<>basisnrms then beep(52213); fi;
+  #
+  for jj in [2..nn] do 
+    tintnumbs:=List([1..jj-1], kk->newGram[jj][kk]);
+    tvs:=getvs(basisnrms[jj]);
+    tbasisdual:=List([1..jj-1], kk->thebasis[kk])*GramL;
+    fp:=0;
+    for tv in tvs do 
+      ttintnumbs:=tbasisdual*tv;
+      if ttintnumbs=tintnumbs  then fp:=fp+1; fi;
+      #
+      # this part cannot be changed to elif, because tintnumbs may be a zero vector
+      #
+      if ttintnumbs=-tintnumbs  then fp:=fp+1; fi;
+    od;
+    Add(fingerprints, fp);
+  od;
+  #
+  #
+  trec.basisnrms:=basisnrms;
+  trec.basis:=thebasis;
+  trec.newGram:=newGram;
+  trec.fingerprints:=fingerprints;
+  #
   return(trec);
 end;
 
@@ -127,11 +133,12 @@ NewOGLat:=function(basisrec)
     localbeep("NewOGLat", beepnumb); Error();
   end;
   #
-  GramL:=basisrec.GramL;
+  GramL:=basisrec.Gram;
   nn:=Length(GramL);
   basis:=basisrec.basis;
   fingerprints:=basisrec.fingerprints;
   newGram:=basisrec.newGram;
+  if TMTTmult(basis, GramL)<>newGram then beep(391919); fi;
   nrmsset:=basisrec.nrmsset;
   basisnrms:=basisrec.basisnrms;
   #
@@ -143,7 +150,7 @@ NewOGLat:=function(basisrec)
     beep(727211);
   end;
   #
-  thevss:=basisrec.vv;
+  thevss:=basisrec.vss;
   thevss[1]:=List(thevss[SinglePosition(nrmsset, basisnrms[1])], inipos);
   # to make the computation in getpermcan1 easy 
   #
@@ -196,9 +203,6 @@ NewOGLat:=function(basisrec)
           fi;
         od;
       od;
-      if Length(candidates)<>fingerprints[leng+1] then 
-        return();
-      fi;
       tvs:=getvs(basisnrms[leng+1]);
       for tposss in candidates do 
         tv:=tposss[2]*tvs[tposss[1]];
@@ -256,7 +260,7 @@ NewOGLat:=function(basisrec)
   pos:=0;
   for tv in candidates1 do 
     pos:=pos+1;
-    if not doneposs[pos] then 
+    if not pos in doneposs then 
       reachflag:=false;
       simpleextend([tv]);
       #
@@ -325,7 +329,7 @@ NewOGLat:=function(basisrec)
     pos:=0;
     for tv in candidates do 
       pos:=pos+1;
-      if not doneposs[pos] then 
+      if not pos in doneposs then 
         reachflag:=false;
         simpleextend(CopyAdd(inipsol, tv));
         #
@@ -340,7 +344,7 @@ NewOGLat:=function(basisrec)
         else 
           Add(falseseeds, pos);
           neworb:=getorbblist(pos, genperms);
-          doneposs:=Union (doneposs, neworb);
+          doneposs:=Union(doneposs, neworb);
         fi;
         #
       fi;
@@ -379,7 +383,7 @@ NewOGLat:=function(basisrec)
 end;
 
 CheckOGrecSize:=function(basisrec, OGrec)
-  local vs, tg, tperm, gensperms;
+  local vs, tg, tperm, gensperms, permsize;
   vs:=Union(basisrec.vss);
   vs:=Union(vs, -vs);
   gensperms:=[];
@@ -387,7 +391,8 @@ CheckOGrecSize:=function(basisrec, OGrec)
     tperm:=PermList(List(vs*tg, ttv->Position(vs, ttv)));
     Add(gensperms, tperm);
   od;
-  if OGrec.size<>Size(Group(gensperms)) then beep(9999111); fi;
+  permsize:=Size(Group(gensperms));
+  if OGrec.size<>permsize then beep(9999111); fi;
   return(true);
 end;
 
@@ -400,8 +405,8 @@ FindIsomBasisRecs:=function(basisrec1, basisrec2)
   if basisrec1.nrmsset<>basisrec2.nrmsset then return(false); fi;
   if basisrec1.nopss<>basisrec2.nopss then return(false); fi;
   #
-  GramL1:=basisrec1.GramL;
-  GramL2:=basisrec2.GramL;
+  GramL1:=basisrec1.Gram;
+  GramL2:=basisrec2.Gram;
   nn:=Length(GramL1);
   if nn<>Length(GramL2) then return(false); fi;
   if DeterminantIntMat(GramL1)<>DeterminantIntMat(GramL2) then return(false); fi;
@@ -452,7 +457,11 @@ FindIsomBasisRecs:=function(basisrec1, basisrec2)
         psoltvdual:=psol*tvdual;
         if psoltvdual=tintnumbs then 
           Add(candidates, tvs[pos]);
-        elif  psoltvdual=-tintnumbs then 
+        fi;
+        #
+        # this part cannot be changed to elif, because tintnumbs may be a zero vector
+        #
+        if  psoltvdual=-tintnumbs then 
           Add(candidates, -tvs[pos]);
         fi;
       od;

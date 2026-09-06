@@ -46,7 +46,7 @@ end;
 
 
 debug0:=function()
-	Read("fordebug0.txt");
+	Read("fordebug0.g");
 end;
 
 debug1:=function()

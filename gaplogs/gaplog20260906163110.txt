@@ -1,0 +1,957 @@
+sessionnumb  20260906163110 
+gap> debug0();
+Syntax warning: Unbound global variable in fordebug0.g:20
+    poss:=Positions(svsrec.norms, tnrm);
+    ^^^^
+Syntax warning: Unbound global variable in fordebug0.g:21
+    vs:=List(poss, tpos->vects[tpos]);
+    ^^
+Syntax warning: Unbound global variable in fordebug0.g:21
+    vs:=List(poss, tpos->vects[tpos]);
+             ^^^^
+Syntax warning: Unbound global variable in fordebug0.g:22
+    Add(vss, vs);
+             ^^
+Syntax warning: Unbound global variable in fordebug0.g:23
+    Append(tvs, vs);
+                ^^
+Syntax error: ) expected in fordebug0.g:35
+    nopss:=Collected(svsrec.norms);
+                                  ^
+Syntax error: ; expected in fordebug0.g:37
+  );
+  ^
+gap> debug0();
+Syntax warning: Unbound global variable in fordebug0.g:54
+  fflag:=false;
+  ^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:55
+  basisnrms:=[];
+  ^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:56
+  while not fflag do
+            ^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:57
+    for tt in [1..trialnunb] do
+                  ^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:61
+      tbasis:=LLLrec.transformation;
+      ^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:61
+      tbasis:=LLLrec.transformation;
+              ^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:64
+      tbasisnrmslist:=List([1..nn], ii->LLLrec.remainder[ii][ii]);
+      ^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:64
+      tbasisnrmslist:=List([1..nn], ii->LLLrec.remainder[ii][ii]);
+                                        ^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:65
+      Sort(tbasisnrmslist);
+           ^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:66
+      if basisnrms=[] or basisnrms[nn]>tbasisnrmslist[nn] or 
+         ^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:66
+      if basisnrms=[] or basisnrms[nn]>tbasisnrmslist[nn] or 
+                         ^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:66
+      if basisnrms=[] or basisnrms[nn]>tbasisnrmslist[nn] or 
+                                       ^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:67
+      (basisnrms[nn]=tbasisnrmslist[nn] and basisnrms>tbasisnrmslist) then
+       ^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:67
+      (basisnrms[nn]=tbasisnrmslist[nn] and basisnrms>tbasisnrmslist) then
+                     ^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:67
+      (basisnrms[nn]=tbasisnrmslist[nn] and basisnrms>tbasisnrmslist) then
+                                            ^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:67
+      (basisnrms[nn]=tbasisnrmslist[nn] and basisnrms>tbasisnrmslist) then
+                                                      ^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:68
+        basisnrms:=tbasisnrmslist;
+        ^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:68
+        basisnrms:=tbasisnrmslist;
+                   ^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:69
+        minbasis:=tbasis*tU;
+        ^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:69
+        minbasis:=tbasis*tU;
+                  ^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:72
+    nrmcandidate:=basisnrms[nn];
+    ^^^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:72
+    nrmcandidate:=basisnrms[nn];
+                  ^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:73
+    trec:=VssRec(GramL, nrmcandidate);
+                        ^^^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:79
+    fingerprints:=[Length(getvs(basisnrms[1]))];
+    ^^^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:79
+    fingerprints:=[Length(getvs(basisnrms[1]))];
+                                ^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:81
+    newGram:=TMTTmult(minbasis, GramL);
+                      ^^^^^^^^
+Syntax error: ) expected in fordebug0.g:84
+      tintnumbs:=List([1..jj-1], kk->newGram[jj][kk];
+                                                    ^
+Syntax warning: Unbound global variable in fordebug0.g:85
+      tvs:=getvs(Length(getvs(basisnrms[jj])));
+                              ^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:89
+        ttintnumbs:=tbasisdual*tv;
+        ^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:90
+        if ttintnumbs=tintnumbs  then fp:=fp+1; 
+           ^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:91
+        elif ttintnumbs=-tintnumbs  then fp:=fp+1; 
+             ^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:94
+      Add(fingerprints, fp);
+          ^^^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:99
+      trec.basisnrms:=basisnrms;
+                      ^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:100
+      trec.basis:=minbasis;
+                  ^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:102
+      trec.fingerprints:=fingerprints;
+                         ^^^^^^^^^^^^
+gap> debug0();
+Syntax warning: Unbound global variable in fordebug0.g:57
+    for tt in [1..trialnunb] do
+                  ^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:61
+      tbasis:=LLLrec.transformation;
+      ^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:69
+        minbasis:=tbasis*tU;
+        ^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:69
+        minbasis:=tbasis*tU;
+                  ^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:72
+    nrmcandidate:=basisnrms[nn];
+    ^^^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:73
+    trec:=VssRec(GramL, nrmcandidate);
+                        ^^^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:81
+    newGram:=TMTTmult(minbasis, GramL);
+                      ^^^^^^^^
+Syntax error: ) expected in fordebug0.g:84
+      tintnumbs:=List([1..jj-1], kk->newGram[jj][kk];
+                                                    ^
+Syntax warning: Unbound global variable in fordebug0.g:89
+        ttintnumbs:=tbasisdual*tv;
+        ^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:90
+        if ttintnumbs=tintnumbs  then fp:=fp+1; 
+           ^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:91
+        elif ttintnumbs=-tintnumbs  then fp:=fp+1; 
+             ^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:100
+      trec.basis:=minbasis;
+                  ^^^^^^^^
+gap> debug0();
+Syntax warning: Unbound global variable in fordebug0.g:90
+        ttintnumbs:=tbasisdual*tv;
+        ^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:91
+        if ttintnumbs=tintnumbs  then fp:=fp+1; 
+           ^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:92
+        elif ttintnumbs=-tintnumbs  then fp:=fp+1; 
+             ^^^^^^^^^^
+Syntax error: Name used for two locals in fordebug0.g:115
+  basisinv, basisdual, basisnrms, reachflag, thetg, simpleextend,
+                       ^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:143
+  thevss:=basisrec.vv;
+  ^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:144
+  thevss[1]:=List(thevss[SinglePosition(nrmsset, basisnrms[1])], inipos);
+  ^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:144
+  thevss[1]:=List(thevss[SinglePosition(nrmsset, basisnrms[1])], inipos);
+                  ^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:147
+  thevssdual:=List(thevss, tvs->tvs*GramL);
+  ^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:147
+  thevssdual:=List(thevss, tvs->tvs*GramL);
+                   ^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:150
+    return( thevss[SinglePosition(nrmsset, nrm)]);
+            ^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:154
+    return(thevssdual[SinglePosition(nrmsset, nrm)]);
+           ^^^^^^^^^^
+Syntax error: expression expected in fordebug0.g:280
+  if Union(trueposs, falseposs)><>[1..lengcan1] then beep(18228181); fi;
+                                ^^
+Syntax error: expression expected in fordebug0.g:349
+    if Union(trueposs, falseposs)><>[1..lengcan] then beep(1822228181); fi;
+                                  ^^
+gap> debug0();
+Syntax error: expression expected in fordebug0.g:280
+  if Union(trueposs, falseposs)><>[1..lengcan1] then beep(18228181); fi;
+                                ^^
+gap> debug0();
+Syntax warning: Unbound global variable in fordebug0.g:380
+  vs:=Unios(basisrec.vss);
+      ^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:404
+  if DeterminantintMat(GramL1)<>DeterminantIntMat(GramL2) then return(false); fi;
+     ^^^^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:419
+  newGram1:=basisrec1.newGram;
+  ^^^^^^^^
+Syntax error: found an expression when a statement was expected in fordebug0.g:431
+      totalflag;=true;
+               ^
+Syntax error: while parsing a function: statement or 'end' expected in fordebug0.g:436
+    fi;
+    ^^
+Syntax warning: Unbound global variable in fordebug0.g:438
+    tnrm:=basisrec1.basisnrms[leng+1];
+    ^^^^
+Syntax warning: Unbound global variable in fordebug0.g:438
+    tnrm:=basisrec1.basisnrms[leng+1];
+                              ^^^^
+Syntax warning: Unbound global variable in fordebug0.g:439
+    if  leng=0 then 
+        ^^^^
+Syntax warning: Unbound global variable in fordebug0.g:440
+      candidates:=getvs(tnrm);
+      ^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:440
+      candidates:=getvs(tnrm);
+                        ^^^^
+Syntax warning: Unbound global variable in fordebug0.g:442
+      candidates:=[];
+      ^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:443
+      tintnumbs:=List([1..leng], kk->newGram[leng+1][kk]);
+      ^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:443
+      tintnumbs:=List([1..leng], kk->newGram[leng+1][kk]);
+                          ^^^^
+Syntax warning: Unbound global variable in fordebug0.g:443
+      tintnumbs:=List([1..leng], kk->newGram[leng+1][kk]);
+                                     ^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:443
+      tintnumbs:=List([1..leng], kk->newGram[leng+1][kk]);
+                                             ^^^^
+Syntax warning: Unbound global variable in fordebug0.g:444
+      tvsdual:=getvsdual(tnrm);
+      ^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:444
+      tvsdual:=getvsdual(tnrm);
+                         ^^^^
+Syntax warning: Unbound global variable in fordebug0.g:445
+      tvs:=getvs(tnrm);
+      ^^^
+Syntax warning: Unbound global variable in fordebug0.g:445
+      tvs:=getvs(tnrm);
+                 ^^^^
+Syntax warning: Unbound global variable in fordebug0.g:446
+      pos:=0;
+      ^^^
+Syntax warning: Unbound global variable in fordebug0.g:447
+      for tvdual in tvsdual do 
+          ^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:447
+      for tvdual in tvsdual do 
+                    ^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:448
+        pos:=pos+1;
+        ^^^
+Syntax warning: Unbound global variable in fordebug0.g:448
+        pos:=pos+1;
+             ^^^
+Syntax warning: Unbound global variable in fordebug0.g:449
+        psoltvdual:=psol*tvdual;
+        ^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:449
+        psoltvdual:=psol*tvdual;
+                    ^^^^
+Syntax warning: Unbound global variable in fordebug0.g:450
+        if psoltvdual=tintnumbs then 
+           ^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:450
+        if psoltvdual=tintnumbs then 
+                      ^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:451
+          Add(candidatse, tvs[pos]);
+              ^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:451
+          Add(candidatse, tvs[pos]);
+                          ^^^
+Syntax warning: Unbound global variable in fordebug0.g:451
+          Add(candidatse, tvs[pos]);
+                              ^^^
+Syntax warning: Unbound global variable in fordebug0.g:452
+        elif  psoltvdual=-tintnumbs then 
+              ^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:452
+        elif  psoltvdual=-tintnumbs then 
+                          ^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:453
+          Add(candidates, -tvs[pos]);
+              ^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:453
+          Add(candidates, -tvs[pos]);
+                           ^^^
+Syntax warning: Unbound global variable in fordebug0.g:453
+          Add(candidates, -tvs[pos]);
+                               ^^^
+Syntax warning: Unbound global variable in fordebug0.g:458
+    if Length(candidates)<>fingerprints1[leng+1] then return(); fi;
+              ^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:458
+    if Length(candidates)<>fingerprints1[leng+1] then return(); fi;
+                                         ^^^^
+Syntax warning: Unbound global variable in fordebug0.g:460
+    for tv in candidates do 
+        ^^
+Syntax warning: Unbound global variable in fordebug0.g:460
+    for tv in candidates do 
+              ^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:461
+      Add(psol, tv);
+          ^^^^
+Syntax warning: Unbound global variable in fordebug0.g:462
+      extend(psol);
+             ^^^^
+Syntax warning: Unbound global variable in fordebug0.g:463
+      if Remove(psol)<>tv then beep(776611); fi;
+                ^^^^
+gap> debug0();
+Syntax warning: Unbound global variable in fordebug0.g:380
+  vs:=Unios(basisrec.vss);
+      ^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:404
+  if DeterminantintMat(GramL1)<>DeterminantIntMat(GramL2) then return(false); fi;
+     ^^^^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:419
+  newGram1:=basisrec1.newGram;
+  ^^^^^^^^
+Syntax error: found an expression when a statement was expected in fordebug0.g:431
+      totalflag;=true;
+               ^
+Syntax error: while parsing a function: statement or 'end' expected in fordebug0.g:436
+    fi;
+    ^^
+Syntax warning: Unbound global variable in fordebug0.g:438
+    tnrm:=basisrec1.basisnrms[leng+1];
+    ^^^^
+Syntax warning: Unbound global variable in fordebug0.g:438
+    tnrm:=basisrec1.basisnrms[leng+1];
+                              ^^^^
+Syntax warning: Unbound global variable in fordebug0.g:439
+    if  leng=0 then 
+        ^^^^
+Syntax warning: Unbound global variable in fordebug0.g:440
+      candidates:=getvs(tnrm);
+      ^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:440
+      candidates:=getvs(tnrm);
+                        ^^^^
+Syntax warning: Unbound global variable in fordebug0.g:442
+      candidates:=[];
+      ^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:443
+      tintnumbs:=List([1..leng], kk->newGram[leng+1][kk]);
+      ^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:443
+      tintnumbs:=List([1..leng], kk->newGram[leng+1][kk]);
+                          ^^^^
+Syntax warning: Unbound global variable in fordebug0.g:443
+      tintnumbs:=List([1..leng], kk->newGram[leng+1][kk]);
+                                     ^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:443
+      tintnumbs:=List([1..leng], kk->newGram[leng+1][kk]);
+                                             ^^^^
+Syntax warning: Unbound global variable in fordebug0.g:444
+      tvsdual:=getvsdual(tnrm);
+      ^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:444
+      tvsdual:=getvsdual(tnrm);
+                         ^^^^
+Syntax warning: Unbound global variable in fordebug0.g:445
+      tvs:=getvs(tnrm);
+      ^^^
+Syntax warning: Unbound global variable in fordebug0.g:445
+      tvs:=getvs(tnrm);
+                 ^^^^
+Syntax warning: Unbound global variable in fordebug0.g:446
+      pos:=0;
+      ^^^
+Syntax warning: Unbound global variable in fordebug0.g:447
+      for tvdual in tvsdual do 
+          ^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:447
+      for tvdual in tvsdual do 
+                    ^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:448
+        pos:=pos+1;
+        ^^^
+Syntax warning: Unbound global variable in fordebug0.g:448
+        pos:=pos+1;
+             ^^^
+Syntax warning: Unbound global variable in fordebug0.g:449
+        psoltvdual:=psol*tvdual;
+        ^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:449
+        psoltvdual:=psol*tvdual;
+                    ^^^^
+Syntax warning: Unbound global variable in fordebug0.g:450
+        if psoltvdual=tintnumbs then 
+           ^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:450
+        if psoltvdual=tintnumbs then 
+                      ^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:451
+          Add(candidatse, tvs[pos]);
+              ^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:451
+          Add(candidatse, tvs[pos]);
+                          ^^^
+Syntax warning: Unbound global variable in fordebug0.g:451
+          Add(candidatse, tvs[pos]);
+                              ^^^
+Syntax warning: Unbound global variable in fordebug0.g:452
+        elif  psoltvdual=-tintnumbs then 
+              ^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:452
+        elif  psoltvdual=-tintnumbs then 
+                          ^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:453
+          Add(candidates, -tvs[pos]);
+              ^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:453
+          Add(candidates, -tvs[pos]);
+                           ^^^
+Syntax warning: Unbound global variable in fordebug0.g:453
+          Add(candidates, -tvs[pos]);
+                               ^^^
+Syntax warning: Unbound global variable in fordebug0.g:458
+    if Length(candidates)<>fingerprints1[leng+1] then return(); fi;
+              ^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:458
+    if Length(candidates)<>fingerprints1[leng+1] then return(); fi;
+                                         ^^^^
+Syntax warning: Unbound global variable in fordebug0.g:460
+    for tv in candidates do 
+        ^^
+Syntax warning: Unbound global variable in fordebug0.g:460
+    for tv in candidates do 
+              ^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:461
+      Add(psol, tv);
+          ^^^^
+Syntax warning: Unbound global variable in fordebug0.g:462
+      extend(psol);
+             ^^^^
+Syntax warning: Unbound global variable in fordebug0.g:463
+      if Remove(psol)<>tv then beep(776611); fi;
+                ^^^^
+gap> debug0();
+Syntax warning: Unbound global variable in fordebug0.g:443
+      tintnumbs:=List([1..leng], kk->newGram[leng+1][kk]);
+                                     ^^^^^^^
+Syntax warning: Unbound global variable in fordebug0.g:451
+          Add(candidatse, tvs[pos]);
+              ^^^^^^^^^^
+Syntax error: while parsing a function: statement or 'end' expected in fordebug0.g:471
+  else return(fail);
+  ^^^^
+gap> debug0();
+gap> Read("Task20260906Ua.g");
+Syntax error: do expected in Task20260906Ua.g:9
+for ttt in [1..10000] dd
+                      ^^
+Syntax error: found an expression when a statement was expected in Task20260906Ua.g:10
+  for ttdim in [2..8] do
+  ^^^
+Syntax error: expression expected in Task20260906Ua.g:11
+    tGram:=RandomPosLat(tdim, [-2,-1,0,1,2]);
+                                            ^
+gap> Read("Task20260906Ua.g");
+Error, Variable: 'tdim' must have an assigned value in
+  tGram := RandomPosLat( tdim, [ -2, -1, 0, 1, 2 ] ); at Task20260906Ua.g:11 called from 
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260906Ua.g:34
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260906Ua.g");
+Error, Variable: 'basis' must have an assigned value in
+  return basis[kk]; at NewOGLat.g:90 called from 
+func( C[i] ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from
+List( [ 1 .. jj - 1 ], function ( kk )
+      return basis[kk];
+  end ) at NewOGLat.g:90 called from
+BasisRec( tGram, 3 ) at Task20260906Ua.g:12 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260906Ua.g:34
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260906Ua.g");
+wrong in SinglePosition 
+Error,  at gapReads/gaptools.txt:601 called from
+SinglePosition( trec.nrmsset, tnrm ) at NewOGLat.g:80 called from
+getvs( Length( getvs( basisnrms[jj] ) ) ) at NewOGLat.g:89 called from
+BasisRec( tGram, 3 ) at Task20260906Ua.g:12 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260906Ua.g:34
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> trec.nrmsset;
+[ 1 ]
+brk> tnrm;
+2
+brk> basisnrms;
+[ 1, 1 ]
+brk> nrmcandidate;
+1
+brk> basisnrms;
+[ 1, 1 ]
+brk> nn;
+2
+brk> newGram;
+[ [ 1, 0 ], [ 0, 1 ] ]
+brk> quit;
+gap> Read("Task20260906Ua.g");
+Error, user interrupt in
+  res[Length( C )] := 1; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:659 called from 
+List( [ r + 1 .. n ], function ( i )
+      return mue[i]{[ r + 1 .. i - 1 ]};
+  end ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/zlattice.gi:1227 called from
+LLLReducedGramMat( GramL2 ) at NewOGLat.g:64 called from
+BasisRec( tGram, 3 ) at Task20260906Ua.g:12 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260906Ua.g:34
+you can 'return;'
+brk> quit;
+gap> Read("Task20260906Ua.g");
+Error, Record Element: '<rec>.GramL' must have an assigned value in
+  GramL := basisrec.GramL; at NewOGLat.g:130 called from 
+NewOGLat( tbasisrec ) at Task20260906Ua.g:13 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260906Ua.g:34
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260906Ua.g");
+Error, Record Element: '<rec>.vv' must have an assigned value in
+  thevss := basisrec.vv; at NewOGLat.g:146 called from 
+NewOGLat( tbasisrec ) at Task20260906Ua.g:13 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260906Ua.g:34
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260906Ua.g");
+Error, List Element: <list>[1] must have an assigned value in
+  if not doneposs[pos] then
+    reachflag := false;
+    simpleextend( [ tv ] );
+    if reachflag then
+        Add( gengs, thetg );
+        tperm := getpermcan1( thetg );
+        Add( genperms, tperm );
+        Add( trueseeds, pos );
+        tblist := getorbsunionblist( trueseeds, genperms );
+        fblist := getorbsunionblist( falseseeds, genperms );
+        doneposs := Union( tblist, fblist );
+    else
+        Add( falseseeds, pos );
+        neworb := getorbblist( pos, genperms );
+        doneposs := Union( doneposs, neworb );
+    fi;
+fi; at NewOGLat.g:277 called from 
+NewOGLat( tbasisrec ) at Task20260906Ua.g:13 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260906Ua.g:34
+type 'quit;' to quit to outer loop
+brk> doneposs;
+[  ]
+brk> quit;
+gap> Read("Task20260906Ua.g");
+wrong global beep 9999111 
+Error,  at gapReads/gaptools.txt:139 called from
+beep( 9999111 ); at NewOGLat.g:390 called from
+CheckOGrecSize( tbasisrec, tOGrec ); at Task20260906Ua.g:14 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260906Ua.g:34
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> tOGrec.size;
+0
+brk> tOGrec.tolalgens;
+Error, Record Element: '<rec>.tolalgens' must have an assigned value in
+  Error(  ); at gapReads/gaptools.txt:139 called from 
+beep( 9999111 ); at NewOGLat.g:390 called from
+CheckOGrecSize( tbasisrec, tOGrec ); at Task20260906Ua.g:14 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at *errin*:2
+type 'quit;' to quit to outer loop
+brk_2> quit;
+brk>  tOGrec;
+rec( Gram := [ [ 2, 1 ], [ 1, 1 ] ], basis := [ [ 1, -1 ], [ 0, -1 ] ], size := 0, 
+  stabrecs := [ rec( candidates := [ [ 1, -1 ], [ 0, 1 ] ], gengs := [  ], genperms := [  ], level := 1, size := 0, trueposs := [  ] ), 
+      rec( candidates := [ [ 0, 1 ], [ 0, -1 ] ], gengs := [ [ [ 1, -2 ], [ 0, -1 ] ] ], genperms := [ (1,2) ], level := 2, size := 2, 
+          trueposs := [ 1, 2 ] ) ], totalgens := [ [ [ -1, 0 ], [ 0, -1 ] ], [ [ 1, -2 ], [ 0, -1 ] ] ] )
+brk> Size(Group(gensperms)) ;
+4
+brk> quit;
+gap> debug2();
+gap> tOGrec;
+rec( Gram := [ [ 2, 1 ], [ 1, 1 ] ], basis := [ [ 0, -1 ], [ -1, 1 ] ], size := 0, 
+  stabrecs := [ rec( candidates := [ [ 1, -1 ], [ 0, 1 ] ], gengs := [  ], genperms := [  ], level := 1, size := 0, trueposs := [  ] ), 
+      rec( candidates := [ [ 1, -1 ], [ -1, 1 ] ], gengs := [ [ [ -1, 2 ], [ 0, 1 ] ] ], genperms := [ (1,2) ], level := 2, size := 2, 
+          trueposs := [ 1, 2 ] ) ], totalgens := [ [ [ -1, 0 ], [ 0, -1 ] ], [ [ -1, 2 ], [ 0, 1 ] ] ] )
+gap> tbasisrec;
+rec( Gram := [ [ 2, 1 ], [ 1, 1 ] ], basis := [ [ 0, -1 ], [ -1, 1 ] ], basisnrms := [ 1, 1 ], fingerprints := [ 2, 1 ], maxnrm := 1, 
+  newGram := [ [ 1, 0 ], [ 0, 1 ] ], nopss := [ [ 1, 2 ] ], nrmsset := [ 1 ], vss := [ [ [ 1, -1 ], [ 0, 1 ] ] ] )
+gap> debug2();
+[  ] [ 1 .. 2 ] 
+gap> debug2();
+[  ] [  ] [ 1 .. 2 ] 
+gap> debug2();
+[ [ 1, -1 ], [ 0, 1 ] ] [  ] [  ] [ 1 .. 2 ] 
+gap> debug2();
+Syntax warning: Unbound global variable in tNewOGLat.g:284
+  Printn(gensperms, candidates1, trueseeds, trueposs, doneposs);
+         ^^^^^^^^^
+Error, Variable: 'gensperms' must have an assigned value in
+  Printn( gensperms, candidates1, trueseeds, trueposs, doneposs ); at tNewOGLat.g:284 called from 
+<function "NewOGLat">( <arguments> )
+ called from read-eval loop at fordebug2.g:5
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> debug2();
+[  ] [ [ 1, -1 ], [ 0, 1 ] ] [  ] [  ] [ 1 .. 2 ] 
+gap> debug2();
+[  ] [ [ 1, -1 ], [ 0, 1 ] ] [  ] [  ] [ 1 .. 2 ] 
+gap> debug2();
+Syntax error: ; expected in tNewOGLat.g:278
+    fi;
+    ^^
+[  ] [ [ 1, -1 ], [ 0, 1 ] ] [  ] [  ] [ 1 .. 2 ] 
+gap> debug2();
+pos 1 doneposs [ 1 ] 
+pos 2 doneposs [ 1 .. 2 ] 
+[  ] [ [ 1, -1 ], [ 0, 1 ] ] [  ] [  ] [ 1 .. 2 ] 
+gap> debug2();
+koko 1 
+koko 1 
+gap> debug2();
+[ 2, 1 ] 2 
+[ 2, 1 ] 2 
+gap> debug2();
+[ 2, 1 ] 2 
+[ 2, 1 ] 2 
+gap> tbasisrec;
+rec( Gram := [ [ 2, 1 ], [ 1, 1 ] ], basis := [ [ -1, 1 ], [ 0, 1 ] ], basisnrms := [ 1, 1 ], fingerprints := [ 2, 1 ], maxnrm := 1, 
+  newGram := [ [ 1, 0 ], [ 0, 1 ] ], nopss := [ [ 1, 2 ] ], nrmsset := [ 1 ], vss := [ [ [ 1, -1 ], [ 0, 1 ] ] ] )
+gap> tbasisrec;
+rec( Gram := [ [ 2, 1 ], [ 1, 1 ] ], basis := [ [ -1, 1 ], [ 0, 1 ] ], basisnrms := [ 1, 1 ], fingerprints := [ 2, 1 ], maxnrm := 1, 
+  newGram := [ [ 1, 0 ], [ 0, 1 ] ], nopss := [ [ 1, 2 ] ], nrmsset := [ 1 ], vss := [ [ [ 1, -1 ], [ 0, 1 ] ] ] )
+gap> debug2();
+gap> CheckOGrecSize(tbasisrec, tOGrec);
+true
+gap> Read("Task20260906Ua.g");
+2 4 [ 1, 2 ] 
+3 16 [ 1, 1, 2 ] 
+4 32 [ 1, 4, 4, 4 ] 
+5 384 [ 2, 2, 2, 2, 2 ] 
+6 8 [ 1, 3, 3, 3, 3, 3 ] 
+wrong global beep 9999111 
+Error,  at gapReads/gaptools.txt:139 called from
+beep( 9999111 ); at NewOGLat.g:390 called from
+CheckOGrecSize( tbasisrec, tOGrec ); at Task20260906Ua.g:14 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260906Ua.g:34
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> quit;
+gap> Read("Task20260906Ua.g");
+2 4 [ 1, 2 ] 
+3 48 [ 1, 1, 1 ] 
+4 96 [ 1, 2, 2, 2 ] 
+5 72 [ 2, 2, 3, 3, 3 ] 
+2 8 [ 2, 2 ] 
+3 8 [ 1, 2, 3 ] 
+4 96 [ 1, 2, 2, 2 ] 
+wrong in NewOGLat 716552 
+Error,  at gapReads/gaptools.txt:723 called from
+localbeep( "NewOGLat", beepnumb ); at NewOGLat.g:129 called from
+beep( 716552 ); at NewOGLat.g:182 called from
+simpleextend( psol ); at NewOGLat.g:206 called from
+simpleextend( psol ); at NewOGLat.g:206 called from
+simpleextend( psol ); at NewOGLat.g:206 called from
+...  at Task20260906Ua.g:34
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> TMTTmult(tg, GramL);
+[ [ 2, 1, -1, 0, -1 ], [ 1, 2, -1, 0, 1 ], [ -1, -1, 3, -1, 0 ], [ 0, 0, -1, 3, -1 ], [ -1, 1, 0, -1, 3 ] ]
+brk> GramL;
+[ [ 3, 2, -1, 0, -1 ], [ 2, 3, -1, 0, 1 ], [ -1, -1, 2, -1, 0 ], [ 0, 0, -1, 3, -1 ], [ -1, 1, 0, -1, 3 ] ]
+brk> psol;
+[ [ 1, -1, 0, 0, 1 ], [ 1, -1, 1, 1, 1 ], [ 1, -1, 0, 1, 1 ], [ -1, 1, 0, 0, 0 ], [ 1, 0, 1, 0, 0 ] ]
+brk> savedata(basisrec);
+brk> quit;
+gap> debug2();
+Error, Variable: 'GramL' must have a value
+not in any function at fordebug2.g:3
+gap> debug2();
+wrong in NewOGLat 716552 
+Error,  at gapReads/gaptools.txt:723 called from
+localbeep( "NewOGLat", beepnumb ); at ttNewOGLat.g:129 called from
+beep( 716552 ); at ttNewOGLat.g:182 called from
+simpleextend( psol ); at ttNewOGLat.g:206 called from
+simpleextend( psol ); at ttNewOGLat.g:206 called from
+simpleextend( psol ); at ttNewOGLat.g:206 called from
+...  at fordebug2.g:7
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> psol;
+[ [ 1, -1, 0, 0, 1 ], [ 1, -1, 1, 1, 1 ], [ 1, -1, 0, 1, 1 ], [ -1, 1, 0, 0, 0 ], [ 1, 0, 1, 0, 0 ] ]
+brk> newGram;
+[ [ 1, 0, 0, 0, 0 ], [ 0, 2, 1, 0, 0 ], [ 0, 1, 3, 0, -1 ], [ 0, 0, 0, 2, -1 ], [ 0, 0, -1, -1, 2 ] ]
+brk> TMTTmult(psol, GramL);
+[ [ 1, 0, 0, 0, 0 ], [ 0, 2, 1, 0, 0 ], [ 0, 1, 2, 0, -1 ], [ 0, 0, 0, 2, -1 ], [ 0, 0, -1, -1, 3 ] ]
+brk> nasisnrms;
+Syntax warning: Unbound global variable in *errin*:4
+nasisnrms;
+^^^^^^^^^
+Error, Variable: 'nasisnrms' must have a value in
+  Error(  ); at gapReads/gaptools.txt:723 called from 
+localbeep( "NewOGLat", beepnumb ); at ttNewOGLat.g:129 called from
+beep( 716552 ); at ttNewOGLat.g:182 called from
+simpleextend( psol ); at ttNewOGLat.g:206 called from
+simpleextend( psol ); at ttNewOGLat.g:206 called from
+simpleextend( psol ); at ttNewOGLat.g:206 called from
+...  at *errin*:4
+brk> basisnrms;
+[ 1, 2, 2, 2, 3 ]
+brk> List([1..5], ii->newGram[ii][ii]);
+Error, Variable: <debug-variable-1-6> cannot be used here in
+  Error(  ); at gapReads/gaptools.txt:723 called from 
+localbeep( "NewOGLat", beepnumb ); at ttNewOGLat.g:129 called from
+beep( 716552 ); at ttNewOGLat.g:182 called from
+simpleextend( psol ); at ttNewOGLat.g:206 called from
+simpleextend( psol ); at ttNewOGLat.g:206 called from
+simpleextend( psol ); at ttNewOGLat.g:206 called from
+...  at *errin*:6
+brk> Display(newGram);
+[ [   1,   0,   0,   0,   0 ],
+  [   0,   2,   1,   0,   0 ],
+  [   0,   1,   3,   0,  -1 ],
+  [   0,   0,   0,   2,  -1 ],
+  [   0,   0,  -1,  -1,   2 ] ]
+brk> TMTTmult(basis, GramL);
+[ [ 1, 0, 0, 0, 0 ], [ 0, 2, 1, 0, 0 ], [ 0, 1, 3, 0, -1 ], [ 0, 0, 0, 2, -1 ], [ 0, 0, -1, -1, 2 ] ]
+brk> quit;
+gap> debug2():
+wrong in NewOGLat 52213 
+Error,  at gapReads/gaptools.txt:723 called from
+localbeep( "NewOGLat", beepnumb ); at ttNewOGLat.g:129 called from
+beep( 52213 ); at ttNewOGLat.g:140 called from
+<function "NewOGLat">( <arguments> )
+ called from read-eval loop at fordebug2.g:7
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> quit;
+Syntax error: ; expected
+debug2():
+        ^
+gap> debug2();
+wrong global beep 52213 
+Error,  at gapReads/gaptools.txt:139 called from
+beep( 52213 ); at ttNewOGLat.g:88 called from
+BasisRec( tGram, 3 ) at fordebug2.g:7 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at fordebug2.g:8
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> quit;
+gap> debug2();
+wrong global beep 6652213 
+Error,  at gapReads/gaptools.txt:139 called from
+beep( 6652213 ); at ttNewOGLat.g:75 called from
+BasisRec( tGram, 3 ) at fordebug2.g:7 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at fordebug2.g:8
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> quit;
+gap> debug2();
+does not generate! 
+wrong global beep 442211 
+Error,  at gapReads/gaptools.txt:139 called from
+beep( 442211 ); at ttNewOGLat.g:31 called from
+VssRec( GramL, nrmcandidate ) at ttNewOGLat.g:77 called from
+BasisRec( tGram, 3 ) at fordebug2.g:7 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at fordebug2.g:8
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> quit;
+gap> debug2();
+Syntax error: ; expected in ttNewOGLat.g:70
+      tmaxbasisnrms:=Maximum(tbasisnrms):
+                                        ^
+Syntax error: while parsing a 'for' loop: statement or 'od' expected in ttNewOGLat.g:77
+      fi;
+      ^^
+Syntax error: while parsing a function: statement or 'end' expected in ttNewOGLat.g:82
+  od;
+  ^^
+does not generate! 
+wrong global beep 442211 
+Error,  at gapReads/gaptools.txt:139 called from
+beep( 442211 ); at ttNewOGLat.g:31 called from
+VssRec( GramL, nrmcandidate ) at ttNewOGLat.g:77 called from
+BasisRec( tGram, 3 ) at fordebug2.g:7 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at fordebug2.g:8
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> quit;
+gap> debug2();
+does not generate! 
+wrong global beep 442211 
+Error,  at gapReads/gaptools.txt:139 called from
+beep( 442211 ); at ttNewOGLat.g:31 called from
+VssRec( GramL, nrmcandidate ) at ttNewOGLat.g:80 called from
+BasisRec( tGram, 3 ) at fordebug2.g:7 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at fordebug2.g:8
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> quit;
+gap> debug2();
+gap> Read("Task20260906Ua.g");
+2 4 [ 1, 2 ] 
+3 16 [ 2, 2, 3 ] 
+4 96 [ 2, 2, 3, 3 ] 
+5 32 [ 1, 1, 4, 4, 4 ] 
+2 8 [ 1, 1 ] 
+3 16 [ 1, 1, 2 ] 
+4 16 [ 2, 2, 4, 4 ] 
+5 384 [ 1, 1, 2, 2, 2 ] 
+2 8 [ 1, 1 ] 
+3 24 [ 1, 2, 2 ] 
+4 32 [ 1, 2, 2, 3 ] 
+5 8 [ 1, 3, 3, 3, 4 ] 
+2 8 [ 1, 1 ] 
+3 48 [ 1, 1, 1 ] 
+4 16 [ 1, 3, 3, 4 ] 
+5 384 [ 1, 1, 2, 2, 2 ] 
+2 8 [ 2, 2 ] 
+3 16 [ 1, 1, 2 ] 
+4 96 [ 1, 1, 1, 2 ] 
+5 48 [ 1, 2, 3, 3, 3 ] 
+2 8 [ 1, 1 ] 
+3 24 [ 1, 2, 2 ] 
+wrong global beep 9999111 
+Error,  at gapReads/gaptools.txt:139 called from
+beep( 9999111 ); at NewOGLat.g:395 called from
+CheckOGrecSize( tbasisrec, tOGrec ); at Task20260906Ua.g:14 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260906Ua.g:34
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> savedata(tGramL);
+Syntax warning: Unbound global variable in *errin*:1
+savedata(tGramL);
+         ^^^^^^
+Error, Variable: 'tGramL' must have a value in
+  Error(  ); at gapReads/gaptools.txt:139 called from 
+beep( 9999111 ); at NewOGLat.g:395 called from
+CheckOGrecSize( tbasisrec, tOGrec ); at Task20260906Ua.g:14 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at *errin*:1
+brk> savedata(tbasiscrec);
+Syntax warning: Unbound global variable in *errin*:2
+savedata(tbasiscrec);
+         ^^^^^^^^^^
+Error, Variable: 'tbasiscrec' must have a value in
+  Error(  ); at gapReads/gaptools.txt:139 called from 
+beep( 9999111 ); at NewOGLat.g:395 called from
+CheckOGrecSize( tbasisrec, tOGrec ); at Task20260906Ua.g:14 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at *errin*:2
+brk> quit;
+gap> GramL;
+Error, Variable: 'GramL' must have a value
+not in any function at *stdin*:49
+gap> tFGram;
+Error, Variable: 'tFGram' must have a value
+not in any function at *stdin*:50
+gap> tGramL;
+Error, Variable: 'tGramL' must have a value
+not in any function at *stdin*:51
+gap> tGram;
+[ [ 4, 1, 2, -1 ], [ 1, 3, 0, -2 ], [ 2, 0, 4, 2 ], [ -1, -2, 2, 4 ] ]
+gap> CheckOGrecSize(tbasisrec, tOGrec);
+wrong global beep 9999111 
+Error,  at gapReads/gaptools.txt:139 called from
+beep( 9999111 ); at NewOGLat.g:395 called from
+<function "CheckOGrecSize">( <arguments> )
+ called from read-eval loop at *stdin*:53
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> permseize;
+Syntax warning: Unbound global variable in *errin*:1
+permseize;
+^^^^^^^^^
+Error, Variable: 'permseize' must have a value in
+  Error(  ); at gapReads/gaptools.txt:139 called from 
+beep( 9999111 ); at NewOGLat.g:395 called from
+<function "CheckOGrecSize">( <arguments> )
+ called from read-eval loop at *errin*:1
+brk> permsize;
+2
+brk> OGrec.size;
+0
+brk> quit;
+gap> savedata(tbasisrec);
+gap> debug2();
+wrong global beep 9999111 
+Error,  at gapReads/gaptools.txt:139 called from
+beep( 9999111 ); at t3.g:395 called from
+<function "CheckOGrecSize">( <arguments> )
+ called from read-eval loop at fordebug2.g:5
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> tOGrec;
+rec( Gram := [ [ 4, 1, 2, -1 ], [ 1, 3, 0, -2 ], [ 2, 0, 4, 2 ], [ -1, -2, 2, 4 ] ], 
+  basis := [ [ 0, 1, 0, 1 ], [ 0, 1, 0, 0 ], [ -1, 0, 1, -1 ], [ 0, -1, 1, -1 ] ], size := 0, 
+  stabrecs := [ rec( candidates := [ [ 0, 1, 0, 1 ], [ 0, -1, 1, -1 ], [ 1, 1, -1, 1 ], [ 0, 1, 0, 0 ] ], gengs := [  ], genperms := [  ], 
+          level := 1, size := 0, trueposs := [  ] ), rec( candidates := [ [ 0, 1, -1, 1 ], [ 1, 1, -1, 1 ], [ 0, 1, 0, 0 ] ], gengs := [  ], 
+          genperms := [  ], level := 2, size := 0, trueposs := [  ] ), rec( candidates := [  ], gengs := [  ], genperms := [  ], level := 3, 
+          size := 0, trueposs := [  ] ), 
+      rec( candidates := [ [ 0, -1, 1, -1 ] ], gengs := [ [ [ 1, 0, 0, 0 ], [ 0, 1, 0, 0 ], [ 0, 0, 1, 0 ], [ 0, 0, 0, 1 ] ] ], 
+          genperms := [ () ], level := 4, size := 1, trueposs := [ 1 ] ) ], 
+  totalgens := [ [ [ -1, 0, 0, 0 ], [ 0, -1, 0, 0 ], [ 0, 0, -1, 0 ], [ 0, 0, 0, -1 ] ], 
+      [ [ 1, 0, 0, 0 ], [ 0, 1, 0, 0 ], [ 0, 0, 1, 0 ], [ 0, 0, 0, 1 ] ] ] )
+brk> tbasisrec;
+rec( Gram := [ [ 4, 1, 2, -1 ], [ 1, 3, 0, -2 ], [ 2, 0, 4, 2 ], [ -1, -2, 2, 4 ] ], 
+  basis := [ [ 0, 1, 0, 1 ], [ 0, 1, 0, 0 ], [ -1, 0, 1, -1 ], [ 0, -1, 1, -1 ] ], basisnrms := [ 3, 3, 2, 3 ], fingerprints := [ 4, 3, 1, 1 ],
+  maxnrm := 3, newGram := [ [ 3, 1, 0, -1 ], [ 1, 3, 1, -1 ], [ 0, 1, 2, 0 ], [ -1, -1, 0, 3 ] ], nopss := [ [ 2, 1 ], [ 3, 4 ] ], 
+  nrmsset := [ 2, 3 ], vss := [ [ [ 0, 1, 0, 1 ], [ 0, 1, -1, 1 ], [ 1, 1, -1, 1 ], [ 0, 1, 0, 0 ] ], 
+      [ [ 0, 1, 0, 1 ], [ 0, -1, 1, -1 ], [ 1, 1, -1, 1 ], [ 0, 1, 0, 0 ] ] ] )
+brk> 

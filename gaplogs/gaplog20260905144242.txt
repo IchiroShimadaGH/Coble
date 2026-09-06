@@ -131,4 +131,14 @@ gap> Read("Task20260905Ub.g");
 gap> # 46998591897600;
 gap> 46998591897600-46998591897600;
 0
-gap> 
+gap> debug1();
+gap> NewOGLat;
+function( GramL, basisrec ) ... end
+gap> debug0();
+Error, file "fordebug0.txt" must exist and be readable at /usr/local/Cellar/gap/4.15.1/share/gap/lib/files.gi:207 called from
+Read( "fordebug0.txt" ); at gapReads/gaptools.txt:49 called from
+<function "debug0">( <arguments> )
+ called from read-eval loop at *stdin*:18
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> restart();

@@ -1,5 +1,5 @@
+Read("t3.g");
 
-
-
-IsomFQF([[2,2], (3/2)*IdentityMat(2)], 
-[[2,2], [[3/2, 1/2], [1/2, 1]]]);
+readdata("tbasisrec");
+tOGrec:=NewOGLat(tbasisrec);
+CheckOGrecSize(tbasisrec, tOGrec);
