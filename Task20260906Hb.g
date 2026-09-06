@@ -6,9 +6,11 @@
 
 Read("NewOGLat.g");
 
-maxsizes:=List([4..15], ii->0);
 for ttt in [1..10000] do
-  for tdim in [4..15] do
+  tGram4:=RandomPosLat(4, [-2,-1,0,0,0,0, 1,2]);
+  tGram4s:=[tGram4];
+  f
+  for tdim in [5..15] do
     tGram:=RandomPosLat(tdim, [-2,-1,0,0,0,0, 1,2]);
     tbasisrec:=BasisRec(tGram, 30);
     tOGrec:=NewOGLat(tbasisrec);
@@ -22,19 +24,17 @@ for ttt in [1..10000] do
       ttOGrec:=NewOGLat(ttbasisrec);
       CheckOGrecSize(ttbasisrec, ttOGrec);
       if ttOGrec.size<>thesize then beep(716211); fi;
-      if IsIsomBasisRecs(tbasisrec, ttbasisrec)=false then beep(919111); fi;
+      if FindIsomBasisRecs(tbasisrec, ttbasisrec)=fail then beep(919111); fi;
       Add(ttbasisrecs, ttbasisrec);
     od;
     for ss in [1..3] do
       ttbasisrec1:=Random(ttbasisrecs);
       ttbasisrec2:=Random(ttbasisrecs);
-      if IsIsomBasisRecs(tbasisrec, ttbasisrec)=false then beep(229111); fi;
+      if FindIsomBasisRecs(tbasisrec, ttbasisrec)=fail then beep(229111); fi;
     od;
     Printn(ttt, tdim, thesize, tbasisrec.basisnrms);
-    tdimpos:=SinglePosition([4..15], tdim);
-    maxsizes[tdimpos]:=Maximum(maxsizes[tdimpos], thesize);
   od;
-  Printn("_____________", maxsizes);
+  Printn("_____________");
 od;
 
 ["A1", "A2", "A3", "A4","A5", "A6", "A7", "A8", "A9", "A10", 

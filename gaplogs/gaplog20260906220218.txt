@@ -1,2 +1,4 @@
 sessionnumb  20260906220218 
+gap> IsSubset([1,2], [1]);
+true
 gap> 

@@ -436,13 +436,30 @@ CheckOGrecSize:=function(basisrec, OGrec)
 end;
 
 
-FindIsomBasisRecs:=function(basisrec1, basisrec2)
+IsIsomBasisRecs:=function(basisrec1, basisrec2)
   #
-  local GramL1, GramL2, nn, vss2, vss2dual, getvs, getvsdual, basis1, fingerprints1, basis1inv, totalflag, newGram1, 
-  thetg, extend;
+  local GramL1, GramL2, nn, vss2, vss2dual, getvs, 
+  getvsdual, basis1, fingerprints1, basis1inv, totalflag, newGram1, 
+  thetg, extend, cleng, ii;
   #
-  if basisrec1.nrmsset<>basisrec2.nrmsset then return(false); fi;
-  if basisrec1.nopss<>basisrec2.nopss then return(false); fi;
+  if basisrec1.minflag and basisrec2.minflag then 
+    if basisrec1.nrmsset<>basisrec2.nrmsset then return(false); fi;
+    if basisrec1.nopss<>basisrec2.nopss then return(false); fi;
+  else 
+    if IsSubset(basisrec1.nrmsset, basisrec2.nrmsset) then 
+      cleng:=Length(basisrec2.nrmsset);
+    elif IsSubset(basisrec2.nrmsset, basisrec1.nrmsset) then 
+      cleng:=Length(basisrec1.nrmsset);
+    else 
+      return(false);
+    fi;
+    for ii in [1..cleng] do 
+      if basisrec1.nopss[ii]<>basisrec2.nopss[ii] then 
+        return(false);
+      fi;
+    od;
+  fi;
+  #
   #
   GramL1:=basisrec1.Gram;
   GramL2:=basisrec2.Gram;
@@ -498,7 +515,8 @@ FindIsomBasisRecs:=function(basisrec1, basisrec2)
           Add(candidates, tvs[pos]);
         fi;
         #
-        # this part cannot be changed to elif, because tintnumbs may be a zero vector
+        # this part cannot be changed to elif, 
+        # because tintnumbs may be a zero vector
         #
         if  psoltvdual=-tintnumbs then 
           Add(candidates, -tvs[pos]);
@@ -519,7 +537,7 @@ FindIsomBasisRecs:=function(basisrec1, basisrec2)
   #
   extend([]);
   if totalflag then return(thetg);
-  else return(fail);
+  else return(false);
   fi;
   #
 end;
