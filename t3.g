@@ -10,7 +10,7 @@ VssRec:=function(GramL, nrmcandidate)
   # elif nrmcandidate is too small,  then it beeps.
   #
   local nn, svsrec, nrmsset, vects, vss, tvs, tnrm, 
-  tpos, doesgenerate, vssrec, poss, vs;
+  tpos, doesgenerate, vssrec, poss, vs, dbg1;
   #
   nn:=Length(GramL);
   svsrec:=ShortestVectors(GramL, nrmcandidate);
@@ -19,7 +19,7 @@ VssRec:=function(GramL, nrmcandidate)
   vects:=svsrec.vectors;
   vss:=[];
   tvs:=[];
-  for tnrm  in nrmsset do 
+  for tnrm in nrmsset do 
     poss:=Positions(svsrec.norms, tnrm);
     vs:=List(poss, tpos->vects[tpos]);
     Add(vss, vs);
@@ -31,11 +31,17 @@ VssRec:=function(GramL, nrmcandidate)
       beep(442211); 
     fi;
   od;
+  #
+  dbg1:=List(vss, tvs->Set(tvs, tv->tv*GramL*tv));
+  if dbg1<>List(nrmsset, tnrm->[tnrm] ) then 
+    beep(2222266611111); #bdg
+  fi;
+  #
   vssrec:=rec(
     Gram:=List(GramL), 
     maxnrm:=nrmcandidate,
     nrmsset:=nrmsset, 
-    nopss:=Collected(svsrec.norms),
+    nopss:=List(vss, Length),
     vss:=vss
   );
   return(vssrec);
@@ -127,7 +133,7 @@ NewOGLat:=function(basisrec)
   inipsol, kk,  tvduals, getvsdual, tvs,
   getorbsunion, falseseeds, trueseeds, falseposs, thelevel, inipsoldual,
   tintnumbs, tpv, jj,  totalgens, lengcan, lengcan1, tblist, fblist,
-  getorbblist, getorbsunionblist;
+  getorbblist, getorbsunionblist, fpflag, dbg1, pos1;
   #
   beep:=function(beepnumb)
     localbeep("NewOGLat", beepnumb); Error();
@@ -141,6 +147,8 @@ NewOGLat:=function(basisrec)
   if TMTTmult(basis, GramL)<>newGram then beep(391919); fi;
   nrmsset:=basisrec.nrmsset;
   basisnrms:=basisrec.basisnrms;
+  basisinv:=InverseMat(basis);
+  basisdual:=basis*GramL;
   #
   inipos:=function(tv)
     local xx;
@@ -151,21 +159,24 @@ NewOGLat:=function(basisrec)
   end;
   #
   thevss:=basisrec.vss;
-  thevss[1]:=List(thevss[SinglePosition(nrmsset, basisnrms[1])], inipos);
+  pos1:=SinglePosition(nrmsset, basisnrms[1]);
+  thevss[pos1]:=List(thevss[pos1], inipos);
   # to make the computation in getpermcan1 easy 
   #
   thevssdual:=List(thevss, tvs->tvs*GramL);
+  dbg1:=List(thevss, tvs->Set(tvs, tv->tv*GramL*tv));
+  if dbg1<>List(nrmsset, tnrm->[tnrm] ) then 
+    beep(66611111); #bdg
+  fi;
   #
   getvs:=function(nrm)
-    return( thevss[SinglePosition(nrmsset, nrm)]);
+    return(thevss[SinglePosition(nrmsset, nrm)]);
   end;
   #
   getvsdual:=function(nrm)
     return(thevssdual[SinglePosition(nrmsset, nrm)]);
   end;
   #
-  basisinv:=InverseMat(basis);
-  basisdual:=basis*GramL;
   #
   reachflag:=false;
   thetg:=[];
@@ -188,7 +199,6 @@ NewOGLat:=function(basisrec)
       return();
     else 
       candidates:=[];
-      ttbdual:=basisdual[leng+1];
       tvsdual:=getvsdual(basisnrms[leng+1]);
       tintnumbs:=List([1..leng], kk->newGram[leng+1][kk]);
       pos:=0;
@@ -203,6 +213,9 @@ NewOGLat:=function(basisrec)
           fi;
         od;
       od;
+      if thelevel=1 then #bdg
+        Printn("in simpleextend", leng+1, Length(candidates));
+      fi;
       tvs:=getvs(basisnrms[leng+1]);
       for tposss in candidates do 
         tv:=tposss[2]*tvs[tposss[1]];
@@ -263,6 +276,7 @@ NewOGLat:=function(basisrec)
     if not pos in doneposs then 
       reachflag:=false;
       simpleextend([tv]);
+      Printn(pos, reachflag);
       #
       if reachflag then 
         Add(gengs, thetg);
@@ -285,6 +299,7 @@ NewOGLat:=function(basisrec)
   falseposs:=getorbsunionblist(falseseeds, genperms);
   if  Intersection(trueposs, falseposs)<>[]  then beep(18128181); fi;
   if Union(trueposs, falseposs)<>[1..lengcan1] then beep(18228181); fi;
+  if trueposs=[] then beep(7766152); fi;
   #
   stabrec:=rec(
     level:=thelevel,
@@ -354,6 +369,7 @@ NewOGLat:=function(basisrec)
     falseposs:=getorbsunionblist(falseseeds, genperms);
     if Intersection(trueposs, falseposs)<>[]  then beep(1822128181); fi;
     if Union(trueposs, falseposs)<>[1..lengcan] then beep(1822228181); fi;
+    if trueposs=[] then beep(75516152); fi;
     stabrec:=rec(
       level:=thelevel,
       candidates:=candidates, 

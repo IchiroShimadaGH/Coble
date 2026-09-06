@@ -5,12 +5,14 @@ VssRec:=function(GramL, nrmcandidate)
   #
   # If nrmcandidate is the minimal norm such that
   # the vevtors v with v^2 <=nrmcandidate generate L,
-  # then this returms vssrec;
-  # elif nrmcandidate is too large (not minimal)  then it return (false);
+  # then this returms vssrec with vssrec.minflag:=true;
+  # elif nrmcandidate is too large (not minimal),  then 
+  # this returms vssrec with vssrec.minflag:=false;
   # elif nrmcandidate is too small,  then it beeps.
   #
   local nn, svsrec, nrmsset, vects, vss, tvs, tnrm, 
-  tpos, doesgenerate, vssrec, poss, vs;
+  tpos, doesgenerate, vssrec, poss, vs, minflag,
+  snrm;
   #
   nn:=Length(GramL);
   svsrec:=ShortestVectors(GramL, nrmcandidate);
@@ -19,13 +21,18 @@ VssRec:=function(GramL, nrmcandidate)
   vects:=svsrec.vectors;
   vss:=[];
   tvs:=[];
+  minflag:=true; 
+  snrm:=nrmcandidate;
   for tnrm  in nrmsset do 
     poss:=Positions(svsrec.norms, tnrm);
     vs:=List(poss, tpos->vects[tpos]);
     Add(vss, vs);
     Append(tvs, vs);
     doesgenerate:=(Rank(tvs)=nn and CokerTorsion(tvs)=[]);
-    if doesgenerate and tnrm<nrmcandidate then return(false); fi;
+    if doesgenerate and tnrm<nrmcandidate then 
+      minflag:=false; 
+      snrm:=tnrm;
+    fi;
     if tnrm=nrmcandidate and (not doesgenerate) then 
       Printn("does not generate!");
       beep(442211); 
@@ -35,7 +42,9 @@ VssRec:=function(GramL, nrmcandidate)
     Gram:=List(GramL), 
     maxnrm:=nrmcandidate,
     nrmsset:=nrmsset, 
-    nopss:=Collected(svsrec.norms),
+    nopss:=List(vss, Length),
+    minflag:=minflag, 
+    snrm:=snrm,
     vss:=vss
   );
   return(vssrec);
@@ -51,35 +60,57 @@ BasisRec:=function(GramL, trialnumb)
   basisnrms,fflag,  maxnrm,  tbasisnrms, 
   fingerprints, newGram, getvs, trec, jj, kk, tintnumbs,
   tbasisdual, tv, tvs, fp, tbasis, thebasis,
-  nrmcandidate, ttintnumbs, maxbasisrrms,  tmaxbasisnrms;
+  nrmcandidate, ttintnumbs, maxbasisrrms,  tmaxbasisnrms,
+  counter, snrm;
   #
   nn:=Length(GramL);
   if SignatureQ(GramL)<>[nn, nn, 0] then beep(665522); fi;
   fflag:=false;
   basisnrms:=[];
   maxbasisrrms:=infinity;
-  while not fflag do
-    for tt in [1..trialnumb] do
+  #
+  for tt in [1..5] do
+    tU:=RandomUnimodMat(nn);
+    GramL2:=TMTTmult(tU, GramL);
+    LLLrec:=LLLReducedGramMat(GramL2);
+    tbasis:=LLLrec.transformation;
+    tbasisnrms:=List([1..nn], ii->LLLrec.remainder[ii][ii]);
+    SortParallel(tbasisnrms, tbasis);
+    tmaxbasisnrms:=Maximum(tbasisnrms);
+    if basisnrms=[] or 
+      maxbasisrrms> tmaxbasisnrms or 
+      (maxbasisrrms= tmaxbasisnrms and basisnrms>tbasisnrms) then
+      thebasis:=tbasis*tU;
+      basisnrms:=List(tbasisnrms);
+      maxbasisrrms:= tmaxbasisnrms;
+    fi;
+  od;
+  #
+  nrmcandidate:=maxbasisrrms;
+  trec:=VssRec(GramL, nrmcandidate);
+  #
+  if trec.minflag=false then 
+    snrm:=trec.snrm;
+    fflag:=false;
+    counter:=0;
+    while not fflag and counter<trialnumb do
+      counter:=counter+1;
       tU:=RandomUnimodMat(nn);
       GramL2:=TMTTmult(tU, GramL);
       LLLrec:=LLLReducedGramMat(GramL2);
-      tbasis:=LLLrec.transformation;
-      #newGram:=LLLrec.remainder;
-      #if newGram<>TMTTmult(basis, GramL2) then beep(11211); fi;
       tbasisnrms:=List([1..nn], ii->LLLrec.remainder[ii][ii]);
-      tmaxbasisnrms:=Maximum(tbasisnrms);
-      if basisnrms=[] or 
-        maxbasisrrms> tmaxbasisnrms or 
-       (maxbasisrrms= tmaxbasisnrms and basisnrms>tbasisnrms) then
+      if Maximum(tbasisnrms)=snrm then 
+        fflag:=true;
+        tbasis:=LLLrec.transformation;
+        SortParallel(tbasisnrms, tbasis);
         thebasis:=tbasis*tU;
         basisnrms:=List(tbasisnrms);
-        maxbasisrrms:= tmaxbasisnrms;
+        maxbasisrrms:= snrm;
+        trec:=VssRec(GramL, snrm);
       fi;
     od;
-    nrmcandidate:=maxbasisrrms;
-    trec:=VssRec(GramL, nrmcandidate);
-    if trec<>false then fflag:=true; fi;
-  od;
+  fi;
+  #
   #
   getvs:=function(tnrm)
     return(trec.vss[SinglePosition(trec.nrmsset, tnrm)]);
@@ -127,7 +158,7 @@ NewOGLat:=function(basisrec)
   inipsol, kk,  tvduals, getvsdual, tvs,
   getorbsunion, falseseeds, trueseeds, falseposs, thelevel, inipsoldual,
   tintnumbs, tpv, jj,  totalgens, lengcan, lengcan1, tblist, fblist,
-  getorbblist, getorbsunionblist;
+  getorbblist, getorbsunionblist, pos1;
   #
   beep:=function(beepnumb)
     localbeep("NewOGLat", beepnumb); Error();
@@ -141,6 +172,8 @@ NewOGLat:=function(basisrec)
   if TMTTmult(basis, GramL)<>newGram then beep(391919); fi;
   nrmsset:=basisrec.nrmsset;
   basisnrms:=basisrec.basisnrms;
+  basisinv:=InverseMat(basis);
+  basisdual:=basis*GramL;
   #
   inipos:=function(tv)
     local xx;
@@ -151,7 +184,8 @@ NewOGLat:=function(basisrec)
   end;
   #
   thevss:=basisrec.vss;
-  thevss[1]:=List(thevss[SinglePosition(nrmsset, basisnrms[1])], inipos);
+  pos1:=SinglePosition(nrmsset, basisnrms[1]);
+  thevss[pos1]:=List(thevss[pos1], inipos);
   # to make the computation in getpermcan1 easy 
   #
   thevssdual:=List(thevss, tvs->tvs*GramL);
@@ -164,8 +198,6 @@ NewOGLat:=function(basisrec)
     return(thevssdual[SinglePosition(nrmsset, nrm)]);
   end;
   #
-  basisinv:=InverseMat(basis);
-  basisdual:=basis*GramL;
   #
   reachflag:=false;
   thetg:=[];
@@ -203,6 +235,11 @@ NewOGLat:=function(basisrec)
           fi;
         od;
       od;
+      #
+      if Length(candidates)<>fingerprints[leng+1] then 
+        return();
+      fi;
+      #
       tvs:=getvs(basisnrms[leng+1]);
       for tposss in candidates do 
         tv:=tposss[2]*tvs[tposss[1]];
@@ -285,6 +322,7 @@ NewOGLat:=function(basisrec)
   falseposs:=getorbsunionblist(falseseeds, genperms);
   if  Intersection(trueposs, falseposs)<>[]  then beep(18128181); fi;
   if Union(trueposs, falseposs)<>[1..lengcan1] then beep(18228181); fi;
+  if trueposs=[] then beep(7766152); fi;
   #
   stabrec:=rec(
     level:=thelevel,
@@ -354,6 +392,7 @@ NewOGLat:=function(basisrec)
     falseposs:=getorbsunionblist(falseseeds, genperms);
     if Intersection(trueposs, falseposs)<>[]  then beep(1822128181); fi;
     if Union(trueposs, falseposs)<>[1..lengcan] then beep(1822228181); fi;
+    if trueposs=[] then beep(75516152); fi;
     stabrec:=rec(
       level:=thelevel,
       candidates:=candidates, 
