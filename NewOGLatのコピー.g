@@ -436,34 +436,25 @@ CheckOGrecSize:=function(basisrec, OGrec)
 end;
 
 
-IsIsomBasisRecs:=function(basisrecA, basisrecB)
+IsIsomBasisRecs:=function(basisrec1, basisrec2)
   #
   local GramL1, GramL2, nn, vss2, vss2dual, getvs, 
   getvsdual, basis1, fingerprints1, basis1inv, totalflag, newGram1, 
-  thetg, extend, cleng, ii, revflag, basisrec1, basisrec2;
+  thetg, extend, cleng, ii;
   #
-  if basisrecA.minflag and basisrecB.minflag then 
-    if basisrecA.nrmsset<>basisrecB.nrmsset then return(false); fi;
-    if basisrecA.nopss<>basisrecB.nopss then return(false); fi;
-    revflag:=false;
-    basisrec1:=basisrecA;
-    basisrec2:=basisrecB;
+  if basisrec1.minflag and basisrec2.minflag then 
+    if basisrec1.nrmsset<>basisrec2.nrmsset then return(false); fi;
+    if basisrec1.nopss<>basisrec2.nopss then return(false); fi;
   else 
-    if IsSubset(basisrecA.nrmsset, basisrecB.nrmsset) then 
-      cleng:=Length(basisrecB.nrmsset);
-      revflag:=true;
-      basisrec1:=basisrecB;
-      basisrec2:=basisrecA;
-    elif IsSubset(basisrecB.nrmsset, basisrecA.nrmsset) then 
-      cleng:=Length(basisrecA.nrmsset);
-      revflag:=false;
-      basisrec1:=basisrecA;
-      basisrec2:=basisrecB;
+    if IsSubset(basisrec1.nrmsset, basisrec2.nrmsset) then 
+      cleng:=Length(basisrec2.nrmsset);
+    elif IsSubset(basisrec2.nrmsset, basisrec1.nrmsset) then 
+      cleng:=Length(basisrec1.nrmsset);
     else 
       return(false);
     fi;
     for ii in [1..cleng] do 
-      if basisrecA.nopss[ii]<>basisrecB.nopss[ii] then 
+      if basisrec1.nopss[ii]<>basisrec2.nopss[ii] then 
         return(false);
       fi;
     od;
@@ -545,18 +536,8 @@ IsIsomBasisRecs:=function(basisrecA, basisrecB)
   end;
   #
   extend([]);
-  #
-  if totalflag then 
-    if revflag then 
-      thetg:=InverseMat(thetg);
-    fi;
-    if not IsIntMat(thetg) then beep(776611); fi;
-    if TMTTmult(thetg, basisrecB.Gram)<>basisrecA.Gram then 
-      beep(9137126); 
-    fi;
-    return(thetg);
-  else 
-    return(false);
+  if totalflag then return(thetg);
+  else return(false);
   fi;
   #
 end;
