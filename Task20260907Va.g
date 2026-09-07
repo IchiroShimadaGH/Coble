@@ -10,7 +10,7 @@ Read("NewOGLat.g");
 difficult12:=[];
 
 for ttt in [1..10000] do
-  tGram3:=RandomPosLat(3, [-2,-1,0,0,0,0, 1,2]);
+  tGram3:=RandomPosLat(3, [-4,-3, -2,-1,0,0,0,0, 1,2, 3,4]);
   tbasisrec3:=BasisRec(tGram3, 30);
   tOGrec3:=NewOGLat(tbasisrec3);
   tsize3:=tOGrec3.size;
