@@ -147,8 +147,9 @@ BasisRec:=function(GramL, trialnumb)
 end;
 
 
-NewOGLat:=function(basisrec)
-  local beep,  GramL, nn,  basis, newGram, basisnrms,
+NewOGLat:=function(arg) # arg is (basisrec) or (basisrec, giveupsec)
+  local beep, basisrec,  giveupflag, giveupruntime, gvstopflag,  st, 
+  GramL, nn,  basis, newGram, basisnrms,
   ii, maxnrm, svrec, nrmsset, pvposss, vss, aa, poss, pos, getvs,
   tbasis, tbasisdual, fingerprints,inipos, thevss, thevssdual, 
   initb, OGrec, getfp,  tfps, tbs, tb, minfp, newtb,
@@ -163,6 +164,17 @@ NewOGLat:=function(basisrec)
   beep:=function(beepnumb)
     localbeep("NewOGLat", beepnumb); Error();
   end;
+  #
+  if Length(arg)=1 then 
+    basisrec:=arg[1];
+    giveupflag:=false;
+    giveupruntime:=infinity;
+  elif Length(arg)=2 then 
+    basisrec:=arg[1];
+    giveupflag:=true;
+    giveupruntime:=1000*arg[2];
+  else beep(212341);
+  fi;
   #
   GramL:=basisrec.Gram;
   nn:=Length(GramL);
@@ -198,6 +210,8 @@ NewOGLat:=function(basisrec)
     return(thevssdual[SinglePosition(nrmsset, nrm)]);
   end;
   #
+  st:=Runtime();
+  gvstopflag:=false;
   #
   reachflag:=false;
   thetg:=[];
@@ -247,7 +261,13 @@ NewOGLat:=function(basisrec)
         simpleextend(psol);
         if tv<>Remove(psol) then beep(812111); fi;
         if reachflag then return();; fi;
+        if gvstopflag then return();; fi;
       od;
+      if giveupflag then 
+        if Runtime()-st>giveupruntime then 
+          gvstopflag:=true;
+        fi;
+      fi;
     fi;
     return();
   end;
@@ -285,6 +305,7 @@ NewOGLat:=function(basisrec)
     return(tperm);
   end;
   #
+  #
   stabrecs:=[];
   #
   thelevel:=1;
@@ -300,6 +321,7 @@ NewOGLat:=function(basisrec)
     if not pos in doneposs then 
       reachflag:=false;
       simpleextend([tv]);
+      if gvstopflag then return(fail); fi;
       #
       if reachflag then 
         Add(gengs, thetg);
@@ -370,6 +392,7 @@ NewOGLat:=function(basisrec)
       if not pos in doneposs then 
         reachflag:=false;
         simpleextend(CopyAdd(inipsol, tv));
+        if gvstopflag then return(fail); fi;
         #
         if reachflag then 
           Add(gengs, thetg);
@@ -386,7 +409,9 @@ NewOGLat:=function(basisrec)
         fi;
         #
       fi;
-    od;
+    od;# for thelevel in [2..nn] do 
+    #
+    if gvstopflag then return(fail); fi;
     #
     trueposs:=getorbsunionblist(trueseeds, genperms);
     falseposs:=getorbsunionblist(falseseeds, genperms);
@@ -412,6 +437,7 @@ NewOGLat:=function(basisrec)
   OGrec:=rec(
     Gram:=GramL,
     basis:=basis, 
+    basisrec:=basisrec, 
     stabrecs:=stabrecs, 
     size:=2*Product(List(stabrecs, stabrec->stabrec.size)),
     totalgens:=totalgens
@@ -562,5 +588,21 @@ IsIsomBasisRecs:=function(basisrecA, basisrecB)
 end;
 
 
+RepeatNewOGLat:=function(GramL, basisrectrial, giveupsec)
+  local counter, basisrec, OGrec;
+  counter:=0;
+  while true do
+    counter:=counter+1;
+    basisrec:=BasisRec(GramL,  basisrectrial+counter);
+    OGrec:=NewOGLat(basisrec, giveupsec+counter);
+    if OGrec<>fail then 
+      OGrec.basisrectrial:= basisrectrial+counter;
+      OGrec.giveupsec:=giveupsec+counter;
+      return(OGrec);
+    else 
+      Printn("______", counter);
+    fi;
+  od;
+end;
 
 #####

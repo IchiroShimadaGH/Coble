@@ -1,7 +1,8 @@
 
-readdata("ttbasisrec");
-Read("t3.g");
+readdata("tbasisrec");
+Read("tNewOGLat.g");
 
-t3GramL:=ttbasisrec.Gram;
-t3basisrec:=BasisRec(t3GramL, 3);
-NewOGLat(t3basisrec);
+NewOGLat(tbasisrec);
+
+
+#######

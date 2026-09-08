@@ -7,4 +7,4 @@ gap> SqRoot(4);
 2
 gap> Int(SqRoot(1/4));
 0
-gap> 
+gap> quit;

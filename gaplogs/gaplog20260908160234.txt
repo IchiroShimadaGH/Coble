@@ -1,0 +1,856 @@
+sessionnumb  20260908160234 
+gap> tempsavename:="ogrecsCC";
+"ogrecsCC"
+gap> Read("Task20260908Ua.g");
+______ 1 
+8561413324800 
+1712282664960 
+______ 1 
+______ 2 
+______ 3 
+______ 4 
+______ 5 
+______ 6 
+______ 7 
+new 743178240 
+new 2090188800 
+new 298598400 
+____not new 
+____not new 
+____not new 
+new 1698693120 
+new 99532800 
+______ 1 
+______ 2 
+______ 3 
+______ 4 
+______ 5 
+______ 6 
+______ 7 
+______ 8 
+______ 9 
+______ 10 
+______ 11 
+______ 12 
+______ 13 
+______ 14 
+______ 15 
+______ 16 
+______ 17 
+______ 18 
+______ 19 
+______ 20 
+______ 21 
+______ 22 
+______ 23 
+______ 24 
+______ 25 
+______ 26 
+______ 27 
+______ 28 
+______ 29 
+______ 30 
+______ 31 
+______ 32 
+______ 33 
+Error, user interrupt in
+  depth1 := NestingDepthM( left ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3574 called from 
+psol * tvdual at NewOGLat.g:247 called from
+simpleextend( psol ); at NewOGLat.g:261 called from
+simpleextend( psol ); at NewOGLat.g:261 called from
+simpleextend( psol ); at NewOGLat.g:261 called from
+simpleextend( psol ); at NewOGLat.g:261 called from
+...  at Task20260908Ua.g:62
+you can 'return;'
+brk> basisrec.basisnrms;
+[ 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4 ]
+brk> basisrec.nopss;
+[ 23, 642 ]
+brk> thelevel;
+1
+brk> trueseeds;
+[  ]
+brk> basisrec.Gram;
+[ [ 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 8, 0, 4, 0, 0, 4, 1, 3, 6, 1, 6, 4, 2, 10 ], 
+  [ 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 4, 0, 4, 0, 0, 2, 0, 2, 4, 0, 4, 2, 1, 6 ], 
+  [ 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], 
+  [ 0, 4, 0, 2, 0, 0, 4, 0, 2, 4, 0, 4, 2, 1, 6 ], [ 0, 1, 0, 0, 0, 0, 0, 2, 0, -1, 0, 0, 0, 0, 0 ], 
+  [ 0, 3, 0, 2, 0, 0, 2, 0, 4, 3, 0, 4, 2, 1, 6 ], [ 0, 6, 0, 4, 0, 0, 4, -1, 3, 10, -1, 8, 4, 2, 12 ], 
+  [ 0, 1, 0, 0, 0, 0, 0, 0, 0, -1, 2, 0, 0, 0, 0 ], [ 0, 6, 0, 4, 0, 0, 4, 0, 4, 8, 0, 10, 4, 1, 12 ], 
+  [ 0, 4, 0, 2, 0, 0, 2, 0, 2, 4, 0, 4, 4, 0, 6 ], [ 0, 2, 0, 1, 0, 0, 1, 0, 1, 2, 0, 1, 0, 2, 3 ], 
+  [ 0, 10, 0, 6, 0, 0, 6, 0, 6, 12, 0, 12, 6, 3, 18 ] ]
+brk> quit;
+gap> 
+gap> 
+gap> 
+gap> Read("Task20260908Ub.g");
+Error, Variable: 'GramR' must have a value
+not in any function at Task20260908Ub.g:37
+Syntax error: ; expected in Task20260908Ub.g:38
+uvabR:=uvabvect(DiscriminantForm(GramR1));
+^^^^^
+gap> Read("Task20260908Ub.g");
+Syntax error: ; expected in Task20260908Ub.g:38
+uvabR:=uvabvect(DiscriminantForm(GramR1));
+^^^^^
+gap> Read("Task20260908Ub.g");
+Error, Variable: 'tbasisrec' must have an assigned value in
+  AddADEtype( tbasisrec ); at Task20260908Ub.g:55 called from 
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260908Ub.g:69
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260908Ub.g");
+Error, Record Element: '<rec>.ADEtype' must have an assigned value in
+  if basisrecA.ADEtype <> basisrecB.ADEtype then
+    return false;
+fi; at Task20260908Ub.g:19 called from 
+IsIsomBasisRecsADE( oldogrec.basisrec, tbasiscrec ) at Task20260908Ub.g:58 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260908Ub.g:69
+type 'quit;' to quit to outer loop
+brk> RecNames(tbasisrec);
+[ "basis", "Gram", "vss", "maxnrm", "nrmsset", "nopss", "minflag", "snrm", "basisnrms", "newGram", "fingerprints", "ADEtype" ]
+brk> RecNames(basisrecR1);
+[ "basis", "Gram", "vss", "maxnrm", "nrmsset", "nopss", "minflag", "snrm", "basisnrms", "newGram", "fingerprints", "ADEtype" ]
+brk> RecNames(basisrecR2);
+[ "basis", "Gram", "vss", "maxnrm", "nrmsset", "nopss", "minflag", "snrm", "basisnrms", "newGram", "fingerprints", "ADEtype" ]
+brk> quit;
+gap> RecNames(basisrecR2);
+[ "basis", "Gram", "vss", "maxnrm", "nrmsset", "nopss", "minflag", "snrm", "basisnrms", "newGram", "fingerprints", "ADEtype" ]
+gap> Read("Task20260908Ub.g");
+Error, Record Element: '<rec>.ADEtype' must have an assigned value in
+  if basisrecA.ADEtype <> basisrecB.ADEtype then
+    return false;
+fi; at Task20260908Ub.g:19 called from 
+IsIsomBasisRecsADE( oldbasisrec, tbasiscrec ) at Task20260908Ub.g:58 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260908Ub.g:69
+type 'quit;' to quit to outer loop
+brk> tbasisrec.ADEtype;
+[ "A2", "A3" ]
+brk> oldbasisrec.ADEtype;
+[ "A1", "A1", "A1", "A1", "A1", "A1", "A1", "A1", "A1", "D6" ]
+brk> basisrecA.ADEtype;
+[ "A1", "A1", "A1", "A1", "A1", "A1", "A1", "A1", "A1", "D6" ]
+brk> basisrecB.ADEtype;
+Error, Record Element: '<rec>.ADEtype' must have an assigned value in
+  if basisrecA.ADEtype <> basisrecB.ADEtype then
+    return false;
+fi; at Task20260908Ub.g:19 called from 
+IsIsomBasisRecsADE( oldbasisrec, tbasiscrec ) at Task20260908Ub.g:58 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at *errin*:4
+type 'quit;' to quit to outer loop
+brk_2> quit;
+brk> quit;
+gap> Read("Task20260908Ub.g");
+new 3 [ [ "A1", 15 ] ] 
+new 4 [ [ "A1", 4 ], [ "A5", 1 ] ] 
+new 5 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 6 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 7 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 8 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 9 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 10 [ [ "A1", 15 ] ] 
+new 11 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 12 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 13 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 14 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+new 15 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+____not new 
+new 16 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 17 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 18 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 19 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 20 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 21 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 22 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 23 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+new 24 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 25 [ [ "A2", 1 ], [ "A3", 1 ] ] 
+new 26 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 27 [ [ "A1", 1 ], [ "A4", 1 ] ] 
+new 28 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 29 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 30 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 31 [ [ "A1", 1 ], [ "A4", 1 ] ] 
+new 32 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 33 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 34 [ [ "A1", 1 ], [ "A4", 1 ] ] 
+new 35 [ [ "A2", 1 ], [ "A3", 1 ] ] 
+new 36 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 37 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 38 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 39 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+new 40 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 41 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 42 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+____not new 
+new 43 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 44 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 45 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 46 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 47 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 48 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 49 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+new 50 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 51 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 52 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+new 53 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+____not new 
+new 54 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+new 55 [ [ "A1", 15 ] ] 
+new 56 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 57 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 58 [ [ "A1", 15 ] ] 
+new 59 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 60 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 61 [ [ "A1", 4 ], [ "A5", 1 ] ] 
+new 62 [ [ "A1", 15 ] ] 
+new 63 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 64 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 65 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 66 [ [ "A2", 1 ], [ "A3", 1 ] ] 
+new 67 [ [ "A1", 15 ] ] 
+new 68 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 69 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 70 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+new 71 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+____not new 
+____not new 
+new 72 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 73 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+new 74 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+new 75 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 76 [ [ "A1", 1 ], [ "A3", 1 ], [ "D4", 1 ] ] 
+new 77 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 78 [ [ "A1", 4 ], [ "A5", 1 ] ] 
+new 79 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 80 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 81 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 82 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 83 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 84 [ [ "A1", 4 ], [ "A5", 1 ] ] 
+new 85 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+new 86 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 87 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 88 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 89 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 90 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+new 91 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 92 [ [ "A1", 15 ] ] 
+new 93 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 94 [ [ "A1", 1 ], [ "A4", 1 ] ] 
+new 95 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 96 [ [ "A1", 15 ] ] 
+new 97 [ [ "A2", 1 ], [ "A3", 1 ] ] 
+new 98 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 99 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 100 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 101 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 102 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 103 [ [ "A2", 1 ], [ "A3", 1 ] ] 
+new 104 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 105 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 106 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 107 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 108 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 109 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 110 [ [ "A2", 1 ], [ "A3", 1 ] ] 
+____not new 
+new 111 [ [ "A1", 1 ], [ "A4", 1 ] ] 
+new 112 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 113 [ [ "A1", 4 ], [ "A5", 1 ] ] 
+new 114 [ [ "A2", 1 ], [ "A3", 1 ] ] 
+____not new 
+new 115 [ [ "A1", 4 ], [ "A5", 1 ] ] 
+new 116 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 117 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 118 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 119 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 120 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 121 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 122 [ [ "A1", 4 ], [ "A5", 1 ] ] 
+____not new 
+new 123 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+new 124 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 125 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 126 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 127 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 128 [ [ "A1", 15 ] ] 
+new 129 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 130 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 131 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 132 [ [ "A1", 4 ], [ "A5", 1 ] ] 
+new 133 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 134 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 135 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 136 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 137 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 138 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 139 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 140 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 141 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 142 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 143 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 144 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 145 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 146 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+____not new 
+new 147 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 148 [ [ "A2", 1 ], [ "A3", 1 ] ] 
+new 149 [ [ "A2", 1 ], [ "A3", 1 ] ] 
+new 150 [ [ "A2", 1 ], [ "A3", 1 ] ] 
+new 151 [ [ "A1", 3 ], [ "D4", 1 ] ] 
+new 152 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 153 [ [ "A1", 3 ], [ "D5", 1 ] ] 
+new 154 [ [ "A1", 4 ], [ "A5", 1 ] ] 
+new 155 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 156 [ [ "A1", 1 ], [ "A4", 1 ] ] 
+new 157 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 158 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 159 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 160 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 161 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 162 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 163 [ [ "A2", 1 ], [ "A3", 1 ] ] 
+new 164 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+new 165 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 166 [ [ "A1", 4 ], [ "A5", 1 ] ] 
+new 167 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 168 [ [ "A2", 1 ], [ "A3", 1 ] ] 
+new 169 [ [ "A1", 4 ], [ "A5", 1 ] ] 
+new 170 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 171 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 172 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 173 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 174 [ [ "A1", 4 ], [ "A5", 1 ] ] 
+new 175 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+new 176 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 177 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 178 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 179 [ [ "A1", 4 ], [ "A5", 1 ] ] 
+new 180 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 181 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 182 [ [ "A2", 1 ], [ "A3", 1 ] ] 
+new 183 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 184 [ [ "A1", 15 ] ] 
+new 185 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 186 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 187 [ [ "A2", 1 ], [ "A3", 1 ] ] 
+new 188 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 189 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 190 [ [ "A1", 15 ] ] 
+new 191 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 192 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 193 [ [ "A1", 15 ] ] 
+new 194 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 195 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 196 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 197 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 198 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 199 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 200 [ [ "A1", 1 ], [ "A4", 1 ] ] 
+new 201 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 202 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 203 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 204 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 205 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 206 [ [ "A1", 4 ], [ "A5", 1 ] ] 
+new 207 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 208 [ [ "A1", 4 ], [ "A5", 1 ] ] 
+new 209 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 210 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 211 [ [ "A2", 1 ], [ "A3", 1 ] ] 
+new 212 [ [ "A2", 1 ], [ "A3", 1 ] ] 
+new 213 [ [ "A2", 1 ], [ "A3", 1 ] ] 
+new 214 [ [ "A1", 15 ] ] 
+new 215 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 216 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 217 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 218 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 219 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 220 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 221 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 222 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 223 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 224 [ [ "A1", 7 ] ] 
+new 225 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 226 [ [ "A1", 4 ], [ "A5", 1 ] ] 
+new 227 [ [ "A1", 15 ] ] 
+new 228 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 229 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+new 230 [ [ "A1", 7 ] ] 
+____not new 
+new 231 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 232 [ [ "A1", 4 ], [ "A5", 1 ] ] 
+new 233 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 234 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 235 [ [ "A1", 4 ], [ "A5", 1 ] ] 
+new 236 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 237 [ [ "A2", 1 ], [ "A3", 1 ] ] 
+new 238 [ [ "A1", 15 ] ] 
+new 239 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 240 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 241 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 242 [ [ "A1", 15 ] ] 
+new 243 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 244 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 245 [ [ "A1", 7 ] ] 
+new 246 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 247 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 248 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 249 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 250 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 251 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 252 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 253 [ [ "A1", 4 ], [ "A5", 1 ] ] 
+new 254 [ [ "A1", 15 ] ] 
+____not new 
+new 255 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 256 [ [ "A1", 7 ] ] 
+new 257 [ [ "A2", 1 ], [ "A3", 1 ] ] 
+new 258 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 259 [ [ "A1", 15 ] ] 
+____not new 
+new 260 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+new 261 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 262 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 263 [ [ "A1", 1 ], [ "A4", 1 ] ] 
+new 264 [ [ "A1", 15 ] ] 
+new 265 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 266 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 267 [ [ "A1", 15 ] ] 
+new 268 [ [ "A1", 7 ] ] 
+new 269 [ [ "A1", 15 ] ] 
+new 270 [ [ "A1", 4 ], [ "A5", 1 ] ] 
+new 271 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 272 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 273 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 274 [ [ "A1", 4 ], [ "A5", 1 ] ] 
+new 275 [ [ "A1", 4 ], [ "A5", 1 ] ] 
+new 276 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 277 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 278 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 279 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 280 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 281 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+new 282 [ [ "A1", 15 ] ] 
+new 283 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 284 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+____not new 
+new 285 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 286 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+new 287 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 288 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 289 [ [ "A1", 1 ], [ "A4", 1 ] ] 
+new 290 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 291 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+____not new 
+new 292 [ [ "A5", 1 ] ] 
+____not new 
+new 293 [ [ "A1", 1 ], [ "A3", 1 ], [ "D4", 1 ] ] 
+new 294 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 295 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 296 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 297 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 298 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+new 299 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 300 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 301 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+new 302 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 303 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 304 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 305 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 306 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 307 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 308 [ [ "A2", 1 ], [ "A3", 1 ] ] 
+new 309 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 310 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 311 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 312 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 313 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 314 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+new 315 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 316 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 317 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 318 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 319 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 320 [ [ "A1", 4 ], [ "A5", 1 ] ] 
+new 321 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 322 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 323 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 324 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 325 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+new 326 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 327 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 328 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+new 329 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+Error, user interrupt in
+  Print( " \<\<\<\<)" ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/record.gi:67 called from 
+CallFuncList( PRINT_TO, arg ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/streams.gd:1078 called from
+PrintTo( fn, name, ":=", obj, ";\n" ); at gapReads/SavesReads.txt:57 called from
+savedataas( basisrecs, tempsavename ); at Task20260908Ub.g:67 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260908Ub.g:69
+you can 'return;'
+brk> quit;
+gap> Read("Task20260908Ub.g");
+new 3 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 4 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 5 [ [ "A1", 15 ] ] 
+new 6 [ [ "A1", 4 ], [ "A5", 1 ] ] 
+new 7 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 8 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 9 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 10 [ [ "A1", 4 ], [ "A5", 1 ] ] 
+new 11 [ [ "A2", 1 ], [ "A3", 1 ] ] 
+new 12 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 13 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 14 [ [ "A1", 4 ], [ "A5", 1 ] ] 
+new 15 [ [ "A1", 4 ], [ "A5", 1 ] ] 
+new 16 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+new 17 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 18 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 19 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 20 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 21 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 22 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 23 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 24 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 25 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+new 26 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 27 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+new 28 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 29 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+new 30 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+new 31 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+new 32 [ [ "A1", 15 ] ] 
+new 33 [ [ "A1", 15 ] ] 
+new 34 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 35 [ [ "A1", 4 ], [ "A5", 1 ] ] 
+new 36 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+new 37 [ [ "A1", 4 ], [ "A5", 1 ] ] 
+new 38 [ [ "A2", 1 ], [ "A3", 1 ] ] 
+new 39 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 40 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+new 41 [ [ "A1", 7 ] ] 
+new 42 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+new 43 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+Error, user interrupt in
+  i := i + 1; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/zlattice.gi:1274 called from 
+srt( d - 1, k1 ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/zlattice.gi:1282 called from
+srt( d - 1, k1 ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/zlattice.gi:1282 called from
+srt( d - 1, k1 ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/zlattice.gi:1282 called from
+srt( d - 1, k1 ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/zlattice.gi:1282 called from
+srt( d - 1, k1 ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/zlattice.gi:1282 called from
+...  at Task20260908Ub.g:69
+you can 'return;'
+brk> quit;
+gap> Read("Task20260908Ub.g");
+new 3 [ [ "A1", 11 ], [ "D4", 1 ] ] 15 
+new 4 [ [ "A1", 11 ], [ "D4", 1 ] ] 15 
+____not new 
+new 5 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 6 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 7 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 8 [ [ "A1", 4 ], [ "A5", 1 ] ] 9 
+new 9 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 10 [ [ "A1", 15 ] ] 15 
+new 11 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 12 [ [ "A1", 11 ], [ "D4", 1 ] ] 15 
+Error, user interrupt in
+  depth1 := NestingDepthM( left ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3574 called from 
+psol * tvdual at NewOGLat.g:548 called from
+extend( psol ); at NewOGLat.g:566 called from
+extend( psol ); at NewOGLat.g:566 called from
+extend( psol ); at NewOGLat.g:566 called from
+extend( psol ); at NewOGLat.g:566 called from
+...  at Task20260908Ub.g:70
+you can 'return;'
+brk> quit;
+gap> Read("Task20260908Ub.g");
+new 3 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 4 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 5 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 6 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 7 [ [ "A1", 1 ], [ "A4", 1 ] ] 5 
+new 8 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 9 [ [ "A1", 4 ], [ "A5", 1 ] ] 9 
+new 10 [ [ "A5", 1 ] ] 5 
+new 11 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 12 [ [ "A1", 1 ], [ "A4", 1 ] ] 5 
+new 13 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 14 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 15 [ [ "A1", 1 ], [ "A4", 1 ] ] 5 
+____not new 
+new 16 [ [ "A1", 4 ], [ "A5", 1 ] ] 9 
+new 17 [ [ "A1", 1 ], [ "A2", 2 ] ] 5 
+new 18 [ [ "A1", 1 ], [ "A4", 1 ] ] 5 
+new 19 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 20 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 21 [ [ "A2", 1 ], [ "A3", 1 ] ] 5 
+new 22 [ [ "A1", 11 ], [ "D4", 1 ] ] 15 
+new 23 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 24 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 25 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 26 [ [ "A1", 11 ], [ "D4", 1 ] ] 15 
+new 27 [ [ "A1", 1 ], [ "A4", 1 ] ] 5 
+new 28 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+____not new 
+new 29 [ [ "A1", 11 ], [ "D4", 1 ] ] 15 
+new 30 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 31 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 32 [ [ "A1", 1 ], [ "A2", 2 ] ] 5 
+new 33 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 34 [ [ "A1", 11 ], [ "D4", 1 ] ] 15 
+new 35 [ [ "A1", 15 ] ] 15 
+new 36 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 37 [ [ "A1", 4 ], [ "A5", 1 ] ] 9 
+new 38 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 39 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 40 [ [ "A1", 1 ], [ "A2", 2 ] ] 5 
+new 41 [ [ "A1", 4 ], [ "A5", 1 ] ] 9 
+new 42 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 43 [ [ "A1", 1 ], [ "A2", 2 ] ] 5 
+new 44 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 45 [ [ "A1", 1 ], [ "A2", 2 ] ] 5 
+new 46 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 47 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 48 [ [ "A1", 1 ], [ "A4", 1 ] ] 5 
+new 49 [ [ "A1", 3 ], [ "D4", 1 ] ] 7 
+new 50 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 51 [ [ "A1", 1 ], [ "A4", 1 ] ] 5 
+new 52 [ [ "A1", 1 ], [ "A4", 1 ] ] 5 
+new 53 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 54 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 55 [ [ "A1", 11 ], [ "D4", 1 ] ] 15 
+new 56 [ [ "A1", 4 ], [ "A5", 1 ] ] 9 
+new 57 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 58 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 59 [ [ "A1", 1 ], [ "A2", 2 ] ] 5 
+new 60 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 61 [ [ "A1", 1 ], [ "A2", 2 ] ] 5 
+new 62 [ [ "A1", 4 ], [ "A5", 1 ] ] 9 
+new 63 [ [ "A1", 1 ], [ "A4", 1 ] ] 5 
+new 64 [ [ "A1", 15 ] ] 15 
+new 65 [ [ "A1", 1 ], [ "A4", 1 ] ] 5 
+new 66 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 67 [ [ "A1", 1 ], [ "A4", 1 ] ] 5 
+new 68 [ [ "A1", 4 ], [ "A5", 1 ] ] 9 
+new 69 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 70 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 71 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 72 [ [ "A1", 11 ], [ "D4", 1 ] ] 15 
+new 73 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 74 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 75 [ [ "A1", 11 ], [ "D4", 1 ] ] 15 
+new 76 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 77 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 78 [ [ "A1", 11 ], [ "D4", 1 ] ] 15 
+new 79 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 80 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 81 [ [ "A1", 11 ], [ "D4", 1 ] ] 15 
+new 82 [ [ "A1", 1 ], [ "A4", 1 ] ] 5 
+new 83 [ [ "A1", 1 ], [ "A4", 1 ] ] 5 
+new 84 [ [ "A1", 4 ], [ "A5", 1 ] ] 9 
+new 85 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 86 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 87 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 88 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 89 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 90 [ [ "A2", 1 ], [ "A3", 1 ] ] 5 
+new 91 [ [ "A1", 11 ], [ "D4", 1 ] ] 15 
+new 92 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 93 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 94 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 95 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 96 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 97 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 98 [ [ "A1", 1 ], [ "A4", 1 ] ] 5 
+new 99 [ [ "A1", 11 ], [ "D4", 1 ] ] 15 
+new 100 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 101 [ [ "A2", 1 ], [ "A3", 1 ] ] 5 
+new 102 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+____not new 
+new 103 [ [ "A1", 4 ], [ "A5", 1 ] ] 9 
+new 104 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 105 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 106 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 107 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 108 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 109 [ [ "A1", 1 ], [ "A2", 2 ] ] 5 
+new 110 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 111 [ [ "A5", 1 ] ] 5 
+new 112 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 113 [ [ "A1", 4 ], [ "A5", 1 ] ] 9 
+new 114 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 115 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 116 [ [ "A2", 1 ], [ "A3", 1 ] ] 5 
+new 117 [ [ "A1", 4 ], [ "A5", 1 ] ] 9 
+new 118 [ [ "A1", 4 ], [ "A5", 1 ] ] 9 
+____not new 
+new 119 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 120 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+____not new 
+____not new 
+new 121 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 122 [ [ "A1", 11 ], [ "D4", 1 ] ] 15 
+new 123 [ [ "A1", 1 ], [ "A4", 1 ] ] 5 
+new 124 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+____not new 
+new 125 [ [ "A1", 11 ], [ "D4", 1 ] ] 15 
+new 126 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 127 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 128 [ [ "A1", 11 ], [ "D4", 1 ] ] 15 
+new 129 [ [ "A1", 4 ], [ "A5", 1 ] ] 9 
+new 130 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 131 [ [ "A1", 1 ], [ "A4", 1 ] ] 5 
+new 132 [ [ "A1", 1 ], [ "A4", 1 ] ] 5 
+new 133 [ [ "A1", 4 ], [ "A5", 1 ] ] 9 
+new 134 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 135 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 136 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 137 [ [ "A1", 11 ], [ "D4", 1 ] ] 15 
+new 138 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 139 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 140 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 141 [ [ "A1", 4 ], [ "A5", 1 ] ] 9 
+new 142 [ [ "A1", 1 ], [ "A4", 1 ] ] 5 
+new 143 [ [ "A1", 1 ], [ "A4", 1 ] ] 5 
+new 144 [ [ "A2", 1 ], [ "A3", 1 ] ] 5 
+new 145 [ [ "A1", 1 ], [ "A2", 2 ] ] 5 
+new 146 [ [ "A1", 11 ], [ "D4", 1 ] ] 15 
+new 147 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 148 [ [ "A1", 11 ], [ "D4", 1 ] ] 15 
+new 149 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+____not new 
+new 150 [ [ "A1", 11 ], [ "D4", 1 ] ] 15 
+new 151 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 152 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+____not new 
+new 153 [ [ "A1", 4 ], [ "A5", 1 ] ] 9 
+new 154 [ [ "A1", 1 ], [ "A2", 2 ] ] 5 
+new 155 [ [ "A2", 1 ], [ "A3", 1 ] ] 5 
+new 156 [ [ "A1", 4 ], [ "A5", 1 ] ] 9 
+new 157 [ [ "A1", 1 ], [ "A2", 2 ] ] 5 
+new 158 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 159 [ [ "A1", 7 ] ] 7 
+new 160 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 161 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 162 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 163 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 164 [ [ "A1", 4 ], [ "A5", 1 ] ] 9 
+new 165 [ [ "A1", 1 ], [ "A4", 1 ] ] 5 
+new 166 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 167 [ [ "A1", 11 ], [ "D4", 1 ] ] 15 
+new 168 [ [ "A1", 4 ], [ "A5", 1 ] ] 9 
+new 169 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 170 [ [ "A1", 11 ], [ "D4", 1 ] ] 15 
+new 171 [ [ "A1", 1 ], [ "A4", 1 ] ] 5 
+new 172 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 173 [ [ "A1", 4 ], [ "A5", 1 ] ] 9 
+new 174 [ [ "A1", 4 ], [ "A5", 1 ] ] 9 
+new 175 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 176 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 177 [ [ "A1", 4 ], [ "A5", 1 ] ] 9 
+new 178 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 179 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 180 [ [ "A1", 15 ] ] 15 
+new 181 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 182 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 183 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 184 [ [ "A2", 1 ], [ "A3", 1 ] ] 5 
+new 185 [ [ "A1", 1 ], [ "A2", 2 ] ] 5 
+new 186 [ [ "A1", 4 ], [ "A5", 1 ] ] 9 
+new 187 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 188 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 189 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+____not new 
+new 190 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 191 [ [ "A1", 1 ], [ "A2", 2 ] ] 5 
+new 192 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 193 [ [ "A1", 4 ], [ "A5", 1 ] ] 9 
+new 194 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 195 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 196 [ [ "A1", 4 ], [ "A5", 1 ] ] 9 
+new 197 [ [ "A1", 11 ], [ "D4", 1 ] ] 15 
+new 198 [ [ "A1", 1 ], [ "A4", 1 ] ] 5 
+new 199 [ [ "A1", 11 ], [ "D4", 1 ] ] 15 
+new 200 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 201 [ [ "A1", 3 ], [ "D4", 1 ] ] 7 
+new 202 [ [ "A1", 11 ], [ "D4", 1 ] ] 15 
+new 203 [ [ "A2", 1 ], [ "A3", 1 ] ] 5 
+new 204 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+____not new 
+new 205 [ [ "A1", 1 ], [ "A4", 1 ] ] 5 
+new 206 [ [ "A1", 1 ], [ "A2", 2 ] ] 5 
+new 207 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 208 [ [ "A1", 4 ], [ "A5", 1 ] ] 9 
+new 209 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 210 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 211 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 212 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 213 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 214 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 215 [ [ "A1", 4 ], [ "A5", 1 ] ] 9 
+new 216 [ [ "A1", 1 ], [ "A2", 2 ] ] 5 
+new 217 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 218 [ [ "A1", 3 ], [ "D4", 1 ] ] 7 
+new 219 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 220 [ [ "A1", 1 ], [ "A4", 1 ] ] 5 
+new 221 [ [ "A1", 1 ], [ "A4", 1 ] ] 5 
+new 222 [ [ "A1", 4 ], [ "A5", 1 ] ] 9 
+new 223 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 224 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 225 [ [ "A1", 1 ], [ "A4", 1 ] ] 5 
+new 226 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 227 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 228 [ [ "A2", 1 ], [ "A3", 1 ] ] 5 
+new 229 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 230 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 231 [ [ "A1", 11 ], [ "D4", 1 ] ] 15 
+new 232 [ [ "A1", 1 ], [ "A4", 1 ] ] 5 
+new 233 [ [ "A2", 1 ], [ "A3", 1 ] ] 5 
+new 234 [ [ "A1", 1 ], [ "A4", 1 ] ] 5 
+new 235 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 236 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 237 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+Error, user interrupt in
+  Print( " \<\<\<\<)" ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/record.gi:67 called from 
+CallFuncList( PRINT_TO, arg ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/streams.gd:1078 called from
+PrintTo( fn, name, ":=", obj, ";\n" ); at gapReads/SavesReads.txt:57 called from
+savedataas( basisrecs, tempsavename ); at Task20260908Ub.g:69 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260908Ub.g:71
+you can 'return;'
+brk> quit;
+gap> Read("Task20260908Ub.g");
+new 3 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 4 [ [ "A5", 1 ] ] 5 
+new 5 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 6 [ [ "A1", 1 ], [ "A2", 2 ] ] 5 
+____not new 
+____not new 
+new 7 [ [ "A1", 11 ], [ "D4", 1 ] ] 15 
+____not new 
+____not new 
+new 8 [ [ "A1", 2 ], [ "A2", 1 ] ] 4 
+____not new 
+new 9 [ [ "A1", 7 ] ] 7 
+____not new 
+____not new 
+____not new 
+____not new 
+new 10 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+____not new 
+new 11 [ [ "A1", 3 ] ] 3 
+new 12 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+____not new 
+____not new 
+____not new 
+____not new 
+____not new 
+____not new 
+____not new 

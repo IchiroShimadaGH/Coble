@@ -1,5 +1,6 @@
 Read("t3.g");
 
-readdata("tbasisrec");
-tOGrec:=NewOGLat(tbasisrec);
-CheckOGrecSize(tbasisrec, tOGrec);
+rOGrec:=RepeatNewOGLat(GramR1, 1);;
+rOGrec.OGrec.size;
+
+

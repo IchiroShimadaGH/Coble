@@ -954,4 +954,233 @@ rec( Gram := [ [ 4, 1, 2, -1 ], [ 1, 3, 0, -2 ], [ 2, 0, 4, 2 ], [ -1, -2, 2, 4 
   maxnrm := 3, newGram := [ [ 3, 1, 0, -1 ], [ 1, 3, 1, -1 ], [ 0, 1, 2, 0 ], [ -1, -1, 0, 3 ] ], nopss := [ [ 2, 1 ], [ 3, 4 ] ], 
   nrmsset := [ 2, 3 ], vss := [ [ [ 0, 1, 0, 1 ], [ 0, 1, -1, 1 ], [ 1, 1, -1, 1 ], [ 0, 1, 0, 0 ] ], 
       [ [ 0, 1, 0, 1 ], [ 0, -1, 1, -1 ], [ 1, 1, -1, 1 ], [ 0, 1, 0, 0 ] ] ] )
-brk> 
+brk> quit;
+gap> 
+gap> 
+gap> 
+gap> Mass;
+Error, Variable: 'Mass' must have a value
+not in any function at *stdin*:57
+gap> Read("tools/MassFormula.txt");
+Error, file "tools/MassFormula.txt" must exist and be readable at /usr/local/Cellar/gap/4.15.1/share/gap/lib/files.gi:207 called from
+<function "Read string">( <arguments> )
+ called from read-eval loop at *stdin*:58
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> quit;
+gap> Read("MassFormula.txt");
+gap> RemoveZeroVectsIntMat;
+function( intmat ) ... end
+gap> Read("Task20260908Ua.g");
+Error, Variable: 'ADEH' must have a value
+not in any function at Task20260908Ua.g:12
+gap> Read("Task20260908Ua.g");
+gap> themass:=Mass(GramR);
+3773551/128421199872000
+gap> Read("Task20260908Ua.g");
+Error, Variable: 'Rtype2' must have a value
+not in any function at Task20260908Ua.g:17
+gap> Read("Task20260908Ua.g");
+gap> themass1=themass2;
+true
+gap> ogrec1:=NewOGLat(GramR1);;
+Error, Record Element: <rec> must be a record (not a dense plain list) in
+  GramL := basisrec.Gram; at NewOGLat.g:167 called from 
+<function "NewOGLat">( <arguments> )
+ called from read-eval loop at *stdin*:66
+type 'quit;' to quit to outer loop
+brk> basisrec1:=BasisRec(GramR1, 50);
+Syntax warning: Unbound global variable in *errin*:1
+basisrec1:=BasisRec(GramR1, 50);
+^^^^^^^^^
+rec( Gram := [ [ 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], 
+      [ 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], 
+      [ 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], 
+      [ 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0 ], 
+      [ 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, -1, 0, 0, 0 ], 
+      [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, -1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, 2, -1, 0, 0 ], 
+      [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 2, -1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 2, -1 ], 
+      [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 2 ] ], 
+  basis := [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0 ], 
+      [ 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0 ], 
+      [ 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], 
+      [ 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0 ], 
+      [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 ], 
+      [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, 0, 0 ], [ 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], 
+      [ -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], 
+      [ 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ], basisnrms := [ 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 ], 
+  fingerprints := [ 39, 44, 42, 40, 38, 36, 34, 8, 6, 4, 2, 8, 6, 4, 2 ], maxnrm := 2, minflag := true, 
+  newGram := [ [ 2, 0, 0, 0, 0, 0, 0, -1, -1, -1, 1, 0, 0, 0, 0 ], [ 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], 
+      [ 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], 
+      [ 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], 
+      [ 0, 0, 0, 0, 0, 0, 2, 1, 1, 1, -1, 0, 0, 0, 0 ], [ -1, 0, 0, 0, 0, 0, 1, 2, 1, 1, -1, 0, 0, 0, 0 ], 
+      [ -1, 0, 0, 0, 0, 0, 1, 1, 2, 1, -1, 0, 0, 0, 0 ], [ -1, 0, 0, 0, 0, 0, 1, 1, 1, 2, -1, 0, 0, 0, 0 ], 
+      [ 1, 0, 0, 0, 0, 0, -1, -1, -1, -1, 2, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0 ], 
+      [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0 ], 
+      [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2 ] ], nopss := [ 39 ], nrmsset := [ 2 ], snrm := 2, 
+  vss := [ [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2, 2, 2, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2, 2, 1, 1 ], 
+          [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2, 1, 1, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1 ], 
+          [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1 ], 
+          [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1 ], 
+          [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 ], 
+          [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2, 2, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2, 1, 1, 0 ], 
+          [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0 ], 
+          [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0 ], 
+          [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0 ], 
+          [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0 ], 
+          [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0 ], 
+          [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0 ], 
+          [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0 ], 
+          [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0 ], 
+          [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0 ], 
+          [ 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0 ], 
+          [ 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], 
+          [ 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], 
+          [ 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], 
+          [ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ] ] )
+brk> quit;
+gap> ogrec1:=NewOGLat(basisrec1);;
+Error, user interrupt in
+  t := TNUM_OBJ( m[1] ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:37 called from 
+NestingDepthM( left ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3574 called from
+psol * tvdual at NewOGLat.g:233 called from
+simpleextend( psol ); at NewOGLat.g:247 called from
+simpleextend( psol ); at NewOGLat.g:247 called from
+simpleextend( psol ); at NewOGLat.g:247 called from
+...  at *stdin*:66
+you can 'return;'
+brk> thelev;
+Syntax warning: Unbound global variable in *errin*:1
+thelev;
+^^^^^^
+Error, Variable: 'thelev' must have a value in
+  t := TNUM_OBJ( m[1] ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:37 called from 
+NestingDepthM( left ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3574 called from
+psol * tvdual at NewOGLat.g:233 called from
+simpleextend( psol ); at NewOGLat.g:247 called from
+simpleextend( psol ); at NewOGLat.g:247 called from
+simpleextend( psol ); at NewOGLat.g:247 called from
+...  at *errin*:1
+brk> thelevel;
+1
+brk> quit;
+gap> basisrec1:=BasisRec(GramR1, 50);;
+gap> ogrec1:=NewOGLat(basisrec1);;
+gap> ogrec1.size;
+8561413324800
+gap> basisrec1:=BasisRec(GramR1, 50);;
+gap> ogrec1:=NewOGLat(basisrec1);;
+gap>  basisrec1:=BasisRec(GramR1, 50);;
+gap> ogrec1:=NewOGLat(basisrec1);;
+gap> Read("NewOGLat.g");
+Syntax warning: Unbound global variable in NewOGLat.g:170
+    giveupflag:=false;
+    ^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:174
+    giveupflag:=true;
+    ^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:213
+  st:=Runtime();
+  ^^
+Syntax warning: Unbound global variable in NewOGLat.g:266
+      if giveupflag then 
+         ^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:267
+        if Runtime()-st>giveupruntime then 
+                     ^^
+gap> Read("NewOGLat.g");
+gap> Read("NewOGLat.g");
+Syntax error: Name used for two locals in NewOGLat.g:589
+  local counter, counter, basisrec, OGrec;
+                 ^^^^^^^
+gap> Read("NewOGLat.g");
+gap> Read("NewOGLat.g");
+gap> Read("NewOGLat.g");
+gap> rOGrec:=RepeatNewOGLat(GramR1, 1);;
+Error, Function: number of arguments must be 2 (not 1) in
+  BasisRec( GramL ) at NewOGLat.g:593 called from 
+<function "RepeatNewOGLat">( <arguments> )
+ called from read-eval loop at *stdin*:79
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> rOGrec:=RepeatNewOGLat(GramR1, 1);;
+Error, Function: number of arguments must be 2 (not 1) in
+  BasisRec( GramL ) at NewOGLat.g:593 called from 
+<function "RepeatNewOGLat">( <arguments> )
+ called from read-eval loop at *stdin*:79
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("NewOGLat.g");
+gap> rOGrec:=RepeatNewOGLat(GramR1, 1);;
+gap> rOGrec:=RepeatNewOGLat(GramR1, 1);;
+gap> rOGrec.giveuptime;
+Error, Record Element: '<rec>.giveuptime' must have an assigned value
+not in any function at *stdin*:82
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> rOGrec.giveupsec;
+2
+gap> rOGrec.giveuptime;
+Error, Record Element: '<rec>.giveuptime' must have an assigned value
+not in any function at *stdin*:83
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> 
+gap> Float(tmass);
+Error, Variable: 'tmass' must have a value
+not in any function at *stdin*:84
+gap> Float(themass1);
+2.93842e-08
+gap> Read("Task20260908Ua.g");
+Syntax error: found an expression when a statement was expected in Task20260908Ua.g:35
+  rogrec::=Random(ogrecs);
+        ^
+Syntax error: expression expected in Task20260908Ua.g:52
+    newogrec:==RepeatNewOGLat(tGramL, 20, 1);;
+              ^
+Syntax error: ; expected in Task20260908Ua.g:57
+od;
+^^
+gap> Read("Task20260908Ua.g");
+wrong in NewOGLat 7766152 
+Error,  at gapReads/gaptools.txt:723 called from
+localbeep( "NewOGLat", beepnumb ); at NewOGLat.g:165 called from
+beep( 7766152 ); at NewOGLat.g:346 called from
+NewOGLat( basisrec, giveupsec + counter ) at NewOGLat.g:595 called from
+<function "RepeatNewOGLat">( <arguments> )
+ called from read-eval loop at Task20260908Ua.g:28
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> savedataas(basisrec, "tbasisrec");
+brk> NewOGLat( basisrec);
+Error, user interrupt in
+  return n mod 2 = 0; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/integer.gi:917 called from 
+IsEvenInt( depth1 ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3596 called from
+psol * tvdual at NewOGLat.g:247 called from
+simpleextend( psol ); at NewOGLat.g:261 called from
+simpleextend( psol ); at NewOGLat.g:261 called from
+simpleextend( psol ); at NewOGLat.g:261 called from
+...  at *errin*:2
+you can 'return;'
+brk_2> quit;
+brk> quit;
+gap> Read("Task20260908Ua.g");
+Syntax error: expression expected in Task20260908Ua.g:52
+    newogrec:==RepeatNewOGLat(tGramL, 20, 1);;
+              ^
+Syntax error: ; expected in Task20260908Ua.g:57
+od;
+^^
+gap> Read("Task20260908Ua.g");
+Syntax error: ; expected in Task20260908Ua.g:57
+od;
+^^
+gap> Read("Task20260908Ua.g");
+Error, ModRat: for <r>/<s> mod <n>, <s>/gcd(<r>,<s>) and <n> must be coprime in
+  (- aa) / 2 / bb mod p at MassFormula.txt:875 called from 
+RandomKneserpNbrL( rogrec.Gram, 2 ) at Task20260908Ua.g:36 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260908Ua.g:57
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> quit;

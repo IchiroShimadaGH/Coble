@@ -28,4 +28,183 @@ rec( discf := [ [ 1/2, 1/2, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 1/2, 1, 0, 0, 0, 0, 0
       [ 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0 ], 
       [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0 ], 
       [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1 ] ] )
+gap> debug3();
+Error, Variable: 'NewOGLa' must have a value
+not in any function at fordebug3.g:5
+gap> debug3();
 gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> Read("Task20260908Ua.g");
+8561413324800 
+1712282664960 
+new 743178240 
+new 2090188800 
+new 298598400 
+____not new 
+____not new 
+____not new 
+new 1698693120 
+Error, user interrupt in
+  t := TNUM_OBJ( m[1] ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:37 called from 
+NestingDepthM( left ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3574 called from
+psol * tvdual at NewOGLat.g:247 called from
+simpleextend( psol ); at NewOGLat.g:261 called from
+simpleextend( psol ); at NewOGLat.g:261 called from
+simpleextend( psol ); at NewOGLat.g:261 called from
+...  at Task20260908Ua.g:62
+you can 'return;'
+brk> counter;
+16
+brk> savedataas(ogrecs, "ogrecsC");
+brk> quit;
+gap> tempsavename:="ogrecAA";
+"ogrecAA"
+gap> Read("Task20260908Ua.g");
+8561413324800 
+1712282664960 
+______ 1 
+______ 2 
+______ 3 
+new 31708938240 
+new 99532800 
+____not new 
+______ 1 
+______ 2 
+new 1698693120 
+____not new 
+______ 1 
+______ 2 
+______ 3 
+______ 4 
+new 743178240 
+new 707788800 
+____not new 
+____not new 
+______ 1 
+______ 2 
+______ 3 
+______ 4 
+______ 5 
+______ 6 
+______ 7 
+______ 8 
+______ 9 
+______ 10 
+______ 11 
+______ 12 
+______ 13 
+______ 14 
+______ 15 
+______ 16 
+______ 17 
+______ 18 
+______ 19 
+______ 20 
+______ 21 
+______ 22 
+______ 23 
+______ 24 
+______ 25 
+______ 26 
+______ 27 
+______ 28 
+______ 29 
+______ 30 
+______ 31 
+______ 32 
+______ 33 
+______ 34 
+______ 35 
+Error, user interrupt in
+  return prod; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3603 called from 
+psol * tvdual at NewOGLat.g:247 called from
+simpleextend( psol ); at NewOGLat.g:261 called from
+simpleextend( psol ); at NewOGLat.g:261 called from
+simpleextend( psol ); at NewOGLat.g:261 called from
+simpleextend( psol ); at NewOGLat.g:261 called from
+...  at Task20260908Ua.g:62
+you can 'return;'
+brk> basisrec.nopss;
+[ 15, 594 ]
+brk> basisrec.basisnrms;
+[ 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 4 ]
+brk> thelevel;
+1
+brk> trueseeds;
+[  ]
+brk> basisrec.Gram;
+[ [ 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 8, 8, 8, 0, 8, 0, 4, 4, 7, 4, 6, -2, 11, -2 ], 
+  [ 0, 8, 10, 8, 0, 8, 0, 4, 4, 8, 4, 6, -2, 12, -2 ], [ 0, 8, 8, 10, 0, 8, 0, 4, 4, 8, 4, 6, -2, 12, -2 ], 
+  [ 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 8, 8, 8, 0, 10, 0, 4, 4, 8, 4, 6, -2, 12, -2 ], 
+  [ 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 4, 4, 4, 0, 4, 0, 4, 2, 3, 2, 3, -1, 6, -1 ], 
+  [ 0, 4, 4, 4, 0, 4, 0, 2, 4, 3, 2, 3, -1, 6, -1 ], [ 0, 7, 8, 8, 0, 8, 0, 3, 3, 10, 3, 6, -2, 12, -2 ], 
+  [ 0, 4, 4, 4, 0, 4, 0, 2, 2, 3, 4, 3, -1, 6, -1 ], [ 0, 6, 6, 6, 0, 6, 0, 3, 3, 6, 3, 6, -2, 9, -2 ], 
+  [ 0, -2, -2, -2, 0, -2, 0, -1, -1, -2, -1, -2, 2, -3, 0 ], [ 0, 11, 12, 12, 0, 12, 0, 6, 6, 12, 6, 9, -3, 18, -3 ], 
+  [ 0, -2, -2, -2, 0, -2, 0, -1, -1, -2, -1, -2, 0, -3, 2 ] ]
+brk> quit;
+gap> 
+gap> 
+gap> 
+gap>  Read("Task20260908Ua.g");
+______ 1 
+8561413324800 
+1712282664960 
+new 743178240 
+____repeat 1 
+____repeat 2 
+____repeat 3 
+____repeat 4 
+____repeat 5 
+Error, user interrupt in
+  return n mod 2 = 0; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/integer.gi:917 called from 
+IsEvenInt( depth1 ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3596 called from
+psol * tvdual at NewOGLat.g:247 called from
+simpleextend( psol ); at NewOGLat.g:261 called from
+simpleextend( psol ); at NewOGLat.g:261 called from
+simpleextend( psol ); at NewOGLat.g:261 called from
+...  at Task20260908Ua.g:84
+you can 'return;'
+brk> quit;
+gap> 
+gap> 
+gap> 
+gap>  Read("Task20260908Ua.g");
+8561413324800 
+1712282664960 
+new 5096079360 
+new 99532800 
+____not new 
+____repeat 1 
+____repeat 2 
+____repeat 3 
+____repeat 4 
+____repeat 5 
+____repeat 6 
+____repeat 7 
+____repeat 8 
+____repeat 9 
+____repeat 10 
+____repeat 11 
+____repeat 12 
+____repeat 13 
+____repeat 14 
+____repeat 15 
+____repeat 16 
+____repeat 17 
+____repeat 18 
+____repeat 19 
+____repeat 20 
+____repeat 21 
+____repeat 22 
+____repeat 23 
+____repeat 24 
+____repeat 25 
+____repeat 26 
+____repeat 27 
+____repeat 28 
+____repeat 29 
+____repeat 30 

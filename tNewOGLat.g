@@ -147,8 +147,9 @@ BasisRec:=function(GramL, trialnumb)
 end;
 
 
-NewOGLat:=function(basisrec)
-  local beep,  GramL, nn,  basis, newGram, basisnrms,
+NewOGLat:=function(arg) # arg is (basisrec) or (basisrec, giveupsec)
+  local beep, basisrec,  giveupflag, giveupruntime, gvstopflag,  st, 
+  GramL, nn,  basis, newGram, basisnrms,
   ii, maxnrm, svrec, nrmsset, pvposss, vss, aa, poss, pos, getvs,
   tbasis, tbasisdual, fingerprints,inipos, thevss, thevssdual, 
   initb, OGrec, getfp,  tfps, tbs, tb, minfp, newtb,
@@ -163,6 +164,17 @@ NewOGLat:=function(basisrec)
   beep:=function(beepnumb)
     localbeep("NewOGLat", beepnumb); Error();
   end;
+  #
+  if Length(arg)=1 then 
+    basisrec:=arg[1];
+    giveupflag:=false;
+    giveupruntime:=infinity;
+  elif Length(arg)=2 then 
+    basisrec:=arg[1];
+    giveupflag:=true;
+    giveupruntime:=1000*arg[2];
+  else beep(212341);
+  fi;
   #
   GramL:=basisrec.Gram;
   nn:=Length(GramL);
@@ -198,6 +210,8 @@ NewOGLat:=function(basisrec)
     return(thevssdual[SinglePosition(nrmsset, nrm)]);
   end;
   #
+  st:=Runtime();
+  gvstopflag:=false;
   #
   reachflag:=false;
   thetg:=[];
@@ -247,7 +261,13 @@ NewOGLat:=function(basisrec)
         simpleextend(psol);
         if tv<>Remove(psol) then beep(812111); fi;
         if reachflag then return();; fi;
+        if gvstopflag then return();; fi;
       od;
+      if giveupflag then 
+        if Runtime()-st>giveupruntime then 
+          gvstopflag:=true;
+        fi;
+      fi;
     fi;
     return();
   end;
@@ -284,6 +304,7 @@ NewOGLat:=function(basisrec)
     tperm:=PermList(List(tvtgs, ttv->Position(candidates1, ttv)));
     return(tperm);
   end;
+  #
   #
   stabrecs:=[];
   #
@@ -386,7 +407,9 @@ NewOGLat:=function(basisrec)
         fi;
         #
       fi;
-    od;
+    od;# for thelevel in [2..nn] do 
+    #
+    if gvstopflag then return(fail); fi;
     #
     trueposs:=getorbsunionblist(trueseeds, genperms);
     falseposs:=getorbsunionblist(falseseeds, genperms);
@@ -412,6 +435,7 @@ NewOGLat:=function(basisrec)
   OGrec:=rec(
     Gram:=GramL,
     basis:=basis, 
+    basisrec:=basisrec, 
     stabrecs:=stabrecs, 
     size:=2*Product(List(stabrecs, stabrec->stabrec.size)),
     totalgens:=totalgens
@@ -436,25 +460,34 @@ CheckOGrecSize:=function(basisrec, OGrec)
 end;
 
 
-IsIsomBasisRecs:=function(basisrec1, basisrec2)
+IsIsomBasisRecs:=function(basisrecA, basisrecB)
   #
   local GramL1, GramL2, nn, vss2, vss2dual, getvs, 
   getvsdual, basis1, fingerprints1, basis1inv, totalflag, newGram1, 
-  thetg, extend, cleng, ii;
+  thetg, extend, cleng, ii, revflag, basisrec1, basisrec2;
   #
-  if basisrec1.minflag and basisrec2.minflag then 
-    if basisrec1.nrmsset<>basisrec2.nrmsset then return(false); fi;
-    if basisrec1.nopss<>basisrec2.nopss then return(false); fi;
+  if basisrecA.minflag and basisrecB.minflag then 
+    if basisrecA.nrmsset<>basisrecB.nrmsset then return(false); fi;
+    if basisrecA.nopss<>basisrecB.nopss then return(false); fi;
+    revflag:=false;
+    basisrec1:=basisrecA;
+    basisrec2:=basisrecB;
   else 
-    if IsSubset(basisrec1.nrmsset, basisrec2.nrmsset) then 
-      cleng:=Length(basisrec2.nrmsset);
-    elif IsSubset(basisrec2.nrmsset, basisrec1.nrmsset) then 
-      cleng:=Length(basisrec1.nrmsset);
+    if IsSubset(basisrecA.nrmsset, basisrecB.nrmsset) then 
+      cleng:=Length(basisrecB.nrmsset);
+      revflag:=true;
+      basisrec1:=basisrecB;
+      basisrec2:=basisrecA;
+    elif IsSubset(basisrecB.nrmsset, basisrecA.nrmsset) then 
+      cleng:=Length(basisrecA.nrmsset);
+      revflag:=false;
+      basisrec1:=basisrecA;
+      basisrec2:=basisrecB;
     else 
       return(false);
     fi;
     for ii in [1..cleng] do 
-      if basisrec1.nopss[ii]<>basisrec2.nopss[ii] then 
+      if basisrecA.nopss[ii]<>basisrecB.nopss[ii] then 
         return(false);
       fi;
     od;
@@ -536,12 +569,36 @@ IsIsomBasisRecs:=function(basisrec1, basisrec2)
   end;
   #
   extend([]);
-  if totalflag then return(thetg);
-  else return(false);
+  #
+  if totalflag then 
+    if revflag then 
+      thetg:=InverseMat(thetg);
+    fi;
+    if not IsIntMat(thetg) then beep(776611); fi;
+    if TMTTmult(thetg, basisrecB.Gram)<>basisrecA.Gram then 
+      beep(9137126); 
+    fi;
+    return(thetg);
+  else 
+    return(false);
   fi;
   #
 end;
 
 
+RepeatNewOGLat:=function(GramL, basisrectrial, giveupsec)
+  local counter, basisrec, OGrec;
+  counter:=0;
+  while true do
+    counter:=counter+1;
+    basisrec:=BasisRec(GramL,  basisrectrial+counter);
+    OGrec:=NewOGLat(basisrec, giveupsec+counter);
+    if OGrec<>fail then 
+      OGrec.basisrectrial:= basisrectrial+counter;
+      OGrec.giveupsec:=giveupsec+counter;
+      return(OGrec);
+    fi;
+  od;
+end;
 
 #####

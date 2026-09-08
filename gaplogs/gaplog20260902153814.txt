@@ -9,4 +9,4 @@ Error, Variable: 'GramR' must have a value
 not in any function at Task20260902Ub.g:59
 gap> uvabOqLOrder([0,0,0,2]);
 2
-gap> 
+gap> quit;

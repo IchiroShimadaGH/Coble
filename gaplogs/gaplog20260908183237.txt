@@ -1,0 +1,63 @@
+sessionnumb  20260908183237 
+gap> Read("Task20260908Ud.g");
+new 3 [ [ "A1", 3 ], [ "A3", 2 ] ] 9 
+new 4 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 5 [ [ "A1", 7 ] ] 7 
+new 6 [ [ "A1", 3 ] ] 3 
+new 7 [ [ "A1", 15 ] ] 15 
+new 8 [ [ "A1", 7 ] ] 7 
+new 9 [ [ "A1", 2 ], [ "A2", 1 ] ] 4 
+new 10 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 11 [ [ "A1", 1 ], [ "A2", 2 ] ] 5 
+new 12 [ [ "A1", 4 ], [ "A5", 1 ] ] 9 
+new 13 [ [ "A1", 1 ], [ "A4", 1 ] ] 5 
+new 14 [ [ "A1", 11 ], [ "D4", 1 ] ] 15 
+new 15 [ [ "A1", 5 ], [ "A3", 1 ] ] 8 
+new 16 [ [ "A2", 1 ], [ "A3", 1 ] ] 5 
+new 17 [ [ "A1", 3 ], [ "D4", 1 ] ] 7 
+new 18 [ [ "A1", 1 ], [ "A3", 1 ] ] 4 
+____not new 100 
+new 19 [ [ "A1", 15 ] ] 15 
+____not new 100 
+____not new 200 
+new 20 [ [ "A1", 11 ], [ "D4", 1 ] ] 15 
+____not new 100 
+____not new 200 
+new 21 [ [ "A5", 1 ] ] 5 
+new 22 [ [ "A1", 1 ], [ "A3", 1 ], [ "D4", 1 ] ] 8 
+____not new 100 
+____not new 200 
+____not new 300 
+____not new 400 
+____not new 500 
+new 23 [ [ "A1", 11 ], [ "D4", 1 ] ] 15 
+____not new 100 
+____not new 200 
+____not new 300 
+____not new 400 
+____not new 500 
+____not new 600 
+____not new 700 
+____not new 800 
+____not new 900 
+____not new 1000 
+____not new 1100 
+____not new 1200 
+____not new 1300 
+____not new 1400 
+____not new 1500 
+____not new 1600 
+____not new 1700 
+____not new 1800 
+____not new 1900 
+new 24 [ [ "A1", 3 ], [ "D5", 1 ] ] 8 
+____not new 100 
+____not new 200 
+____not new 300 
+____not new 400 
+____not new 500 
+____not new 600 
+____not new 700 
+____not new 800 
+____not new 900 
+____not new 1000 

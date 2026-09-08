@@ -36,3 +36,51 @@ gap> for aa in ChamNumDatas2 do Printn(aa); od;
 [ [ [ -3/2, 3/2, 13 ], 1 ], [ [ -1, 2, 3 ], 1 ], [ [ -1, 4, 6 ], 1 ], [ [ -1/2, 5/2, 1 ], 1 ], [ [ -1/2, 9/2, 18 ], 1 ] ] 
 [ [ [ -3/2, 3/2, 16 ], 1 ], [ [ -1/2, 9/2, 24 ], 1 ] ] 
 gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> tempsavename:="ogrecsDD";
+"ogrecsDD"
+gap> Read("Task20260908Ua.g");
+Error, Variable: 'uvabvect' must have a value
+not in any function at Task20260908Ua.g:25
+gap> restart();
