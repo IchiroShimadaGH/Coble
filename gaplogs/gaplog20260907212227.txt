@@ -254,3 +254,181 @@ ______ 1 905969664 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ]
 ______ 2 905969664 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
 ______ 3 905969664 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
 ______ 4 905969664 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+Error, user interrupt in
+  t := TNUM_OBJ( m[1] ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:37 called from 
+NestingDepthM( left ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3574 called from
+psol * tvdual at NewOGLat.g:233 called from
+simpleextend( psol ); at NewOGLat.g:247 called from
+simpleextend( psol ); at NewOGLat.g:247 called from
+simpleextend( psol ); at NewOGLat.g:247 called from
+...  at Task20260906Hb.g:60
+you can 'return;'
+brk> quit;
+gap> Read("Task20260906Hb.g");
+____ 73383542784 127401984 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 0.136 sec. 
+______ 1 73383542784 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 2 73383542784 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 3 73383542784 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 4 73383542784 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 5 73383542784 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+1 48 73383542784 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+_____________ 
+Error, user interrupt in
+  t := TNUM_OBJ( m[1] ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:37 called from 
+NestingDepthM( left ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3574 called from
+psol * tvdual at NewOGLat.g:247 called from
+simpleextend( psol ); at NewOGLat.g:261 called from
+simpleextend( psol ); at NewOGLat.g:261 called from
+simpleextend( psol ); at NewOGLat.g:261 called from
+...  at Task20260906Hb.g:60
+you can 'return;'
+brk> basiswebrint;
+Syntax warning: Unbound global variable in *errin*:1
+basiswebrint;
+^^^^^^^^^^^^
+Error, Variable: 'basiswebrint' must have a value in
+  t := TNUM_OBJ( m[1] ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:37 called from 
+NestingDepthM( left ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3574 called from
+psol * tvdual at NewOGLat.g:247 called from
+simpleextend( psol ); at NewOGLat.g:261 called from
+simpleextend( psol ); at NewOGLat.g:261 called from
+simpleextend( psol ); at NewOGLat.g:261 called from
+...  at *errin*:1
+brk> basiswebrints;
+Syntax warning: Unbound global variable in *errin*:2
+basiswebrints;
+^^^^^^^^^^^^^
+Error, Variable: 'basiswebrints' must have a value in
+  t := TNUM_OBJ( m[1] ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:37 called from 
+NestingDepthM( left ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3574 called from
+psol * tvdual at NewOGLat.g:247 called from
+simpleextend( psol ); at NewOGLat.g:261 called from
+simpleextend( psol ); at NewOGLat.g:261 called from
+simpleextend( psol ); at NewOGLat.g:261 called from
+...  at *errin*:2
+brk> webrint;
+Syntax warning: Unbound global variable in *errin*:3
+webrint;
+^^^^^^^
+Error, Variable: 'webrint' must have a value in
+  t := TNUM_OBJ( m[1] ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:37 called from 
+NestingDepthM( left ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3574 called from
+psol * tvdual at NewOGLat.g:247 called from
+simpleextend( psol ); at NewOGLat.g:261 called from
+simpleextend( psol ); at NewOGLat.g:261 called from
+simpleextend( psol ); at NewOGLat.g:261 called from
+...  at *errin*:3
+brk> quit;
+gap> Read("Task20260906Hb.g");
+Syntax error: ) expected in NewOGLat.g:169
+    return(List(thevss, tvs->Collected(List(tvs*tvdual, AbsInt)));
+                                                                 ^
+Syntax warning: Unbound global variable in NewOGLat.g:186
+    tvs:=thevss[SinglePosion(nrmsset, basisnrms[bpos]))];
+                ^^^^^^^^^^^^
+Syntax error: ] expected in NewOGLat.g:186
+    tvs:=thevss[SinglePosion(nrmsset, basisnrms[bpos]))];
+                                                      ^
+Syntax warning: Unbound global variable in NewOGLat.g:208
+    fp:=0;
+    ^^
+Syntax warning: Unbound global variable in NewOGLat.g:210
+      ttintnumbs:=tbasisdual*tv;
+      ^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:211
+      if ttintnumbs=tintnumbs  then fp:=fp+1; fi;
+         ^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:211
+      if ttintnumbs=tintnumbs  then fp:=fp+1; fi;
+                                    ^^
+Syntax warning: Unbound global variable in NewOGLat.g:211
+      if ttintnumbs=tintnumbs  then fp:=fp+1; fi;
+                                        ^^
+Syntax warning: Unbound global variable in NewOGLat.g:212
+      if ttintnumbs=-tintnumbs  then fp:=fp+1; fi;
+         ^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:212
+      if ttintnumbs=-tintnumbs  then fp:=fp+1; fi;
+                                     ^^
+Syntax warning: Unbound global variable in NewOGLat.g:212
+      if ttintnumbs=-tintnumbs  then fp:=fp+1; fi;
+                                         ^^
+Syntax warning: Unbound global variable in NewOGLat.g:218
+    Add(fingerprints, fp);
+                      ^^
+Syntax warning: Unbound global variable in NewOGLat.g:370
+    subcandidates:=[];
+    ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:374
+          Add(subcandidates, tv);
+              ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:381
+      tvtgs:=List(subcandidates, tv->tv*tg);
+                  ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:393
+    for tv in subcandidates do 
+              ^^^^^^^^^^^^^
+Error, Variable: 'newGram' must have an assigned value in
+  trec.newGram := newGram; at NewOGLat.g:117 called from 
+BasisRec( tGram4, 30 ) at Task20260906Hb.g:13 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260906Hb.g:60
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260906Hb.g");
+Syntax warning: Unbound global variable in NewOGLat.g:371
+    subcandidates:=[];
+    ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:375
+          Add(subcandidates, tv);
+              ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:382
+      tvtgs:=List(subcandidates, tv->tv*tg);
+                  ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:394
+    for tv in subcandidates do 
+              ^^^^^^^^^^^^^
+Error, Variable: 'candidates' must have an assigned value in
+  lengcan := Length( candidates ); at NewOGLat.g:391 called from 
+NewOGLat( tbasisrec4 ) at Task20260906Hb.g:14 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260906Hb.g:60
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260906Hb.g");
+Error, Variable: 'candidates' must have an assigned value in
+  return Position( candidates, ttv ); at NewOGLat.g:383 called from 
+func( C[i] ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from
+List( tvtgs, function ( ttv )
+      return Position( candidates, ttv );
+  end ) at NewOGLat.g:383 called from
+getpermcan( thetg ) at NewOGLat.g:402 called from
+NewOGLat( tbasisrec4 ) at Task20260906Hb.g:14 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260906Hb.g:60
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260906Hb.g");
+Error, Variable: 'gvstopflag' must have an assigned value in
+  if gvstopflag then
+    return fail;
+fi; at NewOGLat.g:417 called from 
+NewOGLat( tbasisrec4 ) at Task20260906Hb.g:14 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260906Hb.g:60
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260906Hb.g");
+Error, Variable: 'candidates' must have an assigned value in
+  stabrec := rec(
+    level := thelevel,
+    candidates := candidates,
+    genperms := genperms,
+    gengs := gengs,
+    trueposs := trueposs,
+    size := Length( trueposs ) ); at NewOGLat.g:432 called from 
+NewOGLat( tbasisrec4 ) at Task20260906Hb.g:14 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260906Hb.g:60
+type 'quit;' to quit to outer loop
+brk> 

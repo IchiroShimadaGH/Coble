@@ -321,6 +321,7 @@ NewOGLat:=function(arg) # arg is (basisrec) or (basisrec, giveupsec)
     if not pos in doneposs then 
       reachflag:=false;
       simpleextend([tv]);
+      if gvstopflag then return(fail); fi;
       #
       if reachflag then 
         Add(gengs, thetg);
@@ -391,6 +392,7 @@ NewOGLat:=function(arg) # arg is (basisrec) or (basisrec, giveupsec)
       if not pos in doneposs then 
         reachflag:=false;
         simpleextend(CopyAdd(inipsol, tv));
+        if gvstopflag then return(fail); fi;
         #
         if reachflag then 
           Add(gengs, thetg);
@@ -597,6 +599,8 @@ RepeatNewOGLat:=function(GramL, basisrectrial, giveupsec)
       OGrec.basisrectrial:= basisrectrial+counter;
       OGrec.giveupsec:=giveupsec+counter;
       return(OGrec);
+    else 
+      Printn("______", counter);
     fi;
   od;
 end;

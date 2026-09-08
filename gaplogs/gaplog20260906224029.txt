@@ -178408,4 +178408,13 @@ gap> themass;
 3773551/128421199872000
 gap> Read("Task20260908Vb.g");
 hooley! 
+gap> bsInt;
+Error, Variable: 'bsInt' must have a value
+not in any function at *stdin*:53
+gap> AbsInt;
+function( op ) ... end
+gap> AbsInt(-4);
+4
+gap> Read("NewOGLat.g");
+gap> Read("NewOGLat.g");
 gap> 
