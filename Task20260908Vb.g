@@ -10,4 +10,7 @@ sizes:=
 
 tsum:=Sum(sizes, xx->1/xx);
 
+if themass<>tsum then beep(85871); 
+else Printn("hooley!"); 
+fi;
 
