@@ -255,3 +255,3097 @@ ____repeat 24
 ____repeat 25 
 ____repeat 26 
 ____repeat 27 
+____repeat 28 
+____repeat 29 
+____repeat 30 
+____repeat 31 
+____repeat 32 
+____repeat 33 
+____repeat 34 
+____repeat 35 
+____repeat 36 
+new 452984832 
+____not new 
+____not new 
+____not new 
+____not new 
+____not new 
+____not new 
+____not new 
+____not new 
+____not new 
+____not new 
+____not new 
+____not new 
+____not new 
+____not new 
+____not new 
+____not new 
+____not new 
+____not new 
+new 5096079360 
+____not new 
+____repeat 1 
+____repeat 2 
+____repeat 3 
+____repeat 4 
+____repeat 5 
+____repeat 6 
+____repeat 7 
+____repeat 8 
+____repeat 9 
+____repeat 10 
+____repeat 11 
+____repeat 12 
+____repeat 13 
+____repeat 14 
+____repeat 15 
+____repeat 16 
+____repeat 17 
+____repeat 18 
+____repeat 19 
+____repeat 20 
+____repeat 21 
+____repeat 22 
+____repeat 23 
+____repeat 24 
+____repeat 25 
+____repeat 26 
+____repeat 27 
+____repeat 28 
+____repeat 29 
+____repeat 30 
+____repeat 31 
+____repeat 32 
+____repeat 33 
+____repeat 34 
+____repeat 35 
+____repeat 36 
+____repeat 37 
+____repeat 38 
+____repeat 39 
+____repeat 40 
+____repeat 41 
+____repeat 42 
+____repeat 43 
+____repeat 44 
+____repeat 45 
+____repeat 46 
+____repeat 47 
+____repeat 48 
+____repeat 49 
+____repeat 50 
+____repeat 51 
+____repeat 52 
+____repeat 53 
+____repeat 54 
+____repeat 55 
+____repeat 56 
+____repeat 57 
+____repeat 58 
+____repeat 59 
+____repeat 60 
+____repeat 61 
+____repeat 62 
+____repeat 63 
+____repeat 64 
+____repeat 65 
+____repeat 66 
+____repeat 67 
+____repeat 68 
+____repeat 69 
+____repeat 70 
+____repeat 71 
+____repeat 72 
+____repeat 73 
+____repeat 74 
+____repeat 75 
+____repeat 76 
+____repeat 77 
+____repeat 78 
+____repeat 79 
+____repeat 80 
+____repeat 81 
+____repeat 82 
+____repeat 83 
+____repeat 84 
+____repeat 85 
+____repeat 86 
+____repeat 87 
+____repeat 88 
+____repeat 89 
+____repeat 90 
+____repeat 91 
+____repeat 92 
+____repeat 93 
+____repeat 94 
+____repeat 95 
+____repeat 96 
+____repeat 97 
+____repeat 98 
+____repeat 99 
+____repeat 100 
+____repeat 101 
+____repeat 102 
+____repeat 103 
+____repeat 104 
+____repeat 105 
+____repeat 106 
+____repeat 107 
+____repeat 108 
+____repeat 109 
+____repeat 110 
+____repeat 111 
+____repeat 112 
+____repeat 113 
+____repeat 114 
+____repeat 115 
+____repeat 116 
+____repeat 117 
+____repeat 118 
+____repeat 119 
+____repeat 120 
+____repeat 121 
+____repeat 122 
+____repeat 123 
+____repeat 124 
+____repeat 125 
+____repeat 126 
+____repeat 127 
+____repeat 128 
+____repeat 129 
+____repeat 130 
+____repeat 131 
+____repeat 132 
+____repeat 133 
+____repeat 134 
+____repeat 135 
+____repeat 136 
+____repeat 137 
+____repeat 138 
+____repeat 139 
+____repeat 140 
+____repeat 141 
+____repeat 142 
+____repeat 143 
+____repeat 144 
+____repeat 145 
+____repeat 146 
+____repeat 147 
+____repeat 148 
+____repeat 149 
+____repeat 150 
+____repeat 151 
+____repeat 152 
+____repeat 153 
+____repeat 154 
+____repeat 155 
+____repeat 156 
+____repeat 157 
+____repeat 158 
+____repeat 159 
+____repeat 160 
+____repeat 161 
+____repeat 162 
+____repeat 163 
+____repeat 164 
+____repeat 165 
+____repeat 166 
+____repeat 167 
+____repeat 168 
+____repeat 169 
+____repeat 170 
+____repeat 171 
+____repeat 172 
+____repeat 173 
+____repeat 174 
+____repeat 175 
+____repeat 176 
+____repeat 177 
+____repeat 178 
+____repeat 179 
+____repeat 180 
+____repeat 181 
+____repeat 182 
+____repeat 183 
+____repeat 184 
+____repeat 185 
+____repeat 186 
+____repeat 187 
+____repeat 188 
+____repeat 189 
+____repeat 190 
+____repeat 191 
+____repeat 192 
+____repeat 193 
+____repeat 194 
+____repeat 195 
+____repeat 196 
+____repeat 197 
+____repeat 198 
+____repeat 199 
+____repeat 200 
+____repeat 201 
+____repeat 202 
+____repeat 203 
+____repeat 204 
+____repeat 205 
+____repeat 206 
+____repeat 207 
+____repeat 208 
+____repeat 209 
+____repeat 210 
+____repeat 211 
+____repeat 212 
+____repeat 213 
+____repeat 214 
+____repeat 215 
+____repeat 216 
+____repeat 217 
+____repeat 218 
+____repeat 219 
+____repeat 220 
+____repeat 221 
+____repeat 222 
+____repeat 223 
+____repeat 224 
+____repeat 225 
+____repeat 226 
+____repeat 227 
+____repeat 228 
+____repeat 229 
+____repeat 230 
+____repeat 231 
+____repeat 232 
+____repeat 233 
+____repeat 234 
+____repeat 235 
+____repeat 236 
+____repeat 237 
+Error, user interrupt in
+  t := TNUM_OBJ( m[1] ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:37 called from 
+NestingDepthM( left ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3574 called from
+psol * tvdual at NewOGLat.g:247 called from
+simpleextend( psol ); at NewOGLat.g:261 called from
+simpleextend( psol ); at NewOGLat.g:261 called from
+simpleextend( psol ); at NewOGLat.g:261 called from
+...  at Task20260908Ua.g:86
+you can 'return;'
+brk> quit;
+gap> Read("NewOGLat.g");
+Syntax warning: Unbound global variable in NewOGLat.g:223
+    Add(fingerprints, fp);
+                      ^^
+Syntax warning: Unbound global variable in NewOGLat.g:363
+    candidates:=candidates1, 
+                ^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:377
+    tintnumbs:=List([1..thelevel-1], kk->newGram[thelevel][kk]);
+    ^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:379
+    subcandidates:=subcandidatess[thelevl];
+                                  ^^^^^^^
+gap> Read("NewOGLat.g");
+gap> Read("NewOGLat.g");
+Syntax warning: Unbound global variable in NewOGLat.g:248
+      newssubcandidates:=[];
+      ^^^^^^^^^^^^^^^^^
+gap> Read("NewOGLat.g");
+gap> Read("Task20260909Ua.g");
+Syntax error: Name used for two locals in NewOGLat.g:235
+    tposss, tvdual, tvdual, kk, ttbintnumbs;
+                    ^^^^^^
+Error, List Element: <list>[2] must have an assigned value in
+  Length( newsubcandidates ) at NewOGLat.g:265 called from 
+simpleextend( [ tv ] ); at NewOGLat.g:335 called from
+NewOGLat( tbasisrec3 ) at Task20260909Ua.g:15 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260909Ua.g:61
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260909Ua.g");
+Error, List Element: <list>[2] must have an assigned value in
+  Length( newsubcandidates ) at NewOGLat.g:265 called from 
+simpleextend( [ tv ] ); at NewOGLat.g:335 called from
+NewOGLat( tbasisrec3 ) at Task20260909Ua.g:15 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260909Ua.g:61
+type 'quit;' to quit to outer loop
+brk> newsubcandidates;
+[ [ 1, 1 ], [ 1, -1 ], [ 2, 1 ], [ 2, -1 ] ]
+brk> Length( newsubcandidates ) ;
+4
+brk> fingerprints;
+[ 1 ]
+brk> Length(subcandidatess);
+1
+brk> nn;
+3
+brk> quit;
+gap> Read("Task20260909Ua.g");
+____ 191102976 7962624 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 0.022 sec. 
+Error, Record Element: '<rec>.fingerprints' must have an assigned value in
+  fingerprints1 := basisrec1.fingerprints; at NewOGLat.g:517 called from 
+IsIsomBasisRecs( tbasisrec, ttbasisrec ) at Task20260909Ua.g:46 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260909Ua.g:61
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("NewOGLat.g");
+Syntax warning: Unbound global variable in NewOGLat.g:120
+  thevss:=trec.vss;
+  ^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:122
+  webrint:=function(tv)
+  ^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:125
+    return(List(thevss, tvs->Collected(List(tvs*tvdual, AbsInt))));
+                ^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:128
+  basiswebrints:=List(thebasis, webrint);
+  ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:128
+  basiswebrints:=List(thebasis, webrint);
+                                ^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:130
+  candidatess:=[];
+  ^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:131
+  for bpos in [1..nn] do 
+      ^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:132
+    tvs:=thevss[SinglePosition(trec.nrmsset,trec.basisnrms[bpos])];
+         ^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:133
+    tcandidates:=[];
+    ^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:135
+      if webrint(tv)=basiswebrints[bpos] then 
+         ^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:135
+      if webrint(tv)=basiswebrints[bpos] then 
+                     ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:136
+        Add(tcandidates, tv);
+            ^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:140
+    Add(candidatess, tcandidates);
+        ^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:140
+    Add(candidatess, tcandidates);
+                     ^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:143
+  inipos:=function(tv)
+  ^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:150
+  candidatess[1]:=List(candidatess[1], inipos);
+  ^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:150
+  candidatess[1]:=List(candidatess[1], inipos);
+                       ^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:150
+  candidatess[1]:=List(candidatess[1], inipos);
+                                       ^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:159
+  subcandidatess:=[];
+  ^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:160
+  Add(subcandidatess, candidatess[1]);
+      ^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:160
+  Add(subcandidatess, candidatess[1]);
+                      ^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:163
+    tbintnumbs:=List([1..jj-1], kk->newGram[jj][kk]);
+    ^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:164
+    tvs:=candidatess[jj];
+         ^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:166
+    subcandidates:=[];
+    ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:169
+      if ttintnumbs=tbintnumbs  then 
+                    ^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:170
+        Add(subcandidates, tv);
+            ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:172
+      if ttintnumbs=-tbintnumbs  then 
+                     ^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:173
+        Add(subcandidates, -tv);
+            ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:180
+    Add(subcandidatess, subcandidates);
+        ^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:180
+    Add(subcandidatess, subcandidates);
+                        ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:183
+  fingerprints:=List(subcandidatess, Length);
+  ^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:183
+  fingerprints:=List(subcandidatess, Length);
+                     ^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:185
+  trec.basiswebrints:=basiswebrints:;
+                      ^^^^^^^^^^^^^
+Syntax error: ; expected in NewOGLat.g:185
+  trec.basiswebrints:=basiswebrints:;
+                                   ^
+Syntax warning: Unbound global variable in NewOGLat.g:186
+  trec.candidatess:=candidatess;
+                    ^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:187
+  trec.subcandidatess:=subcandidatess;
+                       ^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:188
+  trec.fingerprints:=fingerprints;
+                     ^^^^^^^^^^^^
+gap> Read("NewOGLat.g");
+Syntax error: ; expected in NewOGLat.g:65
+  candidatess, bpos, tcandidates, inipos, subcandidatess. tsubcandidates,
+                                                        ^
+Syntax error: expression expected in NewOGLat.g:66
+  tbintnumbs;
+            ^
+Syntax warning: Unbound global variable in NewOGLat.g:165
+    tbintnumbs:=List([1..jj-1], kk->newGram[jj][kk]);
+    ^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:168
+    subcandidates:=[];
+    ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:171
+      if ttintnumbs=tbintnumbs  then 
+                    ^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:172
+        Add(subcandidates, tv);
+            ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:174
+      if ttintnumbs=-tbintnumbs  then 
+                     ^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:175
+        Add(subcandidates, -tv);
+            ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:182
+    Add(subcandidatess, subcandidates);
+                        ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:185
+  fingerprints:=List(subcandidatess, Length);
+  ^^^^^^^^^^^^
+Syntax error: ; expected in NewOGLat.g:187
+  trec.basiswebrints:=basiswebrints:;
+                                   ^
+Syntax warning: Unbound global variable in NewOGLat.g:190
+  trec.fingerprints:=fingerprints;
+                     ^^^^^^^^^^^^
+gap> Read("NewOGLat.g");
+Syntax warning: Unbound global variable in NewOGLat.g:168
+    subcandidates:=[];
+    ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:172
+        Add(subcandidates, tv);
+            ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:175
+        Add(subcandidates, -tv);
+            ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:182
+    Add(subcandidatess, subcandidates);
+                        ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:185
+  fingerprints:=List(subcandidatess, Length);
+  ^^^^^^^^^^^^
+Syntax error: ; expected in NewOGLat.g:187
+  trec.basiswebrints:=basiswebrints:;
+                                   ^
+Syntax warning: Unbound global variable in NewOGLat.g:190
+  trec.fingerprints:=fingerprints;
+                     ^^^^^^^^^^^^
+gap> Read("NewOGLat.g");
+Syntax warning: Unbound global variable in NewOGLat.g:515
+  newGram2:=basisrec2.newGram;
+  ^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:522
+    webrints1:=Collected(List(vss1dual[kk], tvdual->List(vss1, tvs->Collected(tvs*tvdual))));
+    ^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:522
+    webrints1:=Collected(List(vss1dual[kk], tvdual->List(vss1, tvs->Collected(tvs*tvdual))));
+                              ^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:522
+    webrints1:=Collected(List(vss1dual[kk], tvdual->List(vss1, tvs->Collected(tvs*tvdual))));
+                                                         ^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:523
+    webrints2:=Collected(List(vss2dual[kk], tvdual->List(vss2, tvs->Collected(tvs*tvdual))));
+    ^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:524
+    if webrints1<>webrints2 then return(false); fi;
+       ^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:524
+    if webrints1<>webrints2 then return(false); fi;
+                  ^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:527
+  thevss1:=basisrec2.vss;
+  ^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:528
+  thevss2:=List([1..cleng], kk->basisrec2.vss[kk]);
+  ^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:530
+  basiswebrints1:=basisrec1. basiswebrints;
+  ^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:532
+  candidatess2:=[];
+  ^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:533
+  for bpos in [1..nn] do 
+      ^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:534
+    tvs:=thevss2[SinglePosition(basisrec1.nrmsset, basisrec1.basisnrms[bpos])];
+    ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:534
+    tvs:=thevss2[SinglePosition(basisrec1.nrmsset, basisrec1.basisnrms[bpos])];
+         ^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:535
+    tcandidates:=[];
+    ^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:536
+    for tv in tvs do 
+        ^^
+Syntax warning: Unbound global variable in NewOGLat.g:536
+    for tv in tvs do 
+              ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:537
+      if webrint(tv)= basiswebrints1[bpos] then 
+         ^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:537
+      if webrint(tv)= basiswebrints1[bpos] then 
+                      ^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:538
+        Add(tcandidates, tv);
+            ^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:542
+    Add(candidatess2, tcandidates);
+        ^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:542
+    Add(candidatess2, tcandidates);
+                      ^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:544
+  candidatess2dual:=List(candidatess2, tvs->tvs*GramL2);
+  ^^^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:544
+  candidatess2dual:=List(candidatess2, tvs->tvs*GramL2);
+                         ^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:566
+    tcandidates:=candidatess2[leng+1]
+    ^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:566
+    tcandidates:=candidatess2[leng+1]
+                 ^^^^^^^^^^^^
+Syntax error: ; expected in NewOGLat.g:567
+    if  leng=0 then 
+    ^^
+Syntax error: while parsing a function: statement or 'end' expected in NewOGLat.g:569
+    else 
+    ^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:571
+      tintnumbs:=List([1..leng], kk->newGram1[leng+1][kk]);
+      ^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:571
+      tintnumbs:=List([1..leng], kk->newGram1[leng+1][kk]);
+                          ^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:571
+      tintnumbs:=List([1..leng], kk->newGram1[leng+1][kk]);
+                                              ^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:572
+      tvsdual:=candidatess2dual[leng+1];
+      ^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:572
+      tvsdual:=candidatess2dual[leng+1];
+               ^^^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:572
+      tvsdual:=candidatess2dual[leng+1];
+                                ^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:573
+      tvs:=candidatess2[leng+1];
+      ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:573
+      tvs:=candidatess2[leng+1];
+           ^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:573
+      tvs:=candidatess2[leng+1];
+                        ^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:574
+      pos:=0;
+      ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:575
+      for tvdual in tvsdual do 
+          ^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:575
+      for tvdual in tvsdual do 
+                    ^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:576
+        pos:=pos+1;
+        ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:576
+        pos:=pos+1;
+             ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:577
+        psoltvdual:=psol*tvdual;
+        ^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:577
+        psoltvdual:=psol*tvdual;
+                    ^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:578
+        if psoltvdual=tintnumbs then 
+           ^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:578
+        if psoltvdual=tintnumbs then 
+                      ^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:579
+          Add(tsubcandidates, tvs[pos]);
+              ^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:579
+          Add(tsubcandidates, tvs[pos]);
+                              ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:579
+          Add(tsubcandidates, tvs[pos]);
+                                  ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:585
+        if  psoltvdual=-tintnumbs then 
+            ^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:585
+        if  psoltvdual=-tintnumbs then 
+                        ^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:586
+          Add(tsubcandidates, -tvs[pos]);
+              ^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:586
+          Add(tsubcandidates, -tvs[pos]);
+                               ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:586
+          Add(tsubcandidates, -tvs[pos]);
+                                   ^^^
+Syntax error: while parsing a function: statement or 'end' expected in NewOGLat.g:589
+    fi;
+    ^^
+gap> Read("NewOGLat.g");
+Syntax warning: Unbound global variable in NewOGLat.g:535
+  basiswebrints1:=basisrec1. basiswebrints;
+  ^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:537
+  candidatess2:=[];
+  ^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:538
+  for bpos in [1..nn] do 
+      ^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:539
+    tvs:=thevss2[SinglePosition(basisrec1.nrmsset, basisrec1.basisnrms[bpos])];
+    ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:540
+    tcandidates:=[];
+    ^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:541
+    for tv in tvs do 
+        ^^
+Syntax warning: Unbound global variable in NewOGLat.g:541
+    for tv in tvs do 
+              ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:542
+      if webrint(tv)= basiswebrints1[bpos] then 
+         ^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:542
+      if webrint(tv)= basiswebrints1[bpos] then 
+                      ^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:543
+        Add(tcandidates, tv);
+            ^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:547
+    Add(candidatess2, tcandidates);
+        ^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:547
+    Add(candidatess2, tcandidates);
+                      ^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:549
+  candidatess2dual:=List(candidatess2, tvs->tvs*GramL2);
+  ^^^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:549
+  candidatess2dual:=List(candidatess2, tvs->tvs*GramL2);
+                         ^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:571
+    tcandidates:=candidatess2[leng+1]
+    ^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:571
+    tcandidates:=candidatess2[leng+1]
+                 ^^^^^^^^^^^^
+Syntax error: ; expected in NewOGLat.g:572
+    if  leng=0 then 
+    ^^
+Syntax error: while parsing a function: statement or 'end' expected in NewOGLat.g:574
+    else 
+    ^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:576
+      tintnumbs:=List([1..leng], kk->newGram1[leng+1][kk]);
+      ^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:576
+      tintnumbs:=List([1..leng], kk->newGram1[leng+1][kk]);
+                          ^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:576
+      tintnumbs:=List([1..leng], kk->newGram1[leng+1][kk]);
+                                              ^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:577
+      tvsdual:=candidatess2dual[leng+1];
+      ^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:577
+      tvsdual:=candidatess2dual[leng+1];
+               ^^^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:577
+      tvsdual:=candidatess2dual[leng+1];
+                                ^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:578
+      tvs:=candidatess2[leng+1];
+      ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:578
+      tvs:=candidatess2[leng+1];
+           ^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:578
+      tvs:=candidatess2[leng+1];
+                        ^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:579
+      pos:=0;
+      ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:580
+      for tvdual in tvsdual do 
+          ^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:580
+      for tvdual in tvsdual do 
+                    ^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:581
+        pos:=pos+1;
+        ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:581
+        pos:=pos+1;
+             ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:582
+        psoltvdual:=psol*tvdual;
+        ^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:582
+        psoltvdual:=psol*tvdual;
+                    ^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:583
+        if psoltvdual=tintnumbs then 
+           ^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:583
+        if psoltvdual=tintnumbs then 
+                      ^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:584
+          Add(tsubcandidates, tvs[pos]);
+              ^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:584
+          Add(tsubcandidates, tvs[pos]);
+                              ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:584
+          Add(tsubcandidates, tvs[pos]);
+                                  ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:590
+        if  psoltvdual=-tintnumbs then 
+            ^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:590
+        if  psoltvdual=-tintnumbs then 
+                        ^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:591
+          Add(tsubcandidates, -tvs[pos]);
+              ^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:591
+          Add(tsubcandidates, -tvs[pos]);
+                               ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:591
+          Add(tsubcandidates, -tvs[pos]);
+                                   ^^^
+Syntax error: while parsing a function: statement or 'end' expected in NewOGLat.g:594
+    fi;
+    ^^
+gap> Read("NewOGLat.g");
+Syntax error: Name used for two locals in NewOGLat.g:485
+  tcandidates, webrint2;
+  ^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:540
+    tvsdual:=thevss2dual[SinglePosition(basisrec1.nrmsset, basisrec1.basisnrms[bpos])];
+    ^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:542
+    for tvdual in tvsdual do 
+        ^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:542
+    for tvdual in tvsdual do 
+                  ^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:545
+        Add(tcandidates, tv);
+                         ^^
+Syntax warning: Unbound global variable in NewOGLat.g:551
+  candidatess2dual:=List(candidatess2, tvs->tvs*GramL2);
+  ^^^^^^^^^^^^^^^^
+Syntax error: ; expected in NewOGLat.g:574
+    if  leng=0 then 
+    ^^
+Syntax error: while parsing a function: statement or 'end' expected in NewOGLat.g:576
+    else 
+    ^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:578
+      tintnumbs:=List([1..leng], kk->newGram1[leng+1][kk]);
+      ^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:578
+      tintnumbs:=List([1..leng], kk->newGram1[leng+1][kk]);
+                          ^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:578
+      tintnumbs:=List([1..leng], kk->newGram1[leng+1][kk]);
+                                              ^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:579
+      tvsdual:=candidatess2dual[leng+1];
+      ^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:579
+      tvsdual:=candidatess2dual[leng+1];
+               ^^^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:579
+      tvsdual:=candidatess2dual[leng+1];
+                                ^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:580
+      tvs:=candidatess2[leng+1];
+                        ^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:581
+      pos:=0;
+      ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:582
+      for tvdual in tvsdual do 
+          ^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:582
+      for tvdual in tvsdual do 
+                    ^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:583
+        pos:=pos+1;
+        ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:584
+        psoltvdual:=psol*tvdual;
+        ^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:584
+        psoltvdual:=psol*tvdual;
+                    ^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:585
+        if psoltvdual=tintnumbs then 
+           ^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:585
+        if psoltvdual=tintnumbs then 
+                      ^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:586
+          Add(tsubcandidates, tvs[pos]);
+              ^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:586
+          Add(tsubcandidates, tvs[pos]);
+                                  ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:592
+        if  psoltvdual=-tintnumbs then 
+            ^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:592
+        if  psoltvdual=-tintnumbs then 
+                        ^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:593
+          Add(tsubcandidates, -tvs[pos]);
+              ^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:593
+          Add(tsubcandidates, -tvs[pos]);
+                                   ^^^
+Syntax error: while parsing a function: statement or 'end' expected in NewOGLat.g:596
+    fi;
+    ^^
+gap> Read("NewOGLat.g");
+Syntax warning: Unbound global variable in NewOGLat.g:545
+        Add(tcandidates, tv);
+                         ^^
+Syntax error: Name used for two locals in NewOGLat.g:562
+    candidates, psoltvdual, tv, tsubcandidates, psoltvdual;
+                                                ^^^^^^^^^^
+gap> Read("NewOGLat.g");
+Syntax warning: Unbound global variable in NewOGLat.g:540
+    vpos:=SinglePosition(basisrec1.nrmsset, basisrec1.basisnrms[bpos]);
+    ^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:541
+    ttvs:=thevss2[vpos];
+    ^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:541
+    ttvs:=thevss2[vpos];
+                  ^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:543
+    for tv in ttvs do 
+              ^^^^
+Syntax error: Name used for two locals in NewOGLat.g:564
+    candidates, psoltvdual, tv, tsubcandidates, psoltvdual;
+                                                ^^^^^^^^^^
+gap> Read("NewOGLat.g");
+gap> Read("NewOGLat.g");
+Syntax warning: Unbound global variable in NewOGLat.g:242
+  subcandidatessdual:=List(subcandidatess, tvs->tvs*GramL);
+  ^^^^^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:355
+  pos:=0;
+  ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:357
+    pos:=pos+1;
+    ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:357
+    pos:=pos+1;
+         ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:358
+    if not pos in doneposs then 
+           ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:366
+        Add(trueseeds, pos);
+                       ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:371
+        Add(falseseeds, pos);
+                        ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:372
+        neworb:=getorb(pos, genperms);
+                       ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:385
+  stabrec:=rec(
+  ^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:393
+  Add(stabrecs, stabrec);
+                ^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:415
+    pos:=0;
+    ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:417
+      pos:=pos+1;
+      ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:417
+      pos:=pos+1;
+           ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:418
+      if not pos in doneposs then 
+             ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:426
+          Add(trueseeds, pos);
+                         ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:431
+          Add(falseseeds, pos);
+                          ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:432
+          neworb:=getorb(pos, genperms);
+                         ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:446
+    stabrec:=rec(
+    ^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:454
+    Add(stabrecs, stabrec);
+                  ^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:458
+  for stabrec in stabrecs do 
+      ^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:462
+  OGrec:=rec(
+  ^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:471
+  return(OGrec);
+         ^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:534
+  newGram2:=basisrec2.newGram;
+  ^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:543
+  thevss2dual:=List(thevss2, tvs->tvs*GramL2);
+  ^^^^^^^^^^^
+Syntax error: do expected in NewOGLat.g:546
+    for kk in 1..cleng] do
+               ^^
+Syntax error: expression expected in NewOGLat.g:547
+      wb1:=Collected(List(thevss1[kk], tv->Webrint(tv, GramL1, thevss1[jj])));
+                                                                             ^
+gap> Read("NewOGLat.g");
+Syntax warning: Unbound global variable in NewOGLat.g:462
+  OGrec:=rec(
+  ^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:471
+  return(OGrec);
+         ^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:534
+  newGram2:=basisrec2.newGram;
+  ^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:543
+  thevss2dual:=List(thevss2, tvs->tvs*GramL2);
+  ^^^^^^^^^^^
+Syntax error: do expected in NewOGLat.g:546
+    for kk in 1..cleng] do
+               ^^
+Syntax error: expression expected in NewOGLat.g:547
+      wb1:=Collected(List(thevss1[kk], tv->Webrint(tv, GramL1, thevss1[jj])));
+                                                                             ^
+gap> Read("NewOGLat.g");
+gap> Read("Task20260909Ua.g");
+____ 147456 6144 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 0.031 sec. 
+Error, Variable: 'cleng' must have an assigned value in
+  thevss2 := List( [ 1 .. cleng ], function ( kk )
+        return basisrec2.vss[kk];
+    end ); at NewOGLat.g:541 called from 
+IsIsomBasisRecs( tbasisrec, ttbasisrec ) at Task20260909Ua.g:46 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260909Ua.g:61
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260909Ua.g");
+____ 56623104 98304 [ 1, 1, 1, 1, 4, 4, 4, 4, 5, 5, 5, 5 ] 0.043 sec. 
+Error, Record Element: '<rec>.basiswebrints' must have an assigned value in
+  basiswebrints1 := basisrec1.basiswebrints; at NewOGLat.g:555 called from 
+IsIsomBasisRecs( tbasisrec, ttbasisrec ) at Task20260909Ua.g:46 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260909Ua.g:61
+type 'quit;' to quit to outer loop
+brk> basiswebrints1;
+Error, Variable: 'basiswebrints1' must have an assigned value in
+  basiswebrints1 := basisrec1.basiswebrints; at NewOGLat.g:555 called from 
+IsIsomBasisRecs( tbasisrec, ttbasisrec ) at Task20260909Ua.g:46 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at *errin*:1
+type 'quit;' to quit to outer loop
+brk_2> quit;
+brk> quit;
+gap> Read("Task20260909Ua.g");
+____ 2359296 98304 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 0.020 sec. 
+Error, Variable: 'basis1inv' must have an assigned value in
+  thetg := basis1inv * psol; at NewOGLat.g:585 called from 
+extend( psol ); at NewOGLat.g:620 called from
+extend( psol ); at NewOGLat.g:620 called from
+extend( psol ); at NewOGLat.g:620 called from
+extend( psol ); at NewOGLat.g:620 called from
+extend( psol ); at NewOGLat.g:620 called from
+...  at Task20260909Ua.g:61
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260909Ua.g");
+Syntax error: identifier expected in NewOGLat.g:494
+  fingerprints1, ,basis1,  basis1inv, totalflag, newGram1, newGram2, tt2vs, 
+                 ^
+Syntax error: expression expected in NewOGLat.g:497
+  tcandidates, webrint2, tv, tvdual, candidatess2dual, vpos, ttvs;
+                                                                 ^
+Syntax warning: Unbound global variable in NewOGLat.g:506
+    revflag:=false;
+    ^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:509
+    cleng:=Length(basisrecA.nrmsset);
+    ^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:512
+      cleng:=Length(basisrecB.nrmsset);
+      ^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:513
+      revflag:=true;
+      ^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:517
+      cleng:=Length(basisrecA.nrmsset);
+      ^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:518
+      revflag:=false;
+      ^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:525
+    for ii in [1..cleng] do 
+        ^^
+Syntax warning: Unbound global variable in NewOGLat.g:525
+    for ii in [1..cleng] do 
+                  ^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:534
+  newGram1:=basisrec1.newGram;
+  ^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:535
+  newGram2:=basisrec2.newGram;
+  ^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:542
+  thevss2:=List([1..cleng], kk->basisrec2.vss[kk]);
+                    ^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:544
+  thevss2dual:=List(thevss2, tvs->tvs*GramL2);
+  ^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:546
+  for jj in [1..cleng] do 
+      ^^
+Syntax warning: Unbound global variable in NewOGLat.g:546
+  for jj in [1..cleng] do 
+                ^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:547
+    for kk in [1..cleng] do
+                  ^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:548
+      wb1:=Collected(List(thevss1[kk], tv->Webrint(tv, GramL1, thevss1[jj])));
+      ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:549
+      wb2:=Collected(List(thevss2[kk], tv->Webrint(tv, GramL2, thevss2[jj])));
+      ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:550
+      if  wb1<>wb2 then return(false); fi;
+          ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:550
+      if  wb1<>wb2 then return(false); fi;
+               ^^^
+Syntax warning: Unbound global variable in NewOGLat.g:554
+  basis1:=basisrec1.basis;
+  ^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:555
+  basis1inv:=InverseMat(basis1);
+  ^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:555
+  basis1inv:=InverseMat(basis1);
+                        ^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:557
+  basiswebrints1:=basisrec1.basiswebrintss;
+  ^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:559
+  candidatess2:=[];
+  ^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:560
+  for bpos in [1..nn] do 
+      ^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:561
+    vpos:=SinglePosition(basisrec1.nrmsset, basisrec1.basisnrms[bpos]);
+    ^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:562
+    tcandidates:=[];
+    ^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:563
+    for tv in thevss2[vpos] do 
+        ^^
+Syntax warning: Unbound global variable in NewOGLat.g:563
+    for tv in thevss2[vpos] do 
+                      ^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:564
+      webrint2:=List(thevss2, tt2vs->Webrint(tv, GramL2, tt2vs));
+      ^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:565
+      if webrint2=basiswebrints1[bpos] then 
+         ^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:565
+      if webrint2=basiswebrints1[bpos] then 
+                  ^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:566
+        Add(tcandidates, tv);
+            ^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:570
+    Add(candidatess2, tcandidates);
+        ^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:570
+    Add(candidatess2, tcandidates);
+                      ^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:572
+  candidatess2dual:=List(candidatess2, tvs->tvs*GramL2);
+  ^^^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:572
+  candidatess2dual:=List(candidatess2, tvs->tvs*GramL2);
+                         ^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:576
+  totalflag:=false;
+  ^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:577
+  thetg:=[];
+  ^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:579
+  extend:=function(psol)
+  ^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:586
+      totalflag:=true;
+      ^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:587
+      thetg:=basis1inv*psol;
+      ^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:587
+      thetg:=basis1inv*psol;
+             ^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:588
+      if not IsIntMat(thetg) then beep(919191); fi;
+                      ^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:589
+      if TMTTmult(thetg, GramL2)<>GramL1 then beep(55112); fi;
+                  ^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:593
+    tcandidates:=candidatess2[leng+1];
+    ^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:593
+    tcandidates:=candidatess2[leng+1];
+                 ^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:595
+      tsubcandidates:= tcandidates;
+                       ^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:598
+      tintnumbs:=List([1..leng], kk->newGram1[leng+1][kk]);
+                                     ^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:599
+      tvsdual:=candidatess2dual[leng+1];
+               ^^^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:600
+      tvs:=candidatess2[leng+1];
+           ^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:624
+      if totalflag then return(); fi;
+         ^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:629
+  extend([]);
+  ^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:631
+  if totalflag then 
+     ^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:632
+    if revflag then 
+       ^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:633
+      thetg:=InverseMat(thetg);
+      ^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:635
+    if not IsIntMat(thetg) then beep(776611); fi;
+                    ^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:636
+    if TMTTmult(thetg, basisrecB.Gram)<>basisrecA.Gram then 
+                ^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:639
+    return(thetg);
+           ^^^^^
+____ 6144 6144 [ 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5 ] 0.051 sec. 
+Error, Variable: 'basis1inv' must have an assigned value in
+  thetg := basis1inv * psol; at NewOGLat.g:585 called from 
+extend( psol ); at NewOGLat.g:620 called from
+extend( psol ); at NewOGLat.g:620 called from
+extend( psol ); at NewOGLat.g:620 called from
+extend( psol ); at NewOGLat.g:620 called from
+extend( psol ); at NewOGLat.g:620 called from
+...  at Task20260909Ua.g:61
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260909Ua.g");
+Syntax error: ; expected in NewOGLat.g:497
+  tcandidates, webrint2, tv, tvdual, candidatess2dual, vpos, ttvs;
+  ^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:561
+    vpos:=SinglePosition(basisrec1.nrmsset, basisrec1.basisnrms[bpos]);
+    ^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:562
+    tcandidates:=[];
+    ^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:563
+    for tv in thevss2[vpos] do 
+        ^^
+Syntax warning: Unbound global variable in NewOGLat.g:563
+    for tv in thevss2[vpos] do 
+                      ^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:564
+      webrint2:=List(thevss2, tt2vs->Webrint(tv, GramL2, tt2vs));
+      ^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:565
+      if webrint2=basiswebrints1[bpos] then 
+         ^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:566
+        Add(tcandidates, tv);
+            ^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:570
+    Add(candidatess2, tcandidates);
+                      ^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:572
+  candidatess2dual:=List(candidatess2, tvs->tvs*GramL2);
+  ^^^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:593
+    tcandidates:=candidatess2[leng+1];
+    ^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:595
+      tsubcandidates:= tcandidates;
+                       ^^^^^^^^^^^
+Syntax warning: Unbound global variable in NewOGLat.g:599
+      tvsdual:=candidatess2dual[leng+1];
+               ^^^^^^^^^^^^^^^^
+____ 191102976 7962624 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 0.035 sec. 
+Error, Variable: 'basis1inv' must have an assigned value in
+  thetg := basis1inv * psol; at NewOGLat.g:585 called from 
+extend( psol ); at NewOGLat.g:620 called from
+extend( psol ); at NewOGLat.g:620 called from
+extend( psol ); at NewOGLat.g:620 called from
+extend( psol ); at NewOGLat.g:620 called from
+extend( psol ); at NewOGLat.g:620 called from
+...  at Task20260909Ua.g:61
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("NewOGLat.g");
+gap> Read("Task20260909Ua.g");
+____ 3963617280 1572864 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 0.034 sec. 
+______ 1 3963617280 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 2 3963617280 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 3 3963617280 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 4 3963617280 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 5 3963617280 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+1 16 3963617280 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+_____________ 
+____ 2359296 98304 [ 1, 1, 1, 1, 6, 6, 6, 6, 7, 7, 7, 7 ] 0.070 sec. 
+______ 1 2359296 [ 1, 1, 1, 1, 6, 6, 6, 6, 7, 7, 7, 7 ] 
+______ 2 2359296 [ 1, 1, 1, 1, 6, 6, 6, 6, 7, 7, 7, 7 ] 
+______ 3 2359296 [ 1, 1, 1, 1, 6, 6, 6, 6, 7, 7, 7, 7 ] 
+______ 4 2359296 [ 1, 1, 1, 1, 6, 6, 6, 6, 7, 7, 7, 7 ] 
+______ 5 2359296 [ 1, 1, 1, 1, 6, 6, 6, 6, 7, 7, 7, 7 ] 
+2 8 2359296 [ 1, 1, 1, 1, 6, 6, 6, 6, 7, 7, 7, 7 ] 
+_____________ 
+____ 56623104 98304 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 0.030 sec. 
+______ 1 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 2 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 3 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 4 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 5 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+3 8 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+_____________ 
+____ 2359296 98304 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 0.021 sec. 
+______ 1 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 2 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 3 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 4 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 5 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+4 8 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+_____________ 
+____ 6144 6144 [ 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5 ] 0.104 sec. 
+______ 1 6144 [ 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5 ] 
+______ 2 6144 [ 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5 ] 
+______ 3 6144 [ 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5 ] 
+______ 4 6144 [ 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5 ] 
+______ 5 6144 [ 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5 ] 
+5 4 6144 [ 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5 ] 
+_____________ 
+____ 2359296 98304 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 0.023 sec. 
+______ 1 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 2 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 3 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 4 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 5 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+6 8 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+_____________ 
+Error, user interrupt in
+  return prod; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3603 called from 
+psol * tvdual at NewOGLat.g:276 called from
+simpleextend( psol ); at NewOGLat.g:290 called from
+simpleextend( psol ); at NewOGLat.g:290 called from
+simpleextend( psol ); at NewOGLat.g:290 called from
+simpleextend( psol ); at NewOGLat.g:290 called from
+...  at Task20260909Ua.g:61
+you can 'return;'
+brk> quit;
+gap> Read("Task20260909Ua.g");
+____ 1572864 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4 ] 20.644 sec. 
+______ 1 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 2 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 3 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 4 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 5 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+Error, user interrupt in
+  return 1; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:23 called from 
+NestingDepthM( right ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3575 called from
+psol * tvdual at NewOGLat.g:604 called from
+extend( psol ); at NewOGLat.g:622 called from
+extend( psol ); at NewOGLat.g:622 called from
+extend( psol ); at NewOGLat.g:622 called from
+...  at Task20260909Ua.g:61
+you can 'return;'
+brk> quit;
+gap> Read("Task20260909Ua.g");
+Syntax error: expression expected in Task20260909Ua.g:15
+  tOGrec3:=RepeatNewOGLat(tbasisrec3,, 10, 10);
+                                     ^
+gap> Read("Task20260909Ua.g");
+Error, no method found! For debugging hints type ?Recovery from NoMethodFound
+Error, no 1st choice method found for `Length' on 1 arguments at /usr/local/Cellar/gap/4.15.1/share/gap/lib/methsel2.g:250 called from
+Length( GramL ) at NewOGLat.g:77 called from
+BasisRec( GramL, basisrectrial + counter ) at NewOGLat.g:652 called from
+RepeatNewOGLat( tbasisrec3, 10, 10 ) at Task20260909Ua.g:15 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260909Ua.g:61
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260909Ua.g");
+____ 56623104 98304 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 0.052 sec. 
+______ 1 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 2 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 3 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 4 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 5 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+1 8 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+_____________ 
+____ 6144 6144 [ 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5 ] 0.067 sec. 
+______ 1 6144 [ 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5 ] 
+______ 2 6144 [ 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5 ] 
+______ 3 6144 [ 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5 ] 
+______ 4 6144 [ 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5 ] 
+______ 5 6144 [ 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5 ] 
+2 4 6144 [ 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5 ] 
+_____________ 
+____ 1961990553600 127401984 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] 0.034 sec. 
+______ 1 1961990553600 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] 
+______ 2 1961990553600 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] 
+______ 3 1961990553600 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] 
+______ 4 1961990553600 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] 
+______ 5 1961990553600 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] 
+3 48 1961990553600 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] 
+_____________ 
+____ 3963617280 1572864 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 0.037 sec. 
+______ 1 3963617280 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+______ 2 3963617280 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+______ 3 3963617280 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+______ 4 3963617280 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+______ 5 3963617280 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+4 16 3963617280 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+_____________ 
+____ 191102976 7962624 [ 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4 ] 0.035 sec. 
+______ 1 191102976 [ 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 2 191102976 [ 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 3 191102976 [ 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 4 191102976 [ 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 5 191102976 [ 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+5 24 191102976 [ 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+_____________ 
+____ 3963617280 1572864 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 0.041 sec. 
+______ 1 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 2 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 3 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 4 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 5 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+6 16 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+_____________ 
+____ 2359296 98304 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 0.047 sec. 
+______ 1 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 2 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 3 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 4 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 5 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+7 8 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+_____________ 
+____ 2359296 98304 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 0.044 sec. 
+______ 1 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 2 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 3 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 4 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 4 ] 
+______ 5 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+8 8 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+_____________ 
+____ 56623104 98304 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 0.050 sec. 
+______ 1 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 2 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 3 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 4 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 5 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+9 8 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+_____________ 
+____ 147456 6144 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 0.041 sec. 
+______ 1 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 2 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 3 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 4 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 5 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+10 4 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+_____________ 
+____ 56623104 98304 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 0.066 sec. 
+______ 1 56623104 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 2 56623104 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 3 56623104 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 4 56623104 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 5 56623104 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+11 8 56623104 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+_____________ 
+Error, user interrupt in
+  return 2; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:41 called from 
+NestingDepthM( left ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3574 called from
+psol * tvdual at NewOGLat.g:276 called from
+simpleextend( psol ); at NewOGLat.g:290 called from
+simpleextend( psol ); at NewOGLat.g:290 called from
+simpleextend( psol ); at NewOGLat.g:290 called from
+...  at Task20260909Ua.g:61
+you can 'return;'
+brk> quit;
+gap> Read("Task20260909Ua.g");
+____ 3963617280 1572864 [ 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3 ] 0.224 sec. 
+______ 1 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3 ] 
+______ 2 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3 ] 
+______ 3 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3 ] 
+______ 4 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3 ] 
+______ 5 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3 ] 
+1 16 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3 ] 
+_____________ 
+____ 191102976 7962624 [ 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 ] 0.035 sec. 
+______ 1 191102976 [ 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+______ 2 191102976 [ 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+______ 3 191102976 [ 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+______ 4 191102976 [ 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+______ 5 191102976 [ 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+2 24 191102976 [ 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+_____________ 
+____ 191102976 7962624 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 0.035 sec. 
+______ 1 191102976 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+______ 2 191102976 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+______ 3 191102976 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+______ 4 191102976 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+______ 5 191102976 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+3 24 191102976 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+_____________ 
+____ 2359296 98304 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 0.038 sec. 
+______ 1 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 2 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 3 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 4 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 5 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+4 8 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+_____________ 
+____ 191102976 7962624 [ 1, 1, 1, 1, 6, 6, 6, 6, 6, 6, 6, 6 ] 0.093 sec. 
+______ 1 191102976 [ 1, 1, 1, 1, 6, 6, 6, 6, 6, 6, 6, 6 ] 
+______ 2 191102976 [ 1, 1, 1, 1, 6, 6, 6, 6, 6, 6, 6, 6 ] 
+______ 3 191102976 [ 1, 1, 1, 1, 6, 6, 6, 6, 6, 6, 6, 6 ] 
+______ 4 191102976 [ 1, 1, 1, 1, 6, 6, 6, 6, 6, 6, 6, 6 ] 
+______ 5 191102976 [ 1, 1, 1, 1, 6, 6, 6, 6, 6, 6, 6, 6 ] 
+5 24 191102976 [ 1, 1, 1, 1, 6, 6, 6, 6, 6, 6, 6, 6 ] 
+_____________ 
+____ 147456 6144 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 0.054 sec. 
+______ 1 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 2 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 3 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 4 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 5 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+6 4 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+_____________ 
+____ 2359296 98304 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 0.034 sec. 
+______ 1 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 2 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 3 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 4 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 5 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+7 8 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+_____________ 
+____ 2359296 98304 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 0.116 sec. 
+______ 1 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 2 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 3 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 4 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 5 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+8 8 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+_____________ 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+____ 1572864 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5 ] 134.776 sec. 
+wrong in NewOGLat 7766152 
+Error,  at gapReads/gaptools.txt:723 called from
+localbeep( "NewOGLat", beepnumb ); at NewOGLat.g:215 called from
+beep( 7766152 ); at NewOGLat.g:383 called from
+NewOGLat( basisrec, giveupsec + counter ) at NewOGLat.g:653 called from
+RepeatNewOGLat( ttGram, 10, 10 ) at Task20260909Ua.g:43 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260909Ua.g:61
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> quit;
+gap> Read("Task20260909Ua.g");
+____ 2359296 98304 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 0.026 sec. 
+______ 1 2359296 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 2 2359296 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 3 2359296 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 4 2359296 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 5 2359296 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+1 8 2359296 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+_____________ 
+____ 147456 6144 [ 1, 1, 1, 1, 3, 3, 3, 3, 5, 5, 5, 5 ] 0.114 sec. 
+______ 1 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 5, 5, 5, 5 ] 
+______ 2 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 5, 5, 5, 5 ] 
+______ 3 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 5, 5, 5, 5 ] 
+______ 4 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 5, 5, 5, 5 ] 
+______ 5 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 5, 5, 5, 5 ] 
+2 4 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 5, 5, 5, 5 ] 
+_____________ 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+___repeat 9 
+___repeat 10 
+___repeat 11 
+___repeat 12 
+___repeat 13 
+____ 1572864 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5 ] 238.497 sec. 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+___repeat 9 
+___repeat 10 
+___repeat 11 
+___repeat 12 
+___repeat 13 
+___repeat 14 
+___repeat 15 
+___repeat 16 
+______ 1 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5 ] 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+___repeat 9 
+___repeat 10 
+______ 2 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5 ] 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+___repeat 9 
+___repeat 10 
+___repeat 11 
+___repeat 12 
+___repeat 13 
+___repeat 14 
+___repeat 15 
+___repeat 16 
+______ 3 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5 ] 
+______ 4 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5 ] 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+___repeat 9 
+___repeat 10 
+___repeat 11 
+___repeat 12 
+___repeat 13 
+___repeat 14 
+___repeat 15 
+______ 5 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5 ] 
+3 16 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5 ] 
+_____________ 
+____ 2359296 98304 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 0.052 sec. 
+______ 1 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 2 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 3 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 4 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 5 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+4 8 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+_____________ 
+____ 191102976 7962624 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 0.028 sec. 
+______ 1 191102976 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 2 191102976 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 3 191102976 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 4 191102976 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 5 191102976 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+5 24 191102976 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+_____________ 
+____ 3963617280 1572864 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 0.043 sec. 
+______ 1 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 2 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 3 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 4 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 5 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+6 16 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+_____________ 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+___repeat 9 
+___repeat 10 
+___repeat 11 
+___repeat 12 
+___repeat 13 
+___repeat 14 
+___repeat 15 
+___repeat 16 
+____ 1572864 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4 ] 313.573 sec. 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+______ 1 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+___repeat 9 
+___repeat 10 
+______ 2 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+___repeat 9 
+___repeat 10 
+___repeat 11 
+______ 3 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+___repeat 9 
+___repeat 10 
+___repeat 11 
+______ 4 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+___repeat 9 
+___repeat 10 
+___repeat 11 
+___repeat 12 
+___repeat 13 
+___repeat 14 
+___repeat 15 
+___repeat 16 
+___repeat 17 
+___repeat 18 
+___repeat 19 
+___repeat 20 
+___repeat 21 
+___repeat 22 
+___repeat 23 
+___repeat 24 
+___repeat 25 
+___repeat 26 
+___repeat 27 
+___repeat 28 
+___repeat 29 
+___repeat 30 
+___repeat 31 
+___repeat 32 
+___repeat 33 
+___repeat 34 
+___repeat 35 
+___repeat 36 
+___repeat 37 
+___repeat 38 
+___repeat 39 
+___repeat 40 
+___repeat 41 
+___repeat 42 
+___repeat 43 
+___repeat 44 
+___repeat 45 
+___repeat 46 
+___repeat 47 
+___repeat 48 
+___repeat 49 
+___repeat 50 
+___repeat 51 
+___repeat 52 
+___repeat 53 
+___repeat 54 
+___repeat 55 
+___repeat 56 
+___repeat 57 
+___repeat 58 
+___repeat 59 
+___repeat 60 
+___repeat 61 
+___repeat 62 
+___repeat 63 
+______ 5 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+7 16 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+_____________ 
+____ 3963617280 1572864 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 0.049 sec. 
+______ 1 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 2 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 3 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 4 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 5 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+8 16 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+_____________ 
+____ 2359296 98304 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 0.047 sec. 
+______ 1 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 2 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 3 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 4 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 5 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+9 8 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+_____________ 
+____ 3963617280 1572864 [ 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ] 0.070 sec. 
+______ 1 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ] 
+______ 2 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ] 
+______ 3 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ] 
+______ 4 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ] 
+______ 5 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ] 
+10 16 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ] 
+_____________ 
+____ 56623104 98304 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 0.066 sec. 
+______ 1 56623104 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 2 56623104 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 3 56623104 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 4 56623104 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 5 56623104 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+11 8 56623104 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+_____________ 
+____ 147456 6144 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 0.058 sec. 
+______ 1 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 2 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 3 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 4 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 5 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+12 4 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+_____________ 
+____ 3963617280 1572864 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 0.049 sec. 
+______ 1 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 2 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 3 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 4 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 5 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+13 16 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+_____________ 
+____ 3963617280 1572864 [ 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ] 0.069 sec. 
+______ 1 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ] 
+______ 2 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ] 
+______ 3 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ] 
+______ 4 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ] 
+______ 5 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ] 
+14 16 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ] 
+_____________ 
+____ 3963617280 1572864 [ 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 4, 4 ] 1.558 sec. 
+______ 1 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 4, 4 ] 
+______ 2 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 4, 4 ] 
+______ 3 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 4, 4 ] 
+______ 4 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 4, 4 ] 
+______ 5 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 4, 4 ] 
+15 16 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 4, 4 ] 
+_____________ 
+____ 2359296 98304 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 0.051 sec. 
+______ 1 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 2 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 3 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 4 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 5 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+16 8 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+_____________ 
+____ 56623104 98304 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 0.120 sec. 
+______ 1 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 2 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 3 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 4 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 5 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+17 8 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+_____________ 
+____ 3963617280 1572864 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 0.056 sec. 
+______ 1 3963617280 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 2 3963617280 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 3 3963617280 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 4 3963617280 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 5 3963617280 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+18 16 3963617280 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+_____________ 
+____ 147456 6144 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 0.081 sec. 
+______ 1 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 2 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 3 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 4 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 5 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+19 4 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+_____________ 
+____ 2359296 98304 [ 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4 ] 0.044 sec. 
+______ 1 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 2 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 3 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 4 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 5 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+20 8 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+_____________ 
+____ 2359296 98304 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 0.087 sec. 
+______ 1 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 2 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 3 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 4 ] 
+______ 4 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 5 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+21 8 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+_____________ 
+____ 147456 6144 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 0.066 sec. 
+______ 1 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 2 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 3 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 4 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 5 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+22 4 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+_____________ 
+____ 2359296 98304 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 0.061 sec. 
+______ 1 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 2 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 3 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 4 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 5 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+23 8 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+_____________ 
+____ 2359296 98304 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 0.035 sec. 
+______ 1 2359296 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 2 2359296 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 3 2359296 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 4 2359296 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 5 2359296 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+24 8 2359296 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+_____________ 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+___repeat 9 
+___repeat 10 
+___repeat 11 
+___repeat 12 
+___repeat 13 
+____ 1572864 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5 ] 244.639 sec. 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+______ 1 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5 ] 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+___repeat 9 
+___repeat 10 
+___repeat 11 
+___repeat 12 
+___repeat 13 
+___repeat 14 
+______ 2 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5 ] 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+___repeat 9 
+___repeat 10 
+___repeat 11 
+___repeat 12 
+___repeat 13 
+___repeat 14 
+___repeat 15 
+______ 3 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5 ] 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+___repeat 9 
+___repeat 10 
+___repeat 11 
+___repeat 12 
+___repeat 13 
+___repeat 14 
+___repeat 15 
+___repeat 16 
+___repeat 17 
+______ 4 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5 ] 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+___repeat 9 
+___repeat 10 
+___repeat 11 
+___repeat 12 
+______ 5 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5 ] 
+25 16 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5 ] 
+_____________ 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+____ 1572864 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5 ] 111.973 sec. 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+___repeat 9 
+___repeat 10 
+______ 1 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5 ] 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+___repeat 9 
+___repeat 10 
+___repeat 11 
+___repeat 12 
+___repeat 13 
+___repeat 14 
+___repeat 15 
+___repeat 16 
+___repeat 17 
+___repeat 18 
+___repeat 19 
+___repeat 20 
+___repeat 21 
+______ 2 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5 ] 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+___repeat 9 
+___repeat 10 
+___repeat 11 
+___repeat 12 
+___repeat 13 
+___repeat 14 
+___repeat 15 
+___repeat 16 
+___repeat 17 
+___repeat 18 
+___repeat 19 
+___repeat 20 
+______ 3 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5 ] 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+______ 4 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5 ] 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+___repeat 9 
+___repeat 10 
+___repeat 11 
+___repeat 12 
+___repeat 13 
+___repeat 14 
+___repeat 15 
+___repeat 16 
+___repeat 17 
+___repeat 18 
+___repeat 19 
+______ 5 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5 ] 
+26 16 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5 ] 
+_____________ 
+____ 2359296 98304 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 0.023 sec. 
+______ 1 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 2 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 3 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 4 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 5 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+27 8 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+_____________ 
+____ 2359296 98304 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 0.128 sec. 
+______ 1 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 2 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 3 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 4 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 5 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+28 8 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+_____________ 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+___repeat 9 
+____ 1572864 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 148.390 sec. 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+___repeat 9 
+______ 1 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 2 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+______ 3 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+___repeat 9 
+___repeat 10 
+___repeat 11 
+___repeat 12 
+___repeat 13 
+___repeat 14 
+___repeat 15 
+___repeat 16 
+___repeat 17 
+___repeat 18 
+______ 4 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+___repeat 9 
+______ 5 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+29 16 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+_____________ 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+___repeat 9 
+___repeat 10 
+___repeat 11 
+___repeat 12 
+____ 1572864 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5 ] 215.319 sec. 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+______ 1 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5 ] 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+______ 2 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5 ] 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+______ 3 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5 ] 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+___repeat 9 
+___repeat 10 
+___repeat 11 
+___repeat 12 
+______ 4 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5 ] 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+______ 5 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5 ] 
+30 16 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5 ] 
+_____________ 
+____ 147456 6144 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 0.056 sec. 
+______ 1 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 2 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 3 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 4 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 5 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+31 4 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+_____________ 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+____ 1572864 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4 ] 49.340 sec. 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+___repeat 9 
+___repeat 10 
+___repeat 11 
+___repeat 12 
+___repeat 13 
+___repeat 14 
+______ 1 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+___repeat 9 
+______ 2 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+___repeat 9 
+______ 3 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+______ 4 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+___repeat 9 
+___repeat 10 
+___repeat 11 
+___repeat 12 
+___repeat 13 
+___repeat 14 
+______ 5 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+32 16 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+_____________ 
+____ 3963617280 1572864 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 0.048 sec. 
+______ 1 3963617280 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 2 3963617280 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 3 3963617280 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 4 3963617280 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 5 3963617280 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+33 16 3963617280 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+_____________ 
+____ 3963617280 1572864 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 0.030 sec. 
+______ 1 3963617280 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+______ 2 3963617280 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+______ 3 3963617280 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+______ 4 3963617280 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+______ 5 3963617280 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+34 16 3963617280 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+_____________ 
+____ 3963617280 1572864 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 0.043 sec. 
+______ 1 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 2 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 3 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 4 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 5 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+35 16 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+_____________ 
+____ 56623104 98304 [ 1, 1, 1, 1, 4, 4, 4, 4, 5, 5, 5, 5 ] 0.063 sec. 
+______ 1 56623104 [ 1, 1, 1, 1, 4, 4, 4, 4, 5, 5, 5, 5 ] 
+______ 2 56623104 [ 1, 1, 1, 1, 4, 4, 4, 4, 5, 5, 5, 5 ] 
+______ 3 56623104 [ 1, 1, 1, 1, 4, 4, 4, 4, 5, 5, 5, 5 ] 
+______ 4 56623104 [ 1, 1, 1, 1, 4, 4, 4, 4, 5, 5, 5, 5 ] 
+______ 5 56623104 [ 1, 1, 1, 1, 4, 4, 4, 4, 5, 5, 5, 5 ] 
+36 8 56623104 [ 1, 1, 1, 1, 4, 4, 4, 4, 5, 5, 5, 5 ] 
+_____________ 
+____ 3963617280 1572864 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 0.038 sec. 
+______ 1 3963617280 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+______ 2 3963617280 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+______ 3 3963617280 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+______ 4 3963617280 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+______ 5 3963617280 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+37 16 3963617280 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+_____________ 
+____ 191102976 7962624 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 0.035 sec. 
+______ 1 191102976 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 2 191102976 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 3 191102976 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 4 191102976 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 5 191102976 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+38 24 191102976 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+_____________ 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+____ 1572864 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4 ] 115.507 sec. 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+___repeat 9 
+___repeat 10 
+___repeat 11 
+___repeat 12 
+___repeat 13 
+___repeat 14 
+___repeat 15 
+___repeat 16 
+___repeat 17 
+___repeat 18 
+___repeat 19 
+___repeat 20 
+___repeat 21 
+___repeat 22 
+___repeat 23 
+___repeat 24 
+___repeat 25 
+___repeat 26 
+___repeat 27 
+___repeat 28 
+___repeat 29 
+___repeat 30 
+___repeat 31 
+___repeat 32 
+___repeat 33 
+___repeat 34 
+___repeat 35 
+______ 1 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+______ 2 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+______ 3 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+___repeat 9 
+___repeat 10 
+___repeat 11 
+___repeat 12 
+___repeat 13 
+___repeat 14 
+___repeat 15 
+___repeat 16 
+___repeat 17 
+______ 4 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+___repeat 9 
+___repeat 10 
+___repeat 11 
+___repeat 12 
+___repeat 13 
+___repeat 14 
+______ 5 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+39 16 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+_____________ 
+____ 3963617280 1572864 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 0.045 sec. 
+______ 1 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 2 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 3 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 4 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 5 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+40 16 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+_____________ 
+____ 191102976 7962624 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 0.033 sec. 
+______ 1 191102976 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 2 191102976 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 3 191102976 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 4 191102976 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 5 191102976 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+41 24 191102976 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+_____________ 
+____ 6144 6144 [ 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5 ] 0.126 sec. 
+______ 1 6144 [ 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5 ] 
+______ 2 6144 [ 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5 ] 
+______ 3 6144 [ 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5 ] 
+______ 4 6144 [ 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5 ] 
+______ 5 6144 [ 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5 ] 
+42 4 6144 [ 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5 ] 
+_____________ 
+____ 2359296 98304 [ 1, 1, 1, 1, 7, 7, 7, 7, 7, 7, 7, 7 ] 0.081 sec. 
+______ 1 2359296 [ 1, 1, 1, 1, 7, 7, 7, 7, 7, 7, 7, 7 ] 
+______ 2 2359296 [ 1, 1, 1, 1, 7, 7, 7, 7, 7, 7, 7, 7 ] 
+______ 3 2359296 [ 1, 1, 1, 1, 7, 7, 7, 7, 7, 7, 7, 7 ] 
+______ 4 2359296 [ 1, 1, 1, 1, 7, 7, 7, 7, 7, 7, 7, 7 ] 
+______ 5 2359296 [ 1, 1, 1, 1, 7, 7, 7, 7, 7, 7, 7, 8 ] 
+43 8 2359296 [ 1, 1, 1, 1, 7, 7, 7, 7, 7, 7, 7, 7 ] 
+_____________ 
+____ 3963617280 1572864 [ 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ] 0.051 sec. 
+______ 1 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ] 
+______ 2 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ] 
+______ 3 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ] 
+______ 4 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ] 
+______ 5 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ] 
+44 16 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ] 
+_____________ 
+____ 147456 6144 [ 1, 1, 1, 1, 5, 5, 5, 5, 6, 6, 6, 6 ] 0.094 sec. 
+______ 1 147456 [ 1, 1, 1, 1, 5, 5, 5, 5, 6, 6, 6, 6 ] 
+______ 2 147456 [ 1, 1, 1, 1, 5, 5, 5, 5, 6, 6, 6, 6 ] 
+______ 3 147456 [ 1, 1, 1, 1, 5, 5, 5, 5, 6, 6, 6, 6 ] 
+______ 4 147456 [ 1, 1, 1, 1, 5, 5, 5, 5, 6, 6, 6, 6 ] 
+______ 5 147456 [ 1, 1, 1, 1, 5, 5, 5, 5, 6, 6, 6, 6 ] 
+45 4 147456 [ 1, 1, 1, 1, 5, 5, 5, 5, 6, 6, 6, 6 ] 
+_____________ 
+____ 3963617280 1572864 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 0.045 sec. 
+______ 1 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 2 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 3 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 4 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 5 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+46 16 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+_____________ 
+____ 2359296 98304 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 0.047 sec. 
+______ 1 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 2 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 3 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 4 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 5 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+47 8 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+_____________ 
+____ 2359296 98304 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 0.025 sec. 
+______ 1 2359296 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 2 2359296 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 3 2359296 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 4 2359296 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 5 2359296 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+48 8 2359296 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+_____________ 
+____ 3963617280 1572864 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 0.051 sec. 
+______ 1 3963617280 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 2 3963617280 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 3 3963617280 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 4 3963617280 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 5 3963617280 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+49 16 3963617280 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+_____________ 
+____ 3963617280 1572864 [ 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 4, 4 ] 1.389 sec. 
+______ 1 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 4, 4 ] 
+______ 2 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 4, 4 ] 
+______ 3 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 4, 4 ] 
+______ 4 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 4, 4 ] 
+______ 5 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 4, 4 ] 
+50 16 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 4, 4 ] 
+_____________ 
+____ 3963617280 1572864 [ 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3 ] 0.261 sec. 
+______ 1 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3 ] 
+______ 2 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3 ] 
+______ 3 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3 ] 
+______ 4 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3 ] 
+______ 5 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3 ] 
+51 16 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3 ] 
+_____________ 
+____ 3963617280 1572864 [ 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3 ] 0.213 sec. 
+______ 1 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3 ] 
+______ 2 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3 ] 
+______ 3 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3 ] 
+______ 4 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3 ] 
+______ 5 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3 ] 
+52 16 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3 ] 
+_____________ 
+____ 2359296 98304 [ 1, 1, 1, 1, 5, 5, 5, 5, 5, 5, 5, 5 ] 0.065 sec. 
+______ 1 2359296 [ 1, 1, 1, 1, 5, 5, 5, 5, 5, 5, 5, 5 ] 
+______ 2 2359296 [ 1, 1, 1, 1, 5, 5, 5, 5, 5, 5, 5, 5 ] 
+______ 3 2359296 [ 1, 1, 1, 1, 5, 5, 5, 5, 5, 5, 5, 5 ] 
+______ 4 2359296 [ 1, 1, 1, 1, 5, 5, 5, 5, 5, 5, 5, 5 ] 
+______ 5 2359296 [ 1, 1, 1, 1, 5, 5, 5, 5, 5, 5, 5, 5 ] 
+53 8 2359296 [ 1, 1, 1, 1, 5, 5, 5, 5, 5, 5, 5, 5 ] 
+_____________ 
+____ 3963617280 1572864 [ 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3 ] 0.236 sec. 
+______ 1 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3 ] 
+______ 2 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3 ] 
+______ 3 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3 ] 
+______ 4 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3 ] 
+______ 5 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3 ] 
+54 16 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3 ] 
+_____________ 
+____ 2359296 98304 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 0.134 sec. 
+______ 1 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 2 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 3 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 4 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 5 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+55 8 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+_____________ 
+____ 1961990553600 127401984 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] 0.039 sec. 
+______ 1 1961990553600 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] 
+______ 2 1961990553600 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] 
+______ 3 1961990553600 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] 
+______ 4 1961990553600 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] 
+______ 5 1961990553600 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] 
+56 48 1961990553600 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] 
+_____________ 
+____ 56623104 98304 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 0.062 sec. 
+______ 1 56623104 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 2 56623104 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 3 56623104 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 4 56623104 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 5 56623104 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+57 8 56623104 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+_____________ 
+____ 6144 6144 [ 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5 ] 0.085 sec. 
+______ 1 6144 [ 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5 ] 
+______ 2 6144 [ 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5 ] 
+______ 3 6144 [ 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5 ] 
+______ 4 6144 [ 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5 ] 
+______ 5 6144 [ 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5 ] 
+58 4 6144 [ 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5 ] 
+_____________ 
+____ 2359296 98304 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 0.115 sec. 
+______ 1 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 2 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 3 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 4 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 5 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+59 8 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+_____________ 
+____ 56623104 98304 [ 1, 1, 1, 1, 4, 4, 4, 4, 5, 5, 5, 5 ] 0.082 sec. 
+______ 1 56623104 [ 1, 1, 1, 1, 4, 4, 4, 4, 5, 5, 5, 5 ] 
+______ 2 56623104 [ 1, 1, 1, 1, 4, 4, 4, 4, 5, 5, 5, 5 ] 
+______ 3 56623104 [ 1, 1, 1, 1, 4, 4, 4, 4, 5, 5, 5, 5 ] 
+______ 4 56623104 [ 1, 1, 1, 1, 4, 4, 4, 4, 5, 5, 5, 5 ] 
+______ 5 56623104 [ 1, 1, 1, 1, 4, 4, 4, 4, 5, 5, 5, 5 ] 
+60 8 56623104 [ 1, 1, 1, 1, 4, 4, 4, 4, 5, 5, 5, 5 ] 
+_____________ 
+____ 147456 6144 [ 1, 1, 1, 1, 5, 5, 5, 5, 6, 6, 6, 6 ] 0.094 sec. 
+______ 1 147456 [ 1, 1, 1, 1, 5, 5, 5, 5, 6, 6, 6, 6 ] 
+______ 2 147456 [ 1, 1, 1, 1, 5, 5, 5, 5, 6, 6, 6, 6 ] 
+______ 3 147456 [ 1, 1, 1, 1, 5, 5, 5, 5, 6, 6, 6, 6 ] 
+______ 4 147456 [ 1, 1, 1, 1, 5, 5, 5, 5, 6, 6, 6, 6 ] 
+______ 5 147456 [ 1, 1, 1, 1, 5, 5, 5, 5, 6, 6, 6, 6 ] 
+61 4 147456 [ 1, 1, 1, 1, 5, 5, 5, 5, 6, 6, 6, 6 ] 
+_____________ 
+____ 3963617280 1572864 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 0.042 sec. 
+______ 1 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 2 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 3 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 4 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 5 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+62 16 3963617280 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+_____________ 
+____ 1961990553600 127401984 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] 0.036 sec. 
+______ 1 1961990553600 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] 
+______ 2 1961990553600 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] 
+______ 3 1961990553600 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] 
+______ 4 1961990553600 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] 
+______ 5 1961990553600 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] 
+63 48 1961990553600 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] 
+_____________ 
+____ 56623104 98304 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 0.063 sec. 
+______ 1 56623104 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 2 56623104 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 3 56623104 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 4 56623104 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 5 56623104 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+64 8 56623104 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+_____________ 
+____ 2359296 98304 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 0.052 sec. 
+______ 1 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 2 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 3 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 4 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 5 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+65 8 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+_____________ 
+____ 3963617280 1572864 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 0.030 sec. 
+______ 1 3963617280 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+______ 2 3963617280 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+______ 3 3963617280 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+______ 4 3963617280 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+______ 5 3963617280 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+66 16 3963617280 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+_____________ 
+____ 56623104 98304 [ 1, 1, 1, 1, 4, 4, 4, 4, 5, 5, 5, 5 ] 0.063 sec. 
+______ 1 56623104 [ 1, 1, 1, 1, 4, 4, 4, 4, 5, 5, 5, 5 ] 
+______ 2 56623104 [ 1, 1, 1, 1, 4, 4, 4, 4, 5, 5, 5, 5 ] 
+______ 3 56623104 [ 1, 1, 1, 1, 4, 4, 4, 4, 5, 5, 5, 5 ] 
+______ 4 56623104 [ 1, 1, 1, 1, 4, 4, 4, 4, 5, 5, 5, 5 ] 
+______ 5 56623104 [ 1, 1, 1, 1, 4, 4, 4, 4, 5, 5, 5, 5 ] 
+67 8 56623104 [ 1, 1, 1, 1, 4, 4, 4, 4, 5, 5, 5, 5 ] 
+_____________ 
+____ 2359296 98304 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 0.111 sec. 
+______ 1 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 2 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 3 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 4 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 5 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+68 8 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+_____________ 
+____ 2359296 98304 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 0.054 sec. 
+______ 1 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 2 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 3 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 4 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 5 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+69 8 2359296 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+_____________ 
+____ 127401984 127401984 [ 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3 ] 0.089 sec. 
+______ 1 127401984 [ 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4 ] 
+______ 2 127401984 [ 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4 ] 
+______ 3 127401984 [ 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 4 127401984 [ 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 5 127401984 [ 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4 ] 
+70 48 127401984 [ 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+_____________ 
+____ 2359296 98304 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 0.044 sec. 
+______ 1 2359296 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 2 2359296 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 3 2359296 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 4 2359296 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 5 2359296 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+71 8 2359296 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+_____________ 
+____ 2359296 98304 [ 1, 1, 1, 1, 5, 5, 5, 5, 5, 5, 5, 5 ] 0.101 sec. 
+______ 1 2359296 [ 1, 1, 1, 1, 5, 5, 5, 5, 5, 5, 5, 5 ] 
+______ 2 2359296 [ 1, 1, 1, 1, 5, 5, 5, 5, 5, 5, 5, 6 ] 
+______ 3 2359296 [ 1, 1, 1, 1, 5, 5, 5, 5, 5, 5, 5, 5 ] 
+______ 4 2359296 [ 1, 1, 1, 1, 5, 5, 5, 5, 5, 5, 5, 5 ] 
+______ 5 2359296 [ 1, 1, 1, 1, 5, 5, 5, 5, 5, 5, 5, 5 ] 
+72 8 2359296 [ 1, 1, 1, 1, 5, 5, 5, 5, 5, 5, 5, 5 ] 
+_____________ 
+____ 56623104 98304 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 0.128 sec. 
+______ 1 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 2 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 3 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 4 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 5 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+73 8 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+_____________ 
+____ 1961990553600 127401984 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] 0.063 sec. 
+______ 1 1961990553600 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] 
+______ 2 1961990553600 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] 
+______ 3 1961990553600 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] 
+______ 4 1961990553600 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] 
+______ 5 1961990553600 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] 
+74 48 1961990553600 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] 
+_____________ 
+____ 1961990553600 127401984 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] 0.048 sec. 
+______ 1 1961990553600 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] 
+______ 2 1961990553600 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] 
+______ 3 1961990553600 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] 
+______ 4 1961990553600 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] 
+______ 5 1961990553600 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] 
+75 48 1961990553600 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] 
+_____________ 
+____ 2359296 98304 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 0.047 sec. 
+______ 1 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 2 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 3 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 4 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 5 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+76 8 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+_____________ 
+____ 56623104 98304 [ 1, 1, 1, 1, 4, 4, 4, 4, 5, 5, 5, 5 ] 0.071 sec. 
+______ 1 56623104 [ 1, 1, 1, 1, 4, 4, 4, 4, 5, 5, 5, 5 ] 
+______ 2 56623104 [ 1, 1, 1, 1, 4, 4, 4, 4, 5, 5, 5, 5 ] 
+______ 3 56623104 [ 1, 1, 1, 1, 4, 4, 4, 4, 5, 5, 5, 5 ] 
+______ 4 56623104 [ 1, 1, 1, 1, 4, 4, 4, 4, 5, 5, 5, 5 ] 
+______ 5 56623104 [ 1, 1, 1, 1, 4, 4, 4, 4, 5, 5, 5, 5 ] 
+77 8 56623104 [ 1, 1, 1, 1, 4, 4, 4, 4, 5, 5, 5, 5 ] 
+_____________ 
+____ 2359296 98304 [ 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4 ] 0.030 sec. 
+______ 1 2359296 [ 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 2 2359296 [ 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 3 2359296 [ 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 4 2359296 [ 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 5 2359296 [ 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+78 8 2359296 [ 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+_____________ 
+____ 2359296 98304 [ 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4 ] 0.026 sec. 
+______ 1 2359296 [ 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 2 2359296 [ 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 3 2359296 [ 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 4 2359296 [ 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 5 2359296 [ 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+79 8 2359296 [ 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+_____________ 
+____ 2359296 98304 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 0.042 sec. 
+______ 1 2359296 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 2 2359296 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 3 2359296 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 4 2359296 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 5 2359296 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+80 8 2359296 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+_____________ 
+____ 3963617280 1572864 [ 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3 ] 0.245 sec. 
+______ 1 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3 ] 
+______ 2 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3 ] 
+______ 3 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3 ] 
+______ 4 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3 ] 
+______ 5 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3 ] 
+81 16 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3 ] 
+_____________ 
+____ 3963617280 1572864 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 0.047 sec. 
+______ 1 3963617280 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+______ 2 3963617280 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+______ 3 3963617280 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+______ 4 3963617280 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+______ 5 3963617280 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+82 16 3963617280 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+_____________ 
+____ 2359296 98304 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4 ] 0.108 sec. 
+______ 1 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4 ] 
+______ 2 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 4 ] 
+______ 3 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 4 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 4 ] 
+______ 5 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 4 ] 
+83 8 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4 ] 
+_____________ 
+____ 56623104 98304 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 0.057 sec. 
+______ 1 56623104 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 2 56623104 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 3 56623104 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 4 56623104 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 5 56623104 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+84 8 56623104 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+_____________ 
+____ 2359296 98304 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 0.034 sec. 
+______ 1 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 2 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 3 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 4 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 5 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+85 8 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+_____________ 
+____ 2359296 98304 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 0.060 sec. 
+______ 1 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 2 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 3 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 4 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 5 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+86 8 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+_____________ 
+____ 6144 6144 [ 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5 ] 0.078 sec. 
+______ 1 6144 [ 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5 ] 
+______ 2 6144 [ 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5 ] 
+______ 3 6144 [ 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5 ] 
+______ 4 6144 [ 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5 ] 
+______ 5 6144 [ 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5 ] 
+87 4 6144 [ 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 5, 5 ] 
+_____________ 
+____ 191102976 7962624 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 0.035 sec. 
+______ 1 191102976 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 2 191102976 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 3 191102976 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 4 191102976 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 5 191102976 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+88 24 191102976 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+_____________ 
+____ 2359296 98304 [ 1, 1, 1, 1, 6, 6, 6, 6, 7, 7, 7, 7 ] 0.124 sec. 
+______ 1 2359296 [ 1, 1, 1, 1, 6, 6, 6, 6, 7, 7, 7, 7 ] 
+______ 2 2359296 [ 1, 1, 1, 1, 6, 6, 6, 6, 7, 7, 7, 7 ] 
+______ 3 2359296 [ 1, 1, 1, 1, 6, 6, 6, 6, 7, 7, 7, 7 ] 
+______ 4 2359296 [ 1, 1, 1, 1, 6, 6, 6, 6, 7, 7, 7, 7 ] 
+______ 5 2359296 [ 1, 1, 1, 1, 6, 6, 6, 6, 7, 7, 7, 7 ] 
+89 8 2359296 [ 1, 1, 1, 1, 6, 6, 6, 6, 7, 7, 7, 7 ] 
+_____________ 
+____ 3963617280 1572864 [ 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ] 0.061 sec. 
+______ 1 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ] 
+______ 2 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ] 
+______ 3 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ] 
+______ 4 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ] 
+______ 5 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ] 
+90 16 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ] 
+_____________ 
+____ 147456 6144 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 0.052 sec. 
+______ 1 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 2 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 3 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 4 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+______ 5 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+91 4 147456 [ 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 4 ] 
+_____________ 
+____ 2359296 98304 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 0.032 sec. 
+______ 1 2359296 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 2 2359296 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 3 2359296 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 4 2359296 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 5 2359296 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+92 8 2359296 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+_____________ 
+____ 3963617280 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4 ] 0.051 sec. 
+______ 1 3963617280 [ 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 2 3963617280 [ 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 3 3963617280 [ 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 4 3963617280 [ 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 5 3963617280 [ 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+93 16 3963617280 [ 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+_____________ 
+____ 191102976 7962624 [ 1, 1, 1, 1, 8, 8, 8, 8, 8, 8, 8, 8 ] 0.094 sec. 
+______ 1 191102976 [ 1, 1, 1, 1, 8, 8, 8, 8, 8, 8, 8, 8 ] 
+______ 2 191102976 [ 1, 1, 1, 1, 8, 8, 8, 8, 8, 8, 8, 8 ] 
+______ 3 191102976 [ 1, 1, 1, 1, 8, 8, 8, 8, 8, 8, 8, 8 ] 
+______ 4 191102976 [ 1, 1, 1, 1, 8, 8, 8, 8, 8, 8, 8, 8 ] 
+______ 5 191102976 [ 1, 1, 1, 1, 8, 8, 8, 8, 8, 8, 8, 8 ] 
+94 24 191102976 [ 1, 1, 1, 1, 8, 8, 8, 8, 8, 8, 8, 8 ] 
+_____________ 
+____ 2359296 98304 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 0.034 sec. 
+______ 1 2359296 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 2 2359296 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 3 2359296 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 4 2359296 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 5 2359296 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+95 8 2359296 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+_____________ 
+____ 3963617280 1572864 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 0.046 sec. 
+______ 1 3963617280 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 2 3963617280 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 3 3963617280 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 4 3963617280 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+______ 5 3963617280 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+96 16 3963617280 [ 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4 ] 
+_____________ 
+____ 2359296 98304 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 0.031 sec. 
+______ 1 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 2 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 3 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 4 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 5 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+97 8 2359296 [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+_____________ 
+____ 56623104 98304 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 0.054 sec. 
+______ 1 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 2 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 3 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 4 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 5 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+98 8 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+_____________ 
+____ 3963617280 1572864 [ 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ] 0.053 sec. 
+______ 1 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ] 
+______ 2 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ] 
+______ 3 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ] 
+______ 4 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ] 
+______ 5 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ] 
+99 16 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ] 
+_____________ 
+____ 3963617280 1572864 [ 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 4, 4 ] 1.478 sec. 
+______ 1 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 4, 4 ] 
+______ 2 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 4, 4 ] 
+______ 3 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 4, 4 ] 
+______ 4 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 4, 4 ] 
+______ 5 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 4, 4 ] 
+100 16 3963617280 [ 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 4, 4 ] 
+_____________ 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+____ 1572864 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5 ] 113.331 sec. 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+___repeat 9 
+___repeat 10 
+___repeat 11 
+___repeat 12 
+___repeat 13 
+___repeat 14 
+______ 1 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5 ] 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+___repeat 9 
+___repeat 10 
+___repeat 11 
+___repeat 12 
+___repeat 13 
+___repeat 14 
+___repeat 15 
+___repeat 16 
+______ 2 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5 ] 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+______ 3 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5 ] 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+___repeat 9 
+___repeat 10 
+___repeat 11 
+___repeat 12 
+___repeat 13 
+___repeat 14 
+___repeat 15 
+___repeat 16 
+______ 4 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5 ] 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+______ 5 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5 ] 
+101 16 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 5, 5 ] 
+_____________ 
+____ 56623104 98304 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 0.114 sec. 
+______ 1 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 2 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 3 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 4 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+______ 5 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+102 8 56623104 [ 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4 ] 
+_____________ 
+____ 2359296 98304 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 0.032 sec. 
+______ 1 2359296 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 2 2359296 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 3 2359296 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 4 2359296 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+______ 5 2359296 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+103 8 2359296 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 ] 
+_____________ 
+____ 3963617280 1572864 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 0.029 sec. 
+______ 1 3963617280 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+______ 2 3963617280 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+______ 3 3963617280 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+______ 4 3963617280 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+______ 5 3963617280 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+104 16 3963617280 [ 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+_____________ 
+____ 191102976 7962624 [ 1, 1, 1, 1, 6, 6, 6, 6, 6, 6, 6, 6 ] 0.155 sec. 
+______ 1 191102976 [ 1, 1, 1, 1, 6, 6, 6, 6, 6, 6, 6, 6 ] 
+______ 2 191102976 [ 1, 1, 1, 1, 6, 6, 6, 6, 6, 6, 6, 6 ] 
+______ 3 191102976 [ 1, 1, 1, 1, 6, 6, 6, 6, 6, 6, 6, 6 ] 
+______ 4 191102976 [ 1, 1, 1, 1, 6, 6, 6, 6, 6, 6, 6, 6 ] 
+______ 5 191102976 [ 1, 1, 1, 1, 6, 6, 6, 6, 6, 6, 6, 6 ] 
+105 24 191102976 [ 1, 1, 1, 1, 6, 6, 6, 6, 6, 6, 6, 6 ] 
+_____________ 
+____ 2359296 98304 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 0.033 sec. 
+______ 1 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 2 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 3 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 4 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 5 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+106 8 2359296 [ 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+_____________ 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 
+___repeat 6 
+___repeat 7 
+___repeat 8 
+____ 1572864 1572864 [ 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4 ] 130.695 sec. 
+___repeat 1 
+___repeat 2 
+___repeat 3 
+___repeat 4 
+___repeat 5 

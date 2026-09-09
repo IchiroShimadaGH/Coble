@@ -12,7 +12,7 @@ VssRec:=function(GramL, nrmcandidate)
   #
   local nn, svsrec, nrmsset, vects, vss, tvs, tnrm, 
   tpos, doesgenerate, vssrec, poss, vs, minflag,
-  minreqnrm; #minimal required norm 
+  snrm;
   #
   nn:=Length(GramL);
   svsrec:=ShortestVectors(GramL, nrmcandidate);
@@ -22,7 +22,7 @@ VssRec:=function(GramL, nrmcandidate)
   vss:=[];
   tvs:=[];
   minflag:=true; 
-  minreqnrm:=nrmcandidate;
+  snrm:=nrmcandidate;
   for tnrm  in nrmsset do 
     poss:=Positions(svsrec.norms, tnrm);
     vs:=List(poss, tpos->vects[tpos]);
@@ -31,7 +31,7 @@ VssRec:=function(GramL, nrmcandidate)
     doesgenerate:=(Rank(tvs)=nn and CokerTorsion(tvs)=[]);
     if doesgenerate and tnrm<nrmcandidate then 
       minflag:=false; 
-      minreqnrm:=tnrm;
+      snrm:=tnrm;
     fi;
     if tnrm=nrmcandidate and (not doesgenerate) then 
       Printn("does not generate!");
@@ -44,23 +44,14 @@ VssRec:=function(GramL, nrmcandidate)
     nrmsset:=nrmsset, 
     nopss:=List(vss, Length),
     minflag:=minflag, 
-    minreqnrm:=minreqnrm,
+    snrm:=snrm,
     vss:=vss
   );
   return(vssrec);
 end;
 
 
-Webrint:=function(tv, Gram, tvs)
-  local tvdual;
-  tvdual:=tv*Gram;
-  return(Collected(List(tvs*tvdual, AbsInt)));
-end;
 
-Webrints:=function(tv, Gram, tvss)
-  local tvs;
-  return(List(tvss, tvs->Webrint(tv, Gram, tvs)));
-end;
 
 
 BasisRec:=function(GramL, trialnumb)
@@ -70,7 +61,7 @@ BasisRec:=function(GramL, trialnumb)
   newGram, getvs, trec, jj, kk, tintnumbs,
   tbasisdual, tv, tvs,  tbasis, thebasis,
   nrmcandidate, ttintnumbs, maxbasisrrms,  tmaxbasisnrms,
-  counter, minreqnrm, thevss,  basiswebrintss,
+  counter, snrm, thevss,  webrint, basiswebrints,
   candidatess, bpos, tcandidates, inipos, subcandidatess, tsubcandidates,
   tbintnumbs, fingerprints;
   #
@@ -101,7 +92,7 @@ BasisRec:=function(GramL, trialnumb)
   trec:=VssRec(GramL, nrmcandidate);
   #
   if trec.minflag=false then 
-    minreqnrm:=trec.minreqnrm;
+    snrm:=trec.snrm;
     fflag:=false;
     counter:=0;
     while not fflag and counter<trialnumb do
@@ -110,14 +101,14 @@ BasisRec:=function(GramL, trialnumb)
       GramL2:=TMTTmult(tU, GramL);
       LLLrec:=LLLReducedGramMat(GramL2);
       tbasisnrms:=List([1..nn], ii->LLLrec.remainder[ii][ii]);
-      if Maximum(tbasisnrms)=minreqnrm then 
+      if Maximum(tbasisnrms)=snrm then 
         fflag:=true;
         tbasis:=LLLrec.transformation;
         SortParallel(tbasisnrms, tbasis);
         thebasis:=tbasis*tU;
         basisnrms:=List(tbasisnrms);
-        maxbasisrrms:= minreqnrm;
-        trec:=VssRec(GramL, minreqnrm);
+        maxbasisrrms:= snrm;
+        trec:=VssRec(GramL, snrm);
       fi;
     od;
   fi;
@@ -130,15 +121,20 @@ BasisRec:=function(GramL, trialnumb)
   #
   thevss:=trec.vss;
   #
+  webrint:=function(tv)
+    local tvdual, tvs;
+    tvdual:=tv*GramL;
+    return(List(thevss, tvs->Collected(List(tvs*tvdual, AbsInt))));
+  end;
   #
-  basiswebrintss:=List(thebasis, tb->Webrints(tb, GramL, thevss));
+  basiswebrints:=List(thebasis, webrint);
   #
   candidatess:=[];
   for bpos in [1..nn] do 
     tvs:=thevss[SinglePosition(trec.nrmsset,trec.basisnrms[bpos])];
     tcandidates:=[];
     for tv in tvs do 
-      if Webrints(tv, GramL, thevss)=basiswebrintss[bpos] then 
+      if webrint(tv)=basiswebrints[bpos] then 
         Add(tcandidates, tv);
       fi;
     od;
@@ -188,7 +184,7 @@ BasisRec:=function(GramL, trialnumb)
   #
   fingerprints:=List(subcandidatess, Length);
   #
-  trec.basiswebrintss:=basiswebrintss;
+  trec.basiswebrints:=basiswebrints;
   trec.candidatess:=candidatess;
   trec.subcandidatess:=subcandidatess;
   trec.fingerprints:=fingerprints;
@@ -199,17 +195,17 @@ end;
 
 NewOGLat:=function(arg) # arg is (basisrec) or (basisrec, giveupsec)
   #
- local beep, basisrec, giveupflag, giveupruntime, gvstopflag, st,
-  GramL, nn, basis, newGram, candidatess, candidatessdual,
-  subcandidatess, fingerprints, inipos, thevss, vpos, bpos,
-  ttintnumbs, subcandidates,subcandidatessdual, 
-  basisinv, basisdual, reachflag, thetg, simpleextend,
-  subcandidates1, getpermcan1, stabrecs, doneposs,
-  gengs, genperms, trueposs, neworb, tv, candidates,
-  getpermcan, tperm, inipsol, tvduals, tvs, getorb,
-  getorbsunion, pos1, falseseeds, trueseeds, falseposs,
-  thelevel, inipsoldual, tbintnumbs, tpv, totalgens,
-  lengcan, lengcan1, tlist, flist, pos, stabrec, OGrec;
+  local beep, basisrec,  giveupflag, giveupruntime, gvstopflag,  st, 
+  GramL, nn,  basis, newGram, candidatess, candidatessdual, 
+  subcandidatess, subcandidatessdual,  ii,jj, kk, aa, poss, pos, OGrec, tbs, tb,
+  tbasis, tbasisdual, fingerprints,inipos, tcandidates, thevss, vpos, bpos, 
+  webrint, basiswebrints,ttintnumbs, subcandidates, 
+  basisinv, basisdual,  reachflag, thetg, simpleextend,
+  getorb, subcandidates1, getpermcan1, stabrecs, stabrec, doneposs,
+  gengs, genperms, trueposs, neworb, tv, candidates, getpermcan, tperm,
+  inipsol, tvduals,  tvs,getorlist, getorbsunionlist, pos1, 
+  getorbsunion, falseseeds, trueseeds, falseposs, thelevel, inipsoldual,
+  tbintnumbs, tpv,  totalgens, lengcan, lengcan1, tlist, flist;
   #
   beep:=function(beepnumb)
     localbeep("NewOGLat", beepnumb); Error();
@@ -301,7 +297,7 @@ NewOGLat:=function(arg) # arg is (basisrec) or (basisrec, giveupsec)
     return();
   end;
   #
-  getorb:=function(aa, gens)
+  getorlist:=function(aa, gens)
     local sorb,xx,tg,yy, orb;
     sorb:=[aa];
     for xx in sorb do 
@@ -314,12 +310,12 @@ NewOGLat:=function(arg) # arg is (basisrec) or (basisrec, giveupsec)
   end;
   #
   #
-  getorbsunion:=function(aas, gens)
+  getorbsunionlist:=function(aas, gens)
     local orbunion, aa;
     orbunion:=[];
     for aa in aas do 
       if not aa in orbunion then 
-        orbunion:=Union(orbunion, getorb(aa, gens));
+        orbunion:=Union(orbunion, getorlist(aa, gens));
       fi;
     od;
     return(orbunion);
@@ -327,13 +323,6 @@ NewOGLat:=function(arg) # arg is (basisrec) or (basisrec, giveupsec)
   #
   subcandidates1:=subcandidatess[1];
   #
-  inipos:=function(tv)
-    local xx;
-    for xx in tv do 
-      if xx>0 then return(tv); elif xx<0 then return(-tv); fi;
-    od;
-    beep(727211);
-  end;
   getpermcan1:=function(tg)
     local tvtgs, tv, tperm, ttv, tposs;
     tvtgs:=List(subcandidates1, tv->inipos(tv*tg));
@@ -341,7 +330,6 @@ NewOGLat:=function(arg) # arg is (basisrec) or (basisrec, giveupsec)
     return(tperm);
   end;
   #
-  st:=Runtime();
   #
   stabrecs:=[];
   #
@@ -358,27 +346,26 @@ NewOGLat:=function(arg) # arg is (basisrec) or (basisrec, giveupsec)
     if not pos in doneposs then 
       reachflag:=false;
       simpleextend([tv]);
-      if gvstopflag then return(fail); fi;
       #
       if reachflag then 
         Add(gengs, thetg);
         tperm:=getpermcan1(thetg);
         Add(genperms, tperm);
         Add(trueseeds, pos);
-        tlist:=getorbsunion(trueseeds, genperms);
-        flist:=getorbsunion(falseseeds, genperms);
+        tlist:=getorbsunionlist(trueseeds, genperms);
+        flist:=getorbsunionlist(falseseeds, genperms);
         doneposs:=Union(tlist, flist);
       else 
         Add(falseseeds, pos);
-        neworb:=getorb(pos, genperms);
+        neworb:=getorlist(pos, genperms);
         doneposs:=Union(doneposs, neworb);
       fi;
       #
     fi;
   od;
   #
-  trueposs:=getorbsunion(trueseeds, genperms);
-  falseposs:=getorbsunion(falseseeds, genperms);
+  trueposs:=getorbsunionlist(trueseeds, genperms);
+  falseposs:=getorbsunionlist(falseseeds, genperms);
   if  Intersection(trueposs, falseposs)<>[]  then beep(18128181); fi;
   if Union(trueposs, falseposs)<>[1..lengcan1] then beep(18228181); fi;
   if trueposs=[] then beep(7766152); fi;
@@ -419,19 +406,18 @@ NewOGLat:=function(arg) # arg is (basisrec) or (basisrec, giveupsec)
       if not pos in doneposs then 
         reachflag:=false;
         simpleextend(CopyAdd(inipsol, tv));
-        if gvstopflag then return(fail); fi;
         #
         if reachflag then 
           Add(gengs, thetg);
           tperm:=getpermcan(thetg);
           Add(genperms, tperm);
           Add(trueseeds, pos);
-          tlist:=getorbsunion(trueseeds, genperms);
-          flist:=getorbsunion(falseseeds, genperms);
+          tlist:=getorbsunionlist(trueseeds, genperms);
+          flist:=getorbsunionlist(falseseeds, genperms);
           doneposs:=Union(tlist, flist);  
         else 
           Add(falseseeds, pos);
-          neworb:=getorb(pos, genperms);
+          neworb:=getorlist(pos, genperms);
           doneposs:=Union(doneposs, neworb);
         fi;
         #
@@ -440,8 +426,8 @@ NewOGLat:=function(arg) # arg is (basisrec) or (basisrec, giveupsec)
     #
     if gvstopflag then return(fail); fi;
     #
-    trueposs:=getorbsunion(trueseeds, genperms);
-    falseposs:=getorbsunion(falseseeds, genperms);
+    trueposs:=getorbsunionlist(trueseeds, genperms);
+    falseposs:=getorbsunionlist(falseseeds, genperms);
     if Intersection(trueposs, falseposs)<>[]  then beep(1822128181); fi;
     if Union(trueposs, falseposs)<>[1..lengcan] then beep(1822228181); fi;
     if trueposs=[] then beep(75516152); fi;
@@ -491,16 +477,12 @@ end;
 
 IsIsomBasisRecs:=function(basisrecA, basisrecB)
   #
-  local beep, GramL1, GramL2, nn, 
-  thevss1, thevss2, thevss1dual, basisrec1, basisrec2,
-  fingerprints1, basis1,  basis1inv, totalflag, newGram1, newGram2, tt2vs, 
-  thetg, extend, cleng, ii, kk, jj, wb1, wb2, revflag, thevss2dual, 
-  webrints1, webrints2, basiswebrints1, candidatess2, bpos, tvs, 
-  tcandidates, webrint2, tv, tvdual, candidatess2dual, vpos, ttvs;
-  #
-  beep:=function(beepnumb)
-    localbeep("IsIsomBasisRec", beepnumb); Error();
-  end;
+  local GramL1, GramL2, nn, 
+  thevss1, thevss2, thevss1dual, thevss2dual, getvs, 
+  getvsdual, basis1, fingerprints1, basis1inv, totalflag, newGram1, newGram2, 
+  thetg, extend, cleng, ii, revflag, basisrec1, basisrec2,
+  webrints1, webrints2, basiswebrints1, candidatess2, bpos, tvs, tcandidates,
+  webrint2, tv, tvdual, candidatess2dual, vpos, ttvs;
   #
   if basisrecA.minflag and basisrecB.minflag then 
     if basisrecA.nrmsset<>basisrecB.nrmsset then return(false); fi;
@@ -508,7 +490,6 @@ IsIsomBasisRecs:=function(basisrecA, basisrecB)
     revflag:=false;
     basisrec1:=basisrecA;
     basisrec2:=basisrecB;
-    cleng:=Length(basisrecA.nrmsset);
   else 
     if IsSubset(basisrecA.nrmsset, basisrecB.nrmsset) then 
       cleng:=Length(basisrecB.nrmsset);
@@ -523,13 +504,13 @@ IsIsomBasisRecs:=function(basisrecA, basisrecB)
     else 
       return(false);
     fi;
-    #
     for ii in [1..cleng] do 
       if basisrecA.nopss[ii]<>basisrecB.nopss[ii] then 
         return(false);
       fi;
     od;
   fi;
+  #
   #
   GramL1:=basisrec1.Gram;
   GramL2:=basisrec2.Gram;
@@ -540,30 +521,28 @@ IsIsomBasisRecs:=function(basisrecA, basisrecB)
   if nn<>Length(GramL2) then return(false); fi;
   if DeterminantIntMat(GramL1)<>DeterminantIntMat(GramL2) then return(false); fi;
   #
-  thevss1:=basisrec1.vss;
+  thevss1:=basisrec2.vss;
   thevss2:=List([1..cleng], kk->basisrec2.vss[kk]);
   thevss1dual:=List(thevss1, tvs->tvs*GramL1);
   thevss2dual:=List(thevss2, tvs->tvs*GramL2);
   #
-  for jj in [1..cleng] do 
-    for kk in [1..cleng] do
-      wb1:=Collected(List(thevss1[kk], tv->Webrint(tv, GramL1, thevss1[jj])));
-      wb2:=Collected(List(thevss2[kk], tv->Webrint(tv, GramL2, thevss2[jj])));
-      if  wb1<>wb2 then return(false); fi;
-    od;
+  for kk in [1..cleng] do 
+    webrints1:=Collected(List(thevss1dual[kk], tvdual->List(thevss2, tvs->Collected(tvs*tvdual))));
+    if webrints1<>webrints2 then return(false); fi;
   od;
   #
-  basis1:=basisrec1.basis;
-  basis1inv:=InverseMat(basis1);
+  
   #
-  basiswebrints1:=basisrec1.basiswebrintss;
+  basiswebrints1:=basisrec1.basiswebrints;
   #
   candidatess2:=[];
   for bpos in [1..nn] do 
     vpos:=SinglePosition(basisrec1.nrmsset, basisrec1.basisnrms[bpos]);
+    ttvs:=thevss2[vpos];
     tcandidates:=[];
-    for tv in thevss2[vpos] do 
-      webrint2:=List(thevss2, tt2vs->Webrint(tv, GramL2, tt2vs));
+    for tv in ttvs do 
+      tvdual:=tv*GramL2;
+      webrint2:=List(thevss2, tvs->Collected(tvs*tvdual));
       if webrint2=basiswebrints1[bpos] then 
         Add(tcandidates, tv);
       fi;
@@ -574,6 +553,7 @@ IsIsomBasisRecs:=function(basisrecA, basisrecB)
   candidatess2dual:=List(candidatess2, tvs->tvs*GramL2);
   #
   fingerprints1:=basisrec1.fingerprints;
+  #
   #
   totalflag:=false;
   thetg:=[];
@@ -611,7 +591,7 @@ IsIsomBasisRecs:=function(basisrecA, basisrecB)
         # this part cannot be changed to elif, 
         # because tintnumbs may be a zero vector
         #
-        if psoltvdual=-tintnumbs then 
+        if  psoltvdual=-tintnumbs then 
           Add(tsubcandidates, -tvs[pos]);
         fi;
       od;
@@ -657,8 +637,6 @@ RepeatNewOGLat:=function(GramL, basisrectrial, giveupsec)
       OGrec.basisrectrial:= basisrectrial+counter;
       OGrec.giveupsec:=giveupsec+counter;
       return(OGrec);
-    else 
-      Printn("___repeat", counter);
     fi;
   od;
 end;
