@@ -432,3 +432,371 @@ NewOGLat( tbasisrec4 ) at Task20260906Hb.g:14 called from
  called from read-eval loop at Task20260906Hb.g:60
 type 'quit;' to quit to outer loop
 brk> 
+brk> 
+brk> 
+brk> 
+brk> 
+brk> 
+brk> quit;
+gap> Read("Task20260909Va.g");
+gap> Read("Task20260909Va.g");
+ogsize check 1 
+ogsize check 2 
+ogsize check 3 
+ogsize check 4 
+ogsize check 5 
+ogsize check 6 
+ogsize check 7 
+ogsize check 8 
+ogsize check 9 
+ogsize check 10 
+ogsize check 11 
+ogsize check 12 
+ogsize check 13 
+ogsize check 14 
+ogsize check 15 
+ogsize check 16 
+ogsize check 17 
+ogsize check 18 
+ogsize check 19 
+ogsize check 20 
+ogsize check 21 
+ogsize check 22 
+ogsize check 23 
+ogsize check 24 
+ogsize check 25 
+gap> Read("Task20260909Va.g");
+ogsize check 1 8561413324800 
+ogsize check 2 1712282664960 
+ogsize check 3 743178240 
+ogsize check 4 1698693120 
+ogsize check 5 127401984 
+ogsize check 6 99532800 
+ogsize check 7 298598400 
+ogsize check 8 5096079360 
+ogsize check 9 743178240 
+ogsize check 10 31708938240 
+ogsize check 11 452984832 
+ogsize check 12 28665446400 
+ogsize check 13 16307453952 
+ogsize check 14 3483648000 
+ogsize check 15 2090188800 
+ogsize check 16 707788800 
+ogsize check 17 67947724800 
+ogsize check 18 67947724800 
+ogsize check 19 133772083200 
+ogsize check 20 9555148800 
+ogsize check 21 535088332800 
+ogsize check 22 570760888320 
+ogsize check 23 321052999680 
+ogsize check 24 2853804441600 
+ogsize check 25 64210599936000 
+gap> RecNames(trec);
+[ "gens", "Gram", "ADEtype", "imetaindex", "ms", "ogsize" ]
+gap> Read("Task20260909Va.g");
+wrong global beep 8111818 
+Error,  at gapReads/gaptools.txt:139 called from
+beep( 8111818 ); at Task20260909Va.g:32 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260909Va.g:36
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> quit;
+gap> Read("Task20260909Va.g");
+ogsize check 2 
+ogsize check 2 
+ogsize check 2 
+ogsize check 2 
+ogsize check 2 
+ogsize check 2 
+ogsize check 2 
+ogsize check 2 
+ogsize check 2 
+ogsize check 2 
+ogsize check 2 
+ogsize check 2 
+ogsize check 2 
+ogsize check 2 
+ogsize check 2 
+ogsize check 2 
+ogsize check 2 
+ogsize check 2 
+ogsize check 2 
+ogsize check 2 
+ogsize check 2 
+ogsize check 2 
+ogsize check 2 
+ogsize check 2 
+ogsize check 2 
+gap> Read("Task20260909Va.g");
+ogsize check 1 
+ogsize check 2 
+ogsize check 3 
+ogsize check 4 
+ogsize check 5 
+ogsize check 6 
+ogsize check 7 
+ogsize check 8 
+ogsize check 9 
+ogsize check 10 
+ogsize check 11 
+ogsize check 12 
+ogsize check 13 
+ogsize check 14 
+ogsize check 15 
+ogsize check 16 
+ogsize check 17 
+ogsize check 18 
+ogsize check 19 
+ogsize check 20 
+ogsize check 21 
+ogsize check 22 
+ogsize check 23 
+ogsize check 24 
+ogsize check 25 
+gap> imetasize;
+725760
+gap> Read("Task20260909Va.g");
+ogsize check 1 
+ogsize check 2 
+ogsize check 3 
+ogsize check 4 
+ogsize check 5 
+ogsize check 6 
+ogsize check 7 
+ogsize check 8 
+ogsize check 9 
+ogsize check 10 
+ogsize check 11 
+ogsize check 12 
+ogsize check 13 
+ogsize check 14 
+ogsize check 15 
+ogsize check 16 
+ogsize check 17 
+ogsize check 18 
+ogsize check 19 
+ogsize check 20 
+ogsize check 21 
+ogsize check 22 
+ogsize check 23 
+ogsize check 24 
+ogsize check 25 
+wrong global beep 8111818 
+Error,  at gapReads/gaptools.txt:139 called from
+beep( 8111818 ); at Task20260909Va.g:43 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260909Va.g:47
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> trec.ogsize/imetasize;
+11796480
+brk> trec.imetaindex ;
+725760
+brk> quit;
+gap> Read("Task20260909Va.g");
+ogsize check 1 
+ogsize check 2 
+ogsize check 3 
+ogsize check 4 
+ogsize check 5 
+ogsize check 6 
+ogsize check 7 
+ogsize check 8 
+ogsize check 9 
+ogsize check 10 
+ogsize check 11 
+ogsize check 12 
+ogsize check 13 
+ogsize check 14 
+ogsize check 15 
+ogsize check 16 
+ogsize check 17 
+ogsize check 18 
+ogsize check 19 
+ogsize check 20 
+ogsize check 21 
+ogsize check 22 
+ogsize check 23 
+ogsize check 24 
+ogsize check 25 
+imetasize check 1 725760 
+imetasize check 2 362880 
+imetasize check 3 483840 
+imetasize check 4 1105920 
+imetasize check 5 7962624 
+imetasize check 6 2073600 
+imetasize check 7 2073600 
+imetasize check 8 552960 
+imetasize check 9 2903040 
+imetasize check 10 10321920 
+imetasize check 11 1769472 
+imetasize check 12 1244160 
+imetasize check 13 497664 
+imetasize check 14 7257600 
+imetasize check 15 7257600 
+imetasize check 16 7372800 
+imetasize check 17 2073600 
+imetasize check 18 172800 
+imetasize check 19 92897280 
+imetasize check 20 6220800 
+imetasize check 21 17418240 
+imetasize check 22 1451520 
+imetasize check 23 17418240 
+imetasize check 24 7257600 
+imetasize check 25 696729600 
+gap> Read("Task20260909Va.g");
+ogsize check 1 
+ogsize check 2 
+ogsize check 3 
+ogsize check 4 
+ogsize check 5 
+ogsize check 6 
+ogsize check 7 
+ogsize check 8 
+ogsize check 9 
+ogsize check 10 
+ogsize check 11 
+ogsize check 12 
+ogsize check 13 
+ogsize check 14 
+ogsize check 15 
+ogsize check 16 
+ogsize check 17 
+ogsize check 18 
+ogsize check 19 
+ogsize check 20 
+ogsize check 21 
+ogsize check 22 
+ogsize check 23 
+ogsize check 24 
+ogsize check 25 
+imetasize check 1 11796480 
+imetasize check 2 4718592 
+imetasize check 3 1536 
+imetasize check 4 1536 
+imetasize check 5 16 
+imetasize check 6 48 
+imetasize check 7 144 
+imetasize check 8 9216 
+imetasize check 9 256 
+imetasize check 10 3072 
+imetasize check 11 256 
+imetasize check 12 23040 
+imetasize check 13 32768 
+imetasize check 14 480 
+imetasize check 15 288 
+imetasize check 16 96 
+imetasize check 17 32768 
+imetasize check 18 393216 
+imetasize check 19 1440 
+imetasize check 20 1536 
+imetasize check 21 30720 
+imetasize check 22 393216 
+imetasize check 23 18432 
+imetasize check 24 393216 
+imetasize check 25 92160 
+gap> Read("Task20260909Va.g");
+ogsize check 1 
+ogsize check 2 
+ogsize check 3 
+ogsize check 4 
+ogsize check 5 
+ogsize check 6 
+ogsize check 7 
+ogsize check 8 
+ogsize check 9 
+ogsize check 10 
+ogsize check 11 
+ogsize check 12 
+ogsize check 13 
+ogsize check 14 
+ogsize check 15 
+ogsize check 16 
+ogsize check 17 
+ogsize check 18 
+ogsize check 19 
+ogsize check 20 
+ogsize check 21 
+ogsize check 22 
+ogsize check 23 
+ogsize check 24 
+ogsize check 25 
+imetasize check 1 725760 
+imetasize check 2 362880 
+imetasize check 3 483840 
+imetasize check 4 1105920 
+imetasize check 5 7962624 
+imetasize check 6 2073600 
+imetasize check 7 2073600 
+imetasize check 8 552960 
+imetasize check 9 2903040 
+imetasize check 10 10321920 
+imetasize check 11 1769472 
+imetasize check 12 1244160 
+imetasize check 13 497664 
+imetasize check 14 7257600 
+imetasize check 15 7257600 
+imetasize check 16 7372800 
+imetasize check 17 2073600 
+imetasize check 18 172800 
+imetasize check 19 92897280 
+imetasize check 20 6220800 
+imetasize check 21 17418240 
+imetasize check 22 1451520 
+imetasize check 23 17418240 
+imetasize check 24 7257600 
+imetasize check 25 696729600 
+gap> 
+gap> Read("Task20260909Va.g");
+ogsize check 1 
+ogsize check 2 
+ogsize check 3 
+ogsize check 4 
+ogsize check 5 
+ogsize check 6 
+ogsize check 7 
+ogsize check 8 
+ogsize check 9 
+ogsize check 10 
+ogsize check 11 
+ogsize check 12 
+ogsize check 13 
+ogsize check 14 
+ogsize check 15 
+ogsize check 16 
+ogsize check 17 
+ogsize check 18 
+ogsize check 19 
+ogsize check 20 
+ogsize check 21 
+ogsize check 22 
+ogsize check 23 
+ogsize check 24 
+ogsize check 25 
+imetasize check 1 725760 [ [ "A1", 9 ], [ "D6", 1 ] ] 
+imetasize check 2 362880 [ [ "A1", 7 ], [ "D4", 2 ] ] 
+imetasize check 3 483840 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+imetasize check 4 1105920 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+imetasize check 5 7962624 [ [ "A1", 3 ] ] 
+imetasize check 6 2073600 [ [ "A1", 2 ], [ "A2", 1 ] ] 
+imetasize check 7 2073600 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+imetasize check 8 552960 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+imetasize check 9 2903040 [ [ "A1", 7 ] ] 
+imetasize check 10 10321920 [ [ "A1", 3 ], [ "D4", 1 ] ] 
+imetasize check 11 1769472 [ [ "A1", 7 ] ] 
+imetasize check 12 1244160 [ [ "A1", 4 ], [ "A5", 1 ] ] 
+imetasize check 13 497664 [ [ "A1", 15 ] ] 
+imetasize check 14 7257600 [ [ "A1", 1 ], [ "A4", 1 ] ] 
+imetasize check 15 7257600 [ [ "A2", 1 ], [ "A3", 1 ] ] 
+imetasize check 16 7372800 [ [ "A1", 1 ], [ "A3", 1 ] ] 
+imetasize check 17 2073600 [ [ "A1", 15 ] ] 
+imetasize check 18 172800 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+imetasize check 19 92897280 [ [ "A5", 1 ] ] 
+imetasize check 20 6220800 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+imetasize check 21 17418240 [ [ "A1", 3 ], [ "D5", 1 ] ] 
+imetasize check 22 1451520 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+imetasize check 23 17418240 [ [ "A1", 1 ], [ "A3", 1 ], [ "D4", 1 ] ] 
+imetasize check 24 7257600 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+imetasize check 25 696729600 [ [ "A1", 1 ], [ "D6", 1 ] ] 
+gap> 
