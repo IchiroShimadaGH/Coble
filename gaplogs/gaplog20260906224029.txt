@@ -178417,4 +178417,14 @@ gap> AbsInt(-4);
 4
 gap> Read("NewOGLat.g");
 gap> Read("NewOGLat.g");
-gap> 
+gap> Read("Task20260908Vb.g");
+hooley! 
+gap> AbsInt;
+function( op ) ... end
+gap> Read("Task20260907Vb.g");
+Error, file "Task20260907Vb.g" must exist and be readable at /usr/local/Cellar/gap/4.15.1/share/gap/lib/files.gi:207 called from
+<function "Read string">( <arguments> )
+ called from read-eval loop at *stdin*:60
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> 
