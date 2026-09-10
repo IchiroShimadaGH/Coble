@@ -221,7 +221,10 @@ NewOGLat:=function(arg) # arg is (basisrec) or (basisrec, giveupsec)
     giveupruntime:=infinity;
   elif Length(arg)=2 then 
     basisrec:=arg[1];
-    giveupflag:=true;
+    giveupfla
+
+
+g:=true;
     giveupruntime:=1000*arg[2];
   else beep(212341);
   fi;

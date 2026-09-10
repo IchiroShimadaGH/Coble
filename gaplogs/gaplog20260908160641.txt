@@ -9459,4 +9459,240 @@ gap>
 gap> savedata(Rrecs);
 gap> Set(Rrecs, RecNames);
 [ [ "gens", "Gram", "ADEtype", "ogsize", "imetaindex", "ms" ] ]
+gap> Read("Task20260910Ua.g");
+Error, file "Task20260910Ua.g" must exist and be readable at /usr/local/Cellar/gap/4.15.1/share/gap/lib/files.gi:207 called from
+<function "Read string">( <arguments> )
+ called from read-eval loop at *stdin*:4600
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> quit;
+gap> Read("Task20260910Ua.g");
+ogsize check 1 
+ogsize check 2 
+ogsize check 3 
+ogsize check 4 
+ogsize check 5 
+ogsize check 6 
+ogsize check 7 
+ogsize check 8 
+ogsize check 9 
+ogsize check 10 
+ogsize check 11 
+ogsize check 12 
+ogsize check 13 
+ogsize check 14 
+ogsize check 15 
+ogsize check 16 
+ogsize check 17 
+ogsize check 18 
+ogsize check 19 
+ogsize check 20 
+ogsize check 21 
+ogsize check 22 
+ogsize check 23 
+ogsize check 24 
+ogsize check 25 
+imetasize check 1 725760 [ [ "A1", 9 ], [ "D6", 1 ] ] 
+imetasize check 2 362880 [ [ "A1", 7 ], [ "D4", 2 ] ] 
+imetasize check 3 483840 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+imetasize check 4 1105920 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+imetasize check 5 7962624 [ [ "A1", 3 ] ] 
+imetasize check 6 2073600 [ [ "A1", 2 ], [ "A2", 1 ] ] 
+imetasize check 7 2073600 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+imetasize check 8 552960 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+imetasize check 9 2903040 [ [ "A1", 7 ] ] 
+imetasize check 10 10321920 [ [ "A1", 3 ], [ "D4", 1 ] ] 
+imetasize check 11 1769472 [ [ "A1", 7 ] ] 
+imetasize check 12 1244160 [ [ "A1", 4 ], [ "A5", 1 ] ] 
+imetasize check 13 497664 [ [ "A1", 15 ] ] 
+imetasize check 14 7257600 [ [ "A1", 1 ], [ "A4", 1 ] ] 
+imetasize check 15 7257600 [ [ "A2", 1 ], [ "A3", 1 ] ] 
+imetasize check 16 7372800 [ [ "A1", 1 ], [ "A3", 1 ] ] 
+imetasize check 17 2073600 [ [ "A1", 15 ] ] 
+imetasize check 18 172800 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+imetasize check 19 92897280 [ [ "A5", 1 ] ] 
+imetasize check 20 6220800 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+imetasize check 21 17418240 [ [ "A1", 3 ], [ "D5", 1 ] ] 
+imetasize check 22 1451520 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+imetasize check 23 17418240 [ [ "A1", 1 ], [ "A3", 1 ], [ "D4", 1 ] ] 
+imetasize check 24 7257600 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+imetasize check 25 696729600 [ [ "A1", 1 ], [ "D6", 1 ] ] 
+gap> Read("Task20260910Ua.g");
+ogsize check 1 
+ogsize check 2 
+ogsize check 3 
+ogsize check 4 
+ogsize check 5 
+ogsize check 6 
+ogsize check 7 
+ogsize check 8 
+ogsize check 9 
+ogsize check 10 
+ogsize check 11 
+ogsize check 12 
+ogsize check 13 
+ogsize check 14 
+ogsize check 15 
+ogsize check 16 
+ogsize check 17 
+ogsize check 18 
+ogsize check 19 
+ogsize check 20 
+ogsize check 21 
+ogsize check 22 
+ogsize check 23 
+ogsize check 24 
+ogsize check 25 
+imetasize check 1 725760 [ [ "A1", 9 ], [ "D6", 1 ] ] 
+imetasize check 2 362880 [ [ "A1", 7 ], [ "D4", 2 ] ] 
+imetasize check 3 483840 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+imetasize check 4 1105920 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+imetasize check 5 7962624 [ [ "A1", 3 ] ] 
+imetasize check 6 2073600 [ [ "A1", 2 ], [ "A2", 1 ] ] 
+imetasize check 7 2073600 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+imetasize check 8 552960 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+imetasize check 9 2903040 [ [ "A1", 7 ] ] 
+imetasize check 10 10321920 [ [ "A1", 3 ], [ "D4", 1 ] ] 
+imetasize check 11 1769472 [ [ "A1", 7 ] ] 
+imetasize check 12 1244160 [ [ "A1", 4 ], [ "A5", 1 ] ] 
+imetasize check 13 497664 [ [ "A1", 15 ] ] 
+imetasize check 14 7257600 [ [ "A1", 1 ], [ "A4", 1 ] ] 
+imetasize check 15 7257600 [ [ "A2", 1 ], [ "A3", 1 ] ] 
+imetasize check 16 7372800 [ [ "A1", 1 ], [ "A3", 1 ] ] 
+imetasize check 17 2073600 [ [ "A1", 15 ] ] 
+imetasize check 18 172800 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+imetasize check 19 92897280 [ [ "A5", 1 ] ] 
+imetasize check 20 6220800 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+imetasize check 21 17418240 [ [ "A1", 3 ], [ "D5", 1 ] ] 
+imetasize check 22 1451520 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+imetasize check 23 17418240 [ [ "A1", 1 ], [ "A3", 1 ], [ "D4", 1 ] ] 
+imetasize check 24 7257600 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+imetasize check 25 696729600 [ [ "A1", 1 ], [ "D6", 1 ] ] 
+gap> Read("Task20260910Ua.g");
+ogsize check 1 
+ogsize check 2 
+ogsize check 3 
+ogsize check 4 
+ogsize check 5 
+ogsize check 6 
+ogsize check 7 
+ogsize check 8 
+ogsize check 9 
+ogsize check 10 
+ogsize check 11 
+ogsize check 12 
+ogsize check 13 
+ogsize check 14 
+ogsize check 15 
+ogsize check 16 
+ogsize check 17 
+ogsize check 18 
+ogsize check 19 
+ogsize check 20 
+ogsize check 21 
+ogsize check 22 
+ogsize check 23 
+ogsize check 24 
+ogsize check 25 
+imetasize check 1 725760 [ [ "A1", 9 ], [ "D6", 1 ] ] 
+imetasize check 2 362880 [ [ "A1", 7 ], [ "D4", 2 ] ] 
+imetasize check 3 483840 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+imetasize check 4 1105920 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+imetasize check 5 7962624 [ [ "A1", 3 ] ] 
+imetasize check 6 2073600 [ [ "A1", 2 ], [ "A2", 1 ] ] 
+imetasize check 7 2073600 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+imetasize check 8 552960 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+imetasize check 9 2903040 [ [ "A1", 7 ] ] 
+imetasize check 10 10321920 [ [ "A1", 3 ], [ "D4", 1 ] ] 
+imetasize check 11 1769472 [ [ "A1", 7 ] ] 
+imetasize check 12 1244160 [ [ "A1", 4 ], [ "A5", 1 ] ] 
+imetasize check 13 497664 [ [ "A1", 15 ] ] 
+imetasize check 14 7257600 [ [ "A1", 1 ], [ "A4", 1 ] ] 
+imetasize check 15 7257600 [ [ "A2", 1 ], [ "A3", 1 ] ] 
+imetasize check 16 7372800 [ [ "A1", 1 ], [ "A3", 1 ] ] 
+imetasize check 17 2073600 [ [ "A1", 15 ] ] 
+imetasize check 18 172800 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+imetasize check 19 92897280 [ [ "A5", 1 ] ] 
+imetasize check 20 6220800 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+imetasize check 21 17418240 [ [ "A1", 3 ], [ "D5", 1 ] ] 
+imetasize check 22 1451520 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+imetasize check 23 17418240 [ [ "A1", 1 ], [ "A3", 1 ], [ "D4", 1 ] ] 
+imetasize check 24 7257600 [ [ "A1", 11 ], [ "D4", 1 ] ] 
+imetasize check 25 696729600 [ [ "A1", 1 ], [ "D6", 1 ] ] 
+gap> Read("Task20260910Ub.g");
+Error, file "Task20260910Ub.g" must exist and be readable at /usr/local/Cellar/gap/4.15.1/share/gap/lib/files.gi:207 called from
+<function "Read string">( <arguments> )
+ called from read-eval loop at *stdin*:4603
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> quit;
+gap> Read("Task20260910Ub.g");
+C2 x (((C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2) : S9) x (((C2 x C2 x C2 x C2 x C2) : A6) : (C2 x C2))) 
+ogsize check 1 8561413324800 [ [ "A1", 9 ], [ "D6", 1 ] ] 
+C2 x (((C2 x C2 x C2 x C2 x C2 x C2) : S7) x ((((((((C2 x C2 x C2) : (C2 x C2)) : (C3 x C3)) x (((C2 x C2 x C2) : (C2 x C2)) : (C3 x C3))) : C\
+4) : C2) : C2) : C2)) 
+ogsize check 2 1712282664960 [ [ "A1", 7 ], [ "D4", 2 ] ] 
+C2 x C2 x S8 x D8 x S4 x S4 
+ogsize check 3 743178240 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+Error, user interrupt in
+  perm[n + j] := n + where[blks[j][1] ^ g]; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/stbcrand.gi:1462 called from 
+hom( lab ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/stbc.gi:904 called from
+LabsLims( S.transversal[pnt], hom, labs, lims ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/stbc.gi:986 called from
+ConjugateStabChain( S, T, hom, S.identity ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/stbcrand.gi:1469 called from
+ExtensionOnBlocks( temp, n, blks, [ gen ] ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/stbcrand.gi:1390 called from
+VerifySGS( G.restored, missing, correct ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/stbcrand.gi:1649 called from
+...  at Task20260910Ub.g:37
+you can 'return;'
+brk> quit;
+gap> Read("Task20260910Ub.g");
+C2 x (((C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2) : S9) x (((C2 x C2 x C2 x C2 x C2) : A6) : (C2 x C2))) 
+ogsize check 1 8561413324800 [ [ "A1", 9 ], [ "D6", 1 ] ] 
+C2 x (((C2 x C2 x C2 x C2 x C2 x C2) : S7) x ((((((((C2 x C2 x C2) : (C2 x C2)) : (C3 x C3)) x (((C2 x C2 x C2) : (C2 x C2)) : (C3 x C3))) : C\
+4) : C2) : C2) : C2)) 
+ogsize check 2 1712282664960 [ [ "A1", 7 ], [ "D4", 2 ] ] 
+C2 x C2 x S8 x D8 x S4 x S4 
+ogsize check 3 743178240 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+C2 x C2 x C2 x (((C2 x C2 x C2 x C2 x C2) : S6) x (((((C2 x C2 x C2 x C2) : C2) : C2) : C3) : C2) x S4) 
+ogsize check 4 1698693120 [ [ "A1", 5 ], [ "A3", 1 ] ] 
+C2 x C2 x (((C2 x C2 x (((((((A4 x A4) : C2) x ((A4 x A4) : C2)) : C2) : C2) : C2) : C2)) : C3) : C2) 
+ogsize check 5 127401984 [ [ "A1", 3 ] ] 
+C2 x (((A6 x A6) : D8) x D8 x S3) 
+ogsize check 6 99532800 [ [ "A1", 2 ], [ "A2", 1 ] ] 
+C2 x ((C3 x C3) : ((A6 x A6) : ((C2 x ((C2 x C2 x C2 x C2) : C2)) : C2))) 
+ogsize check 7 298598400 [ [ "A1", 1 ], [ "A2", 2 ] ] 
+C2 x (((C2 x C2) : ((C2 x C2 x C2 x C2) : ((C3 x C3) : ((C2 x C2) : ((C2 x C2 x C2 x C2 x C2 x C2) : S6))))) x S4) 
+ogsize check 8 5096079360 [ [ "A1", 3 ], [ "A3", 2 ] ] 
+C2 x C2 x (S8 x (((((((C2 x C2 x C2 x C2) : C3) : C4) : C3) : C2) : C2) : C2)) 
+ogsize check 9 743178240 [ [ "A1", 7 ] ] 
+C2 x (((C2 x C2 x C2 x C2 x C2 x C2 x C2) : S8) x D8 x (((((C2 x C2 x C2) : (C2 x C2)) : C3) : C2) : C2)) 
+ogsize check 10 31708938240 [ [ "A1", 3 ], [ "D4", 1 ] ] 
+C2 x ((((((((((((C2 x C2 x C2) : (C2 x C2)) : C3) x (((C2 x C2 x C2) : (C2 x C2)) : C3)) : C2) x ((C2 x ((C2 x C2 x C2 x C2) : C2)) : C2)) : C\
+3) : C2) : C2) : C2) : C2) : C2) 
+ogsize check 11 452984832 [ [ "A1", 7 ] ] 
+C2 x ((((((C2 x C2 x C2) : (C2 x C2)) : C3) : C2) : C2) x (O(5,3) : C2) x S6) 
+ogsize check 12 28665446400 [ [ "A1", 4 ], [ "A5", 1 ] ] 
+C2 x (((((((((((((C2 x C2 x C2) : (C2 x C2)) : C3) x (((C2 x C2 x C2) : (C2 x C2)) : C3)) : C2) x ((((C2 x C2 x C2 x C2) : C2) : C2) : C3)) : \
+C2) : C2) : C2) : C3) : C2) : C2) x S4) 
+ogsize check 13 16307453952 [ [ "A1", 15 ] ] 
+C2 x C2 x C2 x S10 x S5 
+ogsize check 14 3483648000 [ [ "A1", 1 ], [ "A4", 1 ] ] 
+C2 x C2 x S10 x S3 x S4 
+ogsize check 15 2090188800 [ [ "A2", 1 ], [ "A3", 1 ] ] 
+C2 x C2 x (((C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2) : ((A5 x A5) : D8)) x S4) 
+ogsize check 16 707788800 [ [ "A1", 1 ], [ "A3", 1 ] ] 
+Error, reached the pre-set memory limit
+(change it with the -o command line option) in
+  S.transversal := [  ]; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/stbc.gi:1215 called from 
+InitializeSchreierTree( S, Last( arg ) ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/stbc.gi:1203 called from
+EmptyStabChain( S.labels, S.identity, b ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/stbc.gi:812 called from
+StabChainSwap( S ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/stbc.gi:785 called from
+StabChainForcePoint( S.stabilizer, pnt ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/stbc.gi:785 called from
+StabChainForcePoint( S, new ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/stbc.gi:1113 called from
+...  at Task20260910Ub.g:37
+you can 'return;'
+brk> quit;
 gap> 
+gap> 
+gap> 
+gap> 
+gap> quit;
