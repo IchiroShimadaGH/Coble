@@ -37,15 +37,17 @@ for ttt in [1..10000] do
   for uuu in [1..5] do 
     tU:=RandomUnimodMat(16);
     ttGram:=TMTTmult(tU, tGram16);
+    st:=Runtime();
     ttbasisrec:=BasisRec(ttGram, 30);
     ttOGrec:=RepeatNewOGLat(ttGram, 10, 1000);
     CheckOGrecSize(ttbasisrec, ttOGrec);
+    ttime:=Runtime()-st;
     if ttOGrec.size<>thesize then beep(716211); fi;
     fflag:=IsIsomBasisRecs(tbasisrec, ttbasisrec);
     if fflag=false then beep(919111); fi;
     if not IsIntMat(fflag) then beep(919331); fi;
     Add(ttbasisrecs, ttbasisrec);
-    Printn("______", uuu, ttOGrec.size, ttbasisrec.basisnrms);
+    Printn("______", uuu, ttOGrec.size, ttbasisrec.basisnrms,  TimeToString(ttime));
   od;
   for ss in [1..3] do
     ttbasisrec1:=Random(ttbasisrecs);

@@ -75,4 +75,6 @@ imetasize check 22 1451520 [ [ "A1", 11 ], [ "D4", 1 ] ]
 imetasize check 23 17418240 [ [ "A1", 1 ], [ "A3", 1 ], [ "D4", 1 ] ] 
 imetasize check 24 7257600 [ [ "A1", 11 ], [ "D4", 1 ] ] 
 imetasize check 25 696729600 [ [ "A1", 1 ], [ "D6", 1 ] ] 
+gap> 8+28+56+56+56+28+8;
+240
 gap> 

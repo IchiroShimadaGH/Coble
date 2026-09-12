@@ -1,0 +1,208 @@
+sessionnumb  20260912162414 
+gap> Read("Task20260912Ua.g");
+Syntax error: expression expected in Task20260912Ua.g:9
+dd:==[2,-2,-2,-2,-2,-2,-2,-2,-2];;
+    ^
+gap> Read("Task20260912Ua.g");
+Error, Variable: 'Lis' must have a value
+not in any function at Task20260912Ua.g:15
+gap> Read("Task20260912Ua.g");
+tdeg 1 8 
+tdeg 2 120 
+tdeg 3 120 
+tdeg 4 1912 
+tdeg 5 1912 
+tdeg 6 9080 
+tdeg 7 9080 
+tdeg 8 23416 
+tdeg 9 23416 
+Error, user interrupt in
+  Add( rats, tv ); at Task20260912Ua.g:30 called from 
+task( yy * T + vc ); at gapReads/IntegerVectorsQF.txt:364 called from
+task( xx * Hinv ); at gapReads/IntegerVectorsQF.txt:328 called from
+task( tempx ); at gapReads/IntegerVectorsQF.txt:280 called from
+leveljob( level - 1, newtas, newte ); at gapReads/IntegerVectorsQF.txt:293 called from
+leveljob( level - 1, newtas, newte ); at gapReads/IntegerVectorsQF.txt:293 called from
+...  at Task20260912Ua.g:47
+you can 'return;'
+brk> quit;
+gap> Read("Task20260912Ua.g");
+tdeg 1 8 
+tdeg 2 36 
+tdeg 3 36 
+tdeg 4 92 
+tdeg 5 92 
+tdeg 6 148 
+tdeg 7 148 
+tdeg 8 204 
+tdeg 9 204 
+tdeg 10 232 
+tdeg 11 232 
+tdeg 12 240 
+tdeg 13 240 
+tdeg 14 240 
+tdeg 15 240 
+tdeg 16 240 
+tdeg 17 240 
+tdeg 18 240 
+tdeg 19 240 
+Error, user interrupt in
+  return r; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/integer.gi:1130 called from 
+RootInt( Int( r ) ) at gapReads/IntegerVectorsQF.txt:196 called from
+Rootdae( td, ta, te ) at gapReads/IntegerVectorsQF.txt:286 called from
+leveljob( level - 1, newtas, newte ); at gapReads/IntegerVectorsQF.txt:293 called from
+leveljob( level - 1, newtas, newte ); at gapReads/IntegerVectorsQF.txt:293 called from
+leveljob( level - 1, newtas, newte ); at gapReads/IntegerVectorsQF.txt:293 called from
+...  at Task20260912Ua.g:47
+you can 'return;'
+brk> quit;
+gap> Read("Task20260912Ua.g");
+Syntax error: while parsing an 'if' statement: statement or 'fi' expected in Task20260912Ua.g:43
+  od;
+  ^^
+gap> Read("Task20260912Ua.g");
+tdeg 1 8 
+tdeg 2 36 
+tdeg 3 36 
+tdeg 4 92 
+tdeg 5 92 
+tdeg 6 148 
+tdeg 7 148 
+tdeg 8 204 
+tdeg 9 204 
+tdeg 10 232 
+tdeg 11 232 
+tdeg 12 240 
+tdeg 13 240 
+tdeg 14 240 
+tdeg 15 240 
+tdeg 16 240 
+tdeg 17 240 
+tdeg 18 240 
+tdeg 19 240 
+tdeg 20 240 
+gap> stdAffES;
+Error, Variable: 'stdAffES' must have a value
+not in any function at *stdin*:8
+gap> AffESstd;
+function( SQ, vec, reldeg, norm, isES ) ... end
+gap> AffESstd(GramES, hh2, 0, -2, true);
+Error, Variable: 'GramES' must have a value
+not in any function at *stdin*:10
+gap> AffESstd(GramSX, hh2, 0, -2, true);
+Error, Variable: 'GramSX' must have a value
+not in any function at *stdin*:11
+gap> AffESstd(GramS, hh2, 0, -2, true);
+Error, Variable: 'hh2' must have a value
+not in any function at *stdin*:12
+gap> hh2:=[3,-1,-1,-1,-1,-1,-1,-1];
+[ 3, -1, -1, -1, -1, -1, -1, -1 ]
+gap> AffESstd(GramS, hh2, 0, -2, true);
+[ [ 0, 0, 0, 0, 0, 0, 0, 0, -1 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ] ]
+gap> Read("Task20260912Ub.g");
+Error, file "./gapsaves/saverats240.txt" must exist and be readable at /usr/local/Cellar/gap/4.15.1/share/gap/lib/files.gi:207 called from
+Read( fn ); at gapReads/SavesReads.txt:83 called from
+<function "readdata">( <arguments> )
+ called from read-eval loop at Task20260912Ub.g:7
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> quit;
+gap> Read("Task20260912Ub.g");
+Error, Variable: 'rats240' must have a value
+not in any function at Task20260912Ub.g:11
+gap> Read("Task20260912Ub.g");
+Error, no method found! For debugging hints type ?Recovery from NoMethodFound
+Error, no 1st choice method found for `SSortedList' on 2 arguments at /usr/local/Cellar/gap/4.15.1/share/gap/lib/methsel2.g:250 called from
+<function "HANDLE_METHOD_NOT_FOUND">( <arguments> )
+ called from read-eval loop at Task20260912Ub.g:11
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260912Ub.g");
+[ 2 ] 
+gap> hh2dual*hh;
+6
+gap> Read("Task20260912Ub.g");
+gap> 
+gap> RatInvolRecP2(GramS, hh, aa);
+the involution acts trivially on SX 
+rec( GramSX := [ [ 2, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, -2, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, -2, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, -2, 0, 0, 0, 0, 0 ], 
+      [ 0, 0, 0, 0, -2, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, -2, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, -2, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, -2, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, -2 ] ], 
+  ample := [ 3, -1, -1, -1, -1, -1, -1, -1, -1 ], geomroots := [ [ "A1", [ [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ] ] ], [ "A1", [ [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ] ] ], 
+      [ "A1", [ [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ] ] ], [ "A1", [ [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ] ] ], [ "A1", [ [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ] ] ], [ "A1", [ [ 0, 0, 0, 1, 0, 0, 0, 0, 0 ] ] ], 
+      [ "A1", [ [ 0, 0, 1, 0, 0, 0, 0, 0, 0 ] ] ], [ "A1", [ [ 0, 1, 0, 0, 0, 0, 0, 0, 0 ] ] ] ], h2 := [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ], 
+  invol := [ [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 1, 0, 0, 0, 0, 0, 0 ], 
+      [ 0, 0, 0, 1, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1 ] ], 
+  type := "double plane" )
+gap> RatInvolRecP2(GramS,aa, aa);
+rec( GramSX := [ [ 2, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, -2, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, -2, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, -2, 0, 0, 0, 0, 0 ], 
+      [ 0, 0, 0, 0, -2, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, -2, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, -2, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, -2, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, -2 ] ], 
+  ample := [ 3, -1, -1, -1, -1, -1, -1, -1, -1 ], geomroots := [ 0, [  ] ], h2 := [ 3, -1, -1, -1, -1, -1, -1, -1, -1 ], 
+  invol := [ [ 17, -6, -6, -6, -6, -6, -6, -6, -6 ], [ 6, -3, -2, -2, -2, -2, -2, -2, -2 ], [ 6, -2, -3, -2, -2, -2, -2, -2, -2 ], 
+      [ 6, -2, -2, -3, -2, -2, -2, -2, -2 ], [ 6, -2, -2, -2, -3, -2, -2, -2, -2 ], [ 6, -2, -2, -2, -2, -3, -2, -2, -2 ], [ 6, -2, -2, -2, -2, -2, -3, -2, -2 ], [ 6, -2, -2, -2, -2, -2, -2, -3, -2 ],
+      [ 6, -2, -2, -2, -2, -2, -2, -2, -3 ] ], type := "double plane" )
+gap> hhdual;
+Error, Variable: 'hhdual' must have a value
+not in any function at *stdin*:22
+gap> hhdual:=hh*GramS;
+[ 2, 0, 0, 0, 0, 0, 0, 0, 0 ]
+gap> hh*hhdual;
+2
+gap> Collected(240rats*hhdual);
+[ [ 0, 8 ], [ 2, 28 ], [ 4, 56 ], [ 6, 56 ], [ 8, 56 ], [ 10, 28 ], [ 12, 8 ] ]
+gap> invol2:=RatInvolRecP2(GramS, aa, aa).invol;;
+gap> Set(240rats, tr->tr*GramS*(tr*invol2));
+[ 6 ]
+gap> Read("Task20260912Ub.g");
+[ [ 0, 8 ], [ 2, 28 ], [ 4, 56 ], [ 6, 56 ], [ 8, 56 ], [ 10, 28 ], [ 12, 8 ] ] 
+Error, Variable: 'does' must have an assigned value in
+  if not tr in does then
+    orb := [ tr, tr * invols ];
+    Add( orbs, orb );
+    Append( dones, orb );
+fi; at Task20260912Ub.g:40 called from 
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260912Ub.g:41
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260912Ub.g");
+[ [ 0, 8 ], [ 2, 28 ], [ 4, 56 ], [ 6, 56 ], [ 8, 56 ], [ 10, 28 ], [ 12, 8 ] ] 
+Error, Variable: 'invols' must have an assigned value in
+  orb := [ tr, tr * invols ]; at Task20260912Ub.g:37 called from 
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260912Ub.g:41
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260912Ub.g");
+[ [ 0, 8 ], [ 2, 28 ], [ 4, 56 ], [ 6, 56 ], [ 8, 56 ], [ 10, 28 ], [ 12, 8 ] ] 
+gap> Read("Task20260912Ub.g");
+[ [ 0, 8 ], [ 2, 28 ], [ 4, 56 ], [ 6, 56 ], [ 8, 56 ], [ 10, 28 ], [ 12, 8 ] ] 
+Syntax error: ) expected in Task20260912Ub.g:65
+bigPM:=List(6tancons, tc1->List(6tancons, tc2->intpat6tcs(tc1, tc2));
+                                                                    ^
+gap> Read("Task20260912Ub.g");
+[ [ 0, 8 ], [ 2, 28 ], [ 4, 56 ], [ 6, 56 ], [ 8, 56 ], [ 10, 28 ], [ 12, 8 ] ] 
+Error buzz 61615 
+Error,  at Task20260912Ua.g:5 called from
+buzz( 61615 ); at Task20260912Ub.g:55 called from
+intpat6tcs( tc1, tc2 ) at Task20260912Ub.g:65 called from
+func( C[i] ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from
+List( 6tancons, function ( tc2 )
+      return intpat6tcs( tc1, tc2 );
+  end ) at Task20260912Ub.g:65 called from
+func( C[i] ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from
+...  at Task20260912Ub.g:65
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> pm;
+[ [ -2, 6 ], [ 6, -2 ] ]
+brk> quit;
+gap> Read("Task20260912Ub.g");
+[ [ 0, 8 ], [ 2, 28 ], [ 4, 56 ], [ 6, 56 ], [ 8, 56 ], [ 10, 28 ], [ 12, 8 ] ] 
+gap> IsSymmetricMat(bigPM);
+Error, Variable: 'IsSymmetricMat' must have a value
+not in any function at *stdin*:31
+gap> bigPM=TransposedMat(bigPM);
+true
+gap> Set( bigPM, Collected);
+[ [ [ -2, 1 ], [ 0, 56 ], [ 2, 63 ] ] ]
+gap> 

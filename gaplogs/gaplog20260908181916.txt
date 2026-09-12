@@ -7094,3 +7094,15 @@ gap> Read("Task20260910Uc.g");
 gap> themass;
 3773551/128421199872000
 gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> Read("Task20260912Ua.g");

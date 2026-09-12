@@ -202,6 +202,7 @@ BasisRec:=function(GramL, trialnumb)
   #
   trec.subcandidatess:=subcandidatess;
   trec.fingerprints:=fingerprints;
+  Printn(fingerprints);
   #
   return(trec);
 end;
