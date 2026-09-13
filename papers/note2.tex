@@ -1,0 +1,78 @@
+% !TEX program = pdflatex
+
+%%%%%%%%%%%%%%%%%%%%
+%affineConway.tex
+%%%%%%%%%%%%%%%%%%%%%
+
+\pdfoutput=1 %When you use pdflatex
+\documentclass{amsart} %When you use pdflatex
+\renewcommand{\baselinestretch}{1.2}
+
+\usepackage{tikz}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{bm}
+\usepackage{enumitem}
+\usepackage{graphicx}
+
+\usepackage{hyperref}
+\hypersetup{
+ colorlinks = true,
+ linkcolor = blue,
+ filecolor = blue,
+ urlcolor = blue,
+ citecolor = blue,
+}
+\hypersetup{unicode=true}
+
+\input{mymacros}
+\input{mymacrosaffineConway}
+
+\newcommand{\XC}{X_C}
+\newcommand{\diag}{\mathrm{diag}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\begin{document}
+%
+Let $\PP^2$ be a projetive plane 
+with homogeneous coordinates $[x:y:z]$, and 
+let $\gamma$ be the involution of $\PP^2$ given by
+\[
+[x:y:z]\mapsto [x:y:-z].
+\]
+Then a plane sextic  is  $\gamma$-invariant if and only if it is defined by an equation 
+of the form 
+\[
+f_{6}(x, y)+f_{4}(x, y)z^2+ f_{2}(x, y) z^4+ f_{0}(x, y) z^6=0,
+\]
+where $f_{\nu} (x, y)$ is a homogeneous polynomial of degree $\nu$.
+Hence the family $\FFF$  of $\gamma$-invariant sextics is parametrized 
+by a $15$-dimensional projective space.
+Note that a general member $C\subset \PP^2$ of $\FFF$ is non-singular.
+%
+%
+\begin{proposition}
+Let $C$ be a  general member of $\FFF$,
+and let $\XC\to \PP^2$ be the double plane branching along $C$.
+\begin{enumerate}[label={\rm (\arabic*)}]
+\item The plane sextic  $C$ has exactly $120$ six-tangential conics.
+\item The $K3$ surface $\XC$ has exactly $240$ smooth rational curves,
+which are pull-backs of the six-tangential conics of $C$.
+\item The Picard lattice of $\XC$ is of rank $9$
+with a Gram matrix 
+\[
+\diag (2, -2,-2,-2,-2,-2,-2,-2,-2).
+\]
+The nef-and-big cone of $\XC$ is a polyhedron with finitely many faces, 
+and these faces are defined by the $240$ smooth rational curves.
+\end{enumerate}
+\end{proposition}
+%
+\begin{proof}
+\end{proof}
+%
+\end{document}
+
+

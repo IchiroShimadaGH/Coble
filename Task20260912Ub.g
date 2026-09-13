@@ -40,6 +40,8 @@ for tr in 240rats do
   fi;
 od;
 
+if not IsEqualSet(240rats, dones) then buzz(25111); fi;
+
 6tancons:=List(orbs);
 
 intpat6tcs:=function(6tc1, 6tc2)
