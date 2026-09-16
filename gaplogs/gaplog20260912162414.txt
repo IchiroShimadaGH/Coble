@@ -149318,3 +149318,14 @@ gap> a[2]:=4;
 gap> a;
 [ 1, 4 ]
 gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> restart();

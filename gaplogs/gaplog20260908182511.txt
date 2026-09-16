@@ -5350,4 +5350,11 @@ BasisRec( tGramL, 100 ) at Task20260908Uc.g:99 called from
 <function "unknown">( <arguments> )
  called from read-eval loop at Task20260908Uc.g:118
 you can 'return;'
-brk> 
+brk> quit;
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> restart();

@@ -1,0 +1,14 @@
+sessionnumb  20260916180703 
+gap> Read("Task20260916Ud.g");;
+gap> Length(ttrec.6tans);
+120
+gap> Read("Task20260916Ud.g");;
+gap> ttrec.3tans;
+[  ]
+gap> ttrec.K3flag;
+true
+gap> ttrec.isample;
+true
+gap> Factorial(8);
+40320
+gap> 

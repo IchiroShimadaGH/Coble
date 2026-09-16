@@ -1,0 +1,65 @@
+sessionnumb  20260916144025 
+gap> Read("even_lattice_genus.g");
+gap> r := EvenLatticeGenus([2,17],[30],[[17/30]]);;
+gap> r.count;
+1
+gap> a := List([1..k+1],i -> List([1..k+1],j -> -2));
+Error, Variable: 'k' must have a value
+not in any function at *stdin*:110
+Syntax warning: Unbound global variable
+a := List([1..k+1],i -> List([1..k+1],j -> -2));
+                                 ^
+gap> k:=10;
+10
+gap> a := List([1..k+1],i -> List([1..k+1],j -> -2));
+[ [ -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2 ], [ -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2 ], [ -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2 ], 
+  [ -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2 ], [ -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2 ], [ -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2 ], [ -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2 ], 
+  [ -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2 ], [ -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2 ], [ -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2 ], [ -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2 ] ]
+gap> RatInvolRecP2;
+function( GramS, h2, tample ) ... end
+gap> GetRootType;
+function( Gram, roots ) ... end
+gap> Read("Task20260916Ua.g");
+Syntax error: ; expected in WeightedCompleteGraphClasses.g:69
+ Gram :=(-2)*IdentityMatrix(k+1));
+                                ^
+Syntax warning: Unbound global variable in WeightedCompleteGraphClasses.g:71
+ for ii in [2..k+1] do 
+     ^^
+Syntax warning: Unbound global variable in Task20260916Ua.g:27
+    trec.K3flag:=PrimitivelyEmbeddableInK3Lattice(tGram);
+                                                  ^^^^^
+Syntax warning: Unbound global variable in Task20260916Ua.g:28
+    trec.discrec:=DiscriminantForm(tGram);
+                                   ^^^^^
+Syntax warning: Unbound global variable in Task20260916Ua.g:39
+          if tr*invol=tr then buzz(51162); fi;
+                ^^^^^
+Syntax warning: Unbound global variable in Task20260916Ua.g:39
+          if tr*invol=tr then buzz(51162); fi;
+                              ^^^^
+Syntax warning: Unbound global variable in Task20260916Ua.g:40
+          Add(trec.3tans, Set(tr*invol, tr));
+                                 ^^^^^
+Syntax warning: Unbound global variable in Task20260916Ua.g:42
+          if tr*invol=tr then buzz(52262); fi;
+                ^^^^^
+Syntax warning: Unbound global variable in Task20260916Ua.g:42
+          if tr*invol=tr then buzz(52262); fi;
+                              ^^^^
+Syntax warning: Unbound global variable in Task20260916Ua.g:43
+          AddSet(trec.6tans, Set(tr*invol, tr));
+                                    ^^^^^
+Syntax warning: Unbound global variable in Task20260916Ua.g:45
+          buzz(7162711);
+          ^^^^
+Syntax warning: Unbound global variable in Task20260916Ua.g:49
+      trec.ADEtype:=GetRootType(Gram, sings);
+                                      ^^^^^
+Syntax error: expression expected in Task20260916Ua.g:52
+  return(trec);
+  ^^^^^^
+Syntax error: while parsing an 'if' statement: statement or 'fi' expected in Task20260916Ua.g:53
+end;
+^^^
+gap> restart();

@@ -139,6 +139,11 @@ beep:=function(beepnumb)
 	Printn("wrong global beep", beepnumb); Error();
 end;
 
+buzz:=function(beepnumb)
+	Printn("wrong global buzz", beepnumb); Error();
+end;
+
+
 BeepStr:=function(beepstr)
 	Printn("wrongBeepStr", beepstr, "\n\n"); Error();
 end;
