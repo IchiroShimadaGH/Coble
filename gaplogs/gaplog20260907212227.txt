@@ -1003,3 +1003,22 @@ ______ 5 753404372582400 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ]
 23 96 753404372582400 [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2 ] 
 _____________ 
 ____ 402653184 402653184 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 53.521 sec. 
+______ 1 402653184 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 2 402653184 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 3 402653184 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 4 402653184 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+______ 5 402653184 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+24 64 402653184 [ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3 ] 
+_____________ 
+Error, user interrupt in
+  return prod; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3603 called from 
+psol * tvdual at NewOGLat.g:286 called from
+simpleextend( psol ); at NewOGLat.g:300 called from
+simpleextend( psol ); at NewOGLat.g:300 called from
+simpleextend( psol ); at NewOGLat.g:300 called from
+simpleextend( psol ); at NewOGLat.g:300 called from
+...  at Task20260906Hb.g:60
+you can 'return;'
+brk> thelevel;
+1
+brk> 
