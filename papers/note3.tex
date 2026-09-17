@@ -1,0 +1,188 @@
+% !TEX program = pdflatex
+
+%%%%%%%%%%%%%%%%%%%%
+%affineConway.tex
+%%%%%%%%%%%%%%%%%%%%%
+
+\pdfoutput=1 %When you use pdflatex
+\documentclass{amsart} %When you use pdflatex
+\renewcommand{\baselinestretch}{1.2}
+
+\usepackage{tikz}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{bm}
+\usepackage{enumitem}
+\usepackage{graphicx}
+
+\usepackage{hyperref}
+\hypersetup{
+ colorlinks = true,
+ linkcolor = blue,
+ filecolor = blue,
+ urlcolor = blue,
+ citecolor = blue,
+}
+\hypersetup{unicode=true}
+
+\input{mymacros}
+\input{mymacrosaffineConway}
+
+\newcommand{\XC}{X_C}
+\newcommand{\diag}{\mathrm{diag}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\newcommand{\ps}{B}
+\newcommand{\con}{Q}
+\newcommand{\wtcon}{\widetilde{\con}}
+\newcommand{\pips}{\pi_{\ps}}
+\newcommand{\Xps}{X_{\ps}}
+\newcommand{\col}{\Gamma }
+\newcommand{\gra}{w}
+%
+\begin{document}
+%
+\title{Remarks on $6$-tangential conics to smooth plane sextics} 
+\author{Ichiro Shimada}
+\address{Department of Mathematics,
+Graduate School of Science,
+Hiroshima University,
+1-3-1 Kagamiyama,
+Higashi-Hiroshima,
+739-8526 JAPAN}
+\email{ichiro-shimada@hiroshima-u.ac.jp}
+%
+%超平面配置に関連する離散構造の拡張、深化とその応用
+%23H00081
+%代数幾何学の計算機による研究の新展開
+%23K20209
+%格子、保型形式とK3曲面、エンリケス曲面の研究
+%20H00112
+%
+
+%
+\begin{abstract}
+\end{abstract}
+%
+\keywords{}
+\maketitle
+
+%
+Let $\ps$ be a smooth plane sextic.
+A smooth conic $\con$ is called a $6$-tangential conic to $\ps$
+if $\con$ is tangent to $\ps$ at distinct $6$ points.
+%
+%
+
+Let $\ps$ be a smooth plane sextic.
+A smooth conic $\con$ is called a splitting  conic to $\ps$
+if the local intersection number of $\ps$ and $\con$ at every point of
+$\ps\cap\con$ is even.
+%
+%
+Let $\pips\colon\Xps\to\PP^2$ be the double cover branched along $\ps$.
+Then $\Xps$ is a K3 surface.
+A smooth rational curve on $\Xps$ is called a $(-2)$-curve.
+Let $\con$ be a splitting conic to $\ps$.
+Then the pull-back of $\con$ under$\pips$ splits into two  $(-2)$-curves
+$\wtcon^+$ and $\wtcon^-$.
+Let $\con_1$ and $\con_2$ be two distinct splitting conics  to $\ps$.
+Then we have
+\[
+\intf{\wtcon_1^+, \wtcon_2^+}\in \{0,1,2,3,4\},
+\qquad 
+\intf{\wtcon_1^+, \wtcon_2^+}+\intf{\wtcon_1^+, \wtcon_2^-}=4.
+\]
+\par
+Let $k$ be an integer with $k\ge 2$.
+Let $E_k$ be the set of two-element subsets of $\{1,…,k\}$,
+and  let
+$W_k$ denote the set of mappings 
+\[
+w\colon E_k\to \{0,1,2,3,4\}.
+\]
+Thus $W_k$ is the set of weighted complete graphs on $k$ vertices $\{1, \dots, k\}$  with weights $0,1,2,3,4$.
+Then the symmetric group $\SSSS_k$ acts on $W_k$  via its natural action on the vertex set
+$\{1, \dots, k\}$:
+\[
+{}^\tau w (\{i, j\}):=w(\{i^\tau, j^\tau\}).
+\]
+We let the multiplicative group $\{\pm 1\}$ act on $ \{0,1,2,3,4\}$ by 
+\[
+a^s :=
+\begin{cases}
+a     & \text{if } s=1,\\
+4-a   & \text{if } s=-1.
+\end{cases}
+\]
+Then $\{\pm 1\}^k$ acts on $W_k$ by 
+\[
+{}^{(s_1, \dots, s_k)} w(\{i, j\})=(w(\{i, j\}))^{s_i s_j}.
+\]
+Thus the semidirect product  $G:=\{\pm 1\}^k\rtimes \SSSS_k$ acts on $W_k$.
+We call a $G$-orbit in $W_k$ a splitting graph.
+%
+\begin{remark}
+The group $\SSSS_k$ acts on $\{\pm 1\}^k$ by 
+ \[
+ ({}^\tau\hskip -1pt s)_i:=s_{i^\tau}.
+\]
+The product in  $G$ is given by
+\[
+(s, \tau)(s\sprime, \tau\sprime)=(s \;{}^\tau \hskip -1pts\sprime, \tau\tau\sprime).
+\]
+The action of $G$ on $W_k$ is given by 
+\[
+{}^{(s, \tau)} w={}^s ({}^\tau w).
+\]
+%Indeed,
+%\[
+%{}^\tau({}^{s'}w)
+%   ={}^{{}^\tau s'}({}^\tau w),
+%\]
+%and hence this formula defines an action of $G$ on $W_k$.
+\end{remark}
+%
+\begin{remark}
+Our construction is a  variant of Shirane's
+splitting graph adapted to collections of splitting conics.
+\end{remark}
+%
+Suppose that a smooth plane sextic $\ps$ has a collection $\col$ of $k$ distinct  splitting conics.
+By  labelling $\con_1, \dots, \con_k$ of these splitting conics,
+and choosing an irreducible component $\wtcon_i^+$ of $\pips\inv (\con_i)$ for each $i=1, \dots, k$,
+we obtain an element $\gra_{\col}$  of $W_k$  by 
+\[
+\gra_{\col}(\{i, j\}):=\intf{\wtcon_i^+, \wtcon_j^+}.
+\]
+Note that the splitting graph $[\gra_{\col}]:=G\cdot \gra_{\col}$ containing $\gra_{\col}$ 
+is independent of the labelling and of the choices of the irreducible components
+ $\wtcon_i^+$.
+%
+\begin{theorem}
+Let $\gamma$ be a splitting graph in the first column of Table~\ref{table:gamgam}.
+Then the family $\FFF_{\gamma}\subset \PP_*(\Gamma(\PP^2, \OOO(6)))$ of smooth plane sextics $\ps$ possessing a collection $\col$ 
+of splitting conics such that $[\gra_{\col}]=\gamma$
+is irreducible,
+and a general member of $\FFF_{\gamma}$ 
+has a collection $\col\sprime$ 
+of splitting conics such that $[\gra_{\col\sprime}]=\gamma\sprime$,
+where $\gamma\sprime$ is the splitting graph in the same line of Table~\ref{table:gamgam} as $\gamma$.
+\end{theorem}
+%
+For example, the first line of Table~\ref{table:gamgam} has the following interpretation.
+Let  $\ps$ is a general plane sextic in the family of smooth plane sextics possessing 
+two splitting conics $\con_1$ and $\con_2$
+such that $\intf{\wtcon_1^+, \wtcon_2^+}=0$  for a suitable choice of the lifts 
+$\wtcon_1^+, \wtcon_2^+$.
+Then  $\ps$ has another  splitting conic $\con_3$ such that 
+\[
+\intf{\wtcon_1^+, \wtcon_3^+}=\intf{\wtcon_2^+, \wtcon_3^+}=0
+\]
+for a suitable choice of $\wtcon_3^+$.
+%
+\end{document}
+
+
