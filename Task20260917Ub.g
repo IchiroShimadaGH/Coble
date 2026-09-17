@@ -18,6 +18,7 @@ for tt in [1..1000000] do
       tw:=RandomVectFromL(leng, [0,1,2,3,4]);
       mtw:=MinRepWk(kk, tw);
       pos:=SinglePosition(Gorbs, mtw);
+      if OrbitWk(kk, tw)<>OrbitWk(kk, mtw) then buzz(7171); fi;
     od;
   od;
   if tt mod 100=0 then Printn(tt);fi;
