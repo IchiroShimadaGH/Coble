@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.20)  17 SEP 2026 17:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.20)  18 SEP 2026 16:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -600,30 +600,30 @@ File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 (./note3.aux)
 \openout1 = `note3.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 45.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 46.
 
  (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 45.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 46.
 
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -651,7 +651,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring ON on input line 45.
+Package hyperref Info: Link coloring ON on input line 46.
 
 (./note3.out) (./note3.out)
 \@outlinefile=\write4
@@ -659,23 +659,23 @@ Package hyperref Info: Link coloring ON on input line 45.
 
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 94.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 121.
 
-LaTeX Font Info:    Trying to load font information for U+euf on input line 101
+LaTeX Font Info:    Trying to load font information for U+euf on input line 128
 .
 (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) [1{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
-LaTeX Warning: Reference `table:gamgam' on page 2 undefined on input line 159.
+LaTeX Warning: Reference `table:gamgam' on page 2 undefined on input line 186.
 
 
-LaTeX Warning: Reference `table:gamgam' on page 2 undefined on input line 166.
+LaTeX Warning: Reference `table:gamgam' on page 2 undefined on input line 193.
 
 
-LaTeX Warning: Reference `table:gamgam' on page 2 undefined on input line 169.
+LaTeX Warning: Reference `table:gamgam' on page 2 undefined on input line 196.
 
-[2] (./note3.aux)
+[2] [3] (./note3.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -685,16 +685,16 @@ L3 programming layer <2026-01-19>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `note3.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: 4B17D05FB7FB7E5174D61D5905C7D105;182.
  ) 
 Here is how much of TeX's memory you used:
- 21216 strings out of 467525
- 384562 string characters out of 5418982
- 781535 words of memory out of 5000000
- 49616 multiletter control sequences out of 15000+600000
- 639001 words of font info for 82 fonts, out of 8000000 for 9000
+ 21232 strings out of 467525
+ 384797 string characters out of 5418982
+ 781674 words of memory out of 5000000
+ 49629 multiletter control sequences out of 15000+600000
+ 639302 words of font info for 83 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 102i,9n,107p,594b,618s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,16n,107p,594b,478s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
 ></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
@@ -713,10 +713,10 @@ ve/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2026/t
 exmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2026
 /texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on note3.pdf (2 pages, 188853 bytes).
+Output written on note3.pdf (3 pages, 205349 bytes).
 PDF statistics:
- 113 PDF objects out of 1000 (max. 8388607)
- 72 compressed objects within 1 object stream
- 6 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 128 PDF objects out of 1000 (max. 8388607)
+ 86 compressed objects within 1 object stream
+ 9 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
