@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.5)  19 SEP 2026 17:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.5)  20 SEP 2026 00:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -696,16 +696,16 @@ LaTeX Warning: Reference `table:gamgam' on page 2 undefined on input line 206.
 
 [3]
 
-LaTeX Warning: Citation `theNikkulin' on page 4 undefined on input line 358.
+LaTeX Warning: Citation `theNikkulin' on page 4 undefined on input line 360.
 
 
 
 [4]
 
-LaTeX Warning: Citation `ShimadaTurk' on page 5 undefined on input line 421.
+LaTeX Warning: Citation `ShimadaTurk' on page 5 undefined on input line 424.
 
 
-LaTeX Warning: Citation `ShimadaTurk' on page 5 undefined on input line 422.
+LaTeX Warning: Citation `ShimadaTurk' on page 5 undefined on input line 425.
 
 
 
@@ -724,7 +724,7 @@ Package rerunfilecheck Info: File `note3.out' has not changed.
 Here is how much of TeX's memory you used:
  21301 strings out of 473190
  386766 string characters out of 5715801
- 768046 words of memory out of 5000000
+ 768044 words of memory out of 5000000
  44028 multiletter control sequences out of 15000+600000
  570418 words of font info for 79 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
@@ -748,7 +748,7 @@ ve/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive
 exmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2025
 /texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/
 2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on note3.pdf (5 pages, 221801 bytes).
+Output written on note3.pdf (5 pages, 222846 bytes).
 PDF statistics:
  154 PDF objects out of 1000 (max. 8388607)
  107 compressed objects within 2 object streams
