@@ -35,7 +35,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 \newcommand{\ps}{B}
-\newcommand{\con}{C}
+\newcommand{\con}{Q}
 \newcommand{\wtcon}{\widetilde{\con}}
 \newcommand{\pips}{\pi_{\ps}}
 \newcommand{\Xps}{X_{\ps}}
@@ -77,7 +77,7 @@ We work over the complex number field $\CC$.
 %
 Let $\ps$ be a smooth plane sextic.
 A smooth conic $\con$ is called a six-tangential conic to $\ps$
-if $\con$ is tangent to $\ps$ at six distinct  points.
+if $\con$ is tangent to $\ps$ at distinct $6$ points.
 This paper is motivated by the following  simple  observation:
 %
 \begin{proposition}\label{prop:120rats}
@@ -92,27 +92,24 @@ f_6(x_0, x_1) +f_4(x_0, x_1) x_2^2 + f_2(x_0, x_1) x_2^4 + f_0(x_0, x_1) x_2^6=0
 possesses exactly $120$ six-tangential conics.
 \end{proposition}
 %
-See Section~\ref{sec:120rats} for the proof of this proposition and 
-further geometric properties of this configuration of $120$ conics.
+See Section~\ref{sec:120rats} for the proof of this proposition and other beautiful properties 
+of  the collection of $120$ six-tangential conics.
 %
 \par
 %
 Let $\ps$ be a smooth plane sextic.
 A smooth conic $\con$ is called a splitting  conic to $\ps$
-if the local intersection multiplicity of $\ps$ and $\con$ at every point of
+if the local intersection number of $\ps$ and $\con$ at every point of
 $\ps\cap\con$ is even.
 %
 %
 Let $\pips\colon\Xps\to\PP^2$ be the double cover branched along $\ps$.
 Then $\Xps$ is a K3 surface.
 A smooth rational curve on $\Xps$ is called a $(-2)$-curve.
-Let $\con$ be a splitting conic of $\ps$.
-Then 
-the inverse image 
-$\pips\inv (\con)$
- is the union of two smooth rational curves 
+Let $\con$ be a splitting conic to $\ps$.
+Then the pull-back of $\con$ under$\pips$ splits into two  $(-2)$-curves
 $\wtcon^+$ and $\wtcon^-$.
-Let $\con_1$ and $\con_2$ be two distinct splitting conics of  $\ps$.
+Let $\con_1$ and $\con_2$ be two distinct splitting conics  to $\ps$.
 Then we have
 \[
 \intf{\wtcon_1^+, \wtcon_2^+}\in \{0,1,2,3,4\},
@@ -174,20 +171,14 @@ Our construction is a  variant of Shirane's
 splitting graph adapted to collections of splitting conics.
 \end{remark}
 %
-Suppose that a smooth plane sextic $\ps$ has 
-a collection $\col$ of $k$ distinct  splitting conics.
-By  labelling  these splitting conics
-as $\con_1, \dots, \con_k$,
-and choosing an irreducible component 
-$\wtcon_i^+$ from a the two irreducible components of 
- $\pips\inv (\con_i)$ for each $i=1, \dots, k$,
+Suppose that a smooth plane sextic $\ps$ has a collection $\col$ of $k$ distinct  splitting conics.
+By  labelling $\con_1, \dots, \con_k$ of these splitting conics,
+and choosing an irreducible component $\wtcon_i^+$ of $\pips\inv (\con_i)$ for each $i=1, \dots, k$,
 we obtain an element $\gra_{\col}$  of $W_k$  by 
 \[
 \gra_{\col}(\{i, j\}):=\intf{\wtcon_i^+, \wtcon_j^+}.
 \]
-Note that the $G$-orbit
-$[\gra_{\col}]:=G\cdot \gra_{\col}$ 
-%containing $\gra_{\col}$ 
+Note that the splitting graph $[\gra_{\col}]:=G\cdot \gra_{\col}$ containing $\gra_{\col}$ 
 is independent of the labelling and of the choices of the irreducible components
  $\wtcon_i^+$.
 %
@@ -197,15 +188,13 @@ Then the family $\FFF_{\gamma}\subset \PP_*(\Gamma(\PP^2, \OOO(6)))$ of smooth p
 of splitting conics such that $[\gra_{\col}]=\gamma$
 is irreducible,
 and a general member of $\FFF_{\gamma}$ 
-has a collection $\col\sprime\supset \col$ 
+has a collection $\col\sprime$ 
 of splitting conics such that $[\gra_{\col\sprime}]=\gamma\sprime$,
-where $\gamma\sprime$ is the splitting graph 
-in the same row of Table~\ref{table:gamgam} as $\gamma$.
+where $\gamma\sprime$ is the splitting graph in the same line of Table~\ref{table:gamgam} as $\gamma$.
 \end{theorem}
 %
-For example, the first row of Table~\ref{table:gamgam} has the following interpretation.
-Let  $\ps$ be a general plane sextic 
-in the family of smooth plane sextics possessing 
+For example, the first line of Table~\ref{table:gamgam} has the following interpretation.
+Let  $\ps$ is a general plane sextic in the family of smooth plane sextics possessing 
 two splitting conics $\con_1$ and $\con_2$
 such that $\intf{\wtcon_1^+, \wtcon_2^+}=0$  for a suitable choice of the lifts 
 $\wtcon_1^+, \wtcon_2^+$.
@@ -218,46 +207,44 @@ for a suitable choice of $\wtcon_3^+$.
 \subsection{Enumeration of splitting conics}\label{subsec:enum}
 %
 Let $\ps$ be a smooth plane sextic,
- let $\pips\colon \Xps\to \PP^2$ be the double cover branched along $\ps$,
+ let $\pips\colon \Xps\to \PP^2$ be the  the double cover branched along $\ps$,
  and let $j\colon X_{\ps}\to X_{\ps}$ be the involution 
  with respect to the double cover $\pips\colon \Xps\to \PP^2$.
 We denote by  $h\in  \Pic(\Xps)$   the class  of the pull-back of a line of $\PP^2$.
 Then $h$ is ample.
-The involution $j$
-fixes $h$ and acts as multiplication by $-1$
-on the orthogonal complement $h\sperp$ in $ \Pic(\Xps)$.
-The set $\RRR_d$ of classes of smooth rational curves $C$ of 
-degree $\intf{C, h}=d$ on $X_{\ps}$ 
-is  enumerated 
+The action on $ \Pic(\Xps)$  of the  involution $j$  leaves $h$ invariant,
+and acts on its orthogonal complement $h\sperp$ in $ \Pic(\Xps)$ 
+as the multiplication by $-1$.
+The set $\RRR_d$ of classes of smooth rational curves $C$ of degree $\intf{C, h}=d$ on $X_{\ps}$ 
+are  enumerated 
 inductively on $d$ as follows:
 \[
 \RRR_d:=\bigset{r\in \Pic(X_{\ps})}
-{\parbox{8cm}{$\intf{r, r}=-2$, $\intf{r, h}=d$, \\
-for all $d\sprime<d$ and for all $r\sprime\in \RRR_{d\sprime}$, we have 
-$\intf{r, r\sprime}\ge 0$}
-%$\forall d\sprime<d\; \forall r\sprime\in \RRR_{d\sprime} \; \intf{r, r\sprime}\ge 0$}
+{\parbox{5cm}{$\intf{r, r}=-2$, $\intf{r, h}=d$, \\
+$\forall d\sprime<d\; \forall r\sprime\in \RRR_{d\sprime} \; \intf{r, r\sprime}\ge 0$}
 }.
 \]
-Then the set of classes of splitting conics of $\ps$ is equal to 
-the set of $j$-orbits in $\RRR_2$.
-%\[
-%\set{r\in \RRR_2}{j^* r\ne r}/\angs{j^*}.
-%\]
+Then the set of classes of splitting conics for $\ps$ is equal to 
+\[
+\set{r\in \RRR_2}{j^* r\ne r}/\angs{j^*}.
+\]
 %
 \subsection{Proof of Proposition~\ref{prop:120rats}}\label{subsec:120rats}
 %
-Throughout this subsection, 
-let  $\ps$ denote a smooth plane sextic 
-defined by an equation of the form~\eqref{eq:iotainvsextic}.
 Let $\iota\colon \PP^2\to \PP^2$ be the involution given by
 \[
 [x_0: x_1: x_2]\mapsto [x_0: x_1: -x_2].
 \]
+Let $\ps$ be a smooth plane sextic 
+defined by an equation of the form~\eqref{eq:iotainvsextic}.
+%in Proposition~\ref{prop:120rats}.
 Then $\ps$ is $\iota$-invariant.
-We show that the Picard lattice $\Pic(\Xps)$ of 
-the $K3$ surface $\Xps$ 
-is of rank $9$ and 
-admits a basis  such that 
+%Let $\pips\colon \Xps\to \PP^2$ be the  the double cover branched along $\ps$.
+We show that the Picard lattice $\Pic(\Xps)$ of $\Xps$ %is isomorphic 
+%to $\typeILat_{1, 8}(2)$,
+%that is, $\Pic(\Xps)$ is 
+of rank $9$ and 
+has a basis  such that 
 %
 \begin{enumerate}[label=(\alph*)]
 \item 
@@ -272,52 +259,33 @@ h=(3, -1, \dots, -1).
 \]
 \end{enumerate}
 %
-We denote the space of all plane sextics by 
-\[
-\PPP_6:=\PP_*(\Gamma(\PP^2, \OOO(6))),
-\]
-and let $\SSS\subset \PPP_6$  be the Zariski open subset 
-of smooth plane sextics.
-Then the period map gives 
-an open immersion of $\SSS/ \PGL(3, \CC)$
-into a  $19$-dimensional period domain.
-The  space $\III_{\iota}$ of $\iota$-invariant sextics is a $15$-dimensional
-subspace of   $\PPP_6$.
-Since 
-the centralizer of $\iota$ in $\PGL(3, \CC)$ is of dimension $4$,
-the image 
-of 
-\[
-\III_{\iota}\cap \SSS \;\;\inj\;\; \SSS \;\;\to\;\; \SSS/ \PGL(3, \CC)
-\]
-is  $15-4=11$.
-(Here we use the  fact that a smooth plane sextic
-is of genus $10$ and 
-hence its automorphism group is finite.)
-%Therefore, if $\ps$ moves on $\III_{\iota}\cap \SSS$,
-%the period of $X_{\ps}$ sweps an $11$-dimensional locus
-%in the period domain.
-Since  $\ps$ is a general point of $\III_{\iota}\cap \SSS$,
-the rank of $\Pic(\Xps)$ is $20-11=9$.
+%with diagonal entries $2, -2, \dots, -2$.
+Note that the space $\III_{\iota}$ of $\iota$-invariant sextics is a $15$-dimensional
+subspace of the space  $\PP_*(\Gamma(\PP^2, \OOO(6)))$
+of all plane sextics, and
+the centralizer of $\iota$ in $\PGL(3, \CC)$ is of dimension $4$.
+Hence the effective moduli of the $K3$ surface $\Xps$ is $15-4=11$.
+Since  $\ps$ is a general point of $\III_{\iota}$,
+the  rank of $\Pic(\Xps)$ is $20-11=9$.
 Let $\phi\colon \PP^2\to Q$ be the quotient morphism by the involution $\iota$,
 where $Q\subset \PP^3$ is the quadric surface of rank $3$ defined by
-$z_0z_2-z_1^2=0$,
+$z_0z_2^2-z_1^2=0$,
 and $\phi$ is given by 
 \[
-[x_0: x_1: x_2]\mapsto [z_0: z_1: z_2: z_3]=[x_0^2: x_0x_1: x_1^2: x_2^2].
+[x_0: x_1: x_2]\mapsto [z_0: z_1: z_2: z_3]=[x_0^2: x_1x_1: x_1^2: x_2^2].
 \]
-The fixed point $[0:0:1]$ of $\iota$ is mapped to the vertex $A$ of $Q$
+The fixed point $[0:0:1]$ of $\iota$ is mapped to the apex $A$ of $Q$ %the singular quadric $Q$,
 and the fixed line $\{x_2=0\}$ is mapped to the plane section $Q\cap H_0$ 
-of $Q$, where $H_0=\{z_3=0\}$.
+of $Q$, where $H_0=\{z_2=0\}$.
 The quotient morphism $\phi$ induces a double covering $\ps\to \ps_Q$
 of a $(2, 3)$-complete intersection $\ps_Q\subset Q$.
-Let $\varpi_{\ps}\colon W_{\ps}\to Q$ be the double covering branched along $\ps_Q$
-and at the vertex  $A$.
+%which is the  canonical model of a smooth non-hyperelliptic  curve of genus $4$  with vanishing theta null.
+Let $\varpi_{\ps}\colon W_{\ps}\to Q$ be the double covering branchied along $\ps_Q\cup \{A\}$.
 Then $W_{\ps}$ is a del Pezzo surface of degree $1$,
 and the morphism $\varpi_{\ps}\colon W_{\ps}\to Q$ is the bi-anticanonical model of $W_{\ps}$.
 We denote by $\alpha_W$ the anti-canonical class of $W_{\ps}$. 
-The morphism $\phi$  lifts to a double covering $\varphi\colon \Xps\to W_{\ps}$.
-Thus we obtain  the following commutative diagram:
+The morphism $\phi$  lifts to a double covering $\varphi\colon \Xps\to W_{\ps}$,
+ and form the following commutative diagram:
  \[
  \begin{array}{ccc}
  \Xps &\xrightarrow{\varphi}  & W_{\ps} \\
@@ -329,17 +297,10 @@ The branch locus of
 the  double covering  $\varphi\colon \Xps\to W_{\ps}$ is 
 the pull-back $ \varpi_{\ps}\inv (Q\cap H_0)$,
 which is a member of the bi-anticanonical system $|2 \alpha_W|$.
-Since the pull-back by $\phi$ of a plane section $Q\cap H$  of $Q$ is a conic
-on $\PP^2$,
-we have $2h=\varphi^*(2\alpha_W)$.
-Since $\Pic(X_{\ps})$ is torsion free, 
-we obtain  
-\[
-h=\varphi^*\alpha_W.
-\]
+Since the pull-back by $\phi$ of $Q\cap H$  of $Q$ is a conic,
+we see that $h=\varphi^*\alpha_W$.
 The del Pezzo surface $W_{\ps}$ is obtained by 
-blowing up a projective plane $\bPP^2$ at eight distinct  points
-in general position.
+blowing up a projective plane $\bPP^2$ at distinct $8$ poins.
 Hence $\Pic(W_{\ps})$ is isomorphic to $\typeILat_{1, 8}$,
 and has a basis $l, e_1, \dots, e_8$,
 where $l$ is the class of the pull-back of a line of $\bPP^2$ and 
@@ -356,8 +317,7 @@ Now we have
 Since $\Pic(X_{\ps})$ is of rank $9$,
 $\Pic(X_{\ps})$ is an overlattice of $\typeILat_{1, 8}(2)$.
 By Nikulin's theory of discriminant forms~\cite{theNikkulin},
-we see that $\typeILat_{1, 8}(2)$  has $1+135+1575+2025+270$ even 
-overlattices
+we see that $\typeILat_{1, 8}(2)$  has $1+135+1575+2025+270$ even overlattices
 as in Table~\ref{table:overlattices}.
 Note that 
 \[
@@ -368,11 +328,7 @@ is ample, and hence
 R(h\sperp):=\set{r\in \Pic(X_{\ps})}{\intf{r, r}=-2, \;\;\intf{r, h}=0}
 \]
 should be empty.
-If the extension index $\Pic(X_{\ps})/ \varphi^* \Pic(W_{\ps})$
-is $>1$,
-then $R(h\sperp)$ would have an element.
-(See Table~\ref{table:overlattices}.)
-Therefore 
+Looking at Table~\ref{table:overlattices}, we see that  
 the overlattice $\Pic(X_{\ps})$
 is in fact equal to $\varphi^* \Pic(W_{\ps})$ and hence 
 has a basis $\varphi^*l$, $\varphi^*e_1, \dots, \varphi^*e_8$
@@ -396,7 +352,7 @@ with the desired properties (a), (b).
 %
 Then we see that $X_{\ps}$ has exactly $120$ splitting conics 
 by the method given in Section~\ref{subsec:enum}.
-Indeed, there are no vectors $r$ in $\Pic(X_{\ps})$ 
+There are no vectors $r$ in $\Pic(X_{\ps})$ 
 with $\intf{r, r}=-2$ and $\intf{h, r}=1$,
 and there exists exactly $240$ vectors $r$ 
 with  $\intf{r, r}=-2$ and $\intf{h, r}=2$.
@@ -412,26 +368,15 @@ splitting conics.
 In fact, these $240$ vectors $r$ are the pull-back of the $240$ lines 
 of the del Pezzo surface $W_{\ps}$.
 Note that the mapping $\ps\mapsto \ps_Q$ 
-gives an isomorphism between the space 
-the projective space $\III_{\iota}$ 
-of $\iota$-invariant sextics
-and the linear system  $|\OOO_{Q}(3)|$.
+gives an isomorphism between the space of $\iota$-invariant sextics
+and the space $|\OOO_{Q}(3)|$.
 Hence $W_B$ is a general member of the family $\UUU$
 of bi-anticanonical models of del Pezzo surfaces of degree $1$ 
 studied in~\cite{ShimadaTurk}.
-By~\cite[Proposition 4.4]{ShimadaTurk},
-the union of  the $240$ lines 
+By ~\cite[Proposition 4.4]{ShimadaTurk},
+the union of $240$ $240$ lines 
 of $W_{\ps}$ has only ordinary double points,
-which implies that the $120$ splitting conics of $\ps$ are 
-in fact  six-tangential conics.
-%
-\begin{remark}
-In fact, the automorphism group
-of the $K3$ surface $X_{\ps}$  is isomorphic to $\ZZ/2\ZZ\times \ZZ/2\ZZ$,
-and 
-the  $240$  curves obtained above are all the smooth rational curves on $X_{\ps}$.
-
-\end{remark}
+which implies that the $120$ splitting conics of $X_{\ps}$ are indeed six-tangential conics.
 %
 \end{document}
 

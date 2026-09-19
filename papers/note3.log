@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.5)  19 SEP 2026 03:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.5)  19 SEP 2026 17:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -672,9 +672,9 @@ Package hyperref Info: Link coloring ON on input line 48.
 LaTeX Warning: Reference `sec:120rats' on page 1 undefined on input line 95.
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 121.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 124.
 
-LaTeX Font Info:    Trying to load font information for U+euf on input line 128
+LaTeX Font Info:    Trying to load font information for U+euf on input line 131
 .
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
@@ -682,13 +682,13 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 
 [1{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
-LaTeX Warning: Reference `table:gamgam' on page 2 undefined on input line 186.
+LaTeX Warning: Reference `table:gamgam' on page 2 undefined on input line 195.
 
 
-LaTeX Warning: Reference `table:gamgam' on page 2 undefined on input line 193.
+LaTeX Warning: Reference `table:gamgam' on page 2 undefined on input line 203.
 
 
-LaTeX Warning: Reference `table:gamgam' on page 2 undefined on input line 196.
+LaTeX Warning: Reference `table:gamgam' on page 2 undefined on input line 206.
 
 
 
@@ -696,16 +696,16 @@ LaTeX Warning: Reference `table:gamgam' on page 2 undefined on input line 196.
 
 [3]
 
-LaTeX Warning: Citation `theNikkulin' on page 4 undefined on input line 319.
+LaTeX Warning: Citation `theNikkulin' on page 4 undefined on input line 358.
 
 
 
 [4]
 
-LaTeX Warning: Citation `ShimadaTurk' on page 5 undefined on input line 375.
+LaTeX Warning: Citation `ShimadaTurk' on page 5 undefined on input line 421.
 
 
-LaTeX Warning: Citation `ShimadaTurk' on page 5 undefined on input line 376.
+LaTeX Warning: Citation `ShimadaTurk' on page 5 undefined on input line 422.
 
 
 
@@ -722,9 +722,9 @@ Package rerunfilecheck Info: File `note3.out' has not changed.
 (rerunfilecheck)             Checksum: E6912CD22EFF5145E505B6139F78AE70;445.
  ) 
 Here is how much of TeX's memory you used:
- 21300 strings out of 473190
- 386755 string characters out of 5715801
- 768045 words of memory out of 5000000
+ 21301 strings out of 473190
+ 386766 string characters out of 5715801
+ 768046 words of memory out of 5000000
  44028 multiletter control sequences out of 15000+600000
  570418 words of font info for 79 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
@@ -748,10 +748,10 @@ ve/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive
 exmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2025
 /texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/
 2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on note3.pdf (5 pages, 220810 bytes).
+Output written on note3.pdf (5 pages, 221801 bytes).
 PDF statistics:
- 153 PDF objects out of 1000 (max. 8388607)
- 106 compressed objects within 2 object streams
- 16 named destinations out of 1000 (max. 500000)
+ 154 PDF objects out of 1000 (max. 8388607)
+ 107 compressed objects within 2 object streams
+ 17 named destinations out of 1000 (max. 500000)
  29 words of extra memory for PDF output out of 10000 (max. 10000000)
 
