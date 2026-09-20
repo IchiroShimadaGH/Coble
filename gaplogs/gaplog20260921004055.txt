@@ -1,0 +1,33 @@
+sessionnumb  20260921004055 
+gap> Read("Task20260920Vf.g");
+10 127 
+10 126 
+11 129 
+10 128 
+Error, user interrupt in
+  res[i] := func( C[i] ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from 
+List( m1, function ( row )
+      return PROD_VECTOR_MATRIX( row, m2 );
+  end ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3640 called from
+T * M at gapReads/LinearAlgebra.txt:252 called from
+TMTTmult( orthoB, sQ ) at gapReads/LatticeTools.txt:41 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+...  at Task20260920Vf.g:38
+you can 'return;'
+brk> quit;
+gap> Read("Task20260920Vf.g");
+11 12 127 
+11 12 126 
+12 13 129 
+11 12 128 
+12 13 147 
+13 14 132 
+11 12 130 
+11 12 121 
+12 13 131 
+12 13 123 
+12 13 125 
+12 13 192 
+12 13 133 
+11 12 128 

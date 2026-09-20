@@ -1,0 +1,62 @@
+sessionnumb  20260921003551 
+gap> Read("Task20260920Ve.g");
+Syntax error: Name used for argument and local in Task20260920Ve.g:15
+  cc, ss;
+      ^^
+gap> Read("Task20260920Ve.g");
+Error, Variable: 'treu' must have an assigned value in
+  while treu do
+    task( [ [ 2 ] ], 10 );
+od; at Task20260920Ve.g:40 called from 
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260920Ve.g:40
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260920Ve.g");
+11 13 147 
+11 13 161 
+Error, user interrupt in
+  return MakeImmutable( TransposedMatMutable( M ) )
+ ; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matobj.gi:1259 called from 
+TransposedMat( T ) at gapReads/LinearAlgebra.txt:252 called from
+TMTTmult( orthoB, sQ ) at gapReads/LatticeTools.txt:41 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+signaturejob( dim, Q ); at gapReads/LatticeTools.txt:48 called from
+...  at Task20260920Ve.g:40
+you can 'return;'
+brk> quit;
+gap> Read("Task20260920Ve.g");
+12 13 147 
+12 13 161 
+11 12 138 
+11 12 132 
+11 12 136 
+11 12 143 
+12 13 143 
+11 12 126 
+11 12 140 
+11 12 134 
+11 12 127 
+11 12 134 
+12 13 141 
+12 13 131 
+11 12 135 
+12 13 164 
+11 12 125 
+13 14 147 
+12 13 130 
+12 13 181 
+12 13 130 
+12 13 127 
+12 13 125 
+11 12 131 
+12 13 127 
+12 13 124 
+11 12 124 
+11 12 128 
+12 13 137 
+12 13 131 
+12 13 137 
+12 13 168 
+11 12 127 
