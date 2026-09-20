@@ -1,0 +1,161 @@
+sessionnumb  20260920225739 
+gap> Read("SplitConsTools.g");
+Error, Variable: 'RandomSymMatFromL' is read only
+not in any function at SplitConsTools.g:217
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260920Vc.g");
+Error, Variable: 'ii' must have an assigned value in
+  newadj[ii][ii] := -2; at Task20260920Vc.g:18 called from 
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260920Vc.g:41
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260920Vc.g");
+counter 10000 
+Error, user interrupt in
+  x := row[nzheads[j]]; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2454 called from 
+SemiEchelonMatDestructive( mat 
+ ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2407 called from
+RankMatDestructive( MutableCopyMatrix( mat ) 
+ ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2417 called from
+Rank( tGram ) at SplitConsTools.g:174 called from
+IsGeom( tGram, th ) at Task20260920Vc.g:22 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260920Vc.g:41
+you can 'return;'
+brk> quit;
+gap> Read("Task20260920Vc.g");
+counter 1000 
+counter 2000 
+counter 3000 
+counter 4000 
+counter 5000 
+counter 6000 
+counter 7000 
+counter 8000 
+counter 9000 
+counter 10000 
+counter 11000 
+counter 12000 
+counter 13000 
+counter 14000 
+counter 15000 
+counter 16000 
+counter 17000 
+counter 18000 
+counter 19000 
+counter 20000 
+counter 21000 
+counter 22000 
+counter 23000 
+counter 24000 
+counter 25000 
+counter 26000 
+counter 27000 
+counter 28000 
+counter 29000 
+counter 30000 
+Error, user interrupt in
+  Add( res, elm ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:2203 called from 
+Flat( elm ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:2205 called from
+Flat( vectslist ) at gapReads/LinearAlgebra.txt:91 called from
+ConcatVectss( List( matslist, function ( tM )
+        return tM[ii];
+    end ) ) at gapReads/LinearAlgebra.txt:113 called from
+func( C[i] ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from
+List( [ 1 .. r ], function ( ii )
+      return ConcatVectss( List( matslist, function ( tM )
+                return tM[ii];
+            end ) );
+  end ) at gapReads/LinearAlgebra.txt:113 called from
+...  at Task20260920Vc.g:41
+you can 'return;'
+brk> quit;
+gap> 
+gap> 
+gap> 
+gap> 
+gap> Read("Task20260920Vc.g");
+counter 10000 
+counter 20000 
+counter 30000 
+counter 40000 
+counter 50000 
+counter 60000 
+counter 70000 
+counter 80000 
+counter 90000 
+counter 100000 
+counter 110000 
+counter 120000 
+counter 130000 
+counter 140000 
+counter 150000 
+counter 160000 
+counter 170000 
+counter 180000 
+counter 190000 
+counter 200000 
+counter 210000 
+counter 220000 
+counter 230000 
+counter 240000 
+counter 250000 
+counter 260000 
+counter 270000 
+counter 280000 
+counter 290000 
+counter 300000 
+counter 310000 
+counter 320000 
+counter 330000 
+counter 340000 
+counter 350000 
+counter 360000 
+counter 370000 
+counter 380000 
+counter 390000 
+counter 400000 
+counter 410000 
+counter 420000 
+counter 430000 
+counter 440000 
+counter 450000 
+counter 460000 
+counter 470000 
+counter 480000 
+counter 490000 
+counter 500000 
+counter 510000 
+counter 520000 
+counter 530000 
+counter 540000 
+counter 550000 
+counter 560000 
+counter 570000 
+counter 580000 
+counter 590000 
+counter 600000 
+counter 610000 
+counter 620000 
+counter 630000 
+counter 640000 
+counter 650000 
+counter 660000 
+counter 670000 
+counter 680000 
+counter 690000 
+counter 700000 
+counter 710000 
+counter 720000 
+counter 730000 
+counter 740000 
+counter 750000 
+counter 760000 
+counter 770000 
+counter 780000 
+counter 790000 
+counter 800000 
+counter 810000 
+counter 820000 

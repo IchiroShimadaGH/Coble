@@ -1,0 +1,805 @@
+sessionnumb  20260920213007 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> Read("Task20260920Ud.g");
+wrong global beep 88111 
+Error,  at gapReads/gaptools.txt:139 called from
+beep( 88111 ); at SplitConsTools.g:123 called from
+WGraphToGramh( newadj, 8 + addnumb ) at Task20260920Ud.g:29 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260920Ud.g:50
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> tv*redGram*tv;
+-10
+brk> MakeVectei(kk+1, jj+1);
+[ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 ]
+brk> kk+1;
+12
+brk> MatShape(tGram);
+[ 12, 12 ]
+brk> MatShape(redGram);
+[ 11, 11 ]
+brk> [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 ]*tGram*[ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 ];
+-2
+brk> TMTTmult(redGrec.phi, redGrec.redGram)=tGram;
+false
+brk> tGram;
+[ [ 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 ], [ 2, -2, 2, 2, 0, 2, 2, 2, 2, 2, 0, 2 ], 
+  [ 2, 2, -2, 0, 2, 2, 2, 2, 2, 4, 2, 4 ], [ 2, 2, 0, -2, 0, 2, 2, 2, 2, 1, 0, 1 ], 
+  [ 2, 0, 2, 0, -2, 0, 2, 2, 2, 1, 2, 3 ], [ 2, 2, 2, 2, 0, -2, 0, 2, 2, 1, 4, 2 ], 
+  [ 2, 2, 2, 2, 2, 0, -2, 0, 2, 0, 2, 0 ], [ 2, 2, 2, 2, 2, 2, 0, -2, 0, 2, 2, 2 ], 
+  [ 2, 2, 2, 2, 2, 2, 2, 0, -2, 4, 0, 0 ], [ 2, 2, 4, 1, 1, 1, 0, 2, 4, -2, 4, 4 ], 
+  [ 2, 0, 2, 0, 2, 4, 2, 2, 0, 2, -2, 1 ], [ 2, 2, 4, 1, 3, 2, 0, 2, 0, 1, 2, -2 ] ]
+brk> quit;
+gap> tGram:=[ [ 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 ], [ 2, -2, 2, 2, 0, 2, 2, 2, 2, 2, 0, 2 ], 
+>   [ 2, 2, -2, 0, 2, 2, 2, 2, 2, 4, 2, 4 ], [ 2, 2, 0, -2, 0, 2, 2, 2, 2, 1, 0, 1 ], 
+>   [ 2, 0, 2, 0, -2, 0, 2, 2, 2, 1, 2, 3 ], [ 2, 2, 2, 2, 0, -2, 0, 2, 2, 1, 4, 2 ], 
+>   [ 2, 2, 2, 2, 2, 0, -2, 0, 2, 0, 2, 0 ], [ 2, 2, 2, 2, 2, 2, 0, -2, 0, 2, 2, 2 ], 
+>   [ 2, 2, 2, 2, 2, 2, 2, 0, -2, 4, 0, 0 ], [ 2, 2, 4, 1, 1, 1, 0, 2, 4, -2, 4, 4 ], 
+>   [ 2, 0, 2, 0, 2, 4, 2, 2, 0, 2, -2, 1 ], [ 2, 2, 4, 1, 3, 2, 0, 2, 0, 1, 2, -2 ] ]
+> 
+> 
+> 
+> 
+> quit;
+Syntax error: ; expected
+quit;
+^^^^
+gap> tGram:=[ [ 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 ], [ 2, -2, 2, 2, 0, 2, 2, 2, 2, 2, 0, 2 ], 
+>   [ 2, 2, -2, 0, 2, 2, 2, 2, 2, 4, 2, 4 ], [ 2, 2, 0, -2, 0, 2, 2, 2, 2, 1, 0, 1 ], 
+>   [ 2, 0, 2, 0, -2, 0, 2, 2, 2, 1, 2, 3 ], [ 2, 2, 2, 2, 0, -2, 0, 2, 2, 1, 4, 2 ], 
+>   [ 2, 2, 2, 2, 2, 0, -2, 0, 2, 0, 2, 0 ], [ 2, 2, 2, 2, 2, 2, 0, -2, 0, 2, 2, 2 ], 
+>   [ 2, 2, 2, 2, 2, 2, 2, 0, -2, 4, 0, 0 ], [ 2, 2, 4, 1, 1, 1, 0, 2, 4, -2, 4, 4 ], 
+>   [ 2, 0, 2, 0, 2, 4, 2, 2, 0, 2, -2, 1 ], [ 2, 2, 4, 1, 3, 2, 0, 2, 0, 1, 2, -2 ] ]
+> 
+> 
+> 
+> 
+> quit;
+Syntax error: ; expected
+quit;
+^^^^
+gap> debug0();
+wrong in ModLatticeKerRec 1481472 
+Error,  at gapReads/gaptools.txt:728 called from
+localbeep( "ModLatticeKerRec", beepnumb ); at fordebug0.g:18 called from
+beep( 1481472 ); at fordebug0.g:44 called from
+<function "tModLatticeKerRec">( <arguments> )
+ called from read-eval loop at fordebug0.g:61
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> T;
+[ [ -6, 2, 1, 1, -4, 3, -2, 0, 3, 4, 1, -2 ], 
+  [ 17, -13, -5, -6, 8, 9, -2, 11, -20, -14, 17, -2 ], 
+  [ -19, 20, 6, 11, -7, -21, 8, -19, 30, 16, -33, 8 ], 
+  [ -7, 6, 2, 3, -4, -4, 1, -5, 9, 6, -8, 1 ], 
+  [ -43, 38, 13, 20, -20, -32, 10, -34, 58, 36, -56, 10 ], 
+  [ 18, -15, -5, -8, 9, 11, -3, 13, -23, -15, 21, -3 ], 
+  [ -33, 30, 10, 16, -15, -26, 8, -27, 46, 28, -45, 8 ], 
+  [ 24, -22, -7, -12, 11, 19, -6, 19, -33, -20, 33, -6 ], 
+  [ -19, 21, 6, 12, -8, -21, 8, -19, 30, 16, -34, 8 ], 
+  [ -5, 7, 2, 4, -1, -9, 4, -7, 10, 4, -13, 4 ], 
+  [ 5, -6, -1, -4, 3, 5, -2, 5, -8, -4, 9, -2 ], 
+  [ 2, -1, -1, 0, 0, 2, -1, 2, -3, -2, 2, 0 ] ]
+brk> T*bigGram;
+[ [ 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12 ], [ 0, 2, 0, 0, 0, 0, 0, 0, 0, 1, 0, 11 ], 
+  [ 0, 0, 2, 0, 0, 0, 0, 0, 0, 1, 0, -49 ], [ 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, -7 ], 
+  [ 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, -62 ], [ 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20 ], 
+  [ 0, 0, 0, 0, 0, 0, 2, 0, 0, 1, 0, -50 ], [ 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 38 ], 
+  [ 0, 0, 0, 0, 0, 0, 0, 0, 2, 1, 0, -50 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, -24 ], 
+  [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 16 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+brk> TMTT(T, bigGram);
+Syntax warning: Unbound global variable in *errin*:3
+TMTT(T, bigGram);
+^^^^
+Error, Variable: 'TMTT' must have a value in
+  Error(  ); at gapReads/gaptools.txt:728 called from 
+localbeep( "ModLatticeKerRec", beepnumb ); at fordebug0.g:18 called from
+beep( 1481472 ); at fordebug0.g:44 called from
+<function "tModLatticeKerRec">( <arguments> )
+ called from read-eval loop at *errin*:3
+brk> TMTTmult(T, bigGram);
+[ [ -36, 10, 58, -2, 34, 0, 30, -24, 58, 38, -14, 4 ], 
+  [ -14, -62, 144, 29, 222, -78, 176, -130, 146, 62, -38, -4 ], 
+  [ 104, 74, -364, -39, -428, 122, -344, 260, -364, -188, 92, -4 ], 
+  [ 11, 16, -52, -8, -70, 22, -55, 41, -52, -25, 13, 0 ], 
+  [ 116, 140, -510, -70, -660, 204, -526, 394, -512, -250, 130, 0 ], 
+  [ -33, -45, 155, 22, 204, -64, 162, -121, 155, 75, -39, 0 ], 
+  [ 100, 82, -368, -42, -444, 129, -356, 268, -368, -188, 92, -4 ], 
+  [ -76, -54, 266, 28, 312, -88, 250, -190, 266, 138, -66, 4 ], 
+  [ 110, 46, -324, -26, -348, 89, -280, 214, -324, -176, 80, -8 ], 
+  [ 56, 20, -160, -12, -168, 42, -136, 104, -160, -88, 40, -4 ], 
+  [ -30, 2, 62, 0, 48, -6, 38, -30, 60, 38, -14, 4 ], 
+  [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]
+brk> quit;
+gap> Read("Task20260908Vb.g");
+Error, Variable: 'themass' must have a value
+not in any function at Task20260908Vb.g:13
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> Read("Task20260920Ud.g");
+Error, user interrupt in
+  return false; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:1647 called from 
+ForAny( mat, function ( r )
+      return not IsPlistRep( r );
+  end ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3619 called from
+v * sQ at gapReads/LatticeTools.txt:40 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+...  at Task20260920Ud.g:55
+you can 'return;'
+brk> counter;
+109354
+brk> quit;
+gap> counter;
+109354
+gap> Read("Task20260920Ud.g");
+counter 10000 
+counter 20000 
+counter 30000 
+counter 40000 
+counter 50000 
+counter 60000 
+counter 70000 
+counter 80000 
+counter 90000 
+counter 100000 
+counter 110000 
+counter 120000 
+counter 130000 
+counter 140000 
+counter 150000 
+counter 160000 
+counter 170000 
+counter 180000 
+counter 190000 
+counter 200000 
+counter 210000 
+counter 220000 
+counter 230000 
+counter 240000 
+counter 250000 
+counter 260000 
+counter 270000 
+counter 280000 
+counter 290000 
+counter 300000 
+counter 310000 
+counter 320000 
+counter 330000 
+counter 340000 
+counter 350000 
+counter 360000 
+counter 370000 
+counter 380000 
+counter 390000 
+counter 400000 
+counter 410000 
+counter 420000 
+counter 430000 
+counter 440000 
+counter 450000 
+counter 460000 
+counter 470000 
+counter 480000 
+counter 490000 
+counter 500000 
+counter 510000 
+counter 520000 
+counter 530000 
+counter 540000 
+counter 550000 
+counter 560000 
+counter 570000 
+counter 580000 
+counter 590000 
+counter 600000 
+counter 610000 
+counter 620000 
+counter 630000 
+counter 640000 
+counter 650000 
+counter 660000 
+counter 670000 
+counter 680000 
+counter 690000 
+counter 700000 
+counter 710000 
+counter 720000 
+counter 730000 
+counter 740000 
+counter 750000 
+counter 760000 
+counter 770000 
+counter 780000 
+counter 790000 
+counter 800000 
+counter 810000 
+counter 820000 
+counter 830000 
+counter 840000 
+counter 850000 
+counter 860000 
+counter 870000 
+counter 880000 
+counter 890000 
+counter 900000 
+counter 910000 
+counter 920000 
+counter 930000 
+counter 940000 
+counter 950000 
+counter 960000 
+counter 970000 
+counter 980000 
+counter 990000 
+counter 1000000 
+counter 1010000 
+counter 1020000 
+counter 1030000 
+counter 1040000 
+counter 1050000 
+counter 1060000 
+counter 1070000 
+counter 1080000 
+counter 1090000 
+counter 1100000 
+counter 1110000 
+counter 1120000 
+counter 1130000 
+counter 1140000 
+counter 1150000 
+counter 1160000 
+counter 1170000 
+counter 1180000 
+counter 1190000 
+counter 1200000 
+counter 1210000 
+counter 1220000 
+counter 1230000 
+counter 1240000 
+counter 1250000 
+counter 1260000 
+counter 1270000 
+counter 1280000 
+counter 1290000 
+counter 1300000 
+counter 1310000 
+counter 1320000 
+counter 1330000 
+counter 1340000 
+counter 1350000 
+counter 1360000 
+counter 1370000 
+counter 1380000 
+counter 1390000 
+counter 1400000 
+counter 1410000 
+counter 1420000 
+counter 1430000 
+counter 1440000 
+counter 1450000 
+counter 1460000 
+counter 1470000 
+counter 1480000 
+counter 1490000 
+counter 1500000 
+counter 1510000 
+counter 1520000 
+counter 1530000 
+counter 1540000 
+counter 1550000 
+counter 1560000 
+counter 1570000 
+counter 1580000 
+counter 1590000 
+counter 1600000 
+counter 1610000 
+counter 1620000 
+counter 1630000 
+counter 1640000 
+counter 1650000 
+counter 1660000 
+counter 1670000 
+counter 1680000 
+counter 1690000 
+counter 1700000 
+counter 1710000 
+counter 1720000 
+counter 1730000 
+counter 1740000 
+counter 1750000 
+counter 1760000 
+counter 1770000 
+counter 1780000 
+counter 1790000 
+counter 1800000 
+counter 1810000 
+counter 1820000 
+counter 1830000 
+counter 1840000 
+counter 1850000 
+counter 1860000 
+counter 1870000 
+counter 1880000 
+counter 1890000 
+counter 1900000 
+counter 1910000 
+counter 1920000 
+counter 1930000 
+counter 1940000 
+counter 1950000 
+counter 1960000 
+counter 1970000 
+counter 1980000 
+counter 1990000 
+counter 2000000 
+counter 2010000 
+counter 2020000 
+counter 2030000 
+counter 2040000 
+counter 2050000 
+counter 2060000 
+counter 2070000 
+counter 2080000 
+counter 2090000 
+counter 2100000 
+counter 2110000 
+counter 2120000 
+counter 2130000 
+counter 2140000 
+counter 2150000 
+counter 2160000 
+counter 2170000 
+counter 2180000 
+counter 2190000 
+counter 2200000 
+counter 2210000 
+counter 2220000 
+counter 2230000 
+counter 2240000 
+counter 2250000 
+counter 2260000 
+counter 2270000 
+counter 2280000 
+counter 2290000 
+counter 2300000 
+counter 2310000 
+counter 2320000 
+counter 2330000 
+counter 2340000 
+counter 2350000 
+counter 2360000 
+counter 2370000 
+counter 2380000 
+counter 2390000 
+counter 2400000 
+counter 2410000 
+counter 2420000 
+counter 2430000 
+counter 2440000 
+counter 2450000 
+counter 2460000 
+counter 2470000 
+counter 2480000 
+counter 2490000 
+counter 2500000 
+counter 2510000 
+counter 2520000 
+counter 2530000 
+counter 2540000 
+counter 2550000 
+counter 2560000 
+counter 2570000 
+counter 2580000 
+counter 2590000 
+counter 2600000 
+counter 2610000 
+counter 2620000 
+counter 2630000 
+counter 2640000 
+counter 2650000 
+counter 2660000 
+counter 2670000 
+counter 2680000 
+counter 2690000 
+counter 2700000 
+counter 2710000 
+counter 2720000 
+counter 2730000 
+counter 2740000 
+counter 2750000 
+counter 2760000 
+counter 2770000 
+counter 2780000 
+counter 2790000 
+counter 2800000 
+counter 2810000 
+counter 2820000 
+counter 2830000 
+counter 2840000 
+counter 2850000 
+counter 2860000 
+counter 2870000 
+counter 2880000 
+counter 2890000 
+counter 2900000 
+counter 2910000 
+counter 2920000 
+counter 2930000 
+counter 2940000 
+counter 2950000 
+counter 2960000 
+counter 2970000 
+counter 2980000 
+counter 2990000 
+counter 3000000 
+counter 3010000 
+counter 3020000 
+counter 3030000 
+counter 3040000 
+counter 3050000 
+counter 3060000 
+counter 3070000 
+counter 3080000 
+counter 3090000 
+counter 3100000 
+counter 3110000 
+counter 3120000 
+counter 3130000 
+counter 3140000 
+counter 3150000 
+counter 3160000 
+counter 3170000 
+counter 3180000 
+counter 3190000 
+counter 3200000 
+counter 3210000 
+counter 3220000 
+counter 3230000 
+counter 3240000 
+counter 3250000 
+counter 3260000 
+counter 3270000 
+counter 3280000 
+counter 3290000 
+counter 3300000 
+counter 3310000 
+counter 3320000 
+counter 3330000 
+counter 3340000 
+counter 3350000 
+counter 3360000 
+counter 3370000 
+counter 3380000 
+counter 3390000 
+counter 3400000 
+counter 3410000 
+counter 3420000 
+counter 3430000 
+counter 3440000 
+counter 3450000 
+counter 3460000 
+counter 3470000 
+counter 3480000 
+counter 3490000 
+counter 3500000 
+counter 3510000 
+counter 3520000 
+counter 3530000 
+counter 3540000 
+counter 3550000 
+counter 3560000 
+counter 3570000 
+counter 3580000 
+counter 3590000 
+counter 3600000 
+counter 3610000 
+counter 3620000 
+counter 3630000 
+counter 3640000 
+counter 3650000 
+counter 3660000 
+counter 3670000 
+counter 3680000 
+counter 3690000 
+counter 3700000 
+counter 3710000 
+counter 3720000 
+counter 3730000 
+counter 3740000 
+counter 3750000 
+counter 3760000 
+counter 3770000 
+counter 3780000 
+counter 3790000 
+counter 3800000 
+counter 3810000 
+counter 3820000 
+counter 3830000 
+counter 3840000 
+counter 3850000 
+counter 3860000 
+counter 3870000 
+counter 3880000 
+counter 3890000 
+counter 3900000 
+counter 3910000 
+counter 3920000 
+counter 3930000 
+counter 3940000 
+counter 3950000 
+counter 3960000 
+counter 3970000 
+counter 3980000 
+counter 3990000 
+counter 4000000 
+counter 4010000 
+counter 4020000 
+counter 4030000 
+counter 4040000 
+counter 4050000 
+counter 4060000 
+counter 4070000 
+counter 4080000 
+counter 4090000 
+counter 4100000 
+counter 4110000 
+counter 4120000 
+counter 4130000 
+counter 4140000 
+counter 4150000 
+counter 4160000 
+counter 4170000 
+counter 4180000 
+counter 4190000 
+counter 4200000 
+counter 4210000 
+counter 4220000 
+counter 4230000 
+counter 4240000 
+counter 4250000 
+counter 4260000 
+counter 4270000 
+counter 4280000 
+counter 4290000 
+counter 4300000 
+counter 4310000 
+counter 4320000 
+counter 4330000 
+counter 4340000 
+counter 4350000 
+counter 4360000 
+counter 4370000 
+counter 4380000 
+counter 4390000 
+counter 4400000 
+counter 4410000 
+counter 4420000 
+counter 4430000 
+counter 4440000 
+counter 4450000 
+counter 4460000 
+counter 4470000 
+counter 4480000 
+counter 4490000 
+counter 4500000 
+counter 4510000 
+counter 4520000 
+counter 4530000 
+counter 4540000 
+counter 4550000 
+counter 4560000 
+counter 4570000 
+counter 4580000 
+counter 4590000 
+counter 4600000 
+counter 4610000 
+counter 4620000 
+counter 4630000 
+counter 4640000 
+counter 4650000 
+counter 4660000 
+counter 4670000 
+counter 4680000 
+counter 4690000 
+counter 4700000 
+counter 4710000 
+counter 4720000 
+counter 4730000 
+counter 4740000 
+counter 4750000 
+counter 4760000 
+counter 4770000 
+counter 4780000 
+counter 4790000 
+counter 4800000 
+counter 4810000 
+counter 4820000 
+counter 4830000 
+counter 4840000 
+counter 4850000 
+counter 4860000 
+counter 4870000 
+counter 4880000 
+counter 4890000 
+counter 4900000 
+counter 4910000 
+counter 4920000 
+counter 4930000 
+counter 4940000 
+counter 4950000 
+counter 4960000 
+counter 4970000 
+counter 4980000 
+counter 4990000 
+counter 5000000 
+counter 5010000 
+counter 5020000 
+counter 5030000 
+counter 5040000 
+counter 5050000 
+counter 5060000 
+counter 5070000 
+counter 5080000 
+counter 5090000 
+counter 5100000 
+counter 5110000 
+counter 5120000 
+counter 5130000 
+counter 5140000 
+counter 5150000 
+counter 5160000 
+counter 5170000 
+counter 5180000 
+counter 5190000 
+counter 5200000 
+counter 5210000 
+counter 5220000 
+counter 5230000 
+counter 5240000 
+counter 5250000 
+counter 5260000 
+counter 5270000 
+counter 5280000 
+counter 5290000 
+counter 5300000 
+counter 5310000 
+counter 5320000 
+counter 5330000 
+counter 5340000 
+counter 5350000 
+counter 5360000 
+counter 5370000 
+counter 5380000 
+counter 5390000 
+counter 5400000 
+counter 5410000 
+counter 5420000 
+counter 5430000 
+counter 5440000 
+counter 5450000 
+counter 5460000 
+counter 5470000 
+counter 5480000 
+counter 5490000 
+counter 5500000 
+counter 5510000 
+counter 5520000 
+counter 5530000 
+counter 5540000 
+counter 5550000 
+counter 5560000 
+counter 5570000 
+counter 5580000 
+counter 5590000 
+counter 5600000 
+counter 5610000 
+counter 5620000 
+counter 5630000 
+counter 5640000 
+counter 5650000 
+counter 5660000 
+counter 5670000 
+counter 5680000 
+counter 5690000 
+counter 5700000 
+counter 5710000 
+counter 5720000 
+counter 5730000 
+counter 5740000 
+counter 5750000 
+counter 5760000 
+counter 5770000 
+counter 5780000 
+counter 5790000 
+counter 5800000 
+counter 5810000 
+counter 5820000 
+counter 5830000 
+counter 5840000 
+counter 5850000 
+counter 5860000 
+counter 5870000 
+counter 5880000 
+counter 5890000 
+counter 5900000 
+counter 5910000 
+counter 5920000 
+counter 5930000 
+counter 5940000 
+counter 5950000 
+counter 5960000 
+counter 5970000 
+counter 5980000 
+counter 5990000 
+counter 6000000 
+counter 6010000 
+counter 6020000 
+counter 6030000 
+counter 6040000 
+counter 6050000 
+counter 6060000 
+counter 6070000 
+counter 6080000 
+counter 6090000 
+counter 6100000 
+counter 6110000 
+counter 6120000 
+counter 6130000 
+counter 6140000 
+counter 6150000 
+counter 6160000 
+counter 6170000 
+counter 6180000 
+counter 6190000 
+counter 6200000 
+counter 6210000 
+counter 6220000 
+counter 6230000 
+counter 6240000 
+counter 6250000 
+counter 6260000 
+counter 6270000 
+counter 6280000 
+counter 6290000 
+counter 6300000 
+counter 6310000 
+counter 6320000 
+counter 6330000 
+counter 6340000 
+counter 6350000 
+counter 6360000 
+counter 6370000 
+counter 6380000 
+counter 6390000 
+counter 6400000 
+counter 6410000 
+counter 6420000 
+counter 6430000 
+counter 6440000 
+counter 6450000 
+counter 6460000 
+counter 6470000 
+counter 6480000 

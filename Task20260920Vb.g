@@ -1,6 +1,6 @@
 
 
-#Read("Task20260920Ud.g");
+#Read("Task20260920Vb.g");
 
 
 Read("SplitConsTools.g");
@@ -14,9 +14,9 @@ adjE8:=[ [ -2, 2, 2, 0, 2, 2, 2, 2 ],
 [ 2, 2, 2, 2, 2, 0, -2, 0 ], 
 [ 2, 2, 2, 2, 2, 2, 0, -2 ] ];
 
-specialnewscons3:=[];
+specialnewscons2:=[];
 
-addnumb:=3;
+addnumb:=2;
 counter:=0;
 while true do 
   counter:=counter+1;
@@ -48,9 +48,9 @@ while true do
   scons:=GetTotalSplcons(tGram, th);
   Printn(Length(scons), tA, tB);
   if Length(scons)>120 then 
-    Add(specialnewscons3, [tA, tB]);
-    savedata(specialnewscons3); 
-    Printn("___", counter, Length(specialnewscons3));
+    Add(specialnewscons2, [tA, tB]);
+    savedata(specialnewscons2); 
+    Printn("___", counter, Length(specialnewscons2));
   fi;
   if Length(scons)<120 then beep(761476); fi;
 od;

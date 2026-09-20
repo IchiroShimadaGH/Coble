@@ -75,6 +75,7 @@ ModLatticeKerRec:=function(bigGram)
   if CokerTorsion(basisKer)<>[] then beep(615221); fi;
   if not IsZeroMat(basisKer*bigGram) then beep(225221); fi;
   phi:=SubMatrix(InverseMat(T), [1..bigleng], [1..rk]);
+  if TMTTmult(phi, redGram)<>bigGram then beep(616996); fi;
   trec:=rec(
     redGram:=redGram, 
     basis:= basis,
@@ -199,6 +200,8 @@ GetTotalSplcons:=function(Gram, h)
   od;
   return(scons);
 end;
+
+
 
 
   ####################

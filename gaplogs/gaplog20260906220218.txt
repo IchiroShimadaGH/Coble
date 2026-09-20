@@ -1,4 +1,18 @@
 sessionnumb  20260906220218 
 gap> IsSubset([1,2], [1]);
 true
-gap> 
+gap> Read("SplitConsTools.g");
+Syntax warning: Unbound global variable in SplitConsTools.g:190
+  if ratss[1]<>[] then Error("there is a tritangent line"); buzz(47612); fi;
+                                                            ^^^^
+Syntax error: ) expected in SplitConsTools.g:207
+  tM:=NullMat(dim dim);
+                  ^^^
+gap> Read("SplitConsTools.g");
+Syntax warning: Unbound global variable in SplitConsTools.g:190
+  if ratss[1]<>[] then Error("there is a tritangent line"); buzz(47612); fi;
+                                                            ^^^^
+Error, Variable: 'RandomSymMatFromL' is read only
+not in any function at SplitConsTools.g:217
+type 'quit;' to quit to outer loop
+brk> restart();
