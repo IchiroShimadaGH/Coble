@@ -1,0 +1,255 @@
+sessionnumb  20260920183205 
+gap> Read("Task20260920Uc.g");
+Syntax warning: Unbound global variable in SplitConsTools.g:77
+  phi:=SubMatrix(InverseMat(T), [1..bigleng], [1..rk]);
+  ^^^
+Syntax warning: Unbound global variable in SplitConsTools.g:83
+  );
+ ^^
+Error, List Element: <list>[2] must have an assigned value in
+  return tM[ii]; at gapReads/LinearAlgebra.txt:113 called from 
+func( C[i] ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from
+List( matslist, function ( tM )
+      return tM[ii];
+  end ) at gapReads/LinearAlgebra.txt:113 called from
+func( C[i] ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from
+List( [ 1 .. r ], function ( ii )
+      return ConcatVectss( List( matslist, function ( tM )
+                return tM[ii];
+            end ) );
+  end ) at gapReads/LinearAlgebra.txt:113 called from
+ConcatMatss( tv ) at gapReads/LinearAlgebra.txt:822 called from
+...  at Task20260920Uc.g:52
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260920Uc.g");
+Error, List Element: <list>[2] must have an assigned value in
+  return tM[ii]; at gapReads/LinearAlgebra.txt:113 called from 
+func( C[i] ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from
+List( matslist, function ( tM )
+      return tM[ii];
+  end ) at gapReads/LinearAlgebra.txt:113 called from
+func( C[i] ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from
+List( [ 1 .. r ], function ( ii )
+      return ConcatVectss( List( matslist, function ( tM )
+                return tM[ii];
+            end ) );
+  end ) at gapReads/LinearAlgebra.txt:113 called from
+ConcatMatss( tv ) at gapReads/LinearAlgebra.txt:822 called from
+...  at Task20260920Uc.g:52
+type 'quit;' to quit to outer loop
+brk> newadj;
+Syntax warning: Unbound global variable in *errin*:1
+newadj;
+^^^^^^
+Error, Variable: 'newadj' must have a value in
+  return tM[ii]; at gapReads/LinearAlgebra.txt:113 called from 
+func( C[i] ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from
+List( matslist, function ( tM )
+      return tM[ii];
+  end ) at gapReads/LinearAlgebra.txt:113 called from
+func( C[i] ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from
+List( [ 1 .. r ], function ( ii )
+      return ConcatVectss( List( matslist, function ( tM )
+                return tM[ii];
+            end ) );
+  end ) at gapReads/LinearAlgebra.txt:113 called from
+ConcatMatss( tv ) at gapReads/LinearAlgebra.txt:822 called from
+...  at *errin*:1
+brk> quit;
+gap> MatMatToMat([[adjE8, ttA], [tA, tB]]);;
+Error, List Element: <list>[2] must have an assigned value in
+  return tM[ii]; at gapReads/LinearAlgebra.txt:113 called from 
+func( C[i] ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from
+List( matslist, function ( tM )
+      return tM[ii];
+  end ) at gapReads/LinearAlgebra.txt:113 called from
+func( C[i] ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from
+List( [ 1 .. r ], function ( ii )
+      return ConcatVectss( List( matslist, function ( tM )
+                return tM[ii];
+            end ) );
+  end ) at gapReads/LinearAlgebra.txt:113 called from
+ConcatMatss( tv ) at gapReads/LinearAlgebra.txt:822 called from
+...  at *stdin*:2
+type 'quit;' to quit to outer loop
+brk> tB;
+[ [ -2, 4 ], [ -2, 4 ] ]
+brk> quit;
+gap> Read("Task20260920Uc.g");
+Error, List Element: <list>[2] must have an assigned value in
+  return tM[ii]; at gapReads/LinearAlgebra.txt:113 called from 
+func( C[i] ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from
+List( matslist, function ( tM )
+      return tM[ii];
+  end ) at gapReads/LinearAlgebra.txt:113 called from
+func( C[i] ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from
+List( [ 1 .. r ], function ( ii )
+      return ConcatVectss( List( matslist, function ( tM )
+                return tM[ii];
+            end ) );
+  end ) at gapReads/LinearAlgebra.txt:113 called from
+ConcatMatss( tv ) at gapReads/LinearAlgebra.txt:822 called from
+...  at Task20260920Uc.g:52
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260920Uc.g");
+Error, user interrupt in
+  d := b - a + 1; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/random.gi:211 called from 
+Random( GlobalMersenneTwister, 1, Length( l ) ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/random.gi:238 called from
+Random( [ 0, 1, 2, 3, 4 ] ) at Task20260920Uc.g:24 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260920Uc.g:52
+you can 'return;'
+brk> counter;
+31229
+brk> quit;
+gap> Read("Task20260920Uc.g");
+1818 not geom [ false, 5 ] 
+1979 not geom [ false, 5 ] 
+3418 not geom [ false, 5 ] 
+5007 not geom [ false, 5 ] 
+5196 not geom [ false, 5 ] 
+8616 not geom [ false, 5 ] 
+11237 not geom [ false, 5 ] 
+11827 not geom [ false, 5 ] 
+15362 not geom [ false, 5 ] 
+16728 not geom [ false, 5 ] 
+23172 not geom [ false, 5 ] 
+25487 not geom [ false, 5 ] 
+26810 not geom [ false, 5 ] 
+28538 not geom [ false, 5 ] 
+34517 not geom [ false, 5 ] 
+34665 not geom [ false, 5 ] 
+35526 not geom [ false, 5 ] 
+35993 not geom [ false, 5 ] 
+41676 not geom [ false, 5 ] 
+43111 not geom [ false, 5 ] 
+53181 not geom [ false, 5 ] 
+56842 not geom [ false, 5 ] 
+57097 not geom [ false, 5 ] 
+57109 not geom [ false, 5 ] 
+61930 not geom [ false, 5 ] 
+63855 not geom [ false, 5 ] 
+67088 not geom [ false, 5 ] 
+68136 not geom [ false, 5 ] 
+70257 not geom [ false, 5 ] 
+72970 not geom [ false, 5 ] 
+79188 not geom [ false, 5 ] 
+86338 not geom [ false, 5 ] 
+93776 not geom [ false, 5 ] 
+99007 not geom [ false, 5 ] 
+101830 not geom [ false, 5 ] 
+Error, Variable: 'tv' must have an assigned value in
+  Length( scons ) at Task20260920Uc.g:43 called from 
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260920Uc.g:52
+type 'quit;' to quit to outer loop
+brk> Length(scons);
+154
+brk> tA;
+[ [ 3, 1, 2, 3, 2, 1, 1, 2 ], [ 4, 1, 1, 3, 3, 3, 2, 2 ] ]
+brk> quit;
+gap> Read("Task20260920Uc.g");
+3656 not geom [ false, 5 ] 
+4189 not geom [ false, 5 ] 
+7918 not geom [ false, 5 ] 
+10200 not geom [ false, 5 ] 
+11747 not geom [ false, 5 ] 
+15953 not geom [ false, 5 ] 
+16129 not geom [ false, 5 ] 
+16776 not geom [ false, 5 ] 
+17647 not geom [ false, 5 ] 
+26400 not geom [ false, 5 ] 
+27353 not geom [ false, 5 ] 
+31127 not geom [ false, 5 ] 
+32076 not geom [ false, 5 ] 
+38227 not geom [ false, 5 ] 
+39037 not geom [ false, 5 ] 
+39375 not geom [ false, 5 ] 
+Error, user interrupt in
+  return not IsPlistRep( r ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3619 called from 
+func( elm ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:1643 called from
+ForAny( mat, function ( r )
+      return not IsPlistRep( r );
+  end ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3619 called from
+MakeVectei( kk + 1, jj + 1 ) * redGrec.phi at SplitConsTools.g:122 called from
+WGraphToGramh( newadj, 10 ) at Task20260920Uc.g:29 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260920Uc.g:50
+you can 'return;'
+brk> quit;
+gap> Read("Task20260920Uc.g");
+154 [ [ 1, 1, 2, 1, 1, 1, 1, 3 ], [ 1, 3, 3, 2, 3, 2, 0, 1 ] ] 
+___ 49260 1 
+168 [ [ 3, 3, 3, 2, 1, 2, 1, 1 ], [ 2, 1, 2, 3, 2, 2, 4, 3 ] ] 
+___ 63715 2 
+Error, user interrupt in
+  Add( v, 0 ); at gapReads/LinearAlgebra.txt:29 called from 
+MakeZeroVect( dim ) at gapReads/LinearAlgebra.txt:39 called from
+MakeVectei( kk + 1, 1 ) at SplitConsTools.g:115 called from
+WGraphToGramh( newadj, 10 ) at Task20260920Uc.g:29 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260920Uc.g:50
+you can 'return;'
+brk> quit;
+gap> Read("Task20260920Uc.g");
+154 [ [ 2, 2, 2, 2, 1, 0, 0, 0 ], [ 1, 2, 2, 2, 3, 3, 2, 0 ] ] 
+___ 4487 1 
+168 [ [ 1, 1, 2, 3, 3, 2, 3, 3 ], [ 2, 2, 2, 1, 0, 1, 2, 1 ] ] 
+___ 17909 2 
+140 [ [ 3, 4, 3, 2, 1, 2, 2, 1 ], [ 2, 2, 1, 1, 2, 3, 3, 2 ] ] 
+___ 23534 3 
+140 [ [ 3, 1, 3, 3, 1, 2, 3, 3 ], [ 3, 2, 2, 2, 2, 3, 2, 1 ] ] 
+___ 38007 4 
+154 [ [ 2, 1, 2, 1, 0, 2, 2, 1 ], [ 2, 1, 2, 2, 2, 3, 3, 3 ] ] 
+___ 62888 5 
+152 [ [ 4, 1, 2, 3, 2, 3, 3, 3 ], [ 2, 4, 3, 2, 3, 3, 2, 3 ] ] 
+___ 88718 6 
+140 [ [ 2, 3, 1, 0, 1, 2, 2, 3 ], [ 3, 3, 3, 3, 2, 2, 3, 3 ] ] 
+___ 104178 7 
+154 [ [ 2, 2, 2, 1, 1, 1, 0, 1 ], [ 1, 1, 2, 2, 3, 4, 3, 1 ] ] 
+___ 293872 8 
+138 [ [ 3, 2, 2, 3, 3, 2, 2, 3 ], [ 1, 1, 1, 1, 2, 2, 1, 2 ] ] 
+___ 323487 9 
+136 [ [ 4, 4, 2, 4, 4, 2, 2, 2 ], [ 0, 1, 1, 1, 2, 1, 1, 1 ] ] 
+___ 361972 10 
+152 [ [ 3, 0, 1, 2, 2, 3, 2, 2 ], [ 2, 4, 4, 3, 3, 2, 1, 2 ] ] 
+___ 449351 11 
+152 [ [ 2, 1, 2, 3, 3, 1, 0, 1 ], [ 0, 2, 2, 1, 2, 1, 1, 2 ] ] 
+___ 465371 12 
+136 [ [ 1, 1, 0, 1, 2, 1, 1, 1 ], [ 0, 0, 2, 2, 4, 4, 2, 2 ] ] 
+___ 569505 13 
+Error, user interrupt in
+  return trn; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2087 called from 
+TransposedMatMutable( M ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matobj.gi:1259 called from
+TransposedMat( [ v * sQ ] ) at gapReads/LatticeTools.txt:40 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+...  at Task20260920Uc.g:51
+you can 'return;'
+brk> quit;
+gap> Read("Task20260920Uc.g");
+counter 10000 
+168 [ [ 3, 1, 3, 3, 1, 1, 1, 1 ], [ 1, 3, 2, 2, 3, 3, 3, 1 ] ] 
+___ 13565 1 
+counter 20000 
+counter 30000 
+counter 40000 
+counter 50000 
+counter 60000 
+counter 70000 
+counter 80000 
+counter 90000 
+counter 100000 
+counter 110000 
+counter 120000 
+counter 130000 
+counter 140000 
+counter 150000 
+counter 160000 
+counter 170000 
+counter 180000 
+154 [ [ 3, 0, 1, 3, 3, 3, 3, 3 ], [ 2, 2, 3, 4, 4, 3, 2, 1 ] ] 
+___ 186136 2 

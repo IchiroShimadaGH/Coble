@@ -1,0 +1,18 @@
+sessionnumb  20260920184718 
+gap> RandomMatFromL
+> ;
+function( r, c, L ) ... end
+gap> Read("Task20260920Ud.g");
+Syntax error: while parsing a 'for' loop: statement or 'od' expected in Task20260920Ud.g:27
+  for ii in [1..addnumb] do tB[ii][ii]:=-2; fi;
+                                            ^^
+gap> Read("Task20260920Ud.g");
+wrong global beep 88111 
+Error,  at gapReads/gaptools.txt:139 called from
+beep( 88111 ); at SplitConsTools.g:123 called from
+WGraphToGramh( newadj, 8 + addnumb ) at Task20260920Ud.g:29 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260920Ud.g:50
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> 
