@@ -1,6 +1,6 @@
 
 
-#Read("Task20260921Ub.g");
+#Read("Task20260921Vb.g");
 
 MakeEkk:=function(kk)
   local Ekk, ii, jj;
@@ -37,6 +37,49 @@ GetEkk:=function(kk)
     Add(Ekks, MakeEkk(Length(Ekks)+1));
   od;
   return(Ekks[kk]);
+end;
+
+
+Makeaddvs:=function(kk)
+  local addvs, task;
+  addvs:=[];
+  #
+  task:=function(jj, addv)
+    local aa, minflag;
+    if jj=kk then 
+      Add(addvs, List(addv));
+    else 
+      for aa in [0..4] do 
+        Add(addv, aa);
+        minflag:=true;
+        #
+        if List(addv, xx->4-xx)<addv then 
+          # the action of ss[jj]=1, ss[kk+1]=-1, tau=id gives a smaller element.
+          minflag:=false;
+        fi;
+        #
+        if minflag then 
+          task(jj+1, addv);
+        fi;
+        if aa<>Remove(addv) then beep(221221); fi; 
+      od;
+
+    fi;
+  end;
+  #
+  task(0, []);
+  #
+  return(addvs);
+end;
+
+
+addvss:=[];
+
+Getaddvs:=function(kk)
+  while Length(addvss)<kk do 
+    Add(addvss, Makeaddvs(Length(addvss)+1));
+  od;
+  return(addvss[kk]);
 end;
 
 
@@ -86,37 +129,7 @@ IsMinimal:=function(kk, wg)
 end;
 
 
-Makeaddvs:=function(kk)
-  local addvs, task;
-  addvs:=[];
-  #
-  task:=function(jj, addv)
-    local aa, minflag;
-    if jj=kk then 
-      Add(addvs, List(addv));
-    else 
-      for aa in [0..4] do 
-        Add(addv, aa);
-        minflag:=true;
-        #
-        if List(addv, xx->4-xx)<addv then 
-          # the action of ss[jj]=1, ss[kk+1]=-1, tau=id gives a smaller element.
-          minflag:=false;
-        fi;
-        #
-        if minflag then 
-          task(jj+1, addv);
-        fi;
-        if aa<>Remove(addv) then beep(221221); fi; 
-      od;
 
-    fi;
-  end;
-  #
-  task(0, []);
-  #
-  return(addvs);
-end;
 
 
 Read("SplitConsTools.g");
@@ -169,14 +182,14 @@ end;
 
 
 uptokk:=10;
-savename:="testresult";
+savename:="result20260921V";
 
 theresult:=[];
 
 thetask:=function(kk, wg)
   local addvs, addv, newwg, trec, tGram, th, isgeom, minflag, scons,
   nooverlatflag;
-  addvs:=Makeaddvs(kk);
+  addvs:=Getaddvs(kk);
   for addv in addvs do 
     newwg:=CopyAppend(wg, addv);
     trec:=NewWGraphToGramh(newwg, kk+1);
@@ -188,12 +201,14 @@ thetask:=function(kk, wg)
       if minflag<>false then 
         scons:=GetTotalSplcons(tGram, th);
         nooverlatflag:=NoOverlattice(tGram, th);
+        trec.wg:=newwg;
         trec.scons:=scons;
         trec.stabssize:=Length(minflag[2]);
         trec.nooverlatflag:=nooverlatflag;
         Add(theresult, trec);
-        Printn(Length(theresult), kk, Length(tGram),  
-                  Collected(newwg), Length(scons));
+        Printn("___no", Length(theresult));
+        Printn("kk", kk+1, "rho", Length(tGram),
+               "wgraph", Collected(newwg), "scons", Length(scons));
         savedataas(theresult, savename);
         if kk+1<=uptokk then
           thetask(kk+1, newwg);
@@ -203,8 +218,8 @@ thetask:=function(kk, wg)
   od;
 end;
 
-uptokk:=10;
-savename:="testresult";
+uptokk:=5;
+savename:="resultrho7";
 thetask(1, []);
 
 

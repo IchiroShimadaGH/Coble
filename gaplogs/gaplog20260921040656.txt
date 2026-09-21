@@ -61,4 +61,7 @@ you can 'return;' to continue
 brk> quit;
 gap> Length(specialadjsf[3105][2]);
 14
-gap> 
+gap> readdata("specialadjsf");;
+gap> Maximum(List(specialadjsf, xx->xx[1]));
+310
+gap> quit;

@@ -1,0 +1,4615 @@
+sessionnumb  20260921215607 
+gap> Read("Task20260921Ub.g");
+Syntax warning: Unbound global variable in Task20260921Ub.g:25
+  aa:=1+8*pos;
+  ^^
+Syntax warning: Unbound global variable in Task20260921Ub.g:131
+  pos:=0;
+  ^^^
+Syntax warning: Unbound global variable in Task20260921Ub.g:133
+    pos:=pos+1;
+    ^^^
+Syntax warning: Unbound global variable in Task20260921Ub.g:133
+    pos:=pos+1;
+         ^^^
+Syntax warning: Unbound global variable in Task20260921Ub.g:134
+    iijj:=Ekkiijj(kk, pos);
+                      ^^^
+Syntax warning: Unbound global variable in Task20260921Ub.g:186
+        nooverlatflag:=NoOverlattice(tGram, th);
+        ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in Task20260921Ub.g:189
+        trec.nooverlatflag:=nooverlatflag;
+                            ^^^^^^^^^^^^^
+Error, List Element: <list> must be a list (not the integer 1) in
+  ii := iijj[1]; at Task20260921Ub.g:19 called from 
+Ekkpos( kk, pos ) at Task20260921Ub.g:71 called from
+IsMinimal( kk + 1, newwg ) at Task20260921Ub.g:183 called from
+<function "thetask">( <arguments> )
+ called from read-eval loop at Task20260921Ub.g:204
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260921Ub.g");
+Syntax warning: Unbound global variable in Task20260921Ub.g:188
+        nooverlatflag:=NoOverlattice(tGram, th);
+        ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in Task20260921Ub.g:191
+        trec.nooverlatflag:=nooverlatflag;
+                            ^^^^^^^^^^^^^
+Error, List Element: <list> must be a list (not the integer 1) in
+  ii := iijj[1]; at Task20260921Ub.g:19 called from 
+Ekkpos( kk, pos ) at Task20260921Ub.g:71 called from
+IsMinimal( kk + 1, newwg ) at Task20260921Ub.g:185 called from
+<function "thetask">( <arguments> )
+ called from read-eval loop at Task20260921Ub.g:206
+type 'quit;' to quit to outer loop
+brk> iijj;
+1
+brk> quit;
+gap> Read("Task20260921Ub.g");
+Error, List Element: <list>[2] must have an assigned value in
+  return wg[pos]; at Task20260921Ub.g:64 called from 
+func( C[i] ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from
+List( poss, function ( pos )
+      return wg[pos];
+  end ) at Task20260921Ub.g:64 called from
+IsMinimal( kk + 1, newwg ) at Task20260921Ub.g:186 called from
+<function "thetask">( <arguments> )
+ called from read-eval loop at Task20260921Ub.g:207
+type 'quit;' to quit to outer loop
+brk> wg;
+[ 0 ]
+brk> poss;
+[ 2 ]
+brk> kk;
+2
+brk> Ekk;
+[ [ 1, 2 ] ]
+brk> tau;
+(1,2)
+brk> Ekkpos(Ekk, [2,1]);
+2
+brk> Ekk;
+[ [ 1, 2 ] ]
+brk> quit;
+gap> Read("Task20260921Ub.g");
+1 1 3 [ [ 0, 1 ] ] 3 
+2 2 4 [ [ 0, 3 ] ] 6 
+3 3 5 [ [ 0, 6 ] ] 10 
+4 4 6 [ [ 0, 10 ] ] 15 
+5 5 7 [ [ 0, 15 ] ] 21 
+6 6 8 [ [ 0, 21 ] ] 28 
+Error, user interrupt in
+  2 ^ (ii - 1) at Task20260921Ub.g:47 called from 
+Getss( mask, kk ) at Task20260921Ub.g:67 called from
+IsMinimal( kk + 1, newwg ) at Task20260921Ub.g:187 called from
+thetask( kk + 1, newwg ); at Task20260921Ub.g:199 called from
+thetask( kk + 1, newwg ); at Task20260921Ub.g:199 called from
+thetask( kk + 1, newwg ); at Task20260921Ub.g:199 called from
+...  at Task20260921Ub.g:208
+you can 'return;'
+brk> quit;
+gap> Read("Task20260921Ub.g");
+1 1 3 [ [ 0, 1 ] ] 3 
+2 2 4 [ [ 0, 3 ] ] 6 
+3 3 5 [ [ 0, 6 ] ] 10 
+4 4 6 [ [ 0, 10 ] ] 15 
+5 5 7 [ [ 0, 15 ] ] 21 
+Error, user interrupt in
+  2 ^ (ii - 1) at Task20260921Ub.g:47 called from 
+Getss( mask, kk ) at Task20260921Ub.g:67 called from
+IsMinimal( kk + 1, newwg ) at Task20260921Ub.g:187 called from
+thetask( kk + 1, newwg ); at Task20260921Ub.g:199 called from
+thetask( kk + 1, newwg ); at Task20260921Ub.g:199 called from
+thetask( kk + 1, newwg ); at Task20260921Ub.g:199 called from
+...  at Task20260921Ub.g:208
+you can 'return;'
+brk> qyut;
+Syntax warning: Unbound global variable in *errin*:1
+qyut;
+^^^^
+Error, Variable: 'qyut' must have a value in
+  2 ^ (ii - 1) at Task20260921Ub.g:47 called from 
+Getss( mask, kk ) at Task20260921Ub.g:67 called from
+IsMinimal( kk + 1, newwg ) at Task20260921Ub.g:187 called from
+thetask( kk + 1, newwg ); at Task20260921Ub.g:199 called from
+thetask( kk + 1, newwg ); at Task20260921Ub.g:199 called from
+thetask( kk + 1, newwg ); at Task20260921Ub.g:199 called from
+...  at *errin*:1
+brk> 
+brk> 
+brk> 
+brk> 
+brk> 
+brk> quit;
+gap> Read("Task20260921Va.g");
+___no 1 
+kk 1 rho 3 wgraph [ [ 0, 1 ] ] scons 3 
+___no 2 
+kk 2 rho 4 wgraph [ [ 0, 3 ] ] scons 6 
+___no 3 
+kk 3 rho 5 wgraph [ [ 0, 6 ] ] scons 10 
+___no 4 
+kk 4 rho 6 wgraph [ [ 0, 10 ] ] scons 15 
+___no 5 
+kk 5 rho 7 wgraph [ [ 0, 15 ] ] scons 21 
+___no 6 
+kk 6 rho 8 wgraph [ [ 0, 21 ] ] scons 28 
+Error, user interrupt in
+  return [ ii, jj ]; at Task20260921Va.g:30 called from 
+Ekkiijj( kk, pos ) at Task20260921Va.g:72 called from
+IsMinimal( kk + 1, newwg ) at Task20260921Va.g:187 called from
+thetask( kk + 1, newwg ); at Task20260921Va.g:200 called from
+thetask( kk + 1, newwg ); at Task20260921Va.g:200 called from
+thetask( kk + 1, newwg ); at Task20260921Va.g:200 called from
+...  at Task20260921Va.g:209
+you can 'return;'
+brk> newwg;
+[ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+brk> Length(newwg);
+28
+brk> 2^7*Factorial(7);
+645120
+brk> quit;
+gap> Read("Task20260921Va.g");
+___no 1 
+kk 2 rho 3 wgraph [ [ 0, 1 ] ] scons 3 
+___no 2 
+kk 3 rho 4 wgraph [ [ 0, 3 ] ] scons 6 
+___no 3 
+kk 4 rho 5 wgraph [ [ 0, 6 ] ] scons 10 
+___no 4 
+kk 5 rho 6 wgraph [ [ 0, 10 ] ] scons 15 
+___no 5 
+kk 6 rho 7 wgraph [ [ 0, 15 ] ] scons 21 
+___no 6 
+kk 6 rho 7 wgraph [ [ 0, 14 ], [ 1, 1 ] ] scons 20 
+___no 7 
+kk 6 rho 7 wgraph [ [ 0, 14 ], [ 2, 1 ] ] scons 30 
+___no 8 
+kk 6 rho 7 wgraph [ [ 0, 13 ], [ 1, 2 ] ] scons 19 
+___no 9 
+kk 6 rho 7 wgraph [ [ 0, 13 ], [ 1, 1 ], [ 2, 1 ] ] scons 25 
+___no 10 
+kk 6 rho 7 wgraph [ [ 0, 13 ], [ 2, 2 ] ] scons 36 
+___no 11 
+kk 6 rho 7 wgraph [ [ 0, 12 ], [ 1, 3 ] ] scons 18 
+___no 12 
+kk 6 rho 7 wgraph [ [ 0, 12 ], [ 1, 2 ], [ 2, 1 ] ] scons 21 
+___no 13 
+kk 6 rho 7 wgraph [ [ 0, 12 ], [ 1, 1 ], [ 2, 2 ] ] scons 25 
+___no 14 
+kk 6 rho 7 wgraph [ [ 0, 12 ], [ 2, 3 ] ] scons 30 
+___no 15 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 4 ] ] scons 17 
+___no 16 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 3 ], [ 2, 1 ] ] scons 18 
+___no 17 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 2 ], [ 2, 2 ] ] scons 19 
+___no 18 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 1 ], [ 2, 3 ] ] scons 20 
+___no 19 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 2, 4 ] ] scons 21 
+___no 20 
+kk 6 rho 6 wgraph [ [ 0, 11 ], [ 2, 3 ], [ 4, 1 ] ] scons 15 
+___no 21 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 5 ] ] scons 16 
+___no 22 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 2, 1 ] ] scons 16 
+___no 23 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 3, 1 ] ] scons 20 
+___no 24 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 16 
+___no 25 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 1 ], [ 3, 1 ] ] scons 19 
+___no 26 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 3, 2 ] ] scons 25 
+___no 27 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 3 ] ] scons 16 
+___no 28 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 2 ], [ 3, 1 ] ] scons 18 
+___no 29 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 1 ], [ 3, 2 ] ] scons 21 
+___no 30 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 1 ], [ 2, 4 ] ] scons 16 
+___no 31 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 1 ], [ 2, 3 ], [ 3, 1 ] ] scons 17 
+___no 32 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 2, 5 ] ] scons 16 
+___no 33 
+kk 5 rho 6 wgraph [ [ 0, 9 ], [ 1, 1 ] ] scons 14 
+___no 34 
+kk 6 rho 7 wgraph [ [ 0, 12 ], [ 1, 3 ] ] scons 18 
+___no 35 
+kk 6 rho 7 wgraph [ [ 0, 12 ], [ 1, 2 ], [ 2, 1 ] ] scons 28 
+___no 36 
+kk 6 rho 7 wgraph [ [ 0, 13 ], [ 1, 2 ] ] scons 20 
+___no 37 
+kk 6 rho 7 wgraph [ [ 0, 12 ], [ 1, 3 ] ] scons 18 
+___no 38 
+kk 6 rho 7 wgraph [ [ 0, 12 ], [ 1, 2 ], [ 2, 1 ] ] scons 21 
+___no 39 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 4 ] ] scons 17 
+___no 40 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 3 ], [ 2, 1 ] ] scons 21 
+___no 41 
+kk 6 rho 7 wgraph [ [ 0, 12 ], [ 1, 2 ], [ 2, 1 ] ] scons 25 
+___no 42 
+kk 6 rho 7 wgraph [ [ 0, 12 ], [ 1, 1 ], [ 2, 2 ] ] scons 28 
+___no 43 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 3 ], [ 2, 1 ] ] scons 20 
+___no 44 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 2 ], [ 2, 2 ] ] scons 25 
+___no 45 
+kk 6 rho 7 wgraph [ [ 0, 12 ], [ 1, 3 ] ] scons 20 
+___no 46 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 4 ] ] scons 17 
+___no 47 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 3 ], [ 2, 1 ] ] scons 18 
+___no 48 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 5 ] ] scons 16 
+___no 49 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 2, 1 ] ] scons 17 
+___no 50 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 20 
+___no 51 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 3 ], [ 2, 1 ] ] scons 21 
+___no 52 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 2 ], [ 2, 2 ] ] scons 21 
+___no 53 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 2, 1 ] ] scons 17 
+___no 54 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 18 
+___no 55 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 3 ] ] scons 20 
+___no 56 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 2 ], [ 2, 2 ] ] scons 28 
+___no 57 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 1 ], [ 2, 3 ] ] scons 25 
+___no 58 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 18 
+___no 59 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 3 ] ] scons 19 
+___no 60 
+kk 6 rho 6 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 2 ], [ 4, 1 ] ] scons 14 
+___no 61 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 1 ], [ 2, 4 ] ] scons 20 
+___no 62 
+kk 6 rho 6 wgraph [ [ 0, 10 ], [ 1, 1 ], [ 2, 3 ], [ 4, 1 ] ] scons 14 
+___no 63 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 4 ] ] scons 20 
+___no 64 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 5 ] ] scons 16 
+___no 65 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 2, 1 ] ] scons 16 
+___no 66 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 3, 1 ] ] scons 20 
+___no 67 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 6 ] ] scons 15 
+___no 68 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 5 ], [ 2, 1 ] ] scons 15 
+___no 69 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 5 ], [ 3, 1 ] ] scons 18 
+___no 70 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 15 
+___no 71 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 1 ], [ 3, 1 ] ] scons 21 
+___no 72 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 2, 1 ] ] scons 18 
+___no 73 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 17 
+___no 74 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 1 ], [ 3, 1 ] ] scons 20 
+___no 75 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 5 ], [ 2, 1 ] ] scons 15 
+___no 76 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 15 
+___no 77 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 1 ], [ 3, 1 ] ] scons 17 
+___no 78 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 15 
+___no 79 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] scons 18 
+___no 80 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 5 ], [ 3, 1 ] ] scons 20 
+___no 81 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 1 ], [ 3, 1 ] ] scons 18 
+___no 82 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 3, 2 ] ] scons 21 
+___no 83 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] scons 17 
+___no 84 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 1 ], [ 3, 2 ] ] scons 21 
+___no 85 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 21 
+___no 86 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 3 ] ] scons 18 
+___no 87 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 2 ], [ 3, 1 ] ] scons 20 
+___no 88 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 15 
+___no 89 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 15 
+___no 90 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] scons 16 
+___no 91 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 4 ] ] scons 15 
+___no 92 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 3 ], [ 3, 1 ] ] scons 16 
+___no 93 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 2 ], [ 3, 2 ] ] scons 20 
+___no 94 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 1 ], [ 3, 1 ] ] scons 20 
+___no 95 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] scons 17 
+___no 96 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 1 ], [ 3, 2 ] ] scons 18 
+___no 97 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 3 ], [ 3, 1 ] ] scons 16 
+___no 98 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 3 ] ] scons 25 
+___no 99 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 1 ], [ 2, 4 ] ] scons 19 
+___no 100 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 1 ], [ 2, 3 ], [ 3, 1 ] ] scons 20 
+___no 101 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 15 
+___no 102 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 4 ] ] scons 15 
+___no 103 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 3 ], [ 3, 1 ] ] scons 15 
+___no 104 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 1 ], [ 2, 5 ] ] scons 15 
+___no 105 
+kk 5 rho 6 wgraph [ [ 0, 9 ], [ 2, 1 ] ] scons 20 
+___no 106 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 3 ], [ 2, 1 ] ] scons 24 
+___no 107 
+kk 6 rho 6 wgraph [ [ 0, 13 ], [ 2, 2 ] ] scons 20 
+___no 108 
+kk 6 rho 7 wgraph [ [ 0, 12 ], [ 2, 3 ] ] scons 36 
+___no 109 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 2 ], [ 2, 2 ] ] scons 28 
+___no 110 
+kk 6 rho 6 wgraph [ [ 0, 11 ], [ 2, 4 ] ] scons 20 
+___no 111 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 3 ], [ 2, 1 ] ] scons 25 
+___no 112 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 2 ], [ 2, 2 ] ] scons 24 
+___no 113 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 2, 1 ] ] scons 22 
+___no 114 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 25 
+___no 115 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 1 ], [ 2, 3 ] ] scons 28 
+___no 116 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 24 
+___no 117 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 3 ] ] scons 25 
+___no 118 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 2, 4 ] ] scons 36 
+___no 119 
+kk 6 rho 6 wgraph [ [ 0, 11 ], [ 2, 3 ], [ 4, 1 ] ] scons 20 
+___no 120 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 3 ] ] scons 28 
+___no 121 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 1 ], [ 2, 4 ] ] scons 25 
+___no 122 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 2, 5 ] ] scons 30 
+___no 123 
+kk 6 rho 6 wgraph [ [ 0, 10 ], [ 2, 4 ], [ 4, 1 ] ] scons 20 
+___no 124 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 2, 1 ] ] scons 25 
+___no 125 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 22 
+___no 126 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 1 ], [ 3, 1 ] ] scons 25 
+___no 127 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 5 ], [ 2, 1 ] ] scons 21 
+___no 128 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 21 
+___no 129 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 1 ], [ 3, 1 ] ] scons 28 
+___no 130 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 24 
+___no 131 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 3 ] ] scons 24 
+___no 132 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 2 ], [ 3, 1 ] ] scons 25 
+___no 133 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 22 
+___no 134 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 21 
+___no 135 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] scons 24 
+___no 136 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 4 ] ] scons 22 
+___no 137 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] scons 25 
+___no 138 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 1 ], [ 3, 2 ] ] scons 28 
+___no 139 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 3 ], [ 3, 1 ] ] scons 24 
+___no 140 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 1 ], [ 2, 4 ] ] scons 28 
+___no 141 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 1 ], [ 2, 3 ], [ 3, 1 ] ] scons 25 
+___no 142 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 24 
+___no 143 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 4 ] ] scons 21 
+___no 144 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 3 ], [ 3, 1 ] ] scons 22 
+___no 145 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 1 ], [ 2, 5 ] ] scons 21 
+___no 146 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 1 ], [ 2, 4 ], [ 3, 1 ] ] scons 25 
+___no 147 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 3 ], [ 3, 1 ] ] scons 25 
+___no 148 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 2 ], [ 3, 2 ] ] scons 24 
+___no 149 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 1 ], [ 2, 4 ], [ 3, 1 ] ] scons 22 
+___no 150 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 2, 5 ] ] scons 36 
+___no 151 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 2, 4 ], [ 3, 1 ] ] scons 25 
+___no 152 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 2, 4 ], [ 4, 1 ] ] scons 30 
+___no 153 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 4 ] ] scons 28 
+___no 154 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 1 ], [ 2, 5 ] ] scons 21 
+___no 155 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 1 ], [ 2, 4 ], [ 3, 1 ] ] scons 21 
+___no 156 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 2, 6 ] ] scons 21 
+___no 157 
+kk 5 rho 6 wgraph [ [ 0, 8 ], [ 1, 2 ] ] scons 13 
+___no 158 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 4 ] ] scons 17 
+___no 159 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 5 ] ] scons 16 
+___no 160 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 2, 1 ] ] scons 21 
+___no 161 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 3 ], [ 2, 1 ] ] scons 20 
+___no 162 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 2, 1 ] ] scons 20 
+___no 163 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 2 ], [ 2, 2 ] ] scons 24 
+___no 164 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 25 
+___no 165 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 4 ] ] scons 18 
+___no 166 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 5 ] ] scons 16 
+___no 167 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 2, 1 ] ] scons 17 
+___no 168 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 3 ], [ 2, 1 ] ] scons 22 
+___no 169 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 2, 1 ] ] scons 19 
+___no 170 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 22 
+___no 171 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 5 ] ] scons 16 
+___no 172 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 6 ] ] scons 15 
+___no 173 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 5 ], [ 2, 1 ] ] scons 16 
+___no 174 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 2, 1 ] ] scons 17 
+___no 175 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 5 ], [ 2, 1 ] ] scons 16 
+___no 176 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 18 
+___no 177 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 18 
+___no 178 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 17 
+___no 179 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 20 
+___no 180 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 2, 1 ] ] scons 20 
+___no 181 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 20 
+___no 182 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 24 
+___no 183 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 3 ] ] scons 25 
+___no 184 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 2, 1 ] ] scons 21 
+___no 185 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 5 ], [ 2, 1 ] ] scons 16 
+___no 186 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 17 
+___no 187 
+kk 6 rho 6 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 1 ], [ 4, 1 ] ] scons 13 
+___no 188 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 21 
+___no 189 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 17 
+___no 190 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 18 
+___no 191 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 3 ] ] scons 21 
+___no 192 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 18 
+___no 193 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 4 ] ] scons 19 
+___no 194 
+kk 6 rho 6 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 2 ], [ 4, 1 ] ] scons 13 
+___no 195 
+kk 6 rho 6 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 3 ], [ 4, 1 ] ] scons 13 
+___no 196 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 4 ] ] scons 22 
+___no 197 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 5 ] ] scons 16 
+___no 198 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 2, 1 ] ] scons 16 
+___no 199 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 3, 1 ] ] scons 20 
+___no 200 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 5 ] ] scons 18 
+___no 201 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 6 ] ] scons 15 
+___no 202 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 5 ], [ 2, 1 ] ] scons 15 
+___no 203 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 5 ], [ 3, 1 ] ] scons 18 
+___no 204 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 2, 1 ] ] scons 20 
+___no 205 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 5 ], [ 2, 1 ] ] scons 16 
+___no 206 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 16 
+___no 207 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 1 ], [ 3, 1 ] ] scons 22 
+___no 208 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 6 ] ] scons 15 
+___no 209 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 7 ] ] scons 14 
+___no 210 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 6 ], [ 2, 1 ] ] scons 14 
+___no 211 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 6 ], [ 3, 1 ] ] scons 16 
+___no 212 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 5 ], [ 2, 1 ] ] scons 15 
+___no 213 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 6 ], [ 2, 1 ] ] scons 14 
+___no 214 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 2 ] ] scons 14 
+___no 215 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 17 
+___no 216 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 5 ], [ 3, 1 ] ] scons 20 
+___no 217 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 6 ], [ 3, 1 ] ] scons 17 
+___no 218 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 18 
+___no 219 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 15 
+___no 220 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 2 ] ] scons 14 
+___no 221 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 14 
+___no 222 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 18 
+___no 223 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 1 ], [ 3, 1 ] ] scons 18 
+___no 224 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 16 
+___no 225 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 17 
+___no 226 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 3, 2 ] ] scons 22 
+___no 227 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 3, 2 ] ] scons 19 
+___no 228 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 1 ], [ 3, 2 ] ] scons 22 
+___no 229 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 2, 1 ] ] scons 22 
+___no 230 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 19 
+___no 231 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 1 ], [ 3, 1 ] ] scons 22 
+___no 232 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 5 ], [ 2, 1 ] ] scons 17 
+___no 233 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 16 
+___no 234 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 1 ], [ 3, 1 ] ] scons 18 
+___no 235 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 18 
+___no 236 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 17 
+___no 237 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] scons 20 
+___no 238 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 5 ], [ 2, 1 ] ] scons 18 
+___no 239 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 6 ], [ 2, 1 ] ] scons 14 
+___no 240 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 2 ] ] scons 14 
+___no 241 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 15 
+___no 242 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 17 
+___no 243 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 2 ] ] scons 14 
+___no 244 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 14 
+___no 245 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 15 
+___no 246 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 1 ], [ 3, 1 ] ] scons 22 
+___no 247 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 16 
+___no 248 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 16 
+___no 249 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 1 ], [ 3, 2 ] ] scons 20 
+___no 250 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 16 
+___no 251 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 14 
+___no 252 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 4 ] ] scons 14 
+___no 253 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 15 
+___no 254 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] scons 18 
+___no 255 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 15 
+___no 256 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 15 
+___no 257 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 2 ], [ 3, 2 ] ] scons 18 
+___no 258 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 1 ], [ 3, 2 ] ] scons 20 
+___no 259 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 1 ], [ 3, 2 ] ] scons 16 
+___no 260 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 2 ], [ 3, 2 ] ] scons 16 
+___no 261 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 1 ], [ 3, 3 ] ] scons 22 
+___no 262 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 6 ], [ 3, 1 ] ] scons 20 
+___no 263 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 17 
+___no 264 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 3, 2 ] ] scons 18 
+___no 265 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 18 
+___no 266 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 16 
+___no 267 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 1 ], [ 3, 2 ] ] scons 17 
+___no 268 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 3, 2 ] ] scons 22 
+___no 269 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 1 ], [ 3, 2 ] ] scons 19 
+___no 270 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 16 
+___no 271 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 15 
+___no 272 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 3 ] ] scons 24 
+___no 273 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 2 ], [ 3, 1 ] ] scons 25 
+___no 274 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 21 
+___no 275 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 17 
+___no 276 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] scons 18 
+___no 277 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 21 
+___no 278 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 4 ] ] scons 18 
+___no 279 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 3 ], [ 3, 1 ] ] scons 19 
+___no 280 
+kk 6 rho 6 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 3 ], [ 4, 1 ] ] scons 13 
+___no 281 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 24 
+___no 282 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 2 ] ] scons 14 
+___no 283 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 14 
+___no 284 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 14 
+___no 285 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 4, 1 ] ] scons 19 
+___no 286 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 20 
+___no 287 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 14 
+___no 288 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 4 ] ] scons 14 
+___no 289 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 14 
+___no 290 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 4, 1 ] ] scons 18 
+___no 291 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] scons 25 
+___no 292 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 15 
+___no 293 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 15 
+___no 294 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 4 ] ] scons 17 
+___no 295 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 4 ] ] scons 14 
+___no 296 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 5 ] ] scons 14 
+___no 297 
+kk 5 rho 6 wgraph [ [ 0, 8 ], [ 1, 1 ], [ 2, 1 ] ] scons 16 
+___no 298 
+kk 6 rho 6 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 3 ] ] scons 16 
+___no 299 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 2 ], [ 2, 2 ] ] scons 24 
+___no 300 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 24 
+___no 301 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 1 ], [ 2, 3 ] ] scons 28 
+___no 302 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 2 ], [ 2, 2 ] ] scons 24 
+___no 303 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 24 
+___no 304 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 2, 1 ] ] scons 20 
+___no 305 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 5 ], [ 2, 1 ] ] scons 18 
+___no 306 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 20 
+___no 307 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 20 
+___no 308 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 20 
+___no 309 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 24 
+___no 310 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 3 ] ] scons 24 
+___no 311 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 22 
+___no 312 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 19 
+___no 313 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 22 
+___no 314 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 3 ] ] scons 21 
+___no 315 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 21 
+___no 316 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 3 ] ] scons 28 
+___no 317 
+kk 6 rho 6 wgraph [ [ 0, 11 ], [ 1, 2 ], [ 2, 2 ] ] scons 16 
+___no 318 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 3 ] ] scons 24 
+___no 319 
+kk 6 rho 6 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 2 ], [ 4, 1 ] ] scons 16 
+___no 320 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 20 
+___no 321 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 20 
+___no 322 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 3 ] ] scons 25 
+___no 323 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 20 
+___no 324 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 4 ] ] scons 25 
+___no 325 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 1 ], [ 2, 4 ] ] scons 28 
+___no 326 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 21 
+___no 327 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 4 ] ] scons 21 
+___no 328 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 1 ], [ 2, 4 ] ] scons 25 
+___no 329 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 4 ] ] scons 21 
+___no 330 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 1 ], [ 2, 5 ] ] scons 25 
+___no 331 
+kk 6 rho 6 wgraph [ [ 0, 10 ], [ 1, 1 ], [ 2, 3 ], [ 4, 1 ] ] scons 16 
+___no 332 
+kk 6 rho 6 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 3 ], [ 4, 1 ] ] scons 16 
+___no 333 
+kk 6 rho 6 wgraph [ [ 0, 9 ], [ 1, 1 ], [ 2, 4 ], [ 4, 1 ] ] scons 16 
+___no 334 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 2, 1 ] ] scons 24 
+___no 335 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 5 ], [ 2, 1 ] ] scons 18 
+___no 336 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 18 
+___no 337 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 1 ], [ 3, 1 ] ] scons 24 
+___no 338 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 22 
+___no 339 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 19 
+___no 340 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 22 
+___no 341 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 5 ], [ 2, 1 ] ] scons 20 
+___no 342 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 18 
+___no 343 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 1 ], [ 3, 1 ] ] scons 20 
+___no 344 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 5 ], [ 2, 1 ] ] scons 20 
+___no 345 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 6 ], [ 2, 1 ] ] scons 17 
+___no 346 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 2 ] ] scons 17 
+___no 347 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 20 
+___no 348 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 18 
+___no 349 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 2 ] ] scons 17 
+___no 350 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 18 
+___no 351 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 1 ], [ 3, 1 ] ] scons 21 
+___no 352 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 21 
+___no 353 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 22 
+___no 354 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 19 
+___no 355 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] scons 22 
+___no 356 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 21 
+___no 357 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 2 ] ] scons 17 
+___no 358 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 17 
+___no 359 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 21 
+___no 360 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 18 
+___no 361 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 17 
+___no 362 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 4 ] ] scons 18 
+___no 363 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] scons 20 
+___no 364 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 20 
+___no 365 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 21 
+___no 366 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 21 
+___no 367 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] scons 22 
+___no 368 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 19 
+___no 369 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 22 
+___no 370 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 1 ], [ 3, 2 ] ] scons 24 
+___no 371 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 1 ], [ 3, 2 ] ] scons 24 
+___no 372 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 3 ] ] scons 24 
+___no 373 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 2 ], [ 3, 1 ] ] scons 24 
+___no 374 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 22 
+___no 375 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 19 
+___no 376 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] scons 22 
+___no 377 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 21 
+___no 378 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 4 ] ] scons 21 
+___no 379 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 20 
+___no 380 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] scons 20 
+___no 381 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 2 ] ] scons 18 
+___no 382 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 17 
+___no 383 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 18 
+___no 384 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 21 
+___no 385 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 17 
+___no 386 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 4 ] ] scons 17 
+___no 387 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 21 
+___no 388 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] scons 22 
+___no 389 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 19 
+___no 390 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 22 
+___no 391 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 4 ] ] scons 21 
+___no 392 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 3 ], [ 3, 1 ] ] scons 21 
+___no 393 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 18 
+___no 394 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 4 ] ] scons 17 
+___no 395 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 18 
+___no 396 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 4 ] ] scons 20 
+___no 397 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 4 ] ] scons 17 
+___no 398 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 5 ] ] scons 17 
+___no 399 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 20 
+___no 400 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 3 ], [ 3, 1 ] ] scons 20 
+___no 401 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 18 
+___no 402 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 20 
+___no 403 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 22 
+___no 404 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 19 
+___no 405 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 2 ], [ 3, 2 ] ] scons 22 
+___no 406 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 3 ], [ 3, 1 ] ] scons 24 
+___no 407 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 18 
+___no 408 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 18 
+___no 409 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 3 ], [ 3, 2 ] ] scons 24 
+___no 410 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 2 ], [ 3, 2 ] ] scons 22 
+___no 411 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 2 ], [ 3, 2 ] ] scons 19 
+___no 412 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 3 ], [ 3, 2 ] ] scons 22 
+___no 413 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 21 
+___no 414 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 1 ], [ 3, 2 ] ] scons 21 
+___no 415 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 22 
+___no 416 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 19 
+___no 417 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 2 ], [ 3, 2 ] ] scons 22 
+___no 418 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 1 ], [ 3, 2 ] ] scons 24 
+___no 419 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 2 ], [ 3, 2 ] ] scons 24 
+___no 420 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 20 
+___no 421 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 2 ], [ 3, 2 ] ] scons 20 
+___no 422 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 20 
+___no 423 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 18 
+___no 424 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 1 ], [ 2, 3 ], [ 3, 1 ] ] scons 28 
+___no 425 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 4 ] ] scons 21 
+___no 426 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 3 ], [ 3, 1 ] ] scons 21 
+___no 427 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 4 ] ] scons 25 
+___no 428 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 1 ], [ 2, 5 ] ] scons 21 
+___no 429 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 1 ], [ 2, 4 ], [ 3, 1 ] ] scons 25 
+___no 430 
+kk 6 rho 6 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 3 ], [ 4, 1 ] ] scons 16 
+___no 431 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 4 ] ] scons 25 
+___no 432 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 3 ], [ 3, 1 ] ] scons 20 
+___no 433 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 3 ], [ 4, 1 ] ] scons 25 
+___no 434 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 21 
+___no 435 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 4 ] ] scons 17 
+___no 436 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 17 
+___no 437 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 4, 1 ] ] scons 21 
+___no 438 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 4 ] ] scons 28 
+___no 439 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 4 ] ] scons 17 
+___no 440 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 5 ] ] scons 17 
+___no 441 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 17 
+___no 442 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 4 ], [ 4, 1 ] ] scons 28 
+___no 443 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 3 ], [ 3, 1 ] ] scons 24 
+___no 444 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 18 
+___no 445 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 18 
+___no 446 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 3 ], [ 3, 2 ] ] scons 24 
+___no 447 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 1 ], [ 2, 5 ] ] scons 25 
+___no 448 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 1 ], [ 2, 4 ], [ 3, 1 ] ] scons 21 
+___no 449 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 1 ], [ 2, 4 ], [ 4, 1 ] ] scons 25 
+___no 450 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 4 ] ] scons 20 
+___no 451 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 5 ] ] scons 17 
+___no 452 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 17 
+___no 453 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 4 ], [ 4, 1 ] ] scons 20 
+___no 454 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 1 ], [ 2, 5 ] ] scons 24 
+___no 455 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 5 ] ] scons 17 
+___no 456 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 1 ], [ 2, 6 ] ] scons 17 
+___no 457 
+kk 5 rho 6 wgraph [ [ 0, 8 ], [ 2, 2 ] ] scons 20 
+___no 458 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 2, 4 ] ] scons 36 
+___no 459 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 25 
+___no 460 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 22 
+___no 461 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 25 
+___no 462 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 3 ] ] scons 25 
+___no 463 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 24 
+___no 464 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 1 ], [ 2, 4 ] ] scons 25 
+___no 465 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 4 ] ] scons 28 
+___no 466 
+kk 6 rho 6 wgraph [ [ 0, 11 ], [ 2, 4 ] ] scons 20 
+___no 467 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 2, 5 ] ] scons 36 
+___no 468 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 25 
+___no 469 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 4 ] ] scons 24 
+___no 470 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 4 ] ] scons 25 
+___no 471 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 1 ], [ 2, 5 ] ] scons 28 
+___no 472 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 2, 5 ] ] scons 30 
+___no 473 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 1 ], [ 2, 5 ] ] scons 25 
+___no 474 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 2, 6 ] ] scons 36 
+___no 475 
+kk 6 rho 6 wgraph [ [ 0, 10 ], [ 2, 4 ], [ 4, 1 ] ] scons 20 
+___no 476 
+kk 6 rho 6 wgraph [ [ 0, 9 ], [ 2, 5 ], [ 4, 1 ] ] scons 20 
+___no 477 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 25 
+___no 478 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 22 
+___no 479 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] scons 25 
+___no 480 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 25 
+___no 481 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 4 ] ] scons 24 
+___no 482 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 28 
+___no 483 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 2 ] ] scons 21 
+___no 484 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 21 
+___no 485 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 25 
+___no 486 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 24 
+___no 487 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 21 
+___no 488 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 4 ] ] scons 22 
+___no 489 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] scons 28 
+___no 490 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 25 
+___no 491 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 4 ] ] scons 22 
+___no 492 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 4 ] ] scons 21 
+___no 493 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 5 ] ] scons 24 
+___no 494 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 3 ], [ 3, 1 ] ] scons 24 
+___no 495 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 25 
+___no 496 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 2 ], [ 3, 2 ] ] scons 28 
+___no 497 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 4 ] ] scons 25 
+___no 498 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 3 ], [ 3, 1 ] ] scons 24 
+___no 499 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 1 ], [ 2, 5 ] ] scons 25 
+___no 500 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 1 ], [ 2, 4 ], [ 3, 1 ] ] scons 28 
+___no 501 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 24 
+___no 502 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 4 ] ] scons 21 
+___no 503 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 22 
+___no 504 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 4 ] ] scons 22 
+___no 505 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 5 ] ] scons 21 
+___no 506 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 24 
+___no 507 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 24 
+___no 508 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 25 
+___no 509 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 1 ], [ 2, 5 ] ] scons 25 
+___no 510 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 5 ] ] scons 21 
+___no 511 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 1 ], [ 2, 6 ] ] scons 21 
+___no 512 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 1 ], [ 2, 5 ], [ 3, 1 ] ] scons 28 
+___no 513 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 1 ], [ 2, 4 ], [ 3, 1 ] ] scons 25 
+___no 514 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 22 
+___no 515 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 1 ], [ 2, 5 ], [ 3, 1 ] ] scons 25 
+___no 516 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 1 ], [ 2, 3 ], [ 3, 2 ] ] scons 25 
+___no 517 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 3 ], [ 3, 2 ] ] scons 24 
+___no 518 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 28 
+___no 519 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 2 ], [ 3, 2 ] ] scons 25 
+___no 520 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 24 
+___no 521 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 3 ], [ 3, 2 ] ] scons 25 
+___no 522 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 3 ], [ 3, 2 ] ] scons 28 
+___no 523 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 25 
+___no 524 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 1 ], [ 2, 5 ], [ 3, 1 ] ] scons 22 
+___no 525 
+kk 6 rho 6 wgraph [ [ 0, 10 ], [ 2, 5 ] ] scons 20 
+___no 526 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 2, 4 ], [ 4, 1 ] ] scons 36 
+___no 527 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 1 ], [ 2, 4 ], [ 3, 1 ] ] scons 25 
+___no 528 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 1 ], [ 2, 4 ], [ 4, 1 ] ] scons 28 
+___no 529 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 2, 6 ] ] scons 30 
+___no 530 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 2, 5 ], [ 3, 1 ] ] scons 25 
+___no 531 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 2, 5 ], [ 4, 1 ] ] scons 36 
+___no 532 
+kk 6 rho 6 wgraph [ [ 0, 9 ], [ 2, 5 ], [ 4, 1 ] ] scons 20 
+___no 533 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 5 ] ] scons 22 
+___no 534 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 21 
+___no 535 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 4 ], [ 4, 1 ] ] scons 24 
+___no 536 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 5 ] ] scons 25 
+___no 537 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 1 ], [ 2, 6 ] ] scons 21 
+___no 538 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 1 ], [ 2, 5 ], [ 3, 1 ] ] scons 21 
+___no 539 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 1 ], [ 2, 5 ], [ 4, 1 ] ] scons 28 
+___no 540 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 25 
+___no 541 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 1 ], [ 2, 5 ], [ 3, 1 ] ] scons 22 
+___no 542 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 2, 6 ] ] scons 36 
+___no 543 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 1 ], [ 2, 6 ] ] scons 21 
+___no 544 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 2, 7 ] ] scons 21 
+___no 545 
+kk 5 rho 6 wgraph [ [ 0, 7 ], [ 1, 3 ] ] scons 12 
+___no 546 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 6 ] ] scons 15 
+___no 547 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 7 ] ] scons 14 
+___no 548 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 6 ], [ 2, 1 ] ] scons 15 
+___no 549 
+kk 6 rho 6 wgraph [ [ 0, 8 ], [ 1, 6 ], [ 4, 1 ] ] scons 12 
+___no 550 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 5 ], [ 2, 1 ] ] scons 16 
+___no 551 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 6 ], [ 2, 1 ] ] scons 15 
+___no 552 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 2 ] ] scons 16 
+___no 553 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 17 
+___no 554 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 2 ] ] scons 16 
+___no 555 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 17 
+___no 556 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 18 
+___no 557 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 17 
+___no 558 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 4 ] ] scons 18 
+___no 559 
+kk 6 rho 6 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 4, 1 ] ] scons 12 
+___no 560 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 6 ] ] scons 16 
+___no 561 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 7 ] ] scons 14 
+___no 562 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 6 ], [ 2, 1 ] ] scons 14 
+___no 563 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 6 ], [ 3, 1 ] ] scons 16 
+___no 564 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 5 ], [ 2, 1 ] ] scons 18 
+___no 565 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 6 ], [ 2, 1 ] ] scons 15 
+___no 566 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 2 ] ] scons 15 
+___no 567 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 18 
+___no 568 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 20 
+___no 569 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 2 ] ] scons 16 
+___no 570 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 16 
+___no 571 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 20 
+___no 572 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 7 ] ] scons 14 
+___no 573 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 8 ] ] scons 13 
+___no 574 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 7 ], [ 2, 1 ] ] scons 13 
+___no 575 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 7 ], [ 3, 1 ] ] scons 14 
+___no 576 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 6 ], [ 2, 1 ] ] scons 14 
+___no 577 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 7 ], [ 2, 1 ] ] scons 13 
+___no 578 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 6 ], [ 2, 2 ] ] scons 13 
+___no 579 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 6 ], [ 2, 1 ], [ 3, 1 ] ] scons 14 
+___no 580 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 6 ], [ 3, 1 ] ] scons 20 
+___no 581 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 7 ], [ 3, 1 ] ] scons 16 
+___no 582 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 6 ], [ 2, 1 ], [ 3, 1 ] ] scons 16 
+___no 583 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 6 ], [ 3, 2 ] ] scons 20 
+___no 584 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 2 ] ] scons 14 
+___no 585 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 6 ], [ 2, 2 ] ] scons 13 
+___no 586 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 3 ] ] scons 13 
+___no 587 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 14 
+___no 588 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 18 
+___no 589 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 6 ], [ 2, 1 ], [ 3, 1 ] ] scons 15 
+___no 590 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 15 
+___no 591 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 1 ], [ 3, 2 ] ] scons 18 
+___no 592 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 3, 2 ] ] scons 24 
+___no 593 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 6 ], [ 3, 2 ] ] scons 18 
+___no 594 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 1 ], [ 3, 2 ] ] scons 18 
+___no 595 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 3, 3 ] ] scons 24 
+___no 596 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 14 
+___no 597 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 3 ] ] scons 13 
+___no 598 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 4 ] ] scons 13 
+___no 599 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 14 
+___no 600 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 16 
+___no 601 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 14 
+___no 602 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 14 
+___no 603 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] scons 16 
+___no 604 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 1 ], [ 3, 2 ] ] scons 18 
+___no 605 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 1 ], [ 3, 2 ] ] scons 15 
+___no 606 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] scons 15 
+___no 607 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 1 ], [ 3, 3 ] ] scons 18 
+___no 608 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 3, 3 ] ] scons 20 
+___no 609 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 3, 3 ] ] scons 16 
+___no 610 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 1 ], [ 3, 3 ] ] scons 16 
+___no 611 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 3, 4 ] ] scons 20 
+___no 612 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 6 ], [ 2, 1 ] ] scons 16 
+___no 613 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 2 ] ] scons 15 
+___no 614 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 16 
+___no 615 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 2 ] ] scons 17 
+___no 616 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 16 
+___no 617 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 17 
+___no 618 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 18 
+___no 619 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 4 ] ] scons 17 
+___no 620 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 18 
+___no 621 
+kk 6 rho 6 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 4, 1 ] ] scons 12 
+___no 622 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 6 ], [ 2, 1 ] ] scons 18 
+___no 623 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 7 ], [ 2, 1 ] ] scons 13 
+___no 624 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 6 ], [ 2, 2 ] ] scons 13 
+___no 625 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 6 ], [ 2, 1 ], [ 3, 1 ] ] scons 13 
+___no 626 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 6 ], [ 2, 1 ], [ 4, 1 ] ] scons 18 
+___no 627 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 2 ] ] scons 17 
+___no 628 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 6 ], [ 2, 2 ] ] scons 13 
+___no 629 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 3 ] ] scons 13 
+___no 630 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 13 
+___no 631 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 2 ], [ 4, 1 ] ] scons 17 
+___no 632 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 25 
+___no 633 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 6 ], [ 2, 1 ], [ 3, 1 ] ] scons 15 
+___no 634 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 15 
+___no 635 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 1 ], [ 3, 2 ] ] scons 15 
+___no 636 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ] ] scons 25 
+___no 637 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 16 
+___no 638 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 3 ] ] scons 13 
+___no 639 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 4 ] ] scons 13 
+___no 640 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 13 
+___no 641 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 3 ], [ 4, 1 ] ] scons 16 
+___no 642 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 20 
+___no 643 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 14 
+___no 644 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 14 
+___no 645 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 4 ] ] scons 15 
+___no 646 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 4 ] ] scons 13 
+___no 647 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 5 ] ] scons 13 
+___no 648 
+kk 5 rho 6 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 1 ] ] scons 13 
+___no 649 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 17 
+___no 650 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 2 ] ] scons 16 
+___no 651 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 21 
+___no 652 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 18 
+___no 653 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 2 ] ] scons 16 
+___no 654 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 17 
+___no 655 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 18 
+___no 656 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 17 
+___no 657 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 4 ] ] scons 21 
+___no 658 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 20 
+___no 659 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 17 
+___no 660 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 4 ] ] scons 18 
+___no 661 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 4 ] ] scons 19 
+___no 662 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 4 ] ] scons 18 
+___no 663 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 5 ] ] scons 21 
+___no 664 
+kk 6 rho 6 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 3 ], [ 4, 1 ] ] scons 13 
+___no 665 
+kk 6 rho 6 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 4, 1 ] ] scons 13 
+___no 666 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 18 
+___no 667 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 2 ] ] scons 16 
+___no 668 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 17 
+___no 669 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 22 
+___no 670 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 2 ] ] scons 16 
+___no 671 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 16 
+___no 672 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 20 
+___no 673 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 20 
+___no 674 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 17 
+___no 675 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 4 ] ] scons 18 
+___no 676 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 6 ], [ 2, 1 ] ] scons 16 
+___no 677 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 7 ], [ 2, 1 ] ] scons 14 
+___no 678 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 6 ], [ 2, 2 ] ] scons 14 
+___no 679 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 6 ], [ 2, 1 ], [ 3, 1 ] ] scons 15 
+___no 680 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 2 ] ] scons 15 
+___no 681 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 6 ], [ 2, 2 ] ] scons 14 
+___no 682 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 3 ] ] scons 14 
+___no 683 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 18 
+___no 684 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 18 
+___no 685 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 6 ], [ 2, 1 ], [ 3, 1 ] ] scons 17 
+___no 686 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 20 
+___no 687 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 2 ] ] scons 18 
+___no 688 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 16 
+___no 689 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 17 
+___no 690 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 2 ] ] scons 17 
+___no 691 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 6 ], [ 2, 2 ] ] scons 14 
+___no 692 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 3 ] ] scons 14 
+___no 693 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 15 
+___no 694 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 15 
+___no 695 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 3 ] ] scons 14 
+___no 696 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 4 ] ] scons 14 
+___no 697 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 17 
+___no 698 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 17 
+___no 699 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 16 
+___no 700 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 18 
+___no 701 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 6 ], [ 2, 1 ], [ 3, 1 ] ] scons 18 
+___no 702 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 17 
+___no 703 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 1 ], [ 3, 2 ] ] scons 20 
+___no 704 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 20 
+___no 705 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 16 
+___no 706 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 16 
+___no 707 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] scons 22 
+___no 708 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 1 ], [ 3, 2 ] ] scons 22 
+___no 709 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 1 ], [ 3, 2 ] ] scons 19 
+___no 710 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] scons 22 
+___no 711 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 20 
+___no 712 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 4 ] ] scons 17 
+___no 713 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 18 
+___no 714 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 18 
+___no 715 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 3 ] ] scons 14 
+___no 716 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 4 ] ] scons 14 
+___no 717 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 15 
+___no 718 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 4 ] ] scons 15 
+___no 719 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 4 ] ] scons 14 
+___no 720 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 5 ] ] scons 14 
+___no 721 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] scons 16 
+___no 722 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 16 
+___no 723 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 15 
+___no 724 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] scons 16 
+___no 725 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 17 
+___no 726 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 16 
+___no 727 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] scons 18 
+___no 728 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 18 
+___no 729 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 15 
+___no 730 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] scons 15 
+___no 731 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 3 ], [ 3, 2 ] ] scons 18 
+___no 732 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 2 ], [ 3, 2 ] ] scons 18 
+___no 733 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] scons 16 
+___no 734 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 3 ], [ 3, 2 ] ] scons 17 
+___no 735 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 1 ], [ 3, 2 ] ] scons 22 
+___no 736 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] scons 19 
+___no 737 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 1 ], [ 3, 3 ] ] scons 22 
+___no 738 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 2 ], [ 3, 2 ] ] scons 22 
+___no 739 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] scons 16 
+___no 740 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 3 ], [ 3, 2 ] ] scons 16 
+___no 741 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 2 ], [ 3, 3 ] ] scons 20 
+___no 742 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 1 ], [ 3, 3 ] ] scons 20 
+___no 743 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 1 ], [ 3, 3 ] ] scons 17 
+___no 744 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 2 ], [ 3, 3 ] ] scons 18 
+___no 745 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 18 
+___no 746 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 4 ] ] scons 17 
+___no 747 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 21 
+___no 748 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 20 
+___no 749 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 4 ] ] scons 17 
+___no 750 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 18 
+___no 751 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 4 ] ] scons 19 
+___no 752 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 5 ] ] scons 18 
+___no 753 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 21 
+___no 754 
+kk 6 rho 6 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 4, 1 ] ] scons 13 
+___no 755 
+kk 6 rho 6 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 4 ], [ 4, 1 ] ] scons 13 
+___no 756 
+kk 6 rho 6 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 13 
+___no 757 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 17 
+___no 758 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 16 
+___no 759 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 4, 1 ] ] scons 21 
+___no 760 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 6 ], [ 2, 2 ] ] scons 15 
+___no 761 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 3 ] ] scons 14 
+___no 762 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 14 
+___no 763 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 2 ], [ 4, 1 ] ] scons 18 
+___no 764 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 19 
+___no 765 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 3 ] ] scons 14 
+___no 766 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 4 ] ] scons 14 
+___no 767 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 14 
+___no 768 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 3 ], [ 4, 1 ] ] scons 24 
+___no 769 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 20 
+___no 770 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 16 
+___no 771 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 16 
+___no 772 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] scons 22 
+___no 773 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 4 ] ] scons 18 
+___no 774 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 17 
+___no 775 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 4, 1 ] ] scons 21 
+___no 776 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 3 ] ] scons 15 
+___no 777 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 4 ] ] scons 14 
+___no 778 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 14 
+___no 779 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 3 ], [ 4, 1 ] ] scons 17 
+___no 780 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 4 ] ] scons 18 
+___no 781 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 4 ] ] scons 14 
+___no 782 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 5 ] ] scons 14 
+___no 783 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] scons 14 
+___no 784 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 4 ], [ 4, 1 ] ] scons 20 
+___no 785 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 18 
+___no 786 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 15 
+___no 787 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] scons 15 
+___no 788 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 3 ], [ 3, 2 ] ] scons 18 
+___no 789 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 20 
+___no 790 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 16 
+___no 791 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] scons 16 
+___no 792 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ], [ 4, 1 ] ] scons 22 
+___no 793 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 25 
+___no 794 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 15 
+___no 795 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] scons 15 
+___no 796 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 5 ] ] scons 19 
+___no 797 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 18 
+___no 798 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 4 ], [ 4, 1 ] ] scons 21 
+___no 799 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 4 ] ] scons 15 
+___no 800 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 5 ] ] scons 14 
+___no 801 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] scons 14 
+___no 802 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 4 ], [ 4, 1 ] ] scons 16 
+___no 803 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 5 ] ] scons 17 
+___no 804 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 5 ] ] scons 14 
+___no 805 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 6 ] ] scons 14 
+___no 806 
+kk 5 rho 6 wgraph [ [ 0, 7 ], [ 1, 1 ], [ 2, 2 ] ] scons 14 
+___no 807 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 4 ] ] scons 19 
+___no 808 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 4 ] ] scons 18 
+___no 809 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 5 ] ] scons 28 
+___no 810 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 4 ] ] scons 20 
+___no 811 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 4 ] ] scons 18 
+___no 812 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 5 ] ] scons 21 
+___no 813 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 1 ], [ 2, 5 ] ] scons 20 
+___no 814 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 5 ] ] scons 19 
+___no 815 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 1 ], [ 2, 6 ] ] scons 25 
+___no 816 
+kk 6 rho 6 wgraph [ [ 0, 9 ], [ 1, 1 ], [ 2, 4 ], [ 4, 1 ] ] scons 14 
+___no 817 
+kk 6 rho 6 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 4 ], [ 4, 1 ] ] scons 14 
+___no 818 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 4 ] ] scons 20 
+___no 819 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 4 ] ] scons 18 
+___no 820 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 5 ] ] scons 21 
+___no 821 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 2 ] ] scons 18 
+___no 822 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 6 ], [ 2, 2 ] ] scons 15 
+___no 823 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 3 ] ] scons 15 
+___no 824 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 16 
+___no 825 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 17 
+___no 826 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 3 ] ] scons 15 
+___no 827 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 4 ] ] scons 15 
+___no 828 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 18 
+___no 829 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 21 
+___no 830 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 18 
+___no 831 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 20 
+___no 832 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 4 ] ] scons 16 
+___no 833 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 4 ] ] scons 15 
+___no 834 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 5 ] ] scons 15 
+___no 835 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] scons 21 
+___no 836 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 18 
+___no 837 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 17 
+___no 838 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] scons 20 
+___no 839 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 2 ], [ 3, 2 ] ] scons 21 
+___no 840 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] scons 21 
+___no 841 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 4 ] ] scons 20 
+___no 842 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 5 ] ] scons 18 
+___no 843 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 21 
+___no 844 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 21 
+___no 845 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 3 ] ] scons 15 
+___no 846 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 4 ] ] scons 15 
+___no 847 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 16 
+___no 848 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 4 ] ] scons 18 
+___no 849 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 4 ] ] scons 15 
+___no 850 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 5 ] ] scons 15 
+___no 851 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] scons 17 
+___no 852 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 21 
+___no 853 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 17 
+___no 854 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] scons 18 
+___no 855 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 5 ] ] scons 16 
+___no 856 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 5 ] ] scons 15 
+___no 857 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 6 ] ] scons 15 
+___no 858 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 5 ], [ 3, 1 ] ] scons 18 
+___no 859 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 17 
+___no 860 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] scons 16 
+___no 861 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 5 ], [ 3, 1 ] ] scons 17 
+___no 862 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 3 ], [ 3, 2 ] ] scons 18 
+___no 863 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 3 ], [ 3, 2 ] ] scons 17 
+___no 864 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 4 ], [ 3, 2 ] ] scons 21 
+___no 865 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 21 
+___no 866 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 18 
+___no 867 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] scons 20 
+___no 868 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 18 
+___no 869 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] scons 17 
+___no 870 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 3 ], [ 3, 2 ] ] scons 20 
+___no 871 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] scons 21 
+___no 872 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 3 ], [ 3, 2 ] ] scons 21 
+___no 873 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 20 
+___no 874 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] scons 16 
+___no 875 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 5 ], [ 3, 1 ] ] scons 16 
+___no 876 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 4 ], [ 3, 2 ] ] scons 20 
+___no 877 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 3 ], [ 3, 2 ] ] scons 20 
+___no 878 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 3 ], [ 3, 2 ] ] scons 17 
+___no 879 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 4 ], [ 3, 2 ] ] scons 18 
+___no 880 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 2 ], [ 3, 3 ] ] scons 20 
+___no 881 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 2 ], [ 3, 3 ] ] scons 18 
+___no 882 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 3 ], [ 3, 3 ] ] scons 21 
+___no 883 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 5 ] ] scons 20 
+___no 884 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 1 ], [ 2, 6 ] ] scons 19 
+___no 885 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 1 ], [ 2, 5 ], [ 3, 1 ] ] scons 25 
+___no 886 
+kk 6 rho 6 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 4 ], [ 4, 1 ] ] scons 14 
+___no 887 
+kk 6 rho 6 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 4 ] ] scons 14 
+___no 888 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 5 ] ] scons 19 
+___no 889 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 18 
+___no 890 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 4 ], [ 4, 1 ] ] scons 28 
+___no 891 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 3 ] ] scons 17 
+___no 892 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 4 ] ] scons 15 
+___no 893 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 15 
+___no 894 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 3 ], [ 4, 1 ] ] scons 18 
+___no 895 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 4 ] ] scons 16 
+___no 896 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 5 ] ] scons 15 
+___no 897 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] scons 15 
+___no 898 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 4 ], [ 4, 1 ] ] scons 21 
+___no 899 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 18 
+___no 900 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] scons 17 
+___no 901 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 3 ], [ 3, 2 ] ] scons 20 
+___no 902 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 5 ] ] scons 20 
+___no 903 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 5 ] ] scons 15 
+___no 904 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 6 ] ] scons 15 
+___no 905 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 5 ], [ 3, 1 ] ] scons 15 
+___no 906 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 5 ], [ 4, 1 ] ] scons 25 
+___no 907 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 20 
+___no 908 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] scons 16 
+___no 909 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 5 ], [ 3, 1 ] ] scons 16 
+___no 910 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 4 ], [ 3, 2 ] ] scons 20 
+___no 911 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 3 ], [ 3, 2 ] ] scons 20 
+___no 912 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 3 ], [ 3, 2 ] ] scons 17 
+___no 913 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 4 ], [ 3, 2 ] ] scons 18 
+___no 914 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 5 ] ] scons 20 
+___no 915 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 18 
+___no 916 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 4 ], [ 4, 1 ] ] scons 21 
+___no 917 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 1 ], [ 2, 6 ] ] scons 20 
+___no 918 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 1 ], [ 2, 5 ], [ 3, 1 ] ] scons 19 
+___no 919 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 1 ], [ 2, 5 ], [ 4, 1 ] ] scons 25 
+___no 920 
+kk 6 rho 6 wgraph [ [ 0, 8 ], [ 1, 1 ], [ 2, 5 ], [ 4, 1 ] ] scons 14 
+___no 921 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 4 ] ] scons 18 
+___no 922 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 5 ] ] scons 15 
+___no 923 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] scons 15 
+___no 924 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 4 ], [ 4, 1 ] ] scons 17 
+___no 925 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 5 ] ] scons 16 
+___no 926 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 6 ] ] scons 15 
+___no 927 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 5 ], [ 3, 1 ] ] scons 15 
+___no 928 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 5 ], [ 4, 1 ] ] scons 18 
+___no 929 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] scons 17 
+___no 930 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 5 ], [ 3, 1 ] ] scons 16 
+___no 931 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 1 ], [ 2, 6 ] ] scons 19 
+___no 932 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 6 ] ] scons 15 
+___no 933 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 1 ], [ 2, 7 ] ] scons 15 
+___no 934 
+kk 5 rho 6 wgraph [ [ 0, 7 ], [ 2, 3 ] ] scons 15 
+___no 935 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 2, 6 ] ] scons 21 
+___no 936 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 1 ], [ 2, 6 ] ] scons 20 
+___no 937 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 2, 7 ] ] scons 30 
+___no 938 
+kk 6 rho 6 wgraph [ [ 0, 9 ], [ 2, 5 ], [ 4, 1 ] ] scons 15 
+___no 939 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 20 
+___no 940 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 5 ], [ 2, 3 ] ] scons 16 
+___no 941 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 4 ] ] scons 16 
+___no 942 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 17 
+___no 943 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 4 ] ] scons 19 
+___no 944 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 4 ] ] scons 16 
+___no 945 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 5 ] ] scons 16 
+___no 946 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] scons 18 
+___no 947 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 25 
+___no 948 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 19 
+___no 949 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] scons 20 
+___no 950 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 5 ] ] scons 18 
+___no 951 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 5 ] ] scons 16 
+___no 952 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 6 ] ] scons 16 
+___no 953 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 5 ], [ 3, 1 ] ] scons 19 
+___no 954 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 21 
+___no 955 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] scons 18 
+___no 956 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 5 ], [ 3, 1 ] ] scons 19 
+___no 957 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 3 ], [ 3, 2 ] ] scons 25 
+___no 958 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 3 ], [ 3, 2 ] ] scons 21 
+___no 959 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 4 ], [ 3, 2 ] ] scons 25 
+___no 960 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 1 ], [ 2, 6 ] ] scons 17 
+___no 961 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 6 ] ] scons 16 
+___no 962 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 1 ], [ 2, 7 ] ] scons 16 
+___no 963 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 1 ], [ 2, 6 ], [ 3, 1 ] ] scons 20 
+___no 964 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 1 ], [ 2, 5 ], [ 3, 1 ] ] scons 18 
+___no 965 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 5 ], [ 3, 1 ] ] scons 17 
+___no 966 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 1 ], [ 2, 6 ], [ 3, 1 ] ] scons 18 
+___no 967 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 1 ], [ 2, 4 ], [ 3, 2 ] ] scons 19 
+___no 968 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 4 ], [ 3, 2 ] ] scons 18 
+___no 969 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 1 ], [ 2, 5 ], [ 3, 2 ] ] scons 21 
+___no 970 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 1 ], [ 2, 3 ], [ 3, 3 ] ] scons 20 
+___no 971 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 3 ], [ 3, 3 ] ] scons 19 
+___no 972 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 1 ], [ 2, 4 ], [ 3, 3 ] ] scons 25 
+___no 973 
+kk 6 rho 6 wgraph [ [ 0, 9 ], [ 2, 6 ] ] scons 15 
+___no 974 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 2, 7 ] ] scons 21 
+___no 975 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 2, 6 ], [ 3, 1 ] ] scons 20 
+___no 976 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 2, 6 ], [ 4, 1 ] ] scons 30 
+___no 977 
+kk 6 rho 6 wgraph [ [ 0, 8 ], [ 2, 6 ], [ 4, 1 ] ] scons 15 
+___no 978 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 4 ] ] scons 19 
+___no 979 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 5 ] ] scons 16 
+___no 980 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] scons 16 
+___no 981 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 4 ], [ 4, 1 ] ] scons 18 
+___no 982 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 5 ] ] scons 18 
+___no 983 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 6 ] ] scons 16 
+___no 984 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 5 ], [ 3, 1 ] ] scons 16 
+___no 985 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 5 ], [ 4, 1 ] ] scons 19 
+___no 986 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] scons 21 
+___no 987 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 5 ], [ 3, 1 ] ] scons 18 
+___no 988 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 4 ], [ 3, 2 ] ] scons 19 
+___no 989 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 6 ] ] scons 17 
+___no 990 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 1 ], [ 2, 7 ] ] scons 16 
+___no 991 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 1 ], [ 2, 6 ], [ 3, 1 ] ] scons 16 
+___no 992 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 1 ], [ 2, 6 ], [ 4, 1 ] ] scons 20 
+___no 993 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 5 ], [ 3, 1 ] ] scons 18 
+___no 994 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 1 ], [ 2, 6 ], [ 3, 1 ] ] scons 17 
+___no 995 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 2, 7 ] ] scons 21 
+___no 996 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 1 ], [ 2, 7 ] ] scons 16 
+___no 997 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 2, 8 ] ] scons 16 
+___no 998 
+kk 5 rho 5 wgraph [ [ 0, 7 ], [ 2, 2 ], [ 4, 1 ] ] scons 10 
+___no 999 
+kk 6 rho 5 wgraph [ [ 0, 9 ], [ 2, 4 ], [ 4, 2 ] ] scons 10 
+___no 1000 
+kk 6 rho 6 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 3 ], [ 4, 1 ] ] scons 11 
+___no 1001 
+kk 6 rho 6 wgraph [ [ 0, 7 ], [ 1, 4 ], [ 2, 3 ], [ 4, 1 ] ] scons 11 
+___no 1002 
+kk 6 rho 6 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ], [ 4, 1 ] ] scons 14 
+___no 1003 
+kk 6 rho 6 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 4 ], [ 4, 1 ] ] scons 11 
+___no 1004 
+kk 6 rho 6 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 4 ], [ 4, 1 ] ] scons 11 
+___no 1005 
+kk 6 rho 6 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 3 ], [ 3, 1 ], [ 4, 1 ] ] scons 13 
+___no 1006 
+kk 6 rho 6 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ], [ 4, 1 ] ] scons 14 
+___no 1007 
+kk 6 rho 6 wgraph [ [ 0, 7 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ], [ 4, 1 ] ] scons 13 
+___no 1008 
+kk 6 rho 6 wgraph [ [ 0, 8 ], [ 1, 2 ], [ 2, 2 ], [ 3, 2 ], [ 4, 1 ] ] scons 16 
+___no 1009 
+kk 6 rho 6 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 5 ], [ 4, 1 ] ] scons 11 
+___no 1010 
+kk 6 rho 6 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 5 ], [ 4, 1 ] ] scons 11 
+___no 1011 
+kk 6 rho 6 wgraph [ [ 0, 8 ], [ 1, 1 ], [ 2, 4 ], [ 3, 1 ], [ 4, 1 ] ] scons 12 
+___no 1012 
+kk 6 rho 6 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ], [ 4, 1 ] ] scons 13 
+___no 1013 
+kk 6 rho 6 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ], [ 4, 1 ] ] scons 12 
+___no 1014 
+kk 6 rho 6 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 3 ], [ 3, 2 ], [ 4, 1 ] ] scons 16 
+___no 1015 
+kk 6 rho 6 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 3 ], [ 3, 2 ], [ 4, 1 ] ] scons 13 
+___no 1016 
+kk 6 rho 5 wgraph [ [ 0, 8 ], [ 2, 5 ], [ 4, 2 ] ] scons 10 
+___no 1017 
+kk 6 rho 6 wgraph [ [ 0, 7 ], [ 1, 2 ], [ 2, 5 ], [ 4, 1 ] ] scons 11 
+___no 1018 
+kk 6 rho 6 wgraph [ [ 0, 7 ], [ 1, 1 ], [ 2, 6 ], [ 4, 1 ] ] scons 11 
+___no 1019 
+kk 6 rho 6 wgraph [ [ 0, 7 ], [ 1, 1 ], [ 2, 5 ], [ 3, 1 ], [ 4, 1 ] ] scons 12 
+___no 1020 
+kk 6 rho 6 wgraph [ [ 0, 7 ], [ 2, 7 ], [ 4, 1 ] ] scons 11 
+___no 1021 
+kk 5 rho 6 wgraph [ [ 0, 6 ], [ 1, 4 ] ] scons 11 
+___no 1022 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 8 ] ] scons 13 
+___no 1023 
+kk 6 rho 7 wgraph [ [ 0, 6 ], [ 1, 9 ] ] scons 12 
+___no 1024 
+kk 6 rho 7 wgraph [ [ 0, 6 ], [ 1, 8 ], [ 2, 1 ] ] scons 12 
+___no 1025 
+kk 6 rho 7 wgraph [ [ 0, 6 ], [ 1, 8 ], [ 3, 1 ] ] scons 12 
+___no 1026 
+kk 6 rho 7 wgraph [ [ 0, 6 ], [ 1, 8 ], [ 4, 1 ] ] scons 17 
+___no 1027 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 7 ], [ 2, 1 ] ] scons 13 
+___no 1028 
+kk 6 rho 7 wgraph [ [ 0, 6 ], [ 1, 8 ], [ 2, 1 ] ] scons 12 
+___no 1029 
+kk 6 rho 7 wgraph [ [ 0, 6 ], [ 1, 7 ], [ 2, 2 ] ] scons 12 
+___no 1030 
+kk 6 rho 7 wgraph [ [ 0, 6 ], [ 1, 7 ], [ 2, 1 ], [ 3, 1 ] ] scons 12 
+___no 1031 
+kk 6 rho 7 wgraph [ [ 0, 6 ], [ 1, 7 ], [ 2, 1 ], [ 4, 1 ] ] scons 16 
+___no 1032 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 7 ], [ 3, 1 ] ] scons 20 
+___no 1033 
+kk 6 rho 7 wgraph [ [ 0, 6 ], [ 1, 8 ], [ 3, 1 ] ] scons 15 
+___no 1034 
+kk 6 rho 7 wgraph [ [ 0, 6 ], [ 1, 7 ], [ 2, 1 ], [ 3, 1 ] ] scons 15 
+___no 1035 
+kk 6 rho 7 wgraph [ [ 0, 6 ], [ 1, 7 ], [ 3, 2 ] ] scons 15 
+___no 1036 
+kk 6 rho 7 wgraph [ [ 0, 6 ], [ 1, 7 ], [ 3, 1 ], [ 4, 1 ] ] scons 25 
+___no 1037 
+kk 6 rho 7 wgraph [ [ 0, 7 ], [ 1, 6 ], [ 2, 2 ] ] scons 13 
+___no 1038 
+kk 6 rho 7 wgraph [ [ 0, 6 ], [ 1, 7 ], [ 2, 2 ] ] scons 12 
+___no 1039 
+kk 6 rho 7 wgraph [ [ 0, 6 ], [ 1, 6 ], [ 2, 3 ] ] scons 12 
+___no 1040 
+kk 6 rho 7 wgraph [ [ 0, 6 ], [ 1, 6 ], [ 2, 2 ], [ 3, 1 ] ] scons 12 
+Error, user interrupt in
+  nam := names[i]; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/record.gi:50 called from 
+CallFuncList( PRINT_TO, arg 
+ ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/streams.gd:1078 called from
+PrintTo( fn, name, ":=", obj, ";\n" ); at gapReads/SavesReads.txt:57 called from
+savedataas( theresult, savename ); at Task20260921Va.g:198 called from
+thetask( kk + 1, newwg ); at Task20260921Va.g:200 called from
+thetask( kk + 1, newwg ); at Task20260921Va.g:200 called from
+...  at Task20260921Va.g:209
+you can 'return;'
+brk> quit;
+gap> Makeaddvs(1);
+[ [ 0 ], [ 1 ], [ 2 ] ]
+gap> Read("Task20260921Va.g");
+___no 1 
+kk 2 rho 3 wgraph [ [ 0, 1 ] ] scons 3 
+___no 2 
+kk 3 rho 4 wgraph [ [ 0, 3 ] ] scons 6 
+___no 3 
+kk 4 rho 5 wgraph [ [ 0, 6 ] ] scons 10 
+___no 4 
+kk 5 rho 6 wgraph [ [ 0, 10 ] ] scons 15 
+___no 5 
+kk 6 rho 7 wgraph [ [ 0, 15 ] ] scons 21 
+___no 6 
+kk 6 rho 7 wgraph [ [ 0, 14 ], [ 1, 1 ] ] scons 20 
+___no 7 
+kk 6 rho 7 wgraph [ [ 0, 14 ], [ 2, 1 ] ] scons 30 
+___no 8 
+kk 6 rho 7 wgraph [ [ 0, 13 ], [ 1, 2 ] ] scons 19 
+___no 9 
+kk 6 rho 7 wgraph [ [ 0, 13 ], [ 1, 1 ], [ 2, 1 ] ] scons 25 
+___no 10 
+kk 6 rho 7 wgraph [ [ 0, 13 ], [ 2, 2 ] ] scons 36 
+___no 11 
+kk 6 rho 7 wgraph [ [ 0, 12 ], [ 1, 3 ] ] scons 18 
+___no 12 
+kk 6 rho 7 wgraph [ [ 0, 12 ], [ 1, 2 ], [ 2, 1 ] ] scons 21 
+___no 13 
+kk 6 rho 7 wgraph [ [ 0, 12 ], [ 1, 1 ], [ 2, 2 ] ] scons 25 
+___no 14 
+kk 6 rho 7 wgraph [ [ 0, 12 ], [ 2, 3 ] ] scons 30 
+___no 15 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 4 ] ] scons 17 
+___no 16 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 3 ], [ 2, 1 ] ] scons 18 
+___no 17 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 2 ], [ 2, 2 ] ] scons 19 
+___no 18 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 1 ], [ 2, 3 ] ] scons 20 
+___no 19 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 2, 4 ] ] scons 21 
+___no 20 
+kk 6 rho 6 wgraph [ [ 0, 11 ], [ 2, 3 ], [ 4, 1 ] ] scons 15 
+___no 21 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 5 ] ] scons 16 
+___no 22 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 2, 1 ] ] scons 16 
+___no 23 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 3, 1 ] ] scons 20 
+___no 24 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 16 
+___no 25 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 1 ], [ 3, 1 ] ] scons 19 
+___no 26 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 3, 2 ] ] scons 25 
+___no 27 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 3 ] ] scons 16 
+___no 28 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 2 ], [ 3, 1 ] ] scons 18 
+___no 29 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 1 ], [ 3, 2 ] ] scons 21 
+___no 30 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 1 ], [ 2, 4 ] ] scons 16 
+___no 31 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 1 ], [ 2, 3 ], [ 3, 1 ] ] scons 17 
+___no 32 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 2, 5 ] ] scons 16 
+___no 33 
+kk 5 rho 6 wgraph [ [ 0, 9 ], [ 1, 1 ] ] scons 14 
+___no 34 
+kk 6 rho 7 wgraph [ [ 0, 12 ], [ 1, 3 ] ] scons 18 
+___no 35 
+kk 6 rho 7 wgraph [ [ 0, 12 ], [ 1, 2 ], [ 2, 1 ] ] scons 28 
+___no 36 
+kk 6 rho 7 wgraph [ [ 0, 13 ], [ 1, 2 ] ] scons 20 
+___no 37 
+kk 6 rho 7 wgraph [ [ 0, 12 ], [ 1, 3 ] ] scons 18 
+___no 38 
+kk 6 rho 7 wgraph [ [ 0, 12 ], [ 1, 2 ], [ 2, 1 ] ] scons 21 
+___no 39 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 4 ] ] scons 17 
+___no 40 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 3 ], [ 2, 1 ] ] scons 21 
+___no 41 
+kk 6 rho 7 wgraph [ [ 0, 12 ], [ 1, 2 ], [ 2, 1 ] ] scons 25 
+___no 42 
+kk 6 rho 7 wgraph [ [ 0, 12 ], [ 1, 1 ], [ 2, 2 ] ] scons 28 
+___no 43 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 3 ], [ 2, 1 ] ] scons 20 
+___no 44 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 2 ], [ 2, 2 ] ] scons 25 
+___no 45 
+kk 6 rho 7 wgraph [ [ 0, 12 ], [ 1, 3 ] ] scons 20 
+___no 46 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 4 ] ] scons 17 
+___no 47 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 3 ], [ 2, 1 ] ] scons 18 
+___no 48 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 5 ] ] scons 16 
+___no 49 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 2, 1 ] ] scons 17 
+___no 50 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 20 
+___no 51 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 3 ], [ 2, 1 ] ] scons 21 
+___no 52 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 2 ], [ 2, 2 ] ] scons 21 
+___no 53 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 2, 1 ] ] scons 17 
+___no 54 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 18 
+___no 55 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 3 ] ] scons 20 
+___no 56 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 2 ], [ 2, 2 ] ] scons 28 
+___no 57 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 1 ], [ 2, 3 ] ] scons 25 
+___no 58 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 18 
+___no 59 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 3 ] ] scons 19 
+___no 60 
+kk 6 rho 6 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 2 ], [ 4, 1 ] ] scons 14 
+___no 61 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 1 ], [ 2, 4 ] ] scons 20 
+___no 62 
+kk 6 rho 6 wgraph [ [ 0, 10 ], [ 1, 1 ], [ 2, 3 ], [ 4, 1 ] ] scons 14 
+___no 63 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 4 ] ] scons 20 
+___no 64 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 5 ] ] scons 16 
+___no 65 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 2, 1 ] ] scons 16 
+___no 66 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 3, 1 ] ] scons 20 
+___no 67 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 6 ] ] scons 15 
+___no 68 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 5 ], [ 2, 1 ] ] scons 15 
+___no 69 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 5 ], [ 3, 1 ] ] scons 18 
+___no 70 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 15 
+___no 71 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 1 ], [ 3, 1 ] ] scons 21 
+___no 72 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 2, 1 ] ] scons 18 
+___no 73 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 17 
+___no 74 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 1 ], [ 3, 1 ] ] scons 20 
+___no 75 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 5 ], [ 2, 1 ] ] scons 15 
+___no 76 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 15 
+___no 77 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 1 ], [ 3, 1 ] ] scons 17 
+___no 78 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 15 
+___no 79 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] scons 18 
+___no 80 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 5 ], [ 3, 1 ] ] scons 20 
+___no 81 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 1 ], [ 3, 1 ] ] scons 18 
+___no 82 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 3, 2 ] ] scons 21 
+___no 83 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] scons 17 
+___no 84 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 1 ], [ 3, 2 ] ] scons 21 
+___no 85 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 21 
+___no 86 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 3 ] ] scons 18 
+___no 87 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 2 ], [ 3, 1 ] ] scons 20 
+___no 88 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 15 
+___no 89 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 15 
+___no 90 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] scons 16 
+___no 91 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 4 ] ] scons 15 
+___no 92 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 3 ], [ 3, 1 ] ] scons 16 
+___no 93 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 2 ], [ 3, 2 ] ] scons 20 
+___no 94 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 1 ], [ 3, 1 ] ] scons 20 
+___no 95 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] scons 17 
+___no 96 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 1 ], [ 3, 2 ] ] scons 18 
+___no 97 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 3 ], [ 3, 1 ] ] scons 16 
+___no 98 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 3 ] ] scons 25 
+___no 99 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 1 ], [ 2, 4 ] ] scons 19 
+___no 100 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 1 ], [ 2, 3 ], [ 3, 1 ] ] scons 20 
+___no 101 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 15 
+___no 102 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 4 ] ] scons 15 
+___no 103 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 3 ], [ 3, 1 ] ] scons 15 
+___no 104 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 1 ], [ 2, 5 ] ] scons 15 
+___no 105 
+kk 5 rho 6 wgraph [ [ 0, 9 ], [ 2, 1 ] ] scons 20 
+___no 106 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 3 ], [ 2, 1 ] ] scons 24 
+___no 107 
+kk 6 rho 6 wgraph [ [ 0, 13 ], [ 2, 2 ] ] scons 20 
+___no 108 
+kk 6 rho 7 wgraph [ [ 0, 12 ], [ 2, 3 ] ] scons 36 
+___no 109 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 2 ], [ 2, 2 ] ] scons 28 
+___no 110 
+kk 6 rho 6 wgraph [ [ 0, 11 ], [ 2, 4 ] ] scons 20 
+___no 111 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 3 ], [ 2, 1 ] ] scons 25 
+___no 112 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 2 ], [ 2, 2 ] ] scons 24 
+___no 113 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 2, 1 ] ] scons 22 
+___no 114 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 25 
+___no 115 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 1 ], [ 2, 3 ] ] scons 28 
+___no 116 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 24 
+___no 117 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 3 ] ] scons 25 
+___no 118 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 2, 4 ] ] scons 36 
+___no 119 
+kk 6 rho 6 wgraph [ [ 0, 11 ], [ 2, 3 ], [ 4, 1 ] ] scons 20 
+___no 120 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 3 ] ] scons 28 
+___no 121 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 1 ], [ 2, 4 ] ] scons 25 
+___no 122 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 2, 5 ] ] scons 30 
+___no 123 
+kk 6 rho 6 wgraph [ [ 0, 10 ], [ 2, 4 ], [ 4, 1 ] ] scons 20 
+___no 124 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 2, 1 ] ] scons 25 
+___no 125 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 22 
+___no 126 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 1 ], [ 3, 1 ] ] scons 25 
+___no 127 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 5 ], [ 2, 1 ] ] scons 21 
+___no 128 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 21 
+___no 129 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 1 ], [ 3, 1 ] ] scons 28 
+___no 130 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 24 
+___no 131 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 3 ] ] scons 24 
+___no 132 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 2 ], [ 3, 1 ] ] scons 25 
+___no 133 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 22 
+___no 134 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 21 
+___no 135 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] scons 24 
+___no 136 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 4 ] ] scons 22 
+___no 137 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] scons 25 
+___no 138 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 1 ], [ 3, 2 ] ] scons 28 
+___no 139 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 3 ], [ 3, 1 ] ] scons 24 
+___no 140 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 1 ], [ 2, 4 ] ] scons 28 
+___no 141 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 1 ], [ 2, 3 ], [ 3, 1 ] ] scons 25 
+___no 142 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 24 
+___no 143 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 4 ] ] scons 21 
+___no 144 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 3 ], [ 3, 1 ] ] scons 22 
+___no 145 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 1 ], [ 2, 5 ] ] scons 21 
+___no 146 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 1 ], [ 2, 4 ], [ 3, 1 ] ] scons 25 
+___no 147 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 3 ], [ 3, 1 ] ] scons 25 
+___no 148 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 2 ], [ 3, 2 ] ] scons 24 
+___no 149 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 1 ], [ 2, 4 ], [ 3, 1 ] ] scons 22 
+___no 150 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 2, 5 ] ] scons 36 
+___no 151 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 2, 4 ], [ 3, 1 ] ] scons 25 
+___no 152 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 2, 4 ], [ 4, 1 ] ] scons 30 
+___no 153 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 4 ] ] scons 28 
+___no 154 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 1 ], [ 2, 5 ] ] scons 21 
+___no 155 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 1 ], [ 2, 4 ], [ 3, 1 ] ] scons 21 
+___no 156 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 2, 6 ] ] scons 21 
+___no 157 
+kk 5 rho 6 wgraph [ [ 0, 8 ], [ 1, 2 ] ] scons 13 
+___no 158 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 4 ] ] scons 17 
+___no 159 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 5 ] ] scons 16 
+___no 160 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 2, 1 ] ] scons 21 
+___no 161 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 3 ], [ 2, 1 ] ] scons 20 
+___no 162 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 2, 1 ] ] scons 20 
+___no 163 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 2 ], [ 2, 2 ] ] scons 24 
+___no 164 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 25 
+___no 165 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 4 ] ] scons 18 
+___no 166 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 5 ] ] scons 16 
+___no 167 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 2, 1 ] ] scons 17 
+___no 168 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 3 ], [ 2, 1 ] ] scons 22 
+___no 169 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 2, 1 ] ] scons 19 
+___no 170 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 22 
+___no 171 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 5 ] ] scons 16 
+___no 172 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 6 ] ] scons 15 
+___no 173 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 5 ], [ 2, 1 ] ] scons 16 
+___no 174 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 2, 1 ] ] scons 17 
+___no 175 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 5 ], [ 2, 1 ] ] scons 16 
+___no 176 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 18 
+___no 177 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 18 
+___no 178 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 17 
+___no 179 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 20 
+___no 180 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 2, 1 ] ] scons 20 
+___no 181 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 20 
+___no 182 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 24 
+___no 183 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 3 ] ] scons 25 
+___no 184 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 2, 1 ] ] scons 21 
+___no 185 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 5 ], [ 2, 1 ] ] scons 16 
+___no 186 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 17 
+___no 187 
+kk 6 rho 6 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 1 ], [ 4, 1 ] ] scons 13 
+___no 188 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 21 
+___no 189 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 17 
+___no 190 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 18 
+___no 191 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 3 ] ] scons 21 
+___no 192 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 18 
+___no 193 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 4 ] ] scons 19 
+___no 194 
+kk 6 rho 6 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 2 ], [ 4, 1 ] ] scons 13 
+___no 195 
+kk 6 rho 6 wgraph [ [ 0, 9 ], [ 1, 2 ], [ 2, 3 ], [ 4, 1 ] ] scons 13 
+___no 196 
+kk 6 rho 7 wgraph [ [ 0, 11 ], [ 1, 4 ] ] scons 22 
+___no 197 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 5 ] ] scons 16 
+___no 198 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 2, 1 ] ] scons 16 
+___no 199 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 3, 1 ] ] scons 20 
+___no 200 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 5 ] ] scons 18 
+___no 201 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 6 ] ] scons 15 
+___no 202 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 5 ], [ 2, 1 ] ] scons 15 
+___no 203 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 5 ], [ 3, 1 ] ] scons 18 
+___no 204 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 2, 1 ] ] scons 20 
+___no 205 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 5 ], [ 2, 1 ] ] scons 16 
+___no 206 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 16 
+___no 207 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 1 ], [ 3, 1 ] ] scons 22 
+___no 208 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 6 ] ] scons 15 
+___no 209 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 7 ] ] scons 14 
+___no 210 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 6 ], [ 2, 1 ] ] scons 14 
+___no 211 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 6 ], [ 3, 1 ] ] scons 16 
+___no 212 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 5 ], [ 2, 1 ] ] scons 15 
+___no 213 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 6 ], [ 2, 1 ] ] scons 14 
+___no 214 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 2 ] ] scons 14 
+___no 215 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 17 
+___no 216 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 5 ], [ 3, 1 ] ] scons 20 
+___no 217 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 6 ], [ 3, 1 ] ] scons 17 
+___no 218 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 18 
+___no 219 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 15 
+___no 220 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 2 ] ] scons 14 
+___no 221 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 14 
+___no 222 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 18 
+___no 223 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 1 ], [ 3, 1 ] ] scons 18 
+___no 224 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 16 
+___no 225 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 17 
+___no 226 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 3, 2 ] ] scons 22 
+___no 227 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 3, 2 ] ] scons 19 
+___no 228 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 1 ], [ 3, 2 ] ] scons 22 
+___no 229 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 4 ], [ 2, 1 ] ] scons 22 
+___no 230 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 2 ] ] scons 19 
+___no 231 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 3 ], [ 2, 1 ], [ 3, 1 ] ] scons 22 
+___no 232 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 5 ], [ 2, 1 ] ] scons 17 
+___no 233 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 16 
+___no 234 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 1 ], [ 3, 1 ] ] scons 18 
+___no 235 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 18 
+___no 236 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 17 
+___no 237 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] scons 20 
+___no 238 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 5 ], [ 2, 1 ] ] scons 18 
+___no 239 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 6 ], [ 2, 1 ] ] scons 14 
+___no 240 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 2 ] ] scons 14 
+___no 241 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 15 
+___no 242 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 2 ] ] scons 17 
+___no 243 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 2 ] ] scons 14 
+___no 244 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 14 
+___no 245 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 15 
+___no 246 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 4 ], [ 2, 1 ], [ 3, 1 ] ] scons 22 
+___no 247 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 16 
+___no 248 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 16 
+___no 249 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 1 ], [ 3, 2 ] ] scons 20 
+___no 250 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 3 ] ] scons 16 
+___no 251 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 3 ] ] scons 14 
+___no 252 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 4 ] ] scons 14 
+___no 253 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 15 
+___no 254 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] scons 18 
+___no 255 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 15 
+___no 256 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 15 
+___no 257 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 2 ], [ 3, 2 ] ] scons 18 
+___no 258 
+kk 6 rho 7 wgraph [ [ 0, 9 ], [ 1, 3 ], [ 2, 1 ], [ 3, 2 ] ] scons 20 
+___no 259 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 1 ], [ 3, 2 ] ] scons 16 
+___no 260 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 2 ], [ 3, 2 ] ] scons 16 
+___no 261 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 1 ], [ 3, 3 ] ] scons 22 
+___no 262 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 6 ], [ 3, 1 ] ] scons 20 
+___no 263 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 17 
+___no 264 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 3, 2 ] ] scons 18 
+___no 265 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 18 
+___no 266 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 16 
+___no 267 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 1 ], [ 3, 2 ] ] scons 17 
+___no 268 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 5 ], [ 3, 2 ] ] scons 22 
+___no 269 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 1 ], [ 3, 2 ] ] scons 19 
+___no 270 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 16 
+___no 271 
+kk 6 rho 7 wgraph [ [ 0, 8 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 15 
+___no 272 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 3 ] ] scons 24 
+___no 273 
+kk 6 rho 7 wgraph [ [ 0, 10 ], [ 1, 2 ], [ 2, 2 ], [ 3, 1 ] ] scons 25 
+Error, user interrupt in
+  pos := pos + 1; at Task20260921Va.g:114 called from 
+IsMinimal( kk + 1, newwg ) at Task20260921Va.g:200 called from
+thetask( kk + 1, newwg ); at Task20260921Va.g:214 called from
+thetask( kk + 1, newwg ); at Task20260921Va.g:214 called from
+thetask( kk + 1, newwg ); at Task20260921Va.g:214 called from
+thetask( kk + 1, newwg ); at Task20260921Va.g:214 called from
+...  at Task20260921Va.g:223
+you can 'return;'
+brk> quit;
+gap> Read("Task20260921Va.g");
+___no 1 
+kk 2 rho 3 wgraph [ [ 0, 1 ] ] scons 3 
+___no 2 
+kk 3 rho 4 wgraph [ [ 0, 3 ] ] scons 6 
+___no 3 
+kk 4 rho 5 wgraph [ [ 0, 6 ] ] scons 10 
+___no 4 
+kk 5 rho 6 wgraph [ [ 0, 10 ] ] scons 15 
+___no 5 
+kk 6 rho 7 wgraph [ [ 0, 15 ] ] scons 21 
+___no 6 
+kk 7 rho 8 wgraph [ [ 0, 21 ] ] scons 28 
+___no 7 
+kk 7 rho 8 wgraph [ [ 0, 20 ], [ 1, 1 ] ] scons 27 
+___no 8 
+kk 7 rho 8 wgraph [ [ 0, 20 ], [ 2, 1 ] ] scons 42 
+___no 9 
+kk 7 rho 8 wgraph [ [ 0, 19 ], [ 1, 2 ] ] scons 26 
+___no 10 
+kk 7 rho 8 wgraph [ [ 0, 19 ], [ 1, 1 ], [ 2, 1 ] ] scons 36 
+___no 11 
+kk 7 rho 8 wgraph [ [ 0, 19 ], [ 2, 2 ] ] scons 63 
+___no 12 
+kk 7 rho 8 wgraph [ [ 0, 18 ], [ 1, 3 ] ] scons 25 
+___no 13 
+kk 7 rho 8 wgraph [ [ 0, 18 ], [ 1, 2 ], [ 2, 1 ] ] scons 31 
+___no 14 
+kk 7 rho 8 wgraph [ [ 0, 18 ], [ 1, 1 ], [ 2, 2 ] ] scons 42 
+___no 15 
+kk 7 rho 8 wgraph [ [ 0, 18 ], [ 2, 3 ] ] scons 63 
+___no 16 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 4 ] ] scons 24 
+___no 17 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 3 ], [ 2, 1 ] ] scons 27 
+___no 18 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 2 ], [ 2, 2 ] ] scons 31 
+___no 19 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 1 ], [ 2, 3 ] ] scons 36 
+___no 20 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 2, 4 ] ] scons 42 
+___no 21 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 5 ] ] scons 23 
+___no 22 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] scons 24 
+___no 23 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] scons 25 
+___no 24 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 2 ], [ 2, 3 ] ] scons 26 
+___no 25 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 1 ], [ 2, 4 ] ] scons 27 
+___no 26 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 2, 5 ] ] scons 28 
+___no 27 
+kk 7 rho 7 wgraph [ [ 0, 16 ], [ 2, 4 ], [ 4, 1 ] ] scons 21 
+___no 28 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 6 ] ] scons 22 
+___no 29 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 22 
+___no 30 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 3, 1 ] ] scons 27 
+___no 31 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 22 
+___no 32 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 1 ], [ 3, 1 ] ] scons 26 
+___no 33 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 3, 2 ] ] scons 36 
+___no 34 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] scons 22 
+___no 35 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] scons 25 
+___no 36 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 1 ], [ 3, 2 ] ] scons 31 
+___no 37 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 3, 3 ] ] scons 42 
+___no 38 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] scons 22 
+___no 39 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 2 ], [ 2, 3 ], [ 3, 1 ] ] scons 24 
+___no 40 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 2 ], [ 2, 2 ], [ 3, 2 ] ] scons 27 
+___no 41 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 1 ], [ 2, 5 ] ] scons 22 
+___no 42 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 1 ], [ 2, 4 ], [ 3, 1 ] ] scons 23 
+___no 43 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 2, 6 ] ] scons 22 
+___no 44 
+kk 6 rho 7 wgraph [ [ 0, 14 ], [ 1, 1 ] ] scons 20 
+___no 45 
+kk 7 rho 8 wgraph [ [ 0, 18 ], [ 1, 3 ] ] scons 25 
+___no 46 
+kk 7 rho 8 wgraph [ [ 0, 18 ], [ 1, 2 ], [ 2, 1 ] ] scons 46 
+___no 47 
+kk 7 rho 8 wgraph [ [ 0, 19 ], [ 1, 2 ] ] scons 27 
+___no 48 
+kk 7 rho 8 wgraph [ [ 0, 18 ], [ 1, 3 ] ] scons 25 
+___no 49 
+kk 7 rho 8 wgraph [ [ 0, 18 ], [ 1, 2 ], [ 2, 1 ] ] scons 31 
+___no 50 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 4 ] ] scons 24 
+___no 51 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 3 ], [ 2, 1 ] ] scons 34 
+___no 52 
+kk 7 rho 8 wgraph [ [ 0, 18 ], [ 1, 2 ], [ 2, 1 ] ] scons 36 
+___no 53 
+kk 7 rho 8 wgraph [ [ 0, 18 ], [ 1, 1 ], [ 2, 2 ] ] scons 46 
+___no 54 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 3 ], [ 2, 1 ] ] scons 30 
+___no 55 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 2 ], [ 2, 2 ] ] scons 46 
+___no 56 
+kk 7 rho 8 wgraph [ [ 0, 18 ], [ 1, 3 ] ] scons 27 
+___no 57 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 4 ] ] scons 24 
+___no 58 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 3 ], [ 2, 1 ] ] scons 27 
+___no 59 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 5 ] ] scons 23 
+___no 60 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] scons 27 
+___no 61 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 3 ], [ 2, 1 ] ] scons 31 
+___no 62 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 2 ], [ 2, 2 ] ] scons 34 
+___no 63 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] scons 26 
+___no 64 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] scons 31 
+___no 65 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 2 ], [ 2, 2 ] ] scons 46 
+___no 66 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 1 ], [ 2, 3 ] ] scons 46 
+___no 67 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] scons 30 
+___no 68 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 2 ], [ 2, 3 ] ] scons 36 
+___no 69 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 4 ] ] scons 27 
+___no 70 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 5 ] ] scons 23 
+___no 71 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] scons 24 
+___no 72 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 6 ] ] scons 22 
+___no 73 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 23 
+___no 74 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 27 
+___no 75 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] scons 27 
+___no 76 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] scons 27 
+___no 77 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 23 
+___no 78 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 24 
+___no 79 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] scons 27 
+___no 80 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] scons 34 
+___no 81 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 2 ], [ 2, 3 ] ] scons 31 
+___no 82 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 24 
+___no 83 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] scons 25 
+___no 84 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] scons 27 
+___no 85 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 2 ], [ 2, 3 ] ] scons 46 
+___no 86 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 1 ], [ 2, 4 ] ] scons 36 
+___no 87 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] scons 25 
+___no 88 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] scons 26 
+___no 89 
+kk 7 rho 7 wgraph [ [ 0, 15 ], [ 1, 2 ], [ 2, 3 ], [ 4, 1 ] ] scons 20 
+___no 90 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 1 ], [ 2, 5 ] ] scons 27 
+___no 91 
+kk 7 rho 7 wgraph [ [ 0, 15 ], [ 1, 1 ], [ 2, 4 ], [ 4, 1 ] ] scons 20 
+___no 92 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 5 ] ] scons 27 
+___no 93 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 6 ] ] scons 22 
+___no 94 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 22 
+___no 95 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 3, 1 ] ] scons 27 
+___no 96 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 7 ] ] scons 21 
+___no 97 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] scons 21 
+___no 98 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 6 ], [ 3, 1 ] ] scons 25 
+___no 99 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] scons 21 
+___no 100 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 31 
+___no 101 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 24 
+___no 102 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 23 
+___no 103 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 1 ], [ 3, 1 ] ] scons 27 
+___no 104 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] scons 21 
+___no 105 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] scons 21 
+___no 106 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 24 
+___no 107 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] scons 21 
+___no 108 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 27 
+___no 109 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 6 ], [ 3, 1 ] ] scons 27 
+___no 110 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 25 
+___no 111 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 3, 2 ] ] scons 31 
+___no 112 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 24 
+___no 113 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 1 ], [ 3, 2 ] ] scons 34 
+___no 114 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 27 
+___no 115 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] scons 24 
+___no 116 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] scons 27 
+___no 117 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] scons 21 
+___no 118 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] scons 21 
+___no 119 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 23 
+___no 120 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] scons 21 
+___no 121 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 24 
+___no 122 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 27 
+___no 123 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 24 
+___no 124 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 1 ], [ 3, 2 ] ] scons 27 
+___no 125 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 23 
+___no 126 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 2 ], [ 3, 2 ] ] scons 27 
+___no 127 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 1 ], [ 3, 2 ] ] scons 31 
+___no 128 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 3, 3 ] ] scons 34 
+___no 129 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 2 ], [ 3, 2 ] ] scons 26 
+___no 130 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] scons 31 
+___no 131 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] scons 25 
+___no 132 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 2 ], [ 2, 3 ], [ 3, 1 ] ] scons 27 
+___no 133 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] scons 21 
+___no 134 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] scons 21 
+___no 135 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 22 
+___no 136 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 5 ] ] scons 21 
+___no 137 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 22 
+___no 138 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 3 ], [ 3, 2 ] ] scons 27 
+___no 139 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 27 
+___no 140 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 23 
+___no 141 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 2 ], [ 3, 2 ] ] scons 24 
+___no 142 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 22 
+___no 143 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] scons 36 
+___no 144 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 1 ], [ 2, 5 ] ] scons 26 
+___no 145 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 1 ], [ 2, 4 ], [ 3, 1 ] ] scons 27 
+___no 146 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] scons 21 
+___no 147 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 5 ] ] scons 21 
+___no 148 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 21 
+___no 149 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 1 ], [ 2, 6 ] ] scons 21 
+___no 150 
+kk 6 rho 7 wgraph [ [ 0, 14 ], [ 2, 1 ] ] scons 30 
+___no 151 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 3 ], [ 2, 1 ] ] scons 38 
+___no 152 
+kk 7 rho 7 wgraph [ [ 0, 19 ], [ 2, 2 ] ] scons 30 
+___no 153 
+kk 7 rho 8 wgraph [ [ 0, 18 ], [ 2, 3 ] ] scons 63 
+___no 154 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 2 ], [ 2, 2 ] ] scons 46 
+___no 155 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 3 ], [ 2, 1 ] ] scons 36 
+___no 156 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 2 ], [ 2, 2 ] ] scons 38 
+___no 157 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] scons 34 
+___no 158 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 1 ], [ 2, 3 ] ] scons 46 
+___no 159 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] scons 38 
+___no 160 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 2, 4 ] ] scons 63 
+___no 161 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 2 ], [ 2, 3 ] ] scons 46 
+___no 162 
+kk 7 rho 7 wgraph [ [ 0, 16 ], [ 2, 5 ] ] scons 30 
+___no 163 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] scons 36 
+___no 164 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] scons 34 
+___no 165 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 32 
+___no 166 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 36 
+___no 167 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 2 ], [ 2, 3 ] ] scons 38 
+___no 168 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 34 
+___no 169 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] scons 36 
+___no 170 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 1 ], [ 2, 4 ] ] scons 46 
+___no 171 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] scons 38 
+___no 172 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] scons 36 
+___no 173 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 2, 5 ] ] scons 63 
+___no 174 
+kk 7 rho 7 wgraph [ [ 0, 16 ], [ 2, 4 ], [ 4, 1 ] ] scons 30 
+___no 175 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] scons 46 
+___no 176 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 1 ], [ 2, 5 ] ] scons 36 
+___no 177 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 2, 6 ] ] scons 42 
+___no 178 
+kk 7 rho 7 wgraph [ [ 0, 15 ], [ 2, 5 ], [ 4, 1 ] ] scons 30 
+___no 179 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 36 
+___no 180 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 32 
+___no 181 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 1 ], [ 3, 1 ] ] scons 36 
+___no 182 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] scons 31 
+___no 183 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] scons 31 
+___no 184 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 46 
+___no 185 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] scons 38 
+___no 186 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] scons 34 
+___no 187 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] scons 36 
+___no 188 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] scons 32 
+___no 189 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] scons 31 
+___no 190 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 38 
+___no 191 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] scons 34 
+___no 192 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 36 
+___no 193 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 1 ], [ 3, 2 ] ] scons 46 
+___no 194 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 38 
+___no 195 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] scons 38 
+___no 196 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 2 ], [ 2, 3 ], [ 3, 1 ] ] scons 36 
+___no 197 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] scons 34 
+___no 198 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] scons 31 
+___no 199 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 34 
+___no 200 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 5 ] ] scons 32 
+___no 201 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 36 
+___no 202 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 2 ], [ 3, 2 ] ] scons 38 
+___no 203 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 34 
+___no 204 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 1 ], [ 3, 3 ] ] scons 46 
+___no 205 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 3 ], [ 3, 2 ] ] scons 38 
+___no 206 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 1 ], [ 2, 5 ] ] scons 46 
+___no 207 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 1 ], [ 2, 4 ], [ 3, 1 ] ] scons 36 
+___no 208 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] scons 38 
+___no 209 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 5 ] ] scons 31 
+___no 210 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 32 
+___no 211 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 1 ], [ 2, 6 ] ] scons 31 
+___no 212 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 1 ], [ 2, 5 ], [ 3, 1 ] ] scons 36 
+___no 213 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 36 
+___no 214 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 3 ], [ 3, 2 ] ] scons 34 
+___no 215 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 1 ], [ 2, 5 ], [ 3, 1 ] ] scons 32 
+___no 216 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 2, 6 ] ] scons 63 
+___no 217 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 2, 5 ], [ 3, 1 ] ] scons 36 
+___no 218 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 2, 5 ], [ 4, 1 ] ] scons 42 
+___no 219 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 5 ] ] scons 46 
+___no 220 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 1 ], [ 2, 6 ] ] scons 31 
+___no 221 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 1 ], [ 2, 5 ], [ 3, 1 ] ] scons 31 
+___no 222 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 2, 7 ] ] scons 31 
+___no 223 
+kk 6 rho 7 wgraph [ [ 0, 13 ], [ 1, 2 ] ] scons 19 
+___no 224 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 4 ] ] scons 24 
+___no 225 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 5 ] ] scons 23 
+___no 226 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] scons 38 
+___no 227 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 3 ], [ 2, 1 ] ] scons 30 
+___no 228 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] scons 34 
+___no 229 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 2 ], [ 2, 2 ] ] scons 42 
+___no 230 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 4 ] ] scons 25 
+___no 231 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 5 ] ] scons 23 
+___no 232 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] scons 27 
+___no 233 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 3 ], [ 2, 1 ] ] scons 32 
+___no 234 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] scons 30 
+___no 235 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 5 ] ] scons 23 
+___no 236 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 6 ] ] scons 22 
+___no 237 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 27 
+___no 238 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] scons 26 
+___no 239 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 26 
+___no 240 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] scons 30 
+___no 241 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 32 
+___no 242 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] scons 30 
+___no 243 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] scons 34 
+___no 244 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] scons 42 
+___no 245 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] scons 31 
+___no 246 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 25 
+___no 247 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 31 
+___no 248 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] scons 34 
+___no 249 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 30 
+___no 250 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 2 ], [ 2, 3 ] ] scons 38 
+___no 251 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] scons 36 
+___no 252 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 4 ] ] scons 29 
+___no 253 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 5 ] ] scons 23 
+___no 254 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] scons 24 
+___no 255 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 5 ] ] scons 25 
+___no 256 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 6 ] ] scons 22 
+___no 257 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 23 
+___no 258 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] scons 29 
+___no 259 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 25 
+___no 260 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 29 
+___no 261 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 6 ] ] scons 22 
+___no 262 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 7 ] ] scons 21 
+___no 263 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] scons 22 
+___no 264 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 23 
+___no 265 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] scons 22 
+___no 266 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] scons 25 
+___no 267 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 24 
+___no 268 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] scons 23 
+___no 269 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] scons 29 
+___no 270 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] scons 32 
+___no 271 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] scons 30 
+___no 272 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 26 
+___no 273 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 26 
+___no 274 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 30 
+___no 275 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] scons 32 
+___no 276 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 27 
+___no 277 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] scons 22 
+___no 278 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] scons 23 
+___no 279 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 27 
+___no 280 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] scons 23 
+___no 281 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] scons 25 
+___no 282 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] scons 27 
+___no 283 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] scons 24 
+___no 284 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] scons 27 
+___no 285 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 2 ], [ 2, 3 ] ] scons 42 
+___no 286 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 34 
+___no 287 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] scons 30 
+___no 288 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] scons 38 
+___no 289 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] scons 36 
+___no 290 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 38 
+___no 291 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] scons 23 
+___no 292 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] scons 24 
+___no 293 
+kk 7 rho 7 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 4, 1 ] ] scons 19 
+___no 294 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] scons 34 
+___no 295 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] scons 24 
+___no 296 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] scons 25 
+___no 297 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] scons 31 
+___no 298 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] scons 25 
+___no 299 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 5 ] ] scons 26 
+___no 300 
+kk 7 rho 7 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 4, 1 ] ] scons 19 
+___no 301 
+kk 7 rho 7 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 4, 1 ] ] scons 19 
+___no 302 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 5 ] ] scons 32 
+___no 303 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 6 ] ] scons 22 
+___no 304 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 22 
+___no 305 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 3, 1 ] ] scons 27 
+___no 306 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 6 ] ] scons 25 
+___no 307 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 7 ] ] scons 21 
+___no 308 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] scons 21 
+___no 309 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 6 ], [ 3, 1 ] ] scons 25 
+___no 310 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 27 
+___no 311 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] scons 22 
+___no 312 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] scons 22 
+___no 313 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 32 
+___no 314 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 7 ] ] scons 21 
+___no 315 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 8 ] ] scons 20 
+___no 316 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 7 ], [ 2, 1 ] ] scons 20 
+___no 317 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 7 ], [ 3, 1 ] ] scons 23 
+___no 318 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] scons 21 
+___no 319 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 7 ], [ 2, 1 ] ] scons 20 
+___no 320 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 6 ], [ 2, 2 ] ] scons 20 
+___no 321 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 6 ], [ 2, 1 ], [ 3, 1 ] ] scons 26 
+___no 322 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 6 ], [ 3, 1 ] ] scons 27 
+___no 323 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 7 ], [ 3, 1 ] ] scons 24 
+___no 324 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 6 ], [ 2, 1 ], [ 3, 1 ] ] scons 27 
+___no 325 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] scons 21 
+___no 326 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 6 ], [ 2, 2 ] ] scons 20 
+___no 327 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 3 ] ] scons 20 
+___no 328 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 30 
+___no 329 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 25 
+___no 330 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 6 ], [ 2, 1 ], [ 3, 1 ] ] scons 23 
+___no 331 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 27 
+___no 332 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 3, 2 ] ] scons 32 
+___no 333 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 6 ], [ 3, 2 ] ] scons 30 
+___no 334 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 29 
+___no 335 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 25 
+___no 336 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 1 ], [ 3, 1 ] ] scons 29 
+___no 337 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] scons 23 
+___no 338 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] scons 22 
+___no 339 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 25 
+___no 340 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] scons 24 
+___no 341 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] scons 23 
+___no 342 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 29 
+___no 343 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] scons 24 
+___no 344 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 7 ], [ 2, 1 ] ] scons 20 
+___no 345 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 6 ], [ 2, 2 ] ] scons 20 
+___no 346 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 6 ], [ 2, 1 ], [ 3, 1 ] ] scons 22 
+___no 347 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] scons 23 
+___no 348 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 6 ], [ 2, 2 ] ] scons 20 
+___no 349 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 3 ] ] scons 20 
+___no 350 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 23 
+___no 351 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 29 
+___no 352 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 6 ], [ 2, 1 ], [ 3, 1 ] ] scons 23 
+___no 353 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 24 
+___no 354 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] scons 22 
+___no 355 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 3 ] ] scons 20 
+___no 356 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 4 ] ] scons 20 
+___no 357 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 24 
+___no 358 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 25 
+___no 359 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 22 
+___no 360 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 23 
+___no 361 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 1 ], [ 3, 2 ] ] scons 29 
+___no 362 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 1 ], [ 3, 2 ] ] scons 25 
+___no 363 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] scons 29 
+___no 364 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 7 ], [ 3, 1 ] ] scons 27 
+___no 365 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 6 ], [ 2, 1 ], [ 3, 1 ] ] scons 24 
+___no 366 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 6 ], [ 3, 2 ] ] scons 27 
+___no 367 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 6 ], [ 2, 1 ], [ 3, 1 ] ] scons 25 
+___no 368 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 23 
+___no 369 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 1 ], [ 3, 2 ] ] scons 27 
+___no 370 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 6 ], [ 3, 2 ] ] scons 32 
+___no 371 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 1 ], [ 3, 2 ] ] scons 30 
+___no 372 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 23 
+___no 373 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 22 
+___no 374 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] scons 27 
+___no 375 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 1 ], [ 3, 2 ] ] scons 26 
+___no 376 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] scons 26 
+___no 377 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 3, 3 ] ] scons 30 
+___no 378 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 1 ], [ 3, 3 ] ] scons 32 
+___no 379 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] scons 30 
+___no 380 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] scons 32 
+___no 381 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] scons 27 
+___no 382 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] scons 23 
+___no 383 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 25 
+___no 384 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] scons 27 
+___no 385 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] scons 24 
+___no 386 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 27 
+___no 387 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] scons 30 
+___no 388 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 6 ], [ 2, 2 ] ] scons 20 
+___no 389 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 3 ] ] scons 20 
+___no 390 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 21 
+___no 391 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] scons 26 
+___no 392 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 3 ] ] scons 20 
+___no 393 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 4 ] ] scons 20 
+___no 394 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 21 
+___no 395 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 32 
+___no 396 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 22 
+___no 397 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 22 
+___no 398 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] scons 27 
+___no 399 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] scons 23 
+___no 400 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 4 ] ] scons 20 
+___no 401 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 3 ], [ 2, 5 ] ] scons 20 
+___no 402 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] scons 21 
+___no 403 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 25 
+___no 404 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 21 
+___no 405 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] scons 21 
+___no 406 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 3 ], [ 2, 3 ], [ 3, 2 ] ] scons 25 
+___no 407 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 2 ], [ 3, 2 ] ] scons 27 
+___no 408 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] scons 22 
+___no 409 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 3 ], [ 2, 3 ], [ 3, 2 ] ] scons 22 
+___no 410 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 3 ], [ 2, 2 ], [ 3, 3 ] ] scons 32 
+___no 411 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 6 ], [ 2, 1 ], [ 3, 1 ] ] scons 29 
+___no 412 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 23 
+___no 413 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 1 ], [ 3, 2 ] ] scons 24 
+___no 414 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 25 
+___no 415 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 22 
+___no 416 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] scons 23 
+___no 417 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 1 ], [ 3, 2 ] ] scons 29 
+___no 418 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] scons 25 
+___no 419 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 22 
+___no 420 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] scons 21 
+___no 421 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] scons 38 
+___no 422 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 2 ], [ 2, 3 ], [ 3, 1 ] ] scons 36 
+___no 423 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] scons 34 
+___no 424 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] scons 24 
+___no 425 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 25 
+___no 426 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] scons 31 
+___no 427 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 5 ] ] scons 25 
+___no 428 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 26 
+___no 429 
+kk 7 rho 7 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 4, 1 ] ] scons 19 
+___no 430 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] scons 42 
+___no 431 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 3 ] ] scons 20 
+___no 432 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 4 ] ] scons 20 
+___no 433 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 20 
+___no 434 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 4, 1 ] ] scons 26 
+___no 435 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] scons 30 
+___no 436 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 4 ] ] scons 20 
+___no 437 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 3 ], [ 2, 5 ] ] scons 20 
+___no 438 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] scons 20 
+___no 439 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 3 ], [ 2, 4 ], [ 4, 1 ] ] scons 25 
+___no 440 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 36 
+___no 441 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 21 
+___no 442 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] scons 21 
+___no 443 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 5 ] ] scons 24 
+___no 444 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 3 ], [ 2, 5 ] ] scons 20 
+___no 445 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 2 ], [ 2, 6 ] ] scons 20 
+___no 446 
+kk 6 rho 7 wgraph [ [ 0, 13 ], [ 1, 1 ], [ 2, 1 ] ] scons 25 
+___no 447 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 2 ], [ 2, 2 ] ] scons 38 
+___no 448 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 2 ], [ 2, 2 ] ] scons 38 
+___no 449 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] scons 30 
+___no 450 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 29 
+___no 451 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] scons 33 
+___no 452 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] scons 38 
+___no 453 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] scons 34 
+___no 454 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 34 
+___no 455 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 2 ], [ 2, 3 ] ] scons 38 
+___no 456 
+kk 7 rho 7 wgraph [ [ 0, 17 ], [ 1, 2 ], [ 2, 2 ] ] scons 25 
+___no 457 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 2 ], [ 2, 3 ] ] scons 42 
+___no 458 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 33 
+___no 459 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 2 ], [ 2, 3 ] ] scons 42 
+___no 460 
+kk 7 rho 7 wgraph [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] scons 25 
+___no 461 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] scons 38 
+___no 462 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 1 ], [ 2, 4 ] ] scons 46 
+___no 463 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] scons 34 
+___no 464 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 28 
+___no 465 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 32 
+___no 466 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] scons 34 
+___no 467 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 34 
+___no 468 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 30 
+___no 469 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 29 
+___no 470 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 30 
+___no 471 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] scons 27 
+Error, PrintTo: cannot open './gapsaves/savetestresult.txt' for output in
+  CallFuncList( PRINT_TO, arg 
+ ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/streams.gd:1078 called from 
+PrintTo( fn, name, ":=", obj, ";\n" ); at gapReads/SavesReads.txt:57 called from
+savedataas( theresult, savename ); at Task20260921Va.g:212 called from
+thetask( kk + 1, newwg ); at Task20260921Va.g:214 called from
+thetask( kk + 1, newwg ); at Task20260921Va.g:214 called from
+thetask( kk + 1, newwg ); at Task20260921Va.g:214 called from
+...  at Task20260921Va.g:223
+gap> Read("Task20260921Va.g");
+___no 1 
+kk 2 rho 3 wgraph [ [ 0, 1 ] ] scons 3 
+___no 2 
+kk 3 rho 4 wgraph [ [ 0, 3 ] ] scons 6 
+___no 3 
+kk 4 rho 5 wgraph [ [ 0, 6 ] ] scons 10 
+___no 4 
+kk 5 rho 6 wgraph [ [ 0, 10 ] ] scons 15 
+___no 5 
+kk 6 rho 7 wgraph [ [ 0, 15 ] ] scons 21 
+___no 6 
+kk 7 rho 8 wgraph [ [ 0, 21 ] ] scons 28 
+___no 7 
+kk 7 rho 8 wgraph [ [ 0, 20 ], [ 1, 1 ] ] scons 27 
+___no 8 
+kk 7 rho 8 wgraph [ [ 0, 20 ], [ 2, 1 ] ] scons 42 
+___no 9 
+kk 7 rho 8 wgraph [ [ 0, 19 ], [ 1, 2 ] ] scons 26 
+___no 10 
+kk 7 rho 8 wgraph [ [ 0, 19 ], [ 1, 1 ], [ 2, 1 ] ] scons 36 
+___no 11 
+kk 7 rho 8 wgraph [ [ 0, 19 ], [ 2, 2 ] ] scons 63 
+___no 12 
+kk 7 rho 8 wgraph [ [ 0, 18 ], [ 1, 3 ] ] scons 25 
+___no 13 
+kk 7 rho 8 wgraph [ [ 0, 18 ], [ 1, 2 ], [ 2, 1 ] ] scons 31 
+___no 14 
+kk 7 rho 8 wgraph [ [ 0, 18 ], [ 1, 1 ], [ 2, 2 ] ] scons 42 
+___no 15 
+kk 7 rho 8 wgraph [ [ 0, 18 ], [ 2, 3 ] ] scons 63 
+___no 16 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 4 ] ] scons 24 
+___no 17 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 3 ], [ 2, 1 ] ] scons 27 
+___no 18 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 2 ], [ 2, 2 ] ] scons 31 
+___no 19 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 1 ], [ 2, 3 ] ] scons 36 
+___no 20 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 2, 4 ] ] scons 42 
+___no 21 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 5 ] ] scons 23 
+___no 22 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] scons 24 
+___no 23 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] scons 25 
+___no 24 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 2 ], [ 2, 3 ] ] scons 26 
+___no 25 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 1 ], [ 2, 4 ] ] scons 27 
+___no 26 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 2, 5 ] ] scons 28 
+___no 27 
+kk 7 rho 7 wgraph [ [ 0, 16 ], [ 2, 4 ], [ 4, 1 ] ] scons 21 
+___no 28 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 6 ] ] scons 22 
+___no 29 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 22 
+___no 30 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 3, 1 ] ] scons 27 
+___no 31 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 22 
+___no 32 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 1 ], [ 3, 1 ] ] scons 26 
+___no 33 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 3, 2 ] ] scons 36 
+___no 34 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] scons 22 
+___no 35 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] scons 25 
+___no 36 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 1 ], [ 3, 2 ] ] scons 31 
+___no 37 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 3, 3 ] ] scons 42 
+___no 38 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] scons 22 
+___no 39 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 2 ], [ 2, 3 ], [ 3, 1 ] ] scons 24 
+___no 40 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 2 ], [ 2, 2 ], [ 3, 2 ] ] scons 27 
+___no 41 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 1 ], [ 2, 5 ] ] scons 22 
+___no 42 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 1 ], [ 2, 4 ], [ 3, 1 ] ] scons 23 
+___no 43 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 2, 6 ] ] scons 22 
+___no 44 
+kk 6 rho 7 wgraph [ [ 0, 14 ], [ 1, 1 ] ] scons 20 
+___no 45 
+kk 7 rho 8 wgraph [ [ 0, 18 ], [ 1, 3 ] ] scons 25 
+___no 46 
+kk 7 rho 8 wgraph [ [ 0, 18 ], [ 1, 2 ], [ 2, 1 ] ] scons 46 
+___no 47 
+kk 7 rho 8 wgraph [ [ 0, 19 ], [ 1, 2 ] ] scons 27 
+___no 48 
+kk 7 rho 8 wgraph [ [ 0, 18 ], [ 1, 3 ] ] scons 25 
+___no 49 
+kk 7 rho 8 wgraph [ [ 0, 18 ], [ 1, 2 ], [ 2, 1 ] ] scons 31 
+___no 50 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 4 ] ] scons 24 
+___no 51 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 3 ], [ 2, 1 ] ] scons 34 
+___no 52 
+kk 7 rho 8 wgraph [ [ 0, 18 ], [ 1, 2 ], [ 2, 1 ] ] scons 36 
+___no 53 
+kk 7 rho 8 wgraph [ [ 0, 18 ], [ 1, 1 ], [ 2, 2 ] ] scons 46 
+___no 54 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 3 ], [ 2, 1 ] ] scons 30 
+___no 55 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 2 ], [ 2, 2 ] ] scons 46 
+___no 56 
+kk 7 rho 8 wgraph [ [ 0, 18 ], [ 1, 3 ] ] scons 27 
+___no 57 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 4 ] ] scons 24 
+___no 58 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 3 ], [ 2, 1 ] ] scons 27 
+___no 59 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 5 ] ] scons 23 
+___no 60 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] scons 27 
+___no 61 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 3 ], [ 2, 1 ] ] scons 31 
+___no 62 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 2 ], [ 2, 2 ] ] scons 34 
+___no 63 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] scons 26 
+___no 64 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] scons 31 
+___no 65 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 2 ], [ 2, 2 ] ] scons 46 
+___no 66 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 1 ], [ 2, 3 ] ] scons 46 
+___no 67 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] scons 30 
+___no 68 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 2 ], [ 2, 3 ] ] scons 36 
+___no 69 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 4 ] ] scons 27 
+___no 70 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 5 ] ] scons 23 
+___no 71 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] scons 24 
+___no 72 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 6 ] ] scons 22 
+___no 73 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 23 
+___no 74 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 27 
+___no 75 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] scons 27 
+___no 76 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] scons 27 
+___no 77 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 23 
+___no 78 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 24 
+___no 79 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] scons 27 
+___no 80 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] scons 34 
+___no 81 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 2 ], [ 2, 3 ] ] scons 31 
+___no 82 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 24 
+___no 83 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] scons 25 
+___no 84 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] scons 27 
+___no 85 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 2 ], [ 2, 3 ] ] scons 46 
+___no 86 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 1 ], [ 2, 4 ] ] scons 36 
+___no 87 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] scons 25 
+___no 88 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] scons 26 
+___no 89 
+kk 7 rho 7 wgraph [ [ 0, 15 ], [ 1, 2 ], [ 2, 3 ], [ 4, 1 ] ] scons 20 
+___no 90 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 1 ], [ 2, 5 ] ] scons 27 
+___no 91 
+kk 7 rho 7 wgraph [ [ 0, 15 ], [ 1, 1 ], [ 2, 4 ], [ 4, 1 ] ] scons 20 
+___no 92 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 5 ] ] scons 27 
+___no 93 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 6 ] ] scons 22 
+___no 94 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 22 
+___no 95 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 3, 1 ] ] scons 27 
+___no 96 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 7 ] ] scons 21 
+___no 97 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] scons 21 
+___no 98 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 6 ], [ 3, 1 ] ] scons 25 
+___no 99 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] scons 21 
+___no 100 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 31 
+___no 101 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 24 
+___no 102 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 23 
+___no 103 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 1 ], [ 3, 1 ] ] scons 27 
+___no 104 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] scons 21 
+___no 105 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] scons 21 
+___no 106 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 24 
+___no 107 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] scons 21 
+___no 108 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 27 
+___no 109 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 6 ], [ 3, 1 ] ] scons 27 
+___no 110 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 25 
+___no 111 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 3, 2 ] ] scons 31 
+___no 112 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 24 
+___no 113 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 1 ], [ 3, 2 ] ] scons 34 
+___no 114 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 27 
+___no 115 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] scons 24 
+___no 116 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] scons 27 
+___no 117 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] scons 21 
+___no 118 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] scons 21 
+___no 119 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 23 
+___no 120 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] scons 21 
+___no 121 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 24 
+___no 122 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 27 
+___no 123 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 24 
+___no 124 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 1 ], [ 3, 2 ] ] scons 27 
+___no 125 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 23 
+___no 126 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 2 ], [ 3, 2 ] ] scons 27 
+___no 127 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 1 ], [ 3, 2 ] ] scons 31 
+___no 128 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 3, 3 ] ] scons 34 
+___no 129 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 2 ], [ 3, 2 ] ] scons 26 
+___no 130 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] scons 31 
+___no 131 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] scons 25 
+___no 132 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 2 ], [ 2, 3 ], [ 3, 1 ] ] scons 27 
+___no 133 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] scons 21 
+___no 134 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] scons 21 
+___no 135 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 22 
+___no 136 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 5 ] ] scons 21 
+___no 137 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 22 
+___no 138 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 3 ], [ 3, 2 ] ] scons 27 
+___no 139 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 27 
+___no 140 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 23 
+___no 141 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 2 ], [ 3, 2 ] ] scons 24 
+___no 142 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 22 
+___no 143 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] scons 36 
+___no 144 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 1 ], [ 2, 5 ] ] scons 26 
+___no 145 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 1 ], [ 2, 4 ], [ 3, 1 ] ] scons 27 
+___no 146 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] scons 21 
+___no 147 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 5 ] ] scons 21 
+___no 148 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 21 
+___no 149 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 1 ], [ 2, 6 ] ] scons 21 
+___no 150 
+kk 6 rho 7 wgraph [ [ 0, 14 ], [ 2, 1 ] ] scons 30 
+___no 151 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 3 ], [ 2, 1 ] ] scons 38 
+___no 152 
+kk 7 rho 7 wgraph [ [ 0, 19 ], [ 2, 2 ] ] scons 30 
+___no 153 
+kk 7 rho 8 wgraph [ [ 0, 18 ], [ 2, 3 ] ] scons 63 
+___no 154 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 2 ], [ 2, 2 ] ] scons 46 
+___no 155 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 3 ], [ 2, 1 ] ] scons 36 
+___no 156 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 2 ], [ 2, 2 ] ] scons 38 
+___no 157 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] scons 34 
+___no 158 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 1 ], [ 2, 3 ] ] scons 46 
+___no 159 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] scons 38 
+___no 160 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 2, 4 ] ] scons 63 
+___no 161 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 2 ], [ 2, 3 ] ] scons 46 
+___no 162 
+kk 7 rho 7 wgraph [ [ 0, 16 ], [ 2, 5 ] ] scons 30 
+___no 163 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] scons 36 
+___no 164 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] scons 34 
+___no 165 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 32 
+___no 166 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 36 
+___no 167 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 2 ], [ 2, 3 ] ] scons 38 
+___no 168 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 34 
+___no 169 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] scons 36 
+___no 170 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 1 ], [ 2, 4 ] ] scons 46 
+___no 171 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] scons 38 
+___no 172 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] scons 36 
+___no 173 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 2, 5 ] ] scons 63 
+___no 174 
+kk 7 rho 7 wgraph [ [ 0, 16 ], [ 2, 4 ], [ 4, 1 ] ] scons 30 
+___no 175 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] scons 46 
+___no 176 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 1 ], [ 2, 5 ] ] scons 36 
+___no 177 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 2, 6 ] ] scons 42 
+___no 178 
+kk 7 rho 7 wgraph [ [ 0, 15 ], [ 2, 5 ], [ 4, 1 ] ] scons 30 
+___no 179 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 36 
+___no 180 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 32 
+___no 181 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 1 ], [ 3, 1 ] ] scons 36 
+___no 182 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] scons 31 
+___no 183 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] scons 31 
+___no 184 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 46 
+___no 185 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] scons 38 
+___no 186 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] scons 34 
+___no 187 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] scons 36 
+___no 188 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] scons 32 
+___no 189 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] scons 31 
+___no 190 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 38 
+___no 191 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] scons 34 
+___no 192 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 36 
+___no 193 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 1 ], [ 3, 2 ] ] scons 46 
+___no 194 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 38 
+___no 195 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] scons 38 
+___no 196 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 2 ], [ 2, 3 ], [ 3, 1 ] ] scons 36 
+___no 197 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] scons 34 
+___no 198 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] scons 31 
+___no 199 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 34 
+___no 200 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 5 ] ] scons 32 
+___no 201 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 36 
+___no 202 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 2 ], [ 3, 2 ] ] scons 38 
+___no 203 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 34 
+___no 204 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 1 ], [ 3, 3 ] ] scons 46 
+___no 205 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 3 ], [ 3, 2 ] ] scons 38 
+___no 206 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 1 ], [ 2, 5 ] ] scons 46 
+___no 207 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 1 ], [ 2, 4 ], [ 3, 1 ] ] scons 36 
+___no 208 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] scons 38 
+___no 209 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 5 ] ] scons 31 
+___no 210 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 32 
+___no 211 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 1 ], [ 2, 6 ] ] scons 31 
+___no 212 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 1 ], [ 2, 5 ], [ 3, 1 ] ] scons 36 
+___no 213 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 36 
+___no 214 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 3 ], [ 3, 2 ] ] scons 34 
+___no 215 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 1 ], [ 2, 5 ], [ 3, 1 ] ] scons 32 
+___no 216 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 2, 6 ] ] scons 63 
+___no 217 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 2, 5 ], [ 3, 1 ] ] scons 36 
+___no 218 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 2, 5 ], [ 4, 1 ] ] scons 42 
+___no 219 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 5 ] ] scons 46 
+___no 220 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 1 ], [ 2, 6 ] ] scons 31 
+___no 221 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 1 ], [ 2, 5 ], [ 3, 1 ] ] scons 31 
+___no 222 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 2, 7 ] ] scons 31 
+___no 223 
+kk 6 rho 7 wgraph [ [ 0, 13 ], [ 1, 2 ] ] scons 19 
+___no 224 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 4 ] ] scons 24 
+___no 225 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 5 ] ] scons 23 
+___no 226 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] scons 38 
+___no 227 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 3 ], [ 2, 1 ] ] scons 30 
+___no 228 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] scons 34 
+___no 229 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 2 ], [ 2, 2 ] ] scons 42 
+___no 230 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 4 ] ] scons 25 
+___no 231 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 5 ] ] scons 23 
+___no 232 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] scons 27 
+___no 233 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 3 ], [ 2, 1 ] ] scons 32 
+___no 234 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] scons 30 
+___no 235 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 5 ] ] scons 23 
+___no 236 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 6 ] ] scons 22 
+___no 237 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 27 
+___no 238 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] scons 26 
+___no 239 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 26 
+___no 240 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] scons 30 
+___no 241 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 32 
+___no 242 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] scons 30 
+___no 243 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] scons 34 
+___no 244 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] scons 42 
+___no 245 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] scons 31 
+___no 246 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 25 
+___no 247 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 31 
+___no 248 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] scons 34 
+___no 249 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 30 
+___no 250 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 2 ], [ 2, 3 ] ] scons 38 
+___no 251 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] scons 36 
+___no 252 
+kk 7 rho 8 wgraph [ [ 0, 17 ], [ 1, 4 ] ] scons 29 
+___no 253 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 5 ] ] scons 23 
+___no 254 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] scons 24 
+___no 255 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 5 ] ] scons 25 
+___no 256 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 6 ] ] scons 22 
+___no 257 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 23 
+___no 258 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] scons 29 
+___no 259 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 25 
+___no 260 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 29 
+___no 261 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 6 ] ] scons 22 
+___no 262 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 7 ] ] scons 21 
+___no 263 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] scons 22 
+___no 264 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 23 
+___no 265 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] scons 22 
+___no 266 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] scons 25 
+___no 267 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 24 
+___no 268 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] scons 23 
+___no 269 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] scons 29 
+___no 270 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] scons 32 
+___no 271 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] scons 30 
+___no 272 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 26 
+___no 273 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 26 
+___no 274 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 30 
+___no 275 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] scons 32 
+___no 276 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 27 
+___no 277 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] scons 22 
+___no 278 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] scons 23 
+___no 279 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 27 
+___no 280 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] scons 23 
+___no 281 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] scons 25 
+___no 282 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] scons 27 
+___no 283 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] scons 24 
+___no 284 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] scons 27 
+___no 285 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 2 ], [ 2, 3 ] ] scons 42 
+___no 286 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 34 
+___no 287 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] scons 30 
+___no 288 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] scons 38 
+___no 289 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] scons 36 
+___no 290 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 38 
+___no 291 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] scons 23 
+___no 292 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] scons 24 
+___no 293 
+kk 7 rho 7 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 4, 1 ] ] scons 19 
+___no 294 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] scons 34 
+___no 295 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] scons 24 
+___no 296 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] scons 25 
+___no 297 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] scons 31 
+___no 298 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] scons 25 
+___no 299 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 5 ] ] scons 26 
+___no 300 
+kk 7 rho 7 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 4, 1 ] ] scons 19 
+___no 301 
+kk 7 rho 7 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 4, 1 ] ] scons 19 
+___no 302 
+kk 7 rho 8 wgraph [ [ 0, 16 ], [ 1, 5 ] ] scons 32 
+___no 303 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 6 ] ] scons 22 
+___no 304 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 22 
+___no 305 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 3, 1 ] ] scons 27 
+___no 306 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 6 ] ] scons 25 
+___no 307 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 7 ] ] scons 21 
+___no 308 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] scons 21 
+___no 309 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 6 ], [ 3, 1 ] ] scons 25 
+___no 310 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 27 
+___no 311 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] scons 22 
+___no 312 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] scons 22 
+___no 313 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 32 
+___no 314 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 7 ] ] scons 21 
+___no 315 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 8 ] ] scons 20 
+___no 316 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 7 ], [ 2, 1 ] ] scons 20 
+___no 317 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 7 ], [ 3, 1 ] ] scons 23 
+___no 318 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] scons 21 
+___no 319 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 7 ], [ 2, 1 ] ] scons 20 
+___no 320 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 6 ], [ 2, 2 ] ] scons 20 
+___no 321 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 6 ], [ 2, 1 ], [ 3, 1 ] ] scons 26 
+___no 322 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 6 ], [ 3, 1 ] ] scons 27 
+___no 323 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 7 ], [ 3, 1 ] ] scons 24 
+___no 324 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 6 ], [ 2, 1 ], [ 3, 1 ] ] scons 27 
+___no 325 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] scons 21 
+___no 326 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 6 ], [ 2, 2 ] ] scons 20 
+___no 327 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 3 ] ] scons 20 
+___no 328 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 30 
+___no 329 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 25 
+___no 330 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 6 ], [ 2, 1 ], [ 3, 1 ] ] scons 23 
+___no 331 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 27 
+___no 332 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 3, 2 ] ] scons 32 
+___no 333 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 6 ], [ 3, 2 ] ] scons 30 
+___no 334 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] scons 29 
+___no 335 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] scons 25 
+___no 336 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 4 ], [ 2, 1 ], [ 3, 1 ] ] scons 29 
+___no 337 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] scons 23 
+___no 338 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] scons 22 
+___no 339 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 25 
+___no 340 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] scons 24 
+___no 341 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] scons 23 
+___no 342 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 29 
+___no 343 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] scons 24 
+___no 344 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 7 ], [ 2, 1 ] ] scons 20 
+___no 345 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 6 ], [ 2, 2 ] ] scons 20 
+___no 346 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 6 ], [ 2, 1 ], [ 3, 1 ] ] scons 22 
+___no 347 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] scons 23 
+___no 348 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 6 ], [ 2, 2 ] ] scons 20 
+___no 349 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 3 ] ] scons 20 
+___no 350 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 23 
+___no 351 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] scons 29 
+___no 352 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 6 ], [ 2, 1 ], [ 3, 1 ] ] scons 23 
+___no 353 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 24 
+___no 354 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] scons 22 
+___no 355 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 3 ] ] scons 20 
+___no 356 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 4 ] ] scons 20 
+___no 357 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 24 
+___no 358 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 25 
+___no 359 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 22 
+___no 360 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 23 
+___no 361 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 1 ], [ 3, 2 ] ] scons 29 
+___no 362 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 1 ], [ 3, 2 ] ] scons 25 
+___no 363 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] scons 29 
+___no 364 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 7 ], [ 3, 1 ] ] scons 27 
+___no 365 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 6 ], [ 2, 1 ], [ 3, 1 ] ] scons 24 
+___no 366 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 6 ], [ 3, 2 ] ] scons 27 
+___no 367 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 6 ], [ 2, 1 ], [ 3, 1 ] ] scons 25 
+___no 368 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 23 
+___no 369 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 1 ], [ 3, 2 ] ] scons 27 
+___no 370 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 6 ], [ 3, 2 ] ] scons 32 
+___no 371 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 1 ], [ 3, 2 ] ] scons 30 
+___no 372 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 23 
+___no 373 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 22 
+___no 374 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] scons 27 
+___no 375 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 1 ], [ 3, 2 ] ] scons 26 
+___no 376 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] scons 26 
+___no 377 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 3, 3 ] ] scons 30 
+___no 378 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 1 ], [ 3, 3 ] ] scons 32 
+___no 379 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] scons 30 
+___no 380 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] scons 32 
+___no 381 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] scons 27 
+___no 382 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] scons 23 
+___no 383 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 25 
+___no 384 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] scons 27 
+___no 385 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] scons 24 
+___no 386 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 27 
+___no 387 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] scons 30 
+___no 388 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 6 ], [ 2, 2 ] ] scons 20 
+___no 389 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 3 ] ] scons 20 
+___no 390 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 21 
+___no 391 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] scons 26 
+___no 392 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 3 ] ] scons 20 
+___no 393 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 4 ] ] scons 20 
+___no 394 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 21 
+___no 395 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] scons 32 
+___no 396 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 22 
+___no 397 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 22 
+___no 398 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] scons 27 
+___no 399 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] scons 23 
+___no 400 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 4 ] ] scons 20 
+___no 401 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 3 ], [ 2, 5 ] ] scons 20 
+___no 402 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] scons 21 
+___no 403 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 25 
+___no 404 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 21 
+___no 405 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] scons 21 
+___no 406 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 3 ], [ 2, 3 ], [ 3, 2 ] ] scons 25 
+___no 407 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 2 ], [ 3, 2 ] ] scons 27 
+___no 408 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] scons 22 
+___no 409 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 3 ], [ 2, 3 ], [ 3, 2 ] ] scons 22 
+___no 410 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 3 ], [ 2, 2 ], [ 3, 3 ] ] scons 32 
+___no 411 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 6 ], [ 2, 1 ], [ 3, 1 ] ] scons 29 
+___no 412 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 23 
+___no 413 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 1 ], [ 3, 2 ] ] scons 24 
+___no 414 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] scons 25 
+___no 415 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 22 
+___no 416 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] scons 23 
+___no 417 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 5 ], [ 2, 1 ], [ 3, 2 ] ] scons 29 
+___no 418 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] scons 25 
+___no 419 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] scons 22 
+___no 420 
+kk 7 rho 8 wgraph [ [ 0, 13 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] scons 21 
+___no 421 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] scons 38 
+___no 422 
+kk 7 rho 8 wgraph [ [ 0, 15 ], [ 1, 2 ], [ 2, 3 ], [ 3, 1 ] ] scons 36 
+___no 423 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] scons 34 
+___no 424 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] scons 24 
+___no 425 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] scons 25 
+___no 426 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] scons 31 
+___no 427 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 5 ] ] scons 25 
+___no 428 
+kk 7 rho 8 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] scons 26 
+___no 429 
+kk 7 rho 7 wgraph [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 4, 1 ] ] scons 19 
