@@ -38,4 +38,27 @@ gap> FactorsInt(2058);
 [ 2, 3, 7, 7, 7 ]
 gap> Length(specialadjsf);
 1522
+gap> readdata("specialadjsf");;
+gap> Maximum(List(specialadjsf, xx->xx[1]));
+298
+gap> Positions(List(specialadjsf, xx->xx[1]), 294);
+[ 937 ]
+gap> Positions(List(specialadjsf, xx->xx[1]), 298）);
+Syntax error: ) expected
+Positions(List(specialadjsf, xx->xx[1]), 298）);
+                                            ^
+gap> Positions(List(specialadjsf, xx->xx[1]), 298);
+[ 3105 ]
+gap> trec:=WGraphToGramh(specialadjsf[937][2], 13);;
+gap>  trec:=WGraphToGramh(specialadjsf[3105][2], 13);;
+wrong global beep 916621 
+Error,  at gapReads/gaptools.txt:139 called from
+beep( 916621 ); at SplitConsTools.g:128 called from
+<function "WGraphToGramh">( <arguments> )
+ called from read-eval loop at *stdin*:20
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> quit;
+gap> Length(specialadjsf[3105][2]);
+14
 gap> 
