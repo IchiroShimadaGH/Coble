@@ -15,4 +15,5 @@ WGraphToGramh( newadj, 8 + addnumb ) at Task20260920Ud.g:29 called from
  called from read-eval loop at Task20260920Ud.g:50
 you can 'quit;' to quit to outer loop, or
 you can 'return;' to continue
-brk> 
+brk> quit;
+gap> 

@@ -1,13 +1,34 @@
 #Read("Sigma12Isot.g");
 
+readdata("Sigma12rec");
+
+GramS12:=Sigma12rec.Gram;
+
+
+if DeterminantIntMat(GramS12)<>1 then beep(615261); fi;
+svs:=ShortestVectors(GramS12, 2);;
+
+if Collected(svs.norms)<>[ [ 2, 132 ] ] then buzz(51612); fi;
+
+
+Read("SplitConsTools.g");
+
+th:=MakeVectei(13, 1);
+tGram:=DiagonalMats([ [[2]], (-2)*GramS12]);
+tGramdual:=InverseMat(tGram);
+
+Printn(IsGeom(tGram, th));
+
+
+
+
 discrecS12:=DiscriminantForm(tGram);
 
 nn := 13;
+FFvects:=Cartesian(List([1..nn], xx->[0,1]));
+
 
 Df:=2*discrecS12.discf;
-
-
-# 整数 m (0 <= m < 2^13) を F_2^9 のベクトルに変換
 
 MaskToVector := function(m)
     local ii, v;
@@ -16,21 +37,11 @@ MaskToVector := function(m)
     return (v);
 end;
 
-IsIsotropicMask := function(m)
-  local vv;
-  vv:=MaskToVector(m);
-  return( (vv*Df*vv) mod 4=0);
+VectorToMask := function(v)
+  local ii, m;
+  m := Sum([1..nn], ii -> v[ii] * 2^(ii-1));
+  return m;
 end;
-
-# 非零 isotropic vectors
-
-IsoVectorsS12 :=Filtered([1..2^nn-1], IsIsotropicMask);
-IsoVectorsS12:=Set(IsoVectorsS12);
-
-#############################################################################
-# 全 totally isotropic subspaces の列挙
-# 部分空間は、その全要素を整数に encode した昇順リストで表す。
-#############################################################################
 
 MaskXor := function(a, b)
   local ans, power, i;
@@ -48,41 +59,92 @@ MaskXor := function(a, b)
 end;
 
 
-EvenOverS12Codes := function()
-  local levels, alllevels, newlevels, 
-  S, v, T, d, Splusv, x;
-  #
-  levels := [[0]];
-  alllevels := [levels];
-  #
-  for d in [1..nn] do
-    newlevels := [];
-    for S in levels do
-      for v in IsoVectorsS12 do
-        if not v in S then
-          Splusv:=List(S, x -> MaskXor(x, v));
-          T:=Union(S, Splusv);
-          if ForAll(T, IsIsotropicMask) then
-            AddSet(newlevels, T);
-          fi;
-        fi;
-      od;
-    od;
-    if Length(newlevels) = 0 then
-      break;
-    fi;
-    Add(alllevels, newlevels);
-    Printn(d, Length(newlevels));
-    levels := newlevels;
-  od;
-  return alllevels;
+
+AppendVsToBasis:=function(tbasis, vs)
+  local newbasis, tv, xx;
+  newbasis:=ShallowCopy(tbasis);
+  Append(newbasis, vs);
+  newbasis:=HermiteNormalFormIntegerMat(newbasis);
+  newbasis:=Filtered(newbasis, tv-> not ForAll(tv, xx->xx=0));
+  return(newbasis);
 end;
 
-CodesByDimensionS12 := EvenOverS12Codes();
+FFIsotVectorsS12:=[];
 
-List(CodesByDimension, Length);
+for tv in FFvects do 
+  if (tv*Df*tv) mod 4=0 then Add(FFIsotVectorsS12, tv); fi;
+od;
 
-savedata(IsoVectorsS12);
-savedata(CodesByDimensionS12);
+FFIsotVectorsS12:=Set(FFIsotVectorsS12);
+
+Printn("FFIsotVectorsS12", Length(FFIsotVectorsS12));
+foundoverlatsS12:=[];
+
+thetask:=function(isotspacerec)
+  #
+  local tv, mtv, tvrepdual,newbasisdual, newbasis, newGram,newbasisinv, newth, sings,
+  newmasks, isgeom, newisotspacerec, isoflag, twdual, counter;
+  #
+  counter:=0;
+  for tv in FFIsotVectorsS12 do
+    counter:=counter+1; 
+    mtv:=VectorToMask(tv);
+    if mtv in isotspacerec.masks then continue; fi;
+    isoflag:=true;
+    for twdual in isotspacerec.addwordsdual do 
+      if tv*twdual mod 2 <>0 then 
+        isoflag:=false;
+        break;  
+      fi;
+    od;
+    if not isoflag then continue; fi;
+    tvrepdual:=tv*discrecS12.reps_dual;
+    if not IsIntVect(isotspacerec.basis*tvrepdual) then beep(66112); fi;
+    newbasisdual:=AppendVsToBasis(isotspacerec.basisdual, [tvrepdual]);
+    newbasis:=newbasisdual*tGramdual;
+    newGram:=TMTTmult(newbasis, tGram);
+    if not IsEvenLattice(newGram) then beep(813421); fi;
+    newbasisinv:=InverseMat(newbasis);
+    newth:=th*newbasisinv;
+    if newth*newGram*newth<>2 then beep(887122); fi;
+    sings:=AffESstd(newGram, newth, 0, -2, true);
+    if sings<>[] then 
+      #Printn("sing", isotspacerec.overdim+1, GetRootType(newGram, sings));
+      continue; 
+    fi;
+    newmasks:=Union(isotspacerec.masks, List(isotspacerec.masks, xx->MaskXor(xx, mtv)));
+    isgeom:=IsGeom(newGram, newth);
+    newisotspacerec:=rec(
+      masks:=newmasks, 
+      basis:=newbasis, 
+      basisdual:=newbasisdual, 
+      Gram:=newGram, 
+      th:=newth,
+      isgeom:=isgeom,
+      overdim:=isotspacerec.overdim+1,
+      addwordsdual:=CopyAdd(isotspacerec.addwordsdual, tv*Df)
+    );
+    if isgeom=true then 
+      Add(foundoverlatsS12, newisotspacerec);
+      savedata(foundoverlatsS12);
+      Printn("isgeom is true", newisotspacerec.overdim);
+    fi;
+    Printn("___ next level", counter, newisotspacerec.overdim, isgeom);
+    thetask(newisotspacerec);
+  od;
+end;
+
+iniisotspacerec:=rec(
+  masks:=[0], 
+  basis:=IdentityMat(nn), 
+  basisdual:=tGram, 
+  Gram:=tGram, 
+  th:=th,
+  isgeom:=IsGeom(tGram, th),
+  overdim:=0,
+  addwordsdual:=[]
+);
+
+thetask(iniisotspacerec);
 
 ########
