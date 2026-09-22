@@ -12788,4 +12788,61 @@ thetask( kk + 1, newwg ); at Task20260921Va.g:214 called from
 thetask( kk + 1, newwg ); at Task20260921Va.g:214 called from
 ...  at Task20260921Va.g:223
 you can 'return;'
-brk> 
+brk> quit;
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> Read("Task20260922Va.g");
+___no 1 
+kk 2 rho 3 wgraph [ [ 0, 1 ] ] scons 3 
+___no 2 
+kk 3 rho 4 wgraph [ [ 0, 3 ] ] scons 6 
+___no 3 
+kk 4 rho 5 wgraph [ [ 0, 6 ] ] scons 10 
+___no 4 
+kk 5 rho 6 wgraph [ [ 0, 10 ] ] scons 15 
+___no 5 
+kk 6 rho 7 wgraph [ [ 0, 15 ] ] scons 21 
+___no 6 
+kk 7 rho 8 wgraph [ [ 0, 21 ] ] scons 28 
+___no 7 
+kk 8 rho 9 wgraph [ [ 0, 28 ] ] scons 36 
+Error, user interrupt in
+  Add( newtauwg, 4 - aa ); at Task20260922Va.g:117 called from 
+IsMinimal( kk + 1, newwg ) at Task20260922Va.g:200 called from
+thetask( kk + 1, newwg ); at Task20260922Va.g:214 called from
+thetask( kk + 1, newwg ); at Task20260922Va.g:214 called from
+thetask( kk + 1, newwg ); at Task20260922Va.g:214 called from
+thetask( kk + 1, newwg ); at Task20260922Va.g:214 called from
+...  at Task20260922Va.g:223
+you can 'return;'
+brk> newwg;
+[ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+  0, 0, 0, 0, 0, 0, 0 ]
+brk> quit;
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> Read("Task20260922Va.g");
+___no 1 
+kk 2 rho 3 wgraph [ [ 0, 1 ] ] scons 3 
+___no 2 
+kk 3 rho 4 wgraph [ [ 0, 3 ] ] scons 6 
+___no 3 
+kk 4 rho 5 wgraph [ [ 0, 6 ] ] scons 10 
+___no 4 
+kk 5 rho 6 wgraph [ [ 0, 10 ] ] scons 15 
+___no 5 
+kk 6 rho 7 wgraph [ [ 0, 15 ] ] scons 21 
+___no 6 
+kk 7 rho 8 wgraph [ [ 0, 21 ] ] scons 28 
+___no 7 
+kk 8 rho 9 wgraph [ [ 0, 28 ] ] scons 36 
