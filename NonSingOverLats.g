@@ -69,7 +69,7 @@ NonSingOverLats:=function(Gram, h)
     local torec, T, tdata;
     for tdata in oldwdbasisinvs do 
       if tdata[1]=ttdet then 
-        T:=tdata[2]*twdbasis;
+        T:=twdbasis*tdata[2];
         if IsIntMat(T) then return(false); fi;
       fi;
     od;

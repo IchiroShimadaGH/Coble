@@ -1022,3 +1022,115 @@ bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 11 in 11
 _______________ 
 __nonsingisotwords 8163 
 __singisotwords 8348 
+kk 8 orecs 26 
+bb 2 kk 8 isgeom extdeg 1 sprats [ 0, 8 ] : 1 in 26 
+bb 2 kk 8 isgeom extdeg 2 sprats [ 0, 16 ] : 2 in 26 
+bb 2 kk 8 isgeom extdeg 4 sprats [ 0, 24 ] : 3 in 26 
+bb 2 kk 8 isgeom extdeg 8 sprats [ 0, 48 ] : 4 in 26 
+bb 2 kk 8 isgeom extdeg 4 sprats [ 0, 24 ] : 5 in 26 
+bb 2 kk 8 isgeom extdeg 8 sprats [ 0, 48 ] : 6 in 26 
+bb 2 kk 8 isgeom extdeg 2 sprats [ 0, 16 ] : 7 in 26 
+bb 2 kk 8 isgeom extdeg 4 sprats [ 0, 24 ] : 8 in 26 
+bb 2 kk 8 isgeom extdeg 8 sprats [ 0, 48 ] : 9 in 26 
+bb 2 kk 8 isgeom extdeg 4 sprats [ 0, 24 ] : 10 in 26 
+bb 2 kk 8 isgeom extdeg 8 sprats [ 0, 48 ] : 11 in 26 
+bb 2 kk 8 isgeom extdeg 2 sprats [ 0, 16 ] : 12 in 26 
+bb 2 kk 8 isgeom extdeg 4 sprats [ 0, 24 ] : 13 in 26 
+bb 2 kk 8 isgeom extdeg 8 sprats [ 0, 48 ] : 14 in 26 
+bb 2 kk 8 isgeom extdeg 4 sprats [ 0, 24 ] : 15 in 26 
+bb 2 kk 8 isgeom extdeg 8 sprats [ 0, 48 ] : 16 in 26 
+bb 2 kk 8 isgeom extdeg 8 sprats [ 0, 48 ] : 17 in 26 
+bb 2 kk 8 isgeom extdeg 4 sprats [ 0, 24 ] : 18 in 26 
+bb 2 kk 8 isgeom extdeg 2 sprats [ 0, 16 ] : 19 in 26 
+bb 2 kk 8 isgeom extdeg 4 sprats [ 0, 24 ] : 20 in 26 
+bb 2 kk 8 isgeom extdeg 8 sprats [ 4, 10 ] : 21 in 26 
+bb 2 kk 8 isgeom extdeg 4 sprats [ 0, 24 ] : 22 in 26 
+bb 2 kk 8 isgeom extdeg 2 sprats [ 0, 16 ] : 23 in 26 
+bb 2 kk 8 isgeom extdeg 4 sprats [ 2, 7 ] : 24 in 26 
+bb 2 kk 8 isgeom extdeg 4 sprats [ 2, 7 ] : 25 in 26 
+bb 2 kk 8 isgeom extdeg 4 sprats [ 2, 7 ] : 26 in 26 
+_______________ 
+__nonsingisotwords 43899 
+__singisotwords 21636 
+Error, user interrupt in
+  res[i] := func( C[i] ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from 
+List( m1, function ( row )
+      return PROD_VECTOR_MATRIX( row, m2 );
+  end ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3640 called from
+tdata[2] * twdbasis at NonSingOverLats.g:72 called from
+isneworec( ttdet, newwdbasis ) at NonSingOverLats.g:102 called from
+thetask( neworec ); at NonSingOverLats.g:130 called from
+thetask( iniorec ); at NonSingOverLats.g:139 called from
+...  at Task20260923Va.g:62
+you can 'return;'
+brk> quit;
+gap> 
+gap> 
+gap> 
+gap> Read("Task20260923Va.g");
+totalrecsname2 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 5 
+kk 2 orecs 1 
+bb 2 kk 2 isgeom extdeg 1 sprats [ 0, 2 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 3 orecs 1 
+bb 2 kk 3 isgeom extdeg 1 sprats [ 0, 3 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 1 
+__singisotwords 54 
+kk 4 orecs 2 
+bb 2 kk 4 isgeom extdeg 1 sprats [ 0, 4 ] : 1 in 2 
+bb 2 kk 4 isgeom extdeg 2 sprats [ 0, 12 ] : 2 in 2 
+_______________ 
+__nonsingisotwords 5 
+__singisotwords 250 
+kk 5 orecs 6 
+bb 2 kk 5 isgeom extdeg 1 sprats [ 0, 5 ] : 1 in 6 
+bb 2 kk 5 isgeom extdeg 2 sprats [ 0, 13 ] : 2 in 6 
+bb 2 kk 5 isgeom extdeg 2 sprats [ 0, 13 ] : 3 in 6 
+bb 2 kk 5 isgeom extdeg 2 sprats [ 0, 13 ] : 4 in 6 
+bb 2 kk 5 isgeom extdeg 2 sprats [ 0, 13 ] : 5 in 6 
+bb 2 kk 5 isgeom extdeg 2 sprats [ 0, 13 ] : 6 in 6 
+_______________ 
+__nonsingisotwords 16 
+__singisotwords 975 
+kk 6 orecs 32 
+bb 2 kk 6 isgeom extdeg 1 sprats [ 0, 6 ] : 1 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 2 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 3 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 4 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 5 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 6 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 7 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 8 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 9 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 10 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 11 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 12 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 13 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 14 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 15 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 16 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 17 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 18 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 19 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 20 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 21 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 22 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 23 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 24 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 25 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 26 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 27 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 28 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 29 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 30 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 31 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 6 ] : 32 in 32 
+_______________ 
+__nonsingisotwords 1050 
+__singisotwords 3045 
