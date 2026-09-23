@@ -9,9 +9,9 @@
 #新しく作る．
 #　 /usr/local/Cellar/gap/4.12.2/bin/gap
 ＃でgap を立ち上げる
-#__debugflag:=false;
-#gap> Read("ttt.txt");　#ttt.txt は下のファイル
-＃gap> SaveWorkspace("startws.ws");
+
+#gap> Read("gapReads/startgwsp/ForRestart.txt");　#ForRestart.txt は下のファイル
+＃gap> SaveWorkspace("gapReads/startgwsp/startws.ws");
 
 tartws.wsをgapReadsのstartgwspなるフォルダに移動
 
