@@ -896,4 +896,95 @@ Syntax error: expression expected in NonSingOverLats.g:41
   overlats:=:=[iniorec];
             ^^
 gap> Read("NonSingOverLats.g");
+gap> Read("NonSingOverLats.g");
+Syntax warning: Unbound global variable in NonSingOverLats.g:30
+  singisotwords:=[];
+  ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:46
+        Add(singisotwords, tw);
+            ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:66
+  oldwdbasisinvs:=[[inidet, iniorec.wdbasisinv]];
+  ^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:70
+    for tdata in oldwdbasisinvs do 
+                 ^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:92
+    twdbasisinv:=torec.wdbasisinv;
+    ^^^^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:99
+        if not IsIntVect(tw*twdbasisinv) then 
+                            ^^^^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:100
+          newwdbasis:=AddVectToBasis(torec.wdbasis, tw);
+          ^^^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:101
+          ttdet:=DeterminantIntMat(newwdbasis);
+                                   ^^^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:102
+          if isneworec(ttdet, newwdbasis) then 
+                              ^^^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:103
+            newwdbasisinv:=InverseMat(newwdbasis);
+            ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:103
+            newwdbasisinv:=InverseMat(newwdbasis);
+                                      ^^^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:104
+            Add(oldwdbasisinvs, [ttdet, newwdbasisinv]);
+                ^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:104
+            Add(oldwdbasisinvs, [ttdet, newwdbasisinv]);
+                                        ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:105
+            singflag:=false;
+            ^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:106
+            for stw in singisotwords do 
+                ^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:106
+            for stw in singisotwords do 
+                       ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:107
+              if IsIntVect(stw, newwdbasisinv) then 
+                                ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:108
+                singflag:=true;
+                ^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:112
+            if not singflag then 
+                   ^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:122
+                wdbasis:=newwdbasis,
+                         ^^^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:124
+              );
+ ^^^^^^^^^^^^^^
+gap> Read("NonSingOverLats.g");
+Syntax warning: Unbound global variable in NonSingOverLats.g:104
+            newwdbasisinv:=InverseMat(newwdbasis);
+            ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:105
+            Add(oldwdbasisinvs, [ttdet, newwdbasisinv]);
+                                        ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:106
+            singflag:=false;
+            ^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:107
+            for stw in singisotwords do 
+                ^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:108
+              if IsIntVect(stw, newwdbasisinv) then 
+                                ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:109
+                singflag:=true;
+                ^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:113
+            if not singflag then 
+                   ^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:125
+              );
+ ^^^^^^^^^^^^^^
+gap> Read("NonSingOverLats.g");
+gap> Read("NonSingOverLats.g");
 gap> 
