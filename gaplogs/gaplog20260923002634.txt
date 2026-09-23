@@ -1,0 +1,18 @@
+sessionnumb  20260923002634 
+gap> Read("Task20260922Va.g");
+___no 1 
+kk 2 rho 3 wgraph [ [ 0, 1 ] ] scons 3 
+___no 2 
+kk 3 rho 4 wgraph [ [ 0, 3 ] ] scons 6 
+___no 3 
+kk 4 rho 5 wgraph [ [ 0, 6 ] ] scons 10 
+___no 4 
+kk 5 rho 6 wgraph [ [ 0, 10 ] ] scons 15 
+___no 5 
+kk 6 rho 7 wgraph [ [ 0, 15 ] ] scons 21 
+___no 6 
+kk 7 rho 8 wgraph [ [ 0, 21 ] ] scons 28 
+___no 7 
+kk 8 rho 9 wgraph [ [ 0, 28 ] ] scons 36 
+___no 8 
+kk 9 rho 10 wgraph [ [ 0, 36 ] ] scons 45 

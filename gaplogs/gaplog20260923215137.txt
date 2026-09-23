@@ -1,0 +1,1310 @@
+sessionnumb  20260923215137 
+gap> Read("Task20260923Uh.g");
+Syntax error: ) expected in Task20260923Uh.g:23
+  orecs:=NonSingOverLats(t0Gram t0h);
+                                ^^^
+gap> Read("Task20260923Uh.g");
+kk 2 orecs 1 
+Error, Sage computation failed (this is NOT a zero class number). Output: Could not find SageMath-9-6.app
+ Input retained at /var/folders/s1/hb86qvg54hz8pzby8bwz7scc0000gn/T//gaptempdirtiGdv1/input.json at even_lattice_genus.g:54 called from
+EvenLatticeGenus( ttsign, ttmdiscrec.discg, ttmdiscrec.discf ) at Task20260923Uh.g:34 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260923Uh.g:51
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> quit;
+gap> Read("Task20260923Uh.g");
+totalrecsname0 
+kk 2 orecs 1 
+Error, Sage computation failed (this is NOT a zero class number). Output: Could not find SageMath-9-6.app
+ Input retained at /var/folders/s1/hb86qvg54hz8pzby8bwz7scc0000gn/T//gaptempdira7kdTV/input.json at even_lattice_genus.g:54 called from
+EvenLatticeGenus( ttsign, ttmdiscrec.discg, ttmdiscrec.discf ) at Task20260923Uh.g:36 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260923Uh.g:53
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> 
+brk> 
+brk> 
+brk> 
+brk> quit;
+gap> Read("Task20260923Uh.g");
+totalrecsname0 
+kk 2 orecs 1 
+____kk 2 isgeom 
+____ scons 3 
+kk 3 orecs 1 
+____kk 3 isgeom 
+____ scons 6 
+kk 4 orecs 1 
+____kk 4 isgeom 
+____ scons 10 
+kk 5 orecs 1 
+____kk 5 isgeom 
+____ scons 15 
+kk 6 orecs 1 
+____kk 6 isgeom 
+____ scons 21 
+kk 7 orecs 2 
+____kk 7 isgeom 
+____ scons 28 
+____kk 7 isgeom 
+____ scons 63 
+kk 8 orecs 11 
+____kk 8 isgeom 
+____ scons 36 
+____kk 8 isgeom 
+____ scons 120 
+____kk 8 isgeom 
+____ scons 71 
+____kk 8 isgeom 
+____ scons 71 
+____kk 8 isgeom 
+____ scons 71 
+____kk 8 isgeom 
+____ scons 71 
+____kk 8 isgeom 
+____ scons 71 
+____kk 8 isgeom 
+____ scons 71 
+____kk 8 isgeom 
+____ scons 71 
+____kk 8 isgeom 
+____ scons 71 
+____kk 8 isgeom 
+____ scons 71 
+kk 9 orecs 46 
+____kk 9 isgeom 
+____ scons 45 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+____kk 9 isgeom 
+____ scons 80 
+kk 10 orecs 166 
+____kk 10 isgeom 
+____ scons 55 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+____kk 10 isgeom 
+____ scons 90 
+Error, user interrupt in
+  r := 0; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/zlattice.gi:1010 called from 
+LLLReducedGramMat( Inverse( Q ) ) at gapReads/IntegerVectorsQF.txt:309 called from
+LLLIntVectsQF( newQ, newL, newc, isES, newtask ); at gapReads/IntegerVectorsQF.txt:367 called from
+AffES( SQ, vec, reldeg, norm, isES, task ); at gapReads/IntegerVectorsQF.txt:400 called from
+AffESstd( newGram, newth, 0, -2, true ) at NonSingOverLats.g:76 called from
+thetask( neworec ); at NonSingOverLats.g:89 called from
+...  at Task20260923Uh.g:53
+you can 'return;'
+brk> quit;
+gap> 
+gap> 
+gap> 
+gap> 
+gap> Read("Task20260923Uh.g");
+totalrecsname0 
+kk 2 orecs 1 
+____kk 2 isgeom 
+____ sprats [ 0, 3 ] 
+kk 3 orecs 1 
+____kk 3 isgeom 
+____ sprats [ 0, 6 ] 
+kk 4 orecs 1 
+____kk 4 isgeom 
+____ sprats [ 0, 10 ] 
+kk 5 orecs 1 
+____kk 5 isgeom 
+____ sprats [ 0, 15 ] 
+kk 6 orecs 1 
+____kk 6 isgeom 
+____ sprats [ 0, 21 ] 
+kk 7 orecs 2 
+____kk 7 isgeom 
+____ sprats [ 0, 28 ] 
+____kk 7 isgeom 
+____ sprats [ 0, 63 ] 
+kk 8 orecs 11 
+____kk 8 isgeom 
+____ sprats [ 0, 36 ] 
+____kk 8 isgeom 
+____ sprats [ 0, 120 ] 
+____kk 8 isgeom 
+____ sprats [ 0, 71 ] 
+____kk 8 isgeom 
+____ sprats [ 0, 71 ] 
+____kk 8 isgeom 
+____ sprats [ 0, 71 ] 
+____kk 8 isgeom 
+____ sprats [ 0, 71 ] 
+____kk 8 isgeom 
+____ sprats [ 0, 71 ] 
+____kk 8 isgeom 
+____ sprats [ 0, 71 ] 
+____kk 8 isgeom 
+____ sprats [ 0, 71 ] 
+____kk 8 isgeom 
+____ sprats [ 0, 71 ] 
+____kk 8 isgeom 
+____ sprats [ 0, 71 ] 
+kk 9 orecs 46 
+____kk 9 isgeom 
+____ sprats [ 0, 45 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+____kk 9 isgeom 
+____ sprats [ 0, 80 ] 
+kk 10 orecs 166 
+____kk 10 isgeom 
+____ sprats [ 0, 55 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+____kk 10 isgeom 
+____ sprats [ 0, 90 ] 
+Error, user interrupt in
+  return ia; at gapReads/gaptools.txt:233 called from 
+FloorRat( - a ) at gapReads/IntegerVectorsQF.txt:197 called from
+Rootdae( td, ta, te ) at gapReads/IntegerVectorsQF.txt:286 called from
+leveljob( level - 1, newtas, newte ); at gapReads/IntegerVectorsQF.txt:293 called from
+leveljob( level - 1, newtas, newte ); at gapReads/IntegerVectorsQF.txt:293 called from
+leveljob( level - 1, newtas, newte ); at gapReads/IntegerVectorsQF.txt:293 called from
+...  at Task20260923Uh.g:55
+you can 'return;'
+brk> quit;
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> Read("Task20260923Va.g");
+totalrecsname0 
+__isotwords 0 
+kk 2 orecs 1 
+bb 0 kk 2 isgeom 1 ____ sprats [ 0, 3 ] : 1 in 1 
+__isotwords 7 
+kk 3 orecs 1 
+bb 0 kk 3 isgeom 1 ____ sprats [ 0, 6 ] : 1 in 1 
+__isotwords 5 
+kk 4 orecs 1 
+bb 0 kk 4 isgeom 1 ____ sprats [ 0, 10 ] : 1 in 1 
+__isotwords 15 
+kk 5 orecs 1 
+bb 0 kk 5 isgeom 1 ____ sprats [ 0, 15 ] : 1 in 1 
+__isotwords 35 
+kk 6 orecs 1 
+bb 0 kk 6 isgeom 1 ____ sprats [ 0, 21 ] : 1 in 1 
+__isotwords 127 
+kk 7 orecs 2 
+bb 0 kk 7 isgeom 1 ____ sprats [ 0, 28 ] : 1 in 2 
+bb 0 kk 7 isgeom 2 ____ sprats [ 0, 63 ] : 2 in 2 
+__isotwords 407 
+kk 8 orecs 11 
+bb 0 kk 8 isgeom 1 ____ sprats [ 0, 36 ] : 1 in 11 
+bb 0 kk 8 isgeom 3 ____ sprats [ 0, 120 ] : 2 in 11 
+bb 0 kk 8 isgeom 2 ____ sprats [ 0, 71 ] : 3 in 11 
+bb 0 kk 8 isgeom 2 ____ sprats [ 0, 71 ] : 4 in 11 
+bb 0 kk 8 isgeom 2 ____ sprats [ 0, 71 ] : 5 in 11 
+bb 0 kk 8 isgeom 2 ____ sprats [ 0, 71 ] : 6 in 11 
+bb 0 kk 8 isgeom 2 ____ sprats [ 0, 71 ] : 7 in 11 
+bb 0 kk 8 isgeom 2 ____ sprats [ 0, 71 ] : 8 in 11 
+bb 0 kk 8 isgeom 2 ____ sprats [ 0, 71 ] : 9 in 11 
+bb 0 kk 8 isgeom 2 ____ sprats [ 0, 71 ] : 10 in 11 
+bb 0 kk 8 isgeom 2 ____ sprats [ 0, 71 ] : 11 in 11 
+__isotwords 255 
+kk 9 orecs 46 
+bb 0 kk 9 isgeom 1 ____ sprats [ 0, 45 ] : 1 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 2 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 3 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 4 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 5 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 6 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 7 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 8 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 9 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 10 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 11 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 12 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 13 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 14 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 15 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 16 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 17 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 18 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 19 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 20 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 21 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 22 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 23 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 24 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 25 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 26 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 27 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 28 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 29 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 30 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 31 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 32 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 33 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 34 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 35 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 36 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 37 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 38 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 39 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 40 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 41 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 42 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 43 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 44 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 45 in 46 
+bb 0 kk 9 isgeom 2 ____ sprats [ 0, 80 ] : 46 in 46 
+__isotwords 495 
+Error, user interrupt in
+  tnum := TNUM_OBJ( C ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:1639 called from 
+ForAny( m2, function ( r )
+      return not IsPlistRep( r );
+  end ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3636 called from
+torec.basisdual * ttbasisdualinv at NonSingOverLats.g:47 called from
+isneworec( ttdet, ttbasisdualinv ) at NonSingOverLats.g:82 called from
+thetask( neworec ); at NonSingOverLats.g:98 called from
+thetask( iniorec ); at NonSingOverLats.g:107 called from
+...  at Task20260923Va.g:61
+you can 'return;'
+brk> 
+brk> 
+brk> 
+brk> 
+brk> 
+brk> 
+brk> quit;
+gap> 
+gap> 
+gap> Read("Task20260923Va.g");
+totalrecsname0 
+_______________ 
+__isotwords 0 
+kk 2 orecs 1 
+bb 0 kk 2 isgeom extdeg 1 sprats [ 0, 3 ] : 1 in 1 
+_______________ 
+__isotwords 7 
+kk 3 orecs 1 
+bb 0 kk 3 isgeom extdeg 1 sprats [ 0, 6 ] : 1 in 1 
+_______________ 
+__isotwords 5 
+kk 4 orecs 1 
+bb 0 kk 4 isgeom extdeg 1 sprats [ 0, 10 ] : 1 in 1 
+_______________ 
+__isotwords 15 
+kk 5 orecs 1 
+bb 0 kk 5 isgeom extdeg 1 sprats [ 0, 15 ] : 1 in 1 
+_______________ 
+__isotwords 35 
+kk 6 orecs 1 
+bb 0 kk 6 isgeom extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+_______________ 
+__isotwords 127 
+kk 7 orecs 2 
+bb 0 kk 7 isgeom extdeg 1 sprats [ 0, 28 ] : 1 in 2 
+bb 0 kk 7 isgeom extdeg 2 sprats [ 0, 63 ] : 2 in 2 
+_______________ 
+__isotwords 407 
+kk 8 orecs 11 
+bb 0 kk 8 isgeom extdeg 1 sprats [ 0, 36 ] : 1 in 11 
+bb 0 kk 8 isgeom extdeg 3 sprats [ 0, 120 ] : 2 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 3 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 4 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 5 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 6 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 7 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 8 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 9 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 10 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 11 in 11 
+_______________ 
+__isotwords 255 
+kk 9 orecs 46 
+bb 0 kk 9 isgeom extdeg 1 sprats [ 0, 45 ] : 1 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 2 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 3 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 4 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 5 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 6 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 7 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 8 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 9 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 10 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 11 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 12 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 13 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 14 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 15 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 16 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 17 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 18 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 19 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 20 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 21 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 22 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 23 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 24 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 25 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 26 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 27 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 28 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 29 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 30 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 31 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 32 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 33 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 34 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 35 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 36 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 37 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 38 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 39 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 40 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 41 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 42 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 43 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 44 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 45 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 46 in 46 
+_______________ 
+__isotwords 495 
+Error, user interrupt in
+  return not IsPlistRep( r ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3637 called from 
+func( elm ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:1643 called from
+ForAny( m1, function ( r )
+      return not IsPlistRep( r );
+  end ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3637 called from
+torec.basisdual * ttbasisdualinv at NonSingOverLats.g:47 called from
+isneworec( ttdet, ttbasisdualinv ) at NonSingOverLats.g:82 called from
+thetask( neworec ); at NonSingOverLats.g:98 called from
+...  at Task20260923Va.g:62
+you can 'return;'
+brk> quit;
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> bb:=0;
+0
+gap> Read("Task20260923Va.g");
+totalrecsname0 
+_______________ 
+__isotwords 0 
+kk 2 orecs 1 
+bb 0 kk 2 isgeom extdeg 1 sprats [ 0, 3 ] : 1 in 1 
+_______________ 
+__isotwords 0 
+kk 3 orecs 1 
+bb 0 kk 3 isgeom extdeg 1 sprats [ 0, 6 ] : 1 in 1 
+_______________ 
+__isotwords 0 
+kk 4 orecs 1 
+bb 0 kk 4 isgeom extdeg 1 sprats [ 0, 10 ] : 1 in 1 
+_______________ 
+__isotwords 0 
+kk 5 orecs 1 
+bb 0 kk 5 isgeom extdeg 1 sprats [ 0, 15 ] : 1 in 1 
+_______________ 
+__isotwords 0 
+kk 6 orecs 1 
+bb 0 kk 6 isgeom extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+_______________ 
+__isotwords 1 
+kk 7 orecs 2 
+bb 0 kk 7 isgeom extdeg 1 sprats [ 0, 28 ] : 1 in 2 
+bb 0 kk 7 isgeom extdeg 2 sprats [ 0, 63 ] : 2 in 2 
+_______________ 
+__isotwords 11 
+kk 8 orecs 11 
+bb 0 kk 8 isgeom extdeg 1 sprats [ 0, 36 ] : 1 in 11 
+bb 0 kk 8 isgeom extdeg 3 sprats [ 0, 120 ] : 2 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 3 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 4 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 5 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 6 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 7 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 8 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 9 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 10 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 11 in 11 
+_______________ 
+__isotwords 45 
+kk 9 orecs 46 
+bb 0 kk 9 isgeom extdeg 1 sprats [ 0, 45 ] : 1 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 2 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 3 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 4 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 5 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 6 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 7 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 8 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 9 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 10 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 11 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 12 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 13 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 14 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 15 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 16 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 17 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 18 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 19 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 20 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 21 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 22 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 23 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 24 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 25 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 26 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 27 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 28 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 29 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 30 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 31 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 32 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 33 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 34 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 35 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 36 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 37 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 38 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 39 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 40 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 41 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 42 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 43 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 44 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 45 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 46 in 46 
+_______________ 
+__isotwords 165 

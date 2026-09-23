@@ -4,8 +4,7 @@ NonSingOverLats:=function(Gram, h)
   #
   local nn, Gramdual, discrec, discf, thdual, 
   iter, isotwordsdual, tw, twdual, iniorec, nonsingoverlats, 
-  isneworec, thetask, isotwords, overlats, inidet, extdeg,
-  tvdual, tT, H, newtbasisdual, newth, newGram;
+  isneworec, thetask, isotwords, overlats, inidet, extdeg;
   #
   nn:=Length(h);
   Gramdual:=InverseMat(Gram);
@@ -21,16 +20,8 @@ NonSingOverLats:=function(Gram, h)
     if IsZeroVect(tw) then continue; fi;
     twdual:=tw*discf;
     if modtZ(twdual*tw)=0 then 
-      tvdual:=tw*discrec.reps_dual;
-      tT:=ShallowCopy(Gram); Add(tT, tvdual);
-      H:=HermiteNormalFormIntegerMat(tT);
-      newtbasisdual:=Filtered(H, xx->not IsZeroVect(xx));
-      newth:=SolutionIntMat(newtbasisdual, thdual);
-      newGram:=TMTTmult(newtbasisdual, Gramdual);
-      if AffESstd(newGram, newth, 0, -2, true)=[] then 
-        Add(isotwordsdual, twdual);
-        Add(isotwords, tw);
-      fi;
+      Add(isotwordsdual, twdual);
+      Add(isotwords, tw);
     fi;
   od;
   #
