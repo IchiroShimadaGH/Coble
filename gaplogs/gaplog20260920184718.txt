@@ -16,4 +16,292 @@ WGraphToGramh( newadj, 8 + addnumb ) at Task20260920Ud.g:29 called from
 you can 'quit;' to quit to outer loop, or
 you can 'return;' to continue
 brk> quit;
+gap> readdata("Data1845");
+gap> RecNames("Data1845);
+Syntax error: String must not include <newline>
+RecNames("Data1845);
+         ^^^^^^^^^^^
+> ;
+Syntax error: ) expected
+;
+^
+gap> RecNames(Data1845);
+[ "h", "adj", "Gram", "kk", "gensplcons", "Trec", "scons" ]
+gap> adj1845:=Data1845.adj;
+[ [ -2, 1, 3, 1, 1, 1, 3, 3, 1, 1, 1, 1, 1, 3, 1, 1, 3 ], [ 1, -2, 1, 1, 3, 3, 3, 3, 1, 1, 1, 1, 1, 1, 1, 1, 3 ], 
+  [ 3, 1, -2, 3, 1, 3, 1, 3, 1, 3, 3, 1, 1, 1, 1, 1, 1 ], [ 1, 1, 3, -2, 1, 1, 3, 3, 3, 3, 1, 1, 3, 3, 1, 1, 1 ], [ 1, 3, 1, 1, -2, 1, 3, 3, 3, 3, 3, 1, 3, 3, 1, 1, 1 ], 
+  [ 1, 3, 3, 1, 1, -2, 3, 3, 1, 1, 1, 3, 3, 3, 1, 3, 1 ], [ 3, 3, 1, 3, 3, 3, -2, 3, 1, 3, 3, 3, 1, 1, 3, 1, 1 ], 
+  [ 3, 3, 3, 3, 3, 3, 3, -2, 3, 3, 1, 3, 3, 3, 3, 3, 3 ], [ 1, 1, 1, 3, 3, 1, 1, 3, -2, 1, 1, 3, 1, 1, 1, 3, 3 ], [ 1, 1, 3, 3, 3, 1, 3, 3, 1, -2, 1, 3, 1, 1, 1, 3, 3 ], 
+  [ 1, 1, 3, 1, 3, 1, 3, 1, 1, 1, -2, 3, 1, 3, 1, 3, 3 ], [ 1, 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, -2, 1, 3, 1, 1, 1 ], 
+  [ 1, 1, 1, 3, 3, 3, 1, 3, 1, 1, 1, 1, -2, 1, 1, 1, 3 ], [ 3, 1, 1, 3, 3, 3, 1, 3, 1, 1, 3, 3, 1, -2, 1, 1, 3 ], [ 1, 1, 1, 1, 1, 1, 3, 3, 1, 1, 1, 1, 1, 1, -2, 1, 1 ], 
+  [ 1, 1, 1, 1, 1, 3, 1, 3, 3, 3, 3, 1, 1, 1, 1, -2, 1 ], [ 3, 3, 1, 1, 1, 1, 1, 3, 3, 3, 3, 1, 3, 3, 1, 1, -2 ] ]
+gap> Length(adj1845);
+17
+gap> Read("Task20260923Uc.g");
+Error, Variable: 'adj' must have an assigned value in
+  newadj := MatMatToMat( [ [ adj, ttA ], [ tA, TT ] ] ); at Task20260923Uc.g:21 called from 
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260923Uc.g:42
+type 'quit;' to quit to outer loop
+brk> 2^17;
+131072
+brk> quit;
 gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> Read("Task20260923Ue.g");
+All-zero adj: 
+Syntax error: while parsing a 'for' loop: statement or 'od' expected in Task20260923Ue.g:28
+  else
+  ^^^^
+gap> Read("Task20260923Ue.g");
+All-zero adj: 
+kk 2 isgeom 
+____ scons 3 
+Error, Variable: 'AllZeroRecs' must have an assigned value in
+  Add( AllZeroRecs, trec ); at Task20260923Ue.g:32 called from 
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260923Ue.g:33
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260923Ue.g");
+All-zero adj: 
+kk 2 isgeom 
+____ scons 3 
+kk 3 isgeom 
+____ scons 6 
+kk 4 isgeom 
+Error, Sage computation failed (this is NOT a zero class number). Output:  Input retained at /var/folders/92/6_gqhzx52n3b8zyts56k__gw0000gn/T//gaptempdirFqGwJl/input.json at even_lattice_genus.g:54 called from
+EvenLatticeGenus( ttsign, ttmdiscrec.discg, ttmdiscrec.discf ) at Task20260923Ue.g:22 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260923Ue.g:33
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> 
+brk> 
+brk> 
+brk> 
+brk> quit;
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> Read("Task20260923Ue.g");
+All-zero adj: 
+kk 2 isgeom 
+____ scons 3 
+kk 3 isgeom 
+____ scons 6 
+kk 4 isgeom 
+____ scons 10 
+kk 5 isgeom 
+____ scons 15 
+kk 6 isgeom 
+____ scons 21 
+kk 7 isgeom 
+____ scons 28 
+kk 8 isgeom 
+____ scons 36 
+kk 9 isgeom 
+____ scons 45 
+kk 10 isgeom 
+____ scons 55 
+kk 11 not isgeom [ false, 4 ] 
+kk 12 not isgeom [ false, 4 ] 
+kk 13 not isgeom [ false, 4 ] 
+kk 14 not isgeom [ false, 4 ] 
+kk 15 not isgeom [ false, 4 ] 
+kk 16 not isgeom [ false, 4 ] 
+kk 17 not isgeom [ false, 4 ] 
+kk 18 not isgeom [ false, 4 ] 
+kk 19 not isgeom [ false, 4 ] 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> Read("Task20260923Ue.g");
+All-zero adj: 
+kk 2 isgeom 
+____ scons 3 
+kk 3 isgeom 
+____ scons 6 
+kk 4 isgeom 
+____ scons 10 
+kk 5 isgeom 
+____ scons 15 
+kk 6 isgeom 
+____ scons 21 
+kk 7 isgeom 
+____ scons 28 
+kk 8 isgeom 
+____ scons 36 
+kk 9 isgeom 
+____ scons 45 
+kk 10 isgeom 
+____ scons 55 
+kk 11 not isgeom [ false, 4 ] 
+kk 12 not isgeom [ false, 4 ] 
+kk 13 not isgeom [ false, 4 ] 
+kk 14 not isgeom [ false, 4 ] 
+kk 15 not isgeom [ false, 4 ] 
+kk 16 not isgeom [ false, 4 ] 
+kk 17 not isgeom [ false, 4 ] 
+kk 18 not isgeom [ false, 4 ] 
+Error, signature must be [splus,sminus], both positive at even_lattice_genus.g:20 called from
+EvenLatticeGenus( ttsign, ttmdiscrec.discg, ttmdiscrec.discf ) at Task20260923Ue.g:19 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260923Ue.g:34
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> ttsign;
+[ 2, 0 ]
+brk> ttmdiscrec.discg;
+[ 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 40 ]
+brk> quit;
+gap> Read("Task20260923Ue.g");
+All-zero adj: 
+kk 2 isgeom 
+____ scons 3 
+kk 3 isgeom 
+____ scons 6 
+kk 4 isgeom 
+____ scons 10 
+kk 5 isgeom 
+____ scons 15 
+kk 6 isgeom 
+____ scons 21 
+kk 7 isgeom 
+____ scons 28 
+kk 8 isgeom 
+____ scons 36 
+kk 9 isgeom 
+____ scons 45 
+kk 10 isgeom 
+____ scons 55 
+kk 11 not isgeom [ false, 4 ] 
+kk 12 not isgeom [ false, 4 ] 
+kk 13 not isgeom [ false, 4 ] 
+kk 14 not isgeom [ false, 4 ] 
+kk 15 not isgeom [ false, 4 ] 
+kk 16 not isgeom [ false, 4 ] 
+kk 17 not isgeom [ false, 4 ] 
+kk 18 not isgeom [ false, 4 ] 
+kk 19 not isgeom [ false, 4 ] 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> Read("Task20260923Uf.g");
+AllOne adj: 
+kk 2 isgeom 
+____ scons 2 
+kk 3 isgeom 
+____ scons 3 
+kk 4 isgeom 
+____ scons 4 
+kk 5 isgeom 
+____ scons 5 
+kk 6 isgeom 
+____ scons 6 
+kk 7 isgeom 
+____ scons 7 
+kk 8 isgeom 
+____ scons 8 
+kk 9 isgeom 
+____ scons 9 
+kk 10 isgeom 
+____ scons 10 
+kk 11 not isgeom [ false, 4 ] 
+kk 12 not isgeom [ false, 4 ] 
+kk 13 not isgeom [ false, 4 ] 
+kk 14 not isgeom [ false, 4 ] 
+kk 15 not isgeom [ false, 4 ] 
+kk 16 not isgeom [ false, 4 ] 
+kk 17 not isgeom [ false, 4 ] 
+kk 18 not isgeom [ false, 4 ] 
+kk 19 not isgeom [ false, 4 ] 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> Read("Task20260923Ug.g");
+AllTwo adj: 
+kk 2 isgeom 
+____ scons 2 
+kk 3 isgeom 
+____ scons 3 
+kk 4 isgeom 
+____ scons 4 
+kk 5 isgeom 
+____ scons 5 
+kk 6 isgeom 
+____ scons 6 
+kk 7 isgeom 
+____ scons 7 
+kk 8 isgeom 
+____ scons 8 
+kk 9 isgeom 
+____ scons 9 
+kk 10 isgeom 
+____ scons 10 
+kk 11 not isgeom [ false, 4 ] 
+kk 12 not isgeom [ false, 4 ] 
+kk 13 not isgeom [ false, 4 ] 
+kk 14 not isgeom [ false, 4 ] 
+kk 15 not isgeom [ false, 4 ] 
+kk 16 not isgeom [ false, 4 ] 
+kk 17 not isgeom [ false, 4 ] 
+kk 18 not isgeom [ false, 4 ] 
+kk 19 not isgeom [ false, 4 ] 
+gap> 
+gap> 
+gap> Read("Task20260923Ue.g");
+All-zero adj: 
+kk 2 isgeom 
+____ scons 3 
+kk 3 isgeom 
+____ scons 6 
+kk 4 isgeom 
+____ scons 10 
+kk 5 isgeom 
+____ scons 15 
+kk 6 isgeom 
+____ scons 21 
+kk 7 isgeom 
+wrong global buzz 476127461 
+Error,  at gapReads/gaptools.txt:143 called from
+buzz( 476127461 ); at Task20260923Ue.g:24 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260923Ue.g:37
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> 

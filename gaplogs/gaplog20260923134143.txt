@@ -1,0 +1,360 @@
+sessionnumb  20260923134143 
+gap> debug3();
+Syntax warning: Unbound global variable in fordebug3.g:18
+  thdual:=th*Gram;
+          ^^
+Syntax warning: Unbound global variable in fordebug3.g:23
+    if IsZeeroVect(tw) then continue; fi;
+       ^^^^^^^^^^^
+Syntax error: identifier expected in fordebug3.g:58
+    local pos, twdual, tGram, ;
+                              ^
+Syntax error: ; expected in fordebug3.g:59
+    tGram:=torec.Gram, th, tbasisdual, taddwords, pos, twdual, tw, tvdual, newtbasisdual,
+                     ^
+Syntax warning: Unbound global variable in fordebug3.g:62
+    th:=torec.h;
+    ^^
+Syntax warning: Unbound global variable in fordebug3.g:63
+    tbasisdual:=torec.basisdual;
+    ^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug3.g:64
+    taddwords:=torec.addwords;
+    ^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug3.g:69
+      if taddwords=[] or ForAll(taddwords*twdual, IsInt) then 
+         ^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug3.g:69
+      if taddwords=[] or ForAll(taddwords*twdual, IsInt) then 
+                                ^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug3.g:70
+        tw:=isotwords[pos];
+            ^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug3.g:71
+        tvdual:=tw*discrec.reps_dual;, xx,
+        ^^^^^^
+Syntax error: while parsing an 'if' statement: statement or 'fi' expected in fordebug3.g:71
+        tvdual:=tw*discrec.reps_dual;, xx,
+                                     ^
+Syntax warning: Unbound global variable in fordebug3.g:73
+          tT:=ShallowCopy(tbasisdual); Add(tT, tvdual);
+                                           ^^
+Syntax warning: Unbound global variable in fordebug3.g:73
+          tT:=ShallowCopy(tbasisdual); Add(tT, tvdual);
+                                               ^^^^^^
+Syntax warning: Unbound global variable in fordebug3.g:74
+          H:=HermiteNormalFormIntegerMat(tT);
+          ^
+Syntax warning: Unbound global variable in fordebug3.g:74
+          H:=HermiteNormalFormIntegerMat(tT);
+                                         ^^
+Syntax warning: Unbound global variable in fordebug3.g:75
+          newtbasisdual:=Filtered(H, xx->not IsZeroVect(xx));
+          ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug3.g:75
+          newtbasisdual:=Filtered(H, xx->not IsZeroVect(xx));
+                                  ^
+Syntax warning: Unbound global variable in fordebug3.g:76
+          newth:=SolutionIntMat(newtbasisdual, thdual);
+          ^^^^^
+Syntax warning: Unbound global variable in fordebug3.g:76
+          newth:=SolutionIntMat(newtbasisdual, thdual);
+                                ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug3.g:77
+          newGram:=TMTTmult(newtbasisdual, Gramdual);
+          ^^^^^^^
+Syntax warning: Unbound global variable in fordebug3.g:77
+          newGram:=TMTTmult(newtbasisdual, Gramdual);
+                            ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug3.g:78
+          if AffESstd(newGram, newth, 0, -2, true)=[] then 
+                      ^^^^^^^
+Syntax warning: Unbound global variable in fordebug3.g:78
+          if AffESstd(newGram, newth, 0, -2, true)=[] then 
+                               ^^^^^
+Syntax warning: Unbound global variable in fordebug3.g:79
+            ttdet:=DeterminantIntMat(newGram);
+            ^^^^^
+Syntax warning: Unbound global variable in fordebug3.g:79
+            ttdet:=DeterminantIntMat(newGram);
+                                     ^^^^^^^
+Syntax warning: Unbound global variable in fordebug3.g:80
+            ttbasisdualinv:=InverseMat(newtbasisdual);
+            ^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug3.g:80
+            ttbasisdualinv:=InverseMat(newtbasisdual);
+                                       ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug3.g:81
+            if isneworec(ttdet, ttbasisdualinv) then  
+                         ^^^^^
+Syntax warning: Unbound global variable in fordebug3.g:81
+            if isneworec(ttdet, ttbasisdualinv) then  
+                                ^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug3.g:82
+              newaddwords:=ShallowCopy(taddwords)); Add(newaddwords, tw);
+              ^^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug3.g:82
+              newaddwords:=ShallowCopy(taddwords)); Add(newaddwords, tw);
+                                       ^^^^^^^^^
+Syntax error: ; expected in fordebug3.g:82
+              newaddwords:=ShallowCopy(taddwords)); Add(newaddwords, tw);
+                                                 ^
+Syntax warning: Unbound global variable in fordebug3.g:83
+              neworec:=rec(
+              ^^^^^^^
+Syntax warning: Unbound global variable in fordebug3.g:84
+                Gram:=newGram, 
+                      ^^^^^^^
+Syntax warning: Unbound global variable in fordebug3.g:85
+                h:=newth, 
+                   ^^^^^
+Syntax warning: Unbound global variable in fordebug3.g:86
+                basisdual:=newbasisdual, 
+                           ^^^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug3.g:87
+                addwords:=newaddwords,
+                          ^^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug3.g:89
+              );
+ ^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in fordebug3.g:90
+              Add(nonsingoverlats, neworec);
+                                   ^^^^^^^
+Syntax warning: Unbound global variable in fordebug3.g:91
+              thetask(neworec);
+                      ^^^^^^^
+Syntax error: while parsing a 'for' loop: statement or 'od' expected in fordebug3.g:94
+      fi;
+      ^^
+Syntax error: while parsing a function: statement or 'end' expected in fordebug3.g:95
+    od; 
+    ^^
+gap> Read("NonSingOverLats.g");
+Syntax error: identifier expected in NonSingOverLats.g:53
+    local pos, twdual, tGram, ;
+                              ^
+Syntax error: ; expected in NonSingOverLats.g:54
+    tGram:=torec.Gram, th, tbasisdual, taddwords, pos, twdual, tw, tvdual, newtbasisdual,
+                     ^
+Syntax warning: Unbound global variable in NonSingOverLats.g:57
+    th:=torec.h;
+    ^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:58
+    tbasisdual:=torec.basisdual;
+    ^^^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:59
+    taddwords:=torec.addwords;
+    ^^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:64
+      if taddwords=[] or ForAll(taddwords*twdual, IsInt) then 
+         ^^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:64
+      if taddwords=[] or ForAll(taddwords*twdual, IsInt) then 
+                                ^^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:65
+        tw:=isotwords[pos];
+            ^^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:66
+        tvdual:=tw*discrec.reps_dual;, xx,
+        ^^^^^^
+Syntax error: while parsing an 'if' statement: statement or 'fi' expected in NonSingOverLats.g:66
+        tvdual:=tw*discrec.reps_dual;, xx,
+                                     ^
+Syntax warning: Unbound global variable in NonSingOverLats.g:68
+          tT:=ShallowCopy(tbasisdual); Add(tT, tvdual);
+                                           ^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:68
+          tT:=ShallowCopy(tbasisdual); Add(tT, tvdual);
+                                               ^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:69
+          H:=HermiteNormalFormIntegerMat(tT);
+          ^
+Syntax warning: Unbound global variable in NonSingOverLats.g:69
+          H:=HermiteNormalFormIntegerMat(tT);
+                                         ^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:70
+          newtbasisdual:=Filtered(H, xx->not IsZeroVect(xx));
+          ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:70
+          newtbasisdual:=Filtered(H, xx->not IsZeroVect(xx));
+                                  ^
+Syntax warning: Unbound global variable in NonSingOverLats.g:71
+          newth:=SolutionIntMat(newtbasisdual, thdual);
+          ^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:71
+          newth:=SolutionIntMat(newtbasisdual, thdual);
+                                ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:72
+          newGram:=TMTTmult(newtbasisdual, Gramdual);
+          ^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:72
+          newGram:=TMTTmult(newtbasisdual, Gramdual);
+                            ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:73
+          if AffESstd(newGram, newth, 0, -2, true)=[] then 
+                      ^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:73
+          if AffESstd(newGram, newth, 0, -2, true)=[] then 
+                               ^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:74
+            ttdet:=DeterminantIntMat(newGram);
+            ^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:74
+            ttdet:=DeterminantIntMat(newGram);
+                                     ^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:75
+            ttbasisdualinv:=InverseMat(newtbasisdual);
+            ^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:75
+            ttbasisdualinv:=InverseMat(newtbasisdual);
+                                       ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:76
+            if isneworec(ttdet, ttbasisdualinv) then  
+                         ^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:76
+            if isneworec(ttdet, ttbasisdualinv) then  
+                                ^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:77
+              newaddwords:=ShallowCopy(taddwords)); Add(newaddwords, tw);
+              ^^^^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:77
+              newaddwords:=ShallowCopy(taddwords)); Add(newaddwords, tw);
+                                       ^^^^^^^^^
+Syntax error: ; expected in NonSingOverLats.g:77
+              newaddwords:=ShallowCopy(taddwords)); Add(newaddwords, tw);
+                                                 ^
+Syntax warning: Unbound global variable in NonSingOverLats.g:78
+              neworec:=rec(
+              ^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:79
+                Gram:=newGram, 
+                      ^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:80
+                h:=newth, 
+                   ^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:81
+                basisdual:=newbasisdual, 
+                           ^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:82
+                addwords:=newaddwords,
+                          ^^^^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:84
+              );
+ ^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:85
+              Add(nonsingoverlats, neworec);
+                                   ^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:86
+              thetask(neworec);
+                      ^^^^^^^
+Syntax error: while parsing a 'for' loop: statement or 'od' expected in NonSingOverLats.g:89
+      fi;
+      ^^
+Syntax error: while parsing a function: statement or 'end' expected in NonSingOverLats.g:90
+    od; 
+    ^^
+gap> Read("NonSingOverLats.g");
+Syntax error: Name used for two locals in NonSingOverLats.g:53
+    local pos, twdual, tGram, th, tbasisdual, taddwords, pos, twdual, tw, tvdual, newtbasisdual,
+                                                         ^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:65
+        tw:=isotwords[pos];
+            ^^^^^^^^^
+Syntax error: while parsing an 'if' statement: statement or 'fi' expected in NonSingOverLats.g:66
+        tvdual:=tw*discrec.reps_dual;, xx,
+                                     ^
+Syntax warning: Unbound global variable in NonSingOverLats.g:71
+          newth:=SolutionIntMat(newtbasisdual, thdual);
+          ^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:73
+          if AffESstd(newGram, newth, 0, -2, true)=[] then 
+                               ^^^^^
+Syntax error: ; expected in NonSingOverLats.g:77
+              newaddwords:=ShallowCopy(taddwords)); Add(newaddwords, tw);
+                                                 ^
+Syntax warning: Unbound global variable in NonSingOverLats.g:80
+                h:=newth, 
+                   ^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:81
+                basisdual:=newbasisdual, 
+                           ^^^^^^^^^^^^
+Syntax error: while parsing a 'for' loop: statement or 'od' expected in NonSingOverLats.g:89
+      fi;
+      ^^
+Syntax error: while parsing a function: statement or 'end' expected in NonSingOverLats.g:90
+    od; 
+    ^^
+gap> Read("NonSingOverLats.g");
+Syntax error: Name used for two locals in NonSingOverLats.g:56
+    local pos, twdual, tGram, th, tbasisdual, taddwords,  twdual, tw, tvdual, newtbasisdual,
+                                                          ^^^^^^
+Syntax error: while parsing an 'if' statement: statement or 'fi' expected in NonSingOverLats.g:69
+        tvdual:=tw*discrec.reps_dual;, xx,
+                                     ^
+Syntax warning: Unbound global variable in NonSingOverLats.g:74
+          newth:=SolutionIntMat(newtbasisdual, thdual);
+          ^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:76
+          if AffESstd(newGram, newth, 0, -2, true)=[] then 
+                               ^^^^^
+Syntax error: ; expected in NonSingOverLats.g:80
+              newaddwords:=ShallowCopy(taddwords)); Add(newaddwords, tw);
+                                                 ^
+Syntax warning: Unbound global variable in NonSingOverLats.g:83
+                h:=newth, 
+                   ^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:84
+                basisdual:=newbasisdual, 
+                           ^^^^^^^^^^^^
+Syntax error: while parsing a 'for' loop: statement or 'od' expected in NonSingOverLats.g:92
+      fi;
+      ^^
+Syntax error: while parsing a function: statement or 'end' expected in NonSingOverLats.g:93
+    od; 
+    ^^
+gap> Read("NonSingOverLats.g");
+Syntax error: while parsing an 'if' statement: statement or 'fi' expected in NonSingOverLats.g:69
+        tvdual:=tw*discrec.reps_dual;, xx,
+                                     ^
+Syntax warning: Unbound global variable in NonSingOverLats.g:74
+          newth:=SolutionIntMat(newtbasisdual, thdual);
+          ^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:76
+          if AffESstd(newGram, newth, 0, -2, true)=[] then 
+                               ^^^^^
+Syntax error: ; expected in NonSingOverLats.g:80
+              newaddwords:=ShallowCopy(taddwords)); Add(newaddwords, tw);
+                                                 ^
+Syntax warning: Unbound global variable in NonSingOverLats.g:83
+                h:=newth, 
+                   ^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:84
+                basisdual:=newbasisdual, 
+                           ^^^^^^^^^^^^
+Syntax error: while parsing a 'for' loop: statement or 'od' expected in NonSingOverLats.g:92
+      fi;
+      ^^
+Syntax error: while parsing a function: statement or 'end' expected in NonSingOverLats.g:93
+    od; 
+    ^^
+gap> Read("NonSingOverLats.g");
+Syntax warning: Unbound global variable in NonSingOverLats.g:74
+          newth:=SolutionIntMat(newtbasisdual, thdual);
+          ^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:76
+          if AffESstd(newGram, newth, 0, -2, true)=[] then 
+                               ^^^^^
+Syntax error: ; expected in NonSingOverLats.g:80
+              newaddwords:=ShallowCopy(taddwords)); Add(newaddwords, tw);
+                                                 ^
+Syntax warning: Unbound global variable in NonSingOverLats.g:83
+                h:=newth, 
+                   ^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:84
+                basisdual:=newbasisdual, 
+                           ^^^^^^^^^^^^
+Syntax error: while parsing an 'if' statement: statement or 'fi' expected in NonSingOverLats.g:93
+    od; 
+    ^^
+gap> Read("NonSingOverLats.g");
+gap> 

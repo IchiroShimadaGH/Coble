@@ -1,29 +1,27 @@
 #Read("NonSingOverLats.g");
 
-
-
-
-
-
 NonSingOverLats:=function(Gram, h)
   #
   local nn, Gramdual, discrec, discf, thdual, 
   iter, isotwordsdual, tw, twdual, iniorec, nonsingoverlats, 
-  isneworec, thetask;
+  isneworec, thetask, isotwords;
   #
   nn:=Length(h);
   Gramdual:=InverseMat(Gram);
   discrec:=DiscriminantForm(Gram);
   discf:=discrec.discf;
-  thdual:=th*Gram;
+  thdual:=h*Gram;
   #
   iter:=IteratorOfCartesianProduct(List(discrec.discg, ii->[0..ii-1]));
+  isotwords:=[];
   isotwordsdual:=[];
+
   for tw in iter do 
-    if IsZeeroVect(tw) then continue; fi;
+    if IsZeroVect(tw) then continue; fi;
     twdual:=tw*discf;
     if modtZ(twdual*tw)=0 then 
       Add(isotwordsdual, twdual);
+      Add(isotwords, tw);
     fi;
   od;
   #
@@ -55,10 +53,10 @@ NonSingOverLats:=function(Gram, h)
     # tbasisdual:=tbasis*Gram;
     # h=th*tbasis;
     #
-    local pos, twdual, tGram, ;
-    tGram:=torec.Gram, th, tbasisdual, taddwords, pos, twdual, tw, tvdual, newtbasisdual,
-    tT, H, xx, newGram, ttdet, ttbasisdualinv, newaddwords, neworec;
+    local pos, twdual, tGram, th, tbasisdual, taddwords,   tw, tvdual, newtbasisdual,
+    tT, H, xx, newGram, ttdet, ttbasisdualinv, newaddwords, neworec, newth;
     #
+    tGram:=torec.Gram;
     th:=torec.h;
     tbasisdual:=torec.basisdual;
     taddwords:=torec.addwords;
@@ -68,7 +66,7 @@ NonSingOverLats:=function(Gram, h)
       pos:=pos+1;
       if taddwords=[] or ForAll(taddwords*twdual, IsInt) then 
         tw:=isotwords[pos];
-        tvdual:=tw*discrec.reps_dual;, xx,
+        tvdual:=tw*discrec.reps_dual;
         if SolutionIntMat(tbasisdual, tvdual)=fail then 
           tT:=ShallowCopy(tbasisdual); Add(tT, tvdual);
           H:=HermiteNormalFormIntegerMat(tT);
@@ -79,11 +77,11 @@ NonSingOverLats:=function(Gram, h)
             ttdet:=DeterminantIntMat(newGram);
             ttbasisdualinv:=InverseMat(newtbasisdual);
             if isneworec(ttdet, ttbasisdualinv) then  
-              newaddwords:=ShallowCopy(taddwords)); Add(newaddwords, tw);
+              newaddwords:=ShallowCopy(taddwords); Add(newaddwords, tw);
               neworec:=rec(
                 Gram:=newGram, 
                 h:=newth, 
-                basisdual:=newbasisdual, 
+                basisdual:=newtbasisdual, 
                 addwords:=newaddwords,
                 det:=ttdet
               );
@@ -91,6 +89,7 @@ NonSingOverLats:=function(Gram, h)
               thetask(neworec);
             fi;
           fi;
+        fi;
       fi;
     od; 
     #
