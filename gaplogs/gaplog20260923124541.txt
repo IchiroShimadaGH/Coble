@@ -1,0 +1,5 @@
+sessionnumb  20260923124541 
+Syntax error: ; expected
+restart():
+         ^
+gap> restart();
