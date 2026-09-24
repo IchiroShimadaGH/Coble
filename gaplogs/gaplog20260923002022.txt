@@ -987,4 +987,5 @@ Syntax warning: Unbound global variable in NonSingOverLats.g:125
  ^^^^^^^^^^^^^^
 gap> Read("NonSingOverLats.g");
 gap> Read("NonSingOverLats.g");
+gap> Read("NonSingOverLats.g");
 gap> 

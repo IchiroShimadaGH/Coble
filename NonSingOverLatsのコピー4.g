@@ -89,17 +89,17 @@ NonSingOverLats:=function(Gram, h)
       tw:=isotwords[pos];
       newwdbasis:=AddVectToBasis(torec.wdbasis, tw);
       ttdet:=AbsInt(DeterminantIntMat(newwdbasis));
-      newwdbasisinv:=InverseMat(newwdbasis);  
-      singflag:=false;
-      for stw in singisotwords do 
-        if IsIntVect(stw*newwdbasisinv) then 
-          singflag:=true;
-          break; # from for stw in singisotwords do 
-        fi;
-      od;
-      if not singflag then  
-        if isneworec(ttdet, newwdbasis) then 
-          Add(oldwdbasiss, [ttdet, newwdbasis]);       
+      if isneworec(ttdet, newwdbasis) then 
+        Add(oldwdbasiss, [ttdet, newwdbasis]);
+        newwdbasisinv:=InverseMat(newwdbasis);  
+        singflag:=false;
+        for stw in singisotwords do 
+          if IsIntVect(stw*newwdbasisinv) then 
+            singflag:=true;
+            break; # from for stw in singisotwords do 
+          fi;
+        od;
+        if not singflag then 
           tvdual:=tw*discrec.reps_dual;
           newtbasisdual:=AddVectToBasis(torec.basisdual, tvdual);
           newth:=SolutionIntMat(newtbasisdual, thdual);
@@ -116,8 +116,8 @@ NonSingOverLats:=function(Gram, h)
             addwords:=newaddwords
           );
           Add(nonsingoverlats, neworec);
-          #Printn("___", Length(nonsingoverlats), Length(newaddwords), 
-          #Length(oldwdbasiss));
+          Printn("___", Length(nonsingoverlats), Length(newaddwords), 
+          Length(oldwdbasiss));
           newposs:=[];
           for tpos in poss do 
             if tpos>pos then 

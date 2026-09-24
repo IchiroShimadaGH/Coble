@@ -1961,3 +1961,7020 @@ bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 46 in 46
 _______________ 
 __nonsingisotwords 165 
 __singisotwords 330 
+kk 10 orecs 166 
+bb 0 kk 10 isgeom extdeg 1 sprats [ 0, 55 ] : 1 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 2 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 3 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 4 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 5 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 6 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 7 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 8 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 9 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 10 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 11 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 12 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 13 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 14 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 15 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 16 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 17 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 18 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 19 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 20 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 21 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 22 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 23 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 24 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 25 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 26 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 27 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 28 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 29 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 30 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 31 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 32 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 33 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 34 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 35 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 36 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 37 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 38 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 39 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 40 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 41 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 42 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 43 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 44 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 45 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 46 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 47 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 48 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 49 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 50 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 51 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 52 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 53 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 54 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 55 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 56 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 57 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 58 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 59 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 60 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 61 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 62 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 63 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 64 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 65 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 66 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 67 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 68 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 69 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 70 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 71 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 72 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 73 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 74 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 75 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 76 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 77 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 78 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 79 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 80 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 81 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 82 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 83 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 84 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 85 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 86 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 87 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 88 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 89 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 90 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 91 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 92 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 93 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 94 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 95 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 96 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 97 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 98 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 99 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 100 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 101 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 102 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 103 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 104 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 105 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 106 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 107 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 108 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 109 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 110 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 111 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 112 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 113 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 114 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 115 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 116 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 117 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 118 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 119 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 120 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 121 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 122 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 123 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 124 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 125 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 126 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 127 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 128 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 129 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 130 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 131 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 132 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 133 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 134 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 135 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 136 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 137 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 138 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 139 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 140 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 141 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 142 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 143 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 144 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 145 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 146 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 147 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 148 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 149 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 150 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 151 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 152 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 153 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 154 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 155 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 156 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 157 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 158 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 159 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 160 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 161 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 162 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 163 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 164 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 165 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 166 in 166 
+_______________ 
+__nonsingisotwords 1488 
+__singisotwords 495 
+Error, user interrupt in
+  return not IsPlistRep( r ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3636 called from 
+func( elm ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:1643 called from
+ForAny( m2, function ( r )
+      return not IsPlistRep( r );
+  end ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3636 called from
+twdbasis * tdata[2] at NonSingOverLats.g:72 called from
+isneworec( ttdet, newwdbasis ) at NonSingOverLats.g:102 called from
+thetask( neworec ); at NonSingOverLats.g:130 called from
+...  at Task20260923Va.g:62
+you can 'return;'
+brk> quit;
+gap> 
+gap> 
+gap> 
+gap> 
+gap> Read("Task20260923Va.g");
+Syntax warning: Unbound global variable in NonSingOverLats.g:71
+      if tdata[1]=ttdet  and twdbasis=tdata[2] then eturn(false); fi;
+                                                    ^^^^^
+totalrecsname0 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 0 
+kk 2 orecs 1 
+bb 0 kk 2 isgeom extdeg 1 sprats [ 0, 3 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 3 orecs 1 
+bb 0 kk 3 isgeom extdeg 1 sprats [ 0, 6 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 5 
+kk 4 orecs 1 
+bb 0 kk 4 isgeom extdeg 1 sprats [ 0, 10 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 5 orecs 1 
+bb 0 kk 5 isgeom extdeg 1 sprats [ 0, 15 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 35 
+kk 6 orecs 1 
+bb 0 kk 6 isgeom extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 1 
+__singisotwords 126 
+kk 7 orecs 2 
+bb 0 kk 7 isgeom extdeg 1 sprats [ 0, 28 ] : 1 in 2 
+bb 0 kk 7 isgeom extdeg 2 sprats [ 0, 63 ] : 2 in 2 
+_______________ 
+__nonsingisotwords 11 
+__singisotwords 396 
+Error, Variable: 'eturn' must have an assigned value in
+  eturn( false ); at NonSingOverLats.g:71 called from 
+isneworec( ttdet, newwdbasis ) at NonSingOverLats.g:92 called from
+thetask( neworec, newposs ); at NonSingOverLats.g:130 called from
+thetask( iniorec, [ 1 .. Length( isotwords ) ] ); at NonSingOverLats.g:137 called from
+NonSingOverLats( t0Gram, t0h ) at Task20260923Va.g:28 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260923Va.g:62
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260923Va.g");
+totalrecsname0 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 0 
+kk 2 orecs 1 
+bb 0 kk 2 isgeom extdeg 1 sprats [ 0, 3 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 3 orecs 1 
+bb 0 kk 3 isgeom extdeg 1 sprats [ 0, 6 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 5 
+kk 4 orecs 1 
+bb 0 kk 4 isgeom extdeg 1 sprats [ 0, 10 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 5 orecs 1 
+bb 0 kk 5 isgeom extdeg 1 sprats [ 0, 15 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 35 
+kk 6 orecs 1 
+bb 0 kk 6 isgeom extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 1 
+__singisotwords 126 
+kk 7 orecs 2 
+bb 0 kk 7 isgeom extdeg 1 sprats [ 0, 28 ] : 1 in 2 
+bb 0 kk 7 isgeom extdeg 2 sprats [ 0, 63 ] : 2 in 2 
+_______________ 
+__nonsingisotwords 11 
+__singisotwords 396 
+kk 8 orecs 11 
+bb 0 kk 8 isgeom extdeg 1 sprats [ 0, 36 ] : 1 in 11 
+bb 0 kk 8 isgeom extdeg 3 sprats [ 0, 120 ] : 2 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 3 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 4 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 5 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 6 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 7 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 8 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 9 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 10 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 11 in 11 
+_______________ 
+__nonsingisotwords 45 
+__singisotwords 210 
+kk 9 orecs 46 
+bb 0 kk 9 isgeom extdeg 1 sprats [ 0, 45 ] : 1 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 2 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 3 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 4 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 5 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 6 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 7 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 8 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 9 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 10 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 11 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 12 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 13 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 14 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 15 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 16 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 17 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 18 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 19 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 20 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 21 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 22 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 23 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 24 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 25 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 26 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 27 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 28 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 29 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 30 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 31 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 32 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 33 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 34 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 35 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 36 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 37 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 38 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 39 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 40 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 41 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 42 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 43 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 44 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 45 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 46 in 46 
+_______________ 
+__nonsingisotwords 165 
+__singisotwords 330 
+kk 10 orecs 166 
+bb 0 kk 10 isgeom extdeg 1 sprats [ 0, 55 ] : 1 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 2 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 3 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 4 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 5 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 6 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 7 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 8 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 9 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 10 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 11 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 12 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 13 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 14 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 15 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 16 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 17 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 18 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 19 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 20 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 21 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 22 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 23 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 24 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 25 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 26 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 27 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 28 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 29 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 30 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 31 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 32 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 33 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 34 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 35 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 36 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 37 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 38 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 39 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 40 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 41 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 42 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 43 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 44 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 45 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 46 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 47 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 48 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 49 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 50 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 51 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 52 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 53 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 54 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 55 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 56 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 57 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 58 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 59 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 60 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 61 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 62 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 63 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 64 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 65 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 66 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 67 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 68 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 69 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 70 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 71 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 72 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 73 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 74 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 75 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 76 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 77 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 78 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 79 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 80 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 81 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 82 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 83 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 84 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 85 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 86 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 87 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 88 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 89 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 90 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 91 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 92 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 93 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 94 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 95 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 96 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 97 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 98 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 99 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 100 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 101 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 102 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 103 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 104 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 105 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 106 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 107 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 108 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 109 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 110 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 111 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 112 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 113 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 114 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 115 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 116 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 117 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 118 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 119 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 120 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 121 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 122 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 123 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 124 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 125 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 126 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 127 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 128 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 129 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 130 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 131 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 132 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 133 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 134 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 135 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 136 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 137 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 138 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 139 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 140 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 141 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 142 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 143 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 144 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 145 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 146 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 147 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 148 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 149 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 150 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 151 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 152 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 153 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 154 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 155 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 156 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 157 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 158 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 159 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 160 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 161 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 162 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 163 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 164 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 165 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 166 in 166 
+_______________ 
+__nonsingisotwords 1488 
+__singisotwords 495 
+Error, user interrupt in
+  return false; at NonSingOverLats.g:71 called from 
+isneworec( ttdet, newwdbasis ) at NonSingOverLats.g:92 called from
+thetask( neworec, newposs ); at NonSingOverLats.g:130 called from
+thetask( neworec, newposs ); at NonSingOverLats.g:130 called from
+thetask( iniorec, [ 1 .. Length( isotwords ) ] ); at NonSingOverLats.g:137 called from
+NonSingOverLats( t0Gram, t0h ) at Task20260923Va.g:28 called from
+...  at Task20260923Va.g:62
+you can 'return;'
+brk> quit;
+gap> Read("Task20260923Va.g");
+Syntax warning: Unbound global variable in NonSingOverLats.g:119
+          Printn("___", Length(nonsingoverlats), Length(newaddword));
+                                                        ^^^^^^^^^^
+totalrecsname0 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 0 
+kk 2 orecs 1 
+bb 0 kk 2 isgeom extdeg 1 sprats [ 0, 3 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 3 orecs 1 
+bb 0 kk 3 isgeom extdeg 1 sprats [ 0, 6 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 5 
+kk 4 orecs 1 
+bb 0 kk 4 isgeom extdeg 1 sprats [ 0, 10 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 5 orecs 1 
+bb 0 kk 5 isgeom extdeg 1 sprats [ 0, 15 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 35 
+kk 6 orecs 1 
+bb 0 kk 6 isgeom extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 1 
+__singisotwords 126 
+Error, Variable: 'newaddword' must have an assigned value in
+  Length( nonsingoverlats ) at NonSingOverLats.g:119 called from 
+thetask( iniorec, [ 1 .. Length( isotwords ) ] ); at NonSingOverLats.g:137 called from
+NonSingOverLats( t0Gram, t0h ) at Task20260923Va.g:28 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260923Va.g:62
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260923Va.g");
+totalrecsname0 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 0 
+kk 2 orecs 1 
+bb 0 kk 2 isgeom extdeg 1 sprats [ 0, 3 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 3 orecs 1 
+bb 0 kk 3 isgeom extdeg 1 sprats [ 0, 6 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 5 
+kk 4 orecs 1 
+bb 0 kk 4 isgeom extdeg 1 sprats [ 0, 10 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 5 orecs 1 
+bb 0 kk 5 isgeom extdeg 1 sprats [ 0, 15 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 35 
+kk 6 orecs 1 
+bb 0 kk 6 isgeom extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 1 
+__singisotwords 126 
+___ 2 1 
+kk 7 orecs 2 
+bb 0 kk 7 isgeom extdeg 1 sprats [ 0, 28 ] : 1 in 2 
+bb 0 kk 7 isgeom extdeg 2 sprats [ 0, 63 ] : 2 in 2 
+_______________ 
+__nonsingisotwords 11 
+__singisotwords 396 
+___ 2 1 
+___ 3 1 
+___ 4 1 
+___ 5 1 
+___ 6 1 
+___ 7 1 
+___ 8 1 
+___ 9 1 
+___ 10 1 
+___ 11 1 
+kk 8 orecs 11 
+bb 0 kk 8 isgeom extdeg 1 sprats [ 0, 36 ] : 1 in 11 
+bb 0 kk 8 isgeom extdeg 3 sprats [ 0, 120 ] : 2 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 3 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 4 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 5 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 6 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 7 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 8 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 9 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 10 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 11 in 11 
+_______________ 
+__nonsingisotwords 45 
+__singisotwords 210 
+___ 2 1 
+___ 3 1 
+___ 4 1 
+___ 5 1 
+___ 6 1 
+___ 7 1 
+___ 8 1 
+___ 9 1 
+___ 10 1 
+___ 11 1 
+___ 12 1 
+___ 13 1 
+___ 14 1 
+___ 15 1 
+___ 16 1 
+___ 17 1 
+___ 18 1 
+___ 19 1 
+___ 20 1 
+___ 21 1 
+___ 22 1 
+___ 23 1 
+___ 24 1 
+___ 25 1 
+___ 26 1 
+___ 27 1 
+___ 28 1 
+___ 29 1 
+___ 30 1 
+___ 31 1 
+___ 32 1 
+___ 33 1 
+___ 34 1 
+___ 35 1 
+___ 36 1 
+___ 37 1 
+___ 38 1 
+___ 39 1 
+___ 40 1 
+___ 41 1 
+___ 42 1 
+___ 43 1 
+___ 44 1 
+___ 45 1 
+___ 46 1 
+kk 9 orecs 46 
+bb 0 kk 9 isgeom extdeg 1 sprats [ 0, 45 ] : 1 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 2 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 3 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 4 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 5 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 6 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 7 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 8 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 9 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 10 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 11 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 12 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 13 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 14 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 15 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 16 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 17 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 18 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 19 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 20 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 21 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 22 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 23 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 24 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 25 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 26 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 27 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 28 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 29 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 30 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 31 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 32 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 33 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 34 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 35 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 36 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 37 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 38 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 39 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 40 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 41 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 42 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 43 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 44 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 45 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 46 in 46 
+_______________ 
+__nonsingisotwords 165 
+__singisotwords 330 
+___ 2 1 
+___ 3 1 
+___ 4 1 
+___ 5 1 
+___ 6 1 
+___ 7 1 
+___ 8 1 
+___ 9 1 
+___ 10 1 
+___ 11 1 
+___ 12 1 
+___ 13 1 
+___ 14 1 
+___ 15 1 
+___ 16 1 
+___ 17 1 
+___ 18 1 
+___ 19 1 
+___ 20 1 
+___ 21 1 
+___ 22 1 
+___ 23 1 
+___ 24 1 
+___ 25 1 
+___ 26 1 
+___ 27 1 
+___ 28 1 
+___ 29 1 
+___ 30 1 
+___ 31 1 
+___ 32 1 
+___ 33 1 
+___ 34 1 
+___ 35 1 
+___ 36 1 
+___ 37 1 
+___ 38 1 
+___ 39 1 
+___ 40 1 
+___ 41 1 
+___ 42 1 
+___ 43 1 
+___ 44 1 
+___ 45 1 
+___ 46 1 
+___ 47 1 
+___ 48 1 
+___ 49 1 
+___ 50 1 
+___ 51 1 
+___ 52 1 
+___ 53 1 
+___ 54 1 
+___ 55 1 
+___ 56 1 
+___ 57 1 
+___ 58 1 
+___ 59 1 
+___ 60 1 
+___ 61 1 
+___ 62 1 
+___ 63 1 
+___ 64 1 
+___ 65 1 
+___ 66 1 
+___ 67 1 
+___ 68 1 
+___ 69 1 
+___ 70 1 
+___ 71 1 
+___ 72 1 
+___ 73 1 
+___ 74 1 
+___ 75 1 
+___ 76 1 
+___ 77 1 
+___ 78 1 
+___ 79 1 
+___ 80 1 
+___ 81 1 
+___ 82 1 
+___ 83 1 
+___ 84 1 
+___ 85 1 
+___ 86 1 
+___ 87 1 
+___ 88 1 
+___ 89 1 
+___ 90 1 
+___ 91 1 
+___ 92 1 
+___ 93 1 
+___ 94 1 
+___ 95 1 
+___ 96 1 
+___ 97 1 
+___ 98 1 
+___ 99 1 
+___ 100 1 
+___ 101 1 
+___ 102 1 
+___ 103 1 
+___ 104 1 
+___ 105 1 
+___ 106 1 
+___ 107 1 
+___ 108 1 
+___ 109 1 
+___ 110 1 
+___ 111 1 
+___ 112 1 
+___ 113 1 
+___ 114 1 
+___ 115 1 
+___ 116 1 
+___ 117 1 
+___ 118 1 
+___ 119 1 
+___ 120 1 
+___ 121 1 
+___ 122 1 
+___ 123 1 
+___ 124 1 
+___ 125 1 
+___ 126 1 
+___ 127 1 
+___ 128 1 
+___ 129 1 
+___ 130 1 
+___ 131 1 
+___ 132 1 
+___ 133 1 
+___ 134 1 
+___ 135 1 
+___ 136 1 
+___ 137 1 
+___ 138 1 
+___ 139 1 
+___ 140 1 
+___ 141 1 
+___ 142 1 
+___ 143 1 
+___ 144 1 
+___ 145 1 
+___ 146 1 
+___ 147 1 
+___ 148 1 
+___ 149 1 
+___ 150 1 
+___ 151 1 
+___ 152 1 
+___ 153 1 
+___ 154 1 
+___ 155 1 
+___ 156 1 
+___ 157 1 
+___ 158 1 
+___ 159 1 
+___ 160 1 
+___ 161 1 
+___ 162 1 
+___ 163 1 
+___ 164 1 
+___ 165 1 
+___ 166 1 
+kk 10 orecs 166 
+bb 0 kk 10 isgeom extdeg 1 sprats [ 0, 55 ] : 1 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 2 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 3 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 4 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 5 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 6 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 7 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 8 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 9 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 10 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 11 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 12 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 13 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 14 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 15 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 16 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 17 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 18 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 19 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 20 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 21 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 22 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 23 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 24 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 25 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 26 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 27 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 28 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 29 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 30 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 31 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 32 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 33 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 34 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 35 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 36 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 37 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 38 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 39 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 40 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 41 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 42 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 43 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 44 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 45 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 46 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 47 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 48 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 49 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 50 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 51 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 52 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 53 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 54 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 55 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 56 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 57 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 58 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 59 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 60 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 61 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 62 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 63 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 64 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 65 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 66 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 67 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 68 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 69 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 70 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 71 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 72 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 73 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 74 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 75 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 76 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 77 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 78 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 79 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 80 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 81 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 82 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 83 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 84 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 85 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 86 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 87 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 88 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 89 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 90 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 91 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 92 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 93 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 94 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 95 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 96 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 97 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 98 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 99 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 100 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 101 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 102 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 103 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 104 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 105 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 106 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 107 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 108 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 109 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 110 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 111 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 112 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 113 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 114 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 115 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 116 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 117 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 118 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 119 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 120 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 121 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 122 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 123 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 124 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 125 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 126 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 127 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 128 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 129 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 130 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 131 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 132 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 133 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 134 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 135 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 136 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 137 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 138 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 139 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 140 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 141 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 142 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 143 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 144 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 145 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 146 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 147 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 148 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 149 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 150 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 151 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 152 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 153 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 154 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 155 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 156 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 157 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 158 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 159 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 160 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 161 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 162 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 163 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 164 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 165 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 166 in 166 
+_______________ 
+__nonsingisotwords 1488 
+__singisotwords 495 
+___ 2 1 
+___ 3 2 
+___ 4 2 
+___ 5 2 
+___ 6 2 
+___ 7 2 
+___ 8 2 
+___ 9 2 
+___ 10 2 
+___ 11 2 
+___ 12 2 
+___ 13 2 
+___ 14 2 
+___ 15 2 
+___ 16 2 
+___ 17 2 
+___ 18 2 
+___ 19 2 
+___ 20 2 
+___ 21 2 
+___ 22 2 
+___ 23 2 
+___ 24 2 
+___ 25 2 
+___ 26 2 
+___ 27 2 
+___ 28 2 
+___ 29 2 
+___ 30 2 
+___ 31 2 
+___ 32 2 
+___ 33 2 
+___ 34 2 
+___ 35 2 
+___ 36 2 
+___ 37 2 
+___ 38 2 
+___ 39 2 
+___ 40 2 
+___ 41 2 
+___ 42 2 
+___ 43 2 
+___ 44 2 
+___ 45 2 
+___ 46 2 
+___ 47 2 
+___ 48 2 
+___ 49 2 
+___ 50 2 
+___ 51 2 
+___ 52 2 
+___ 53 2 
+___ 54 2 
+___ 55 2 
+___ 56 2 
+___ 57 2 
+___ 58 2 
+___ 59 2 
+___ 60 2 
+___ 61 2 
+___ 62 2 
+___ 63 2 
+___ 64 2 
+___ 65 2 
+___ 66 2 
+___ 67 2 
+___ 68 2 
+___ 69 2 
+___ 70 2 
+___ 71 2 
+___ 72 2 
+___ 73 2 
+___ 74 2 
+___ 75 2 
+___ 76 2 
+___ 77 2 
+___ 78 2 
+___ 79 2 
+___ 80 2 
+___ 81 2 
+___ 82 2 
+___ 83 2 
+___ 84 2 
+___ 85 2 
+___ 86 2 
+___ 87 2 
+___ 88 2 
+___ 89 2 
+___ 90 2 
+___ 91 2 
+Error, user interrupt in
+  return true; at NonSingOverLats.g:73 called from 
+isneworec( ttdet, newwdbasis ) at NonSingOverLats.g:92 called from
+thetask( neworec, newposs ); at NonSingOverLats.g:130 called from
+thetask( neworec, newposs ); at NonSingOverLats.g:130 called from
+thetask( iniorec, [ 1 .. Length( isotwords ) ] ); at NonSingOverLats.g:137 called from
+NonSingOverLats( t0Gram, t0h ) at Task20260923Va.g:28 called from
+...  at Task20260923Va.g:62
+you can 'return;'
+brk> quit;
+gap> Read("Task20260923Va.g");
+totalrecsname0 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 0 
+kk 2 orecs 1 
+bb 0 kk 2 isgeom extdeg 1 sprats [ 0, 3 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 3 orecs 1 
+bb 0 kk 3 isgeom extdeg 1 sprats [ 0, 6 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 5 
+kk 4 orecs 1 
+bb 0 kk 4 isgeom extdeg 1 sprats [ 0, 10 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 5 orecs 1 
+bb 0 kk 5 isgeom extdeg 1 sprats [ 0, 15 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 35 
+kk 6 orecs 1 
+bb 0 kk 6 isgeom extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 1 
+__singisotwords 126 
+___ 2 1 2 
+kk 7 orecs 2 
+bb 0 kk 7 isgeom extdeg 1 sprats [ 0, 28 ] : 1 in 2 
+bb 0 kk 7 isgeom extdeg 2 sprats [ 0, 63 ] : 2 in 2 
+_______________ 
+__nonsingisotwords 11 
+__singisotwords 396 
+___ 2 1 2 
+___ 3 1 12 
+___ 4 1 13 
+___ 5 1 14 
+___ 6 1 15 
+___ 7 1 16 
+___ 8 1 17 
+___ 9 1 18 
+___ 10 1 19 
+___ 11 1 20 
+kk 8 orecs 11 
+bb 0 kk 8 isgeom extdeg 1 sprats [ 0, 36 ] : 1 in 11 
+bb 0 kk 8 isgeom extdeg 3 sprats [ 0, 120 ] : 2 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 3 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 4 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 5 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 6 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 7 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 8 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 9 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 10 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 11 in 11 
+_______________ 
+__nonsingisotwords 45 
+__singisotwords 210 
+___ 2 1 2 
+___ 3 1 31 
+___ 4 1 60 
+___ 5 1 89 
+___ 6 1 117 
+___ 7 1 145 
+___ 8 1 173 
+___ 9 1 199 
+___ 10 1 225 
+___ 11 1 251 
+___ 12 1 277 
+___ 13 1 300 
+___ 14 1 323 
+___ 15 1 346 
+___ 16 1 369 
+___ 17 1 392 
+___ 18 1 411 
+___ 19 1 430 
+___ 20 1 449 
+___ 21 1 468 
+___ 22 1 487 
+___ 23 1 506 
+___ 24 1 520 
+___ 25 1 534 
+___ 26 1 548 
+___ 27 1 562 
+___ 28 1 576 
+___ 29 1 590 
+___ 30 1 604 
+___ 31 1 605 
+___ 32 1 613 
+___ 33 1 621 
+___ 34 1 629 
+___ 35 1 637 
+___ 36 1 645 
+___ 37 1 653 
+___ 38 1 661 
+___ 39 1 662 
+___ 40 1 670 
+___ 41 1 671 
+___ 42 1 672 
+___ 43 1 673 
+___ 44 1 674 
+___ 45 1 675 
+___ 46 1 676 
+kk 9 orecs 46 
+bb 0 kk 9 isgeom extdeg 1 sprats [ 0, 45 ] : 1 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 2 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 3 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 4 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 5 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 6 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 7 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 8 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 9 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 10 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 11 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 12 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 13 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 14 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 15 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 16 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 17 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 18 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 19 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 20 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 21 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 22 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 23 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 24 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 25 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 26 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 27 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 28 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 29 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 30 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 31 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 32 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 33 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 34 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 35 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 36 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 37 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 38 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 39 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 40 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 41 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 42 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 43 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 44 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 45 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 46 in 46 
+_______________ 
+__nonsingisotwords 165 
+__singisotwords 330 
+___ 2 1 2 
+___ 3 1 87 
+___ 4 1 172 
+___ 5 1 257 
+___ 6 1 342 
+___ 7 1 425 
+___ 8 1 508 
+___ 9 1 591 
+___ 10 1 673 
+___ 11 1 755 
+___ 12 1 837 
+___ 13 1 916 
+___ 14 1 995 
+___ 15 1 1074 
+___ 16 1 1152 
+___ 17 1 1230 
+___ 18 1 1308 
+___ 19 1 1384 
+___ 20 1 1460 
+___ 21 1 1536 
+___ 22 1 1612 
+___ 23 1 1685 
+___ 24 1 1758 
+___ 25 1 1831 
+___ 26 1 1903 
+___ 27 1 1975 
+___ 28 1 2047 
+___ 29 1 2117 
+___ 30 1 2187 
+___ 31 1 2257 
+___ 32 1 2327 
+___ 33 1 2394 
+___ 34 1 2461 
+___ 35 1 2528 
+___ 36 1 2595 
+___ 37 1 2662 
+___ 38 1 2727 
+___ 39 1 2792 
+___ 40 1 2857 
+___ 41 1 2921 
+___ 42 1 2985 
+___ 43 1 3049 
+___ 44 1 3111 
+___ 45 1 3173 
+___ 46 1 3235 
+___ 47 1 3297 
+___ 48 1 3356 
+___ 49 1 3415 
+___ 50 1 3474 
+___ 51 1 3533 
+___ 52 1 3592 
+___ 53 1 3647 
+___ 54 1 3702 
+___ 55 1 3757 
+___ 56 1 3812 
+___ 57 1 3867 
+___ 58 1 3922 
+___ 59 1 4007 
+___ 60 1 4061 
+___ 61 1 4115 
+___ 62 1 4169 
+___ 63 1 4222 
+___ 64 1 4275 
+___ 65 1 4328 
+___ 66 1 4379 
+___ 67 1 4430 
+___ 68 1 4481 
+___ 69 1 4532 
+___ 70 1 4580 
+___ 71 1 4628 
+___ 72 1 4676 
+___ 73 1 4724 
+___ 74 1 4772 
+___ 75 1 4816 
+___ 76 1 4860 
+___ 77 1 4904 
+___ 78 1 4948 
+___ 79 1 4992 
+___ 80 1 5036 
+___ 81 1 5100 
+___ 82 1 5138 
+___ 83 1 5176 
+___ 84 1 5214 
+___ 85 1 5252 
+___ 86 1 5290 
+___ 87 1 5328 
+___ 88 1 5386 
+___ 89 1 5423 
+___ 90 1 5480 
+___ 91 1 5537 
+___ 92 1 5594 
+___ 93 1 5651 
+___ 94 1 5708 
+___ 95 1 5765 
+___ 96 1 5801 
+___ 97 1 5837 
+___ 98 1 5873 
+___ 99 1 5908 
+___ 100 1 5943 
+___ 101 1 5978 
+___ 102 1 6011 
+___ 103 1 6044 
+___ 104 1 6077 
+___ 105 1 6110 
+___ 106 1 6140 
+___ 107 1 6170 
+___ 108 1 6200 
+___ 109 1 6230 
+___ 110 1 6260 
+___ 111 1 6286 
+___ 112 1 6312 
+___ 113 1 6338 
+___ 114 1 6364 
+___ 115 1 6390 
+___ 116 1 6416 
+___ 117 1 6452 
+___ 118 1 6472 
+___ 119 1 6492 
+___ 120 1 6512 
+___ 121 1 6532 
+___ 122 1 6552 
+___ 123 1 6572 
+___ 124 1 6602 
+___ 125 1 6621 
+___ 126 1 6650 
+___ 127 1 6679 
+___ 128 1 6708 
+___ 129 1 6737 
+___ 130 1 6766 
+___ 131 1 6795 
+___ 132 1 6803 
+___ 133 1 6811 
+___ 134 1 6819 
+___ 135 1 6827 
+___ 136 1 6835 
+___ 137 1 6843 
+___ 138 1 6861 
+___ 139 1 6868 
+___ 140 1 6885 
+___ 141 1 6902 
+___ 142 1 6919 
+___ 143 1 6936 
+___ 144 1 6953 
+___ 145 1 6970 
+___ 146 1 6971 
+___ 147 1 6982 
+___ 148 1 6993 
+___ 149 1 7004 
+___ 150 1 7015 
+___ 151 1 7026 
+___ 152 1 7037 
+___ 153 1 7044 
+___ 154 1 7051 
+___ 155 1 7058 
+___ 156 1 7065 
+___ 157 1 7072 
+___ 158 1 7076 
+___ 159 1 7080 
+___ 160 1 7084 
+___ 161 1 7088 
+___ 162 1 7090 
+___ 163 1 7092 
+___ 164 1 7094 
+___ 165 1 7095 
+___ 166 1 7096 
+kk 10 orecs 166 
+bb 0 kk 10 isgeom extdeg 1 sprats [ 0, 55 ] : 1 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 2 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 3 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 4 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 5 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 6 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 7 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 8 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 9 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 10 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 11 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 12 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 13 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 14 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 15 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 16 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 17 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 18 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 19 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 20 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 21 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 22 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 23 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 24 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 25 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 26 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 27 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 28 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 29 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 30 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 31 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 32 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 33 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 34 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 35 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 36 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 37 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 38 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 39 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 40 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 41 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 42 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 43 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 44 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 45 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 46 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 47 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 48 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 49 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 50 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 51 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 52 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 53 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 54 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 55 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 56 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 57 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 58 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 59 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 60 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 61 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 62 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 63 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 64 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 65 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 66 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 67 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 68 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 69 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 70 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 71 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 72 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 73 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 74 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 75 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 76 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 77 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 78 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 79 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 80 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 81 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 82 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 83 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 84 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 85 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 86 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 87 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 88 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 89 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 90 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 91 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 92 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 93 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 94 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 95 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 96 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 97 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 98 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 99 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 100 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 101 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 102 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 103 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 104 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 105 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 106 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 107 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 108 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 109 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 110 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 111 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 112 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 113 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 114 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 115 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 116 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 117 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 118 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 119 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 120 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 121 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 122 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 123 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 124 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 125 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 126 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 127 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 128 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 129 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 130 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 131 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 132 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 133 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 134 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 135 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 136 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 137 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 138 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 139 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 140 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 141 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 142 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 143 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 144 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 145 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 146 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 147 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 148 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 149 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 150 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 151 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 152 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 153 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 154 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 155 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 156 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 157 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 158 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 159 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 160 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 161 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 162 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 163 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 164 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 165 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 166 in 166 
+_______________ 
+__nonsingisotwords 1488 
+__singisotwords 495 
+___ 2 1 2 
+___ 3 2 498 
+___ 4 2 738 
+___ 5 2 978 
+___ 6 2 1218 
+___ 7 2 1458 
+___ 8 2 1696 
+___ 9 2 1934 
+___ 10 2 2172 
+___ 11 2 2409 
+___ 12 2 2646 
+___ 13 2 2883 
+___ 14 2 3117 
+___ 15 2 3351 
+___ 16 2 3585 
+___ 17 2 3818 
+___ 18 2 4051 
+___ 19 2 4284 
+___ 20 2 4515 
+___ 21 2 4746 
+___ 22 2 4977 
+___ 23 2 5208 
+___ 24 2 5436 
+___ 25 2 5664 
+___ 26 2 5892 
+___ 27 2 6119 
+___ 28 2 6346 
+___ 29 2 6573 
+___ 30 2 6798 
+___ 31 2 7023 
+___ 32 2 7248 
+___ 33 2 7473 
+___ 34 2 7695 
+___ 35 2 7917 
+___ 36 2 8139 
+___ 37 2 8361 
+___ 38 2 8583 
+___ 39 2 8788 
+___ 40 2 9008 
+___ 41 2 9228 
+___ 42 2 9448 
+___ 43 2 9667 
+___ 44 2 9886 
+___ 45 2 10105 
+___ 46 2 10322 
+___ 47 2 10539 
+___ 48 2 10756 
+___ 49 2 10973 
+___ 50 2 11187 
+___ 51 2 11401 
+___ 52 2 11615 
+___ 53 2 11829 
+___ 54 2 12043 
+___ 55 2 12248 
+___ 56 2 12458 
+___ 57 2 12668 
+___ 58 2 12878 
+___ 59 2 13088 
+___ 60 2 13298 
+___ 61 2 13503 
+___ 62 2 13713 
+___ 63 2 13918 
+___ 64 2 14123 
+___ 65 2 14328 
+___ 66 2 14533 
+___ 67 2 14738 
+___ 68 2 14946 
+___ 69 2 15154 
+___ 70 2 15362 
+___ 71 2 15569 
+___ 72 2 15776 
+___ 73 2 15983 
+___ 74 2 16188 
+___ 75 2 16393 
+___ 76 2 16598 
+___ 77 2 16803 
+___ 78 2 17005 
+___ 79 2 17207 
+___ 80 2 17409 
+___ 81 2 17611 
+___ 82 2 17813 
+___ 83 2 18006 
+___ 84 2 18204 
+___ 85 2 18402 
+___ 86 2 18600 
+___ 87 2 18798 
+___ 88 2 18996 
+___ 89 2 19189 
+___ 90 2 19387 
+___ 91 2 19580 
+___ 92 2 19773 
+___ 93 2 19966 
+___ 94 2 20159 
+___ 95 2 20352 
+___ 96 2 20544 
+___ 97 2 20736 
+___ 98 2 20928 
+___ 99 2 21120 
+___ 100 2 21312 
+___ 101 2 21499 
+___ 102 2 21691 
+___ 103 2 21878 
+___ 104 2 22065 
+___ 105 2 22252 
+___ 106 2 22439 
+___ 107 2 22626 
+___ 108 2 22818 
+___ 109 2 23001 
+___ 110 2 23184 
+___ 111 2 23367 
+___ 112 2 23550 
+___ 113 2 23733 
+___ 114 2 23913 
+___ 115 2 24093 
+___ 116 2 24273 
+___ 117 2 24453 
+___ 118 2 24631 
+___ 119 2 24809 
+___ 120 2 24987 
+___ 121 2 25164 
+___ 122 2 25341 
+___ 123 2 25518 
+___ 124 2 25702 
+___ 125 2 25886 
+___ 126 2 26070 
+___ 127 2 26253 
+___ 128 2 26436 
+___ 129 2 26619 
+___ 130 2 26800 
+___ 131 2 26981 
+___ 132 2 27162 
+___ 133 2 27343 
+___ 134 2 27521 
+___ 135 2 27699 
+___ 136 2 27877 
+___ 137 2 28055 
+___ 138 2 28233 
+___ 139 2 28402 
+___ 140 2 28576 
+___ 141 2 28750 
+___ 142 2 28924 
+___ 143 2 29098 
+___ 144 2 29272 
+___ 145 2 29441 
+___ 146 2 29615 
+___ 147 2 29784 
+___ 148 2 29953 
+___ 149 2 30122 
+___ 150 2 30291 
+___ 151 2 30460 
+Error, user interrupt in
+  return true; at NonSingOverLats.g:73 called from 
+isneworec( ttdet, newwdbasis ) at NonSingOverLats.g:92 called from
+thetask( neworec, newposs ); at NonSingOverLats.g:131 called from
+thetask( neworec, newposs ); at NonSingOverLats.g:131 called from
+thetask( iniorec, [ 1 .. Length( isotwords ) ] ); at NonSingOverLats.g:138 called from
+NonSingOverLats( t0Gram, t0h ) at Task20260923Va.g:28 called from
+...  at Task20260923Va.g:62
+you can 'return;'
+brk> quit;
+gap> Read("Task20260924Va.g");
+totalrecsname0 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 0 
+kk 2 orecs 1 
+bb 0 kk 2 isgeom extdeg 1 sprats [ 0, 3 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 3 orecs 1 
+bb 0 kk 3 isgeom extdeg 1 sprats [ 0, 6 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 5 
+kk 4 orecs 1 
+bb 0 kk 4 isgeom extdeg 1 sprats [ 0, 10 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 5 orecs 1 
+bb 0 kk 5 isgeom extdeg 1 sprats [ 0, 15 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 35 
+kk 6 orecs 1 
+bb 0 kk 6 isgeom extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 1 
+__singisotwords 126 
+___ 2 1 2 
+kk 7 orecs 2 
+bb 0 kk 7 isgeom extdeg 1 sprats [ 0, 28 ] : 1 in 2 
+bb 0 kk 7 isgeom extdeg 2 sprats [ 0, 63 ] : 2 in 2 
+_______________ 
+__nonsingisotwords 11 
+__singisotwords 396 
+___ 2 1 2 
+___ 3 1 3 
+___ 4 1 4 
+___ 5 1 5 
+___ 6 1 6 
+___ 7 1 7 
+___ 8 1 8 
+___ 9 1 9 
+___ 10 1 10 
+___ 11 1 11 
+kk 8 orecs 11 
+bb 0 kk 8 isgeom extdeg 1 sprats [ 0, 36 ] : 1 in 11 
+bb 0 kk 8 isgeom extdeg 3 sprats [ 0, 120 ] : 2 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 3 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 4 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 5 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 6 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 7 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 8 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 9 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 10 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 11 in 11 
+_______________ 
+__nonsingisotwords 45 
+__singisotwords 210 
+___ 2 1 2 
+___ 3 1 3 
+___ 4 1 4 
+___ 5 1 5 
+___ 6 1 6 
+___ 7 1 7 
+___ 8 1 8 
+___ 9 1 9 
+___ 10 1 10 
+___ 11 1 11 
+___ 12 1 12 
+___ 13 1 13 
+___ 14 1 14 
+___ 15 1 15 
+___ 16 1 16 
+___ 17 1 17 
+___ 18 1 18 
+___ 19 1 19 
+___ 20 1 20 
+___ 21 1 21 
+___ 22 1 22 
+___ 23 1 23 
+___ 24 1 24 
+___ 25 1 25 
+___ 26 1 26 
+___ 27 1 27 
+___ 28 1 28 
+___ 29 1 29 
+___ 30 1 30 
+___ 31 1 31 
+___ 32 1 32 
+___ 33 1 33 
+___ 34 1 34 
+___ 35 1 35 
+___ 36 1 36 
+___ 37 1 37 
+___ 38 1 38 
+___ 39 1 39 
+___ 40 1 40 
+___ 41 1 41 
+___ 42 1 42 
+___ 43 1 43 
+___ 44 1 44 
+___ 45 1 45 
+___ 46 1 46 
+kk 9 orecs 46 
+bb 0 kk 9 isgeom extdeg 1 sprats [ 0, 45 ] : 1 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 2 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 3 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 4 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 5 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 6 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 7 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 8 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 9 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 10 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 11 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 12 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 13 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 14 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 15 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 16 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 17 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 18 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 19 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 20 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 21 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 22 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 23 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 24 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 25 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 26 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 27 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 28 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 29 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 30 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 31 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 32 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 33 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 34 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 35 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 36 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 37 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 38 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 39 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 40 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 41 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 42 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 43 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 44 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 45 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 46 in 46 
+_______________ 
+__nonsingisotwords 165 
+__singisotwords 330 
+___ 2 1 2 
+___ 3 1 3 
+___ 4 1 4 
+___ 5 1 5 
+___ 6 1 6 
+___ 7 1 7 
+___ 8 1 8 
+___ 9 1 9 
+___ 10 1 10 
+___ 11 1 11 
+___ 12 1 12 
+___ 13 1 13 
+___ 14 1 14 
+___ 15 1 15 
+___ 16 1 16 
+___ 17 1 17 
+___ 18 1 18 
+___ 19 1 19 
+___ 20 1 20 
+___ 21 1 21 
+___ 22 1 22 
+___ 23 1 23 
+___ 24 1 24 
+___ 25 1 25 
+___ 26 1 26 
+___ 27 1 27 
+___ 28 1 28 
+___ 29 1 29 
+___ 30 1 30 
+___ 31 1 31 
+___ 32 1 32 
+___ 33 1 33 
+___ 34 1 34 
+___ 35 1 35 
+___ 36 1 36 
+___ 37 1 37 
+___ 38 1 38 
+___ 39 1 39 
+___ 40 1 40 
+___ 41 1 41 
+___ 42 1 42 
+___ 43 1 43 
+___ 44 1 44 
+___ 45 1 45 
+___ 46 1 46 
+___ 47 1 47 
+___ 48 1 48 
+___ 49 1 49 
+___ 50 1 50 
+___ 51 1 51 
+___ 52 1 52 
+___ 53 1 53 
+___ 54 1 54 
+___ 55 1 55 
+___ 56 1 56 
+___ 57 1 57 
+___ 58 1 58 
+___ 59 1 59 
+___ 60 1 60 
+___ 61 1 61 
+___ 62 1 62 
+___ 63 1 63 
+___ 64 1 64 
+___ 65 1 65 
+___ 66 1 66 
+___ 67 1 67 
+___ 68 1 68 
+___ 69 1 69 
+___ 70 1 70 
+___ 71 1 71 
+___ 72 1 72 
+___ 73 1 73 
+___ 74 1 74 
+___ 75 1 75 
+___ 76 1 76 
+___ 77 1 77 
+___ 78 1 78 
+___ 79 1 79 
+___ 80 1 80 
+___ 81 1 81 
+___ 82 1 82 
+___ 83 1 83 
+___ 84 1 84 
+___ 85 1 85 
+___ 86 1 86 
+___ 87 1 87 
+___ 88 1 88 
+___ 89 1 89 
+___ 90 1 90 
+___ 91 1 91 
+___ 92 1 92 
+___ 93 1 93 
+___ 94 1 94 
+___ 95 1 95 
+___ 96 1 96 
+___ 97 1 97 
+___ 98 1 98 
+___ 99 1 99 
+___ 100 1 100 
+___ 101 1 101 
+___ 102 1 102 
+___ 103 1 103 
+___ 104 1 104 
+___ 105 1 105 
+___ 106 1 106 
+___ 107 1 107 
+___ 108 1 108 
+___ 109 1 109 
+___ 110 1 110 
+___ 111 1 111 
+___ 112 1 112 
+___ 113 1 113 
+___ 114 1 114 
+___ 115 1 115 
+___ 116 1 116 
+___ 117 1 117 
+___ 118 1 118 
+___ 119 1 119 
+___ 120 1 120 
+___ 121 1 121 
+___ 122 1 122 
+___ 123 1 123 
+___ 124 1 124 
+___ 125 1 125 
+___ 126 1 126 
+___ 127 1 127 
+___ 128 1 128 
+___ 129 1 129 
+___ 130 1 130 
+___ 131 1 131 
+___ 132 1 132 
+___ 133 1 133 
+___ 134 1 134 
+___ 135 1 135 
+___ 136 1 136 
+___ 137 1 137 
+___ 138 1 138 
+___ 139 1 139 
+___ 140 1 140 
+___ 141 1 141 
+___ 142 1 142 
+___ 143 1 143 
+___ 144 1 144 
+___ 145 1 145 
+___ 146 1 146 
+___ 147 1 147 
+___ 148 1 148 
+___ 149 1 149 
+___ 150 1 150 
+___ 151 1 151 
+___ 152 1 152 
+___ 153 1 153 
+___ 154 1 154 
+___ 155 1 155 
+___ 156 1 156 
+___ 157 1 157 
+___ 158 1 158 
+___ 159 1 159 
+___ 160 1 160 
+___ 161 1 161 
+___ 162 1 162 
+___ 163 1 163 
+___ 164 1 164 
+___ 165 1 165 
+___ 166 1 166 
+kk 10 orecs 166 
+bb 0 kk 10 isgeom extdeg 1 sprats [ 0, 55 ] : 1 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 2 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 3 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 4 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 5 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 6 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 7 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 8 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 9 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 10 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 11 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 12 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 13 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 14 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 15 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 16 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 17 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 18 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 19 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 20 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 21 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 22 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 23 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 24 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 25 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 26 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 27 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 28 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 29 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 30 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 31 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 32 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 33 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 34 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 35 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 36 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 37 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 38 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 39 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 40 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 41 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 42 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 43 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 44 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 45 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 46 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 47 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 48 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 49 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 50 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 51 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 52 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 53 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 54 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 55 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 56 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 57 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 58 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 59 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 60 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 61 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 62 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 63 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 64 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 65 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 66 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 67 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 68 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 69 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 70 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 71 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 72 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 73 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 74 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 75 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 76 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 77 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 78 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 79 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 80 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 81 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 82 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 83 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 84 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 85 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 86 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 87 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 88 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 89 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 90 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 91 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 92 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 93 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 94 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 95 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 96 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 97 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 98 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 99 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 100 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 101 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 102 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 103 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 104 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 105 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 106 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 107 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 108 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 109 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 110 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 111 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 112 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 113 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 114 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 115 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 116 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 117 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 118 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 119 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 120 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 121 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 122 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 123 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 124 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 125 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 126 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 127 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 128 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 129 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 130 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 131 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 132 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 133 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 134 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 135 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 136 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 137 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 138 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 139 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 140 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 141 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 142 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 143 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 144 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 145 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 146 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 147 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 148 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 149 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 150 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 151 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 152 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 153 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 154 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 155 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 156 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 157 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 158 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 159 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 160 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 161 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 162 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 163 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 164 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 165 in 166 
+bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 166 in 166 
+_______________ 
+__nonsingisotwords 1488 
+__singisotwords 495 
+___ 2 1 2 
+___ 3 2 3 
+___ 4 2 4 
+___ 5 2 5 
+___ 6 2 6 
+___ 7 2 7 
+___ 8 2 8 
+___ 9 2 9 
+___ 10 2 10 
+___ 11 2 11 
+___ 12 2 12 
+___ 13 2 13 
+___ 14 2 14 
+___ 15 2 15 
+___ 16 2 16 
+___ 17 2 17 
+___ 18 2 18 
+___ 19 2 19 
+___ 20 2 20 
+___ 21 2 21 
+___ 22 2 22 
+___ 23 2 23 
+___ 24 2 24 
+___ 25 2 25 
+___ 26 2 26 
+___ 27 2 27 
+___ 28 2 28 
+___ 29 2 29 
+___ 30 2 30 
+___ 31 2 31 
+___ 32 2 32 
+___ 33 2 33 
+___ 34 2 34 
+___ 35 2 35 
+___ 36 2 36 
+___ 37 2 37 
+___ 38 2 38 
+___ 39 2 39 
+___ 40 2 40 
+___ 41 2 41 
+___ 42 2 42 
+___ 43 2 43 
+___ 44 2 44 
+___ 45 2 45 
+___ 46 2 46 
+___ 47 2 47 
+___ 48 2 48 
+___ 49 2 49 
+___ 50 2 50 
+___ 51 2 51 
+___ 52 2 52 
+___ 53 2 53 
+___ 54 2 54 
+___ 55 2 55 
+___ 56 2 56 
+___ 57 2 57 
+___ 58 2 58 
+___ 59 2 59 
+___ 60 2 60 
+___ 61 2 61 
+___ 62 2 62 
+___ 63 2 63 
+___ 64 2 64 
+___ 65 2 65 
+___ 66 2 66 
+___ 67 2 67 
+___ 68 2 68 
+___ 69 2 69 
+___ 70 2 70 
+___ 71 2 71 
+___ 72 2 72 
+___ 73 2 73 
+___ 74 2 74 
+___ 75 2 75 
+___ 76 2 76 
+___ 77 2 77 
+___ 78 2 78 
+___ 79 2 79 
+___ 80 2 80 
+___ 81 2 81 
+___ 82 2 82 
+___ 83 2 83 
+___ 84 2 84 
+___ 85 2 85 
+___ 86 2 86 
+___ 87 2 87 
+___ 88 2 88 
+___ 89 2 89 
+___ 90 2 90 
+___ 91 2 91 
+___ 92 2 92 
+___ 93 2 93 
+___ 94 2 94 
+___ 95 2 95 
+___ 96 2 96 
+___ 97 2 97 
+___ 98 2 98 
+___ 99 2 99 
+___ 100 2 100 
+___ 101 2 101 
+___ 102 2 102 
+___ 103 2 103 
+___ 104 2 104 
+___ 105 2 105 
+___ 106 2 106 
+___ 107 2 107 
+___ 108 2 108 
+___ 109 2 109 
+___ 110 2 110 
+___ 111 2 111 
+___ 112 2 112 
+___ 113 2 113 
+___ 114 2 114 
+___ 115 2 115 
+___ 116 2 116 
+___ 117 2 117 
+___ 118 2 118 
+___ 119 2 119 
+___ 120 2 120 
+___ 121 2 121 
+___ 122 2 122 
+___ 123 2 123 
+___ 124 2 124 
+___ 125 2 125 
+___ 126 2 126 
+___ 127 2 127 
+___ 128 2 128 
+___ 129 2 129 
+___ 130 2 130 
+___ 131 2 131 
+___ 132 2 132 
+___ 133 2 133 
+___ 134 2 134 
+___ 135 2 135 
+___ 136 2 136 
+___ 137 2 137 
+___ 138 2 138 
+___ 139 2 139 
+___ 140 2 140 
+___ 141 2 141 
+___ 142 2 142 
+___ 143 2 143 
+___ 144 2 144 
+___ 145 2 145 
+___ 146 2 146 
+___ 147 2 147 
+___ 148 2 148 
+___ 149 2 149 
+___ 150 2 150 
+___ 151 2 151 
+___ 152 2 152 
+___ 153 2 153 
+___ 154 2 154 
+___ 155 2 155 
+___ 156 2 156 
+___ 157 2 157 
+___ 158 2 158 
+___ 159 2 159 
+___ 160 2 160 
+___ 161 2 161 
+___ 162 2 162 
+___ 163 2 163 
+___ 164 2 164 
+___ 165 2 165 
+___ 166 2 166 
+___ 167 2 167 
+___ 168 2 168 
+___ 169 2 169 
+___ 170 2 170 
+___ 171 2 171 
+___ 172 2 172 
+___ 173 2 173 
+___ 174 2 174 
+___ 175 2 175 
+___ 176 2 176 
+___ 177 2 177 
+___ 178 2 178 
+___ 179 2 179 
+___ 180 2 180 
+___ 181 2 181 
+___ 182 2 182 
+___ 183 2 183 
+___ 184 2 184 
+___ 185 2 185 
+___ 186 2 186 
+___ 187 2 187 
+___ 188 2 188 
+___ 189 2 189 
+___ 190 2 190 
+___ 191 2 191 
+___ 192 2 192 
+___ 193 2 193 
+___ 194 2 194 
+___ 195 2 195 
+___ 196 2 196 
+___ 197 2 197 
+___ 198 2 198 
+___ 199 2 199 
+___ 200 2 200 
+___ 201 2 201 
+___ 202 2 202 
+___ 203 2 203 
+___ 204 2 204 
+___ 205 2 205 
+___ 206 2 206 
+___ 207 2 207 
+___ 208 2 208 
+___ 209 2 209 
+___ 210 2 210 
+___ 211 2 211 
+___ 212 2 212 
+___ 213 2 213 
+___ 214 2 214 
+___ 215 2 215 
+___ 216 2 216 
+___ 217 2 217 
+___ 218 2 218 
+___ 219 2 219 
+___ 220 2 220 
+___ 221 2 221 
+___ 222 2 222 
+___ 223 2 223 
+___ 224 2 224 
+___ 225 2 225 
+___ 226 2 226 
+___ 227 2 227 
+___ 228 2 228 
+___ 229 2 229 
+___ 230 2 230 
+___ 231 2 231 
+___ 232 2 232 
+___ 233 2 233 
+___ 234 2 234 
+___ 235 2 235 
+___ 236 2 236 
+___ 237 2 237 
+___ 238 2 238 
+___ 239 2 239 
+___ 240 2 240 
+___ 241 2 241 
+___ 242 2 242 
+___ 243 2 243 
+___ 244 2 244 
+___ 245 2 245 
+___ 246 2 246 
+___ 247 2 247 
+___ 248 2 248 
+___ 249 2 249 
+___ 250 2 250 
+___ 251 2 251 
+___ 252 2 252 
+___ 253 2 253 
+___ 254 2 254 
+___ 255 2 255 
+___ 256 2 256 
+___ 257 2 257 
+___ 258 2 258 
+___ 259 2 259 
+___ 260 2 260 
+___ 261 2 261 
+___ 262 2 262 
+___ 263 2 263 
+___ 264 2 264 
+___ 265 2 265 
+___ 266 2 266 
+___ 267 2 267 
+___ 268 2 268 
+___ 269 2 269 
+___ 270 2 270 
+___ 271 2 271 
+___ 272 2 272 
+___ 273 2 273 
+___ 274 2 274 
+___ 275 2 275 
+___ 276 2 276 
+___ 277 2 277 
+___ 278 2 278 
+___ 279 2 279 
+___ 280 2 280 
+___ 281 2 281 
+___ 282 2 282 
+___ 283 2 283 
+___ 284 2 284 
+___ 285 2 285 
+___ 286 2 286 
+___ 287 2 287 
+___ 288 2 288 
+___ 289 2 289 
+___ 290 2 290 
+___ 291 2 291 
+___ 292 2 292 
+___ 293 2 293 
+___ 294 2 294 
+___ 295 2 295 
+___ 296 2 296 
+___ 297 2 297 
+___ 298 2 298 
+___ 299 2 299 
+___ 300 2 300 
+___ 301 2 301 
+___ 302 2 302 
+___ 303 2 303 
+___ 304 2 304 
+___ 305 2 305 
+___ 306 2 306 
+___ 307 2 307 
+___ 308 2 308 
+___ 309 2 309 
+___ 310 2 310 
+___ 311 2 311 
+___ 312 2 312 
+___ 313 2 313 
+___ 314 2 314 
+___ 315 2 315 
+___ 316 2 316 
+___ 317 2 317 
+___ 318 2 318 
+___ 319 2 319 
+___ 320 2 320 
+___ 321 2 321 
+___ 322 2 322 
+___ 323 2 323 
+___ 324 2 324 
+___ 325 2 325 
+___ 326 2 326 
+___ 327 2 327 
+___ 328 2 328 
+___ 329 2 329 
+___ 330 2 330 
+___ 331 2 331 
+___ 332 2 332 
+___ 333 2 333 
+___ 334 2 334 
+___ 335 2 335 
+___ 336 2 336 
+___ 337 2 337 
+___ 338 2 338 
+___ 339 2 339 
+___ 340 2 340 
+___ 341 2 341 
+___ 342 2 342 
+___ 343 2 343 
+___ 344 2 344 
+___ 345 2 345 
+___ 346 2 346 
+___ 347 2 347 
+___ 348 2 348 
+___ 349 2 349 
+___ 350 2 350 
+___ 351 2 351 
+___ 352 2 352 
+___ 353 2 353 
+___ 354 2 354 
+___ 355 2 355 
+___ 356 2 356 
+___ 357 2 357 
+___ 358 2 358 
+___ 359 2 359 
+___ 360 2 360 
+___ 361 2 361 
+___ 362 2 362 
+___ 363 2 363 
+___ 364 2 364 
+___ 365 2 365 
+___ 366 2 366 
+___ 367 2 367 
+___ 368 2 368 
+___ 369 2 369 
+___ 370 2 370 
+___ 371 2 371 
+___ 372 2 372 
+___ 373 2 373 
+___ 374 2 374 
+___ 375 2 375 
+___ 376 2 376 
+___ 377 2 377 
+___ 378 2 378 
+___ 379 2 379 
+___ 380 2 380 
+___ 381 2 381 
+___ 382 2 382 
+___ 383 2 383 
+___ 384 2 384 
+___ 385 2 385 
+___ 386 2 386 
+___ 387 2 387 
+___ 388 2 388 
+___ 389 2 389 
+___ 390 2 390 
+___ 391 2 391 
+___ 392 2 392 
+___ 393 2 393 
+___ 394 2 394 
+___ 395 2 395 
+___ 396 2 396 
+___ 397 2 397 
+___ 398 2 398 
+___ 399 2 399 
+___ 400 2 400 
+___ 401 2 401 
+___ 402 2 402 
+___ 403 2 403 
+___ 404 2 404 
+___ 405 2 405 
+___ 406 2 406 
+___ 407 2 407 
+___ 408 2 408 
+___ 409 2 409 
+___ 410 2 410 
+___ 411 2 411 
+___ 412 2 412 
+___ 413 2 413 
+___ 414 2 414 
+___ 415 2 415 
+___ 416 2 416 
+___ 417 2 417 
+___ 418 2 418 
+___ 419 2 419 
+___ 420 2 420 
+___ 421 2 421 
+___ 422 2 422 
+___ 423 2 423 
+___ 424 2 424 
+___ 425 2 425 
+___ 426 2 426 
+___ 427 2 427 
+___ 428 2 428 
+___ 429 2 429 
+___ 430 2 430 
+___ 431 2 431 
+___ 432 2 432 
+___ 433 2 433 
+___ 434 2 434 
+___ 435 2 435 
+___ 436 2 436 
+___ 437 2 437 
+___ 438 2 438 
+___ 439 2 439 
+___ 440 2 440 
+___ 441 2 441 
+___ 442 2 442 
+___ 443 2 443 
+___ 444 2 444 
+___ 445 2 445 
+___ 446 2 446 
+___ 447 2 447 
+___ 448 2 448 
+___ 449 2 449 
+___ 450 2 450 
+___ 451 2 451 
+___ 452 2 452 
+___ 453 2 453 
+___ 454 2 454 
+___ 455 2 455 
+___ 456 2 456 
+___ 457 2 457 
+___ 458 2 458 
+___ 459 2 459 
+___ 460 2 460 
+___ 461 2 461 
+___ 462 2 462 
+___ 463 2 463 
+___ 464 2 464 
+___ 465 2 465 
+___ 466 2 466 
+___ 467 2 467 
+___ 468 2 468 
+___ 469 2 469 
+___ 470 2 470 
+___ 471 2 471 
+___ 472 2 472 
+___ 473 2 473 
+___ 474 2 474 
+___ 475 2 475 
+___ 476 2 476 
+___ 477 2 477 
+___ 478 2 478 
+___ 479 2 479 
+___ 480 2 480 
+___ 481 2 481 
+___ 482 2 482 
+___ 483 2 483 
+___ 484 2 484 
+___ 485 2 485 
+___ 486 2 486 
+___ 487 2 487 
+___ 488 2 488 
+___ 489 2 489 
+___ 490 2 490 
+___ 491 2 491 
+___ 492 2 492 
+___ 493 2 493 
+___ 494 2 494 
+___ 495 2 495 
+___ 496 2 496 
+___ 497 2 497 
+___ 498 2 498 
+___ 499 1 499 
+___ 500 2 500 
+___ 501 2 501 
+___ 502 2 502 
+___ 503 2 503 
+___ 504 2 504 
+___ 505 2 505 
+___ 506 2 506 
+___ 507 2 507 
+___ 508 2 508 
+___ 509 2 509 
+___ 510 2 510 
+___ 511 2 511 
+___ 512 2 512 
+___ 513 2 513 
+___ 514 2 514 
+___ 515 2 515 
+___ 516 2 516 
+___ 517 2 517 
+___ 518 2 518 
+___ 519 2 519 
+___ 520 2 520 
+___ 521 2 521 
+___ 522 2 522 
+___ 523 2 523 
+___ 524 2 524 
+___ 525 2 525 
+___ 526 2 526 
+___ 527 2 527 
+___ 528 2 528 
+___ 529 2 529 
+___ 530 2 530 
+___ 531 2 531 
+___ 532 2 532 
+___ 533 2 533 
+___ 534 2 534 
+___ 535 1 535 
+___ 536 2 536 
+___ 537 2 537 
+___ 538 2 538 
+___ 539 2 539 
+___ 540 2 540 
+___ 541 2 541 
+___ 542 2 542 
+___ 543 2 543 
+___ 544 2 544 
+___ 545 2 545 
+___ 546 2 546 
+___ 547 2 547 
+___ 548 2 548 
+___ 549 2 549 
+___ 550 2 550 
+___ 551 2 551 
+___ 552 2 552 
+___ 553 2 553 
+___ 554 2 554 
+___ 555 2 555 
+___ 556 2 556 
+___ 557 2 557 
+___ 558 2 558 
+___ 559 2 559 
+___ 560 2 560 
+___ 561 2 561 
+___ 562 2 562 
+___ 563 2 563 
+___ 564 2 564 
+___ 565 2 565 
+___ 566 2 566 
+___ 567 2 567 
+___ 568 2 568 
+___ 569 2 569 
+___ 570 2 570 
+___ 571 1 571 
+___ 572 2 572 
+___ 573 2 573 
+___ 574 2 574 
+___ 575 2 575 
+___ 576 2 576 
+___ 577 2 577 
+___ 578 2 578 
+___ 579 2 579 
+___ 580 2 580 
+___ 581 2 581 
+___ 582 2 582 
+___ 583 2 583 
+___ 584 2 584 
+___ 585 2 585 
+___ 586 2 586 
+___ 587 2 587 
+___ 588 2 588 
+___ 589 2 589 
+___ 590 2 590 
+___ 591 2 591 
+___ 592 2 592 
+___ 593 2 593 
+___ 594 2 594 
+___ 595 2 595 
+___ 596 2 596 
+___ 597 2 597 
+___ 598 2 598 
+___ 599 2 599 
+___ 600 2 600 
+___ 601 2 601 
+___ 602 2 602 
+___ 603 2 603 
+___ 604 2 604 
+___ 605 2 605 
+___ 606 2 606 
+___ 607 1 607 
+___ 608 2 608 
+___ 609 2 609 
+___ 610 2 610 
+___ 611 2 611 
+___ 612 2 612 
+___ 613 2 613 
+___ 614 2 614 
+___ 615 2 615 
+___ 616 2 616 
+___ 617 2 617 
+___ 618 2 618 
+___ 619 2 619 
+___ 620 2 620 
+___ 621 2 621 
+___ 622 2 622 
+___ 623 2 623 
+___ 624 2 624 
+___ 625 2 625 
+___ 626 2 626 
+___ 627 2 627 
+___ 628 2 628 
+___ 629 2 629 
+___ 630 2 630 
+___ 631 2 631 
+___ 632 2 632 
+___ 633 2 633 
+___ 634 2 634 
+___ 635 2 635 
+___ 636 2 636 
+___ 637 2 637 
+___ 638 2 638 
+___ 639 2 639 
+___ 640 2 640 
+___ 641 2 641 
+___ 642 2 642 
+___ 643 1 643 
+___ 644 2 644 
+___ 645 2 645 
+___ 646 2 646 
+___ 647 2 647 
+___ 648 2 648 
+___ 649 2 649 
+___ 650 2 650 
+___ 651 2 651 
+___ 652 2 652 
+___ 653 2 653 
+___ 654 2 654 
+___ 655 2 655 
+___ 656 2 656 
+___ 657 2 657 
+___ 658 2 658 
+___ 659 2 659 
+___ 660 2 660 
+___ 661 2 661 
+___ 662 2 662 
+___ 663 2 663 
+___ 664 2 664 
+___ 665 2 665 
+___ 666 2 666 
+___ 667 2 667 
+___ 668 2 668 
+___ 669 2 669 
+___ 670 2 670 
+___ 671 2 671 
+___ 672 2 672 
+___ 673 2 673 
+___ 674 2 674 
+___ 675 2 675 
+___ 676 2 676 
+___ 677 2 677 
+___ 678 2 678 
+___ 679 1 679 
+___ 680 2 680 
+___ 681 2 681 
+___ 682 2 682 
+___ 683 2 683 
+___ 684 2 684 
+___ 685 2 685 
+___ 686 2 686 
+___ 687 2 687 
+___ 688 2 688 
+___ 689 2 689 
+___ 690 2 690 
+___ 691 2 691 
+___ 692 2 692 
+___ 693 2 693 
+___ 694 2 694 
+___ 695 2 695 
+___ 696 2 696 
+___ 697 2 697 
+___ 698 2 698 
+___ 699 2 699 
+___ 700 2 700 
+___ 701 2 701 
+___ 702 2 702 
+___ 703 2 703 
+___ 704 2 704 
+___ 705 2 705 
+___ 706 2 706 
+___ 707 2 707 
+___ 708 2 708 
+___ 709 2 709 
+___ 710 2 710 
+___ 711 2 711 
+___ 712 2 712 
+___ 713 2 713 
+___ 714 2 714 
+___ 715 1 715 
+___ 716 2 716 
+___ 717 2 717 
+___ 718 2 718 
+___ 719 2 719 
+___ 720 2 720 
+___ 721 2 721 
+___ 722 2 722 
+___ 723 2 723 
+___ 724 2 724 
+___ 725 2 725 
+___ 726 2 726 
+___ 727 2 727 
+___ 728 2 728 
+___ 729 2 729 
+___ 730 2 730 
+___ 731 2 731 
+___ 732 2 732 
+___ 733 2 733 
+___ 734 2 734 
+___ 735 2 735 
+___ 736 2 736 
+___ 737 2 737 
+___ 738 2 738 
+___ 739 2 739 
+___ 740 2 740 
+___ 741 2 741 
+___ 742 2 742 
+___ 743 2 743 
+___ 744 2 744 
+___ 745 2 745 
+___ 746 2 746 
+___ 747 2 747 
+___ 748 2 748 
+___ 749 2 749 
+___ 750 2 750 
+___ 751 1 751 
+___ 752 2 752 
+___ 753 2 753 
+___ 754 2 754 
+___ 755 2 755 
+___ 756 2 756 
+___ 757 2 757 
+___ 758 2 758 
+___ 759 2 759 
+___ 760 2 760 
+___ 761 2 761 
+___ 762 2 762 
+___ 763 2 763 
+___ 764 2 764 
+___ 765 2 765 
+___ 766 2 766 
+___ 767 2 767 
+___ 768 2 768 
+___ 769 2 769 
+___ 770 2 770 
+___ 771 2 771 
+___ 772 2 772 
+___ 773 2 773 
+___ 774 2 774 
+___ 775 2 775 
+___ 776 2 776 
+___ 777 2 777 
+___ 778 2 778 
+___ 779 2 779 
+___ 780 2 780 
+___ 781 2 781 
+___ 782 2 782 
+___ 783 2 783 
+___ 784 2 784 
+___ 785 2 785 
+___ 786 2 786 
+___ 787 1 787 
+___ 788 2 788 
+___ 789 2 789 
+___ 790 2 790 
+___ 791 2 791 
+___ 792 2 792 
+___ 793 2 793 
+___ 794 2 794 
+___ 795 2 795 
+___ 796 2 796 
+___ 797 2 797 
+___ 798 2 798 
+___ 799 2 799 
+___ 800 2 800 
+___ 801 2 801 
+___ 802 2 802 
+___ 803 2 803 
+___ 804 2 804 
+___ 805 2 805 
+___ 806 2 806 
+___ 807 2 807 
+___ 808 2 808 
+___ 809 2 809 
+___ 810 2 810 
+___ 811 2 811 
+___ 812 2 812 
+___ 813 2 813 
+___ 814 2 814 
+___ 815 2 815 
+___ 816 2 816 
+___ 817 2 817 
+___ 818 2 818 
+___ 819 2 819 
+___ 820 2 820 
+___ 821 2 821 
+___ 822 2 822 
+___ 823 1 823 
+___ 824 2 824 
+___ 825 2 825 
+___ 826 2 826 
+___ 827 2 827 
+___ 828 2 828 
+___ 829 2 829 
+___ 830 2 830 
+___ 831 2 831 
+___ 832 2 832 
+___ 833 2 833 
+___ 834 2 834 
+___ 835 2 835 
+___ 836 2 836 
+___ 837 2 837 
+___ 838 2 838 
+___ 839 2 839 
+___ 840 2 840 
+___ 841 2 841 
+___ 842 2 842 
+___ 843 2 843 
+___ 844 2 844 
+___ 845 2 845 
+___ 846 2 846 
+___ 847 2 847 
+___ 848 2 848 
+___ 849 2 849 
+___ 850 2 850 
+___ 851 2 851 
+___ 852 2 852 
+___ 853 2 853 
+___ 854 2 854 
+___ 855 2 855 
+___ 856 2 856 
+___ 857 2 857 
+___ 858 2 858 
+___ 859 1 859 
+___ 860 2 860 
+___ 861 2 861 
+___ 862 2 862 
+___ 863 2 863 
+___ 864 2 864 
+___ 865 2 865 
+___ 866 2 866 
+___ 867 2 867 
+___ 868 2 868 
+___ 869 2 869 
+___ 870 2 870 
+___ 871 2 871 
+___ 872 2 872 
+___ 873 2 873 
+___ 874 2 874 
+___ 875 2 875 
+___ 876 2 876 
+___ 877 2 877 
+___ 878 2 878 
+___ 879 2 879 
+___ 880 2 880 
+___ 881 2 881 
+___ 882 2 882 
+___ 883 2 883 
+___ 884 2 884 
+___ 885 2 885 
+___ 886 2 886 
+___ 887 2 887 
+___ 888 2 888 
+___ 889 2 889 
+___ 890 2 890 
+___ 891 2 891 
+___ 892 2 892 
+___ 893 2 893 
+___ 894 2 894 
+___ 895 1 895 
+___ 896 2 896 
+___ 897 2 897 
+___ 898 2 898 
+___ 899 2 899 
+___ 900 2 900 
+___ 901 2 901 
+___ 902 2 902 
+___ 903 2 903 
+___ 904 2 904 
+___ 905 2 905 
+___ 906 2 906 
+___ 907 2 907 
+___ 908 2 908 
+___ 909 2 909 
+___ 910 2 910 
+___ 911 2 911 
+___ 912 2 912 
+___ 913 2 913 
+___ 914 2 914 
+___ 915 2 915 
+___ 916 2 916 
+___ 917 2 917 
+___ 918 2 918 
+___ 919 2 919 
+___ 920 2 920 
+___ 921 2 921 
+___ 922 2 922 
+___ 923 2 923 
+___ 924 2 924 
+___ 925 2 925 
+___ 926 2 926 
+___ 927 2 927 
+___ 928 2 928 
+___ 929 2 929 
+___ 930 2 930 
+___ 931 1 931 
+___ 932 2 932 
+___ 933 2 933 
+___ 934 2 934 
+___ 935 2 935 
+___ 936 2 936 
+___ 937 2 937 
+___ 938 2 938 
+___ 939 2 939 
+___ 940 2 940 
+___ 941 2 941 
+___ 942 2 942 
+___ 943 2 943 
+___ 944 2 944 
+___ 945 2 945 
+___ 946 2 946 
+___ 947 2 947 
+___ 948 2 948 
+___ 949 2 949 
+___ 950 2 950 
+___ 951 2 951 
+___ 952 2 952 
+___ 953 2 953 
+___ 954 2 954 
+___ 955 2 955 
+___ 956 2 956 
+___ 957 2 957 
+___ 958 2 958 
+___ 959 2 959 
+___ 960 2 960 
+___ 961 2 961 
+___ 962 2 962 
+___ 963 2 963 
+___ 964 2 964 
+___ 965 2 965 
+___ 966 2 966 
+___ 967 1 967 
+___ 968 2 968 
+___ 969 2 969 
+___ 970 2 970 
+___ 971 2 971 
+___ 972 2 972 
+___ 973 2 973 
+___ 974 2 974 
+___ 975 2 975 
+___ 976 2 976 
+___ 977 2 977 
+___ 978 2 978 
+___ 979 2 979 
+___ 980 2 980 
+___ 981 2 981 
+___ 982 2 982 
+___ 983 2 983 
+___ 984 2 984 
+___ 985 2 985 
+___ 986 2 986 
+___ 987 2 987 
+___ 988 2 988 
+___ 989 2 989 
+___ 990 2 990 
+___ 991 2 991 
+___ 992 2 992 
+___ 993 2 993 
+___ 994 2 994 
+___ 995 2 995 
+___ 996 2 996 
+___ 997 2 997 
+___ 998 2 998 
+___ 999 2 999 
+___ 1000 2 1000 
+___ 1001 2 1001 
+___ 1002 2 1002 
+___ 1003 1 1003 
+___ 1004 2 1004 
+___ 1005 2 1005 
+___ 1006 2 1006 
+___ 1007 2 1007 
+___ 1008 2 1008 
+___ 1009 2 1009 
+___ 1010 2 1010 
+___ 1011 2 1011 
+___ 1012 2 1012 
+___ 1013 2 1013 
+___ 1014 2 1014 
+___ 1015 2 1015 
+___ 1016 2 1016 
+___ 1017 2 1017 
+___ 1018 2 1018 
+___ 1019 2 1019 
+___ 1020 2 1020 
+___ 1021 2 1021 
+___ 1022 2 1022 
+___ 1023 2 1023 
+___ 1024 2 1024 
+___ 1025 2 1025 
+___ 1026 2 1026 
+___ 1027 2 1027 
+___ 1028 2 1028 
+___ 1029 2 1029 
+___ 1030 2 1030 
+___ 1031 2 1031 
+___ 1032 2 1032 
+___ 1033 2 1033 
+___ 1034 2 1034 
+___ 1035 2 1035 
+___ 1036 2 1036 
+___ 1037 2 1037 
+___ 1038 2 1038 
+___ 1039 1 1039 
+___ 1040 2 1040 
+___ 1041 2 1041 
+___ 1042 2 1042 
+___ 1043 2 1043 
+___ 1044 2 1044 
+___ 1045 2 1045 
+___ 1046 2 1046 
+___ 1047 2 1047 
+___ 1048 2 1048 
+___ 1049 2 1049 
+___ 1050 2 1050 
+___ 1051 2 1051 
+___ 1052 2 1052 
+___ 1053 2 1053 
+___ 1054 2 1054 
+___ 1055 2 1055 
+___ 1056 2 1056 
+___ 1057 2 1057 
+___ 1058 2 1058 
+___ 1059 2 1059 
+___ 1060 2 1060 
+___ 1061 2 1061 
+___ 1062 2 1062 
+___ 1063 2 1063 
+___ 1064 2 1064 
+___ 1065 2 1065 
+___ 1066 2 1066 
+___ 1067 2 1067 
+___ 1068 2 1068 
+___ 1069 2 1069 
+___ 1070 2 1070 
+___ 1071 2 1071 
+___ 1072 2 1072 
+___ 1073 2 1073 
+___ 1074 2 1074 
+___ 1075 1 1075 
+___ 1076 2 1076 
+___ 1077 2 1077 
+___ 1078 2 1078 
+___ 1079 2 1079 
+___ 1080 2 1080 
+___ 1081 2 1081 
+___ 1082 2 1082 
+___ 1083 2 1083 
+___ 1084 2 1084 
+___ 1085 2 1085 
+___ 1086 2 1086 
+___ 1087 2 1087 
+___ 1088 2 1088 
+___ 1089 2 1089 
+___ 1090 2 1090 
+___ 1091 2 1091 
+___ 1092 2 1092 
+___ 1093 2 1093 
+___ 1094 2 1094 
+___ 1095 2 1095 
+___ 1096 2 1096 
+___ 1097 2 1097 
+___ 1098 2 1098 
+___ 1099 2 1099 
+___ 1100 2 1100 
+___ 1101 2 1101 
+___ 1102 2 1102 
+___ 1103 2 1103 
+___ 1104 2 1104 
+___ 1105 2 1105 
+___ 1106 2 1106 
+___ 1107 2 1107 
+___ 1108 2 1108 
+___ 1109 2 1109 
+___ 1110 2 1110 
+___ 1111 1 1111 
+___ 1112 2 1112 
+___ 1113 2 1113 
+___ 1114 2 1114 
+___ 1115 2 1115 
+___ 1116 2 1116 
+___ 1117 2 1117 
+___ 1118 2 1118 
+___ 1119 2 1119 
+___ 1120 2 1120 
+___ 1121 2 1121 
+___ 1122 2 1122 
+___ 1123 2 1123 
+___ 1124 2 1124 
+___ 1125 2 1125 
+___ 1126 2 1126 
+___ 1127 2 1127 
+___ 1128 2 1128 
+___ 1129 2 1129 
+___ 1130 2 1130 
+___ 1131 2 1131 
+___ 1132 2 1132 
+___ 1133 2 1133 
+___ 1134 2 1134 
+___ 1135 2 1135 
+___ 1136 2 1136 
+___ 1137 2 1137 
+___ 1138 2 1138 
+___ 1139 2 1139 
+___ 1140 2 1140 
+___ 1141 2 1141 
+___ 1142 2 1142 
+___ 1143 2 1143 
+___ 1144 2 1144 
+___ 1145 2 1145 
+___ 1146 2 1146 
+___ 1147 1 1147 
+___ 1148 2 1148 
+___ 1149 2 1149 
+___ 1150 2 1150 
+___ 1151 2 1151 
+___ 1152 2 1152 
+___ 1153 2 1153 
+___ 1154 2 1154 
+___ 1155 2 1155 
+___ 1156 2 1156 
+___ 1157 2 1157 
+___ 1158 2 1158 
+___ 1159 2 1159 
+___ 1160 2 1160 
+___ 1161 2 1161 
+___ 1162 2 1162 
+___ 1163 2 1163 
+___ 1164 2 1164 
+___ 1165 2 1165 
+___ 1166 2 1166 
+___ 1167 2 1167 
+___ 1168 2 1168 
+___ 1169 2 1169 
+___ 1170 2 1170 
+___ 1171 2 1171 
+___ 1172 2 1172 
+___ 1173 2 1173 
+___ 1174 2 1174 
+___ 1175 2 1175 
+___ 1176 2 1176 
+___ 1177 2 1177 
+___ 1178 2 1178 
+___ 1179 2 1179 
+___ 1180 2 1180 
+___ 1181 2 1181 
+___ 1182 2 1182 
+___ 1183 1 1183 
+___ 1184 2 1184 
+___ 1185 2 1185 
+___ 1186 2 1186 
+___ 1187 2 1187 
+___ 1188 2 1188 
+___ 1189 2 1189 
+___ 1190 2 1190 
+___ 1191 2 1191 
+___ 1192 2 1192 
+___ 1193 2 1193 
+___ 1194 2 1194 
+___ 1195 2 1195 
+___ 1196 2 1196 
+___ 1197 2 1197 
+___ 1198 2 1198 
+___ 1199 2 1199 
+___ 1200 2 1200 
+___ 1201 2 1201 
+___ 1202 2 1202 
+___ 1203 2 1203 
+___ 1204 2 1204 
+___ 1205 2 1205 
+___ 1206 2 1206 
+___ 1207 2 1207 
+___ 1208 2 1208 
+___ 1209 2 1209 
+___ 1210 2 1210 
+___ 1211 2 1211 
+___ 1212 2 1212 
+___ 1213 2 1213 
+___ 1214 2 1214 
+___ 1215 2 1215 
+___ 1216 2 1216 
+___ 1217 2 1217 
+___ 1218 2 1218 
+___ 1219 1 1219 
+___ 1220 2 1220 
+___ 1221 2 1221 
+___ 1222 2 1222 
+___ 1223 2 1223 
+___ 1224 2 1224 
+___ 1225 2 1225 
+___ 1226 2 1226 
+___ 1227 2 1227 
+___ 1228 2 1228 
+___ 1229 2 1229 
+___ 1230 2 1230 
+___ 1231 2 1231 
+___ 1232 2 1232 
+___ 1233 2 1233 
+___ 1234 2 1234 
+___ 1235 2 1235 
+___ 1236 2 1236 
+___ 1237 2 1237 
+___ 1238 2 1238 
+___ 1239 2 1239 
+___ 1240 2 1240 
+___ 1241 2 1241 
+___ 1242 2 1242 
+___ 1243 2 1243 
+___ 1244 2 1244 
+___ 1245 2 1245 
+___ 1246 2 1246 
+___ 1247 2 1247 
+___ 1248 2 1248 
+___ 1249 2 1249 
+___ 1250 2 1250 
+___ 1251 2 1251 
+___ 1252 2 1252 
+___ 1253 2 1253 
+___ 1254 2 1254 
+___ 1255 1 1255 
+___ 1256 2 1256 
+___ 1257 2 1257 
+___ 1258 2 1258 
+___ 1259 2 1259 
+___ 1260 2 1260 
+___ 1261 2 1261 
+___ 1262 2 1262 
+___ 1263 2 1263 
+___ 1264 2 1264 
+___ 1265 2 1265 
+___ 1266 2 1266 
+___ 1267 2 1267 
+___ 1268 2 1268 
+___ 1269 2 1269 
+___ 1270 2 1270 
+___ 1271 2 1271 
+___ 1272 2 1272 
+___ 1273 2 1273 
+___ 1274 2 1274 
+___ 1275 2 1275 
+___ 1276 2 1276 
+___ 1277 2 1277 
+___ 1278 2 1278 
+___ 1279 2 1279 
+___ 1280 2 1280 
+___ 1281 2 1281 
+___ 1282 2 1282 
+___ 1283 2 1283 
+___ 1284 2 1284 
+___ 1285 2 1285 
+___ 1286 2 1286 
+___ 1287 2 1287 
+___ 1288 2 1288 
+___ 1289 2 1289 
+___ 1290 2 1290 
+___ 1291 1 1291 
+___ 1292 2 1292 
+___ 1293 2 1293 
+___ 1294 2 1294 
+___ 1295 2 1295 
+___ 1296 2 1296 
+___ 1297 2 1297 
+___ 1298 2 1298 
+___ 1299 2 1299 
+___ 1300 2 1300 
+___ 1301 2 1301 
+___ 1302 2 1302 
+___ 1303 2 1303 
+___ 1304 2 1304 
+___ 1305 2 1305 
+___ 1306 2 1306 
+___ 1307 2 1307 
+___ 1308 2 1308 
+___ 1309 2 1309 
+___ 1310 2 1310 
+___ 1311 2 1311 
+___ 1312 2 1312 
+___ 1313 2 1313 
+___ 1314 2 1314 
+___ 1315 2 1315 
+___ 1316 2 1316 
+___ 1317 2 1317 
+___ 1318 2 1318 
+___ 1319 2 1319 
+___ 1320 2 1320 
+___ 1321 2 1321 
+___ 1322 2 1322 
+___ 1323 2 1323 
+___ 1324 2 1324 
+___ 1325 2 1325 
+___ 1326 2 1326 
+___ 1327 1 1327 
+___ 1328 2 1328 
+___ 1329 2 1329 
+___ 1330 2 1330 
+___ 1331 2 1331 
+___ 1332 2 1332 
+___ 1333 2 1333 
+___ 1334 2 1334 
+___ 1335 2 1335 
+___ 1336 2 1336 
+___ 1337 2 1337 
+___ 1338 2 1338 
+___ 1339 2 1339 
+___ 1340 2 1340 
+___ 1341 2 1341 
+___ 1342 2 1342 
+___ 1343 2 1343 
+___ 1344 2 1344 
+___ 1345 2 1345 
+___ 1346 2 1346 
+___ 1347 2 1347 
+___ 1348 2 1348 
+___ 1349 2 1349 
+___ 1350 2 1350 
+___ 1351 2 1351 
+___ 1352 2 1352 
+___ 1353 2 1353 
+___ 1354 2 1354 
+___ 1355 2 1355 
+___ 1356 2 1356 
+___ 1357 2 1357 
+___ 1358 2 1358 
+___ 1359 2 1359 
+___ 1360 2 1360 
+___ 1361 2 1361 
+___ 1362 2 1362 
+___ 1363 1 1363 
+___ 1364 2 1364 
+___ 1365 2 1365 
+___ 1366 2 1366 
+___ 1367 2 1367 
+___ 1368 2 1368 
+___ 1369 2 1369 
+___ 1370 2 1370 
+___ 1371 2 1371 
+___ 1372 2 1372 
+___ 1373 2 1373 
+___ 1374 2 1374 
+___ 1375 2 1375 
+___ 1376 2 1376 
+___ 1377 2 1377 
+___ 1378 2 1378 
+___ 1379 2 1379 
+___ 1380 2 1380 
+___ 1381 2 1381 
+___ 1382 2 1382 
+___ 1383 2 1383 
+___ 1384 2 1384 
+___ 1385 2 1385 
+___ 1386 2 1386 
+___ 1387 2 1387 
+___ 1388 2 1388 
+___ 1389 2 1389 
+___ 1390 2 1390 
+___ 1391 2 1391 
+___ 1392 2 1392 
+___ 1393 2 1393 
+___ 1394 2 1394 
+___ 1395 2 1395 
+___ 1396 2 1396 
+___ 1397 2 1397 
+___ 1398 2 1398 
+___ 1399 1 1399 
+___ 1400 2 1400 
+___ 1401 2 1401 
+___ 1402 2 1402 
+___ 1403 2 1403 
+___ 1404 2 1404 
+___ 1405 2 1405 
+___ 1406 2 1406 
+___ 1407 2 1407 
+___ 1408 2 1408 
+___ 1409 2 1409 
+___ 1410 2 1410 
+___ 1411 2 1411 
+___ 1412 2 1412 
+___ 1413 2 1413 
+___ 1414 2 1414 
+___ 1415 2 1415 
+___ 1416 2 1416 
+___ 1417 2 1417 
+___ 1418 2 1418 
+___ 1419 2 1419 
+___ 1420 2 1420 
+___ 1421 2 1421 
+___ 1422 2 1422 
+___ 1423 2 1423 
+___ 1424 2 1424 
+___ 1425 2 1425 
+___ 1426 2 1426 
+___ 1427 2 1427 
+___ 1428 2 1428 
+___ 1429 2 1429 
+___ 1430 2 1430 
+___ 1431 2 1431 
+___ 1432 2 1432 
+___ 1433 2 1433 
+___ 1434 2 1434 
+___ 1435 1 1435 
+___ 1436 2 1436 
+___ 1437 2 1437 
+___ 1438 2 1438 
+___ 1439 2 1439 
+___ 1440 2 1440 
+___ 1441 2 1441 
+___ 1442 2 1442 
+___ 1443 2 1443 
+___ 1444 2 1444 
+___ 1445 2 1445 
+___ 1446 2 1446 
+___ 1447 2 1447 
+___ 1448 2 1448 
+___ 1449 2 1449 
+___ 1450 2 1450 
+___ 1451 2 1451 
+___ 1452 2 1452 
+___ 1453 2 1453 
+___ 1454 2 1454 
+___ 1455 2 1455 
+___ 1456 2 1456 
+___ 1457 2 1457 
+___ 1458 2 1458 
+___ 1459 2 1459 
+___ 1460 2 1460 
+___ 1461 2 1461 
+___ 1462 2 1462 
+___ 1463 2 1463 
+___ 1464 2 1464 
+___ 1465 2 1465 
+___ 1466 2 1466 
+___ 1467 2 1467 
+___ 1468 2 1468 
+___ 1469 2 1469 
+___ 1470 2 1470 
+___ 1471 1 1471 
+___ 1472 2 1472 
+___ 1473 2 1473 
+___ 1474 2 1474 
+___ 1475 2 1475 
+___ 1476 2 1476 
+___ 1477 2 1477 
+___ 1478 2 1478 
+___ 1479 2 1479 
+___ 1480 2 1480 
+___ 1481 2 1481 
+___ 1482 2 1482 
+___ 1483 2 1483 
+___ 1484 2 1484 
+___ 1485 2 1485 
+___ 1486 2 1486 
+___ 1487 2 1487 
+___ 1488 2 1488 
+___ 1489 2 1489 
+___ 1490 2 1490 
+___ 1491 2 1491 
+___ 1492 2 1492 
+___ 1493 2 1493 
+___ 1494 2 1494 
+___ 1495 2 1495 
+___ 1496 2 1496 
+___ 1497 2 1497 
+___ 1498 2 1498 
+___ 1499 2 1499 
+___ 1500 2 1500 
+___ 1501 2 1501 
+___ 1502 2 1502 
+___ 1503 2 1503 
+___ 1504 2 1504 
+___ 1505 2 1505 
+___ 1506 2 1506 
+___ 1507 1 1507 
+___ 1508 2 1508 
+___ 1509 2 1509 
+___ 1510 2 1510 
+___ 1511 2 1511 
+___ 1512 2 1512 
+___ 1513 2 1513 
+___ 1514 2 1514 
+___ 1515 2 1515 
+___ 1516 2 1516 
+___ 1517 2 1517 
+___ 1518 2 1518 
+___ 1519 2 1519 
+___ 1520 2 1520 
+___ 1521 2 1521 
+___ 1522 2 1522 
+___ 1523 2 1523 
+___ 1524 2 1524 
+___ 1525 2 1525 
+___ 1526 2 1526 
+___ 1527 2 1527 
+___ 1528 2 1528 
+___ 1529 2 1529 
+___ 1530 2 1530 
+___ 1531 2 1531 
+___ 1532 2 1532 
+___ 1533 2 1533 
+___ 1534 2 1534 
+___ 1535 2 1535 
+___ 1536 2 1536 
+___ 1537 2 1537 
+___ 1538 2 1538 
+___ 1539 2 1539 
+___ 1540 2 1540 
+___ 1541 2 1541 
+___ 1542 2 1542 
+___ 1543 1 1543 
+___ 1544 2 1544 
+___ 1545 2 1545 
+___ 1546 2 1546 
+___ 1547 2 1547 
+___ 1548 2 1548 
+___ 1549 2 1549 
+___ 1550 2 1550 
+___ 1551 2 1551 
+___ 1552 2 1552 
+___ 1553 2 1553 
+___ 1554 2 1554 
+___ 1555 2 1555 
+___ 1556 2 1556 
+___ 1557 2 1557 
+___ 1558 2 1558 
+___ 1559 2 1559 
+___ 1560 2 1560 
+___ 1561 2 1561 
+___ 1562 2 1562 
+___ 1563 2 1563 
+___ 1564 2 1564 
+___ 1565 2 1565 
+___ 1566 2 1566 
+___ 1567 2 1567 
+___ 1568 2 1568 
+___ 1569 2 1569 
+___ 1570 2 1570 
+___ 1571 2 1571 
+___ 1572 2 1572 
+___ 1573 2 1573 
+___ 1574 2 1574 
+___ 1575 2 1575 
+___ 1576 2 1576 
+___ 1577 2 1577 
+___ 1578 2 1578 
+___ 1579 1 1579 
+___ 1580 2 1580 
+___ 1581 2 1581 
+___ 1582 2 1582 
+___ 1583 2 1583 
+___ 1584 2 1584 
+___ 1585 2 1585 
+___ 1586 2 1586 
+___ 1587 2 1587 
+___ 1588 2 1588 
+___ 1589 2 1589 
+___ 1590 2 1590 
+___ 1591 2 1591 
+___ 1592 2 1592 
+___ 1593 2 1593 
+___ 1594 2 1594 
+___ 1595 2 1595 
+___ 1596 2 1596 
+___ 1597 2 1597 
+___ 1598 2 1598 
+___ 1599 2 1599 
+___ 1600 2 1600 
+___ 1601 2 1601 
+___ 1602 2 1602 
+___ 1603 2 1603 
+___ 1604 2 1604 
+___ 1605 2 1605 
+___ 1606 2 1606 
+___ 1607 2 1607 
+___ 1608 2 1608 
+___ 1609 2 1609 
+___ 1610 2 1610 
+___ 1611 2 1611 
+___ 1612 2 1612 
+___ 1613 2 1613 
+___ 1614 2 1614 
+___ 1615 1 1615 
+___ 1616 2 1616 
+___ 1617 2 1617 
+___ 1618 2 1618 
+___ 1619 2 1619 
+___ 1620 2 1620 
+___ 1621 2 1621 
+___ 1622 2 1622 
+___ 1623 2 1623 
+___ 1624 2 1624 
+___ 1625 2 1625 
+___ 1626 2 1626 
+___ 1627 2 1627 
+___ 1628 2 1628 
+___ 1629 2 1629 
+___ 1630 2 1630 
+___ 1631 2 1631 
+___ 1632 2 1632 
+___ 1633 2 1633 
+___ 1634 2 1634 
+___ 1635 2 1635 
+___ 1636 2 1636 
+___ 1637 2 1637 
+___ 1638 2 1638 
+___ 1639 2 1639 
+___ 1640 2 1640 
+___ 1641 2 1641 
+___ 1642 2 1642 
+___ 1643 2 1643 
+___ 1644 2 1644 
+___ 1645 2 1645 
+___ 1646 2 1646 
+___ 1647 2 1647 
+___ 1648 2 1648 
+___ 1649 2 1649 
+___ 1650 2 1650 
+___ 1651 1 1651 
+___ 1652 2 1652 
+___ 1653 2 1653 
+___ 1654 2 1654 
+___ 1655 2 1655 
+___ 1656 2 1656 
+___ 1657 2 1657 
+___ 1658 2 1658 
+___ 1659 2 1659 
+___ 1660 2 1660 
+___ 1661 2 1661 
+___ 1662 2 1662 
+___ 1663 2 1663 
+___ 1664 2 1664 
+___ 1665 2 1665 
+___ 1666 2 1666 
+___ 1667 2 1667 
+___ 1668 2 1668 
+___ 1669 2 1669 
+___ 1670 2 1670 
+___ 1671 2 1671 
+___ 1672 2 1672 
+___ 1673 2 1673 
+___ 1674 2 1674 
+___ 1675 2 1675 
+___ 1676 2 1676 
+___ 1677 2 1677 
+___ 1678 2 1678 
+___ 1679 2 1679 
+___ 1680 2 1680 
+___ 1681 2 1681 
+___ 1682 2 1682 
+___ 1683 2 1683 
+___ 1684 2 1684 
+___ 1685 2 1685 
+___ 1686 2 1686 
+___ 1687 1 1687 
+___ 1688 2 1688 
+___ 1689 2 1689 
+___ 1690 2 1690 
+___ 1691 2 1691 
+___ 1692 2 1692 
+___ 1693 2 1693 
+___ 1694 2 1694 
+___ 1695 2 1695 
+___ 1696 2 1696 
+___ 1697 2 1697 
+___ 1698 2 1698 
+___ 1699 2 1699 
+___ 1700 2 1700 
+___ 1701 2 1701 
+___ 1702 2 1702 
+___ 1703 2 1703 
+___ 1704 2 1704 
+___ 1705 2 1705 
+___ 1706 2 1706 
+___ 1707 2 1707 
+___ 1708 2 1708 
+___ 1709 2 1709 
+___ 1710 2 1710 
+___ 1711 2 1711 
+___ 1712 2 1712 
+___ 1713 2 1713 
+___ 1714 2 1714 
+___ 1715 2 1715 
+___ 1716 2 1716 
+___ 1717 2 1717 
+___ 1718 2 1718 
+___ 1719 2 1719 
+___ 1720 2 1720 
+___ 1721 2 1721 
+___ 1722 2 1722 
+___ 1723 1 1723 
+___ 1724 2 1724 
+___ 1725 2 1725 
+___ 1726 2 1726 
+___ 1727 2 1727 
+___ 1728 2 1728 
+___ 1729 2 1729 
+___ 1730 2 1730 
+___ 1731 2 1731 
+___ 1732 2 1732 
+___ 1733 2 1733 
+___ 1734 2 1734 
+___ 1735 2 1735 
+___ 1736 2 1736 
+___ 1737 2 1737 
+___ 1738 2 1738 
+___ 1739 2 1739 
+___ 1740 2 1740 
+___ 1741 2 1741 
+___ 1742 2 1742 
+___ 1743 2 1743 
+___ 1744 2 1744 
+___ 1745 2 1745 
+___ 1746 2 1746 
+___ 1747 2 1747 
+___ 1748 2 1748 
+___ 1749 2 1749 
+___ 1750 2 1750 
+___ 1751 2 1751 
+___ 1752 2 1752 
+___ 1753 2 1753 
+___ 1754 2 1754 
+___ 1755 2 1755 
+___ 1756 2 1756 
+___ 1757 2 1757 
+___ 1758 2 1758 
+___ 1759 1 1759 
+___ 1760 2 1760 
+___ 1761 2 1761 
+___ 1762 2 1762 
+___ 1763 2 1763 
+___ 1764 2 1764 
+___ 1765 2 1765 
+___ 1766 2 1766 
+___ 1767 2 1767 
+___ 1768 2 1768 
+___ 1769 2 1769 
+___ 1770 2 1770 
+___ 1771 2 1771 
+___ 1772 2 1772 
+___ 1773 2 1773 
+___ 1774 2 1774 
+___ 1775 2 1775 
+___ 1776 2 1776 
+___ 1777 2 1777 
+___ 1778 2 1778 
+___ 1779 2 1779 
+___ 1780 2 1780 
+___ 1781 2 1781 
+___ 1782 2 1782 
+___ 1783 2 1783 
+___ 1784 2 1784 
+___ 1785 2 1785 
+___ 1786 2 1786 
+___ 1787 2 1787 
+___ 1788 2 1788 
+___ 1789 2 1789 
+___ 1790 2 1790 
+___ 1791 2 1791 
+___ 1792 2 1792 
+___ 1793 2 1793 
+___ 1794 1 1794 
+___ 1795 2 1795 
+___ 1796 2 1796 
+___ 1797 2 1797 
+___ 1798 2 1798 
+___ 1799 2 1799 
+___ 1800 2 1800 
+___ 1801 2 1801 
+___ 1802 2 1802 
+___ 1803 2 1803 
+___ 1804 2 1804 
+___ 1805 2 1805 
+___ 1806 2 1806 
+___ 1807 2 1807 
+___ 1808 2 1808 
+___ 1809 2 1809 
+___ 1810 2 1810 
+___ 1811 2 1811 
+___ 1812 2 1812 
+___ 1813 2 1813 
+___ 1814 2 1814 
+___ 1815 2 1815 
+___ 1816 2 1816 
+___ 1817 2 1817 
+___ 1818 2 1818 
+___ 1819 2 1819 
+___ 1820 2 1820 
+___ 1821 2 1821 
+___ 1822 2 1822 
+___ 1823 2 1823 
+___ 1824 2 1824 
+___ 1825 2 1825 
+___ 1826 2 1826 
+___ 1827 2 1827 
+___ 1828 2 1828 
+___ 1829 1 1829 
+___ 1830 2 1830 
+___ 1831 2 1831 
+___ 1832 2 1832 
+___ 1833 2 1833 
+___ 1834 2 1834 
+___ 1835 2 1835 
+___ 1836 2 1836 
+___ 1837 2 1837 
+___ 1838 2 1838 
+___ 1839 2 1839 
+___ 1840 2 1840 
+___ 1841 2 1841 
+___ 1842 2 1842 
+___ 1843 2 1843 
+___ 1844 2 1844 
+___ 1845 2 1845 
+___ 1846 2 1846 
+___ 1847 2 1847 
+___ 1848 2 1848 
+___ 1849 2 1849 
+___ 1850 2 1850 
+___ 1851 2 1851 
+___ 1852 2 1852 
+___ 1853 2 1853 
+___ 1854 2 1854 
+___ 1855 2 1855 
+___ 1856 2 1856 
+___ 1857 2 1857 
+___ 1858 2 1858 
+___ 1859 2 1859 
+___ 1860 2 1860 
+___ 1861 2 1861 
+___ 1862 2 1862 
+___ 1863 2 1863 
+___ 1864 1 1864 
+___ 1865 2 1865 
+___ 1866 2 1866 
+___ 1867 2 1867 
+___ 1868 2 1868 
+___ 1869 2 1869 
+___ 1870 2 1870 
+___ 1871 2 1871 
+___ 1872 2 1872 
+___ 1873 2 1873 
+___ 1874 2 1874 
+___ 1875 2 1875 
+___ 1876 2 1876 
+___ 1877 2 1877 
+___ 1878 2 1878 
+___ 1879 2 1879 
+___ 1880 2 1880 
+___ 1881 2 1881 
+___ 1882 2 1882 
+___ 1883 2 1883 
+___ 1884 2 1884 
+___ 1885 2 1885 
+___ 1886 2 1886 
+___ 1887 2 1887 
+___ 1888 2 1888 
+___ 1889 2 1889 
+___ 1890 2 1890 
+___ 1891 2 1891 
+___ 1892 2 1892 
+___ 1893 2 1893 
+___ 1894 2 1894 
+___ 1895 2 1895 
+___ 1896 2 1896 
+___ 1897 2 1897 
+___ 1898 2 1898 
+___ 1899 1 1899 
+___ 1900 2 1900 
+___ 1901 2 1901 
+___ 1902 2 1902 
+___ 1903 2 1903 
+___ 1904 2 1904 
+___ 1905 2 1905 
+___ 1906 2 1906 
+___ 1907 2 1907 
+___ 1908 2 1908 
+___ 1909 2 1909 
+___ 1910 2 1910 
+___ 1911 2 1911 
+___ 1912 2 1912 
+___ 1913 2 1913 
+___ 1914 2 1914 
+___ 1915 2 1915 
+___ 1916 2 1916 
+___ 1917 2 1917 
+___ 1918 2 1918 
+___ 1919 2 1919 
+___ 1920 2 1920 
+___ 1921 2 1921 
+___ 1922 2 1922 
+___ 1923 2 1923 
+___ 1924 2 1924 
+___ 1925 2 1925 
+___ 1926 2 1926 
+___ 1927 2 1927 
+___ 1928 2 1928 
+___ 1929 2 1929 
+___ 1930 2 1930 
+___ 1931 2 1931 
+___ 1932 2 1932 
+___ 1933 2 1933 
+___ 1934 1 1934 
+___ 1935 2 1935 
+___ 1936 2 1936 
+___ 1937 2 1937 
+___ 1938 2 1938 
+___ 1939 2 1939 
+___ 1940 2 1940 
+___ 1941 2 1941 
+___ 1942 2 1942 
+___ 1943 2 1943 
+___ 1944 2 1944 
+___ 1945 2 1945 
+___ 1946 2 1946 
+___ 1947 2 1947 
+___ 1948 2 1948 
+___ 1949 2 1949 
+___ 1950 2 1950 
+___ 1951 2 1951 
+___ 1952 2 1952 
+___ 1953 2 1953 
+___ 1954 2 1954 
+___ 1955 2 1955 
+___ 1956 2 1956 
+___ 1957 2 1957 
+___ 1958 2 1958 
+___ 1959 2 1959 
+___ 1960 2 1960 
+___ 1961 2 1961 
+___ 1962 2 1962 
+___ 1963 2 1963 
+___ 1964 2 1964 
+___ 1965 2 1965 
+___ 1966 2 1966 
+___ 1967 2 1967 
+___ 1968 2 1968 
+___ 1969 1 1969 
+___ 1970 2 1970 
+___ 1971 2 1971 
+___ 1972 2 1972 
+___ 1973 2 1973 
+___ 1974 2 1974 
+___ 1975 2 1975 
+___ 1976 2 1976 
+___ 1977 2 1977 
+___ 1978 2 1978 
+___ 1979 2 1979 
+___ 1980 2 1980 
+___ 1981 2 1981 
+___ 1982 2 1982 
+___ 1983 2 1983 
+___ 1984 2 1984 
+___ 1985 2 1985 
+___ 1986 2 1986 
+___ 1987 2 1987 
+___ 1988 2 1988 
+___ 1989 2 1989 
+___ 1990 2 1990 
+___ 1991 2 1991 
+___ 1992 2 1992 
+___ 1993 2 1993 
+___ 1994 2 1994 
+___ 1995 2 1995 
+___ 1996 2 1996 
+___ 1997 2 1997 
+___ 1998 2 1998 
+___ 1999 2 1999 
+___ 2000 2 2000 
+___ 2001 2 2001 
+___ 2002 2 2002 
+___ 2003 2 2003 
+___ 2004 1 2004 
+___ 2005 2 2005 
+___ 2006 2 2006 
+___ 2007 2 2007 
+___ 2008 2 2008 
+___ 2009 2 2009 
+___ 2010 2 2010 
+___ 2011 2 2011 
+___ 2012 2 2012 
+___ 2013 2 2013 
+___ 2014 2 2014 
+___ 2015 2 2015 
+___ 2016 2 2016 
+___ 2017 2 2017 
+___ 2018 2 2018 
+___ 2019 2 2019 
+___ 2020 2 2020 
+___ 2021 2 2021 
+___ 2022 2 2022 
+___ 2023 2 2023 
+___ 2024 2 2024 
+___ 2025 2 2025 
+___ 2026 2 2026 
+___ 2027 2 2027 
+___ 2028 2 2028 
+___ 2029 2 2029 
+___ 2030 2 2030 
+___ 2031 2 2031 
+___ 2032 2 2032 
+___ 2033 2 2033 
+___ 2034 2 2034 
+___ 2035 2 2035 
+___ 2036 2 2036 
+___ 2037 2 2037 
+___ 2038 2 2038 
+___ 2039 1 2039 
+___ 2040 2 2040 
+___ 2041 2 2041 
+___ 2042 2 2042 
+___ 2043 2 2043 
+___ 2044 2 2044 
+___ 2045 2 2045 
+___ 2046 2 2046 
+___ 2047 2 2047 
+___ 2048 2 2048 
+___ 2049 2 2049 
+___ 2050 2 2050 
+___ 2051 2 2051 
+___ 2052 2 2052 
+___ 2053 2 2053 
+___ 2054 2 2054 
+___ 2055 2 2055 
+___ 2056 2 2056 
+___ 2057 2 2057 
+___ 2058 2 2058 
+___ 2059 2 2059 
+___ 2060 2 2060 
+___ 2061 2 2061 
+___ 2062 2 2062 
+___ 2063 2 2063 
+___ 2064 2 2064 
+___ 2065 2 2065 
+___ 2066 2 2066 
+___ 2067 2 2067 
+___ 2068 2 2068 
+___ 2069 2 2069 
+___ 2070 2 2070 
+___ 2071 2 2071 
+___ 2072 2 2072 
+___ 2073 2 2073 
+___ 2074 1 2074 
+___ 2075 2 2075 
+___ 2076 2 2076 
+___ 2077 2 2077 
+___ 2078 2 2078 
+___ 2079 2 2079 
+___ 2080 2 2080 
+___ 2081 2 2081 
+___ 2082 2 2082 
+___ 2083 2 2083 
+___ 2084 2 2084 
+___ 2085 2 2085 
+___ 2086 2 2086 
+___ 2087 2 2087 
+___ 2088 2 2088 
+___ 2089 2 2089 
+___ 2090 2 2090 
+___ 2091 2 2091 
+___ 2092 2 2092 
+___ 2093 2 2093 
+___ 2094 2 2094 
+___ 2095 2 2095 
+___ 2096 2 2096 
+___ 2097 2 2097 
+___ 2098 2 2098 
+___ 2099 2 2099 
+___ 2100 2 2100 
+___ 2101 2 2101 
+___ 2102 2 2102 
+___ 2103 2 2103 
+___ 2104 2 2104 
+___ 2105 2 2105 
+___ 2106 2 2106 
+___ 2107 2 2107 
+___ 2108 2 2108 
+___ 2109 1 2109 
+___ 2110 2 2110 
+___ 2111 2 2111 
+___ 2112 2 2112 
+___ 2113 2 2113 
+___ 2114 2 2114 
+___ 2115 2 2115 
+___ 2116 2 2116 
+___ 2117 2 2117 
+___ 2118 2 2118 
+___ 2119 2 2119 
+___ 2120 2 2120 
+___ 2121 2 2121 
+___ 2122 2 2122 
+___ 2123 2 2123 
+___ 2124 2 2124 
+___ 2125 2 2125 
+___ 2126 2 2126 
+___ 2127 2 2127 
+___ 2128 2 2128 
+___ 2129 2 2129 
+___ 2130 2 2130 
+___ 2131 2 2131 
+___ 2132 2 2132 
+___ 2133 2 2133 
+___ 2134 2 2134 
+___ 2135 2 2135 
+___ 2136 2 2136 
+___ 2137 2 2137 
+___ 2138 2 2138 
+___ 2139 2 2139 
+___ 2140 2 2140 
+___ 2141 2 2141 
+___ 2142 2 2142 
+___ 2143 2 2143 
+___ 2144 1 2144 
+___ 2145 2 2145 
+___ 2146 2 2146 
+___ 2147 2 2147 
+___ 2148 2 2148 
+___ 2149 2 2149 
+___ 2150 2 2150 
+___ 2151 2 2151 
+___ 2152 2 2152 
+___ 2153 2 2153 
+___ 2154 2 2154 
+___ 2155 2 2155 
+___ 2156 2 2156 
+___ 2157 2 2157 
+___ 2158 2 2158 
+___ 2159 2 2159 
+___ 2160 2 2160 
+___ 2161 2 2161 
+___ 2162 2 2162 
+___ 2163 2 2163 
+___ 2164 2 2164 
+___ 2165 2 2165 
+___ 2166 2 2166 
+___ 2167 2 2167 
+___ 2168 2 2168 
+___ 2169 2 2169 
+___ 2170 2 2170 
+___ 2171 2 2171 
+___ 2172 2 2172 
+___ 2173 2 2173 
+___ 2174 2 2174 
+___ 2175 2 2175 
+___ 2176 2 2176 
+___ 2177 2 2177 
+___ 2178 2 2178 
+___ 2179 1 2179 
+___ 2180 2 2180 
+___ 2181 2 2181 
+___ 2182 2 2182 
+___ 2183 2 2183 
+___ 2184 2 2184 
+___ 2185 2 2185 
+___ 2186 2 2186 
+___ 2187 2 2187 
+___ 2188 2 2188 
+___ 2189 2 2189 
+___ 2190 2 2190 
+___ 2191 2 2191 
+___ 2192 2 2192 
+___ 2193 2 2193 
+___ 2194 2 2194 
+___ 2195 2 2195 
+___ 2196 2 2196 
+___ 2197 2 2197 
+___ 2198 2 2198 
+___ 2199 2 2199 
+___ 2200 2 2200 
+___ 2201 2 2201 
+___ 2202 2 2202 
+___ 2203 2 2203 
+___ 2204 2 2204 
+___ 2205 2 2205 
+___ 2206 2 2206 
+___ 2207 2 2207 
+___ 2208 2 2208 
+___ 2209 2 2209 
+___ 2210 2 2210 
+___ 2211 2 2211 
+___ 2212 2 2212 
+___ 2213 2 2213 
+___ 2214 1 2214 
+___ 2215 2 2215 
+___ 2216 2 2216 
+___ 2217 2 2217 
+___ 2218 2 2218 
+___ 2219 2 2219 
+___ 2220 2 2220 
+___ 2221 2 2221 
+___ 2222 2 2222 
+___ 2223 2 2223 
+___ 2224 2 2224 
+___ 2225 2 2225 
+___ 2226 2 2226 
+___ 2227 2 2227 
+___ 2228 2 2228 
+___ 2229 2 2229 
+___ 2230 2 2230 
+___ 2231 2 2231 
+___ 2232 2 2232 
+___ 2233 2 2233 
+___ 2234 2 2234 
+___ 2235 2 2235 
+___ 2236 2 2236 
+___ 2237 2 2237 
+___ 2238 2 2238 
+___ 2239 2 2239 
+___ 2240 2 2240 
+___ 2241 2 2241 
+___ 2242 2 2242 
+___ 2243 2 2243 
+___ 2244 2 2244 
+___ 2245 2 2245 
+___ 2246 2 2246 
+___ 2247 2 2247 
+___ 2248 2 2248 
+___ 2249 1 2249 
+___ 2250 2 2250 
+___ 2251 2 2251 
+___ 2252 2 2252 
+___ 2253 2 2253 
+___ 2254 2 2254 
+___ 2255 2 2255 
+___ 2256 2 2256 
+___ 2257 2 2257 
+___ 2258 2 2258 
+___ 2259 2 2259 
+___ 2260 2 2260 
+___ 2261 2 2261 
+___ 2262 2 2262 
+___ 2263 2 2263 
+___ 2264 2 2264 
+___ 2265 2 2265 
+___ 2266 2 2266 
+___ 2267 2 2267 
+___ 2268 2 2268 
+___ 2269 2 2269 
+___ 2270 2 2270 
+___ 2271 2 2271 
+___ 2272 2 2272 
+___ 2273 2 2273 
+___ 2274 2 2274 
+___ 2275 2 2275 
+___ 2276 2 2276 
+___ 2277 2 2277 
+___ 2278 2 2278 
+___ 2279 2 2279 
+___ 2280 2 2280 
+___ 2281 2 2281 
+___ 2282 2 2282 
+___ 2283 2 2283 
+___ 2284 1 2284 
+___ 2285 2 2285 
+___ 2286 2 2286 
+___ 2287 2 2287 
+___ 2288 2 2288 
+___ 2289 2 2289 
+___ 2290 2 2290 
+___ 2291 2 2291 
+___ 2292 2 2292 
+___ 2293 2 2293 
+___ 2294 2 2294 
+___ 2295 2 2295 
+___ 2296 2 2296 
+___ 2297 2 2297 
+___ 2298 2 2298 
+___ 2299 2 2299 
+___ 2300 2 2300 
+___ 2301 2 2301 
+___ 2302 2 2302 
+___ 2303 2 2303 
+___ 2304 2 2304 
+___ 2305 2 2305 
+___ 2306 2 2306 
+___ 2307 2 2307 
+___ 2308 2 2308 
+___ 2309 2 2309 
+___ 2310 2 2310 
+___ 2311 2 2311 
+___ 2312 2 2312 
+___ 2313 2 2313 
+___ 2314 2 2314 
+___ 2315 2 2315 
+___ 2316 2 2316 
+___ 2317 2 2317 
+___ 2318 2 2318 
+___ 2319 1 2319 
+___ 2320 2 2320 
+___ 2321 2 2321 
+___ 2322 2 2322 
+___ 2323 2 2323 
+___ 2324 2 2324 
+___ 2325 2 2325 
+___ 2326 2 2326 
+___ 2327 2 2327 
+___ 2328 2 2328 
+___ 2329 2 2329 
+___ 2330 2 2330 
+___ 2331 2 2331 
+___ 2332 2 2332 
+___ 2333 2 2333 
+___ 2334 2 2334 
+___ 2335 2 2335 
+___ 2336 2 2336 
+___ 2337 2 2337 
+___ 2338 2 2338 
+___ 2339 2 2339 
+___ 2340 2 2340 
+___ 2341 2 2341 
+___ 2342 2 2342 
+___ 2343 2 2343 
+___ 2344 2 2344 
+___ 2345 2 2345 
+___ 2346 2 2346 
+___ 2347 2 2347 
+___ 2348 2 2348 
+___ 2349 2 2349 
+___ 2350 2 2350 
+___ 2351 2 2351 
+___ 2352 2 2352 
+___ 2353 2 2353 
+___ 2354 1 2354 
+___ 2355 2 2355 
+___ 2356 2 2356 
+___ 2357 2 2357 
+___ 2358 2 2358 
+___ 2359 2 2359 
+___ 2360 2 2360 
+___ 2361 2 2361 
+___ 2362 2 2362 
+___ 2363 2 2363 
+___ 2364 2 2364 
+___ 2365 2 2365 
+___ 2366 2 2366 
+___ 2367 2 2367 
+___ 2368 2 2368 
+___ 2369 2 2369 
+___ 2370 2 2370 
+___ 2371 2 2371 
+___ 2372 2 2372 
+___ 2373 2 2373 
+___ 2374 2 2374 
+___ 2375 2 2375 
+___ 2376 2 2376 
+___ 2377 2 2377 
+___ 2378 2 2378 
+___ 2379 2 2379 
+___ 2380 2 2380 
+___ 2381 2 2381 
+___ 2382 2 2382 
+___ 2383 2 2383 
+___ 2384 2 2384 
+___ 2385 2 2385 
+___ 2386 2 2386 
+___ 2387 2 2387 
+___ 2388 2 2388 
+___ 2389 1 2389 
+___ 2390 2 2390 
+___ 2391 2 2391 
+___ 2392 2 2392 
+___ 2393 2 2393 
+___ 2394 2 2394 
+___ 2395 2 2395 
+___ 2396 2 2396 
+___ 2397 2 2397 
+___ 2398 2 2398 
+___ 2399 2 2399 
+___ 2400 2 2400 
+___ 2401 2 2401 
+___ 2402 2 2402 
+___ 2403 2 2403 
+___ 2404 2 2404 
+___ 2405 2 2405 
+___ 2406 2 2406 
+___ 2407 2 2407 
+___ 2408 2 2408 
+___ 2409 2 2409 
+___ 2410 2 2410 
+___ 2411 2 2411 
+___ 2412 2 2412 
+___ 2413 2 2413 
+___ 2414 2 2414 
+___ 2415 2 2415 
+___ 2416 2 2416 
+___ 2417 2 2417 
+___ 2418 2 2418 
+___ 2419 2 2419 
+___ 2420 2 2420 
+___ 2421 2 2421 
+___ 2422 2 2422 
+___ 2423 2 2423 
+___ 2424 1 2424 
+___ 2425 2 2425 
+___ 2426 2 2426 
+___ 2427 2 2427 
+___ 2428 2 2428 
+___ 2429 2 2429 
+___ 2430 2 2430 
+___ 2431 2 2431 
+___ 2432 2 2432 
+___ 2433 2 2433 
+___ 2434 2 2434 
+___ 2435 2 2435 
+___ 2436 2 2436 
+___ 2437 2 2437 
+___ 2438 2 2438 
+___ 2439 2 2439 
+___ 2440 2 2440 
+___ 2441 2 2441 
+___ 2442 2 2442 
+___ 2443 2 2443 
+___ 2444 2 2444 
+___ 2445 2 2445 
+___ 2446 2 2446 
+___ 2447 2 2447 
+___ 2448 2 2448 
+___ 2449 2 2449 
+___ 2450 2 2450 
+___ 2451 2 2451 
+___ 2452 2 2452 
+___ 2453 2 2453 
+___ 2454 2 2454 
+___ 2455 2 2455 
+___ 2456 2 2456 
+___ 2457 2 2457 
+___ 2458 2 2458 
+___ 2459 1 2459 
+___ 2460 2 2460 
+___ 2461 2 2461 
+___ 2462 2 2462 
+___ 2463 2 2463 
+___ 2464 2 2464 
+___ 2465 2 2465 
+___ 2466 2 2466 
+___ 2467 2 2467 
+___ 2468 2 2468 
+___ 2469 2 2469 
+___ 2470 2 2470 
+___ 2471 2 2471 
+___ 2472 2 2472 
+___ 2473 2 2473 
+___ 2474 2 2474 
+___ 2475 2 2475 
+___ 2476 2 2476 
+___ 2477 2 2477 
+___ 2478 2 2478 
+___ 2479 2 2479 
+___ 2480 2 2480 
+___ 2481 2 2481 
+___ 2482 2 2482 
+___ 2483 2 2483 
+___ 2484 2 2484 
+___ 2485 2 2485 
+___ 2486 2 2486 
+___ 2487 2 2487 
+___ 2488 2 2488 
+___ 2489 2 2489 
+___ 2490 2 2490 
+___ 2491 2 2491 
+___ 2492 2 2492 
+___ 2493 2 2493 
+___ 2494 1 2494 
+___ 2495 2 2495 
+___ 2496 2 2496 
+___ 2497 2 2497 
+___ 2498 2 2498 
+___ 2499 2 2499 
+___ 2500 2 2500 
+___ 2501 2 2501 
+___ 2502 2 2502 
+___ 2503 2 2503 
+___ 2504 2 2504 
+___ 2505 2 2505 
+___ 2506 2 2506 
+___ 2507 2 2507 
+___ 2508 2 2508 
+___ 2509 2 2509 
+___ 2510 2 2510 
+___ 2511 2 2511 
+___ 2512 2 2512 
+___ 2513 2 2513 
+___ 2514 2 2514 
+___ 2515 2 2515 
+___ 2516 2 2516 
+___ 2517 2 2517 
+___ 2518 2 2518 
+___ 2519 2 2519 
+___ 2520 2 2520 
+___ 2521 2 2521 
+___ 2522 2 2522 
+___ 2523 2 2523 
+___ 2524 2 2524 
+___ 2525 2 2525 
+___ 2526 2 2526 
+___ 2527 2 2527 
+___ 2528 2 2528 
+___ 2529 1 2529 
+___ 2530 2 2530 
+___ 2531 2 2531 
+___ 2532 2 2532 
+___ 2533 2 2533 
+___ 2534 2 2534 
+___ 2535 2 2535 
+___ 2536 2 2536 
+___ 2537 2 2537 
+___ 2538 2 2538 
+___ 2539 2 2539 
+___ 2540 2 2540 
+___ 2541 2 2541 
+___ 2542 2 2542 
+___ 2543 2 2543 
+___ 2544 2 2544 
+___ 2545 2 2545 
+___ 2546 2 2546 
+___ 2547 2 2547 
+___ 2548 2 2548 
+___ 2549 2 2549 
+___ 2550 2 2550 
+___ 2551 2 2551 
+___ 2552 2 2552 
+___ 2553 2 2553 
+___ 2554 2 2554 
+___ 2555 2 2555 
+___ 2556 2 2556 
+___ 2557 2 2557 
+___ 2558 2 2558 
+___ 2559 2 2559 
+___ 2560 2 2560 
+___ 2561 2 2561 
+___ 2562 2 2562 
+___ 2563 2 2563 
+___ 2564 1 2564 
+___ 2565 2 2565 
+___ 2566 2 2566 
+___ 2567 2 2567 
+___ 2568 2 2568 
+___ 2569 2 2569 
+___ 2570 2 2570 
+___ 2571 2 2571 
+___ 2572 2 2572 
+___ 2573 2 2573 
+___ 2574 2 2574 
+___ 2575 2 2575 
+___ 2576 2 2576 
+___ 2577 2 2577 
+___ 2578 2 2578 
+___ 2579 2 2579 
+___ 2580 2 2580 
+___ 2581 2 2581 
+___ 2582 2 2582 
+___ 2583 2 2583 
+___ 2584 2 2584 
+___ 2585 2 2585 
+___ 2586 2 2586 
+___ 2587 2 2587 
+___ 2588 2 2588 
+___ 2589 2 2589 
+___ 2590 2 2590 
+___ 2591 2 2591 
+___ 2592 2 2592 
+___ 2593 2 2593 
+___ 2594 2 2594 
+___ 2595 2 2595 
+___ 2596 2 2596 
+___ 2597 2 2597 
+___ 2598 2 2598 
+___ 2599 1 2599 
+___ 2600 2 2600 
+___ 2601 2 2601 
+___ 2602 2 2602 
+___ 2603 2 2603 
+___ 2604 2 2604 
+___ 2605 2 2605 
+___ 2606 2 2606 
+___ 2607 2 2607 
+___ 2608 2 2608 
+___ 2609 2 2609 
+___ 2610 2 2610 
+___ 2611 2 2611 
+___ 2612 2 2612 
+___ 2613 2 2613 
+___ 2614 2 2614 
+___ 2615 2 2615 
+___ 2616 2 2616 
+___ 2617 2 2617 
+___ 2618 2 2618 
+___ 2619 2 2619 
+___ 2620 2 2620 
+___ 2621 2 2621 
+___ 2622 2 2622 
+___ 2623 2 2623 
+___ 2624 2 2624 
+___ 2625 2 2625 
+___ 2626 2 2626 
+___ 2627 2 2627 
+___ 2628 2 2628 
+___ 2629 2 2629 
+___ 2630 2 2630 
+___ 2631 2 2631 
+___ 2632 2 2632 
+___ 2633 2 2633 
+___ 2634 1 2634 
+___ 2635 2 2635 
+___ 2636 2 2636 
+___ 2637 2 2637 
+___ 2638 2 2638 
+___ 2639 2 2639 
+___ 2640 2 2640 
+___ 2641 2 2641 
+___ 2642 2 2642 
+___ 2643 2 2643 
+___ 2644 2 2644 
+___ 2645 2 2645 
+___ 2646 2 2646 
+___ 2647 2 2647 
+___ 2648 2 2648 
+___ 2649 2 2649 
+___ 2650 2 2650 
+___ 2651 2 2651 
+___ 2652 2 2652 
+___ 2653 2 2653 
+___ 2654 2 2654 
+___ 2655 2 2655 
+___ 2656 2 2656 
+___ 2657 2 2657 
+___ 2658 2 2658 
+___ 2659 2 2659 
+___ 2660 2 2660 
+___ 2661 2 2661 
+___ 2662 2 2662 
+___ 2663 2 2663 
+___ 2664 2 2664 
+___ 2665 2 2665 
+___ 2666 2 2666 
+___ 2667 2 2667 
+___ 2668 2 2668 
+___ 2669 1 2669 
+___ 2670 2 2670 
+___ 2671 2 2671 
+___ 2672 2 2672 
+___ 2673 2 2673 
+___ 2674 2 2674 
+___ 2675 2 2675 
+___ 2676 2 2676 
+___ 2677 2 2677 
+___ 2678 2 2678 
+___ 2679 2 2679 
+___ 2680 2 2680 
+___ 2681 2 2681 
+___ 2682 2 2682 
+___ 2683 2 2683 
+___ 2684 2 2684 
+___ 2685 2 2685 
+___ 2686 2 2686 
+___ 2687 2 2687 
+___ 2688 2 2688 
+___ 2689 2 2689 
+___ 2690 2 2690 
+___ 2691 2 2691 
+___ 2692 2 2692 
+___ 2693 2 2693 
+___ 2694 2 2694 
+___ 2695 2 2695 
+___ 2696 2 2696 
+___ 2697 2 2697 
+___ 2698 2 2698 
+___ 2699 2 2699 
+___ 2700 2 2700 
+___ 2701 2 2701 
+___ 2702 2 2702 
+___ 2703 2 2703 
+___ 2704 1 2704 
+___ 2705 2 2705 
+___ 2706 2 2706 
+___ 2707 2 2707 
+___ 2708 2 2708 
+___ 2709 2 2709 
+___ 2710 2 2710 
+___ 2711 2 2711 
+___ 2712 2 2712 
+___ 2713 2 2713 
+___ 2714 2 2714 
+___ 2715 2 2715 
+___ 2716 2 2716 
+___ 2717 2 2717 
+___ 2718 2 2718 
+___ 2719 2 2719 
+___ 2720 2 2720 
+___ 2721 2 2721 
+___ 2722 2 2722 
+___ 2723 2 2723 
+___ 2724 2 2724 
+___ 2725 2 2725 
+___ 2726 2 2726 
+___ 2727 2 2727 
+___ 2728 2 2728 
+___ 2729 2 2729 
+___ 2730 2 2730 
+___ 2731 2 2731 
+___ 2732 2 2732 
+___ 2733 2 2733 
+___ 2734 2 2734 
+___ 2735 2 2735 
+___ 2736 2 2736 
+___ 2737 2 2737 
+___ 2738 2 2738 
+___ 2739 1 2739 
+___ 2740 2 2740 
+___ 2741 2 2741 
+___ 2742 2 2742 
+___ 2743 2 2743 
+___ 2744 2 2744 
+___ 2745 2 2745 
+___ 2746 2 2746 
+___ 2747 2 2747 
+___ 2748 2 2748 
+___ 2749 2 2749 
+___ 2750 2 2750 
+___ 2751 2 2751 
+___ 2752 2 2752 
+___ 2753 2 2753 
+___ 2754 2 2754 
+___ 2755 2 2755 
+___ 2756 2 2756 
+___ 2757 2 2757 
+___ 2758 2 2758 
+___ 2759 2 2759 
+___ 2760 2 2760 
+___ 2761 2 2761 
+___ 2762 2 2762 
+___ 2763 2 2763 
+___ 2764 2 2764 
+___ 2765 2 2765 
+___ 2766 2 2766 
+___ 2767 2 2767 
+___ 2768 2 2768 
+___ 2769 2 2769 
+___ 2770 2 2770 
+___ 2771 2 2771 
+___ 2772 2 2772 
+___ 2773 2 2773 
+___ 2774 1 2774 
+___ 2775 2 2775 
+___ 2776 2 2776 
+___ 2777 2 2777 
+___ 2778 2 2778 
+___ 2779 2 2779 
+___ 2780 2 2780 
+___ 2781 2 2781 
+___ 2782 2 2782 
+___ 2783 2 2783 
+___ 2784 2 2784 
+___ 2785 2 2785 
+___ 2786 2 2786 
+___ 2787 2 2787 
+___ 2788 2 2788 
+___ 2789 2 2789 
+___ 2790 2 2790 
+___ 2791 2 2791 
+___ 2792 2 2792 
+___ 2793 2 2793 
+___ 2794 2 2794 
+___ 2795 2 2795 
+___ 2796 2 2796 
+___ 2797 2 2797 
+___ 2798 2 2798 
+___ 2799 2 2799 
+___ 2800 2 2800 
+___ 2801 2 2801 
+___ 2802 2 2802 
+___ 2803 2 2803 
+___ 2804 2 2804 
+___ 2805 2 2805 
+___ 2806 2 2806 
+___ 2807 2 2807 
+___ 2808 2 2808 
+___ 2809 1 2809 
+___ 2810 2 2810 
+___ 2811 2 2811 
+___ 2812 2 2812 
+___ 2813 2 2813 
+___ 2814 2 2814 
+___ 2815 2 2815 
+___ 2816 2 2816 
+___ 2817 2 2817 
+___ 2818 2 2818 
+___ 2819 2 2819 
+___ 2820 2 2820 
+___ 2821 2 2821 
+___ 2822 2 2822 
+___ 2823 2 2823 
+___ 2824 2 2824 
+___ 2825 2 2825 
+___ 2826 2 2826 
+___ 2827 2 2827 
+___ 2828 2 2828 
+___ 2829 2 2829 
+___ 2830 2 2830 
+___ 2831 2 2831 
+___ 2832 2 2832 
+___ 2833 2 2833 
+___ 2834 2 2834 
+___ 2835 2 2835 
+___ 2836 2 2836 
+___ 2837 2 2837 
+___ 2838 2 2838 
+___ 2839 2 2839 
+___ 2840 2 2840 
+___ 2841 2 2841 
+___ 2842 2 2842 
+___ 2843 2 2843 
+___ 2844 1 2844 
+___ 2845 2 2845 
+___ 2846 2 2846 
+___ 2847 2 2847 
+___ 2848 2 2848 
+___ 2849 2 2849 
+___ 2850 2 2850 
+___ 2851 2 2851 
+___ 2852 2 2852 
+___ 2853 2 2853 
+___ 2854 2 2854 
+___ 2855 2 2855 
+___ 2856 2 2856 
+___ 2857 2 2857 
+___ 2858 2 2858 
+___ 2859 2 2859 
+___ 2860 2 2860 
+___ 2861 2 2861 
+___ 2862 2 2862 
+___ 2863 2 2863 
+___ 2864 2 2864 
+___ 2865 2 2865 
+___ 2866 2 2866 
+___ 2867 2 2867 
+___ 2868 2 2868 
+___ 2869 2 2869 
+___ 2870 2 2870 
+___ 2871 2 2871 
+___ 2872 2 2872 
+___ 2873 2 2873 
+___ 2874 2 2874 
+___ 2875 2 2875 
+___ 2876 2 2876 
+___ 2877 2 2877 
+___ 2878 2 2878 
+___ 2879 1 2879 
+___ 2880 2 2880 
+___ 2881 2 2881 
+___ 2882 2 2882 
+___ 2883 2 2883 
+___ 2884 2 2884 
+___ 2885 2 2885 
+___ 2886 2 2886 
+___ 2887 2 2887 
+___ 2888 2 2888 
+___ 2889 2 2889 
+___ 2890 2 2890 
+___ 2891 2 2891 
+___ 2892 2 2892 
+___ 2893 2 2893 
+___ 2894 2 2894 
+___ 2895 2 2895 
+___ 2896 2 2896 
+___ 2897 2 2897 
+___ 2898 2 2898 
+___ 2899 2 2899 
+___ 2900 2 2900 
+___ 2901 2 2901 
+___ 2902 2 2902 
+___ 2903 2 2903 
+___ 2904 2 2904 
+___ 2905 2 2905 
+___ 2906 2 2906 
+___ 2907 2 2907 
+___ 2908 2 2908 
+___ 2909 2 2909 
+___ 2910 2 2910 
+___ 2911 2 2911 
+___ 2912 2 2912 
+___ 2913 2 2913 
+___ 2914 1 2914 
+___ 2915 2 2915 
+___ 2916 2 2916 
+___ 2917 2 2917 
+___ 2918 2 2918 
+___ 2919 2 2919 
+___ 2920 2 2920 
+___ 2921 2 2921 
+___ 2922 2 2922 
+___ 2923 2 2923 
+___ 2924 2 2924 
+___ 2925 2 2925 
+___ 2926 2 2926 
+___ 2927 2 2927 
+___ 2928 2 2928 
+___ 2929 2 2929 
+___ 2930 2 2930 
+___ 2931 2 2931 
+___ 2932 2 2932 
+___ 2933 2 2933 
+___ 2934 2 2934 
+___ 2935 2 2935 
+___ 2936 2 2936 
+___ 2937 2 2937 
+___ 2938 2 2938 
+___ 2939 2 2939 
+___ 2940 2 2940 
+___ 2941 2 2941 
+___ 2942 2 2942 
+___ 2943 2 2943 
+___ 2944 2 2944 
+___ 2945 2 2945 
+___ 2946 2 2946 
+___ 2947 2 2947 
+___ 2948 2 2948 
+___ 2949 1 2949 
+___ 2950 2 2950 
+___ 2951 2 2951 
+___ 2952 2 2952 
+___ 2953 2 2953 
+___ 2954 2 2954 
+___ 2955 2 2955 
+___ 2956 2 2956 
+___ 2957 2 2957 
+___ 2958 2 2958 
+___ 2959 2 2959 
+___ 2960 2 2960 
+___ 2961 2 2961 
+___ 2962 2 2962 
+___ 2963 2 2963 
+___ 2964 2 2964 
+___ 2965 2 2965 
+___ 2966 2 2966 
+___ 2967 2 2967 
+___ 2968 2 2968 
+___ 2969 2 2969 
+___ 2970 2 2970 
+___ 2971 2 2971 
+___ 2972 2 2972 
+___ 2973 2 2973 
+___ 2974 2 2974 
+___ 2975 2 2975 
+___ 2976 2 2976 
+___ 2977 2 2977 
+___ 2978 2 2978 
+___ 2979 2 2979 
+___ 2980 2 2980 
+___ 2981 2 2981 
+___ 2982 2 2982 
+___ 2983 2 2983 
+___ 2984 1 2984 
+___ 2985 1 2985 
+___ 2986 2 2986 
+___ 2987 2 2987 
+___ 2988 2 2988 
+___ 2989 2 2989 
+___ 2990 2 2990 
+___ 2991 2 2991 
+___ 2992 2 2992 
+___ 2993 2 2993 
+___ 2994 2 2994 
+___ 2995 2 2995 
+___ 2996 2 2996 
+___ 2997 2 2997 
+___ 2998 2 2998 
+___ 2999 2 2999 
+___ 3000 2 3000 
+___ 3001 2 3001 
+___ 3002 2 3002 
+___ 3003 2 3003 
+___ 3004 2 3004 
+___ 3005 2 3005 
+___ 3006 2 3006 
+___ 3007 2 3007 
+___ 3008 2 3008 
+___ 3009 2 3009 
+___ 3010 2 3010 
+___ 3011 2 3011 
+___ 3012 2 3012 
+___ 3013 2 3013 
+___ 3014 2 3014 
+___ 3015 2 3015 
+___ 3016 1 3016 
+___ 3017 2 3017 
+___ 3018 2 3018 
+___ 3019 2 3019 
+___ 3020 2 3020 
+___ 3021 2 3021 
+___ 3022 2 3022 
+___ 3023 2 3023 
+___ 3024 2 3024 
+___ 3025 2 3025 
+___ 3026 2 3026 
+___ 3027 2 3027 
+___ 3028 2 3028 
+___ 3029 2 3029 
+___ 3030 2 3030 
+___ 3031 2 3031 
+___ 3032 2 3032 
+___ 3033 2 3033 
+___ 3034 2 3034 
+___ 3035 2 3035 
+___ 3036 2 3036 
+___ 3037 2 3037 
+___ 3038 2 3038 
+___ 3039 2 3039 
+___ 3040 2 3040 
+___ 3041 2 3041 
+___ 3042 2 3042 
+___ 3043 2 3043 
+___ 3044 2 3044 
+___ 3045 2 3045 
+___ 3046 2 3046 
+___ 3047 1 3047 
+___ 3048 2 3048 
+___ 3049 2 3049 
+___ 3050 2 3050 
+___ 3051 2 3051 
+___ 3052 2 3052 
+___ 3053 2 3053 
+___ 3054 2 3054 
+___ 3055 2 3055 
+___ 3056 2 3056 
+___ 3057 2 3057 
+___ 3058 2 3058 
+___ 3059 2 3059 
+___ 3060 2 3060 
+___ 3061 2 3061 
+___ 3062 2 3062 
+___ 3063 2 3063 
+___ 3064 2 3064 
+___ 3065 2 3065 
+___ 3066 2 3066 
+___ 3067 2 3067 
+___ 3068 2 3068 
+___ 3069 2 3069 
+___ 3070 2 3070 
+___ 3071 2 3071 
+___ 3072 2 3072 
+___ 3073 2 3073 
+___ 3074 2 3074 
+___ 3075 2 3075 
+___ 3076 2 3076 
+___ 3077 2 3077 
+___ 3078 1 3078 
+___ 3079 2 3079 
+___ 3080 2 3080 
+___ 3081 2 3081 
+___ 3082 2 3082 
+___ 3083 2 3083 
+___ 3084 2 3084 
+___ 3085 2 3085 
+___ 3086 2 3086 
+___ 3087 2 3087 
+___ 3088 2 3088 
+___ 3089 2 3089 
+___ 3090 2 3090 
+___ 3091 2 3091 
+___ 3092 2 3092 
+___ 3093 2 3093 
+___ 3094 2 3094 
+___ 3095 2 3095 
+___ 3096 2 3096 
+___ 3097 2 3097 
+___ 3098 2 3098 
+___ 3099 2 3099 
+___ 3100 2 3100 
+___ 3101 2 3101 
+___ 3102 2 3102 
+___ 3103 2 3103 
+___ 3104 2 3104 
+___ 3105 2 3105 
+___ 3106 2 3106 
+___ 3107 2 3107 
+___ 3108 2 3108 
+___ 3109 1 3109 
+___ 3110 2 3110 
+___ 3111 2 3111 
+___ 3112 2 3112 
+___ 3113 2 3113 
+___ 3114 2 3114 
+___ 3115 2 3115 
+___ 3116 2 3116 
+___ 3117 2 3117 
+___ 3118 2 3118 
+___ 3119 2 3119 
+___ 3120 2 3120 
+___ 3121 2 3121 
+___ 3122 2 3122 
+___ 3123 2 3123 
+___ 3124 2 3124 
+___ 3125 2 3125 
+___ 3126 2 3126 
+___ 3127 2 3127 
+___ 3128 2 3128 
+___ 3129 2 3129 
+___ 3130 2 3130 
+___ 3131 2 3131 
+___ 3132 2 3132 
+___ 3133 2 3133 
+___ 3134 2 3134 
+___ 3135 2 3135 
+___ 3136 2 3136 
+___ 3137 2 3137 
+___ 3138 2 3138 
+___ 3139 2 3139 
+___ 3140 1 3140 
+___ 3141 2 3141 
+___ 3142 2 3142 
+___ 3143 2 3143 
+___ 3144 2 3144 
+___ 3145 2 3145 
+___ 3146 2 3146 
+___ 3147 2 3147 
+___ 3148 2 3148 
+___ 3149 2 3149 
+___ 3150 2 3150 
+___ 3151 2 3151 
+___ 3152 2 3152 
+___ 3153 2 3153 
+___ 3154 2 3154 
+___ 3155 2 3155 
+___ 3156 2 3156 
+___ 3157 2 3157 
+___ 3158 2 3158 
+___ 3159 2 3159 
+___ 3160 2 3160 
+___ 3161 2 3161 
+___ 3162 2 3162 
+___ 3163 2 3163 
+___ 3164 2 3164 
+___ 3165 2 3165 
+___ 3166 2 3166 
+___ 3167 2 3167 
+___ 3168 2 3168 
+___ 3169 2 3169 
+___ 3170 2 3170 
+___ 3171 1 3171 
+___ 3172 2 3172 
+___ 3173 2 3173 
+___ 3174 2 3174 
+___ 3175 2 3175 
+___ 3176 2 3176 
+___ 3177 2 3177 
+___ 3178 2 3178 
+___ 3179 2 3179 
+___ 3180 2 3180 
+___ 3181 2 3181 
+___ 3182 2 3182 
+___ 3183 2 3183 
+___ 3184 2 3184 
+___ 3185 2 3185 
+___ 3186 2 3186 
+___ 3187 2 3187 
+___ 3188 2 3188 
+___ 3189 2 3189 
+___ 3190 2 3190 
+___ 3191 2 3191 
+___ 3192 2 3192 
+___ 3193 2 3193 
+___ 3194 2 3194 
+___ 3195 2 3195 
+___ 3196 2 3196 
+___ 3197 2 3197 
+___ 3198 2 3198 
+___ 3199 2 3199 
+___ 3200 2 3200 
+___ 3201 2 3201 
+___ 3202 1 3202 
+___ 3203 2 3203 
+___ 3204 2 3204 
+___ 3205 2 3205 
+___ 3206 2 3206 
+___ 3207 2 3207 
+___ 3208 2 3208 
+___ 3209 2 3209 
+___ 3210 2 3210 
+___ 3211 2 3211 
+___ 3212 2 3212 
+___ 3213 2 3213 
+___ 3214 2 3214 
+___ 3215 2 3215 
+___ 3216 2 3216 
+___ 3217 2 3217 
+___ 3218 2 3218 
+___ 3219 2 3219 
+___ 3220 2 3220 
+___ 3221 2 3221 
+___ 3222 2 3222 
+___ 3223 2 3223 
+___ 3224 2 3224 
+___ 3225 2 3225 
+___ 3226 2 3226 
+___ 3227 2 3227 
+___ 3228 2 3228 
+___ 3229 2 3229 
+___ 3230 2 3230 
+___ 3231 2 3231 
+___ 3232 2 3232 
+___ 3233 1 3233 
+___ 3234 2 3234 
+___ 3235 2 3235 
+___ 3236 2 3236 
+___ 3237 2 3237 
+___ 3238 2 3238 
+___ 3239 2 3239 
+___ 3240 2 3240 
+___ 3241 2 3241 
+___ 3242 2 3242 
+___ 3243 2 3243 
+___ 3244 2 3244 
+___ 3245 2 3245 
+___ 3246 2 3246 
+___ 3247 2 3247 
+___ 3248 2 3248 
+___ 3249 2 3249 
+___ 3250 2 3250 
+___ 3251 2 3251 
+___ 3252 2 3252 
+___ 3253 2 3253 
+___ 3254 2 3254 
+___ 3255 2 3255 
+___ 3256 2 3256 
+___ 3257 2 3257 
+___ 3258 2 3258 
+___ 3259 2 3259 
+___ 3260 2 3260 
+___ 3261 2 3261 
+___ 3262 2 3262 
+___ 3263 2 3263 
+___ 3264 1 3264 
+___ 3265 2 3265 
+___ 3266 2 3266 
+___ 3267 2 3267 
+___ 3268 2 3268 
+___ 3269 2 3269 
+___ 3270 2 3270 
+___ 3271 2 3271 
+___ 3272 2 3272 
+___ 3273 2 3273 
+___ 3274 2 3274 
+___ 3275 2 3275 
+___ 3276 2 3276 
+___ 3277 2 3277 
+___ 3278 2 3278 
+___ 3279 2 3279 
+___ 3280 2 3280 
+___ 3281 2 3281 
+___ 3282 2 3282 
+___ 3283 2 3283 
+___ 3284 2 3284 
+___ 3285 2 3285 
+___ 3286 2 3286 
+___ 3287 2 3287 
+___ 3288 2 3288 
+___ 3289 2 3289 
+___ 3290 2 3290 
+___ 3291 2 3291 
+___ 3292 2 3292 
+___ 3293 2 3293 
+___ 3294 2 3294 
+___ 3295 1 3295 
+___ 3296 2 3296 
+___ 3297 2 3297 
+___ 3298 2 3298 
+___ 3299 2 3299 
+___ 3300 2 3300 
+___ 3301 2 3301 
+___ 3302 2 3302 
+___ 3303 2 3303 
+___ 3304 2 3304 
+___ 3305 2 3305 
+___ 3306 2 3306 
+___ 3307 2 3307 
+___ 3308 2 3308 
+___ 3309 2 3309 
+___ 3310 2 3310 
+___ 3311 2 3311 
+___ 3312 2 3312 
+___ 3313 2 3313 
+___ 3314 2 3314 
+___ 3315 2 3315 
+___ 3316 2 3316 
+___ 3317 2 3317 
+___ 3318 2 3318 
+___ 3319 2 3319 
+___ 3320 2 3320 
+___ 3321 2 3321 
+___ 3322 2 3322 
+___ 3323 2 3323 
+___ 3324 2 3324 
+___ 3325 2 3325 
+___ 3326 1 3326 
+___ 3327 2 3327 
+___ 3328 2 3328 
+___ 3329 2 3329 
+___ 3330 2 3330 
+___ 3331 2 3331 
+___ 3332 2 3332 
+___ 3333 2 3333 
+___ 3334 2 3334 
+___ 3335 2 3335 
+___ 3336 2 3336 
+___ 3337 2 3337 
+___ 3338 2 3338 
+___ 3339 2 3339 
+___ 3340 2 3340 
+___ 3341 2 3341 
+___ 3342 2 3342 
+___ 3343 2 3343 
+___ 3344 2 3344 
+___ 3345 2 3345 
+___ 3346 2 3346 
+___ 3347 2 3347 
+___ 3348 2 3348 
+___ 3349 2 3349 
+___ 3350 2 3350 
+___ 3351 2 3351 
+___ 3352 2 3352 
+___ 3353 2 3353 
+___ 3354 2 3354 
+___ 3355 2 3355 
+___ 3356 2 3356 
+___ 3357 1 3357 
+___ 3358 2 3358 
+___ 3359 2 3359 
+___ 3360 2 3360 
+___ 3361 2 3361 
+___ 3362 2 3362 
+___ 3363 2 3363 
+___ 3364 2 3364 
+___ 3365 2 3365 
+___ 3366 2 3366 
+___ 3367 2 3367 
+___ 3368 2 3368 
+___ 3369 2 3369 
+___ 3370 2 3370 
+___ 3371 2 3371 
+___ 3372 2 3372 
+___ 3373 2 3373 
+___ 3374 2 3374 
+___ 3375 2 3375 
+___ 3376 2 3376 
+___ 3377 2 3377 
+___ 3378 2 3378 
+___ 3379 2 3379 
+___ 3380 2 3380 
+___ 3381 2 3381 
+___ 3382 2 3382 
+___ 3383 2 3383 
+___ 3384 2 3384 
+___ 3385 2 3385 
+___ 3386 2 3386 
+___ 3387 2 3387 
+___ 3388 1 3388 
+___ 3389 2 3389 
+___ 3390 2 3390 
+___ 3391 2 3391 
+___ 3392 2 3392 
+___ 3393 2 3393 
+___ 3394 2 3394 
+___ 3395 2 3395 
+___ 3396 2 3396 
+___ 3397 2 3397 
+___ 3398 2 3398 
+___ 3399 2 3399 
+___ 3400 2 3400 
+___ 3401 2 3401 
+___ 3402 2 3402 
+___ 3403 2 3403 
+___ 3404 2 3404 
+___ 3405 2 3405 
+___ 3406 2 3406 
+___ 3407 2 3407 
+___ 3408 2 3408 
+___ 3409 2 3409 
+___ 3410 2 3410 
+___ 3411 2 3411 
+___ 3412 2 3412 
+___ 3413 2 3413 
+___ 3414 2 3414 
+___ 3415 2 3415 
+___ 3416 2 3416 
+___ 3417 2 3417 
+___ 3418 2 3418 
+___ 3419 1 3419 
+___ 3420 2 3420 
+___ 3421 2 3421 
+___ 3422 2 3422 
+___ 3423 2 3423 
+___ 3424 2 3424 
+___ 3425 2 3425 
+___ 3426 2 3426 
+___ 3427 2 3427 
+___ 3428 2 3428 
+___ 3429 2 3429 
+___ 3430 2 3430 
+___ 3431 2 3431 
+___ 3432 2 3432 
+___ 3433 2 3433 
+___ 3434 2 3434 
+___ 3435 2 3435 
+___ 3436 2 3436 
+___ 3437 2 3437 
+___ 3438 2 3438 
+___ 3439 2 3439 
+___ 3440 2 3440 
+___ 3441 2 3441 
+___ 3442 2 3442 
+___ 3443 2 3443 
+___ 3444 2 3444 
+___ 3445 2 3445 
+___ 3446 2 3446 
+___ 3447 2 3447 
+___ 3448 2 3448 
+___ 3449 2 3449 
+___ 3450 1 3450 
+___ 3451 2 3451 
+___ 3452 2 3452 
+___ 3453 2 3453 
+___ 3454 2 3454 
+___ 3455 2 3455 
+___ 3456 2 3456 
+___ 3457 2 3457 
+___ 3458 2 3458 
+___ 3459 2 3459 
+___ 3460 2 3460 
+___ 3461 2 3461 
+___ 3462 2 3462 
+___ 3463 2 3463 
+___ 3464 2 3464 
+___ 3465 2 3465 
+___ 3466 2 3466 
+___ 3467 2 3467 
+___ 3468 2 3468 
+___ 3469 2 3469 
+___ 3470 2 3470 
+___ 3471 2 3471 
+___ 3472 2 3472 
+___ 3473 2 3473 
+___ 3474 2 3474 
+___ 3475 2 3475 
+___ 3476 2 3476 
+___ 3477 2 3477 
+___ 3478 2 3478 
+___ 3479 2 3479 
+___ 3480 2 3480 
+___ 3481 1 3481 
+___ 3482 2 3482 
+___ 3483 2 3483 
+___ 3484 2 3484 
+___ 3485 2 3485 
+___ 3486 2 3486 
+___ 3487 2 3487 
+___ 3488 2 3488 
+___ 3489 2 3489 
+___ 3490 2 3490 
+___ 3491 2 3491 
+___ 3492 2 3492 
+___ 3493 2 3493 
+___ 3494 2 3494 
+___ 3495 2 3495 
+___ 3496 2 3496 
+___ 3497 2 3497 
+___ 3498 2 3498 
+___ 3499 2 3499 
+___ 3500 2 3500 
+___ 3501 2 3501 
+___ 3502 2 3502 
+___ 3503 2 3503 
+___ 3504 2 3504 
+___ 3505 2 3505 
+___ 3506 2 3506 
+___ 3507 2 3507 
+___ 3508 2 3508 
+___ 3509 2 3509 
+___ 3510 2 3510 
+___ 3511 2 3511 
+___ 3512 1 3512 
+___ 3513 2 3513 
+___ 3514 2 3514 
+___ 3515 2 3515 
+___ 3516 2 3516 
+___ 3517 2 3517 
+___ 3518 2 3518 
+___ 3519 2 3519 
+___ 3520 2 3520 
+___ 3521 2 3521 
+___ 3522 2 3522 
+___ 3523 2 3523 
+___ 3524 2 3524 
+___ 3525 2 3525 
+___ 3526 2 3526 
+___ 3527 2 3527 
+___ 3528 2 3528 
+___ 3529 2 3529 
+___ 3530 2 3530 
+___ 3531 2 3531 
+___ 3532 2 3532 
+___ 3533 2 3533 
+___ 3534 2 3534 
+___ 3535 2 3535 
+___ 3536 2 3536 
+___ 3537 2 3537 
+___ 3538 2 3538 
+___ 3539 2 3539 
+___ 3540 2 3540 
+___ 3541 2 3541 
+___ 3542 2 3542 
+___ 3543 1 3543 
+___ 3544 2 3544 
+___ 3545 2 3545 
+___ 3546 2 3546 
+___ 3547 2 3547 
+___ 3548 2 3548 
+___ 3549 2 3549 
+___ 3550 2 3550 
+___ 3551 2 3551 
+___ 3552 2 3552 
+___ 3553 2 3553 
+___ 3554 2 3554 
+___ 3555 2 3555 
+___ 3556 2 3556 
+___ 3557 2 3557 
+___ 3558 2 3558 
+___ 3559 2 3559 
+___ 3560 2 3560 
+___ 3561 2 3561 
+___ 3562 2 3562 
+___ 3563 2 3563 
+___ 3564 2 3564 
+___ 3565 2 3565 
+___ 3566 2 3566 
+___ 3567 2 3567 
+___ 3568 2 3568 
+___ 3569 2 3569 
+___ 3570 2 3570 
+___ 3571 2 3571 
+___ 3572 2 3572 
+___ 3573 2 3573 
+___ 3574 1 3574 
+___ 3575 2 3575 
+___ 3576 2 3576 
+___ 3577 2 3577 
+___ 3578 2 3578 
+___ 3579 2 3579 
+___ 3580 2 3580 
+___ 3581 2 3581 
+___ 3582 2 3582 
+___ 3583 2 3583 
+___ 3584 2 3584 
+___ 3585 2 3585 
+___ 3586 2 3586 
+___ 3587 2 3587 
+___ 3588 2 3588 
+___ 3589 2 3589 
+___ 3590 2 3590 
+___ 3591 2 3591 
+___ 3592 2 3592 
+___ 3593 2 3593 
+___ 3594 2 3594 
+___ 3595 2 3595 
+___ 3596 2 3596 
+___ 3597 2 3597 
+___ 3598 2 3598 
+___ 3599 2 3599 
+___ 3600 2 3600 
+___ 3601 2 3601 
+___ 3602 2 3602 
+___ 3603 2 3603 
+___ 3604 2 3604 
+___ 3605 1 3605 
+___ 3606 2 3606 
+___ 3607 2 3607 
+___ 3608 2 3608 
+___ 3609 2 3609 
+___ 3610 2 3610 
+___ 3611 2 3611 
+___ 3612 2 3612 
+___ 3613 2 3613 
+___ 3614 2 3614 
+___ 3615 2 3615 
+___ 3616 2 3616 
+___ 3617 2 3617 
+___ 3618 2 3618 
+___ 3619 2 3619 
+___ 3620 2 3620 
+___ 3621 2 3621 
+___ 3622 2 3622 
+___ 3623 2 3623 
+___ 3624 2 3624 
+___ 3625 2 3625 
+___ 3626 2 3626 
+___ 3627 2 3627 
+___ 3628 2 3628 
+___ 3629 2 3629 
+___ 3630 2 3630 
+___ 3631 2 3631 
+___ 3632 2 3632 
+___ 3633 2 3633 
+___ 3634 2 3634 
+___ 3635 2 3635 
+___ 3636 1 3636 
+___ 3637 2 3637 
+___ 3638 2 3638 
+___ 3639 2 3639 
+___ 3640 2 3640 
+___ 3641 2 3641 
+___ 3642 2 3642 
+___ 3643 2 3643 
+___ 3644 2 3644 
+___ 3645 2 3645 
+___ 3646 2 3646 
+___ 3647 2 3647 
+___ 3648 2 3648 
+___ 3649 2 3649 
+___ 3650 2 3650 
+___ 3651 2 3651 
+___ 3652 2 3652 
+___ 3653 2 3653 
+___ 3654 2 3654 
+___ 3655 2 3655 
+___ 3656 2 3656 
+___ 3657 2 3657 
+___ 3658 2 3658 
+___ 3659 2 3659 
+___ 3660 2 3660 
+___ 3661 2 3661 
+___ 3662 2 3662 
+___ 3663 2 3663 
+___ 3664 2 3664 
+___ 3665 2 3665 
+___ 3666 2 3666 
+___ 3667 1 3667 
+___ 3668 2 3668 
+___ 3669 2 3669 
+___ 3670 2 3670 
+___ 3671 2 3671 
+___ 3672 2 3672 
+___ 3673 2 3673 
+___ 3674 2 3674 
+___ 3675 2 3675 
+___ 3676 2 3676 
+___ 3677 2 3677 
+___ 3678 2 3678 
+___ 3679 2 3679 
+___ 3680 2 3680 
+___ 3681 2 3681 
+___ 3682 2 3682 
+___ 3683 2 3683 
+___ 3684 2 3684 
+___ 3685 2 3685 
+___ 3686 2 3686 
+___ 3687 2 3687 
+___ 3688 2 3688 
+___ 3689 2 3689 
+___ 3690 2 3690 
+___ 3691 2 3691 
+___ 3692 2 3692 
+___ 3693 2 3693 
+___ 3694 2 3694 
+___ 3695 2 3695 
+___ 3696 2 3696 
+___ 3697 2 3697 
+___ 3698 1 3698 
+___ 3699 2 3699 
+___ 3700 2 3700 
+___ 3701 2 3701 
+___ 3702 2 3702 
+___ 3703 2 3703 
+___ 3704 2 3704 
+___ 3705 2 3705 
+___ 3706 2 3706 
+___ 3707 2 3707 
+___ 3708 2 3708 
+___ 3709 2 3709 
+___ 3710 2 3710 
+___ 3711 2 3711 
+___ 3712 2 3712 
+___ 3713 2 3713 
+___ 3714 2 3714 
+___ 3715 2 3715 
+___ 3716 2 3716 
+___ 3717 2 3717 
+___ 3718 2 3718 
+___ 3719 2 3719 
+___ 3720 2 3720 
+___ 3721 2 3721 
+___ 3722 2 3722 
+___ 3723 2 3723 
+___ 3724 2 3724 
+___ 3725 2 3725 
+___ 3726 2 3726 
+___ 3727 2 3727 
+___ 3728 2 3728 
+___ 3729 1 3729 
+___ 3730 2 3730 
+___ 3731 2 3731 
+___ 3732 2 3732 
+___ 3733 2 3733 
+___ 3734 2 3734 
+___ 3735 2 3735 
+___ 3736 2 3736 
+___ 3737 2 3737 
+___ 3738 2 3738 
+___ 3739 2 3739 
+___ 3740 2 3740 
+___ 3741 2 3741 
+___ 3742 2 3742 
+___ 3743 2 3743 
+___ 3744 2 3744 
+___ 3745 2 3745 
+___ 3746 2 3746 
+___ 3747 2 3747 
+___ 3748 2 3748 
+___ 3749 2 3749 
+___ 3750 2 3750 
+___ 3751 2 3751 
+___ 3752 2 3752 
+___ 3753 2 3753 
+___ 3754 2 3754 
+___ 3755 2 3755 
+___ 3756 2 3756 
+___ 3757 2 3757 
+___ 3758 2 3758 
+___ 3759 2 3759 
+___ 3760 1 3760 
+___ 3761 2 3761 
+___ 3762 2 3762 
+___ 3763 2 3763 
+___ 3764 2 3764 
+___ 3765 2 3765 
+___ 3766 2 3766 
+___ 3767 2 3767 
+___ 3768 2 3768 
+___ 3769 2 3769 
+___ 3770 2 3770 
+___ 3771 2 3771 
+___ 3772 2 3772 
+___ 3773 2 3773 
+___ 3774 2 3774 
+___ 3775 2 3775 
+___ 3776 2 3776 
+___ 3777 2 3777 
+___ 3778 2 3778 
+___ 3779 2 3779 
+___ 3780 2 3780 
+___ 3781 2 3781 
+___ 3782 2 3782 
+___ 3783 2 3783 
+___ 3784 2 3784 
+___ 3785 2 3785 
+___ 3786 2 3786 
+___ 3787 2 3787 
+___ 3788 2 3788 
+___ 3789 2 3789 
+___ 3790 2 3790 
+___ 3791 1 3791 
+___ 3792 2 3792 
+___ 3793 2 3793 
+___ 3794 2 3794 
+___ 3795 2 3795 
+___ 3796 2 3796 
+___ 3797 2 3797 
+___ 3798 2 3798 
+___ 3799 2 3799 
+___ 3800 2 3800 
+___ 3801 2 3801 
+___ 3802 2 3802 
+___ 3803 2 3803 
+___ 3804 2 3804 
+___ 3805 2 3805 
+___ 3806 2 3806 
+___ 3807 2 3807 
+___ 3808 2 3808 
+___ 3809 2 3809 
+___ 3810 2 3810 
+___ 3811 2 3811 
+___ 3812 2 3812 
+___ 3813 2 3813 
+___ 3814 2 3814 
+___ 3815 2 3815 
+___ 3816 2 3816 
+___ 3817 2 3817 
+___ 3818 2 3818 
+___ 3819 2 3819 
+___ 3820 2 3820 
+___ 3821 2 3821 
+___ 3822 1 3822 
+___ 3823 2 3823 
+___ 3824 2 3824 
+___ 3825 2 3825 
+___ 3826 2 3826 
+___ 3827 2 3827 
+___ 3828 2 3828 
+___ 3829 2 3829 
+___ 3830 2 3830 
+___ 3831 2 3831 
+___ 3832 2 3832 
+___ 3833 2 3833 
+___ 3834 2 3834 
+___ 3835 2 3835 
+___ 3836 2 3836 
+___ 3837 2 3837 
+___ 3838 2 3838 
+___ 3839 2 3839 
+___ 3840 2 3840 
+___ 3841 2 3841 
+___ 3842 2 3842 
+___ 3843 2 3843 
+___ 3844 2 3844 
+___ 3845 2 3845 
+___ 3846 2 3846 
+___ 3847 2 3847 
+___ 3848 2 3848 
+___ 3849 2 3849 
+___ 3850 2 3850 
+___ 3851 2 3851 
+___ 3852 2 3852 
+___ 3853 1 3853 
+___ 3854 2 3854 
+___ 3855 2 3855 
+___ 3856 2 3856 
+___ 3857 2 3857 
+___ 3858 2 3858 
+___ 3859 2 3859 
+___ 3860 2 3860 
+___ 3861 2 3861 
+___ 3862 2 3862 
+___ 3863 2 3863 
+___ 3864 2 3864 
+___ 3865 2 3865 
+___ 3866 2 3866 
+___ 3867 2 3867 
+___ 3868 2 3868 
+___ 3869 2 3869 
+___ 3870 2 3870 
+___ 3871 2 3871 
+___ 3872 2 3872 
+___ 3873 2 3873 
+___ 3874 2 3874 
+___ 3875 2 3875 
+___ 3876 2 3876 
+___ 3877 2 3877 
+___ 3878 2 3878 
+___ 3879 2 3879 
+___ 3880 2 3880 
+___ 3881 2 3881 
+___ 3882 2 3882 
+___ 3883 2 3883 
+___ 3884 1 3884 
+___ 3885 2 3885 
+___ 3886 2 3886 
+___ 3887 2 3887 
+___ 3888 2 3888 
+___ 3889 2 3889 
+___ 3890 2 3890 
+___ 3891 2 3891 
+___ 3892 2 3892 
+___ 3893 2 3893 
+___ 3894 2 3894 
+___ 3895 2 3895 
+___ 3896 2 3896 
+___ 3897 2 3897 
+___ 3898 2 3898 
+___ 3899 2 3899 
+___ 3900 2 3900 
+___ 3901 2 3901 
+___ 3902 2 3902 
+___ 3903 2 3903 
+___ 3904 2 3904 
+___ 3905 2 3905 
+___ 3906 2 3906 
+___ 3907 2 3907 
+___ 3908 2 3908 
+___ 3909 2 3909 
+___ 3910 2 3910 
+___ 3911 2 3911 
+___ 3912 2 3912 
+___ 3913 2 3913 
+___ 3914 2 3914 
+___ 3915 1 3915 
+___ 3916 2 3916 
+___ 3917 2 3917 
+___ 3918 2 3918 
+___ 3919 2 3919 
+___ 3920 2 3920 
+___ 3921 2 3921 
+___ 3922 2 3922 
+___ 3923 2 3923 
+___ 3924 2 3924 
+___ 3925 2 3925 
+___ 3926 2 3926 
+___ 3927 2 3927 
+___ 3928 2 3928 
+___ 3929 2 3929 
+___ 3930 2 3930 
+___ 3931 2 3931 
+___ 3932 2 3932 
+___ 3933 2 3933 
+___ 3934 2 3934 
+___ 3935 2 3935 
+___ 3936 2 3936 
+___ 3937 2 3937 
+___ 3938 2 3938 
+___ 3939 2 3939 
+___ 3940 2 3940 
+___ 3941 2 3941 
+___ 3942 2 3942 
+___ 3943 2 3943 
+___ 3944 2 3944 
+___ 3945 2 3945 
+___ 3946 1 3946 
+___ 3947 2 3947 
+___ 3948 2 3948 
+___ 3949 2 3949 
+___ 3950 2 3950 
+___ 3951 2 3951 
+___ 3952 2 3952 
+___ 3953 2 3953 
+___ 3954 2 3954 
+___ 3955 2 3955 
+___ 3956 2 3956 
+___ 3957 2 3957 
+___ 3958 2 3958 
+___ 3959 2 3959 
+___ 3960 2 3960 
+___ 3961 2 3961 
+___ 3962 2 3962 
+___ 3963 2 3963 
+___ 3964 2 3964 
+___ 3965 2 3965 
+___ 3966 2 3966 
+___ 3967 2 3967 
+___ 3968 2 3968 
+___ 3969 2 3969 
+___ 3970 2 3970 
+___ 3971 2 3971 
+___ 3972 2 3972 
+___ 3973 2 3973 
+___ 3974 2 3974 
+___ 3975 2 3975 
+___ 3976 2 3976 
+___ 3977 1 3977 
+___ 3978 2 3978 
+___ 3979 2 3979 
+___ 3980 2 3980 
+___ 3981 2 3981 
+___ 3982 2 3982 
+___ 3983 2 3983 
+___ 3984 2 3984 
+___ 3985 2 3985 
+___ 3986 2 3986 
+___ 3987 2 3987 
+___ 3988 2 3988 
+___ 3989 2 3989 
+___ 3990 2 3990 
+___ 3991 2 3991 
+___ 3992 2 3992 
+___ 3993 2 3993 
+___ 3994 2 3994 
+___ 3995 2 3995 
+___ 3996 2 3996 
+___ 3997 2 3997 
+___ 3998 2 3998 
+___ 3999 2 3999 
+___ 4000 2 4000 
+___ 4001 2 4001 
+___ 4002 2 4002 
+___ 4003 2 4003 
+___ 4004 2 4004 
+___ 4005 2 4005 
+___ 4006 2 4006 
+___ 4007 2 4007 
+___ 4008 1 4008 
+___ 4009 2 4009 
+___ 4010 2 4010 
+___ 4011 2 4011 
+___ 4012 2 4012 
+___ 4013 2 4013 
+___ 4014 2 4014 
+___ 4015 2 4015 
+___ 4016 2 4016 
+___ 4017 2 4017 
+___ 4018 2 4018 
+___ 4019 2 4019 
+___ 4020 2 4020 
+___ 4021 2 4021 
+___ 4022 2 4022 
+___ 4023 2 4023 
+___ 4024 2 4024 
+___ 4025 2 4025 
+___ 4026 2 4026 
+___ 4027 2 4027 
+___ 4028 2 4028 
+___ 4029 2 4029 
+___ 4030 2 4030 
+___ 4031 2 4031 
+___ 4032 2 4032 
+___ 4033 2 4033 
+___ 4034 2 4034 
+___ 4035 2 4035 
+___ 4036 2 4036 
+___ 4037 2 4037 
+___ 4038 2 4038 
+___ 4039 1 4039 
+___ 4040 2 4040 
+___ 4041 2 4041 
+___ 4042 2 4042 
+___ 4043 2 4043 
+___ 4044 2 4044 
+___ 4045 2 4045 
+___ 4046 2 4046 
+___ 4047 2 4047 
+___ 4048 2 4048 
+___ 4049 2 4049 
+___ 4050 2 4050 
+___ 4051 2 4051 
+___ 4052 2 4052 
+___ 4053 2 4053 
+___ 4054 2 4054 
+___ 4055 2 4055 
+___ 4056 2 4056 
+___ 4057 2 4057 
+___ 4058 2 4058 
+___ 4059 2 4059 
+___ 4060 2 4060 
+___ 4061 2 4061 
+___ 4062 2 4062 
+___ 4063 2 4063 
+___ 4064 2 4064 
+___ 4065 2 4065 
+___ 4066 2 4066 
+___ 4067 2 4067 
+___ 4068 2 4068 
+___ 4069 2 4069 
+___ 4070 1 4070 
+___ 4071 1 4071 
+___ 4072 2 4072 
+___ 4073 2 4073 
+___ 4074 2 4074 
+___ 4075 2 4075 
+___ 4076 2 4076 
+___ 4077 2 4077 
+___ 4078 2 4078 
+___ 4079 2 4079 
+___ 4080 2 4080 
+___ 4081 2 4081 
+___ 4082 2 4082 
+___ 4083 2 4083 
+___ 4084 2 4084 
+___ 4085 2 4085 
+___ 4086 2 4086 
+___ 4087 2 4087 
+___ 4088 2 4088 
+___ 4089 2 4089 
+___ 4090 2 4090 
+___ 4091 2 4091 
+___ 4092 2 4092 
+___ 4093 2 4093 
+___ 4094 2 4094 
+___ 4095 2 4095 
+___ 4096 2 4096 
+___ 4097 2 4097 
+___ 4098 2 4098 
+___ 4099 2 4099 
+___ 4100 2 4100 
+___ 4101 2 4101 
+___ 4102 1 4102 
+___ 4103 2 4103 
+___ 4104 2 4104 
+___ 4105 2 4105 
+___ 4106 2 4106 
+___ 4107 2 4107 
+___ 4108 2 4108 
+___ 4109 2 4109 
+___ 4110 2 4110 
+___ 4111 2 4111 
+___ 4112 2 4112 
+___ 4113 2 4113 
+___ 4114 2 4114 
+___ 4115 2 4115 
+___ 4116 2 4116 
+___ 4117 2 4117 
+___ 4118 2 4118 
+___ 4119 2 4119 
+___ 4120 2 4120 
+___ 4121 2 4121 
+___ 4122 2 4122 
+___ 4123 2 4123 
+___ 4124 2 4124 
+___ 4125 2 4125 
+___ 4126 2 4126 
+___ 4127 2 4127 
+___ 4128 2 4128 
+___ 4129 2 4129 
+___ 4130 2 4130 
+___ 4131 2 4131 
+___ 4132 2 4132 
+___ 4133 1 4133 
+___ 4134 2 4134 
+___ 4135 2 4135 
+___ 4136 2 4136 
+___ 4137 2 4137 
+___ 4138 2 4138 
+___ 4139 2 4139 
+___ 4140 2 4140 
+___ 4141 2 4141 
+___ 4142 2 4142 
+___ 4143 2 4143 
+___ 4144 2 4144 
+___ 4145 2 4145 
+___ 4146 2 4146 
+___ 4147 2 4147 
+___ 4148 2 4148 
+___ 4149 2 4149 
+___ 4150 2 4150 
+___ 4151 2 4151 
+___ 4152 2 4152 
+___ 4153 2 4153 
+___ 4154 2 4154 
+___ 4155 2 4155 
+___ 4156 2 4156 
+___ 4157 2 4157 
+___ 4158 2 4158 
+___ 4159 2 4159 
+___ 4160 2 4160 
+___ 4161 2 4161 
+___ 4162 2 4162 
+___ 4163 2 4163 
+___ 4164 1 4164 
+___ 4165 2 4165 
+___ 4166 2 4166 
+___ 4167 2 4167 
+___ 4168 2 4168 
+___ 4169 2 4169 
+___ 4170 2 4170 
+___ 4171 2 4171 
+___ 4172 2 4172 
+___ 4173 2 4173 
+___ 4174 2 4174 
+___ 4175 2 4175 
+___ 4176 2 4176 
+___ 4177 2 4177 
+___ 4178 2 4178 
+___ 4179 2 4179 
+___ 4180 2 4180 
+___ 4181 2 4181 
+___ 4182 2 4182 
+___ 4183 2 4183 
+___ 4184 2 4184 
+___ 4185 2 4185 
+___ 4186 2 4186 
+___ 4187 2 4187 
+___ 4188 2 4188 
+___ 4189 2 4189 
+___ 4190 2 4190 
+___ 4191 2 4191 
+___ 4192 2 4192 
+___ 4193 2 4193 
+___ 4194 2 4194 
+___ 4195 1 4195 
+___ 4196 2 4196 
+___ 4197 2 4197 
+___ 4198 2 4198 
+___ 4199 2 4199 
+___ 4200 2 4200 
+___ 4201 2 4201 
+___ 4202 2 4202 
+___ 4203 2 4203 
+___ 4204 2 4204 
+___ 4205 2 4205 
+___ 4206 2 4206 
+___ 4207 2 4207 
+___ 4208 2 4208 
+___ 4209 2 4209 
+___ 4210 2 4210 
+___ 4211 2 4211 
+___ 4212 2 4212 
+___ 4213 2 4213 
+___ 4214 2 4214 
+___ 4215 2 4215 
+___ 4216 2 4216 
+___ 4217 2 4217 
+___ 4218 2 4218 
+___ 4219 2 4219 
+___ 4220 2 4220 
+___ 4221 2 4221 
+___ 4222 2 4222 
+___ 4223 2 4223 
+___ 4224 2 4224 
+___ 4225 2 4225 
+___ 4226 1 4226 
+___ 4227 2 4227 
+___ 4228 2 4228 
+___ 4229 2 4229 
+___ 4230 2 4230 
+___ 4231 2 4231 
+___ 4232 2 4232 
+___ 4233 2 4233 
+___ 4234 2 4234 
+___ 4235 2 4235 
+___ 4236 2 4236 
+___ 4237 2 4237 
+___ 4238 2 4238 
+___ 4239 2 4239 
+___ 4240 2 4240 
+___ 4241 2 4241 
+___ 4242 2 4242 
+___ 4243 2 4243 
+___ 4244 2 4244 
+___ 4245 2 4245 
+Error, user interrupt in
+  return prod; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3626 called from 
+stw * newwdbasisinv at tNonSingOverLats.g:95 called from
+thetask( neworec, newposs ); at tNonSingOverLats.g:131 called from
+thetask( neworec, newposs ); at tNonSingOverLats.g:131 called from
+thetask( iniorec, [ 1 .. Length( isotwords ) ] ); at tNonSingOverLats.g:138 called from
+NonSingOverLats( t0Gram, t0h ) at Task20260924Va.g:28 called from
+...  at Task20260924Va.g:62
+you can 'return;'
+brk> quit;
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> Read("Task20260923Va.g");
+Syntax error: ; expected in NonSingOverLats.g:120
+          Length(oldwdbasiss));
+                             ^
+totalrecsname0 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 0 
+kk 2 orecs 1 
+bb 0 kk 2 isgeom extdeg 1 sprats [ 0, 3 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 3 orecs 1 
+bb 0 kk 3 isgeom extdeg 1 sprats [ 0, 6 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 5 
+kk 4 orecs 1 
+bb 0 kk 4 isgeom extdeg 1 sprats [ 0, 10 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 5 orecs 1 
+bb 0 kk 5 isgeom extdeg 1 sprats [ 0, 15 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 35 
+kk 6 orecs 1 
+bb 0 kk 6 isgeom extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 1 
+__singisotwords 126 
+___ 2 1 2 
+kk 7 orecs 2 
+bb 0 kk 7 isgeom extdeg 1 sprats [ 0, 28 ] : 1 in 2 
+bb 0 kk 7 isgeom extdeg 2 sprats [ 0, 63 ] : 2 in 2 
+_______________ 
+__nonsingisotwords 11 
+__singisotwords 396 
+___ 2 1 2 
+___ 3 1 3 
+___ 4 1 4 
+___ 5 1 5 
+___ 6 1 6 
+___ 7 1 7 
+___ 8 1 8 
+___ 9 1 9 
+___ 10 1 10 
+___ 11 1 11 
+kk 8 orecs 11 
+bb 0 kk 8 isgeom extdeg 1 sprats [ 0, 36 ] : 1 in 11 
+bb 0 kk 8 isgeom extdeg 3 sprats [ 0, 120 ] : 2 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 3 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 4 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 5 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 6 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 7 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 8 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 9 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 10 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 11 in 11 
+_______________ 
+__nonsingisotwords 45 
+__singisotwords 210 
+___ 2 1 2 
+___ 3 1 3 
+___ 4 1 4 
+___ 5 1 5 
+___ 6 1 6 
+___ 7 1 7 
+___ 8 1 8 
+___ 9 1 9 
+___ 10 1 10 
+___ 11 1 11 
+___ 12 1 12 
+___ 13 1 13 
+___ 14 1 14 
+___ 15 1 15 
+___ 16 1 16 
+___ 17 1 17 
+___ 18 1 18 
+___ 19 1 19 
+___ 20 1 20 
+___ 21 1 21 
+___ 22 1 22 
+___ 23 1 23 
+___ 24 1 24 
+___ 25 1 25 
+___ 26 1 26 
+___ 27 1 27 
+___ 28 1 28 
+___ 29 1 29 
+___ 30 1 30 
+___ 31 1 31 
+___ 32 1 32 
+___ 33 1 33 
+___ 34 1 34 
+___ 35 1 35 
+___ 36 1 36 
+___ 37 1 37 
+___ 38 1 38 
+___ 39 1 39 
+___ 40 1 40 
+___ 41 1 41 
+___ 42 1 42 
+___ 43 1 43 
+___ 44 1 44 
+___ 45 1 45 
+___ 46 1 46 
+kk 9 orecs 46 
+bb 0 kk 9 isgeom extdeg 1 sprats [ 0, 45 ] : 1 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 2 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 3 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 4 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 5 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 6 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 7 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 8 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 9 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 10 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 11 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 12 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 13 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 14 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 15 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 16 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 17 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 18 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 19 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 20 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 21 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 22 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 23 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 24 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 25 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 26 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 27 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 28 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 29 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 30 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 31 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 32 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 33 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 34 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 35 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 36 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 37 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 38 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 39 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 40 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 41 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 42 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 43 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 44 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 45 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 46 in 46 
+_______________ 
+__nonsingisotwords 165 
+__singisotwords 330 
+___ 2 1 2 
+___ 3 1 3 
+___ 4 1 4 
+___ 5 1 5 
+___ 6 1 6 
+___ 7 1 7 
+___ 8 1 8 
+___ 9 1 9 
+___ 10 1 10 
+___ 11 1 11 
+___ 12 1 12 
+___ 13 1 13 
+___ 14 1 14 
+___ 15 1 15 
+___ 16 1 16 
+___ 17 1 17 
+___ 18 1 18 
+___ 19 1 19 
+___ 20 1 20 
+___ 21 1 21 
+___ 22 1 22 
+___ 23 1 23 
+___ 24 1 24 
+___ 25 1 25 
+___ 26 1 26 
+___ 27 1 27 
+___ 28 1 28 
+___ 29 1 29 
+___ 30 1 30 
+___ 31 1 31 
+___ 32 1 32 
+___ 33 1 33 
+___ 34 1 34 
+___ 35 1 35 
+___ 36 1 36 
+___ 37 1 37 
+___ 38 1 38 
+___ 39 1 39 
+___ 40 1 40 
+___ 41 1 41 
+___ 42 1 42 
+___ 43 1 43 
+___ 44 1 44 
+___ 45 1 45 
+___ 46 1 46 
+___ 47 1 47 
+___ 48 1 48 
+___ 49 1 49 
+___ 50 1 50 
+___ 51 1 51 
+___ 52 1 52 
+___ 53 1 53 
+___ 54 1 54 
+___ 55 1 55 
+___ 56 1 56 
+___ 57 1 57 
+___ 58 1 58 
+___ 59 1 59 
+___ 60 1 60 
+___ 61 1 61 
+___ 62 1 62 
+___ 63 1 63 
+___ 64 1 64 
+___ 65 1 65 
+___ 66 1 66 
+___ 67 1 67 
+___ 68 1 68 
+___ 69 1 69 
+___ 70 1 70 
+___ 71 1 71 
+___ 72 1 72 
+___ 73 1 73 
+___ 74 1 74 
+___ 75 1 75 
+___ 76 1 76 
+___ 77 1 77 
+___ 78 1 78 
+___ 79 1 79 
+___ 80 1 80 
+___ 81 1 81 
+___ 82 1 82 
+___ 83 1 83 
+___ 84 1 84 
+___ 85 1 85 
+___ 86 1 86 
+___ 87 1 87 
+Error, user interrupt in
+  return prod; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3626 called from 
+stw * newwdbasisinv at tNonSingOverLats.g:95 called from
+thetask( neworec, newposs ); at tNonSingOverLats.g:131 called from
+thetask( iniorec, [ 1 .. Length( isotwords ) ] ); at tNonSingOverLats.g:138 called from
+NonSingOverLats( t0Gram, t0h ) at Task20260923Va.g:28 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260923Va.g:62
+you can 'return;'
+brk> quit;
+gap> 
+gap> 
+gap> 
+gap> Read("Task20260923Va.g");
+Syntax error: ; expected in NonSingOverLats.g:120
+          Length(oldwdbasiss));
+                             ^
+totalrecsname0 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 0 
+kk 2 orecs 1 
+bb 0 kk 2 isgeom extdeg 1 sprats [ 0, 3 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 3 orecs 1 
+bb 0 kk 3 isgeom extdeg 1 sprats [ 0, 6 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 5 
+kk 4 orecs 1 
+bb 0 kk 4 isgeom extdeg 1 sprats [ 0, 10 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 5 orecs 1 
+bb 0 kk 5 isgeom extdeg 1 sprats [ 0, 15 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 35 
+kk 6 orecs 1 
+bb 0 kk 6 isgeom extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 1 
+__singisotwords 126 
+___ 2 1 2 
+kk 7 orecs 2 
+bb 0 kk 7 isgeom extdeg 1 sprats [ 0, 28 ] : 1 in 2 
+bb 0 kk 7 isgeom extdeg 2 sprats [ 0, 63 ] : 2 in 2 
+_______________ 
+__nonsingisotwords 11 
+__singisotwords 396 
+___ 2 1 2 
+___ 3 1 3 
+___ 4 1 4 
+___ 5 1 5 
+___ 6 1 6 
+___ 7 1 7 
+___ 8 1 8 
+___ 9 1 9 
+___ 10 1 10 
+___ 11 1 11 
+kk 8 orecs 11 
+bb 0 kk 8 isgeom extdeg 1 sprats [ 0, 36 ] : 1 in 11 
+bb 0 kk 8 isgeom extdeg 3 sprats [ 0, 120 ] : 2 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 3 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 4 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 5 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 6 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 7 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 8 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 9 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 10 in 11 
+bb 0 kk 8 isgeom extdeg 2 sprats [ 0, 71 ] : 11 in 11 
+_______________ 
+__nonsingisotwords 45 
+__singisotwords 210 
+___ 2 1 2 
+___ 3 1 3 
+___ 4 1 4 
+___ 5 1 5 
+___ 6 1 6 
+___ 7 1 7 
+___ 8 1 8 
+___ 9 1 9 
+___ 10 1 10 
+___ 11 1 11 
+___ 12 1 12 
+___ 13 1 13 
+___ 14 1 14 
+___ 15 1 15 
+___ 16 1 16 
+___ 17 1 17 
+___ 18 1 18 
+___ 19 1 19 
+___ 20 1 20 
+___ 21 1 21 
+___ 22 1 22 
+___ 23 1 23 
+___ 24 1 24 
+___ 25 1 25 
+___ 26 1 26 
+___ 27 1 27 
+___ 28 1 28 
+___ 29 1 29 
+___ 30 1 30 
+___ 31 1 31 
+___ 32 1 32 
+___ 33 1 33 
+___ 34 1 34 
+___ 35 1 35 
+___ 36 1 36 
+___ 37 1 37 
+___ 38 1 38 
+___ 39 1 39 
+___ 40 1 40 
+___ 41 1 41 
+___ 42 1 42 
+___ 43 1 43 
+___ 44 1 44 
+___ 45 1 45 
+___ 46 1 46 
+kk 9 orecs 46 
+bb 0 kk 9 isgeom extdeg 1 sprats [ 0, 45 ] : 1 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 2 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 3 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 4 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 5 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 6 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 7 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 8 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 9 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 10 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 11 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 12 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 13 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 14 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 15 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 16 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 17 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 18 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 19 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 20 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 21 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 22 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 23 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 24 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 25 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 26 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 27 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 28 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 29 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 30 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 31 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 32 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 33 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 34 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 35 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 36 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 37 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 38 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 39 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 40 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 41 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 42 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 43 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 44 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 45 in 46 
+bb 0 kk 9 isgeom extdeg 2 sprats [ 0, 80 ] : 46 in 46 
+_______________ 
+__nonsingisotwords 165 
+__singisotwords 330 
+___ 2 1 2 
+___ 3 1 3 
+___ 4 1 4 
+___ 5 1 5 
+___ 6 1 6 
+___ 7 1 7 
+___ 8 1 8 
+___ 9 1 9 
+___ 10 1 10 
+___ 11 1 11 
+___ 12 1 12 
+___ 13 1 13 
+___ 14 1 14 
+___ 15 1 15 
+___ 16 1 16 
+___ 17 1 17 
+___ 18 1 18 
+___ 19 1 19 
+___ 20 1 20 
+___ 21 1 21 
+___ 22 1 22 
+___ 23 1 23 
+___ 24 1 24 
+___ 25 1 25 
+___ 26 1 26 
+___ 27 1 27 
+___ 28 1 28 
+___ 29 1 29 
+___ 30 1 30 
+___ 31 1 31 
+___ 32 1 32 
+Error, user interrupt in
+  return false; at gapReads/LinearAlgebra.txt:167 called from 
+IsIntVect( stw * newwdbasisinv ) at tNonSingOverLats.g:95 called from
+thetask( neworec, newposs ); at tNonSingOverLats.g:131 called from
+thetask( iniorec, [ 1 .. Length( isotwords ) ] ); at tNonSingOverLats.g:138 called from
+NonSingOverLats( t0Gram, t0h ) at Task20260923Va.g:28 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260923Va.g:62
+you can 'return;'
+brk> quit;
+gap> 
+gap> 
+gap> 
+gap> restart();
