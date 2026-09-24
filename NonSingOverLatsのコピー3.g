@@ -76,68 +76,67 @@ NonSingOverLats:=function(Gram, h)
     return(true);
   end;
   #
-  thetask:=function(torec, poss) 
+  thetask:=function(torec) 
     #
     # tGram=TMTTmult(tbasis, Gram); 
     # tbasisdual:=tbasis*Gram;
     # h=th*tbasis;
     #
-    local pos,  tGram, th, newposs,    tw, tvdual, newtbasisdual,twdbasisinv, newwdbasis, newwdbasisinv, singflag, stw, tpos, 
+    local pos, twdual, tGram, th, tbasisdual, taddwords,   tw, tvdual, newtbasisdual,twdbasisinv, newwdbasis, newwdbasisinv, singflag, stw, 
     xx, newGram, ttdet, ttbasisdualinv, newaddwords, neworec, newth;
     #
     tGram:=torec.Gram;
     th:=torec.h;
+    tbasisdual:=torec.basisdual;
+    taddwords:=torec.addwords;
+    twdbasisinv:=torec.wdbasisinv;
     #
-    for pos in poss do 
-      tw:=isotwords[pos];
-      newwdbasis:=AddVectToBasis(torec.wdbasis, tw);
-      ttdet:=AbsInt(DeterminantIntMat(newwdbasis));
-      if isneworec(ttdet, newwdbasis) then 
-        newwdbasisinv:=InverseMat(newwdbasis);
-        Add(oldwdbasisinvs, [ttdet, newwdbasisinv]);
-        singflag:=false;
-        for stw in singisotwords do 
-          if IsIntVect(stw*newwdbasisinv) then 
-            singflag:=true;
-            break; # from for stw in singisotwords do 
-          fi;
-        od;
-        if not singflag then 
-          tvdual:=tw*discrec.reps_dual;
-          newtbasisdual:=AddVectToBasis(torec.basisdual, tvdual);
-          newth:=SolutionIntMat(newtbasisdual, thdual);
-          newGram:=TMTTmult(newtbasisdual, Gramdual);
-          newaddwords:=ShallowCopy(torec.addwords); Add(newaddwords, tw);
-          neworec:=rec(
-            Gram:=newGram, 
-            h:=newth, 
-            basisdual:=newtbasisdual, 
-            det:=ttdet,
-            extdeg:=inidet/ttdet,
-            wdbasis:=newwdbasis,
-            wdbasisinv:=newwdbasisinv,
-            addwords:=newaddwords
-          );
-          if neworec.extdeg<0 then beep(88811); fi;
-          Add(nonsingoverlats, neworec);
-          newposs:=[];
-          for tpos in poss do 
-            if tpos>pos then 
-              if IsInt(tw*isotwordsdual[tpos]) then 
-                if not IsIntVect(isotwords[tpos]*newwdbasisinv) then 
-                  Add(newposs, tpos);
-                fi;
+    pos:=0;
+    for twdual in isotwordsdual do 
+      pos:=pos+1;
+      if taddwords=[] or ForAll(taddwords*twdual, IsInt) then 
+        tw:=isotwords[pos];
+        if not IsIntVect(tw*twdbasisinv) then 
+          newwdbasis:=AddVectToBasis(torec.wdbasis, tw);
+          ttdet:=AbsInt(DeterminantIntMat(newwdbasis));
+          if isneworec(ttdet, newwdbasis) then 
+            newwdbasisinv:=InverseMat(newwdbasis);
+            Add(oldwdbasisinvs, [ttdet, newwdbasisinv]);
+            singflag:=false;
+            for stw in singisotwords do 
+              if IsIntVect(stw*newwdbasisinv) then 
+                singflag:=true;
+                break; # from for stw in singisotwords do 
               fi;
+            od;
+            if not singflag then 
+              tvdual:=tw*discrec.reps_dual;
+              newtbasisdual:=AddVectToBasis(tbasisdual, tvdual);
+              newth:=SolutionIntMat(newtbasisdual, thdual);
+              newGram:=TMTTmult(newtbasisdual, Gramdual);
+              newaddwords:=ShallowCopy(taddwords); Add(newaddwords, tw);
+              neworec:=rec(
+                Gram:=newGram, 
+                h:=newth, 
+                basisdual:=newtbasisdual, 
+                det:=ttdet,
+                extdeg:=inidet/ttdet,
+                wdbasis:=newwdbasis,
+                wdbasisinv:=newwdbasisinv,
+                addwords:=newaddwords
+              );
+              if neworec.extdeg<0 then beep(88811); fi;
+              Add(nonsingoverlats, neworec);
+              thetask(neworec);
             fi;
-          od;
-          thetask(neworec, newposs);
+          fi;
         fi;
       fi;
     od; 
     #
   end;
   #
-  thetask(iniorec, [1..Length(isotwords)]);
+  thetask(iniorec);
   #
   return(nonsingoverlats);
 end;

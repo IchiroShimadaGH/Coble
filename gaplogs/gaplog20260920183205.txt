@@ -21542,3 +21542,6 @@ gap> a;
 gap> b:=a;
 3
 gap> 
+gap> 
+gap> 
+gap> quit;

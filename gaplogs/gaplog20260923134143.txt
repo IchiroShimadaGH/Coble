@@ -358,3 +358,16 @@ Syntax error: while parsing an 'if' statement: statement or 'fi' expected in Non
     ^^
 gap> Read("NonSingOverLats.g");
 gap> 
+gap> 
+gap> 
+gap> Read("NonSingOverLats.g");
+Syntax warning: Unbound global variable in NonSingOverLats.g:126
+          newposs:=[];
+          ^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:131
+                  Add(newposs, tpos);
+                      ^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:136
+          thetask(neworec, newposs);
+                           ^^^^^^^
+gap> 

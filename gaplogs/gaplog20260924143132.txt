@@ -1,0 +1,12 @@
+sessionnumb  20260924143132 
+gap> bb:=0;
+0
+gap> Read("Task20260923Ua.g");
+1845 
+Error, Sage computation failed (this is NOT a zero class number). Output:  Input retained at /var/folders/92/6_gqhzx52n3b8zyts56k__gw0000gn/T//gaptempdir4A6DRT/input.json at even_lattice_genus.g:54 called from
+<function "EvenLatticeGenus">( <arguments> )
+ called from read-eval loop at Task20260923Ua.g:31
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> quit;
+gap> 

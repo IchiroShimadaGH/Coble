@@ -1,6 +1,12 @@
 
 
-#Read("Task20260921Ub.g");
+#Read("Task20260924Ub.g");
+
+Printn("wrong"); beep(581758712); 
+Read("NonSingOverLats.g");
+
+Read("SplitConsTools.g");
+
 
 MakeEkk:=function(kk)
   local Ekk, ii, jj;
@@ -119,7 +125,6 @@ Makeaddvs:=function(kk)
 end;
 
 
-Read("SplitConsTools.g");
 
 NewWGraphToGramh:=function(w, kk)
   #
@@ -171,40 +176,69 @@ end;
 uptokk:=10;
 savename:="testresult";
 
-theresult:=[];
+TotalRecs:=[];
 
 thetask:=function(kk, wg)
   local addvs, addv, newwg, trec, tGram, th, isgeom, minflag, scons,
-  nooverlatflag;
+  nooverlatflag, t0Gram, t0h, orecs, oreccounter, ttrec, sprats;
   addvs:=Makeaddvs(kk);
   for addv in addvs do 
     newwg:=CopyAppend(wg, addv);
+    #koko(1);
     trec:=NewWGraphToGramh(newwg, kk+1);#Here we must use New version!
-    tGram:=trec.Gram;
-    th:=trec.h;
-    isgeom:=IsGeom(tGram, th);
-    if isgeom=true then 
-      minflag:=IsMinimal(kk+1, newwg);
-      if minflag<>false then 
-        scons:=GetTotalSplcons(tGram, th);
-        nooverlatflag:=NoOverlattice(tGram, th);
-        trec.scons:=scons;
-        trec.stabssize:=Length(minflag[2]);
-        trec.nooverlatflag:=nooverlatflag;
-        Add(theresult, trec);
-        Printn(Length(theresult), kk, Length(tGram),  
-                  Collected(newwg), Length(scons));
-        savedataas(theresult, savename);
-        if kk+1<=uptokk then
+    t0Gram:=trec.Gram;
+    t0sign:=SignatureQ(t0Gram);
+    if t0sign[2]<>1 then continue; fi; # in for addv in addvs do 
+    t0h:=trec.h;
+    orecs:=NonSingOverLats(t0Gram,  t0h);
+    Printn("kk", kk, "orecs", Length(orecs));
+    oreccounter:=0;
+    for orec in orecs do
+      oreccounter:=oreccounter+1;
+      ttrec:=StructuralCopy(trec);
+      ttrec.orec:=orec;
+      tGram:=orec.Gram;
+      th:=orec.h;
+      isgeom:=IsGeom(tGram, th);
+      ttrec.isgeom:=isgeom;
+      # ttmdiscrec:=DiscriminantForm(-tGram);
+      # tsign:=[22, 3, 19]-SignatureQ(tGram);
+      # ttsign:=[tsign[2], tsign[3]];
+      # if tsign[3]>0 then 
+      #   Trec:=EvenLatticeGenus(ttsign,ttmdiscrec.discg,ttmdiscrec.discf);;
+      # fi;
+      if isgeom=true then
+        sprats:=GetSpRats(tGram, th);
+        # if Trec.count=0 then buzz(47652);fi;
+        # if Trec.count>1 then Printn("____ more than one T", Trec.count); fi;
+        ttrec.sprats:=sprats;
+        # trec.Trec:=Trec;
+        Printn("kk", Length(newwg), "rho", Length(tGram), Collected(newwg),  
+            "extdeg", orec.extdeg, "sprats", sprats.nopss,   
+            ":",  oreccounter, "in", Length(orecs)); 
+        #
+        Add(TotalRecs, ttrec);
+        savedataas(TotalRecs, savename);
+        if kk+1<=uptokk then 
           thetask(kk+1, newwg);
         fi;
+      else
+        # if tsign[3]>0 and .count<>0 then buzz(222652);fi;
+        Printn("kk", Length(newwg), "rho", Length(tGram), Collected(newwg),   
+        "not isgeom", isgeom,
+        ":",  oreccounter, "in", Length(orecs));
       fi;
-    fi;
+      #
+     
+      
+    od;
   od;
 end;
 
-uptokk:=7;
-savename:="testresult";
+uptokk:=3;
+savename:="minrecs20260924";
+TotalRecs:=[];
+
 thetask(1, []);
 
 

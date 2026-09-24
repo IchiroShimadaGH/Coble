@@ -1,0 +1,60 @@
+sessionnumb  20260924161455 
+gap> aveWorkspace("startws.ws");
+Error, Variable: 'aveWorkspace' must have a value
+not in any function at *stdin*:2
+gap> Read("Task20260924Uc.g");
+Syntax warning: Unbound global variable in Task20260924Uc.g:205
+      t0sign:=SignatureQ(t0Gram);
+      ^^^^^^
+Syntax warning: Unbound global variable in Task20260924Uc.g:206
+      if t0sign[2]<>1 then continue; fi; # in for addv in addvs do 
+         ^^^^^^
+Syntax warning: Unbound global variable in Task20260924Uc.g:211
+      for orec in orecs do
+          ^^^^
+Syntax warning: Unbound global variable in Task20260924Uc.g:235
+          Add(TotalRecs, ttrec);
+              ^^^^^^^^^
+Syntax warning: Unbound global variable in Task20260924Uc.g:236
+          savedataas(TotalRecs, savename);
+                     ^^^^^^^^^
+__nonsingisotwords 0 
+__singisotwords 0 
+kk 2 orecs 1 
+kk 2 rho 3 [ [ 0, 1 ] ] extdeg 1 sprats [ 0, 3 ] : 1 in 1 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 3 orecs 1 
+kk 3 rho 4 [ [ 0, 3 ] ] extdeg 1 sprats [ 0, 6 ] : 1 in 1 
+__nonsingisotwords 0 
+__singisotwords 5 
+kk 4 orecs 1 
+kk 4 rho 5 [ [ 0, 6 ] ] extdeg 1 sprats [ 0, 10 ] : 1 in 1 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 5 orecs 1 
+kk 5 rho 6 [ [ 0, 10 ] ] extdeg 1 sprats [ 0, 15 ] : 1 in 1 
+__nonsingisotwords 0 
+__singisotwords 35 
+kk 6 orecs 1 
+kk 6 rho 7 [ [ 0, 15 ] ] extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+__nonsingisotwords 1 
+__singisotwords 126 
+kk 7 orecs 2 
+kk 7 rho 8 [ [ 0, 21 ] ] extdeg 1 sprats [ 0, 28 ] : 1 in 2 
+Error, user interrupt in
+  return r; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/integer.gi:1130 called from 
+RootInt( 8 * pos - 7 ) at Task20260924Uc.g:31 called from
+Ekkiijj( kk, pos ) at Task20260924Uc.g:119 called from
+IsMinimal( kk + 1, newwg ) at Task20260924Uc.g:201 called from
+thetask( kk + 1, newwg ); at Task20260924Uc.g:238 called from
+thetask( kk + 1, newwg ); at Task20260924Uc.g:238 called from
+...  at Task20260924Uc.g:255
+you can 'return;'
+brk> quit;
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> quit;

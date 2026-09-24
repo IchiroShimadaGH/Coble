@@ -1,0 +1,336 @@
+sessionnumb  20260924174935 
+gap> names := DirectoryContents("/gapsaves");;
+gap> 
+gap> names;
+fail
+gap> names := DirectoryContents("/gapsaves/");
+fail
+gap> names := DirectoryContents("gapsaves");
+[ ".", "..", "saverandomPro20260923124551.txt", "savespecialnewscons2.txt", "saverandomPro20260923124800.txt", "saverandomoddenhancedCopy.txt", "datatana3", "datatana2", 
+  "saveogrecsA.txt", ".DS_Store", "saveRondomminrecs20260924.txt", "saveNew6TanConRecs.txt", "saveogrecsB.txt", "savespecialadjsfのコピー.txt", "saveogrecsC.txt", 
+  "saveAllZeroAdjRecs.txt", "saveogrecAA.txt", "saverandomPro20260923124727.txt", "saveminrecs20260924.txt", "saverandomPro20260923124848.txt", "saverandommixed.txt", 
+  "saveAllTwoAdjRecs.txt", "saveData1845.txt", "saverandomPro20260923124642.txt", "saveSigma12rec.txt", "saverandomPro20260923124858.txt", "saverandomPro20260923124657.txt", 
+  "datatana", "saverandomoddenhanced.txt", "data1", "savetogrecs1.txt", "save240rats.txt", "savetogrecs2.txt", "savettbasisrec.txt", "saveeasybasisrecs5.txt", 
+  "saveGorbsW2.txt", "savetbasisrec.txt", "saveogrecsBB.txt", "saverandomPro20260923124908.txt", "saveGorbsW3.txt", "saveeasybasisrecs2.txt", 
+  "saverandomPro20260923124717.txt", "savebasisrecs2.txt", "saveogrecsCC.txt", "saveAllOneAdjRecs.txt", "saveeasybasisrecs1.txt", "saveGorbsW4.txt", 
+  "saverandomoddenhanced2Copy.txt", "savebasisrecs1.txt", "saveGorbsW5.txt", "saverandomoddenhanced2.txt", "saveeasybasisrecs5b.txt", "saverandomPro20260923124808.txt", 
+  "saveRrecs.txt", "savespecialadjsf.txt", "saveFs1.txt", "saverandomeven.txt", "savedifficult12.txt", "savedifficult16.txt", "saveevenresultrho20.txt", 
+  "saveRandomOdds20260923.txt", "saveogrecsDD.txt", "saveFs.txt", "saverandomodd.txt" ]
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> debug4();
+gap> files;
+[ "saverandomPro20260923124551.txt", "saverandomPro20260923124800.txt", "saverandomPro20260923124727.txt", "saverandomPro20260923124848.txt", 
+  "saverandomPro20260923124642.txt", "saverandomPro20260923124858.txt", "saverandomPro20260923124657.txt", "saverandomPro20260923124908.txt", 
+  "saverandomPro20260923124717.txt", "saverandomPro20260923124808.txt" ]
+gap> EvalString("files");
+[ "saverandomPro20260923124551.txt", "saverandomPro20260923124800.txt", "saverandomPro20260923124727.txt", "saverandomPro20260923124848.txt", 
+  "saverandomPro20260923124642.txt", "saverandomPro20260923124858.txt", "saverandomPro20260923124657.txt", "saverandomPro20260923124908.txt", 
+  "saverandomPro20260923124717.txt", "saverandomPro20260923124808.txt" ]
+gap> debug4();
+Error, Variable: 'saverandomPro20260923124551' must have a value
+not in any function at stream:1
+Error, Could not evaluate string.
+ at /usr/local/Cellar/gap/4.15.1/share/gap/lib/string.gi:659 called from
+EvalString( tf ) at fordebug4.g:8 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at fordebug4.g:9
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> quit;
+gap> debug4();
+Error, Variable: 's' must have an assigned value in
+  ttf := tf{[ 5 .. Length( s ) - 2 ]}; at fordebug4.g:7 called from 
+<function "unknown">( <arguments> )
+ called from read-eval loop at fordebug4.g:10
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> debug4();
+Error, Variable: 'randomPro20260923124551' must have a value
+not in any function at stream:1
+Error, Could not evaluate string.
+ at /usr/local/Cellar/gap/4.15.1/share/gap/lib/string.gi:659 called from
+EvalString( ttf ) at fordebug4.g:9 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at fordebug4.g:10
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> quit;
+gap> debug4();
+Error, file "./gapsaves/saverandomPro20260923124551.t.txt" must exist and be readable at /usr/local/Cellar/gap/4.15.1/share/gap/lib/files.gi:207 called from
+Read( fn ); at gapReads/SavesReads.txt:83 called from
+readdata( ttf ); at fordebug4.g:8 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at fordebug4.g:10
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> tf;
+"saverandomPro20260923124551.txt"
+brk> quit;
+gap> 
+gap> 
+gap> debug4();
+[ 356, 574, 362, 325, 796, 796, 796, 325, 796, 409 ] 
+gap> debug4();
+[ 1398, 1398, 1398, 1343, 1307, 1307, 1307, 1307, 1307, 1307 ] 
+gap> debug4();
+[ 1398, 1398, 1398, 1343, 1307, 1307, 1307, 1307, 1307, 1307, 1296, 1263, 1211, 1192, 1192, 1192, 1192, 1192, 1192, 1192, 1192, 1192, 1180, 1180, 1155, 1155, 1113, 1101, 
+  1101, 1088 ] 
+gap> debug4();
+3270 
+[ 1398, 1398, 1398, 1343, 1307, 1307, 1307, 1307, 1307, 1307, 1296, 1263, 1211, 1192, 1192, 1192, 1192, 1192, 1192, 1192 ] 
+gap> readdata("Data1845");
+gap> Read("NonSingOverLats.g");
+gap> NonSingOverLats;
+function( Gram, h ) ... end
+gap> IsGeom;
+Error, Variable: 'IsGeom' must have a value
+not in any function at *stdin*:24
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> Read("Task20260924Ue.g");
+Syntax error: found an expression when a statement was expected in Task20260924Ue.g:29
+  if tsign[2]<>1 then conyinue; fi;
+                              ^
+Syntax error: while parsing a 'for' loop: statement or 'od' expected in Task20260924Ue.g:53
+  fi;
+  ^^
+gap> Read("Task20260924Ue.g");
+Error, user interrupt in
+  return res; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:672 called from 
+List( m1, function ( row )
+      return PROD_VECTOR_MATRIX( row, m2 );
+  end ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3640 called from
+T * M * TransposedMat( T ) at gapReads/LinearAlgebra.txt:252 called from
+TMTTmult( orthoB, sQ ) at gapReads/LatticeTools.txt:41 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+...  at Task20260924Ue.g:55
+you can 'return;'
+brk> counter;
+13639
+brk> quit;
+gap> Read("Task20260924Ue.g");
+___ 1000 
+___ 2000 
+___ 3000 
+___ 4000 
+___ 5000 
+___ 6000 
+___ 7000 
+___ 8000 
+___ 9000 
+___ 10000 
+___ 11000 
+___ 12000 
+___ 13000 
+___ 14000 
+___ 15000 
+___ 16000 
+___ 17000 
+___ 18000 
+___ 19000 
+___ 20000 
+___ 21000 
+___ 22000 
+___ 23000 
+___ 24000 
+___ 25000 
+___ 26000 
+___ 27000 
+___ 28000 
+___ 29000 
+___ 30000 
+___ 31000 
+___ 32000 
+___ 33000 
+___ 34000 
+___ 35000 
+___ 36000 
+___ 37000 
+___ 38000 
+___ 39000 
+___ 40000 
+___ 41000 
+___ 42000 
+___ 43000 
+___ 44000 
+___ 45000 
+___ 46000 
+___ 47000 
+___ 48000 
+___ 49000 
+___ 50000 
+___ 51000 
+___ 52000 
+___ 53000 
+___ 54000 
+___ 55000 
+___ 56000 
+___ 57000 
+___ 58000 
+___ 59000 
+___ 60000 
+___ 61000 
+___ 62000 
+___ 63000 
+___ 64000 
+___ 65000 
+___ 66000 
+___ 67000 
+___ 68000 
+___ 69000 
+___ 70000 
+___ 71000 
+___ 72000 
+___ 73000 
+___ 74000 
+___ 75000 
+___ 76000 
+___ 77000 
+___ 78000 
+___ 79000 
+Error, user interrupt in
+  return fail; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/vecmat.gi:1333 called from 
+ConvertToVectorRepNC( vc, f ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2531 called from
+SemiEchelonMatTransformation( mat ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2201 called from
+NullspaceMat( TransposedMat( [ v * sQ ] ) ) at gapReads/LatticeTools.txt:40 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+...  at Task20260924Ue.g:55
+you can 'return;'
+brk> quit;
+gap> Read("Task20260924Ue.g");
+___ 1000 128 
+___ 2000 128 
+___ 3000 128 
+Error, user interrupt in
+  return fail; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/vecmat.gi:1333 called from 
+ConvertToVectorRepNC( vc, f ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2531 called from
+SemiEchelonMatTransformation( mat ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2201 called from
+NullspaceMat( TransposedMat( [ v * sQ ] ) ) at gapReads/LatticeTools.txt:40 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+...  at Task20260924Ue.g:55
+you can 'return;'
+brk> quit;
+gap> Read("Task20260924Ue.g");
+___ 1000 131072 
+___ 2000 131072 
+___ 3000 131072 
+___ 4000 131072 
+___ 5000 131072 
+___ 6000 131072 
+___ 7000 131072 
+___ 8000 131072 
+___ 9000 131072 
+___ 10000 131072 
+___ 11000 131072 
+___ 12000 131072 
+___ 13000 131072 
+___ 14000 131072 
+___ 15000 131072 
+___ 16000 131072 
+___ 17000 131072 
+___ 18000 131072 
+___ 19000 131072 
+___ 20000 131072 
+___ 21000 131072 
+___ 22000 131072 
+___ 23000 131072 
+___ 24000 131072 
+___ 25000 131072 
+___ 26000 131072 
+___ 27000 131072 
+___ 28000 131072 
+___ 29000 131072 
+___ 30000 131072 
+___ 31000 131072 
+___ 32000 131072 
+___ 33000 131072 
+___ 34000 131072 
+___ 35000 131072 
+___ 36000 131072 
+___ 37000 131072 
+___ 38000 131072 
+___ 39000 131072 
+___ 40000 131072 
+___ 41000 131072 
+___ 42000 131072 
+___ 43000 131072 
+___ 44000 131072 
+___ 45000 131072 
+___ 46000 131072 
+___ 47000 131072 
+___ 48000 131072 
+___ 49000 131072 
+___ 50000 131072 
+___ 51000 131072 
+___ 52000 131072 
+___ 53000 131072 
+___ 54000 131072 
+___ 55000 131072 
+___ 56000 131072 
+___ 57000 131072 
+___ 58000 131072 
+___ 59000 131072 
+___ 60000 131072 
+___ 61000 131072 
+___ 62000 131072 
+___ 63000 131072 
+___ 64000 131072 
+___ 65000 131072 
+___ 66000 131072 
+___ 67000 131072 
+___ 68000 131072 
+___ 69000 131072 
+___ 70000 131072 
+___ 71000 131072 
+___ 72000 131072 
+___ 73000 131072 
+___ 74000 131072 
+___ 75000 131072 
+___ 76000 131072 
+___ 77000 131072 
+___ 78000 131072 
+___ 79000 131072 
+___ 80000 131072 
+___ 81000 131072 
+___ 82000 131072 
+___ 83000 131072 
+___ 84000 131072 
+___ 85000 131072 
+___ 86000 131072 
+___ 87000 131072 
+___ 88000 131072 
+___ 89000 131072 
+___ 90000 131072 
+___ 91000 131072 
+___ 92000 131072 
+___ 93000 131072 
+___ 94000 131072 
+___ 95000 131072 
+___ 96000 131072 
+___ 97000 131072 
+___ 98000 131072 
+___ 99000 131072 
+___ 100000 131072 
+___ 101000 131072 
+___ 102000 131072 
+___ 103000 131072 
+___ 104000 131072 
+___ 105000 131072 
+___ 106000 131072 
+___ 107000 131072 
+___ 108000 131072 
+___ 109000 131072 
+___ 110000 131072 
+___ 111000 131072 
+___ 112000 131072 
+___ 113000 131072 

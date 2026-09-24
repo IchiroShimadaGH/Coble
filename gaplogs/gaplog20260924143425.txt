@@ -1,0 +1,964 @@
+sessionnumb  20260924143425 
+gap> bb:=2;
+2
+gap> Read("Task20260924Ua.g");
+totalrecsname2 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 5 
+kk 2 orecs 1 
+bb 2 kk 2 isgeom extdeg 1 sprats [ 0, 2 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 3 orecs 1 
+bb 2 kk 3 isgeom extdeg 1 sprats [ 0, 3 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 1 
+__singisotwords 54 
+kk 4 orecs 2 
+bb 2 kk 4 isgeom extdeg 1 sprats [ 0, 4 ] : 1 in 2 
+bb 2 kk 4 isgeom extdeg 2 sprats [ 0, 12 ] : 2 in 2 
+_______________ 
+__nonsingisotwords 5 
+__singisotwords 250 
+kk 5 orecs 6 
+bb 2 kk 5 isgeom extdeg 1 sprats [ 0, 5 ] : 1 in 6 
+bb 2 kk 5 isgeom extdeg 2 sprats [ 0, 13 ] : 2 in 6 
+bb 2 kk 5 isgeom extdeg 2 sprats [ 0, 13 ] : 3 in 6 
+bb 2 kk 5 isgeom extdeg 2 sprats [ 0, 13 ] : 4 in 6 
+bb 2 kk 5 isgeom extdeg 2 sprats [ 0, 13 ] : 5 in 6 
+bb 2 kk 5 isgeom extdeg 2 sprats [ 0, 13 ] : 6 in 6 
+_______________ 
+__nonsingisotwords 16 
+__singisotwords 975 
+kk 6 orecs 32 
+bb 2 kk 6 isgeom extdeg 1 sprats [ 0, 6 ] : 1 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 2 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 3 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 4 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 5 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 6 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 7 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 8 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 9 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 10 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 11 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 12 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 13 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 14 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 15 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 16 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 17 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 18 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 19 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 20 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 21 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 22 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 23 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 24 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 25 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 26 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 27 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 28 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 29 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 30 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 31 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 6 ] : 32 in 32 
+_______________ 
+__nonsingisotwords 1050 
+__singisotwords 3045 
+Error, user interrupt in
+  res[i] := func( C[i] ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from 
+List( m1, function ( row )
+      return PROD_VECTOR_MATRIX( row, m2 );
+  end ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3640 called from
+twdbasis * tdata[2] at NonSingOverLats.g:72 called from
+isneworec( ttdet, newwdbasis ) at NonSingOverLats.g:95 called from
+thetask( neworec, newposs ); at NonSingOverLats.g:133 called from
+thetask( neworec, newposs ); at NonSingOverLats.g:133 called from
+...  at Task20260924Ua.g:62
+you can 'return;'
+brk> poss;
+[ 181, 182, 183, 184, 185, 186, 187, 188, 189, 192, 193, 206, 207, 210, 211, 224, 225, 226, 227, 228, 229, 230, 231, 244, 245, 248, 249, 262, 263, 266, 267, 268, 269, 270, 
+  272, 273, 274, 276, 277, 279, 280, 281, 282, 284, 285, 296, 297, 299, 300, 301, 302, 304, 305, 307, 308, 309, 310, 319, 320, 321, 322, 332, 333, 335, 336, 337, 338, 340, 
+  341, 352, 353, 355, 356, 357, 358, 360, 361, 363, 364, 367, 368, 381, 382, 385, 386, 399, 400, 401, 402, 403, 404, 405, 406, 419, 420, 423, 424, 437, 438, 441, 442, 444, 
+  445, 448, 449, 453, 454, 471, 472, 476, 477, 480, 481, 490, 491, 493, 494, 495, 496, 498, 499, 507, 510, 515, 518, 527, 530, 535, 538, 546, 547, 549, 550, 551, 552, 554, 
+  555, 564, 565, 568, 569, 573, 574, 591, 592, 596, 597, 600, 601, 635, 636, 637, 638, 639, 640, 641, 642, 643, 644, 645, 646, 647, 648, 649, 650, 747, 748, 749, 750, 751, 
+  752, 753, 754, 755, 756, 757, 758, 759, 760, 761, 762, 891, 892, 893, 894, 895, 896, 897, 898, 899, 900, 901, 902, 903, 904, 905, 906, 1003, 1004, 1005, 1006, 1007, 1008, 
+  1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018 ]
+brk> Length(poss);
+213
+brk> wdbasis;
+Error, Variable: <debug-variable-1-25> must have a value in
+  res[i] := func( C[i] ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from 
+List( m1, function ( row )
+      return PROD_VECTOR_MATRIX( row, m2 );
+  end ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3640 called from
+twdbasis * tdata[2] at NonSingOverLats.g:72 called from
+isneworec( ttdet, newwdbasis ) at NonSingOverLats.g:95 called from
+thetask( neworec, newposs ); at NonSingOverLats.g:133 called from
+thetask( neworec, newposs ); at NonSingOverLats.g:133 called from
+...  at *errin*:3
+brk> torec.addwds;
+Error, Variable: <debug-variable-0-3> must have a value in
+  res[i] := func( C[i] ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from 
+List( m1, function ( row )
+      return PROD_VECTOR_MATRIX( row, m2 );
+  end ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3640 called from
+twdbasis * tdata[2] at NonSingOverLats.g:72 called from
+isneworec( ttdet, newwdbasis ) at NonSingOverLats.g:95 called from
+thetask( neworec, newposs ); at NonSingOverLats.g:133 called from
+thetask( neworec, newposs ); at NonSingOverLats.g:133 called from
+...  at *errin*:4
+brk> torec;
+Error, Variable: <debug-variable-0-3> must have a value in
+  res[i] := func( C[i] ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from 
+List( m1, function ( row )
+      return PROD_VECTOR_MATRIX( row, m2 );
+  end ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3640 called from
+twdbasis * tdata[2] at NonSingOverLats.g:72 called from
+isneworec( ttdet, newwdbasis ) at NonSingOverLats.g:95 called from
+thetask( neworec, newposs ); at NonSingOverLats.g:133 called from
+thetask( neworec, newposs ); at NonSingOverLats.g:133 called from
+...  at *errin*:5
+brk> neworec;
+Error, Variable: <debug-variable-0-21> must have a value in
+  res[i] := func( C[i] ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from 
+List( m1, function ( row )
+      return PROD_VECTOR_MATRIX( row, m2 );
+  end ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3640 called from
+twdbasis * tdata[2] at NonSingOverLats.g:72 called from
+isneworec( ttdet, newwdbasis ) at NonSingOverLats.g:95 called from
+thetask( neworec, newposs ); at NonSingOverLats.g:133 called from
+thetask( neworec, newposs ); at NonSingOverLats.g:133 called from
+...  at *errin*:6
+brk> quit;
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> Read("Task20260924Ua.g");
+totalrecsname2 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 5 
+kk 2 orecs 1 
+bb 2 kk 2 isgeom extdeg 1 sprats [ 0, 2 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 3 orecs 1 
+bb 2 kk 3 isgeom extdeg 1 sprats [ 0, 3 ] : 1 in 1 
+_______________ 
+__nonsingisotwords 1 
+__singisotwords 54 
+kk 4 orecs 2 
+bb 2 kk 4 isgeom extdeg 1 sprats [ 0, 4 ] : 1 in 2 
+bb 2 kk 4 isgeom extdeg 2 sprats [ 0, 12 ] : 2 in 2 
+_______________ 
+__nonsingisotwords 5 
+__singisotwords 250 
+kk 5 orecs 6 
+bb 2 kk 5 isgeom extdeg 1 sprats [ 0, 5 ] : 1 in 6 
+bb 2 kk 5 isgeom extdeg 2 sprats [ 0, 13 ] : 2 in 6 
+bb 2 kk 5 isgeom extdeg 2 sprats [ 0, 13 ] : 3 in 6 
+bb 2 kk 5 isgeom extdeg 2 sprats [ 0, 13 ] : 4 in 6 
+bb 2 kk 5 isgeom extdeg 2 sprats [ 0, 13 ] : 5 in 6 
+bb 2 kk 5 isgeom extdeg 2 sprats [ 0, 13 ] : 6 in 6 
+_______________ 
+__nonsingisotwords 16 
+__singisotwords 975 
+kk 6 orecs 32 
+bb 2 kk 6 isgeom extdeg 1 sprats [ 0, 6 ] : 1 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 2 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 3 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 4 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 5 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 6 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 7 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 8 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 9 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 10 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 11 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 12 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 13 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 14 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 15 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 16 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 17 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 18 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 19 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 20 in 32 
+bb 2 kk 6 isgeom extdeg 4 sprats [ 0, 30 ] : 21 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 22 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 23 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 24 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 25 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 26 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 27 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 28 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 29 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 30 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 14 ] : 31 in 32 
+bb 2 kk 6 isgeom extdeg 2 sprats [ 0, 6 ] : 32 in 32 
+_______________ 
+__nonsingisotwords 1050 
+__singisotwords 3045 
+kk 7 orecs 752 
+bb 2 kk 7 isgeom extdeg 1 sprats [ 0, 7 ] : 1 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 15 ] : 2 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 3 in 752 
+bb 2 kk 7 isgeom extdeg 8 sprats [ 0, 63 ] : 4 in 752 
+bb 2 kk 7 isgeom extdeg 8 sprats [ 0, 63 ] : 5 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 6 in 752 
+bb 2 kk 7 isgeom extdeg 8 sprats [ 0, 63 ] : 7 in 752 
+bb 2 kk 7 isgeom extdeg 8 sprats [ 0, 63 ] : 8 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 9 in 752 
+bb 2 kk 7 isgeom extdeg 8 sprats [ 0, 63 ] : 10 in 752 
+bb 2 kk 7 isgeom extdeg 8 sprats [ 0, 63 ] : 11 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 12 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 13 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 14 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 15 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 16 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 17 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 18 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 19 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 20 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 21 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 22 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 23 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 24 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 25 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 26 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 27 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 28 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 29 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 15 ] : 30 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 31 in 752 
+bb 2 kk 7 isgeom extdeg 8 sprats [ 0, 63 ] : 32 in 752 
+bb 2 kk 7 isgeom extdeg 8 sprats [ 0, 63 ] : 33 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 34 in 752 
+bb 2 kk 7 isgeom extdeg 8 sprats [ 0, 63 ] : 35 in 752 
+bb 2 kk 7 isgeom extdeg 8 sprats [ 0, 63 ] : 36 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 37 in 752 
+bb 2 kk 7 isgeom extdeg 8 sprats [ 0, 63 ] : 38 in 752 
+bb 2 kk 7 isgeom extdeg 8 sprats [ 0, 63 ] : 39 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 40 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 41 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 42 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 43 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 44 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 45 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 46 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 47 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 48 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 49 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 50 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 51 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 52 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 53 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 54 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 55 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 56 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 57 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 15 ] : 58 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 59 in 752 
+bb 2 kk 7 isgeom extdeg 8 sprats [ 0, 63 ] : 60 in 752 
+bb 2 kk 7 isgeom extdeg 8 sprats [ 0, 63 ] : 61 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 62 in 752 
+bb 2 kk 7 isgeom extdeg 8 sprats [ 0, 63 ] : 63 in 752 
+bb 2 kk 7 isgeom extdeg 8 sprats [ 0, 63 ] : 64 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 65 in 752 
+bb 2 kk 7 isgeom extdeg 8 sprats [ 0, 63 ] : 66 in 752 
+bb 2 kk 7 isgeom extdeg 8 sprats [ 0, 63 ] : 67 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 68 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 69 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 70 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 71 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 72 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 73 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 74 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 75 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 76 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 77 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 78 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 79 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 80 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 81 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 82 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 83 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 84 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 85 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 15 ] : 86 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 87 in 752 
+bb 2 kk 7 isgeom extdeg 8 sprats [ 0, 63 ] : 88 in 752 
+bb 2 kk 7 isgeom extdeg 8 sprats [ 0, 63 ] : 89 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 90 in 752 
+bb 2 kk 7 isgeom extdeg 8 sprats [ 0, 63 ] : 91 in 752 
+bb 2 kk 7 isgeom extdeg 8 sprats [ 0, 63 ] : 92 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 93 in 752 
+bb 2 kk 7 isgeom extdeg 8 sprats [ 0, 63 ] : 94 in 752 
+bb 2 kk 7 isgeom extdeg 8 sprats [ 0, 63 ] : 95 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 96 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 97 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 98 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 99 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 100 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 101 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 102 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 103 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 104 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 105 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 106 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 107 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 108 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 109 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 110 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 111 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 112 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 113 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 15 ] : 114 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 115 in 752 
+bb 2 kk 7 isgeom extdeg 8 sprats [ 0, 63 ] : 116 in 752 
+bb 2 kk 7 isgeom extdeg 8 sprats [ 0, 63 ] : 117 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 118 in 752 
+bb 2 kk 7 isgeom extdeg 8 sprats [ 0, 63 ] : 119 in 752 
+bb 2 kk 7 isgeom extdeg 8 sprats [ 0, 63 ] : 120 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 121 in 752 
+bb 2 kk 7 isgeom extdeg 8 sprats [ 0, 63 ] : 122 in 752 
+bb 2 kk 7 isgeom extdeg 8 sprats [ 0, 63 ] : 123 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 124 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 125 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 126 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 127 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 128 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 129 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 130 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 131 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 132 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 133 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 134 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 135 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 136 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 137 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 138 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 139 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 140 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 141 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 15 ] : 142 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 143 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 144 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 145 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 146 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 147 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 148 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 149 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 150 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 151 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 152 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 153 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 154 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 155 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 156 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 157 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 158 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 159 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 160 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 15 ] : 161 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 162 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 163 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 164 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 165 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 166 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 167 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 168 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 169 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 170 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 171 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 172 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 173 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 174 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 175 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 176 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 177 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 178 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 179 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 15 ] : 180 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 181 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 182 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 183 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 184 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 185 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 186 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 187 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 188 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 189 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 190 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 191 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 192 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 193 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 194 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 195 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 196 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 197 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 198 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 15 ] : 199 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 200 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 201 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 202 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 203 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 204 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 205 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 206 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 207 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 208 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 209 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 210 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 211 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 212 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 213 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 214 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 215 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 216 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 217 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 15 ] : 218 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 219 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 220 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 221 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 222 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 223 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 224 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 225 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 226 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 227 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 228 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 229 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 230 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 231 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 232 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 233 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 234 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 235 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 236 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 15 ] : 237 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 238 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 239 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 240 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 241 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 242 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 243 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 244 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 245 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 246 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 247 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 248 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 249 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 250 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 251 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 252 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 253 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 254 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 255 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 15 ] : 256 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 257 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 258 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 259 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 260 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 261 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 262 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 263 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 264 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 265 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 266 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 267 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 268 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 269 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 270 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 271 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 272 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 273 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 274 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 15 ] : 275 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 276 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 277 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 278 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 279 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 280 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 281 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 282 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 283 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 284 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 285 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 286 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 287 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 288 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 289 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 290 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 291 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 292 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 293 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 15 ] : 294 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 295 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 296 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 297 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 298 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 299 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 300 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 301 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 302 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 303 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 304 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 305 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 306 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 307 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 308 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 309 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 310 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 311 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 312 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 15 ] : 313 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 314 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 315 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 316 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 317 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 318 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 319 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 320 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 321 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 31 ] : 322 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 323 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 324 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 325 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 326 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 327 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 328 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 329 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 330 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 331 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 7 ] : 332 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 333 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 334 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 335 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 336 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 337 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 338 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 339 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 340 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 341 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 342 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 343 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 344 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 345 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 346 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 347 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 348 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 349 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 350 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 351 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 352 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 353 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 354 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 355 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 356 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 357 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 358 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 359 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 360 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 361 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 362 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 363 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 364 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 365 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 366 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 367 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 368 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 369 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 370 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 371 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 372 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 373 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 374 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 375 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 376 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 377 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 378 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 379 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 380 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 381 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 382 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 383 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 384 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 385 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 386 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 387 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 388 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 389 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 390 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 391 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 392 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 393 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 394 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 395 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 396 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 397 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 398 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 399 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 400 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 401 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 402 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 403 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 404 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 405 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 406 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 407 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 408 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 409 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 410 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 411 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 412 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 413 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 414 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 415 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 416 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 417 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 418 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 419 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 420 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 421 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 422 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 423 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 424 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 425 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 426 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 427 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 428 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 429 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 430 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 431 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 432 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 433 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 434 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 435 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 436 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 437 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 438 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 439 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 440 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 441 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 442 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 443 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 444 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 445 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 446 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 447 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 448 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 449 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 450 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 451 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 452 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 453 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 454 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 455 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 456 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 457 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 458 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 459 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 460 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 461 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 462 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 463 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 464 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 465 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 466 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 467 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 468 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 469 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 470 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 471 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 472 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 473 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 474 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 475 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 476 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 477 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 478 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 479 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 480 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 481 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 482 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 483 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 484 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 485 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 486 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 487 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 488 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 489 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 490 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 491 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 492 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 493 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 494 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 495 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 496 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 497 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 498 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 499 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 500 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 501 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 502 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 503 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 504 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 505 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 506 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 507 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 508 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 509 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 510 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 511 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 512 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 513 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 514 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 515 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 516 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 517 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 518 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 519 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 520 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 521 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 522 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 523 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 524 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 525 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 526 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 527 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 528 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 529 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 530 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 531 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 532 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 533 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 0, 23 ] : 534 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 15 ] : 535 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 15 ] : 536 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 15 ] : 537 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 15 ] : 538 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 15 ] : 539 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 15 ] : 540 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 15 ] : 541 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 15 ] : 542 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 15 ] : 543 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 15 ] : 544 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 7 ] : 545 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 546 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 547 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 548 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 549 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 550 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 551 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 552 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 553 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 554 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 555 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 556 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 557 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 558 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 559 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 560 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 561 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 562 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 563 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 564 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 565 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 566 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 567 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 568 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 569 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 570 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 571 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 572 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 573 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 574 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 575 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 576 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 577 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 15 ] : 578 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 15 ] : 579 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 15 ] : 580 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 15 ] : 581 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 15 ] : 582 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 15 ] : 583 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 7 ] : 584 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 585 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 586 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 587 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 588 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 589 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 590 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 591 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 592 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 593 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 594 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 595 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 596 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 597 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 598 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 599 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 600 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 601 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 602 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 603 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 604 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 605 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 606 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 607 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 608 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 609 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 610 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 611 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 612 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 613 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 614 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 615 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 616 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 15 ] : 617 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 15 ] : 618 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 15 ] : 619 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 7 ] : 620 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 621 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 622 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 623 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 624 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 625 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 626 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 627 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 628 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 629 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 630 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 631 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 632 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 633 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 634 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 635 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 636 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 637 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 638 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 639 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 640 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 641 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 642 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 643 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 644 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 645 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 646 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 647 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 648 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 649 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 650 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 651 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 652 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 15 ] : 653 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 7 ] : 654 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 655 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 656 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 657 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 658 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 659 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 660 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 661 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 662 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 663 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 664 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 665 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 666 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 667 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 668 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 669 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 670 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 671 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 672 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 673 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 674 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 675 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 676 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 677 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 678 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 679 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 680 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 681 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 682 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 683 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 684 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 685 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 686 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 7 ] : 687 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 688 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 689 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 690 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 691 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 692 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 693 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 694 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 695 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 696 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 697 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 698 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 699 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 700 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 701 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 702 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 703 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 704 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 705 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 706 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 707 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 708 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 709 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 710 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 711 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 712 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 713 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 714 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 715 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 716 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 717 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 718 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 719 in 752 
+bb 2 kk 7 isgeom extdeg 2 sprats [ 0, 7 ] : 720 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 721 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 722 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 723 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 724 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 725 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 726 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 727 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 728 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 729 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 730 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 731 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 732 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 733 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 734 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 735 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 736 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 737 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 738 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 739 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 740 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 741 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 742 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 743 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 744 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 745 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 746 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 747 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 748 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 749 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 750 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 751 in 752 
+bb 2 kk 7 isgeom extdeg 4 sprats [ 2, 6 ] : 752 in 752 
+_______________ 
+__nonsingisotwords 8163 
+__singisotwords 8348 
