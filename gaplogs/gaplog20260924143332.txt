@@ -254,3 +254,16 @@ bb 1 kk 9 isgeom extdeg 3 sprats [ 0, 16 ] : 170 in 170
 _______________ 
 __nonsingisotwords 2120 
 __singisotwords 4440 
+Error, user interrupt in
+  return PROD_VECTOR_MATRIX( row, m2 ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3640 called from 
+func( C[i] ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from
+List( m1, function ( row )
+      return PROD_VECTOR_MATRIX( row, m2 );
+  end ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3640 called from
+twdbasis * tdata[2] at NonSingOverLats.g:72 called from
+isneworec( ttdet, newwdbasis ) at NonSingOverLats.g:95 called from
+thetask( neworec, newposs ); at NonSingOverLats.g:133 called from
+...  at Task20260924Ua.g:62
+you can 'return;'
+brk> quit;
+gap> quit;

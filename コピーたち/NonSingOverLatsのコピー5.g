@@ -16,7 +16,7 @@ NonSingOverLats:=function(Gram, h)
   iter, isotwordsdual, tw, twdual, iniorec, nonsingoverlats, 
   isneworec, thetask, isotwords, overlats, inidet, extdeg,
   tvdual, newtbasisdual, newth, newGram, wdbasis,
-  singisotwords, oldwdbasiss, hash, maxgg, lev1counter;
+  singisotwords, oldwdbasiss;
   #
   nn:=Length(h);
   Gramdual:=InverseMat(Gram);
@@ -29,7 +29,7 @@ NonSingOverLats:=function(Gram, h)
   isotwords:=[];
   isotwordsdual:=[];
   singisotwords:=[];
-  #
+
   for tw in iter do 
     if IsZeroVect(tw) then continue; fi;
     twdual:=tw*discf;
@@ -63,21 +63,15 @@ NonSingOverLats:=function(Gram, h)
   );
   #
   nonsingoverlats:=[iniorec];
+  oldwdbasiss:=[[inidet, iniorec.wdbasis]];
   #
-  maxgg:=Maximum(discg);
-  hash:=function(wdmat)
-    local fmat, aa, xx;
-    fmat:=Flat(wdmat);
-    aa:=0;
-    for xx in fmat do 
-      aa:=aa*maxgg+xx;
+  isneworec:=function(ttdet, twdbasis)
+    local torec, T, tdata;
+    for tdata in oldwdbasiss do 
+      if tdata[1]=ttdet  and twdbasis=tdata[2] then return(false); fi;
     od;
-    return(aa);
+    return(true);
   end;
-  #
-  oldwdbasiss:=Set([hash(iniorec.wdbasis)]);
-  #
-  lev1counter:=0;
   #
   thetask:=function(torec, poss) 
     #
@@ -85,8 +79,8 @@ NonSingOverLats:=function(Gram, h)
     # tbasisdual:=tbasis*Gram;
     # h=th*tbasis;
     #
-    local pos,  tGram, th, newposs,    tw, tvdual, newtbasisdual,twdbasisinv, newwdbasis, newwdbasisinv, singflag, stw, tpos, hashnewwdbasis, singflag2, ddinv, 
-    xx, newGram, ttdet, ttbasisdualinv, newaddwords, neworec, newth, dd; #, st, Rtm1, Rtm2;
+    local pos,  tGram, th, newposs,    tw, tvdual, newtbasisdual,twdbasisinv, newwdbasis, newwdbasisinv, singflag, stw, tpos, 
+    xx, newGram, ttdet, ttbasisdualinv, newaddwords, neworec, newth;
     #
     tGram:=torec.Gram;
     th:=torec.h;
@@ -96,32 +90,16 @@ NonSingOverLats:=function(Gram, h)
       newwdbasis:=AddVectToBasis(torec.wdbasis, tw);
       ttdet:=AbsInt(DeterminantIntMat(newwdbasis));
       newwdbasisinv:=InverseMat(newwdbasis);  
-      #st:=Runtime();
-      dd:=Lcm(List(Flat(newwdbasisinv), DenominatorRat));
-      ddinv:=dd*newwdbasisinv;
       singflag:=false;
       for stw in singisotwords do 
-        if IsZeroVect((stw*ddinv) mod dd) then 
+        if IsIntVect(stw*newwdbasisinv) then 
           singflag:=true;
           break; # from for stw in singisotwords do 
         fi;
       od;
-      # Rtm1:=Runtime()-st;
-      # st:=Runtime();
-      # singflag2:=false;
-      # for stw in singisotwords do 
-      #   if IsIntVect(stw*newwdbasisinv) then 
-      #     singflag2:=true;
-      #     break; # from for stw in singisotwords do 
-      #   fi;
-      # od;
-      # Rtm2:=Runtime()-st;
-      # Printn(Rtm1, Rtm2);
-      # if singflag<>singflag2 then beep(66152); fi;
       if not singflag then  
-        hashnewwdbasis:=hash(newwdbasis);
-        if not hashnewwdbasis  in oldwdbasiss then 
-          AddSet(oldwdbasiss, hashnewwdbasis);       
+        if isneworec(ttdet, newwdbasis) then 
+          Add(oldwdbasiss, [ttdet, newwdbasis]);       
           tvdual:=tw*discrec.reps_dual;
           newtbasisdual:=AddVectToBasis(torec.basisdual, tvdual);
           newth:=SolutionIntMat(newtbasisdual, thdual);
@@ -154,12 +132,6 @@ NonSingOverLats:=function(Gram, h)
         fi;
       fi;
     od; 
-    #
-    if Length(torec.addwords)=1 then 
-      lev1counter:=lev1counter+1;
-      Printn("___in NonSingOverLats__", lev1counter, "in", Length(isotwords), 
-            ":", Length(nonsingoverlats));
-    fi;
     #
   end;
   #

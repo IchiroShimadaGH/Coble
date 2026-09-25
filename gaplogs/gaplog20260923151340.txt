@@ -830,4 +830,5 @@ Error, Variable: 'nopsscons' must have an assigned value in
 <function "unknown">( <arguments> )
  called from read-eval loop at Task20260923Ud.g:42
 type 'quit;' to quit to outer loop
-brk> 
+brk> quit;
+gap> quit;

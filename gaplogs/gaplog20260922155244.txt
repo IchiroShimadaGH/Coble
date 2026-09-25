@@ -328,3 +328,16 @@ bb 0 kk 10 isgeom extdeg 2 sprats [ 0, 90 ] : 166 in 166
 _______________ 
 __nonsingisotwords 1488 
 __singisotwords 495 
+Error, user interrupt in
+  res[i] := func( C[i] ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from 
+List( m1, function ( row )
+      return PROD_VECTOR_MATRIX( row, m2 );
+  end ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3640 called from
+twdbasis * tdata[2] at NonSingOverLats.g:72 called from
+isneworec( ttdet, newwdbasis ) at NonSingOverLats.g:95 called from
+thetask( neworec, newposs ); at NonSingOverLats.g:133 called from
+thetask( neworec, newposs ); at NonSingOverLats.g:133 called from
+...  at Task20260924Ua.g:62
+you can 'return;'
+brk> quit;
+gap> quit;

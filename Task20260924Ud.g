@@ -273,8 +273,8 @@ thetask:=function(kk, wg)
       if t0sign[2]<>1 then continue; fi; # in for addv in addvs do 
       if AffESstd(t0Gram, t0h, 0, -2, true)<>[] then continue; fi; # in for addv in addvs do 
       if kk+1>=7 then 
-        minflag2:=RandomIsMinimal(kk+1, newwg, 512, 1024);
         _mms:=_mms+1;
+        minflag2:=RandomIsMinimal(kk+1, newwg, 256, 512);
         if not minflag2 then 
           _mmss:=_mmss+1;
           Printn("minflag1 and minflag2 are different!!", _mms, _mmss);

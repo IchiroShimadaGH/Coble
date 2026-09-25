@@ -1111,3 +1111,3794 @@ kk 7 rho 8 [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] extdeg 2 sprats [ 7, 4 ] : 5 in 7
 kk 7 rho 8 [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] extdeg 2 sprats [ 7, 4 ] : 6 in 7 
 kk 7 rho 8 [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] extdeg 2 sprats [ 5, 15 ] : 7 in 7 
 _________orecs done 128 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 129 
+__nonsingisotwords 0 
+__singisotwords 17 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 7 [ [ 0, 15 ], [ 1, 2 ], [ 2, 3 ], [ 4, 1 ] ] extdeg 1 sprats [ 0, 20 ] : 1 in 1 
+_________orecs done 130 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 1 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 131 
+__nonsingisotwords 0 
+__singisotwords 17 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 7 [ [ 0, 15 ], [ 1, 1 ], [ 2, 4 ], [ 4, 1 ] ] extdeg 1 sprats [ 0, 20 ] : 1 in 1 
+_________orecs done 132 
+__nonsingisotwords 0 
+__singisotwords 35 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 5 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 133 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 6 ] ] extdeg 1 sprats [ 0, 22 ] : 1 in 1 
+_________orecs done 134 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 22 ] : 1 in 1 
+_________orecs done 135 
+__nonsingisotwords 0 
+__singisotwords 35 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 5 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 136 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 7 ] ] extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+_________orecs done 137 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+_________orecs done 138 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 6 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 25 ] : 1 in 1 
+_________orecs done 139 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+_________orecs done 140 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 31 ] : 1 in 1 
+_________orecs done 141 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 24 ] : 1 in 1 
+_________orecs done 142 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 23 ] : 1 in 1 
+_________orecs done 143 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 4 ], [ 2, 1 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 144 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+_________orecs done 145 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+_________orecs done 146 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 24 ] : 1 in 1 
+_________orecs done 147 
+__nonsingisotwords 0 
+__singisotwords 59 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+_________orecs done 148 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 149 
+__nonsingisotwords 0 
+__singisotwords 35 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 6 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 150 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 25 ] : 1 in 1 
+_________orecs done 151 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 31 ] : 1 in 1 
+_________orecs done 152 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 24 ] : 1 in 1 
+_________orecs done 153 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 1 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 154 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 155 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 24 ] : 1 in 1 
+_________orecs done 156 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 157 
+__nonsingisotwords 0 
+__singisotwords 59 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+_________orecs done 158 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+_________orecs done 159 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 23 ] : 1 in 1 
+_________orecs done 160 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+_________orecs done 161 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 24 ] : 1 in 1 
+_________orecs done 162 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 163 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 24 ] : 1 in 1 
+_________orecs done 164 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 1 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 165 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 23 ] : 1 in 1 
+_________orecs done 166 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 2 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 167 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 1 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 31 ] : 1 in 1 
+_________orecs done 168 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 3, 3 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 169 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 2 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 170 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 31 ] : 1 in 1 
+_________orecs done 171 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 25 ] : 1 in 1 
+_________orecs done 172 
+__nonsingisotwords 0 
+__singisotwords 35 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 2 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 173 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+_________orecs done 174 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+_________orecs done 175 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 22 ] : 1 in 1 
+_________orecs done 176 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+_________orecs done 177 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 22 ] : 1 in 1 
+_________orecs done 178 
+__nonsingisotwords 0 
+__singisotwords 35 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 3 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 179 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 180 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 23 ] : 1 in 1 
+_________orecs done 181 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 2 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 24 ] : 1 in 1 
+_________orecs done 182 
+__nonsingisotwords 0 
+__singisotwords 59 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 22 ] : 1 in 1 
+_________orecs done 183 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 36 ] : 1 in 1 
+_________orecs done 184 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 1 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 185 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 1 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 186 
+__nonsingisotwords 6 
+__singisotwords 5 
+kk 7 orecs 7 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 21 ] : 1 in 7 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 2 sprats [ 4, 15 ] : 2 in 7 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 2 sprats [ 4, 15 ] : 3 in 7 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 2 sprats [ 4, 15 ] : 4 in 7 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 2 sprats [ 4, 15 ] : 5 in 7 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 2 sprats [ 4, 15 ] : 6 in 7 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 2 sprats [ 7, 0 ] : 7 in 7 
+_________orecs done 193 
+__nonsingisotwords 1 
+__singisotwords 46 
+kk 7 orecs 2 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 21 ] : 1 in 2 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 5 ] ] extdeg 2 sprats [ 0, 46 ] : 2 in 2 
+_________orecs done 195 
+__nonsingisotwords 10 
+__singisotwords 37 
+kk 7 orecs 11 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 21 ] : 1 in 11 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 2 sprats [ 4, 15 ] : 2 in 11 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 2 sprats [ 4, 15 ] : 3 in 11 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 2 sprats [ 4, 15 ] : 4 in 11 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 2 sprats [ 4, 15 ] : 5 in 11 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 2 sprats [ 4, 15 ] : 6 in 11 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 2 sprats [ 4, 15 ] : 7 in 11 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 2 sprats [ 4, 15 ] : 8 in 11 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 2 sprats [ 4, 15 ] : 9 in 11 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 2 sprats [ 4, 15 ] : 10 in 11 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 2 sprats [ 4, 15 ] : 11 in 11 
+_________orecs done 206 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 1 ], [ 2, 6 ] ] extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+_________orecs done 207 
+_________orecs done 207 
+__nonsingisotwords 0 
+__singisotwords 55 
+kk 6 orecs 1 
+_________ 
+kk 6 rho 7 [ [ 0, 14 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+__nonsingisotwords 0 
+__singisotwords 63 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 17 ], [ 1, 3 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 209 
+__nonsingisotwords 0 
+__singisotwords 55 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 7 [ [ 0, 19 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 210 
+__nonsingisotwords 0 
+__singisotwords 63 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 18 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 63 ] : 1 in 1 
+_________orecs done 211 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 17 ], [ 1, 2 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 46 ] : 1 in 1 
+_________orecs done 212 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 17 ], [ 1, 3 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 36 ] : 1 in 1 
+_________orecs done 213 
+__nonsingisotwords 0 
+__singisotwords 63 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 17 ], [ 1, 2 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 214 
+__nonsingisotwords 0 
+__singisotwords 31 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 215 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 17 ], [ 1, 1 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 46 ] : 1 in 1 
+_________orecs done 216 
+__nonsingisotwords 0 
+__singisotwords 63 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 217 
+__nonsingisotwords 0 
+__singisotwords 63 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 17 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 63 ] : 1 in 1 
+_________orecs done 218 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 2 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 46 ] : 1 in 1 
+_________orecs done 219 
+__nonsingisotwords 0 
+__singisotwords 55 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 7 [ [ 0, 16 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 220 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 36 ] : 1 in 1 
+_________orecs done 221 
+__nonsingisotwords 0 
+__singisotwords 31 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 222 
+__nonsingisotwords 0 
+__singisotwords 63 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 223 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 36 ] : 1 in 1 
+_________orecs done 224 
+__nonsingisotwords 0 
+__singisotwords 63 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 2 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 225 
+__nonsingisotwords 0 
+__singisotwords 31 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 226 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 36 ] : 1 in 1 
+_________orecs done 227 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 1 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 46 ] : 1 in 1 
+_________orecs done 228 
+__nonsingisotwords 0 
+__singisotwords 63 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 229 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 36 ] : 1 in 1 
+_________orecs done 230 
+__nonsingisotwords 0 
+__singisotwords 63 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 63 ] : 1 in 1 
+_________orecs done 231 
+__nonsingisotwords 0 
+__singisotwords 55 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 7 [ [ 0, 16 ], [ 2, 4 ], [ 4, 1 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 232 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 46 ] : 1 in 1 
+_________orecs done 233 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 1 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 36 ] : 1 in 1 
+_________orecs done 234 
+__nonsingisotwords 0 
+__singisotwords 127 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 2, 6 ] ] extdeg 1 sprats [ 0, 42 ] : 1 in 1 
+_________orecs done 235 
+__nonsingisotwords 0 
+__singisotwords 55 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 7 [ [ 0, 15 ], [ 2, 5 ], [ 4, 1 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 236 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 36 ] : 1 in 1 
+_________orecs done 237 
+__nonsingisotwords 0 
+__singisotwords 63 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 238 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 4 ], [ 2, 1 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 36 ] : 1 in 1 
+_________orecs done 239 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 31 ] : 1 in 1 
+_________orecs done 240 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 31 ] : 1 in 1 
+_________orecs done 241 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 46 ] : 1 in 1 
+_________orecs done 242 
+__nonsingisotwords 0 
+__singisotwords 63 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 243 
+__nonsingisotwords 0 
+__singisotwords 31 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 244 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 36 ] : 1 in 1 
+_________orecs done 245 
+__nonsingisotwords 0 
+__singisotwords 63 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 246 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 31 ] : 1 in 1 
+_________orecs done 247 
+__nonsingisotwords 0 
+__singisotwords 63 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 248 
+__nonsingisotwords 0 
+__singisotwords 31 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 249 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 36 ] : 1 in 1 
+_________orecs done 250 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 1 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 46 ] : 1 in 1 
+_________orecs done 251 
+__nonsingisotwords 0 
+__singisotwords 63 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 252 
+__nonsingisotwords 0 
+__singisotwords 63 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 253 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 2 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 36 ] : 1 in 1 
+_________orecs done 254 
+__nonsingisotwords 0 
+__singisotwords 31 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 255 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 31 ] : 1 in 1 
+_________orecs done 256 
+__nonsingisotwords 0 
+__singisotwords 31 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 257 
+__nonsingisotwords 0 
+__singisotwords 63 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 258 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 36 ] : 1 in 1 
+_________orecs done 259 
+__nonsingisotwords 0 
+__singisotwords 63 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 2 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 260 
+__nonsingisotwords 0 
+__singisotwords 31 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 261 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 1 ], [ 3, 3 ] ] extdeg 1 sprats [ 0, 46 ] : 1 in 1 
+_________orecs done 262 
+__nonsingisotwords 0 
+__singisotwords 63 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 3 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 263 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 1 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 46 ] : 1 in 1 
+_________orecs done 264 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 1 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 36 ] : 1 in 1 
+_________orecs done 265 
+__nonsingisotwords 0 
+__singisotwords 63 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 266 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 31 ] : 1 in 1 
+_________orecs done 267 
+__nonsingisotwords 0 
+__singisotwords 63 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 268 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 1 ], [ 2, 6 ] ] extdeg 1 sprats [ 0, 31 ] : 1 in 1 
+_________orecs done 269 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 1 ], [ 2, 5 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 36 ] : 1 in 1 
+_________orecs done 270 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 36 ] : 1 in 1 
+_________orecs done 271 
+__nonsingisotwords 0 
+__singisotwords 31 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 3 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 272 
+__nonsingisotwords 0 
+__singisotwords 63 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 1 ], [ 2, 5 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 273 
+__nonsingisotwords 0 
+__singisotwords 63 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 2, 6 ] ] extdeg 1 sprats [ 0, 63 ] : 1 in 1 
+_________orecs done 274 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 2, 5 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 36 ] : 1 in 1 
+_________orecs done 275 
+__nonsingisotwords 0 
+__singisotwords 127 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 2, 5 ], [ 4, 1 ] ] extdeg 1 sprats [ 0, 42 ] : 1 in 1 
+_________orecs done 276 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 46 ] : 1 in 1 
+_________orecs done 277 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 1 ], [ 2, 6 ] ] extdeg 1 sprats [ 0, 31 ] : 1 in 1 
+_________orecs done 278 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 1 ], [ 2, 5 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 31 ] : 1 in 1 
+_________orecs done 279 
+__nonsingisotwords 2 
+__singisotwords 253 
+kk 7 orecs 3 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 2, 7 ] ] extdeg 1 sprats [ 0, 31 ] : 1 in 3 
+kk 7 rho 8 [ [ 0, 14 ], [ 2, 7 ] ] extdeg 2 sprats [ 0, 63 ] : 2 in 3 
+kk 7 rho 8 [ [ 0, 14 ], [ 2, 7 ] ] extdeg 2 sprats [ 0, 63 ] : 3 in 3 
+_________orecs done 282 
+_________orecs done 282 
+__nonsingisotwords 0 
+__singisotwords 19 
+kk 6 orecs 1 
+_________ 
+kk 6 rho 7 [ [ 0, 13 ], [ 1, 2 ] ] extdeg 1 sprats [ 0, 19 ] : 1 in 1 
+__nonsingisotwords 0 
+__singisotwords 127 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 17 ], [ 1, 4 ] ] extdeg 1 sprats [ 0, 24 ] : 1 in 1 
+_________orecs done 284 
+__nonsingisotwords 8 
+__singisotwords 7 
+kk 7 orecs 9 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 5 ] ] extdeg 1 sprats [ 0, 23 ] : 1 in 9 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 5 ] ] extdeg 2 sprats [ 6, 8 ] : 2 in 9 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 5 ] ] extdeg 2 sprats [ 6, 8 ] : 3 in 9 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 5 ] ] extdeg 2 sprats [ 6, 8 ] : 4 in 9 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 5 ] ] extdeg 2 sprats [ 6, 8 ] : 5 in 9 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 5 ] ] extdeg 2 sprats [ 6, 8 ] : 6 in 9 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 5 ] ] extdeg 2 sprats [ 6, 8 ] : 7 in 9 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 5 ] ] extdeg 2 sprats [ 6, 8 ] : 8 in 9 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 5 ] ] extdeg 2 sprats [ 6, 8 ] : 9 in 9 
+_________orecs done 293 
+__nonsingisotwords 0 
+__singisotwords 63 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 294 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 17 ], [ 1, 3 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 295 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 296 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 17 ], [ 1, 2 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 42 ] : 1 in 1 
+_________orecs done 297 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 17 ], [ 1, 4 ] ] extdeg 1 sprats [ 0, 25 ] : 1 in 1 
+_________orecs done 298 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 5 ] ] extdeg 1 sprats [ 0, 23 ] : 1 in 1 
+_________orecs done 299 
+__nonsingisotwords 0 
+__singisotwords 51 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 300 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 17 ], [ 1, 3 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 301 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 302 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 5 ] ] extdeg 1 sprats [ 0, 23 ] : 1 in 1 
+_________orecs done 303 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 6 ] ] extdeg 1 sprats [ 0, 22 ] : 1 in 1 
+_________orecs done 304 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 305 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 306 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 307 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 308 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 309 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 310 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 311 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 42 ] : 1 in 1 
+_________orecs done 312 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 31 ] : 1 in 1 
+_________orecs done 313 
+__nonsingisotwords 12 
+__singisotwords 27 
+kk 7 orecs 13 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 25 ] : 1 in 13 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] extdeg 2 sprats [ 6, 10 ] : 2 in 13 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] extdeg 2 sprats [ 6, 10 ] : 3 in 13 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] extdeg 2 sprats [ 6, 10 ] : 4 in 13 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] extdeg 2 sprats [ 6, 10 ] : 5 in 13 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] extdeg 2 sprats [ 6, 10 ] : 6 in 13 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] extdeg 2 sprats [ 6, 10 ] : 7 in 13 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] extdeg 2 sprats [ 6, 10 ] : 8 in 13 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] extdeg 2 sprats [ 6, 10 ] : 9 in 13 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] extdeg 2 sprats [ 6, 10 ] : 10 in 13 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] extdeg 2 sprats [ 6, 10 ] : 11 in 13 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] extdeg 2 sprats [ 6, 10 ] : 12 in 13 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] extdeg 2 sprats [ 6, 10 ] : 13 in 13 
+_________orecs done 326 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 31 ] : 1 in 1 
+_________orecs done 327 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 328 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 329 
+__nonsingisotwords 0 
+__singisotwords 63 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 2 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 330 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 36 ] : 1 in 1 
+_________orecs done 331 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 17 ], [ 1, 4 ] ] extdeg 1 sprats [ 0, 29 ] : 1 in 1 
+_________orecs done 332 
+__nonsingisotwords 0 
+__singisotwords 63 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 5 ] ] extdeg 1 sprats [ 0, 23 ] : 1 in 1 
+_________orecs done 333 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 24 ] : 1 in 1 
+_________orecs done 334 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 5 ] ] extdeg 1 sprats [ 0, 25 ] : 1 in 1 
+_________orecs done 335 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 6 ] ] extdeg 1 sprats [ 0, 22 ] : 1 in 1 
+_________orecs done 336 
+__nonsingisotwords 0 
+__singisotwords 31 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 23 ] : 1 in 1 
+_________orecs done 337 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 29 ] : 1 in 1 
+_________orecs done 338 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 25 ] : 1 in 1 
+_________orecs done 339 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 29 ] : 1 in 1 
+_________orecs done 340 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 6 ] ] extdeg 1 sprats [ 0, 22 ] : 1 in 1 
+_________orecs done 341 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 7 ] ] extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+_________orecs done 342 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 22 ] : 1 in 1 
+_________orecs done 343 
+__nonsingisotwords 0 
+__singisotwords 31 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 23 ] : 1 in 1 
+_________orecs done 344 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 22 ] : 1 in 1 
+_________orecs done 345 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 25 ] : 1 in 1 
+_________orecs done 346 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 24 ] : 1 in 1 
+_________orecs done 347 
+__nonsingisotwords 0 
+__singisotwords 63 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 23 ] : 1 in 1 
+_________orecs done 348 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 29 ] : 1 in 1 
+_________orecs done 349 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 350 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 351 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 352 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 353 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 354 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 355 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 356 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 22 ] : 1 in 1 
+_________orecs done 357 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 23 ] : 1 in 1 
+_________orecs done 358 
+__nonsingisotwords 0 
+__singisotwords 51 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 359 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 23 ] : 1 in 1 
+_________orecs done 360 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 25 ] : 1 in 1 
+_________orecs done 361 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 362 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 24 ] : 1 in 1 
+_________orecs done 363 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 364 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 2 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 42 ] : 1 in 1 
+_________orecs done 365 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 366 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 367 
+__nonsingisotwords 0 
+__singisotwords 63 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 368 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 36 ] : 1 in 1 
+_________orecs done 369 
+__nonsingisotwords 0 
+__singisotwords 63 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 370 
+__nonsingisotwords 8 
+__singisotwords 7 
+kk 7 orecs 9 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 23 ] : 1 in 9 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 2 sprats [ 6, 8 ] : 2 in 9 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 2 sprats [ 6, 8 ] : 3 in 9 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 2 sprats [ 6, 8 ] : 4 in 9 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 2 sprats [ 6, 8 ] : 5 in 9 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 2 sprats [ 6, 8 ] : 6 in 9 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 2 sprats [ 6, 8 ] : 7 in 9 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 2 sprats [ 6, 8 ] : 8 in 9 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 2 sprats [ 6, 8 ] : 9 in 9 
+_________orecs done 379 
+__nonsingisotwords 0 
+__singisotwords 127 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 24 ] : 1 in 1 
+_________orecs done 380 
+__nonsingisotwords 0 
+__singisotwords 19 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 7 [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 4, 1 ] ] extdeg 1 sprats [ 0, 19 ] : 1 in 1 
+_________orecs done 381 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 382 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 24 ] : 1 in 1 
+_________orecs done 383 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 25 ] : 1 in 1 
+_________orecs done 384 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 31 ] : 1 in 1 
+_________orecs done 385 
+__nonsingisotwords 0 
+__singisotwords 63 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 25 ] : 1 in 1 
+_________orecs done 386 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 387 
+__nonsingisotwords 0 
+__singisotwords 19 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 7 [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 4, 1 ] ] extdeg 1 sprats [ 0, 19 ] : 1 in 1 
+_________orecs done 388 
+__nonsingisotwords 0 
+__singisotwords 19 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 7 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 4, 1 ] ] extdeg 1 sprats [ 0, 19 ] : 1 in 1 
+_________orecs done 389 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 5 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 390 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 6 ] ] extdeg 1 sprats [ 0, 22 ] : 1 in 1 
+_________orecs done 391 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 22 ] : 1 in 1 
+_________orecs done 392 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 5 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 393 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 6 ] ] extdeg 1 sprats [ 0, 25 ] : 1 in 1 
+_________orecs done 394 
+__nonsingisotwords 0 
+__singisotwords 35 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 7 ] ] extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+_________orecs done 395 
+__nonsingisotwords 0 
+__singisotwords 35 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+_________orecs done 396 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 6 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 25 ] : 1 in 1 
+_________orecs done 397 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 398 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 22 ] : 1 in 1 
+_________orecs done 399 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 22 ] : 1 in 1 
+_________orecs done 400 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 401 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 7 ] ] extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+_________orecs done 402 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 8 ] ] extdeg 1 sprats [ 0, 20 ] : 1 in 1 
+_________orecs done 403 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 7 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 20 ] : 1 in 1 
+_________orecs done 404 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 7 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 23 ] : 1 in 1 
+_________orecs done 405 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+_________orecs done 406 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 7 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 20 ] : 1 in 1 
+_________orecs done 407 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 6 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 20 ] : 1 in 1 
+_________orecs done 408 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 6 ], [ 2, 1 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 409 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 6 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 410 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 7 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 24 ] : 1 in 1 
+_________orecs done 411 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 6 ], [ 2, 1 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 412 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+_________orecs done 413 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 6 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 20 ] : 1 in 1 
+_________orecs done 414 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 20 ] : 1 in 1 
+_________orecs done 415 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 416 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 25 ] : 1 in 1 
+_________orecs done 417 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 6 ], [ 2, 1 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 23 ] : 1 in 1 
+_________orecs done 418 
+__nonsingisotwords 0 
+__singisotwords 51 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 419 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 420 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 6 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 421 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 29 ] : 1 in 1 
+_________orecs done 422 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 25 ] : 1 in 1 
+_________orecs done 423 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 4 ], [ 2, 1 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 29 ] : 1 in 1 
+_________orecs done 424 
+__nonsingisotwords 0 
+__singisotwords 31 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 23 ] : 1 in 1 
+_________orecs done 425 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 22 ] : 1 in 1 
+_________orecs done 426 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 25 ] : 1 in 1 
+_________orecs done 427 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 24 ] : 1 in 1 
+_________orecs done 428 
+__nonsingisotwords 0 
+__singisotwords 63 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 23 ] : 1 in 1 
+_________orecs done 429 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 29 ] : 1 in 1 
+_________orecs done 430 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 24 ] : 1 in 1 
+_________orecs done 431 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 7 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 20 ] : 1 in 1 
+_________orecs done 432 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 6 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 20 ] : 1 in 1 
+_________orecs done 433 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 6 ], [ 2, 1 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 22 ] : 1 in 1 
+_________orecs done 434 
+__nonsingisotwords 0 
+__singisotwords 31 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 23 ] : 1 in 1 
+_________orecs done 435 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 6 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 20 ] : 1 in 1 
+_________orecs done 436 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 20 ] : 1 in 1 
+_________orecs done 437 
+__nonsingisotwords 0 
+__singisotwords 31 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 23 ] : 1 in 1 
+_________orecs done 438 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 29 ] : 1 in 1 
+_________orecs done 439 
+__nonsingisotwords 0 
+__singisotwords 63 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 6 ], [ 2, 1 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 23 ] : 1 in 1 
+_________orecs done 440 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 24 ] : 1 in 1 
+_________orecs done 441 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 22 ] : 1 in 1 
+_________orecs done 442 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 20 ] : 1 in 1 
+_________orecs done 443 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 20 ] : 1 in 1 
+_________orecs done 444 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 24 ] : 1 in 1 
+_________orecs done 445 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 25 ] : 1 in 1 
+_________orecs done 446 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 22 ] : 1 in 1 
+_________orecs done 447 
+__nonsingisotwords 0 
+__singisotwords 31 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 23 ] : 1 in 1 
+_________orecs done 448 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 1 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 29 ] : 1 in 1 
+_________orecs done 449 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 1 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 25 ] : 1 in 1 
+_________orecs done 450 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 29 ] : 1 in 1 
+_________orecs done 451 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 7 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 452 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 6 ], [ 2, 1 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 24 ] : 1 in 1 
+_________orecs done 453 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 6 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 454 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 6 ], [ 2, 1 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 25 ] : 1 in 1 
+_________orecs done 455 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 23 ] : 1 in 1 
+_________orecs done 456 
+__nonsingisotwords 0 
+__singisotwords 51 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 1 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 457 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 6 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 458 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 1 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 459 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 23 ] : 1 in 1 
+_________orecs done 460 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 22 ] : 1 in 1 
+_________orecs done 461 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 462 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 1 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 463 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 464 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 3, 3 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 465 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 1 ], [ 3, 3 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 466 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 467 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 468 
+__nonsingisotwords 0 
+__singisotwords 51 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 469 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 23 ] : 1 in 1 
+_________orecs done 470 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 25 ] : 1 in 1 
+_________orecs done 471 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 472 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 24 ] : 1 in 1 
+_________orecs done 473 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 474 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 475 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 6 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 20 ] : 1 in 1 
+_________orecs done 476 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 20 ] : 1 in 1 
+_________orecs done 477 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+_________orecs done 478 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 479 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 20 ] : 1 in 1 
+_________orecs done 480 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 20 ] : 1 in 1 
+_________orecs done 481 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+_________orecs done 482 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 483 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 22 ] : 1 in 1 
+_________orecs done 484 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 22 ] : 1 in 1 
+_________orecs done 485 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 486 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 23 ] : 1 in 1 
+_________orecs done 487 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 20 ] : 1 in 1 
+_________orecs done 488 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 20 ] : 1 in 1 
+_________orecs done 489 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+_________orecs done 490 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 25 ] : 1 in 1 
+_________orecs done 491 
+__nonsingisotwords 0 
+__singisotwords 35 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+_________orecs done 492 
+__nonsingisotwords 0 
+__singisotwords 35 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+_________orecs done 493 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 3 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 25 ] : 1 in 1 
+_________orecs done 494 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 2 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 495 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 22 ] : 1 in 1 
+_________orecs done 496 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 3 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 22 ] : 1 in 1 
+_________orecs done 497 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 2 ], [ 3, 3 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 498 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 6 ], [ 2, 1 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 29 ] : 1 in 1 
+_________orecs done 499 
+__nonsingisotwords 0 
+__singisotwords 63 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 23 ] : 1 in 1 
+_________orecs done 500 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 1 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 24 ] : 1 in 1 
+_________orecs done 501 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 25 ] : 1 in 1 
+_________orecs done 502 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 22 ] : 1 in 1 
+_________orecs done 503 
+__nonsingisotwords 0 
+__singisotwords 31 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 23 ] : 1 in 1 
+_________orecs done 504 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 1 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 29 ] : 1 in 1 
+_________orecs done 505 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 25 ] : 1 in 1 
+_________orecs done 506 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 22 ] : 1 in 1 
+_________orecs done 507 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+_________orecs done 508 
+__nonsingisotwords 0 
+__singisotwords 63 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 509 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 2 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 36 ] : 1 in 1 
+_________orecs done 510 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 511 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 24 ] : 1 in 1 
+_________orecs done 512 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 25 ] : 1 in 1 
+_________orecs done 513 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 31 ] : 1 in 1 
+_________orecs done 514 
+__nonsingisotwords 0 
+__singisotwords 63 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 25 ] : 1 in 1 
+_________orecs done 515 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 516 
+__nonsingisotwords 0 
+__singisotwords 19 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 7 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 4, 1 ] ] extdeg 1 sprats [ 0, 19 ] : 1 in 1 
+_________orecs done 517 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 42 ] : 1 in 1 
+_________orecs done 518 
+__nonsingisotwords 4 
+__singisotwords 91 
+kk 7 orecs 5 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 20 ] : 1 in 5 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 3 ] ] extdeg 2 sprats [ 5, 10 ] : 2 in 5 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 3 ] ] extdeg 2 sprats [ 6, 5 ] : 3 in 5 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 3 ] ] extdeg 2 sprats [ 6, 5 ] : 4 in 5 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 3 ] ] extdeg 2 sprats [ 5, 10 ] : 5 in 5 
+_________orecs done 523 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 20 ] : 1 in 1 
+_________orecs done 524 
+__nonsingisotwords 12 
+__singisotwords 27 
+kk 7 orecs 13 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 20 ] : 1 in 13 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 2 sprats [ 4, 14 ] : 2 in 13 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 2 sprats [ 4, 14 ] : 3 in 13 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 2 sprats [ 4, 14 ] : 4 in 13 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 2 sprats [ 4, 14 ] : 5 in 13 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 2 sprats [ 4, 14 ] : 6 in 13 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 2 sprats [ 4, 14 ] : 7 in 13 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 2 sprats [ 4, 14 ] : 8 in 13 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 2 sprats [ 4, 14 ] : 9 in 13 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 2 sprats [ 4, 14 ] : 10 in 13 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 2 sprats [ 4, 14 ] : 11 in 13 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 2 sprats [ 4, 14 ] : 12 in 13 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 2 sprats [ 4, 14 ] : 13 in 13 
+_________orecs done 537 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 4, 1 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 538 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 539 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 20 ] : 1 in 1 
+_________orecs done 540 
+__nonsingisotwords 0 
+__singisotwords 39 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 20 ] : 1 in 1 
+_________orecs done 541 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 20 ] : 1 in 1 
+_________orecs done 542 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 4 ], [ 4, 1 ] ] extdeg 1 sprats [ 0, 25 ] : 1 in 1 
+_________orecs done 543 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 36 ] : 1 in 1 
+_________orecs done 544 
+__nonsingisotwords 8 
+__singisotwords 87 
+kk 7 orecs 9 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 21 ] : 1 in 9 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 2 sprats [ 5, 11 ] : 2 in 9 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 2 sprats [ 5, 11 ] : 3 in 9 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 2 sprats [ 5, 11 ] : 4 in 9 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 2 sprats [ 5, 11 ] : 5 in 9 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 2 sprats [ 5, 11 ] : 6 in 9 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 2 sprats [ 5, 11 ] : 7 in 9 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 2 sprats [ 4, 15 ] : 8 in 9 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 2 sprats [ 7, 0 ] : 9 in 9 
+_________orecs done 553 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 21 ] : 1 in 1 
+_________orecs done 554 
+__nonsingisotwords 0 
+__singisotwords 127 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 24 ] : 1 in 1 
+_________orecs done 555 
+__nonsingisotwords 0 
+__singisotwords 79 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 20 ] : 1 in 1 
+_________orecs done 556 
+__nonsingisotwords 1 
+__singisotwords 62 
+kk 7 orecs 2 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 2 ], [ 2, 6 ] ] extdeg 1 sprats [ 0, 20 ] : 1 in 2 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 2 ], [ 2, 6 ] ] extdeg 2 sprats [ 0, 42 ] : 2 in 2 
+_________orecs done 558 
+_________orecs done 558 
+__nonsingisotwords 0 
+__singisotwords 5 
+kk 6 orecs 1 
+_________ 
+kk 6 rho 7 [ [ 0, 13 ], [ 1, 1 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 25 ] : 1 in 1 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 17 ], [ 1, 2 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 560 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 17 ], [ 1, 2 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 561 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 562 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 29 ] : 1 in 1 
+_________orecs done 563 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 33 ] : 1 in 1 
+_________orecs done 564 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 565 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 566 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 567 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 2 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 568 
+__nonsingisotwords 0 
+__singisotwords 5 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 7 [ [ 0, 17 ], [ 1, 2 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 25 ] : 1 in 1 
+_________orecs done 569 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 2 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 42 ] : 1 in 1 
+_________orecs done 570 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 33 ] : 1 in 1 
+_________orecs done 571 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 2 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 42 ] : 1 in 1 
+_________orecs done 572 
+__nonsingisotwords 0 
+__singisotwords 5 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 7 [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 25 ] : 1 in 1 
+_________orecs done 573 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 574 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 1 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 46 ] : 1 in 1 
+_________orecs done 575 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 4 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 576 
+__nonsingisotwords 0 
+__singisotwords 27 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 28 ] : 1 in 1 
+_________orecs done 577 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 578 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 579 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 580 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 581 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 29 ] : 1 in 1 
+_________orecs done 582 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 583 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 584 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 585 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 29 ] : 1 in 1 
+_________orecs done 586 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 587 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 588 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 589 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 590 
+__nonsingisotwords 0 
+__singisotwords 27 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 28 ] : 1 in 1 
+_________orecs done 591 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 592 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 593 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 594 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 2 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 595 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 596 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 597 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 598 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 33 ] : 1 in 1 
+_________orecs done 599 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 29 ] : 1 in 1 
+_________orecs done 600 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 601 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 602 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 603 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 604 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 605 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 606 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 607 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 31 ] : 1 in 1 
+_________orecs done 608 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 609 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 46 ] : 1 in 1 
+_________orecs done 610 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 42 ] : 1 in 1 
+_________orecs done 611 
+__nonsingisotwords 0 
+__singisotwords 5 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 7 [ [ 0, 15 ], [ 1, 2 ], [ 2, 3 ], [ 4, 1 ] ] extdeg 1 sprats [ 0, 25 ] : 1 in 1 
+_________orecs done 612 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 613 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 614 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 2 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 46 ] : 1 in 1 
+_________orecs done 615 
+__nonsingisotwords 10 
+__singisotwords 5 
+kk 7 orecs 11 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 11 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 2 sprats [ 7, 9 ] : 2 in 11 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 2 sprats [ 7, 9 ] : 3 in 11 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 2 sprats [ 7, 9 ] : 4 in 11 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 2 sprats [ 7, 9 ] : 5 in 11 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 2 sprats [ 7, 9 ] : 6 in 11 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 2 sprats [ 7, 9 ] : 7 in 11 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 2 sprats [ 7, 9 ] : 8 in 11 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 2 sprats [ 7, 9 ] : 9 in 11 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 2 sprats [ 7, 9 ] : 10 in 11 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 2 sprats [ 7, 9 ] : 11 in 11 
+_________orecs done 626 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 36 ] : 1 in 1 
+_________orecs done 627 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 1 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 46 ] : 1 in 1 
+_________orecs done 628 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 629 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 31 ] : 1 in 1 
+_________orecs done 630 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 1 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 42 ] : 1 in 1 
+_________orecs done 631 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 31 ] : 1 in 1 
+_________orecs done 632 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 1 ], [ 2, 6 ] ] extdeg 1 sprats [ 0, 36 ] : 1 in 1 
+_________orecs done 633 
+__nonsingisotwords 0 
+__singisotwords 5 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 7 [ [ 0, 15 ], [ 1, 1 ], [ 2, 4 ], [ 4, 1 ] ] extdeg 1 sprats [ 0, 25 ] : 1 in 1 
+_________orecs done 634 
+__nonsingisotwords 0 
+__singisotwords 5 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 7 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 4, 1 ] ] extdeg 1 sprats [ 0, 25 ] : 1 in 1 
+_________orecs done 635 
+__nonsingisotwords 0 
+__singisotwords 5 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 7 [ [ 0, 14 ], [ 1, 1 ], [ 2, 5 ], [ 4, 1 ] ] extdeg 1 sprats [ 0, 25 ] : 1 in 1 
+_________orecs done 636 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 637 
+__nonsingisotwords 0 
+__singisotwords 27 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 28 ] : 1 in 1 
+_________orecs done 638 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 4 ], [ 2, 1 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 639 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 5 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 640 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 641 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 642 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 643 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 644 
+__nonsingisotwords 0 
+__singisotwords 27 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 28 ] : 1 in 1 
+_________orecs done 645 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 646 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 647 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 648 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 649 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 6 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 650 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 7 ], [ 2, 1 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 651 
+__nonsingisotwords 0 
+__singisotwords 31 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 6 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 652 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 6 ], [ 2, 1 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 33 ] : 1 in 1 
+_________orecs done 653 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 654 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 6 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 655 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 29 ] : 1 in 1 
+_________orecs done 656 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 1 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 31 ] : 1 in 1 
+_________orecs done 657 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 6 ], [ 2, 1 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 658 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 659 
+__nonsingisotwords 0 
+__singisotwords 27 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 28 ] : 1 in 1 
+_________orecs done 660 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 661 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 31 ] : 1 in 1 
+_________orecs done 662 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 6 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 663 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 664 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 665 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 666 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 667 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 668 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 669 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 670 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 6 ], [ 2, 1 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 31 ] : 1 in 1 
+_________orecs done 671 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 672 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 673 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 674 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 1 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 675 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 676 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 3 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 677 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 678 
+__nonsingisotwords 0 
+__singisotwords 27 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 28 ] : 1 in 1 
+_________orecs done 679 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 680 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 681 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 682 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 29 ] : 1 in 1 
+_________orecs done 683 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 684 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 6 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 685 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 686 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 29 ] : 1 in 1 
+_________orecs done 687 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 688 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 689 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 690 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 691 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 692 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 693 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 694 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 695 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 696 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 697 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 29 ] : 1 in 1 
+_________orecs done 698 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 699 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 700 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 701 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 29 ] : 1 in 1 
+_________orecs done 702 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 703 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 704 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 705 
+__nonsingisotwords 0 
+__singisotwords 27 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 28 ] : 1 in 1 
+_________orecs done 706 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 707 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 2 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 708 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 709 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 31 ] : 1 in 1 
+_________orecs done 710 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 1 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 711 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 2 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 712 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 713 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 1 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 714 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 715 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 716 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 717 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 29 ] : 1 in 1 
+_________orecs done 718 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 33 ] : 1 in 1 
+_________orecs done 719 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 720 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 721 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 3 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 722 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 1 ], [ 3, 3 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 723 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 2 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 724 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 725 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 726 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 727 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 31 ] : 1 in 1 
+_________orecs done 728 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 729 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 730 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 5 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 731 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 732 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 733 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 734 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 735 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 736 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 31 ] : 1 in 1 
+_________orecs done 737 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 3 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 738 
+__nonsingisotwords 0 
+__singisotwords 27 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 28 ] : 1 in 1 
+_________orecs done 739 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 740 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 741 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 31 ] : 1 in 1 
+_________orecs done 742 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 29 ] : 1 in 1 
+_________orecs done 743 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 744 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 745 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 33 ] : 1 in 1 
+_________orecs done 746 
+__nonsingisotwords 0 
+__singisotwords 31 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 747 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 2 ], [ 2, 6 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 748 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 2 ], [ 2, 5 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 749 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 750 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 751 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 2 ], [ 2, 5 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 752 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 753 
+__nonsingisotwords 0 
+__singisotwords 27 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 28 ] : 1 in 1 
+_________orecs done 754 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 3 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 755 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 756 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 757 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 2 ], [ 2, 5 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 758 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 2 ], [ 2, 4 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 759 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 3 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 760 
+__nonsingisotwords 0 
+__singisotwords 27 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 3 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 28 ] : 1 in 1 
+_________orecs done 761 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 2 ], [ 2, 4 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 762 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 763 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 764 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 3 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 765 
+__nonsingisotwords 0 
+__singisotwords 27 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 28 ] : 1 in 1 
+_________orecs done 766 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 3 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 32 ] : 1 in 1 
+_________orecs done 767 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 2 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 768 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 3 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 769 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 770 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 3 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 29 ] : 1 in 1 
+_________orecs done 771 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 772 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 2 ], [ 2, 5 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 773 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 1 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 46 ] : 1 in 1 
+_________orecs done 774 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 34 ] : 1 in 1 
+_________orecs done 775 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 31 ] : 1 in 1 
+_________orecs done 776 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 42 ] : 1 in 1 
+_________orecs done 777 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 1 ], [ 2, 6 ] ] extdeg 1 sprats [ 0, 31 ] : 1 in 1 
+_________orecs done 778 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 1 ], [ 2, 5 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 36 ] : 1 in 1 
+_________orecs done 779 
+__nonsingisotwords 0 
+__singisotwords 5 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 7 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 4, 1 ] ] extdeg 1 sprats [ 0, 25 ] : 1 in 1 
+_________orecs done 780 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 46 ] : 1 in 1 
+_________orecs done 781 
+__nonsingisotwords 10 
+__singisotwords 5 
+kk 7 orecs 11 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 11 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 2 sprats [ 7, 9 ] : 2 in 11 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 2 sprats [ 7, 9 ] : 3 in 11 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 2 sprats [ 7, 9 ] : 4 in 11 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 2 sprats [ 7, 9 ] : 5 in 11 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 2 sprats [ 7, 9 ] : 6 in 11 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 2 sprats [ 7, 9 ] : 7 in 11 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 2 sprats [ 7, 9 ] : 8 in 11 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 2 sprats [ 7, 9 ] : 9 in 11 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 2 sprats [ 7, 9 ] : 10 in 11 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 2 sprats [ 7, 9 ] : 11 in 11 
+_________orecs done 792 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 4, 1 ] ] extdeg 1 sprats [ 0, 36 ] : 1 in 1 
+_________orecs done 793 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 4 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 794 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 795 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 796 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 4 ], [ 4, 1 ] ] extdeg 1 sprats [ 0, 31 ] : 1 in 1 
+_________orecs done 797 
+__nonsingisotwords 6 
+__singisotwords 29 
+kk 7 orecs 7 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 7 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 5 ] ] extdeg 2 sprats [ 6, 11 ] : 2 in 7 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 5 ] ] extdeg 2 sprats [ 6, 11 ] : 3 in 7 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 5 ] ] extdeg 2 sprats [ 6, 11 ] : 4 in 7 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 5 ] ] extdeg 2 sprats [ 6, 11 ] : 5 in 7 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 5 ] ] extdeg 2 sprats [ 6, 11 ] : 6 in 7 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 5 ] ] extdeg 2 sprats [ 5, 16 ] : 7 in 7 
+_________orecs done 804 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 2 ], [ 2, 6 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 805 
+__nonsingisotwords 10 
+__singisotwords 5 
+kk 7 orecs 11 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 2 ], [ 2, 5 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 11 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 2 ], [ 2, 5 ], [ 3, 1 ] ] extdeg 2 sprats [ 5, 16 ] : 2 in 11 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 2 ], [ 2, 5 ], [ 3, 1 ] ] extdeg 2 sprats [ 5, 16 ] : 3 in 11 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 2 ], [ 2, 5 ], [ 3, 1 ] ] extdeg 2 sprats [ 5, 16 ] : 4 in 11 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 2 ], [ 2, 5 ], [ 3, 1 ] ] extdeg 2 sprats [ 5, 16 ] : 5 in 11 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 2 ], [ 2, 5 ], [ 3, 1 ] ] extdeg 2 sprats [ 5, 16 ] : 6 in 11 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 2 ], [ 2, 5 ], [ 3, 1 ] ] extdeg 2 sprats [ 5, 16 ] : 7 in 11 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 2 ], [ 2, 5 ], [ 3, 1 ] ] extdeg 2 sprats [ 5, 16 ] : 8 in 11 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 2 ], [ 2, 5 ], [ 3, 1 ] ] extdeg 2 sprats [ 5, 16 ] : 9 in 11 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 2 ], [ 2, 5 ], [ 3, 1 ] ] extdeg 2 sprats [ 5, 16 ] : 10 in 11 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 2 ], [ 2, 5 ], [ 3, 1 ] ] extdeg 2 sprats [ 5, 16 ] : 11 in 11 
+_________orecs done 816 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 2 ], [ 2, 5 ], [ 4, 1 ] ] extdeg 1 sprats [ 0, 46 ] : 1 in 1 
+_________orecs done 817 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 2 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 818 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 4 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 819 
+__nonsingisotwords 0 
+__singisotwords 11 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 2 ], [ 2, 5 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 27 ] : 1 in 1 
+_________orecs done 820 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 2 ], [ 2, 4 ], [ 3, 2 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 821 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 1 ], [ 2, 6 ] ] extdeg 1 sprats [ 0, 42 ] : 1 in 1 
+_________orecs done 822 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 1 ], [ 2, 5 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 31 ] : 1 in 1 
+_________orecs done 823 
+__nonsingisotwords 0 
+__singisotwords 47 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 1 ], [ 2, 5 ], [ 4, 1 ] ] extdeg 1 sprats [ 0, 36 ] : 1 in 1 
+_________orecs done 824 
+__nonsingisotwords 0 
+__singisotwords 3 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 3 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 33 ] : 1 in 1 
+_________orecs done 825 
+__nonsingisotwords 0 
+__singisotwords 31 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 2 ], [ 2, 6 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 826 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 2 ], [ 2, 5 ], [ 3, 1 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 827 
+__nonsingisotwords 0 
+__singisotwords 7 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 2 ], [ 2, 5 ], [ 4, 1 ] ] extdeg 1 sprats [ 0, 30 ] : 1 in 1 
+_________orecs done 828 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 1 ], [ 2, 6 ] ] extdeg 1 sprats [ 0, 42 ] : 1 in 1 
+_________orecs done 829 
+__nonsingisotwords 0 
+__singisotwords 63 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 2 ], [ 2, 6 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 830 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 13 ], [ 1, 1 ], [ 2, 7 ] ] extdeg 1 sprats [ 0, 26 ] : 1 in 1 
+_________orecs done 831 
+_________orecs done 831 
+__nonsingisotwords 0 
+__singisotwords 27 
+kk 6 orecs 1 
+_________ 
+kk 6 rho 7 [ [ 0, 13 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 36 ] : 1 in 1 
+__nonsingisotwords 0 
+__singisotwords 27 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 7 [ [ 0, 17 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 36 ] : 1 in 1 
+_________orecs done 833 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 3 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 42 ] : 1 in 1 
+_________orecs done 834 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 42 ] : 1 in 1 
+_________orecs done 835 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 1, 2 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 46 ] : 1 in 1 
+_________orecs done 836 
+__nonsingisotwords 0 
+__singisotwords 27 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 7 [ [ 0, 17 ], [ 2, 4 ] ] extdeg 1 sprats [ 0, 36 ] : 1 in 1 
+_________orecs done 837 
+__nonsingisotwords 0 
+__singisotwords 27 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 7 [ [ 0, 16 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 36 ] : 1 in 1 
+_________orecs done 838 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 46 ] : 1 in 1 
+_________orecs done 839 
+__nonsingisotwords 0 
+__singisotwords 63 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 16 ], [ 2, 5 ] ] extdeg 1 sprats [ 0, 63 ] : 1 in 1 
+_________orecs done 840 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 42 ] : 1 in 1 
+_________orecs done 841 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 42 ] : 1 in 1 
+_________orecs done 842 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 46 ] : 1 in 1 
+_________orecs done 843 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 4 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 46 ] : 1 in 1 
+_________orecs done 844 
+__nonsingisotwords 0 
+__singisotwords 79 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 5 ], [ 2, 2 ] ] extdeg 1 sprats [ 0, 38 ] : 1 in 1 
+_________orecs done 845 
+__nonsingisotwords 0 
+__singisotwords 23 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 46 ] : 1 in 1 
+_________orecs done 846 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 15 ], [ 1, 3 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 42 ] : 1 in 1 
+_________orecs done 847 
+__nonsingisotwords 0 
+__singisotwords 15 
+kk 7 orecs 1 
+_________ 
+kk 7 rho 8 [ [ 0, 14 ], [ 1, 4 ], [ 2, 3 ] ] extdeg 1 sprats [ 0, 42 ] : 1 in 1 
+_________orecs done 848 
+Error, user interrupt in
+  return r; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/integer.gi:1130 called from 
+RootInt( 8 * pos - 7 ) at Task20260924Uc.g:31 called from
+Ekkiijj( kk, pos ) at Task20260924Uc.g:119 called from
+IsMinimal( kk + 1, newwg ) at Task20260924Uc.g:201 called from
+thetask( kk + 1, newwg ); at Task20260924Uc.g:241 called from
+thetask( kk + 1, newwg ); at Task20260924Uc.g:241 called from
+...  at Task20260924Uc.g:259
+you can 'return;'
+brk> quit;
+gap> quit;

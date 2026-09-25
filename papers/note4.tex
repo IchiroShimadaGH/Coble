@@ -1,0 +1,203 @@
+% !TEX program = pdflatex
+
+%%%%%%%%%%%%%%%%%%%%
+%affineConway.tex
+%%%%%%%%%%%%%%%%%%%%%
+
+\pdfoutput=1 %When you use pdflatex
+\documentclass{amsart} %When you use pdflatex
+\renewcommand{\baselinestretch}{1.2}
+
+\usepackage{tikz}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{bm}
+\usepackage{enumitem}
+\usepackage{graphicx}
+
+\usepackage{hyperref}
+\hypersetup{
+ colorlinks = true,
+ linkcolor = blue,
+ filecolor = blue,
+ urlcolor = blue,
+ citecolor = blue,
+}
+\hypersetup{unicode=true}
+
+\input{mymacros}
+\input{mymacrosaffineConway}
+
+\newcommand{\XC}{X_C}
+\newcommand{\diag}{\mathrm{diag}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\newcommand{\ps}{B}
+\newcommand{\con}{C}
+\newcommand{\wtcon}{\widetilde{\con}}
+\newcommand{\pips}{\pi_{\ps}}
+\newcommand{\Xps}{X_{\ps}}
+\newcommand{\col}{\Gamma }
+\newcommand{\gra}{w}
+\newcommand{\varpips}{\varpi_{\ps}}
+\newcommand{\Pic}{\mathrm{Pic}}
+\newcommand{\bPP}{\mathbf{P}}
+%
+\begin{document}
+%
+\title{Remarks on  six-tangential conics to smooth plane sextics} 
+\author{Ichiro Shimada}
+\address{Department of Mathematics,
+Graduate School of Science,
+Hiroshima University,
+1-3-1 Kagamiyama,
+Higashi-Hiroshima,
+739-8526 JAPAN}
+\email{ichiro-shimada@hiroshima-u.ac.jp}
+%
+%超平面配置に関連する離散構造の拡張、深化とその応用
+%23H00081
+%代数幾何学の計算機による研究の新展開
+%23K20209
+%格子、保型形式とK3曲面、エンリケス曲面の研究
+%20H00112
+%
+
+%
+\begin{abstract}
+\end{abstract}
+%
+\newcommand{\SW}{\mathrm{Sw}}
+\newcommand{\Wk}{\mathcal{W}_k}
+\keywords{}
+\maketitle
+Let $k$ be a positive integer.
+We consider the complete graph with vertex set $V_k=\{1, \dots, k\}$ and edge set 
+\[
+E_k:=\set {[i, j]}{i, j\in V_k, i<j}.
+\]
+Let $m$ be a positive integer, and we put 
+\[
+M:=\{-m,-m+1, \dots, m\}.
+\]
+Let $\mathcal{W}_k$ be the set of weights $w \colon E_k \to M$, 
+that is, $\mathcal{W}_k$ is the set of weighted complete graphs on $V_k$.
+Then  the symmetric group $\SSSS_k$ act on $V_k$ from the right.
+Then $\SSS_k$ acts on $\mathcal{W}_k$ from theleft.
+We also define $\SW_k$ to be the multiplicative group of all mappings
+$s \colon V_k \to \{\pm 1\}$, 
+which acts on $\mathcal{W}_k$ by switching, 
+that is, 
+\[
+(sw) ([i, j])= s(i) s(j)  w([i, j])
+\]
+for $s\in \SW_k$.
+Then the semidirect product
+\[
+G_k := \SW_k \rtimes \SSSS_k
+\]
+acts on $\mathcal{W}_k$ from the left.
+The purpose of this section is to describe an efficient algorithm
+for obtaining the list of 
+orbits of the action of $G_k$ on $\mathcal{W}_k$.
+
+First, we introduce a total order on the set $E_k$ of edges by
+\[
+[i,j] < [i',j']
+\quad\Longleftrightarrow\quad
+j < j'
+\quad\text{or}\quad
+(j = j' \text{ and } i < i').
+\]
+Then we express elements $w$ of $\mathcal{W}_k$ by arranging
+the values $w([i,j])$ in this order:
+\[
+w = \bigl(w([1,2]), w([1,3]), w([2,3]), w([1,4]), \ldots \bigr).
+\]
+Let $|w|$ denote the vector obtained from $w$ by taking
+the absolute value of each component.
+We put $|M| := \{0,1,\ldots,m\}$.
+Then we have a mapping
+%
+\begin{equation}\label{eq:absw}
+\mathcal{W}_k \longrightarrow |\mathcal{W}_k| := |M|^{E_k},
+\qquad
+w \longmapsto |w|.
+\end{equation}
+%
+Notice that $\SSSS_k$ acts on $|\mathcal{W}_k|$, and the mapping~\eqref{eq:absw}
+is $\SSSS_k$-equivariant.
+Moreover, the action of $\SW_k$ on $\mathcal{W}_k$ preserves
+each fiber of~\eqref{eq:absw}.
+We then define a total order on $\mathcal{W}_k$ by
+\[
+w < w'
+\quad\Longleftrightarrow\quad
+|w| <_{\mathrm{lex}} |w'|
+\quad\text{or}\quad
+\bigl(|w| = |w'| \text{ and } w <_{\mathrm{lex}} w'\bigr).
+\]
+We say that $w\in\mathcal{W}_k $ is $G_k$-minimal if $w$ is minimal
+in its orbit $wG_k$.
+We obtain the list of $G_k$-orbits in $\mathcal{W}_k$
+by enumerating all $G_k$-minimal elements in $\mathcal{W}_k$.
+By definition, we have the following:
+%$w$ is $G_k$-minimal if and only if $|w|$ is minimal
+%in its $G_k$-orbit $G_k |w|$ in $|\Wk|$, and $w$ is minimal
+%in its $\SW_k$-orbit  $\SW_k w$.
+\[
+w \text{ is } G_k\text{-minimal}
+\quad\Longleftrightarrow\quad
+\parbox{8cm}{
+$|w|$ is minimal with respect to $<_{\mathrm{lex}}$ in its $\SSSS_k$-orbit 
+$\SSSS_k |w|$ in $|\Wk|$, and 
+$w$  is minimal  with respect to $<_{\mathrm{lex}}$ in its $ \SW_k$-orbit $\SW_k w$.}
+\]
+By this observation, to determine whether an element
+$w \in \Wk$ is $G_k$-minimal, it suffices to make at most
+$k! + 2^k$ comparisons, which is much smaller than the size
+$2^k k!$ of $G_k$.
+\par
+Suppose that $k' < k$.
+By taking the prefix of length $k'(k'-1)/2$ of each $w \in \Wk$,
+we obtain a mapping
+\[
+\Wk \longrightarrow \mathcal{W}_{k'},
+\qquad
+w \longmapsto w|_{k'}.
+\]
+%
+\begin{lemma}
+Suppose that $w \in \Wk$ is $G_k$-minimal.
+Then $w|_{k'}$ is $G_{k'}$-minimal.
+\end{lemma}
+%
+\begin{proof}
+We have a natural embedding $G_{k'} \hookrightarrow G_k$
+denoted by $g' \mapsto \widetilde{g}\sprime$
+by 
+\[
+i\sp{\widetilde{\tau}\sprime}:=\begin{cases}
+i^{\tau\sprime} & \textrm{if $i\le k\sprime$,}
+\\
+i & \textrm{if $i> k\sprime$,}
+\end{cases}
+\qquad
+\widetilde{s}\sprime(i):=
+\begin{cases}
+s\sprime(i) & \textrm{if $i\le k\sprime$,}
+\\
+i & \textrm{if $i> k\sprime$,}
+\end{cases}
+\]
+for $\tau\sprime\in \SSSS_{k\sprime}$ and $s\sprime \in\SW_{k\sprime}$.
+\end{proof}
+%
+Using this lemma, we construct the list of $G_k$-minimal elements
+by induction on $k$.
+%
+\end{document}
+
+
