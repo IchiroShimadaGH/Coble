@@ -251,7 +251,7 @@ Enhanced2MakeMinimalAbsWgs:=function(oldminwgs, newkk)
   local oldkk,  EkkRec, newminwgrecs, oldminwg, iter, ii,
   twg, tav, minflag, tg, tgtwg, counter, stab, total,
   orbsize, Gksize, stabgens, partss, iterpartss, swg, sswg,
-  K3rec,  K3recs, totalK3recsnops;
+  K3rec,  K3recs, totalK3recsnops, nopsoldminwgs;
   #
   oldkk:=newkk-1;
   EkkRec:=GetEkkRec(newkk);
@@ -260,6 +260,7 @@ Enhanced2MakeMinimalAbsWgs:=function(oldminwgs, newkk)
   counter:=0;
   total:=0;
   totalK3recsnops:=0;
+  nopsoldminwgs:=Length(oldminwgs);
   for oldminwg in oldminwgs do 
     counter:=counter+1;
     iter:=IteratorOfCartesianProduct(List([1..newkk-1], ii->absW));
@@ -292,8 +293,10 @@ Enhanced2MakeMinimalAbsWgs:=function(oldminwgs, newkk)
           fi;
         od;
         #
-        Printn("__________K3recs", Length(K3recs));
+        
         totalK3recsnops:=totalK3recsnops+ Length(K3recs);
+        Printn(newkk, "___K3recs", Length(K3recs), totalK3recsnops, ":",
+        counter, "in", nopsoldminwgs);
         Add(newminwgrecs, rec(wg:=twg, stabgens:=stabgens, K3recs:=K3recs));
       fi;
     od;
