@@ -1,0 +1,1951 @@
+sessionnumb  20260927140214 
+gap> aa:=[2,3,4,5,1];
+[ 2, 3, 4, 5, 1 ]
+gap> tg:=PermList(aa);
+(1,2,3,4,5)
+gap> 1^tg;
+2
+gap> 3^tg;
+4
+gap>  Read("Task02660927Ua.g");
+Syntax warning: Unbound global variable in Task02660927Ua.g:34
+  poss:=List(Ekk, iijj->Ekkpos(kk, CopySort(List(iijj, xx->xx^tau)));
+             ^^^
+Syntax error: ) expected in Task02660927Ua.g:34
+  poss:=List(Ekk, iijj->Ekkpos(kk, CopySort(List(iijj, xx->xx^tau)));
+                                                                    ^
+Syntax error: found an expression when a statement was expected in Task02660927Ua.g:35
+  largetau=PermList(poss);
+          ^
+gap>  Read("Task02660927Ua.g");
+Syntax warning: Unbound global variable in Task02660927Ua.g:34
+  poss:=List(Ekk, iijj->Ekkpos(kk, CopySort(List(iijj, xx->xx^tau)));
+                               ^^
+Syntax error: ) expected in Task02660927Ua.g:34
+  poss:=List(Ekk, iijj->Ekkpos(kk, CopySort(List(iijj, xx->xx^tau)));
+                                                                    ^
+gap>  Read("Task02660927Ua.g");
+Syntax error: ) expected in Task02660927Ua.g:34
+  poss:=List(Ekk, iijj->Ekkpos(kk, CopySort(List(iijj, xx->xx^tau)));
+                                                                    ^
+gap>  Read("Task02660927Ua.g");
+Syntax warning: Unbound global variable in Task02660927Ua.g:42
+  Ekk:=MakeEkk(kk);
+  ^^^
+Syntax error: in expected in Task02660927Ua.g:45
+  for aa to [1..kk-1] do 
+         ^^
+Syntax error: found an expression when a statement was expected in Task02660927Ua.g:46
+    largetau=TauToLargetau(kk, Ekk, (aa, aa+1));
+            ^
+Syntax warning: Unbound global variable in Task02660927Ua.g:53
+    Add(Swkkgens, Filtered([1..Length(Ekk)], tpos->xx in Ekk[tpos]));
+                                      ^^^
+Syntax warning: Unbound global variable in Task02660927Ua.g:53
+    Add(Swkkgens, Filtered([1..Length(Ekk)], tpos->xx in Ekk[tpos]));
+                                                         ^^^
+Syntax warning: Unbound global variable in Task02660927Ua.g:58
+    Ekk:=Ekk,
+         ^^^
+Syntax warning: Unbound global variable in Task02660927Ua.g:59
+    leng:=Length(Ekk),
+                 ^^^
+gap>  Read("Task02660927Ua.g");
+Syntax warning: Unbound global variable in Task02660927Ua.g:42
+  Ekk:=MakeEkk(kk);
+  ^^^
+Syntax warning: Unbound global variable in Task02660927Ua.g:46
+    largetau:=TauToLargetau(kk, Ekk, (aa, aa+1));
+                                ^^^
+Syntax warning: Unbound global variable in Task02660927Ua.g:53
+    Add(Swkkgens, Filtered([1..Length(Ekk)], tpos->xx in Ekk[tpos]));
+                                      ^^^
+Syntax warning: Unbound global variable in Task02660927Ua.g:53
+    Add(Swkkgens, Filtered([1..Length(Ekk)], tpos->xx in Ekk[tpos]));
+                                                         ^^^
+Syntax warning: Unbound global variable in Task02660927Ua.g:58
+    Ekk:=Ekk,
+         ^^^
+Syntax warning: Unbound global variable in Task02660927Ua.g:59
+    leng:=Length(Ekk),
+                 ^^^
+Syntax warning: Unbound global variable in Task02660927Ua.g:69
+  while Length(EkksRecs)<kk do 
+               ^^^^^^^^
+Syntax warning: Unbound global variable in Task02660927Ua.g:70
+    Add(EkksRecs, MakeEkkRec(kk));
+        ^^^^^^^^
+Syntax warning: Unbound global variable in Task02660927Ua.g:72
+  return(Ekks[kk]);
+         ^^^^
+Syntax warning: Unbound global variable in Task02660927Ua.g:80
+  newposs:=sList([1..Length(wg)], tpos->tpos^largetau);
+           ^^^^^
+gap>  Read("Task02660927Ua.g");
+Syntax warning: Unbound global variable in Task02660927Ua.g:69
+  while Length(EkksRecs)<kk do 
+               ^^^^^^^^
+Syntax warning: Unbound global variable in Task02660927Ua.g:70
+    Add(EkksRecs, MakeEkkRec(kk));
+        ^^^^^^^^
+Syntax warning: Unbound global variable in Task02660927Ua.g:72
+  return(Ekks[kk]);
+         ^^^^
+Syntax warning: Unbound global variable in Task02660927Ua.g:80
+  newposs:=sList([1..Length(wg)], tpos->tpos^largetau);
+           ^^^^^
+gap>  Read("Task02660927Ua.g");
+Syntax warning: Unbound global variable in Task02660927Ua.g:80
+  newposs:=sList([1..Length(wg)], tpos->tpos^largetau);
+           ^^^^^
+gap>  Read("Task02660927Ua.g");
+gap> Read("Task20260927Ua.g");
+Syntax error: expression expected in Task20260927Ua.g:24
+    ltau12:==TauToLargetau(kk, EkkRec.Ekk, tau12);
+            ^
+Syntax error: expression expected in Task20260927Ua.g:25
+    ltau21:==TauToLargetau(kk, EkkRec.Ekk, tau21);
+            ^
+gap> Read("Task20260927Ua.g");
+wrong global buzz 651121 
+Error,  at gapReads/gaptools.txt:143 called from
+buzz( 651121 ); at MinimalWgs.g:50 called from
+MakeEkkRec( kk ) at MinimalWgs.g:71 called from
+GetEkkRec( kk ) at Task20260927Ua.g:9 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260927Ua.g:56
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> Size(Group(Symkkgens));
+1
+brk> kk;
+2
+brk> Symkkgens;
+[ () ]
+brk> kk;
+2
+brk> Ekk;
+[ [ 1, 2 ] ]
+brk> quit;
+gap> Read("Task20260927Ua.g");
+Error, Variable: 'ltau12inv' must have an assigned value in
+  if ltau12inv <> ltau1 * ltau2inv then
+    buzz( 3366476 );
+fi; at Task20260927Ua.g:34 called from 
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260927Ua.g:56
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260927Ua.g");
+Error, user interrupt in
+  res[Length( C )] := 1; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:659 called from 
+List( iijj, function ( xx )
+      return xx ^ tau;
+  end ) at MinimalWgs.g:35 called from
+func( C[i] ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from
+List( Ekk, function ( iijj )
+      return Ekkpos( kk, CopySort( List( iijj, function ( xx )
+                  return xx ^ tau;
+              end ) ) );
+  end ) at MinimalWgs.g:35 called from
+TauToLargetau( kk, EkkRec.Ekk, tau21 ) at Task20260927Ua.g:25 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260927Ua.g:58
+you can 'return;'
+brk> quit;
+gap> Read("Task20260927Ua.g");
+Syntax error: then expected in Task20260927Ua.g:60
+  if counter mod 10000=0 the Printn(counter); fi;
+                         ^^^
+gap> Read("Task20260927Ua.g");
+Error, user interrupt in
+  l := Length( arg ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:645 called from 
+List( iijj, function ( xx )
+      return xx ^ tau;
+  end ) at MinimalWgs.g:35 called from
+func( C[i] ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from
+List( Ekk, function ( iijj )
+      return Ekkpos( kk, CopySort( List( iijj, function ( xx )
+                  return xx ^ tau;
+              end ) ) );
+  end ) at MinimalWgs.g:35 called from
+TauToLargetau( kk, EkkRec.Ekk, tau12inv ) at Task20260927Ua.g:30 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260927Ua.g:61
+you can 'return;'
+brk> counter;
+4816
+brk> quit;
+gap> 
+gap> 
+gap> 
+gap> Read("Task20260927Ua.g");
+1000 
+2000 
+3000 
+4000 
+5000 
+6000 
+7000 
+8000 
+9000 
+10000 
+11000 
+12000 
+13000 
+14000 
+15000 
+16000 
+17000 
+18000 
+19000 
+20000 
+21000 
+22000 
+23000 
+24000 
+25000 
+26000 
+27000 
+28000 
+29000 
+30000 
+31000 
+32000 
+33000 
+34000 
+35000 
+36000 
+37000 
+38000 
+39000 
+40000 
+41000 
+42000 
+43000 
+44000 
+45000 
+46000 
+47000 
+48000 
+49000 
+50000 
+51000 
+52000 
+53000 
+54000 
+55000 
+56000 
+57000 
+58000 
+59000 
+60000 
+61000 
+62000 
+63000 
+64000 
+65000 
+66000 
+67000 
+68000 
+69000 
+70000 
+71000 
+72000 
+73000 
+74000 
+75000 
+76000 
+77000 
+78000 
+79000 
+80000 
+81000 
+82000 
+83000 
+84000 
+85000 
+86000 
+87000 
+88000 
+89000 
+90000 
+91000 
+92000 
+93000 
+94000 
+95000 
+96000 
+97000 
+98000 
+99000 
+100000 
+101000 
+102000 
+103000 
+104000 
+105000 
+106000 
+107000 
+108000 
+109000 
+110000 
+111000 
+112000 
+113000 
+114000 
+115000 
+116000 
+117000 
+118000 
+119000 
+120000 
+121000 
+122000 
+123000 
+124000 
+125000 
+126000 
+127000 
+128000 
+129000 
+130000 
+131000 
+132000 
+133000 
+134000 
+135000 
+136000 
+137000 
+138000 
+139000 
+140000 
+141000 
+142000 
+143000 
+144000 
+145000 
+146000 
+147000 
+148000 
+149000 
+150000 
+151000 
+152000 
+153000 
+154000 
+155000 
+156000 
+157000 
+158000 
+159000 
+160000 
+161000 
+162000 
+163000 
+164000 
+165000 
+166000 
+167000 
+168000 
+169000 
+170000 
+171000 
+172000 
+173000 
+174000 
+175000 
+176000 
+177000 
+178000 
+179000 
+180000 
+181000 
+182000 
+183000 
+184000 
+185000 
+186000 
+187000 
+188000 
+189000 
+190000 
+191000 
+192000 
+193000 
+194000 
+195000 
+196000 
+197000 
+198000 
+199000 
+200000 
+201000 
+202000 
+203000 
+204000 
+205000 
+206000 
+207000 
+208000 
+209000 
+210000 
+211000 
+212000 
+213000 
+214000 
+215000 
+216000 
+217000 
+218000 
+219000 
+220000 
+221000 
+222000 
+223000 
+224000 
+225000 
+226000 
+227000 
+228000 
+229000 
+230000 
+231000 
+232000 
+233000 
+234000 
+235000 
+236000 
+237000 
+238000 
+239000 
+240000 
+241000 
+242000 
+243000 
+244000 
+245000 
+246000 
+247000 
+248000 
+249000 
+250000 
+251000 
+252000 
+253000 
+254000 
+255000 
+256000 
+257000 
+258000 
+259000 
+260000 
+261000 
+262000 
+263000 
+264000 
+265000 
+266000 
+267000 
+268000 
+269000 
+270000 
+271000 
+272000 
+273000 
+274000 
+275000 
+276000 
+277000 
+278000 
+279000 
+280000 
+281000 
+282000 
+283000 
+284000 
+285000 
+286000 
+287000 
+288000 
+289000 
+290000 
+291000 
+292000 
+293000 
+294000 
+295000 
+296000 
+297000 
+298000 
+299000 
+300000 
+301000 
+302000 
+303000 
+304000 
+305000 
+306000 
+307000 
+308000 
+309000 
+310000 
+311000 
+312000 
+313000 
+314000 
+315000 
+316000 
+317000 
+318000 
+319000 
+320000 
+321000 
+322000 
+323000 
+324000 
+325000 
+326000 
+327000 
+328000 
+329000 
+330000 
+331000 
+332000 
+333000 
+334000 
+335000 
+336000 
+337000 
+338000 
+339000 
+340000 
+341000 
+342000 
+343000 
+344000 
+345000 
+346000 
+347000 
+348000 
+349000 
+350000 
+351000 
+352000 
+353000 
+354000 
+355000 
+356000 
+357000 
+358000 
+359000 
+360000 
+361000 
+362000 
+363000 
+364000 
+365000 
+366000 
+367000 
+368000 
+369000 
+370000 
+371000 
+372000 
+373000 
+374000 
+375000 
+376000 
+377000 
+378000 
+379000 
+380000 
+381000 
+382000 
+383000 
+384000 
+385000 
+386000 
+387000 
+388000 
+389000 
+390000 
+391000 
+392000 
+393000 
+394000 
+395000 
+396000 
+397000 
+398000 
+399000 
+400000 
+401000 
+402000 
+403000 
+404000 
+405000 
+406000 
+407000 
+408000 
+409000 
+410000 
+411000 
+412000 
+413000 
+414000 
+415000 
+416000 
+417000 
+418000 
+419000 
+420000 
+421000 
+422000 
+423000 
+424000 
+425000 
+426000 
+427000 
+428000 
+429000 
+430000 
+431000 
+432000 
+433000 
+434000 
+435000 
+436000 
+437000 
+438000 
+439000 
+440000 
+441000 
+442000 
+443000 
+444000 
+445000 
+446000 
+447000 
+448000 
+449000 
+450000 
+451000 
+452000 
+453000 
+454000 
+455000 
+456000 
+457000 
+458000 
+459000 
+460000 
+461000 
+462000 
+463000 
+464000 
+465000 
+466000 
+467000 
+468000 
+469000 
+470000 
+471000 
+472000 
+473000 
+474000 
+475000 
+476000 
+477000 
+478000 
+479000 
+480000 
+481000 
+482000 
+483000 
+484000 
+485000 
+486000 
+487000 
+488000 
+489000 
+490000 
+491000 
+492000 
+493000 
+494000 
+495000 
+496000 
+497000 
+498000 
+499000 
+500000 
+501000 
+502000 
+503000 
+504000 
+505000 
+506000 
+507000 
+508000 
+509000 
+510000 
+511000 
+512000 
+513000 
+514000 
+515000 
+516000 
+517000 
+518000 
+519000 
+520000 
+521000 
+522000 
+523000 
+524000 
+525000 
+526000 
+527000 
+528000 
+529000 
+530000 
+531000 
+532000 
+533000 
+534000 
+535000 
+536000 
+537000 
+538000 
+539000 
+540000 
+541000 
+542000 
+543000 
+544000 
+545000 
+546000 
+547000 
+548000 
+549000 
+550000 
+551000 
+552000 
+553000 
+554000 
+555000 
+556000 
+557000 
+558000 
+559000 
+560000 
+561000 
+562000 
+563000 
+564000 
+565000 
+566000 
+567000 
+568000 
+569000 
+570000 
+571000 
+572000 
+573000 
+574000 
+575000 
+576000 
+577000 
+578000 
+579000 
+580000 
+581000 
+582000 
+583000 
+584000 
+585000 
+586000 
+587000 
+588000 
+589000 
+590000 
+591000 
+592000 
+593000 
+594000 
+595000 
+596000 
+597000 
+598000 
+599000 
+600000 
+601000 
+602000 
+603000 
+604000 
+605000 
+606000 
+607000 
+608000 
+609000 
+610000 
+611000 
+612000 
+613000 
+614000 
+615000 
+616000 
+617000 
+618000 
+619000 
+620000 
+621000 
+622000 
+623000 
+624000 
+625000 
+626000 
+627000 
+628000 
+629000 
+630000 
+631000 
+632000 
+633000 
+634000 
+635000 
+636000 
+637000 
+638000 
+639000 
+640000 
+641000 
+642000 
+643000 
+644000 
+645000 
+646000 
+647000 
+648000 
+649000 
+650000 
+651000 
+652000 
+653000 
+654000 
+655000 
+656000 
+657000 
+658000 
+659000 
+660000 
+661000 
+662000 
+663000 
+664000 
+665000 
+666000 
+667000 
+668000 
+669000 
+670000 
+671000 
+672000 
+673000 
+674000 
+675000 
+676000 
+677000 
+678000 
+679000 
+680000 
+681000 
+682000 
+683000 
+684000 
+685000 
+686000 
+687000 
+688000 
+689000 
+690000 
+691000 
+692000 
+693000 
+694000 
+695000 
+696000 
+697000 
+698000 
+699000 
+700000 
+701000 
+702000 
+703000 
+704000 
+705000 
+706000 
+707000 
+708000 
+709000 
+710000 
+711000 
+712000 
+713000 
+714000 
+715000 
+716000 
+717000 
+718000 
+719000 
+720000 
+721000 
+722000 
+723000 
+724000 
+725000 
+726000 
+727000 
+728000 
+729000 
+730000 
+731000 
+732000 
+733000 
+734000 
+735000 
+736000 
+737000 
+738000 
+739000 
+740000 
+741000 
+742000 
+743000 
+744000 
+745000 
+746000 
+747000 
+748000 
+749000 
+750000 
+751000 
+752000 
+753000 
+754000 
+755000 
+756000 
+757000 
+758000 
+759000 
+760000 
+761000 
+762000 
+763000 
+764000 
+765000 
+766000 
+767000 
+768000 
+769000 
+770000 
+771000 
+772000 
+773000 
+774000 
+775000 
+776000 
+777000 
+778000 
+779000 
+780000 
+781000 
+782000 
+783000 
+784000 
+785000 
+786000 
+787000 
+788000 
+789000 
+790000 
+791000 
+792000 
+793000 
+794000 
+795000 
+796000 
+797000 
+798000 
+799000 
+800000 
+801000 
+802000 
+803000 
+804000 
+805000 
+806000 
+807000 
+808000 
+809000 
+810000 
+811000 
+812000 
+813000 
+814000 
+815000 
+816000 
+817000 
+818000 
+819000 
+820000 
+821000 
+822000 
+823000 
+824000 
+825000 
+826000 
+827000 
+828000 
+829000 
+830000 
+831000 
+832000 
+833000 
+834000 
+835000 
+836000 
+837000 
+838000 
+839000 
+840000 
+841000 
+842000 
+843000 
+844000 
+845000 
+846000 
+847000 
+848000 
+849000 
+850000 
+851000 
+852000 
+853000 
+854000 
+855000 
+856000 
+857000 
+858000 
+859000 
+860000 
+861000 
+862000 
+863000 
+864000 
+865000 
+866000 
+867000 
+868000 
+869000 
+870000 
+871000 
+872000 
+873000 
+874000 
+875000 
+876000 
+877000 
+878000 
+879000 
+880000 
+881000 
+882000 
+883000 
+884000 
+885000 
+886000 
+887000 
+888000 
+889000 
+890000 
+891000 
+892000 
+893000 
+894000 
+895000 
+896000 
+897000 
+898000 
+899000 
+900000 
+901000 
+902000 
+903000 
+904000 
+905000 
+906000 
+907000 
+908000 
+909000 
+910000 
+911000 
+912000 
+913000 
+914000 
+915000 
+916000 
+917000 
+918000 
+919000 
+920000 
+921000 
+922000 
+923000 
+924000 
+925000 
+926000 
+927000 
+928000 
+929000 
+930000 
+931000 
+932000 
+933000 
+934000 
+935000 
+936000 
+937000 
+938000 
+939000 
+940000 
+941000 
+942000 
+943000 
+944000 
+945000 
+946000 
+947000 
+948000 
+949000 
+950000 
+951000 
+952000 
+953000 
+954000 
+955000 
+956000 
+957000 
+958000 
+959000 
+960000 
+961000 
+962000 
+963000 
+964000 
+965000 
+966000 
+967000 
+968000 
+969000 
+970000 
+971000 
+972000 
+973000 
+974000 
+975000 
+976000 
+977000 
+978000 
+Error, user interrupt in
+  func := arg[2]; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:656 called from 
+List( iijj, function ( xx )
+      return xx ^ tau;
+  end ) at MinimalWgs.g:35 called from
+func( C[i] ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from
+List( Ekk, function ( iijj )
+      return Ekkpos( kk, CopySort( List( iijj, function ( xx )
+                  return xx ^ tau;
+              end ) ) );
+  end ) at MinimalWgs.g:35 called from
+TauToLargetau( kk, EkkRec.Ekk, tau12inv ) at Task20260927Ua.g:32 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260927Ua.g:63
+you can 'return;'
+brk> quit;
+gap> 
+gap> 
+gap> 
+gap> 
+gap> Read("MinimalWgs.g");
+Syntax warning: Unbound global variable in MinimalWgs.g:109
+      for tg in Group(Ekkrec.Symkkgens) do 
+                      ^^^^^^
+gap> Read("MinimalWgs.g");
+gap> Read("Task20260927Ub.g");
+Syntax error: ; expected in Task20260927Ub.g:9
+MinimalAbsWgs:=[]];
+                 ^
+gap> Read("Task20260927Ub.g");
+2 0 
+3 0 
+4 0 
+5 0 
+6 0 
+7 0 
+8 0 
+9 0 
+10 0 
+11 0 
+12 0 
+13 0 
+14 0 
+15 0 
+gap> Read("Task20260927Ub.g");
+2 3 
+3 10 
+4 66 
+5 792 
+Error, user interrupt in
+  return Length( list ) = 0; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:107 called from 
+IsEmpty( C ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/pcgsperm.gi:212 called from
+ExtendSeriesPermGroup( G, series, cent, desc, elab, w, lev + 1, ndep, bound ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/pcgsperm.gi:235 called from
+ExtendSeriesPermGroup( G, series, cent, desc, elab, w, lev + 1, ndep, bound ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/pcgsperm.gi:235 called from
+ExtendSeriesPermGroup( A, series, cent, desc, elab, y, 0, 0, bound ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/pcgsperm.gi:388 called from
+TryPcgsPermGroup( [ G, GroupStabChain( G, S, true ) ], false, false, true ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/stbc.gi:108 called from
+...  at Task20260927Ub.g:17
+you can 'return;'
+brk> quit;
+gap> Read("Task20260927Ub.g");
+Syntax warning: Unbound global variable in MinimalWgs.g:119
+    Printn("____", counter, "in", Length(ldminwgs));
+                                         ^^^^^^^^
+Error, Variable: 'ldminwgs' must have an assigned value in
+  Printn( "____", counter, "in", Length( ldminwgs ) ); at MinimalWgs.g:119 called from 
+MakeMinimalAbsWgs( oldminabswgs, newkk ) at Task20260927Ub.g:13 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260927Ub.g:17
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260927Ub.g");
+____ 1 in 1 
+2 3 
+____ 1 in 3 
+____ 2 in 3 
+____ 3 in 3 
+3 10 
+____ 1 in 10 
+____ 2 in 10 
+____ 3 in 10 
+____ 4 in 10 
+____ 5 in 10 
+____ 6 in 10 
+____ 7 in 10 
+____ 8 in 10 
+____ 9 in 10 
+____ 10 in 10 
+4 66 
+____ 1 in 66 
+____ 2 in 66 
+____ 3 in 66 
+____ 4 in 66 
+____ 5 in 66 
+____ 6 in 66 
+____ 7 in 66 
+____ 8 in 66 
+____ 9 in 66 
+____ 10 in 66 
+____ 11 in 66 
+____ 12 in 66 
+____ 13 in 66 
+____ 14 in 66 
+____ 15 in 66 
+____ 16 in 66 
+____ 17 in 66 
+____ 18 in 66 
+____ 19 in 66 
+____ 20 in 66 
+____ 21 in 66 
+____ 22 in 66 
+____ 23 in 66 
+____ 24 in 66 
+____ 25 in 66 
+____ 26 in 66 
+____ 27 in 66 
+____ 28 in 66 
+____ 29 in 66 
+____ 30 in 66 
+____ 31 in 66 
+____ 32 in 66 
+____ 33 in 66 
+____ 34 in 66 
+____ 35 in 66 
+____ 36 in 66 
+____ 37 in 66 
+____ 38 in 66 
+____ 39 in 66 
+____ 40 in 66 
+____ 41 in 66 
+____ 42 in 66 
+____ 43 in 66 
+____ 44 in 66 
+____ 45 in 66 
+____ 46 in 66 
+____ 47 in 66 
+____ 48 in 66 
+____ 49 in 66 
+____ 50 in 66 
+____ 51 in 66 
+____ 52 in 66 
+____ 53 in 66 
+____ 54 in 66 
+____ 55 in 66 
+____ 56 in 66 
+____ 57 in 66 
+____ 58 in 66 
+____ 59 in 66 
+____ 60 in 66 
+____ 61 in 66 
+____ 62 in 66 
+____ 63 in 66 
+____ 64 in 66 
+____ 65 in 66 
+____ 66 in 66 
+5 792 
+____ 1 in 792 
+____ 2 in 792 
+____ 3 in 792 
+____ 4 in 792 
+____ 5 in 792 
+____ 6 in 792 
+____ 7 in 792 
+____ 8 in 792 
+____ 9 in 792 
+____ 10 in 792 
+____ 11 in 792 
+____ 12 in 792 
+____ 13 in 792 
+____ 14 in 792 
+____ 15 in 792 
+____ 16 in 792 
+____ 17 in 792 
+____ 18 in 792 
+____ 19 in 792 
+____ 20 in 792 
+____ 21 in 792 
+____ 22 in 792 
+____ 23 in 792 
+____ 24 in 792 
+____ 25 in 792 
+____ 26 in 792 
+____ 27 in 792 
+____ 28 in 792 
+____ 29 in 792 
+____ 30 in 792 
+____ 31 in 792 
+____ 32 in 792 
+____ 33 in 792 
+____ 34 in 792 
+____ 35 in 792 
+____ 36 in 792 
+____ 37 in 792 
+____ 38 in 792 
+____ 39 in 792 
+____ 40 in 792 
+____ 41 in 792 
+____ 42 in 792 
+____ 43 in 792 
+____ 44 in 792 
+____ 45 in 792 
+____ 46 in 792 
+____ 47 in 792 
+____ 48 in 792 
+____ 49 in 792 
+____ 50 in 792 
+____ 51 in 792 
+____ 52 in 792 
+____ 53 in 792 
+____ 54 in 792 
+____ 55 in 792 
+____ 56 in 792 
+____ 57 in 792 
+____ 58 in 792 
+____ 59 in 792 
+____ 60 in 792 
+____ 61 in 792 
+____ 62 in 792 
+____ 63 in 792 
+____ 64 in 792 
+____ 65 in 792 
+____ 66 in 792 
+____ 67 in 792 
+____ 68 in 792 
+____ 69 in 792 
+____ 70 in 792 
+____ 71 in 792 
+____ 72 in 792 
+____ 73 in 792 
+____ 74 in 792 
+____ 75 in 792 
+____ 76 in 792 
+____ 77 in 792 
+____ 78 in 792 
+____ 79 in 792 
+____ 80 in 792 
+____ 81 in 792 
+____ 82 in 792 
+____ 83 in 792 
+____ 84 in 792 
+____ 85 in 792 
+____ 86 in 792 
+____ 87 in 792 
+____ 88 in 792 
+____ 89 in 792 
+____ 90 in 792 
+____ 91 in 792 
+____ 92 in 792 
+____ 93 in 792 
+____ 94 in 792 
+____ 95 in 792 
+____ 96 in 792 
+____ 97 in 792 
+____ 98 in 792 
+____ 99 in 792 
+____ 100 in 792 
+____ 101 in 792 
+____ 102 in 792 
+____ 103 in 792 
+____ 104 in 792 
+____ 105 in 792 
+____ 106 in 792 
+____ 107 in 792 
+____ 108 in 792 
+____ 109 in 792 
+____ 110 in 792 
+____ 111 in 792 
+____ 112 in 792 
+____ 113 in 792 
+____ 114 in 792 
+____ 115 in 792 
+____ 116 in 792 
+____ 117 in 792 
+____ 118 in 792 
+____ 119 in 792 
+____ 120 in 792 
+____ 121 in 792 
+____ 122 in 792 
+____ 123 in 792 
+____ 124 in 792 
+____ 125 in 792 
+____ 126 in 792 
+____ 127 in 792 
+____ 128 in 792 
+____ 129 in 792 
+____ 130 in 792 
+____ 131 in 792 
+____ 132 in 792 
+____ 133 in 792 
+____ 134 in 792 
+____ 135 in 792 
+____ 136 in 792 
+____ 137 in 792 
+____ 138 in 792 
+____ 139 in 792 
+____ 140 in 792 
+____ 141 in 792 
+____ 142 in 792 
+____ 143 in 792 
+____ 144 in 792 
+____ 145 in 792 
+____ 146 in 792 
+____ 147 in 792 
+____ 148 in 792 
+____ 149 in 792 
+____ 150 in 792 
+____ 151 in 792 
+____ 152 in 792 
+____ 153 in 792 
+____ 154 in 792 
+____ 155 in 792 
+____ 156 in 792 
+____ 157 in 792 
+____ 158 in 792 
+____ 159 in 792 
+____ 160 in 792 
+____ 161 in 792 
+____ 162 in 792 
+____ 163 in 792 
+____ 164 in 792 
+____ 165 in 792 
+____ 166 in 792 
+____ 167 in 792 
+____ 168 in 792 
+____ 169 in 792 
+____ 170 in 792 
+____ 171 in 792 
+____ 172 in 792 
+____ 173 in 792 
+____ 174 in 792 
+____ 175 in 792 
+____ 176 in 792 
+____ 177 in 792 
+____ 178 in 792 
+____ 179 in 792 
+____ 180 in 792 
+____ 181 in 792 
+____ 182 in 792 
+____ 183 in 792 
+____ 184 in 792 
+____ 185 in 792 
+____ 186 in 792 
+____ 187 in 792 
+____ 188 in 792 
+____ 189 in 792 
+____ 190 in 792 
+____ 191 in 792 
+____ 192 in 792 
+____ 193 in 792 
+____ 194 in 792 
+____ 195 in 792 
+____ 196 in 792 
+____ 197 in 792 
+____ 198 in 792 
+____ 199 in 792 
+____ 200 in 792 
+____ 201 in 792 
+____ 202 in 792 
+____ 203 in 792 
+____ 204 in 792 
+____ 205 in 792 
+____ 206 in 792 
+____ 207 in 792 
+____ 208 in 792 
+____ 209 in 792 
+____ 210 in 792 
+____ 211 in 792 
+____ 212 in 792 
+____ 213 in 792 
+____ 214 in 792 
+____ 215 in 792 
+____ 216 in 792 
+____ 217 in 792 
+____ 218 in 792 
+____ 219 in 792 
+____ 220 in 792 
+____ 221 in 792 
+____ 222 in 792 
+____ 223 in 792 
+____ 224 in 792 
+____ 225 in 792 
+____ 226 in 792 
+____ 227 in 792 
+____ 228 in 792 
+____ 229 in 792 
+____ 230 in 792 
+____ 231 in 792 
+____ 232 in 792 
+____ 233 in 792 
+____ 234 in 792 
+____ 235 in 792 
+____ 236 in 792 
+____ 237 in 792 
+____ 238 in 792 
+____ 239 in 792 
+____ 240 in 792 
+____ 241 in 792 
+____ 242 in 792 
+____ 243 in 792 
+____ 244 in 792 
+____ 245 in 792 
+____ 246 in 792 
+____ 247 in 792 
+____ 248 in 792 
+____ 249 in 792 
+____ 250 in 792 
+____ 251 in 792 
+____ 252 in 792 
+____ 253 in 792 
+____ 254 in 792 
+____ 255 in 792 
+____ 256 in 792 
+____ 257 in 792 
+____ 258 in 792 
+____ 259 in 792 
+____ 260 in 792 
+Error, user interrupt in
+  return true; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gd:531 called from 
+UseSubsetRelation( P, D ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/domain.gi:113 called from
+SetParent( S, M ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/magma.gi:623 called from
+SubgroupNC( P, L ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/stbc.gi:456 called from
+GroupStabChain( G, S, true ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/stbc.gi:105 called from
+StabChainOp( G, rec(
+     ) ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/stbc.gi:28 called from
+...  at Task20260927Ub.g:17
+you can 'return;'
+brk> quit;
+gap> Read("Task20260927Ub.g");
+____finish 1 in 1 : 3 
+2 3 
+____finish 3 in 3 : 10 
+3 10 
+____finish 10 in 10 : 66 
+4 66 
+____finish 66 in 66 : 792 
+5 792 
+____ 100 in 792 : 6654 
+____ 200 in 792 : 10865 
+____ 300 in 792 : 15539 
+____ 400 in 792 : 19124 
+____ 500 in 792 : 21498 
+____ 600 in 792 : 23698 
+____ 700 in 792 : 24969 
+____finish 792 in 792 : 25506 
+6 25506 
+Error, user interrupt in
+  return tpos ^ largetau; at MinimalWgs.g:85 called from 
+func( C[i] ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from
+List( [ 1 .. Length( wg ) ], function ( tpos )
+      return tpos ^ largetau;
+  end ) at MinimalWgs.g:85 called from
+ActionTauWg( tg, twg ) at MinimalWgs.g:112 called from
+MakeMinimalAbsWgs( oldminabswgs, newkk ) at Task20260927Ub.g:13 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260927Ub.g:17
+you can 'return;'
+brk> Random(Random(MinimalAbsWgss));
+Error, no method found! For debugging hints type ?Recovery from NoMethodFound
+Error, no 1st choice method found for `[]' on 2 arguments
+The 2nd argument is 'fail' which might point to an earlier problem
+ at /usr/local/Cellar/gap/4.15.1/share/gap/lib/methsel2.g:250 called from
+Random( GlobalMersenneTwister, 1, Length( l ) ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/random.gi:238 called from
+return tpos ^ largetau; at MinimalWgs.g:85 called from
+func( C[i] ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from
+List( [ 1 .. Length( wg ) ], function ( tpos )
+      return tpos ^ largetau;
+  end ) at MinimalWgs.g:85 called from
+ActionTauWg( tg, twg ) at MinimalWgs.g:112 called from
+...  at *errin*:1
+type 'quit;' to quit to outer loop
+brk_2> quit;
+brk> quit;
+gap> Random(Random(MinimalAbsWgss));
+Error, no method found! For debugging hints type ?Recovery from NoMethodFound
+Error, no 1st choice method found for `[]' on 2 arguments
+The 2nd argument is 'fail' which might point to an earlier problem
+ at /usr/local/Cellar/gap/4.15.1/share/gap/lib/methsel2.g:250 called from
+Random( GlobalMersenneTwister, 1, Length( l ) ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/random.gi:238 called from
+<function "Random for a dense internal list">( <arguments> )
+ called from read-eval loop at *stdin*:27
+type 'quit;' to quit to outer loop
+brk> Length(MinimalAbsWgss);
+1
+brk> Random(Random(MinimalAbsWgs));
+[  ]
+brk> Random(Random(MinimalAbsWgs));
+[ 0 ]
+brk> Random(Random(MinimalAbsWgs));
+[ 0 ]
+brk> Random(Random(MinimalAbsWgs));
+[ 0, 0, 1, 0, 1, 2, 2, 1, 0, 1 ]
+brk> Random(Random(MinimalAbsWgs));
+[ 0, 0, 1, 0, 1, 1, 2, 0, 0, 2 ]
+brk> Random(Random(MinimalAbsWgs));
+[ 0, 0, 2, 1, 1, 1, 1, 1, 1, 2 ]
+brk> Random(Random(MinimalAbsWgs));
+[  ]
+brk> Random(Random(MinimalAbsWgs));
+[ 0 ]
+brk> Random(Random(MinimalAbsWgs));
+[  ]
+brk> quit;
+gap> Length(MinimalAbsWgs);
+6
+gap> MinimalAbsWgs[6][1888];
+[ 0, 0, 0, 0, 0, 1, 0, 2, 0, 2, 1, 2, 0, 2, 2 ]
+gap> MinimalAbsWgs[6][1888];
+[ 0, 0, 0, 0, 0, 1, 0, 2, 0, 2, 1, 2, 0, 2, 2 ]
+gap> MinimalAbsWgs[6][1888];
+[ 0, 0, 0, 0, 0, 1, 0, 2, 0, 2, 1, 2, 0, 2, 2 ]
+gap> MinimalAbsWgs[6][1888];
+[ 0, 0, 0, 0, 0, 1, 0, 2, 0, 2, 1, 2, 0, 2, 2 ]
+gap> MinimalAbsWgs[6][1888];
+[ 0, 0, 0, 0, 0, 1, 0, 2, 0, 2, 1, 2, 0, 2, 2 ]
+gap> MinimalAbsWgs[6][1888];
+[ 0, 0, 0, 0, 0, 1, 0, 2, 0, 2, 1, 2, 0, 2, 2 ]
+gap> MinimalAbsWgs[6][1888];
+[ 0, 0, 0, 0, 0, 1, 0, 2, 0, 2, 1, 2, 0, 2, 2 ]
+gap> MinimalAbsWgs[6][1888];
+[ 0, 0, 0, 0, 0, 1, 0, 2, 0, 2, 1, 2, 0, 2, 2 ]
+gap> MinimalAbsWgs[6][1888];
+[ 0, 0, 0, 0, 0, 1, 0, 2, 0, 2, 1, 2, 0, 2, 2 ]
+gap> MinimalAbsWgs[6][1888];
+[ 0, 0, 0, 0, 0, 1, 0, 2, 0, 2, 1, 2, 0, 2, 2 ]
+gap> MinimalAbsWgs[6][1888];
+[ 0, 0, 0, 0, 0, 1, 0, 2, 0, 2, 1, 2, 0, 2, 2 ]
+gap> Random(MinimalAbsWgs[6][1888];
+Syntax error: ) expected
+Random(MinimalAbsWgs[6][1888];
+                             ^
+gap> [ 0, 0, 0, 0, 0, 1, 0, 2, 0, 2, 1, 2, 0, 2, 2 ]
+> gap> MinimalAbsWgs[6]);
+Syntax error: ; expected
+gap> MinimalAbsWgs[6]);
+^^^
+gap> Random(MinimalAbsWgs[6]);
+[ 0, 0, 1, 0, 1, 1, 2, 1, 1, 2, 2, 1, 2, 2, 0 ]
+gap> Random(MinimalAbsWgs[6]);
+[ 0, 0, 0, 0, 0, 2, 0, 1, 2, 2, 2, 1, 1, 2, 2 ]
+gap> Random(MinimalAbsWgs[6]);
+[ 0, 1, 1, 1, 1, 2, 2, 2, 1, 2, 2, 2, 1, 2, 2 ]
+gap> Random(MinimalAbsWgs[6]);
+[ 0, 0, 1, 0, 2, 2, 2, 0, 0, 0, 2, 1, 2, 2, 2 ]
+gap> Random(MinimalAbsWgs[6]);
+[ 0, 0, 1, 0, 1, 2, 1, 1, 1, 1, 2, 0, 0, 0, 2 ]
+gap> Random(MinimalAbsWgs[6]);
+[ 0, 0, 0, 0, 0, 2, 0, 1, 1, 2, 1, 1, 0, 0, 2 ]
+gap> Random(MinimalAbsWgs[6]);
+[ 0, 0, 1, 1, 1, 1, 2, 1, 1, 2, 2, 1, 2, 1, 0 ]
+gap> Random(MinimalAbsWgs[6]);
+[ 0, 0, 1, 2, 1, 1, 2, 1, 2, 1, 2, 2, 1, 2, 1 ]
+gap> Random(MinimalAbsWgs[6]);
+[ 0, 0, 0, 0, 1, 1, 1, 0, 2, 2, 1, 2, 1, 1, 0 ]
+gap> Random(MinimalAbsWgs[6]);
+[ 0, 0, 0, 0, 1, 1, 1, 2, 2, 1, 2, 0, 1, 2, 0 ]
+gap> Read("MinimalWgs.g");
+Syntax warning: Unbound global variable in MinimalWgs.g:154
+    tintval:=[tpos..tpos+ttab-1];
+    ^^^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:155
+    if tintval<>[] then 
+       ^^^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:157
+      subabswg:=List(tintval, tpos->abswg);
+                     ^^^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:158
+      nzposs:=Filtered([1..Length(tintval)], ttpos-> subabswg[ttpos]>0);
+                                  ^^^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:160
+        parts:=[List(subwg)];
+                     ^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:162
+        nznops:=Length(nonzerops);
+                       ^^^^^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:163
+        subwg[nzposs[1]]:=-subwg[nzposs[1]];
+        ^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:163
+        subwg[nzposs[1]]:=-subwg[nzposs[1]];
+                           ^^^^^
+Syntax error: while parsing a function: statement or 'end' expected in MinimalWgs.g:165
+          local ffpos;
+          ^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:166
+          if ff>nops then 
+             ^^
+Syntax warning: Unbound global variable in MinimalWgs.g:166
+          if ff>nops then 
+                ^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:167
+            Add(parts,List(tsubwg));
+                           ^^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:169
+            ffpos:=nzposs[ff];
+            ^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:169
+            ffpos:=nzposs[ff];
+                          ^^
+Syntax warning: Unbound global variable in MinimalWgs.g:170
+            task(tsubwg, ff+1);
+                 ^^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:170
+            task(tsubwg, ff+1);
+                         ^^
+Syntax warning: Unbound global variable in MinimalWgs.g:171
+            tsubwg[ffpos]:=-tsubwg[ffpos];
+            ^^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:171
+            tsubwg[ffpos]:=-tsubwg[ffpos];
+                   ^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:171
+            tsubwg[ffpos]:=-tsubwg[ffpos];
+                            ^^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:171
+            tsubwg[ffpos]:=-tsubwg[ffpos];
+                                   ^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:172
+            task(tsubwg, ff+1);
+                 ^^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:172
+            task(tsubwg, ff+1);
+                         ^^
+Syntax error: while parsing an 'if' statement: statement or 'fi' expected in MinimalWgs.g:174
+        end;
+        ^^^
+gap> Read("MinimalWgs.g");
+Syntax warning: Unbound global variable in MinimalWgs.g:154
+    tintval:=[tpos..tpos+ttab-1];
+    ^^^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:155
+    if tintval<>[] then 
+       ^^^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:157
+      subabswg:=List(tintval, tpos->abswg);
+                     ^^^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:158
+      nzposs:=Filtered([1..Length(tintval)], ttpos-> subabswg[ttpos]>0);
+                                  ^^^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:160
+        parts:=[List(subwg)];
+                     ^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:162
+        nznops:=Length(nonzerops);
+                       ^^^^^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:163
+        subwg[nzposs[1]]:=-subwg[nzposs[1]];
+        ^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:163
+        subwg[nzposs[1]]:=-subwg[nzposs[1]];
+                           ^^^^^
+Syntax error: while parsing a function: statement or 'end' expected in MinimalWgs.g:166
+          local ffpos;
+          ^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:167
+          if ff>nznops then 
+             ^^
+Syntax warning: Unbound global variable in MinimalWgs.g:168
+            Add(parts,List(tsubwg));
+                           ^^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:170
+            ffpos:=nzposs[ff];
+            ^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:170
+            ffpos:=nzposs[ff];
+                          ^^
+Syntax warning: Unbound global variable in MinimalWgs.g:171
+            task(tsubwg, ff+1);
+                 ^^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:171
+            task(tsubwg, ff+1);
+                         ^^
+Syntax warning: Unbound global variable in MinimalWgs.g:172
+            tsubwg[ffpos]:=-tsubwg[ffpos];
+            ^^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:172
+            tsubwg[ffpos]:=-tsubwg[ffpos];
+                   ^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:172
+            tsubwg[ffpos]:=-tsubwg[ffpos];
+                            ^^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:172
+            tsubwg[ffpos]:=-tsubwg[ffpos];
+                                   ^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:173
+            task(tsubwg, ff+1);
+                 ^^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:173
+            task(tsubwg, ff+1);
+                         ^^
+Syntax error: while parsing an 'if' statement: statement or 'fi' expected in MinimalWgs.g:175
+        end;
+        ^^^
+gap> Read("MinimalWgs.g");
+Syntax warning: Unbound global variable in MinimalWgs.g:162
+        nznops:=Length(nonzerops);
+                       ^^^^^^^^^
+gap> Read("MinimalWgs.g");
+gap> Read("MinimalWgs.g");
+Syntax error: Name used for two locals in MinimalWgs.g:186
+  local wwg, xx, tadj, ttadj, pos, wwg, iijj, ttadj,   tGrec, tGram, th, 
+                                   ^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:200
+  ttadj:=Cover22(tadj);
+         ^^^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:201
+  tGrec:=ModLatticeKerRec();
+         ^^^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:206
+  flag:=true;
+  ^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:209
+    flag:=false; 
+    ^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:213
+      flag:=false;  
+      ^^^^
+Syntax error: ) expected in MinimalWgs.g:222
+    phi:=tGrec.phi;
+                  ^
+Syntax warning: Unbound global variable in MinimalWgs.g:223
+    Gram:=tGram,
+    ^^^^
+Syntax error: ; expected in MinimalWgs.g:223
+    Gram:=tGram,
+               ^
+gap> Read("MinimalWgs.g");
+Syntax error: Name used for two locals in MinimalWgs.g:186
+  local wwg, xx, tadj, ttadj, pos, wwg, iijj, ttadj,   tGrec, tGram, th, 
+                                   ^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:200
+  ttadj:=Cover22(tadj);
+         ^^^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:201
+  tGrec:=ModLatticeKerRec();
+         ^^^^^^^^^^^^^^^^
+gap> Read("MinimalWgs.g");
+Syntax error: Name used for two locals in MinimalWgs.g:188
+  local wwg, xx, tadj, ttadj, pos, wwg, iijj, ttadj,   tGrec, tGram, th, 
+                                   ^^^
+gap> Read("MinimalWgs.g");
+Syntax error: Name used for two locals in MinimalWgs.g:188
+  local wwg, xx, tadj, ttadj, pos, iijj, ttadj,   tGrec, tGram, th, 
+                                         ^^^^^
+gap> Read("MinimalWgs.g");
+Syntax warning: Unbound global variable in MinimalWgs.g:269
+        partss:=SwMinimals(newkk, twg);
+        ^^^^^^
+gap> Read("MinimalWgs.g");
+gap> Read("MinimalWgs.g");
+Syntax error: Name used for two locals in MinimalWgs.g:284
+  orbsize, Gksize, stabgens, partss, iterpartss, ttwg, twg,
+                                                       ^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:315
+        K3recs:=[];
+        ^^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:321
+            Add(K3recs, K3rec);
+                ^^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:325
+        Printn("__K3recs", Length(K3recs));
+                                  ^^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:326
+        Add(newminwgrecs, rec(wg:=twg, stabgens:=stabgens, K3recs:=K3recs));
+                                                                   ^^^^^^
+gap> Read("MinimalWgs.g");
+gap> Read("Task20260927Uc.g");
+Error, Variable: 'MinimalAbsWgsRecs' must have an assigned value in
+  oldminabswgs := List( MinimalAbsWgsRecs[Length( MinimalAbsWgsRecs )], function ( xx )
+        return xx.wg;
+    end ); at Task20260927Uc.g:12 called from 
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260927Uc.g:18
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260927Uc.g");
+Error, Variable: 'MinimalAbsWgsRecs' must have an assigned value in
+  oldminabswgs := List( MinimalAbsWgsRecs[Length( MinimalAbsWgsK3Recs )], function ( xx )
+        return xx.wg;
+    end ); at Task20260927Uc.g:12 called from 
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260927Uc.g:18
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260927Uc.g");
+Error, Variable: 'subwg' must have an assigned value in
+  subwg[nzposs[1]] := - subwg[nzposs[1]]; at MinimalWgs.g:165 called from 
+SwMinimals( newkk, twg ) at MinimalWgs.g:313 called from
+Enhanced2MakeMinimalAbsWgs( oldminabswgs, newkk ) at Task20260927Uc.g:14 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260927Uc.g:18
+type 'quit;' to quit to outer loop
+brk> 

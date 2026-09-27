@@ -1,0 +1,330 @@
+sessionnumb  20260927154441 
+gap> Read("Task20260927Ub.g");
+Error, Variable: 'MinimalAbsWgs' must have an assigned value in
+  oldminabswgs := MinimalAbsWgs[Length( MinimalAbsWgs )]; at Task20260927Ub.g:12 called from 
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260927Ub.g:17
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260927Ub.g");
+____finish 1 in 1 : 3 
+2 3 
+____finish 3 in 3 : 10 
+3 10 
+____finish 10 in 10 : 66 
+4 66 
+____finish 66 in 66 : 792 
+5 792 
+____ 100 in 792 : 6654 
+____ 200 in 792 : 10865 
+____ 300 in 792 : 15539 
+____ 400 in 792 : 19124 
+____ 500 in 792 : 21498 
+____ 600 in 792 : 23698 
+____ 700 in 792 : 24969 
+____finish 792 in 792 : 25506 
+6 25506 
+____ 100 in 25506 : 17706 
+____ 200 in 25506 : 38473 
+____ 300 in 25506 : 62276 
+____ 400 in 25506 : 77013 
+Error, user interrupt in
+  p := Factors( Integers, ord )[1]; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/pcgsperm.gi:207 called from 
+ExtendSeriesPermGroup( G, series, cent, desc, elab, w, lev + 1, ndep, bound ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/pcgsperm.gi:235 called from
+ExtendSeriesPermGroup( G, series, cent, desc, elab, w, lev + 1, ndep, bound ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/pcgsperm.gi:235 called from
+ExtendSeriesPermGroup( G, series, cent, desc, elab, w, lev + 1, ndep, bound ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/pcgsperm.gi:235 called from
+ExtendSeriesPermGroup( G, series, cent, desc, elab, w, lev + 1, ndep, bound ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/pcgsperm.gi:235 called from
+ExtendSeriesPermGroup( A, series, cent, desc, elab, y, 0, 0, bound ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/pcgsperm.gi:388 called from
+...  at Task20260927Ub.g:17
+you can 'return;'
+brk> quit;
+gap> Read("Task20260927Ub.g");
+Syntax warning: Unbound global variable in MinimalWgs.g:134
+  newminwgrecs:=[];
+  ^^^^^^^^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:151
+        Add(newminwgrecs, rec(wg:=twg, stab:=stab));
+            ^^^^^^^^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:163
+  return(newminwgrecs);
+         ^^^^^^^^^^^^
+Error, Variable: 'EnhancedMakeMinimalAbsWgs' must have an assigned value in
+  newminabswgrecs := EnhancedMakeMinimalAbsWgs( oldminabswgs, newkk ); at Task20260927Ub.g:13 called from 
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260927Ub.g:17
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260927Ub.g");
+Syntax warning: Unbound global variable in MinimalWgs.g:159
+      Printn("____", counter, "in", Length(oldminwgs), ":", Length(newminwgs));
+                                                                   ^^^^^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:162
+  Printn("____finish", counter, "in", Length(oldminwgs), ":", Length(newminwgs));
+                                                                     ^^^^^^^^^
+Error, Record Element: <rec> must be a record (not an empty plain list) in
+  return xx.wg; at Task20260927Ub.g:12 called from 
+func( C[i] ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from
+List( MinimalAbsWgsRecs[Length( MinimalAbsWgsRecs )], function ( xx )
+      return xx.wg;
+  end ) at Task20260927Ub.g:12 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260927Ub.g:18
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260927Ub.g");
+Error, Record Element: <rec> must be a record (not an empty plain list) in
+  return xx.wg; at Task20260927Ub.g:12 called from 
+func( C[i] ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from
+List( MinimalAbsWgsRecs[Length( MinimalAbsWgsRecs )], function ( xx )
+      return xx.wg;
+  end ) at Task20260927Ub.g:12 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260927Ub.g:18
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260927Ub.g");
+____finish 1 in 1 : 3 
+wrong global beep 919191 
+Error,  at gapReads/gaptools.txt:139 called from
+beep( 919191 ); at MinimalWgs.g:163 called from
+EnhanceddMakeMinimalAbsWgs( oldminabswgs, newkk ) at Task20260927Ub.g:14 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260927Ub.g:18
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> total;
+6
+brk> (Length(absW))^EkkRec.leng;
+3
+brk> quit;
+gap> (Length(absW))^EkkRec.leng;
+Error, Variable: 'EkkRec' must have a value
+not in any function at *stdin*:2
+gap> Read("Task20260927Ub.g");
+____finish 1 in 1 : 3 
+2 3 
+____finish 3 in 3 : 27 
+wrong global beep 919191 
+Error,  at gapReads/gaptools.txt:139 called from
+beep( 919191 ); at MinimalWgs.g:163 called from
+EnhanceddMakeMinimalAbsWgs( oldminabswgs, newkk ) at Task20260927Ub.g:14 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260927Ub.g:18
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> >2*(Length(absW))^EkkRec.leng;
+Syntax error: expression expected in *errin*:1
+>2*(Length(absW))^EkkRec.leng;
+^
+brk> 2*(Length(absW))^EkkRec.leng;
+54
+brk> total;
+162
+brk> ^EkkRec;
+Syntax error: expression expected in *errin*:4
+^EkkRec;
+^
+brk> EkkRec.leng;
+3
+brk> 3^3;
+27
+brk> Size(Group(EkkRec.Symkkgens));
+6
+brk> newminwgrecs;
+[ rec( stab := [ () ], wg := [ 0, 0, 0 ] ), rec( stab := [ () ], wg := [ 0, 0, 1 ] ), rec( stab := [ () ], wg := [ 0, 0, 2 ] ), rec( stab := [ () ], wg := [ 0, 1, 0 ] ), 
+  rec( stab := [ () ], wg := [ 0, 1, 1 ] ), rec( stab := [ () ], wg := [ 0, 1, 2 ] ), rec( stab := [ () ], wg := [ 0, 2, 0 ] ), rec( stab := [ () ], wg := [ 0, 2, 1 ] ), 
+  rec( stab := [ () ], wg := [ 0, 2, 2 ] ), rec( stab := [ () ], wg := [ 1, 0, 0 ] ), rec( stab := [ () ], wg := [ 1, 0, 1 ] ), rec( stab := [ () ], wg := [ 1, 0, 2 ] ), 
+  rec( stab := [ () ], wg := [ 1, 1, 0 ] ), rec( stab := [ () ], wg := [ 1, 1, 1 ] ), rec( stab := [ () ], wg := [ 1, 1, 2 ] ), rec( stab := [ () ], wg := [ 1, 2, 0 ] ), 
+  rec( stab := [ () ], wg := [ 1, 2, 1 ] ), rec( stab := [ () ], wg := [ 1, 2, 2 ] ), rec( stab := [ () ], wg := [ 2, 0, 0 ] ), rec( stab := [ () ], wg := [ 2, 0, 1 ] ), 
+  rec( stab := [ () ], wg := [ 2, 0, 2 ] ), rec( stab := [ () ], wg := [ 2, 1, 0 ] ), rec( stab := [ () ], wg := [ 2, 1, 1 ] ), rec( stab := [ () ], wg := [ 2, 1, 2 ] ), 
+  rec( stab := [ () ], wg := [ 2, 2, 0 ] ), rec( stab := [ () ], wg := [ 2, 2, 1 ] ), rec( stab := [ () ], wg := [ 2, 2, 2 ] ) ]
+brk> absW;
+[ 0, 1, 2 ]
+brk> ActionTauWg((1,2), [ 0, 0, 0 ]);
+[ 0, 0, 0 ]
+brk> Size(Group(EkkRec.Symkkgens));
+6
+brk> quit;
+gap> Read("Task20260927Ub.g");
+[ 0 ][ () ][ 1 ][ () ][ 2 ][ () ]____finish 1 in 1 : 3 
+2 3 
+[ 0, 0, 0 ][ () ][ 0, 0, 1 ][ () ][ 0, 0, 2 ][ () ][ 0, 1, 0 ][ () ][ 0, 1, 1 ][ () ][ 0, 1, 2 ][ () ][ 0, 2, 0 ][ () ][ 0, 2, 1 ][ () ]
+[ 0, 2, 2 ][ () ][ 1, 0, 0 ][ () ][ 1, 0, 1 ][ () ][ 1, 0, 2 ][ () ][ 1, 1, 0 ][ () ][ 1, 1, 1 ][ () ][ 1, 1, 2 ][ () ][ 1, 2, 0 ][ () ][ 1, 2, 1 ][ () ][ 1, 2, 2 ][ () ]
+[ 2, 0, 0 ][ () ][ 2, 0, 1 ][ () ][ 2, 0, 2 ][ () ][ 2, 1, 0 ][ () ][ 2, 1, 1 ][ () ][ 2, 1, 2 ][ () ][ 2, 2, 0 ][ () ][ 2, 2, 1 ][ () ]
+[ 2, 2, 2 ][ () ]____finish 3 in 3 : 27 
+wrong global beep 919191 
+Error,  at gapReads/gaptools.txt:139 called from
+beep( 919191 ); at MinimalWgs.g:164 called from
+EnhanceddMakeMinimalAbsWgs( oldminabswgs, newkk ) at Task20260927Ub.g:14 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260927Ub.g:18
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> quit;
+gap> Read("Task20260927Ub.g");
+[ 0 ] [ () ] 
+[ 1 ] [ () ] 
+[ 2 ] [ () ] 
+____finish 1 in 1 : 3 
+2 3 
+[ 0, 0, 0 ] [ () ] 
+[ 0, 0, 1 ] [ () ] 
+[ 0, 0, 2 ] [ () ] 
+[ 0, 1, 0 ] [ () ] 
+[ 0, 1, 1 ] [ () ] 
+[ 0, 1, 2 ] [ () ] 
+[ 0, 2, 0 ] [ () ] 
+[ 0, 2, 1 ] [ () ] 
+[ 0, 2, 2 ] [ () ] 
+[ 1, 0, 0 ] [ () ] 
+[ 1, 0, 1 ] [ () ] 
+[ 1, 0, 2 ] [ () ] 
+[ 1, 1, 0 ] [ () ] 
+[ 1, 1, 1 ] [ () ] 
+[ 1, 1, 2 ] [ () ] 
+[ 1, 2, 0 ] [ () ] 
+[ 1, 2, 1 ] [ () ] 
+[ 1, 2, 2 ] [ () ] 
+[ 2, 0, 0 ] [ () ] 
+[ 2, 0, 1 ] [ () ] 
+[ 2, 0, 2 ] [ () ] 
+[ 2, 1, 0 ] [ () ] 
+[ 2, 1, 1 ] [ () ] 
+[ 2, 1, 2 ] [ () ] 
+[ 2, 2, 0 ] [ () ] 
+[ 2, 2, 1 ] [ () ] 
+[ 2, 2, 2 ] [ () ] 
+____finish 3 in 3 : 27 
+wrong global beep 919191 
+Error,  at gapReads/gaptools.txt:139 called from
+beep( 919191 ); at MinimalWgs.g:164 called from
+EnhanceddMakeMinimalAbsWgs( oldminabswgs, newkk ) at Task20260927Ub.g:14 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260927Ub.g:18
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> quit;
+gap> Read("Task20260927Ub.g");
+____finish 1 in 1 : 3 
+2 3 
+____finish 3 in 3 : 10 
+wrong global beep 919191 
+Error,  at gapReads/gaptools.txt:139 called from
+beep( 919191 ); at MinimalWgs.g:163 called from
+EnhanceddMakeMinimalAbsWgs( oldminabswgs, newkk ) at Task20260927Ub.g:14 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260927Ub.g:18
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> quit;
+gap> Read("Task20260927Ub.g");
+____finish 1 in 1 : 3 
+wrong global beep 919191 
+Error,  at gapReads/gaptools.txt:139 called from
+beep( 919191 ); at MinimalWgs.g:163 called from
+EnhanceddMakeMinimalAbsWgs( oldminabswgs, newkk ) at Task20260927Ub.g:14 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260927Ub.g:18
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> total;
+6
+brk> newminwgrecs;
+[ rec( stab := [ () ], wg := [ 0 ] ), rec( stab := [ () ], wg := [ 1 ] ), rec( stab := [ () ], wg := [ 2 ] ) ]
+brk> Group(EkkRec.Symkkgens);
+Group(())
+brk> newkk;
+2
+brk> quit;
+gap> Read("Task20260927Ub.g");
+Error, no method found! For debugging hints type ?Recovery from NoMethodFound
+Error, no 1st choice method found for `*' on 2 arguments at /usr/local/Cellar/gap/4.15.1/share/gap/lib/methsel2.g:250 called from
+Gksize / Length( stab ) at MinimalWgs.g:154 called from
+EnhanceddMakeMinimalAbsWgs( oldminabswgs, newkk ) at Task20260927Ub.g:14 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260927Ub.g:18
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20260927Ub.g");
+____finish 1 in 1 : 3 
+2 3 
+____finish 3 in 3 : 10 
+3 10 
+____finish 10 in 10 : 66 
+4 66 
+____finish 66 in 66 : 792 
+5 792 
+____ 100 in 792 : 6654 
+____ 200 in 792 : 10865 
+____ 300 in 792 : 15539 
+____ 400 in 792 : 19124 
+____ 500 in 792 : 21498 
+____ 600 in 792 : 23698 
+____ 700 in 792 : 24969 
+____finish 792 in 792 : 25506 
+6 25506 
+____ 100 in 25506 : 17706 
+Error, user interrupt in
+  res[i] := func( C[i] ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from 
+List( [ 1 .. Length( wg ) ], function ( tpos )
+      return tpos ^ largetau;
+  end ) at MinimalWgs.g:85 called from
+ActionTauWg( tg, twg ) at MinimalWgs.g:148 called from
+EnhanceddMakeMinimalAbsWgs( oldminabswgs, newkk ) at Task20260927Ub.g:14 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260927Ub.g:18
+you can 'return;'
+brk> quit;
+gap> Read("Task20260927Ub.g");
+Syntax warning: Unbound global variable in MinimalWgs.g:104
+      if Remove(newgensset)<>tg then buss(47147); fi;
+                                     ^^^^
+____finish 1 in 1 : 3 
+2 3 
+____finish 3 in 3 : 10 
+3 10 
+____finish 10 in 10 : 66 
+4 66 
+____finish 66 in 66 : 792 
+5 792 
+Error, user interrupt in
+  return iter!.state = 2; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/stbc.gi:1833 called from 
+tgtwg = twg at MinimalWgs.g:167 called from
+EnhanceddMakeMinimalAbsWgs( oldminabswgs, newkk ) at Task20260927Ub.g:14 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260927Ub.g:18
+you can 'return;'
+brk> quit;
+gap> Read("Task20260927Ub.g");
+____finish 1 in 1 : 3 
+2 3 
+____finish 3 in 3 : 10 
+3 10 
+____finish 10 in 10 : 66 
+4 66 
+____finish 66 in 66 : 792 
+5 792 
+____ 100 in 792 : 6654 
+____ 200 in 792 : 10865 
+____ 300 in 792 : 15539 
+____ 400 in 792 : 19124 
+____ 500 in 792 : 21498 
+____ 600 in 792 : 23698 
+____ 700 in 792 : 24969 
+____finish 792 in 792 : 25506 
+6 25506 
+____ 100 in 25506 : 17706 
+____ 200 in 25506 : 38473 
+____ 300 in 25506 : 62276 
+____ 400 in 25506 : 77013 
+____ 500 in 25506 : 89971 
+____ 600 in 25506 : 100874 
+____ 700 in 25506 : 104689 
+____ 800 in 25506 : 125188 
+____ 900 in 25506 : 148383 
+____ 1000 in 25506 : 162383 
+____ 1100 in 25506 : 187657 
+____ 1200 in 25506 : 210127 
+____ 1300 in 25506 : 235084 
+____ 1400 in 25506 : 261778 
+____ 1500 in 25506 : 281521 
