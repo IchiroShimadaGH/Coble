@@ -74,7 +74,7 @@ EkkRecs:=[[]];
 
 GetEkkRec:=function(kk)
   while Length(EkkRecs)<kk do 
-    Add(EkkRecs, MakeEkkRec(Length(EkkRecs)+1));
+    Add(EkkRecs, MakeEkkRec(kk));
   od;
   return(EkkRecs[kk]);
 end;
@@ -145,10 +145,9 @@ MakeMinimalAbsWgs:=function(oldminwgs, newkk)
   return(newminwgs);
  end;
 
-
 theWs:=[-2,-1,0,1,2];
 
-SwQuasiMinimals:=function(kk, abswg)
+SwMinimals:=function(kk, abswg)
   local tabs, jj, tpos, partss, ttab, tintval,
   parts, subwg, nzposs,nznops, task, tabpos;
   #
@@ -245,40 +244,6 @@ end;
 
 
 
-IsGkMinimal:=function(kk, wg, absstab)
-  #
-  local tSwgens, minflag, Swtask, ttau, newwg;
-  #
-  tSwgens:=GetEkkRec(kk).Swgens;
-  #
-  minflag:=true;
-  Swtask:=function(twg, jj)
-    local newtwg, tpos;
-    if jj>kk then return(); fi;
-    #
-    Swtask(twg, jj+1);
-    if minflag=false then return(); fi;
-    #
-    newtwg:=List(twg);
-    for tpos in tSwgens[jj] do 
-      newtwg[tpos]:=-newtwg[tpos];
-    od;
-    if newtwg<wg then minflag:=false; return(); fi;
-    if newtwg<>twg then 
-      Swtask(newtwg, jj+1);
-      if minflag=false then return(); fi;
-    fi;
-    #
-  end;
-  #
-  for ttau in absstab do 
-    newwg:=ActionTauWg(ttau, wg);
-    if newwg<wg then minflag:=false; break; fi;
-    Swtask(List(newwg), 2);
-    if not minflag then break; fi;
-  od;
-  return(minflag);
-end;
 
 
 
@@ -315,8 +280,8 @@ Enhanced2MakeMinimalAbsWgs:=function(oldminwgs, newkk)
         if not IsInt(orbsize) then buzz(163671); fi;
         total:=total+orbsize;
         #
-        partss:=SwQuasiMinimals(newkk, twg);
-       # Printn("_____", twg, "_____SwQuasiMinimals", 
+        partss:=SwMinimals(newkk, twg);
+       # Printn("_____", twg, "_____SwMinimals", 
        #   Product(List(partss, Length)));
         K3recs:=[];
         iterpartss:=IteratorOfCartesianProduct(partss);
@@ -324,12 +289,11 @@ Enhanced2MakeMinimalAbsWgs:=function(oldminwgs, newkk)
           swg:=Flat(sswg);
           K3rec:=MakeK3Rec(newkk, swg);
           if K3rec.flag then 
-            if IsGkMinimal(newkk, swg, stab) then 
-              Add(K3recs, K3rec);
-            fi;
+            Add(K3recs, K3rec);
           fi;
         od;
         #
+        
         totalK3recsnops:=totalK3recsnops+ Length(K3recs);
         Printn(newkk, "___K3recs", Length(K3recs), totalK3recsnops, ":",
         counter, "in", nopsoldminwgs);

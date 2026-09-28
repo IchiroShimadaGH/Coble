@@ -47,7 +47,10 @@
 \newcommand{\Sw}{\mathrm{Sw}}
 \newcommand{\Wk}{\mathcal{W}_k}
 %\newcommand{\abs}[1]{ {#1}^{\mathrm{abs}}}
-\newcommand{\abs}[1]{ {#1}^{\mathrm{ab}}}
+\newcommand{\abs}[1]{\mathrm{ab}(#1)}
+\newcommand{\ab}{\mathrm{ab}}
+\newcommand{\lex}{\mathrm{lex}}
+\newcommand{\smallerlex}{<_{\mathrm{lex}}}
 %
 \begin{document}
 %
@@ -127,90 +130,91 @@ We put $\abs{M} := \{0,1,\ldots,m\}$.
 Then we have a mapping
 %
 \begin{equation}\label{eq:absw}
-\Wk \longrightarrow \abs{\Wk} := (\abs{M})^{E_k},
+\abs \colon \Wk \longrightarrow \abs{\Wk} := (\abs{M})^{E_k},
 \qquad
 w \longmapsto \abs{w}.
 \end{equation}
+%
+\begin{definition}
+Suppose that a group $G$ acts on a set $X$,
+and that $X$ is equipped with 
+a total order
+ $<_{X}$.
+An element $x\in X$ is \emph{$(G, <_{X})$-minimal} 
+if $x$ is minimal 
+with respect to $<_{X}$ in the orbit $G\cdot x$.
+\end{definition}
 %
 Notice that $\SSSS_k$ acts on $\abs{\Wk}$, and the mapping~\eqref{eq:absw}
 is $\SSSS_k$-equivariant.
 Moreover, the action of $\Sw_k$ on $\Wk$ preserves
 each fiber of~\eqref{eq:absw}.
-We then define a total order on $\Wk$ by
+We then define a total order $<_{\WWW}$ on $\Wk$ by
 \[
-w < w\sprime
+w <_{\WWW} w\sprime
 \quad\Longleftrightarrow\quad
 \abs{w} <_{\mathrm{lex}} \abs{w\sprime}
 \quad\text{or}\quad
 \bigl(\abs{w} = \abs{w\sprime} \;\;\text{ and }\;\; w <_{\mathrm{lex}} w\sprime\bigr).
 \]
-We say that $w\in\Wk $ is \emph{$G_k$-minimal } if $w$ is minimal
-in  the orbit $G_k w$.
 We obtain the list of $G_k$-orbits in $\Wk$
-by enumerating all $G_k$-minimal elements in $\Wk$.
-By definition, we have the following:
+by enumerating all $(G_k, <_{\WWW} )$-minimal elements in $\Wk$.
+\par
+We define the notion of  
+ \emph{$G_k$-quasi-minimality}
+by the following:
 %$w$ is $G_k$-minimal if and only if $\abs{w}$ is minimal
 %in its $G_k$-orbit $G_k \abs{w}$ in $\abs{\Wk}$, and $w$ is minimal
 %in its $\Sw_k$-orbit  $\Sw_k w$.
 \[
-w \text{ is } G_k\text{-minimal}
+\text{$w$ is $G_k\text{-quasi-minimal}$}
 \quad\Longleftrightarrow\quad
-\parbox{8cm}{
-$\abs{w}$ is minimal with respect to $<_{\mathrm{lex}}$ in the $\SSSS_k$-orbit 
-$\SSSS_k \abs{w}\subset \abs{\Wk}$, and 
-$w$  is minimal  with respect to $<_{\mathrm{lex}}$ in the $ \Sw_k$-orbit $\Sw_k w$.}
+\parbox{7cm}{
+$\abs{w}$ is$(\SSSS_k, <_{\mathrm{lex}})$-minimal, and  \\ 
+$w$  is $(\Sw_k, <_{\mathrm{lex}})$-minimal   in  $\ab\inv(\ab(w))$.}
 \]
-By this observation, to determine whether an element
-$w \in \Wk$ is $G_k$-minimal, it suffices to make at most
-$k! + 2^k$ comparisons, which is much smaller than the size
-$2^k k!$ of $G_k$.
+%
+It is obvious that, if  $w \in \Wk$ is $(G_k, <_{\WWW} )$-minimal then  $w \in \Wk$ is $G_k$-quasi-minimal
+while the opposite implication does not necessarily hold.
+We first make the list of $G_k$quasi--minimal elements,
+and then we choose from them $(G_k, <_{\WWW} )$-minimal elements.
 \par
+To make the list of $G_k$-quasi-minimal elements,
+we use the induction on $k$.
 Suppose that $k\sprime < k$.
-By taking the prefix of length $k\sprime(k\sprime-1)/2$ of each $w \in \Wk$,
+By taking the prefix of length $k\sprime(k\sprime-1)/2$ of each $u \in \abs{\Wk}$,
 we obtain a mapping
 \[
-\Wk \longrightarrow \mathcal{W}_{k\sprime},
+\abs{\Wk} \longrightarrow \abs{\WWW_{k\sprime}},
 \qquad
+u \longmapsto u|_{k\sprime}.
+\]
+It is obvious that, if $u\in \abs{\Wk}$ is $(\SSSS_k, <_{\lex})$-minimal,
+then $u|_{k\sprime}$ must be  $(\SSSS_{k\sprime}, <_{\lex})$-minimal.
+ \par
+ For an $(\SSSS_k, <_{\lex})$-minimal element $u\in \abs{\Wk}$, 
+ \[
+ \ab\inv (u)  \longrightarrow \ab\inv(u|_{k\sprime}),
+ \qquad
 w \longmapsto w|_{k\sprime}.
-\]
-It is obvious that,
-if $w\sprime |_{k\sprime} <w |_{k\sprime}$ in $\mathcal{W}_{k\sprime}$,
-then we have $w\sprime <w$ in $\Wk$.
-On the other hand,
-we have a natural embedding $G_{k\sprime} \hookrightarrow G_k$
-denoted by $g \mapsto \widetilde{g}$ by 
-\[
-i\sp{\widetilde{\tau}}:=\begin{cases}
-i^{\tau} & \textrm{if $i\le k\sprime$,}
-\\
-i & \textrm{if $i> k\sprime$,}
-\end{cases}
-\qquad
-\widetilde{s}(i):=
-\begin{cases}
-s(i) & \textrm{if $i\le k\sprime$,}
-\\
-i & \textrm{if $i> k\sprime$,}
-\end{cases}
-\]
-for $\tau\in \SSSS_{k\sprime}$ and $s \in\Sw_{k\sprime}$.
-Then we have
-\[
-(\widetilde{g} w)|_{k\sprime}=g(w|_{k\sprime})
-\]
-for $\widetilde{g}\in G_{k\sprime}$ and $w\in \Wk$.
-Therefore we obtain:
+ \]
+ It is obvious that, if $w\in \ \ab\inv (u)$ is $(\Sw_k, <_{\lex})$-minimal,
+then $w|_{k\sprime}$ must be  $(\Sw_{k\sprime}, <_{\lex})$-minimal.
+More strongly, 
+$w\in \ \ab\inv (u)$ is $(\Sw_k, <_{\lex})$-minimal
+only if 
+$w|_{k\sprime}$ is $(\Sw_{k\sprime}, <_{\lex})$-minimal
+and the first non-zero element of the suffix $w-w|_{k\sprime}$ is negative.
+(The opposite implication does not necessarily hold.)
+We say that $w$ is $(\SSSS_k, <_{\lex})$-quasi-minimal 
+if, for any $k\sprime<k$,
+ $w|_{k\sprime}$ is  $(\SSSS_k, <_{\lex})$-quasi-minimal 
+and the first non-zero element of the suffix $w-w|_{k\sprime}$ is negative.
+\par
+We enumerate all  $(\SSSS_k, <_{\lex})$-minimal elements 
+and then, for each  $(\SSSS_k, <_{\lex})$-minimal element $u\in \abs{\Wk}$,
+we enumerate all  $(\Sw_k, <_{\lex})$-quasi-minimal  elements in $\ab\inv (u)$.
 %
-\begin{lemma}
-Suppose that $w \in \Wk$ is $G_k$-minimal.
-Then $w|_{k\sprime}$ is $G_{k\sprime}$-minimal.
-\qed
-\end{lemma}
-%
-%
-Using this lemma, we can construct the list of $G_k$-minimal elements
-in $\Wk$ 
-by induction on $k$.
 %
 \end{document}
 

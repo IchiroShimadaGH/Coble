@@ -13,7 +13,7 @@ OGLat:=function(arg)
   inipsol, kk, GramLinv, pvduallists, getpvduallist, tpvlist,
   getorbsunion, falseseeds, trueseeds, falseposs, thelevel, inipsoldual,
   tintnumbs, tpv, jj, intnumbss, totalgens, lengcan, lengcan1, tblist, fblist,
-  getorbblist, getorbsunionblist;
+  getorbblist, getorbsunionblist, colnrms;
   #
   beep:=function(beepnumb)
     localbeep("OGLat", beepnumb); Error();
@@ -31,6 +31,7 @@ OGLat:=function(arg)
   maxnrm:=Maximum(basisnrmslist);
   svrec:=ShortestVectors(GramL, maxnrm);
   nrmsset:=Set(svrec.norms);
+  colnrms:=Collected(svrec.norms);
   pvposss:=List(nrmsset, aa->Positions(svrec.norms, aa));
   #
   inipos:=function(tv)
@@ -193,7 +194,7 @@ OGLat:=function(arg)
   #   local orbunion, aa;
   #   orbunion:=[];
   #   for aa in aas do 
-  #     if not aa in orbunion then 
+  #     if not orbunion[aa] then 
   #       orbunion:=Union(orbunion, getorb(aa, gens));
   #     fi;
   #   od;
@@ -358,6 +359,8 @@ OGLat:=function(arg)
   totalgens:=Set(totalgens);
   OGrec:=rec(
     Gram:=GramL,
+    det:=DeterminantIntMat(GramL),
+    colnorms:=colnrms, 
     basis:=basis, 
     stabrecs:=stabrecs, 
     order:=2*Product(List(stabrecs, stabrec->stabrec.order)),
@@ -428,6 +431,108 @@ NewGensSize:=function(GramL, gens)
 end;
 
 
+#
+# Made by ChatGPT on 2026/09/28 
+#
+# Requires GAP's LLLReducedGramMat and ShortestVectors.
+# OGrecL1 is the existing, unmodified result of OGLat(GramL1).
+# Positive definite integral Gram matrices of positive rank are assumed.
+# Returns fail iff the lattices are not isomorphic; otherwise returns T with
+#   T*GramL2*TransposedMat(T) = OGrecL1.Gram and Det(T) = +/-1.
+# In row coordinates the isomorphism L1 -> L2 is v -> v*T.
+# Neither OGLat nor an automorphism computation for L2 is called.
+
+IsomLats:=function(OGrecL1, GramL2)
+  #
+  local GramL1, n, basis1, basis1inv, sourceGram, norms,
+  red2, basis2, targetGram, sv, shells, duals, fingerprints,
+  positive, search, result, first, getshell, beep, ss, vv;
+  #
+  beep:=function(beepnumb)
+    localbeep("IsomLats", beepnumb); Error();
+  end;
+  #
+  GramL1:=OGrecL1.Gram;
+  n:=Length(GramL1);
+  if n<>Length(GramL2) then return fail; fi;
+  if n=0 then Error("Positive rank required"); fi;
+  if OGrecL1.det<>DeterminantIntMat(GramL2) then
+    return fail;
+  fi;
+  if GramL1=GramL2 then return IdentityMat(n); fi;
+  #
+  basis1:=OGrecL1.basis;
+  basis1inv:=InverseMat(basis1);
+  sourceGram:=basis1*GramL1*TransposedMat(basis1);
+  norms:=List([1..n],i->sourceGram[i][i]);
+  # Level 1 candidates are modulo signs; later levels are signed.
+  # These lengths recover the fingerprints from the existing OGLat record.
+  fingerprints:=List(OGrecL1.stabrecs,r->Length(r.candidates));
+  # Enumerate in reduced target coordinates; convert back on return.
+  #
+  red2:=LLLReducedGramMat(GramL2);
+  basis2:=red2.transformation;
+  targetGram:=red2.remainder;
+  sv:=ShortestVectors(targetGram, Maximum(norms));
+  if OGrecL1.colnorms<>Collected(sv.norms) then return fail; fi;
+  #
+  positive:=function(v)
+    local x;
+    for x in v do
+      if x>0 then return v; elif x<0 then return -v; fi;
+    od;
+    Error("Unexpected zero short vector");
+  end;
+  #
+  getshell:=function(a)
+    local poss, pos;
+    # positions of norm a vectors 
+    poss:=Filtered([1..Length(sv.norms)], pos->sv.norms[pos]=a);
+    # sign-normalize and make duplicate-free 
+    return Set(poss, pos->positive(sv.vectors[pos]));
+  end;
+  #
+  shells:=List(norms, getshell);
+  #
+  if Length(shells[1])<>fingerprints[1] then return fail; fi;
+  if ForAny(shells, ss->Length(ss)=0) then return fail; fi;
+  duals:=List(shells, ss->List(ss, vv->vv*targetGram));
+  result:=fail;
+  #
+  search:=function(rows)
+    local k, wanted, candidates, p, products, v, T;
+    k:=Length(rows)+1;
+    if k>n then
+      T:=basis1inv*rows*basis2;
+      if not IsIntMat(T) then beep(76154361); fi;
+      if AbsInt(DeterminantIntMat(T))<>1 then beep(7615761); fi;
+      if TMTTmult(T, GramL2)<>GramL1 then beep(763331); fi;
+      result:=T;
+      return;
+    fi;
+    wanted:=sourceGram[k]{[1..k-1]};
+    candidates:=[];
+    for p in [1..Length(shells[k])] do
+      products:=rows*duals[k][p];
+      if products=wanted then Add(candidates, shells[k][p]); fi;
+      if -products=wanted then Add(candidates, -shells[k][p]); fi;
+    od;
+    if Length(candidates)<>fingerprints[k] then return; fi;
+    for v in candidates do
+      Add(rows,v);
+      search(rows);
+      if v<>Remove(rows) then beep(4714761); fi;
+      if result<>fail then return; fi;
+    od;
+  end;
+  #
+  # Any isometry can be multiplied by -1; one sign per first image suffices.
+  for first in shells[1] do
+    search([first]);
+    if result<>fail then return result; fi;
+  od;
+  return fail;
+end;
 
 
 
