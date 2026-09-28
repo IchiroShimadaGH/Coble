@@ -1,0 +1,67 @@
+sessionnumb  20260928231812 
+gap> Read("Task20260909Ud.g");
+Syntax error: expression expected in NewOGLat.g:32
+    if doesgenerate and and minreqnrm=nrmcandidate and tnrm<nrmcandidate then 
+                        ^^^
+1 4 96 [ 2, 1, 1, 1 ] 
+1 5 96 [ 1, 3, 2, 2, 2 ] 
+1 6 768 [ 4, 1, 1, 2, 2, 2 ] 
+1 7 8 [ 1, 3, 3, 3, 5, 4, 4 ] 
+1 8 2 [ 3, 3, 3, 4, 4, 4, 3, 3 ] 
+1 9 2 [ 3, 3, 4, 4, 4, 4, 5, 5, 5 ] 
+1 10 2 [ 4, 4, 6, 6, 6, 6, 6, 6, 4, 4 ] 
+1 11 2 [ 3, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5 ] 
+1 12 2 [ 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 7 ] 
+1 13 2 [ 3, 3, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5 ] 
+1 14 2 [ 5, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7 ] 
+1 15 2 [ 5, 6, 6, 6, 6, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8 ] 
+_____________ [ 96, 96, 768, 8, 2, 2, 2, 2, 2, 2, 2, 2 ] 
+2 4 64 [ 1, 1, 2, 2 ] 
+2 5 24 [ 3, 3, 3, 3, 3 ] 
+2 6 2304 [ 2, 2, 2, 3, 3, 3 ] 
+2 7 6144 [ 1, 1, 2, 2, 2, 2, 3 ] 
+2 8 16 [ 2, 2, 2, 3, 3, 3, 3, 3 ] 
+2 9 4 [ 2, 3, 4, 4, 4, 3, 4, 4, 5 ] 
+2 10 2 [ 4, 5, 5, 5, 6, 6, 6, 6, 6, 6 ] 
+2 11 2 [ 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7 ] 
+2 12 2 [ 4, 6, 6, 6, 7, 7, 7, 7, 7, 8, 8, 8 ] 
+2 13 2 [ 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6 ] 
+2 14 2 [ 6, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8 ] 
+2 15 2 [ 7, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 9, 9 ] 
+_____________ [ 96, 96, 2304, 6144, 16, 4, 2, 2, 2, 2, 2, 2 ] 
+3 4 24 [ 1, 2, 2, 3 ] 
+3 5 24 [ 2, 2, 2, 3, 3 ] 
+3 6 32 [ 3, 2, 2, 3, 3, 4 ] 
+3 7 768 [ 1, 2, 4, 2, 2, 2, 3 ] 
+Error, user interrupt in
+  depth1 := NestingDepthM( left )
+ ; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3574 called from 
+psol * tvdual at gapReads/OGLat.g:290 called from
+simpleextend( psol ); at gapReads/OGLat.g:304 called from
+simpleextend( CopyAdd( inipsol, tv ) ); at gapReads/OGLat.g:435 called from
+NewOGLat( ttbasisrec ) at Task20260909Ud.g:22 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260909Ud.g:38
+you can 'return;'
+brk> quit;
+gap> Read("Task20260928Va.g");
+Error, Variable: 'OGLat' must have an assigned value in
+  tOGrec := OGLat( tGram ); at Task20260928Va.g:14 called from 
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20260928Va.g:38
+type 'quit;' to quit to outer loop
+brk> OGLat;
+Syntax warning: Unbound global variable in *errin*:1
+OGLat;
+^^^^^
+Error, Variable: 'OGLat' must have a value in
+  tOGrec := OGLat( tGram ); at Task20260928Va.g:14 called from 
+<function "unknown">( <arguments> )
+ called from read-eval loop at *errin*:1
+brk> quit;
+gap> Read("Task20260928Va.g");
+Error, Variable: 'VssRec' is read only
+not in any function at gapReads/OGLat.g:50
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> restart();

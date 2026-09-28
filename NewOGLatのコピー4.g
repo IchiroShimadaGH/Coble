@@ -72,7 +72,7 @@ BasisRec:=function(GramL, trialnumb)
   nrmcandidate, ttintnumbs, maxbasisrrms,  tmaxbasisnrms,
   counter, minreqnrm, thevss,  basiswebrintss,
   candidatess, bpos, tcandidates, inipos, subcandidatess, tsubcandidates,
-  tbintnumbs, fingerprints;
+  tbintnumbs, fingerprints, candidatessleng, perm;
   #
   nn:=Length(GramL);
   if SignatureQ(GramL)<>[nn, nn, 0] then beep(665522); fi;
@@ -122,11 +122,6 @@ BasisRec:=function(GramL, trialnumb)
     od;
   fi;
   #
-  newGram:=TMTTmult(thebasis, GramL);
-  #
-  trec.basisnrms:=basisnrms;
-  trec.basis:=thebasis;
-  trec.newGram:=newGram;
   #
   thevss:=trec.vss;
   #
@@ -135,7 +130,7 @@ BasisRec:=function(GramL, trialnumb)
   #
   candidatess:=[];
   for bpos in [1..nn] do 
-    tvs:=thevss[SinglePosition(trec.nrmsset,trec.basisnrms[bpos])];
+    tvs:=thevss[SinglePosition(trec.nrmsset, basisnrms[bpos])];
     tcandidates:=[];
     for tv in tvs do 
       if Webrints(tv, GramL, thevss)=basiswebrintss[bpos] then 
@@ -146,6 +141,11 @@ BasisRec:=function(GramL, trialnumb)
     Add(candidatess, tcandidates);
   od;
   #
+  #
+  candidatessleng:=List(candidatess, Length);
+  perm := Sortex(candidatessleng);
+  #
+  Permuted(candidatess, perm);
   inipos:=function(tv)
     local xx;
     for xx in tv do 
@@ -155,6 +155,18 @@ BasisRec:=function(GramL, trialnumb)
   end;
   candidatess[1]:=List(candidatess[1], inipos);
   # to make the computation in getpermcan1 easy
+  trec.candidatess:=candidatess;
+  #
+  Permuted(basisnrms, perm);
+  trec.basisnrms:=basisnrms;
+  Permuted(thebasis, perm);
+  trec.basis:=thebasis;
+  Permuted(basiswebrintss, perm);
+  trec.basiswebrintss:=basiswebrintss;
+  newGram:=TMTTmult(thebasis, GramL);
+  trec.newGram:=newGram;
+  #
+  #
   #
   ################
   #
@@ -188,10 +200,9 @@ BasisRec:=function(GramL, trialnumb)
   #
   fingerprints:=List(subcandidatess, Length);
   #
-  trec.basiswebrintss:=basiswebrintss;
-  trec.candidatess:=candidatess;
   trec.subcandidatess:=subcandidatess;
   trec.fingerprints:=fingerprints;
+  Printn(fingerprints);
   #
   return(trec);
 end;
@@ -221,10 +232,7 @@ NewOGLat:=function(arg) # arg is (basisrec) or (basisrec, giveupsec)
     giveupruntime:=infinity;
   elif Length(arg)=2 then 
     basisrec:=arg[1];
-    giveupfla
-
-
-g:=true;
+    giveupflag:=true;
     giveupruntime:=1000*arg[2];
   else beep(212341);
   fi;

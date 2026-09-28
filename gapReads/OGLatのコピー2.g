@@ -1,14 +1,14 @@
 #Read("OGLat.g");
 
-#
-# made by codex on 2026/09/28
-#
 
 VssRec:=function(GramL, nrmcandidate)
   #
-  # Enumerate all nonzero vectors up to sign with norm <= nrmcandidate.
-  # Require that they generate L over Z. minreqnrm is the first
-  # generating shell; minflag says that the bound equals that norm.
+  # If nrmcandidate is the minimal norm such that
+  # the vevtors v with v^2 <=nrmcandidate generate L,
+  # then this returms vssrec with vssrec.minflag:=true;
+  # elif nrmcandidate is too large (not minimal),  then 
+  # this returms vssrec with vssrec.minflag:=false;
+  # elif nrmcandidate is too small,  then it beeps.
   #
   local nn, svsrec, nrmsset, vects, vss, tvs, tnrm, 
   tpos, doesgenerate, vssrec, poss, vs, minflag,
@@ -17,26 +17,27 @@ VssRec:=function(GramL, nrmcandidate)
   nn:=Length(GramL);
   svsrec:=ShortestVectors(GramL, nrmcandidate);
   nrmsset:=Set(svsrec.norms);
-  if nrmsset=[] then Error("VssRec: no nonzero vectors within bound"); fi;
+  if Maximum(nrmsset)<nrmcandidate then return(false); fi;
   vects:=svsrec.vectors;
   vss:=[];
   tvs:=[];
   minflag:=true; 
-  minreqnrm:=fail;
+  minreqnrm:=nrmcandidate;
   for tnrm  in nrmsset do 
     poss:=Positions(svsrec.norms, tnrm);
     vs:=List(poss, tpos->vects[tpos]);
     Add(vss, vs);
     Append(tvs, vs);
     doesgenerate:=(Rank(tvs)=nn and CokerTorsion(tvs)=[]);
-    if doesgenerate and minreqnrm=fail then
+    if doesgenerate and tnrm<nrmcandidate then 
+      minflag:=false; 
       minreqnrm:=tnrm;
     fi;
+    if tnrm=nrmcandidate and (not doesgenerate) then 
+      Printn("does not generate!");
+      beep(442211); 
+    fi;
   od;
-  if minreqnrm=fail then
-    Error("VssRec: short vectors do not generate the lattice over Z");
-  fi;
-  minflag:=(minreqnrm=nrmcandidate);
   vssrec:=rec(
     Gram:=List(GramL), 
     maxnrm:=nrmcandidate,
@@ -62,9 +63,9 @@ Webrints:=function(tv, Gram, tvss)
 end;
 
 
-BasisRec:=function(arg)
+BasisRec:=function(GramL, trialnumb)
   #
-  local beep, GramL, trialnumb, nn, norm, tU, tt,GramL2,  LLLrec, basis, ii,  
+  local nn, norm, tU, tt,GramL2,  LLLrec, basis, ii,  
   basisnrms,fflag,  maxnrm,  tbasisnrms, 
   newGram, getvs, trec, jj, kk, tintnumbs,
   tbasisdual, tv, tvs,  tbasis, thebasis,
@@ -72,20 +73,6 @@ BasisRec:=function(arg)
   counter, minreqnrm, thevss,  basiswebrintss,
   candidatess, bpos, tcandidates, inipos, subcandidatess, tsubcandidates,
   tbintnumbs, fingerprints, candidatessleng, perm;
-  #
-  #
-  beep:=function(beepnumb)
-    localbeep("BasisRec", beepnumb); Error();
-  end;
-  #
-  if Length(arg)=1 then 
-    GramL:=arg[1];
-    trialnumb:=10;
-  elif Length(arg)=2 then 
-    GramL:=arg[1];
-    trialnumb:=arg[2];
-  else beep(3112221);
-  fi;
   #
   nn:=Length(GramL);
   if SignatureQ(GramL)<>[nn, nn, 0] then beep(665522); fi;
@@ -158,7 +145,7 @@ BasisRec:=function(arg)
   candidatessleng:=List(candidatess, Length);
   perm := Sortex(candidatessleng);
   #
-  candidatess:=Permuted(candidatess, perm);
+  Permuted(candidatess, perm);
   inipos:=function(tv)
     local xx;
     for xx in tv do 
@@ -170,11 +157,11 @@ BasisRec:=function(arg)
   # to make the computation in getpermcan1 easy
   trec.candidatess:=candidatess;
   #
-  basisnrms:=Permuted(basisnrms, perm);
+  Permuted(basisnrms, perm);
   trec.basisnrms:=basisnrms;
-  thebasis:=Permuted(thebasis, perm);
+  Permuted(thebasis, perm);
   trec.basis:=thebasis;
-  basiswebrintss:=Permuted(basiswebrintss, perm);
+  Permuted(basiswebrintss, perm);
   trec.basiswebrintss:=basiswebrintss;
   newGram:=TMTTmult(thebasis, GramL);
   trec.newGram:=newGram;
@@ -215,13 +202,13 @@ BasisRec:=function(arg)
   #
   trec.subcandidatess:=subcandidatess;
   trec.fingerprints:=fingerprints;
-  #Printn(fingerprints);
+  Printn(fingerprints);
   #
   return(trec);
 end;
 
 
-OGLatFromBasisRec:=function(arg) # arg is (basisrec) or (basisrec, giveupsec)
+NewOGLat:=function(arg) # arg is (basisrec) or (basisrec, giveupsec)
   #
  local beep, basisrec, giveupflag, giveupruntime, gvstopflag, st,
   GramL, nn, basis, newGram, candidatess, candidatessdual,
@@ -236,7 +223,7 @@ OGLatFromBasisRec:=function(arg) # arg is (basisrec) or (basisrec, giveupsec)
   lengcan, lengcan1, tlist, flist, pos, stabrec, OGrec;
   #
   beep:=function(beepnumb)
-    localbeep("OGLatFromBasisRec", beepnumb); Error();
+    localbeep("NewOGLat", beepnumb); Error();
   end;
   #
   if Length(arg)=1 then 
@@ -275,10 +262,6 @@ OGLatFromBasisRec:=function(arg) # arg is (basisrec) or (basisrec, giveupsec)
     tpv, tv, tintnumbs, pos, ss, ttbdual,  tvsdual, 
     tposss, tpvdual, tvdual, kk, ttbintnumbs;
     #
-    if giveupflag and Runtime()-st>giveupruntime then
-      gvstopflag:=true;
-      return();
-    fi;
     leng:=Length(psol);
     #
     if leng=0 then beep(99131); fi;
@@ -538,14 +521,12 @@ IsIsomBasisRecs:=function(basisrecA, basisrecB)
     basisrec2:=basisrecB;
     cleng:=Length(basisrecA.nrmsset);
   else 
-    if Length(basisrecB.nrmsset)<=Length(basisrecA.nrmsset) and
-       basisrecA.nrmsset{[1..Length(basisrecB.nrmsset)]}=basisrecB.nrmsset then 
+    if IsSubset(basisrecA.nrmsset, basisrecB.nrmsset) then 
       cleng:=Length(basisrecB.nrmsset);
       revflag:=true;
       basisrec1:=basisrecB;
       basisrec2:=basisrecA;
-    elif Length(basisrecA.nrmsset)<=Length(basisrecB.nrmsset) and
-         basisrecB.nrmsset{[1..Length(basisrecA.nrmsset)]}=basisrecA.nrmsset then 
+    elif IsSubset(basisrecB.nrmsset, basisrecA.nrmsset) then 
       cleng:=Length(basisrecA.nrmsset);
       revflag:=false;
       basisrec1:=basisrecA;
@@ -622,8 +603,9 @@ IsIsomBasisRecs:=function(basisrecA, basisrecB)
       return();
     fi;
     #
-    if leng=0 then
-      tsubcandidates:=candidatess2[1];
+    tcandidates:=candidatess2[leng+1];
+    if leng=0 then 
+      tsubcandidates:= tcandidates;
     else 
       tsubcandidates:=[];
       tintnumbs:=List([1..leng], kk->newGram1[leng+1][kk]);
@@ -675,13 +657,13 @@ IsIsomBasisRecs:=function(basisrecA, basisrecB)
 end;
 
 
-RepeatOGLatFromBasisRec:=function(GramL, basisrectrial, giveupsec)
+RepeatNewOGLat:=function(GramL, basisrectrial, giveupsec)
   local counter, basisrec, OGrec;
   counter:=0;
   while true do
     counter:=counter+1;
     basisrec:=BasisRec(GramL,  basisrectrial+counter);
-    OGrec:=OGLatFromBasisRec(basisrec, giveupsec+counter);
+    OGrec:=NewOGLat(basisrec, giveupsec+counter);
     if OGrec<>fail then 
       OGrec.basisrectrial:= basisrectrial+counter;
       OGrec.giveupsec:=giveupsec+counter;
@@ -691,29 +673,5 @@ RepeatOGLatFromBasisRec:=function(GramL, basisrectrial, giveupsec)
     fi;
   od;
 end;
-
-# OGLat(GramL):
-# Returns a record with .size and .totalgens.
-# The automorphism group is Group(result.totalgens).
-
-# IsIsomLats(GramA, GramB):
-# Returns false if the lattices are not isometric.
-# Otherwise returns an integral unimodular matrix T satisfying
-# TMTTmult(T, GramB) = GramA.
-
-
-
-OGLat:=function(GramL)
-  return(RepeatOGLatFromBasisRec(GramL, 3, 100));
-end;
-
-IsIsomLats:=function(GramLA, GramLB)
-  local basisrecA, basisrecB;
-  basisrecA:=BasisRec(GramLA, 10);
-  basisrecB:=BasisRec(GramLB, 10);
-  return(IsIsomBasisRecs(basisrecA, basisrecB));
-end;
-
-
 
 #####

@@ -1,4 +1,4 @@
-#Read("NewOGLat.g");
+#Read("OGLat.g");
 
 
 VssRec:=function(GramL, nrmcandidate)
@@ -29,7 +29,7 @@ VssRec:=function(GramL, nrmcandidate)
     Add(vss, vs);
     Append(tvs, vs);
     doesgenerate:=(Rank(tvs)=nn and CokerTorsion(tvs)=[]);
-    if doesgenerate and tnrm<nrmcandidate then 
+    if doesgenerate and and minreqnrm=nrmcandidate and tnrm<nrmcandidate then 
       minflag:=false; 
       minreqnrm:=tnrm;
     fi;
@@ -122,9 +122,7 @@ BasisRec:=function(GramL, trialnumb)
     od;
   fi;
   #
-  #
   thevss:=trec.vss;
-  #
   #
   basiswebrintss:=List(thebasis, tb->Webrints(tb, GramL, thevss));
   #
@@ -145,7 +143,7 @@ BasisRec:=function(GramL, trialnumb)
   candidatessleng:=List(candidatess, Length);
   perm := Sortex(candidatessleng);
   #
-  Permuted(candidatess, perm);
+  candidatess:=Permuted(candidatess, perm);
   inipos:=function(tv)
     local xx;
     for xx in tv do 
@@ -157,11 +155,11 @@ BasisRec:=function(GramL, trialnumb)
   # to make the computation in getpermcan1 easy
   trec.candidatess:=candidatess;
   #
-  Permuted(basisnrms, perm);
+  basisnrms;=Permuted(basisnrms, perm);
   trec.basisnrms:=basisnrms;
-  Permuted(thebasis, perm);
+  thebasis:=Permuted(thebasis, perm);
   trec.basis:=thebasis;
-  Permuted(basiswebrintss, perm);
+  basiswebrintss:=Permuted(basiswebrintss, perm);
   trec.basiswebrintss:=basiswebrintss;
   newGram:=TMTTmult(thebasis, GramL);
   trec.newGram:=newGram;
@@ -208,7 +206,7 @@ BasisRec:=function(GramL, trialnumb)
 end;
 
 
-NewOGLat:=function(arg) # arg is (basisrec) or (basisrec, giveupsec)
+OGLatFromBasisRec:=function(arg) # arg is (basisrec) or (basisrec, giveupsec)
   #
  local beep, basisrec, giveupflag, giveupruntime, gvstopflag, st,
   GramL, nn, basis, newGram, candidatess, candidatessdual,
@@ -223,7 +221,7 @@ NewOGLat:=function(arg) # arg is (basisrec) or (basisrec, giveupsec)
   lengcan, lengcan1, tlist, flist, pos, stabrec, OGrec;
   #
   beep:=function(beepnumb)
-    localbeep("NewOGLat", beepnumb); Error();
+    localbeep("OGLatFromBasisRec", beepnumb); Error();
   end;
   #
   if Length(arg)=1 then 
@@ -485,6 +483,9 @@ NewOGLat:=function(arg) # arg is (basisrec) or (basisrec, giveupsec)
   #
 end;
 
+
+
+
 CheckOGrecSize:=function(basisrec, OGrec)
   local vs, tg, tperm, gensperms, permsize;
   vs:=Union(basisrec.vss);
@@ -657,13 +658,13 @@ IsIsomBasisRecs:=function(basisrecA, basisrecB)
 end;
 
 
-RepeatNewOGLat:=function(GramL, basisrectrial, giveupsec)
+RepeatOGLatFromBasisRec:=function(GramL, basisrectrial, giveupsec)
   local counter, basisrec, OGrec;
   counter:=0;
   while true do
     counter:=counter+1;
-    basisrec:=BasisRec(GramL,  basisrectrial+counter);
-    OGrec:=NewOGLat(basisrec, giveupsec+counter);
+    basisrec:=BasisRec(GramL, basisrectrial+counter);
+    OGrec:=OGLatFromBasisRec(basisrec, giveupsec+counter);
     if OGrec<>fail then 
       OGrec.basisrectrial:= basisrectrial+counter;
       OGrec.giveupsec:=giveupsec+counter;
@@ -673,5 +674,18 @@ RepeatNewOGLat:=function(GramL, basisrectrial, giveupsec)
     fi;
   od;
 end;
+
+
+OGLat:=function(GramL)
+  return(RepeatOGLatFromBasisRec(GramL, 3, 100));
+end;
+
+IsIsomLats:=function(GramLA, GramLB)
+  local basisrecA, basisrecB;
+  basisrecA:=BasisRec(GramLA, 10);
+  basisrecB:=BasisRec(GramLB, 10);
+  return(IsIsomBasisRecs(basisrecA, basisrecB));
+end;
+
 
 #####
