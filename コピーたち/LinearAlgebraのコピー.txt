@@ -1,0 +1,978 @@
+RowdimMat:=function(M)
+	return Length(M);
+end;
+
+ColdimMat:=function(M)
+	return Length(M[1]);
+end;
+
+
+CopyMat:=function(M)
+	local newM, ii, jj, v;
+	newM:=[];
+	for v in M do
+		Add(newM, List(v)); #  v must have numbers (not list) as coeffients
+	od;
+	return(newM);
+end;
+
+CopyVect:=function(v)
+	return(List(v)); #  v must have numbers (not list) as coeffients
+end;
+
+#####################
+
+MakeZeroVect:=function(n)
+	local v, ii;
+	v:=[];
+	for ii in [1..n] do
+		Add(v, 0);
+	od;
+	return(v);
+end;
+
+#MakeZeroMat:=function(rowdim, coldim) # NullMat should be used
+
+
+MakeVectei:=function(dim, pos)
+	local v;
+	v:=MakeZeroVect(dim);
+	v[pos]:=1;
+	return(v);
+end;
+
+IsZeroVect:=function(v)
+	local x;
+	for x in v do
+		#if x<>0 then return(false); fi;
+		if not IsZero(x) then return(false); fi; #changed 2018/06/02
+	od;
+	return(true);
+end;
+
+IsZeroMat:=function(M)
+	local v;
+	for v in M do
+		if not IsZeroVect(v) then return(false); fi;
+	od;
+	return(true);
+end;
+
+IsSymmMat:=function(M)
+	return(M=TransposedMat(M));
+end;
+
+#####################
+
+SubMatrix:=function(A, rowrange, colrange)
+	local ii, jj, v, sA, newv;
+	sA:=[];
+	for ii in rowrange do
+		newv:=[];
+		v:=A[ii];
+		for jj in colrange do
+			Add(newv, v[jj]);
+		od;
+		Add(sA, newv);
+	od;
+	return(sA);
+end;
+
+
+ConcatVects:=function(v1, v2)
+	local v,a;
+	v:=[];
+	for a in v1 do Add(v, a); od;
+	for a in v2 do Add(v, a); od;
+	return v;
+end;
+
+ConcatVectss:=function(vectslist)
+	return Flat(vectslist);
+end;
+
+#
+# changed on 21 feb 2016.
+# The 0 times 0 matrix should be [[]].
+#
+
+
+ConcatMats:=function(M1, M2)
+	local newM, ii;
+	newM:=[];
+	for ii in [1..RowdimMat(M1)] do
+		Add(newM, ConcatVects(M1[ii], M2[ii]));
+	od;
+	if newM=[] then newM:=[[]]; fi;
+	return(newM);
+end;
+
+ConcatMatss:=function(matslist)
+	local r, newM;
+	r:=RowdimMat(matslist[1]);
+	newM:=List([1..r], ii->ConcatVectss(List(matslist, tM->tM[ii])));
+	if newM=[] then newM:=[[]]; fi;
+	return(newM);
+end;
+
+StackMats:=function(M1, M2)
+	local newM, v;
+	newM:=[];
+	for v in M1 do AddCopy(newM, v); od; # This must be CopyAdd!!
+	for v in M2 do AddCopy(newM, v); od; # This must be CopyAdd!!
+	if newM=[] then newM:=[[]]; fi;
+	return(newM);
+end;
+
+StackMatss:=function(matslist)
+	local newM,M,  v;
+	newM:=[];
+	for M in matslist do
+		for v in M do AddCopy(newM, v); od; # This must be CopyAdd!!
+	od;
+	if newM=[] then newM:=[[]]; fi;
+	return(newM);
+end;
+
+
+DiagonalMats:=function(listmats)
+	#
+	local MM, ii, Mii, MM1, MM2, iniii;
+	iniii:=-1;
+	for ii in [1..Length(listmats)] do
+		Mii:=listmats[ii];
+		if Mii=[] then Printn("wrong input in DiagonalMats"); Error(); fi;
+		if Mii<>[[]] then iniii:=ii; break; fi;
+	od;
+	if iniii=-1 then return([[]]); fi;
+	MM:=StructuralCopy(listmats[iniii]);
+	for ii in [iniii+1..Length(listmats)] do
+		Mii:=listmats[ii];
+		if Mii=[] then Printn("wrong input in DiagonalMats"); Error(); fi;
+		if Mii<>[[]] then
+			MM1:=ConcatMats(MM, NullMat(RowdimMat(MM), ColdimMat(Mii)));
+			MM2:=ConcatMats(NullMat(RowdimMat(Mii), ColdimMat(MM)), Mii);
+			MM:=StackMats(MM1, MM2);
+		fi;
+	od;
+	return(MM);
+end;
+
+#######################
+
+
+IsIntVect:=function(v)
+	local  a;
+	for a in v do
+		if not IsInt(a) then return(false); fi;
+	od;
+	return(true);
+end;
+
+IsIntMat:=function(M)
+	local v, a;
+	for v in M do
+		for a in v do
+			if not IsInt(a) then return(false); fi;
+		od;
+	od;
+	return(true);
+end;
+
+#######################
+
+
+IsPrimitiveVect:=function(v)
+	return(Lgcd(v)=1);
+end;
+
+IsPrimitiveMat:=function(M)
+	local snf, ii, r,c;
+	snf:=SmithNormalFormIntegerMat(M);
+	ii:=1;
+	r:=RowdimMat(M); c:=ColdimMat(M);
+	while ii<=r and ii<=c do
+		if snf[ii][ii]<>1 then return(false); fi;
+		ii:=ii+1;
+	od;
+	return(true);
+end;
+
+MakePrimitiveVect:=function(v)
+	local a, ii;
+	a:=Lgcd(v);
+	if a>1 then
+		v:=(1/a)*v;
+	fi;
+end;
+
+CopyPrimitiveVect:=function(v)
+	local a,  newv, ii;
+	a:=Lgcd(v);
+	if a>1 then
+		newv:=(1/a)*v;
+		return(newv);
+	elif a>=0 then
+		return(CopyVect(v));
+	else
+		Printn("wrong CopyPrimitiveVect"); Error();
+	fi;
+end;
+
+MakeIntVect:=function(v)
+	local d;
+	#d:=Llcm(Map(DenominatorRat, v));
+	d:=Llcm(List(v, DenominatorRat));
+	return([1/d, d*v]);
+end;
+
+MakePrimitiveIntVect:=function(v)
+	local d, g;
+	#d:=Llcm(Map(DenominatorRat, v));
+	d:=Llcm(List(v, DenominatorRat));
+	g:=Lgcd(d*v);
+	return([g/d, d*v/g]);
+end;
+
+#####################
+
+
+InverseMat:=function(M)
+	#
+	# the row vectors of the result are mutable
+	#
+	local Minv, Minv2, v, newv, a;
+	Minv:=Inverse(M);
+	if Minv=fail then return(fail); fi;
+	return(CopyMat(Minv));
+end;
+
+TMTTmult:=function(T,M)
+	if T=[] then return []; fi;
+	return T*M*TransposedMat(T);
+end;
+
+
+TTMTmult:=function(T,M)
+	if T=[] then return []; fi;
+	return TransposedMat(T)*M*T;
+end;
+
+############################
+
+IniPosnz:=function(v)
+	local ii;
+	for ii in [1..Length(v)] do
+		if v[ii]<>0 then return(ii); fi;
+	od;
+	Printn("input to IniPosnz should be non-zero vector");Error();
+	return(-1);
+end;
+
+IniPosnzErrorFree:=function(v)
+	local ii;
+	for ii in [1..Length(v)] do
+		if v[ii]<>0 then return(ii); fi;
+	od;
+	return(-1);
+end;
+
+IniValnz:=function(v)
+	local xx;
+	for xx in v do
+		if xx<>0 then return(xx); fi;
+	od;
+	Printn("input to IniValnz should be non-zero vector");Error();
+	return(0);
+end;
+
+IniValnzErrorFree:=function(v)
+	local xx;
+	for xx in v do
+		if xx<>0 then return(xx); fi;
+	od;
+	return(0);
+end;
+
+#####################
+
+frat2C:=function(filename, r)
+	AppendTo(filename,  NumeratorRat(r));
+	AppendTo(filename, "/");
+	AppendTo(filename, DenominatorRat(r));
+	AppendTo(filename, "\n");
+end;
+
+fratvect2C:=function(filename, v)
+	local r,c,x;
+	c:=Length(v);
+	AppendTo(filename, c, "\n");
+	for x in v do
+		frat2C(filename, x);
+	od;
+end;
+
+fratmat2C:=function(filename, M)
+	local r,c,v,x;
+	r:=Length(M);
+	if M<>[] then c:=Length(M[1]); else c:=0; fi;
+	AppendTo(filename, r, "\n");
+	AppendTo(filename, c, "\n");
+	for v in M do
+		for x in v do
+			frat2C(filename, x);
+		od;
+	od;
+end;
+
+
+###########
+
+SolutionNullspaceRatMat:=function(mat, vec)
+	local cs, d;
+	cs:=Flat(mat);
+	Append(cs, vec);
+	Apply(cs, DenominatorRat);
+	d:=Llcm(cs);
+	# SolutionNullspaceIntMat is in LinearAlgebra
+	return(SolutionNullspaceIntMat(d*mat, d*vec));
+end;
+
+RemoveZeroVectsIntMat:=function(intmat)
+	local newintmat, vv;
+	newintmat:=[];
+	for vv in intmat do
+		if not IsZeroVect(vv) then
+			Add(newintmat, vv);
+		fi;
+	od;
+	return(newintmat);
+end;
+
+
+GcdTransform:=function(as)
+	#
+	# as is a list of integers of length k.
+	# d is the gcd of as.
+	# gcdtransrec.gcd is d.
+	# gcdtransrec.eulcidv is a vector v such that v*as=d.
+	# gcdtransrec.nullbasis is a basis of the Z-module
+	# (in HermiteNormalForm) consisting of u's such that u*a=0.
+	#
+	local beep, k, d, tas, snf, gcdtransrec, ev, kk, nullbasis;
+	#
+	beep:=function(n)
+		Printn("wrong GcdTransform", n); Error();
+	end;
+	#
+	k:=Length(as);
+	d:=Gcd(as);
+	if d=0 then beep(1); fi;
+	tas:=TransposedMat([as]);
+	snf:=SmithNormalFormIntegerMatTransforms(tas);
+	if snf.normal[1][1]<>d then beep(2); fi;
+	if snf.coltrans=[[1]] then
+		ev:=snf.rowtrans[1];
+	elif snf.coltrans=[[-1]] then
+		ev:=(-1)*(snf.rowtrans[1]);
+	else
+		beep(3);
+	fi;
+	nullbasis:=HermiteNormalFormIntegerMat(List([2..k], kk->snf.rowtrans[kk]));
+	#
+	gcdtransrec:=rec();
+	gcdtransrec.gcd:=d;
+	gcdtransrec.euclidv:=ev;
+	gcdtransrec.nullbasis:=nullbasis;
+	return(gcdtransrec);
+end;
+
+
+
+FindIndependentVects:=function(vects, targetrank)
+	#
+	#
+	local fflag, partial, findbasisjob, basisiis;
+	#
+	if RankMat(vects)<targetrank then
+		Printn("wrong input in  FindIndependentVects");
+		Error();
+	fi;
+	#
+	fflag:=false;
+	partial:=MakeZeroVect(targetrank); #holder
+	#
+	findbasisjob:=function(level, partialvects, lastentry)
+		local kk, newpartialvects;
+		if level>targetrank then
+			basisiis:=List(partial);
+			fflag:=true;
+			return();
+		fi;
+		for kk in [lastentry+1..Length(vects)] do
+			newpartialvects:=CopyAdd(partialvects, vects[kk]);
+			if RankMat(newpartialvects)=level then
+				partial[level]:=kk;
+				findbasisjob(level+1, newpartialvects, kk);
+				if fflag then break; fi; # from for kk in
+			fi;
+		od;
+	end;
+	findbasisjob(1, [], 0);
+	if not fflag then
+		Printn("wrong  FindIndependentVects"); Error();
+	fi;
+	return(basisiis);
+end;
+
+
+########## mod N
+
+
+HermiteNormalFormIntMatModN:=function(intmat, N)
+	local dim, r, ii, tM, tHM, newintmat, vv, vvmodN;
+	dim:=Length(intmat[1]);
+	r:=Length(intmat);
+	tM:=StackMats(intmat, N*IdentityMat(dim));
+	tHM:=HermiteNormalFormIntegerMat(tM);
+	newintmat:=[];
+	for vv in tHM do
+		vvmodN:=vv mod N;
+		if not IsZeroVect(vvmodN) then
+			Add(newintmat, vvmodN);
+		fi;
+	od;
+	return(newintmat);
+end;
+
+
+OrthogonalModN:=function(vs, N)
+	#
+	# Z-basis (in HermiteNormalForm) of the
+	# Z-modles consisting of x such that
+	# v*x mod N=0 for all v in vs.
+	#
+	local tvs, dim, hvs, snf, ii, gens, zs, dii;
+	dim:=Length(vs[1]);
+	hvs:=HermiteNormalFormIntMatModN(vs, N);
+	if IsZeroMat(hvs) then return(IdentityMat(dim)); fi;
+	tvs:=TransposedMat(hvs);
+	snf:=SmithNormalFormIntegerMatTransforms(tvs);
+	gens:=[];
+	for ii in [1..Length(hvs)] do
+		dii:=snf.normal[ii][ii];
+		Add(gens, Lcm(dii, N)/dii*MakeVectei(dim, ii));
+	od;
+	for ii in [Length(hvs)+1..dim] do
+		Add(gens, MakeVectei(dim, ii));
+	od;
+	zs:=gens*snf.rowtrans;
+	zs:=HermiteNormalFormIntMatModN(zs, N);
+	return(zs);
+end;
+
+#######################
+
+AbSolModN:=function(A, b, N)
+	#
+	# solve the equation A*x=b over Z/NZ.
+	# [s, ms].
+	# s satisfies A*s=b mod N.
+	# ms is a set of generators of the module
+	# defined by A*x=0.
+	#
+	local sm, Ub, V, D, s, ms, ii, d, jj, sii, dim, g,
+	dprime, Nprime, Ubprime, dprimeinv;
+	#
+	if Length(A)<>Length(b) then Printn("wrong AbSolModN"); beep(1); fi;
+	dim:=ColdimMat(A);
+	sm:=SmithNormalFormIntegerMatTransforms(A mod N);
+	Ub:=((sm.rowtrans)*b) mod N;
+	D:=RemoveZeroVectsIntMat(sm.normal mod N);
+	for jj in [Length(D)+1..Length(Ub)] do
+		if Ub[jj]<>0 then return(fail); fi;
+	od;
+	s:=[];
+	ms:=[];
+	for ii in [1..Length(D)] do
+		d:=D[ii][ii];
+		g:=GcdInt(d, N);
+		if Ub[ii] mod g <>0 then return(fail); fi;
+		dprime:=d/g;
+		Nprime:=N/g;
+		Ubprime:=Ub[ii]/g;
+		if Nprime<>N then
+			Add(ms, Nprime*MakeVectei(dim, ii));
+		fi;
+		dprimeinv:=(1/dprime) mod Nprime;
+		Add(s, dprimeinv*Ubprime mod N);
+	od;
+	for ii in [Length(D)+1..dim] do
+		Add(s, 0);
+		Add(ms, MakeVectei(dim, ii));
+	od;
+	V:=sm.coltrans mod N;
+	s:=(V*s) mod N;
+	ms:=List(ms, vv->(V*vv) mod N);
+	return([s, ms]);
+end;
+
+
+
+##############################
+# Added on 15 Jan 2018
+##############################
+
+
+FindRankM:=function(listv, rank)
+	local basis, lastii, ii, vii;
+	#
+	if Rank(listv)<rank then
+		Printn("wrong input in FindRankM"); Error();
+	fi;
+	lastii:=0;
+	basis:=[];
+	while Length(basis)<rank do
+		for ii in [lastii+1..Length(listv)] do
+			vii:=listv[ii];
+			Add(basis, vii);
+			if Rank(basis)=Length(basis) then
+				lastii:=ii;
+				break; #from for ii in
+			else
+				Remove(basis);
+			fi;
+		od;
+	od;
+	if Length(basis)<>rank then
+		Printn("wrong in FindRankM"); Error();
+	fi;
+	return(basis);
+end;
+
+FindAQbasis:=function(listv)
+	local basis, n, lastii, ii, vii;
+	basis:=[];
+	n:=Length(listv[1]);
+	if Rank(listv)<>n then
+		Printn("wrong input in FindAQbasis"); Error();
+	fi;
+	lastii:=0;
+	while Length(basis)<n do
+		for ii in [lastii+1..Length(listv)] do
+			vii:=listv[ii];
+			Add(basis, vii);
+			if Rank(basis)=Length(basis) then
+				lastii:=ii;
+				break; #from for ii in
+			else
+				Remove(basis);
+			fi;
+		od;
+	od;
+	return(basis);
+end;
+
+
+
+BasisSubspBylinformsZ:=function(linformsZ)
+	local tbasis;
+	tbasis:=HermiteNormalFormIntegerMat(NullspaceIntMat(TransposedMat(linformsZ)));
+	if Length(tbasis)+Rank(linformsZ)<>Length(linformsZ[1]) then
+		Printn("wrong BasisSubspBylinformsZ"); Error();
+	fi;
+	return(tbasis);
+end;
+
+
+
+MakePrimitiveRatVect:=function(v) #v is a rat vect.
+	#
+	# same as MakePrimitiveIntVect in LinearAlgebra.
+	# rename the  minleading function name.
+	#
+	local d, g;
+	#d:=Llcm(Map(DenominatorRat, v));
+	d:=Llcm(List(v, DenominatorRat));
+	g:=Lgcd(d*v);
+	return([g/d, d*v/g]);
+end;
+
+############
+# Added on 2018 Jan 23
+
+EasyHashMatrix:=function(tM, hashdigit)
+	local FtM, hashvalue, aa;
+	FtM:=Flat(tM);
+	hashvalue:=0;
+	for aa in FtM do
+		hashvalue:=hashvalue*hashdigit+aa;
+	od;
+	return(hashvalue);
+end;
+
+#####################
+# Added on 2018 June 09
+
+MatShape:=function(M)
+	local cdims;
+	cdims:=Set(M, Length);
+	if Length(cdims)<>1 then Printn("wrong in MatShape"); Error(); fi;
+	return([Length(M), cdims[1]]);
+end;
+
+
+ChopVectToMat:=function(vect, rowdim, coldim)
+	local M, ii, v, jj;
+	if Length(vect)<>rowdim*coldim then
+		Printn("wrong in ChopVectToMat"); Error();
+	fi;
+	M:=[];
+	for ii in [1..rowdim] do
+		v:=[];
+		for jj in [1..coldim] do
+			Add(v, vect[(ii-1)*coldim+jj]);
+		od;
+		Add(M, v);
+	od;
+	return(M);
+end;
+
+
+RestrictionToSub:=function(emb, gL)
+	#
+	# gL : L \to L preserves the image of emb : M\inj L.
+	# find gM : M \to M  such that emb*gL=gM*emb.
+	#
+	local T1, T2, h1rec, h2rec, gM;
+	#
+	h1rec:=HermiteNormalFormIntegerMatTransform(emb);
+	h2rec:=HermiteNormalFormIntegerMatTransform(emb*gL);
+	if h1rec.normal<>h2rec.normal then
+		Printn("wrong RestrictionToSub", 1); Error();
+	fi;
+	T1:=h1rec.rowtrans;
+	T2:=h2rec.rowtrans;
+	gM:=InverseMat(T2)*T1;
+	if emb*gL<>gM*emb then
+		Printn("wrong RestrictionToSub", 2); Error();
+	fi;
+	return(gM);
+end;
+
+MXB:=function(M, B)
+	# the row vectors of B are linearly independent.
+	# the row vectors of M are in <B> tensor Q.
+	# M=X*B.
+	# the idea is as follows.
+	# S*B*T=[D|O] (SmithNormalForm)
+	# B*T=[Sinv*D|O]
+	# M*T=X*B*T=[X*Sinv*D|O]
+	#
+	local beep, X, n, r, smnf, S, T, D, MT, lengthM, MT1, MT2;
+	#
+	beep:=function(beepnumb)
+		Printn("wrong in MXB", beepnumb); Error();
+	end;
+	#
+	n:=Length(B[1]);
+	r:=Rank(B);
+	if r<>Length(B) then beep(45344); fi;
+	smnf:=SmithNormalFormIntegerMatTransforms(B);
+	S:=smnf.rowtrans;
+	T:=smnf.coltrans;
+	D:=SubMatrix(smnf.normal, [1..r], [1..r]);
+	MT:=M*T;
+	lengthM:=Length(M);
+	MT1:=SubMatrix(MT, [1..lengthM], [1..r]);
+	MT2:=SubMatrix(MT, [1..lengthM], [r+1..n]);
+	if not IsZeroMat(MT2) then
+		beep(5456774);
+		#return("<M> tensor Q is not in <B> tensor Q");
+	fi;
+	X:=MT1*InverseMat(D)*S;
+	if M<>X*B then
+		beep(42785238923);
+	fi;
+	return(X);
+end;
+
+
+MisXB:=function(M, B)
+	# the row vectors of B are linearly independent.
+	# the row vectors of M are in <B> tensor Q.
+	# M=X*B.
+	# the idea is as follows.
+	# S*B*T=[D|O] (SmithNormalForm)
+	# B*T=[Sinv*D|O]
+	# M*T=X*B*T=[X*Sinv*D|O]
+	#
+	local beep, X, n, r, smnf, S, T, D, MT, lengthM, MT1, MT2;
+	#
+	beep:=function(beepnumb)
+		Printn("wrong in MisXB", beepnumb); Error();
+	end;
+	#
+	n:=Length(B[1]);
+	r:=Rank(B);
+	if r<>Length(B) then beep(45344); fi;
+	smnf:=SmithNormalFormIntegerMatTransforms(B);
+	S:=smnf.rowtrans;
+	T:=smnf.coltrans;
+	D:=SubMatrix(smnf.normal, [1..r], [1..r]);
+	MT:=M*T;
+	lengthM:=Length(M);
+	MT1:=SubMatrix(MT, [1..lengthM], [1..r]);
+	MT2:=SubMatrix(MT, [1..lengthM], [r+1..n]);
+	if not IsZeroMat(MT2) then
+		beep(5456774);
+		#return("<M> tensor Q is not in <B> tensor Q");
+	fi;
+	X:=MT1*InverseMat(D)*S;
+	if M<>X*B then
+		beep(42785238923);
+	fi;
+	return(X);
+end;
+
+
+########################
+# Added 2018 09 09
+########################
+
+GetPrimitiveIntVect:=function(v)
+	local d, g;
+	#d:=Llcm(Map(DenominatorRat, v));
+	d:=Llcm(List(v, DenominatorRat));
+	g:=Lgcd(d*v);
+	if d<=0 or g<=0  then Printn("wrong in GetPrimitiveIntVect"); Error(); fi;
+	return(d*v/g);
+end;
+
+########################
+# Added 2019 03 04
+########################
+
+
+OrbDecompVectors:=function(vs, G)
+	local beep, orbs, orb, dones, tg, tv;
+	#
+	beep:=function(beepnumb)
+		localbeep("OrbDecompVectors", beepnumb);
+	end;
+	#
+	dones:=[];
+	orbs:=[];
+	for tv in vs do
+		if not tv in dones then
+			orb:=Set(G, tg->tv*tg);
+			Add(orbs, orb);
+			Append(dones, orb);
+		fi;
+	od;
+	if not IsEqualSet(dones, vs) then beep(314141); fi;
+	if not IsEqualSet(Concatenation(orbs), vs) then beep(322111); fi;
+	return(orbs);
+end;
+
+
+NormalBasisZ:=function(gens)
+	return(RemoveZeroVectsIntMat(HermiteNormalFormIntegerMat(gens)));
+end;
+
+
+modZmat:=function(mat)
+	return(List(mat, tv->List(tv, modZ)));
+end;
+
+########################
+# Added 2019 03 05
+########################
+
+
+AXisB:=function(A, B)
+	#
+	# A is of full rank.
+	# Find X such that AX=B.
+	#
+	local beep, n, hnf, SBupsub, Dbarinv, tg, SB;
+	#
+	beep:=function(beepnumb)
+		localbeep("AXisB", beepnumb);
+	end;
+	#
+	n:=Length(A[1]);
+	if Rank(A)<>n then Printn("AXisB: Rank(A) is wrong"); beep(281828); fi;
+	hnf:=HermiteNormalFormIntegerMatTransforms(A);
+	#
+	SB:=hnf.rowtrans*B;
+	SBupsub:=List([1..n], ii->SB[ii]);
+	Dbarinv:=InverseMat(List([1..n], ii->hnf.normal[ii]));
+	#
+	tg:=Dbarinv*SBupsub;
+	if A*tg<>B then Printn("AXisB: no solution"); beep(916371); fi;
+	#
+	return(tg);
+end;
+
+####### Added on 2019 08 29
+
+MatMatToMat:=function(matmat)
+  local tv;
+  return(StackMatss(List(matmat, tv->ConcatMatss(tv))));
+end;
+
+####### Added on 2021 10 16
+
+AMTBmult:=function(A, M, B)
+  return(A*M*TransposedMat(B));
+end;
+
+####### Added on 2021 11 09
+
+
+AXisBwithFail:=function(A, B)
+	#
+	# A is of full rank.
+	# Find X such that AX=B.
+	#
+	local beep, n, hnf, SBupsub, Dbarinv, tg, SB;
+	#
+	beep:=function(beepnumb)
+		localbeep("AXisB", beepnumb);
+	end;
+	#
+	n:=Length(A[1]);
+	if Rank(A)<>n then Printn("AXisB: Rank(A) is wrong"); beep(281828); fi;
+	hnf:=HermiteNormalFormIntegerMatTransforms(A);
+	#
+	SB:=hnf.rowtrans*B;
+	SBupsub:=List([1..n], ii->SB[ii]);
+	Dbarinv:=InverseMat(List([1..n], ii->hnf.normal[ii]));
+	#
+	tg:=Dbarinv*SBupsub;
+	if A*tg<>B then return(fail); fi;
+	#
+	return(tg);
+end;
+
+####### Added on 2022/04/09
+
+RzvHnf:=function(M)
+  local hnf, nznops, newhnf, ii, beep;
+  #
+  beep:=function(beepnumb)
+    localbeep("RzvHnf", beepnumb);Error();
+  end;
+  #
+  if IsZeroMat(M) then
+    Printn("RzvHnf: input is a zero matrix"); beep(896262987);
+  fi;
+  hnf:=HermiteNormalFormIntegerMatTransform(M);
+  nznops:=Length(M)-OccurNumb(List(hnf.normal, IsZeroVect), true);
+  newhnf:=rec(
+    normal:=List([1..nznops], ii->hnf.normal[ii]),
+    rowtrans:=List([1..nznops], ii->hnf.rowtrans[ii])
+  );
+  return(newhnf);
+end;
+
+
+NullDecompAoplusB:=function(gensA, gensB)
+  #
+  local Id, tn, beep, nullA, nullB, decomprec;
+  #
+  beep:=function(beepnumb)
+    localbeep("NullDecompAoplusB", beepnumb);Error();
+  end;
+  #
+  nullA:=(gensA=[] or Rank(gensA)=0);
+  nullB:=(gensB=[] or Rank(gensB)=0);
+  if nullA and nullB then
+    Printn("wrong input", gensA, gensB);beep(1331);
+  fi;
+  if nullA then
+    tn:=Rank(gensB);
+    Id:=IdentityMat(tn);
+    decomprec:=rec(
+      embA:=[],
+      embB:=Id,
+      projA:=[],
+      projB:=Id
+    );
+    return(decomprec);
+  elif nullB then
+    tn:=Rank(gensA);
+    Id:=IdentityMat(tn);
+    decomprec:=rec(
+      embA:=Id,
+      embB:=[],
+      projA:=Id,
+      projB:=[]
+    );
+    return(decomprec);
+  else
+    beep(63938);
+  fi;
+end;
+
+DecompAoplusB:=function(gensA, gensB)
+  local beep, decomprec, embA, embB, projA, projB,
+  totalrank, rankA, rankB, embs, embsinv;
+  #
+  beep:=function(beepnumb)
+    localbeep("DecompAoplusB", beepnumb);Error();
+  end;
+  #
+  if gensA=[] or gensB=[] or Rank(gensA)=0 or Rank(gensB)=0 then
+    return(NullDecompAoplusB(gensA, gensB));
+  fi;
+  rankA:=Rank(gensA);
+  rankB:=Rank(gensB);
+  totalrank:=Rank(Concatenation(gensA, gensB));
+  if rankA+rankB<>totalrank then
+    beep(6296982);
+  fi;
+  #
+  embA:=RzvHnf(gensA).normal;
+  embB:=RzvHnf(gensB).normal;
+  embs:=StackMats(gensA, gensB);
+  embsinv:=InverseMat(embs);
+  projA:=SubMatrix(embsinv, [1..totalrank], [1..rankA]);
+  projB:=SubMatrix(embsinv, [1..totalrank], [rankA+1..totalrank]);
+  #
+  decomprec:=rec(
+    embA:=embA,
+    embB:=embB,
+    projA:=projA,
+    projB:=projB
+  );
+  return(decomprec);
+end;
+
+MakePrimitiveIntMat:=function(M)
+  local beep, v,dd,nn,aa,ss,primM, intmatrec, ssv;
+  #
+  beep:=function(beepnumb)
+    localbeep("MakePrimitiveIntMat", beepnumb); Error();
+  end;
+  #
+  v:=Flat(M);
+  dd:=Llcm(List(v, DenominatorRat));
+  nn:=Lgcd(List(dd*v, NumeratorRat));
+  ss:=dd/nn;
+  ssv:=ss*v;
+  if not IsIntVect(ssv) then beep(29234); fi;
+  if Lgcd(ssv)<>1 then beep(19234); fi;
+  if ss<0 then beep(69283); fi;
+  primM:=ss*M;
+  intmatrec:=rec(
+    ssM:=primM,
+    ss:=ss
+  );
+  return(intmatrec);
+end;
+
+
+
+#end

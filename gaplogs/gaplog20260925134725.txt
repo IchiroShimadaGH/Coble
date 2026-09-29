@@ -2881,3 +2881,19 @@ ___in NonSingOverLats__ 1 in 20549 : 152
 ___in NonSingOverLats__ 2 in 20549 : 303 
 ___in NonSingOverLats__ 3 in 20549 : 454 
 ___in NonSingOverLats__ 4 in 20549 : 605 
+Error, user interrupt in
+  tnum := TNUM_OBJ( C ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:1639 called from 
+ForAny( mat, function ( r )
+      return not IsPlistRep( r );
+  end ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3619 called from
+stw * ddinv at NonSingOverLats.g:104 called from
+thetask( neworec, newposs ); at NonSingOverLats.g:153 called from
+thetask( neworec, newposs ); at NonSingOverLats.g:153 called from
+thetask( neworec, newposs ); at NonSingOverLats.g:153 called from
+...  at Task20260925Ua.g:62
+you can 'return;'
+brk> quit;
+gap> 
+gap> 
+gap> 
+gap> quit;

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.20)  28 SEP 2026 14:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.20)  29 SEP 2026 14:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -656,13 +656,14 @@ Package hyperref Info: Link coloring ON on input line 55.
 \@outlinefile=\write4
 \openout4 = `minnote.out'.
 
-LaTeX Font Info:    Trying to load font information for U+euf on input line 95.
-
+LaTeX Font Info:    Trying to load font information for U+euf on input line 100
+.
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) [1{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
- (./minnote.aux)
+ [3]
+(./minnote.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -671,13 +672,13 @@ Package rerunfilecheck Info: File `minnote.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 21220 strings out of 467525
- 384558 string characters out of 5418982
+ 21221 strings out of 467525
+ 384564 string characters out of 5418982
  781647 words of memory out of 5000000
  49621 multiletter control sequences out of 15000+600000
  639001 words of font info for 82 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 102i,7n,107p,596b,475s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,7n,107p,893b,467s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
 ></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
@@ -695,10 +696,10 @@ e/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive
 026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/202
 6/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2
 026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on minnote.pdf (2 pages, 175238 bytes).
+Output written on minnote.pdf (3 pages, 179260 bytes).
 PDF statistics:
- 109 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
- 5 named destinations out of 1000 (max. 500000)
+ 113 PDF objects out of 1000 (max. 8388607)
+ 73 compressed objects within 1 object stream
+ 6 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

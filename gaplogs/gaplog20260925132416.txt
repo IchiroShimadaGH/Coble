@@ -131739,3 +131739,16 @@ ___in NonSingOverLats__ 152 in 3094 : 1096350
 ___in NonSingOverLats__ 153 in 3094 : 1105523 
 ___in NonSingOverLats__ 154 in 3094 : 1114696 
 ___in NonSingOverLats__ 155 in 3094 : 1123869 
+Error, user interrupt in
+  return not IsPlistRep( r ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3619 called from 
+func( elm ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:1643 called from
+ForAny( mat, function ( r )
+      return not IsPlistRep( r );
+  end ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3619 called from
+stw * ddinv at NonSingOverLats.g:104 called from
+thetask( neworec, newposs ); at NonSingOverLats.g:153 called from
+thetask( neworec, newposs ); at NonSingOverLats.g:153 called from
+...  at Task20260925Ua.g:62
+you can 'return;'
+brk> quit;
+gap> quit;

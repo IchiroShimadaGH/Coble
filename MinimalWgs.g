@@ -4,6 +4,7 @@
 
 Read("SplitConsTools.g");
 
+
 MakeEkk:=function(kk)
   local Ekk, ii, jj;
   Ekk:=[];
@@ -191,7 +192,11 @@ end;
 
 MakeK3Rec:=function(kk, wg)
   local wwg, xx, tadj, ttadj, pos, iijj,   tGrec, tGram, th, 
-  tsign, trec, tsing, flag, aa, tells;
+  tsign, trec, tsing, flag, aa, tells, beep, givenspcons, rho, thdual;
+  #
+  beep:=function(beepnumb)
+    localbeep("MakeK3Rec", beepnumb); Error();
+  end;
   #
   if Length(wg)<>kk*(kk-1)/2 then buzz(471471); fi;
   #
@@ -226,13 +231,19 @@ MakeK3Rec:=function(kk, wg)
     fi;
   fi; 
   #
+  rho:=Length(tGram);
+  givenspcons:=List([1..kk], ii->MakeVectei(kk+1, ii+1)*tGrec.phi);
+  thdual:=th*tGram;
+  if Set(givenspcons*thdual)<>[2] then beep(5717461); fi;
+  if TMTTmult(givenspcons, tGram)<>tadj then beep(817761); fi;
+  #
   trec:=rec(
     kk:=kk, 
     wg:=wg,
     adj:=tadj,
-    Ladj:=ttadj,
     phi:=tGrec.phi,
     Gram:=tGram,
+    givenspcons:=givenspcons, 
     h:=th, 
     sign:=tsign,
     sing:=tsing, 
@@ -282,7 +293,126 @@ end;
 
 
 
-Enhanced2MakeMinimalAbsWgs:=function(oldminwgs, newkk)
+###############
+
+##### positive majorant
+
+GetGramP:=function(GramS, h)
+  local hdual, GramP;
+  hdual:=h*GramS;
+  GramP:=TransposedMat([hdual])*[hdual]-GramS;
+  if h*GramP*h<>2 then beep(998912); fi;
+  return(GramP);
+end;
+
+GetIniData:=function(tK3rec, GramP, basisrec)
+  #
+  local GramS, h, n,  ogrec, gs, hs, pos, th, tgen, thtgen, inirec;
+  #
+  GramS:=tK3rec.Gram;
+  h:=tK3rec.h;
+  n:=Length(h);
+  ogrec:=OGLatFromBasisRec(basisrec);
+  gs:=[IdentityMat(n)];
+  hs:=[h];
+  pos:=0;
+  for th in hs do
+    pos:=pos+1;
+    for tgen in ogrec.totalgens do 
+      thtgen:=th*tgen;
+      if not thtgen in hs then 
+        Add(hs, thtgen);
+        Add(gs, gs[pos]*tgen);
+      fi;
+    od;
+  od;
+  #
+  if hs<>[h, -h] then beep(44671746); fi; #Thanks to Codex
+  #
+  inirec:=rec(
+    rank:=Length(h),
+    GramS:=GramS,
+    GramP:=GramP,
+    basisrec:=basisrec, 
+    ogrec:=ogrec,
+    h:=h,
+    horbit:=hs,
+    transporters:=gs,
+    wgs:=[tK3rec.wg],
+    spconss:=[tK3rec.givenspcons]
+  );
+  return(inirec);
+end;
+
+IsIsomShs:=function(Sh1rec, Sh2, GramP2, basisrec2)
+  #
+  local beep, GramS2, h2, T, Tinv, h2Tinv,
+  pos, tg;
+  #
+  beep:=function(beepnumb)
+    localbeep("IsIsomShs", beepnumb); Error();
+  end;
+  #
+  GramS2:=Sh2[1];
+  if Sh1rec.rank<>Length(GramS2) then return(false); fi;
+  h2:=Sh2[2];
+  T:=IsIsomBasisRecs(Sh1rec.basisrec, basisrec2);
+  if T=false then return(false); fi;
+  Tinv:=InverseMat(T);
+  h2Tinv:=h2*Tinv;
+  if not h2Tinv in Sh1rec.horbit then 
+    return(false);
+  fi; 
+  pos:=SinglePosition(Sh1rec.horbit, h2Tinv);
+  tg:=Sh1rec.transporters[pos]*T;
+  if TMTTmult(tg, GramS2)<> Sh1rec.GramS then beep(578517865); fi;
+  if Sh1rec.h*tg<>h2 then beep(8121123); fi;
+  return(tg);
+end;
+
+
+FoundShRecs:=[];
+
+IsNewSh:=function(tK3rec)
+  #
+  local beep, isnewflag, nowSh, oldrec, tg, tginv, newspcons, GramP2, basisrec2;
+  #
+  beep:=function(beepnumb)
+    localbeep("IsNewSh", beepnumb); Error();
+  end;
+  #
+  isnewflag:=true;
+  nowSh:=[tK3rec.Gram, tK3rec.h];
+  GramP2:=GetGramP(tK3rec.Gram, tK3rec.h);
+  basisrec2:=BasisRec(GramP2); 
+  for oldrec in FoundShRecs do 
+    tg:=IsIsomShs(oldrec, nowSh, GramP2, basisrec2);
+    if tg<>false then 
+      isnewflag:=false;
+      #
+      tginv:=InverseMat(tg);
+      newspcons:=(tK3rec.givenspcons)*tginv;
+      if TMTTmult(newspcons, oldrec.GramS)<>tK3rec.adj then beep(5817718); fi;
+      Add(oldrec.spconss, newspcons);
+      Add(oldrec.wgs, tK3rec.wg);
+      #
+      return();
+    fi;
+  od;
+  #
+  if isnewflag then 
+    Add(FoundShRecs, GetIniData(tK3rec, GramP2, basisrec2));
+  fi;
+  #
+  return();
+  #
+end;
+
+######
+
+FoundShRecs:=[];
+
+EnhancedMinimalWgs:=function(oldminwgs, newkk)
   local oldkk,  EkkRec, newminwgrecs, oldminwg, iter, ii,
   twg, tav, minflag, tg, tgtwg, counter, stab, total,
   orbsize, Gksize, stabgens, partss, iterpartss, swg, sswg,
@@ -322,23 +452,37 @@ Enhanced2MakeMinimalAbsWgs:=function(oldminwgs, newkk)
         iterpartss:=IteratorOfCartesianProduct(partss);
         for sswg in iterpartss do 
           swg:=Flat(sswg);
-          K3rec:=MakeK3Rec(newkk, swg);
+          K3rec:=MakeK3Rec(newkk, swg);# MakeK3Rec is defined above.
           if K3rec.flag then 
             if IsGkMinimal(newkk, swg, stab) then 
+              IsNewSh(K3rec);
               Add(K3recs, K3rec);
             fi;
           fi;
         od;
         #
         totalK3recsnops:=totalK3recsnops+ Length(K3recs);
-        Printn(newkk, "___K3recs", Length(K3recs), totalK3recsnops, ":",
-        counter, "in", nopsoldminwgs);
-        Add(newminwgrecs, rec(wg:=twg, stabgens:=stabgens, K3recs:=K3recs));
+        if newkk<8 then
+          Printn(newkk, "___K3recs", Length(K3recs), totalK3recsnops, ":",
+          counter, "in", nopsoldminwgs, "FoundShRecs", Length(FoundShRecs));
+          Add(newminwgrecs, rec(wg:=twg, stabgens:=stabgens));
+          # For newkk=8, the size of newminwgrecs would be too large.
+        elif newkk<>8 then
+          beep(999999999999);
+        fi;
       fi;
-    od;
-  od;
+    od; #for tav in iter do
+    #
+    if newkk=8 then #monitor only for newkk=8
+      if counter mod 10000=0 then 
+        Printn(newkk,  counter, "in", nopsoldminwgs, "FoundShRecs", Length(FoundShRecs));
+      fi;
+    fi;
+    #
+  od;#for oldminwg in oldminwgs do 
+  #
   Printn("____finish", counter, "in", Length(oldminwgs), ":", 
-  Length(newminwgrecs), totalK3recsnops);
+  Length(newminwgrecs), totalK3recsnops, "FoundShRecs", Length(FoundShRecs));
   if total<>(Length(absW))^EkkRec.leng then beep(919191); fi;
   return(newminwgrecs);
  end;

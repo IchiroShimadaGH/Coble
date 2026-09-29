@@ -370,4 +370,14 @@ Syntax warning: Unbound global variable in NonSingOverLats.g:131
 Syntax warning: Unbound global variable in NonSingOverLats.g:136
           thetask(neworec, newposs);
                            ^^^^^^^
+gap> git reset --soft origin/main
+Error, Variable: 'git' must have a value
+not in any function at *stdin*:13
+Syntax error: ; expected
+git reset --soft origin/main
+    ^^^^^
+> quit;
 gap> 
+gap> 
+gap> 
+gap> quit;

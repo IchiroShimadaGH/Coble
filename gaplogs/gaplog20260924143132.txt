@@ -9,4 +9,4 @@ Error, Sage computation failed (this is NOT a zero class number). Output:  Input
 you can 'quit;' to quit to outer loop, or
 you can 'return;' to continue
 brk> quit;
-gap> 
+gap> quit;

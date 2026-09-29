@@ -1,0 +1,53 @@
+sessionnumb  20260929100717 
+gap> Read("IsNewSh.g");
+Syntax warning: Unbound global variable in IsNewSh.g:21
+  basisrec:=BasisRec(GramP); 
+  ^^^^^^^^
+Syntax warning: Unbound global variable in IsNewSh.g:22
+  ogrec:=OGLatFromBasisRec(basisrec);
+                           ^^^^^^^^
+Syntax warning: Unbound global variable in IsNewSh.g:40
+    basisrec:=basisrec, 
+              ^^^^^^^^
+Syntax error: ) expected in IsNewSh.g:46
+    spconss:=[tK3rec.givenspcons]
+    ^^^^^^^
+gap> Read("IsNewSh.g");
+Syntax warning: Unbound global variable in IsNewSh.g:65
+  T:=IsIsomBasisRecs(Sh1rec, basisrec2);
+  ^
+Syntax warning: Unbound global variable in IsNewSh.g:66
+  if T=false then return(false); fi;
+     ^
+Syntax warning: Unbound global variable in IsNewSh.g:67
+  Tinv:=InverseMat(T);
+                   ^
+Syntax warning: Unbound global variable in IsNewSh.g:73
+  tg:=Sh1rec.transporters[pos]*T;
+                               ^
+Syntax warning: Unbound global variable in IsNewSh.g:74
+  if TMTTmult(tg, GramS2)<> h1rec.GramS then beep(578517865); fi;
+                            ^^^^^
+Syntax warning: Unbound global variable in IsNewSh.g:75
+  if h1rec.h*tg<>h2 then beep(8121123); fi;
+     ^^^^^
+Syntax error: while parsing an 'if' statement: statement or 'fi' expected in IsNewSh.g:77
+end;
+^^^
+gap> Read("IsNewSh.g");
+Syntax warning: Unbound global variable in IsNewSh.g:75
+  if h1rec.h*tg<>h2 then beep(8121123); fi;
+     ^^^^^
+Syntax warning: Unbound global variable in IsNewSh.g:103
+      rerurn();
+      ^^^^^^
+Syntax warning: Unbound global variable in IsNewSh.g:108
+    Add(FoundShRec, GetIniData(tK3rec));
+        ^^^^^^^^^^
+gap> Read("IsNewSh.g");
+gap> Read("MinimalWgs.g");
+Syntax warning: Unbound global variable in MinimalWgs.g:235
+  givenspcons:=List([1..kk], ii->MakeVect(rho, ii+1)*tGrec.phi);
+                                 ^^^^^^^^
+gap> Read("MinimalWgs.g");
+gap> 

@@ -1948,4 +1948,8 @@ Enhanced2MakeMinimalAbsWgs( oldminabswgs, newkk ) at Task20260927Uc.g:14 called 
 <function "unknown">( <arguments> )
  called from read-eval loop at Task20260927Uc.g:18
 type 'quit;' to quit to outer loop
-brk> 
+brk> quit;
+gap> 
+gap> 
+gap> 
+gap> restart();

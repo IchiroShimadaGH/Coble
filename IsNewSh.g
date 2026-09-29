@@ -1,6 +1,6 @@
-Read("IsNewSh.g");
+#Read("IsNewSh.g");
 
-#positive majorant
+##### positive majorant
 
 GetGramP:=function(GramS, h)
   local hdual, GramP;
@@ -10,10 +10,12 @@ GetGramP:=function(GramS, h)
   return(GramP);
 end;
 
-GetIniData:=function(GramS, h)
+GetIniData:=function(tK3rec)
   #
-  local n, GramP, ogrec, gs, hs, pos, th, tgen, thtgen, inirec;
+  local GramS, h, n, GramP, ogrec, gs, hs, pos, th, tgen, thtgen, inirec, basisrec;
   #
+  GramS:=tK3rec.Gram;
+  h:=tK3rec.h;
   n:=Length(h);
   GramP:=GetGramP(GramS);
   basisrec:=BasisRec(GramP); 
@@ -39,17 +41,75 @@ GetIniData:=function(GramS, h)
     ogrec:=ogrec,
     h:=h,
     horbit:=hs,
-    transporters:=gs
+    transporters:=gs,
+    wgs:=[tK3rec.wg],
+    spconss:=[tK3rec.givenspcons]
   );
   return(inirec);
 end;
 
-IsIsomSh:=function(Sh1rec, Sh2pair)
-  GramS2:=Sh2pair[1];
-  if Sh1rec.rank<>Length( GramS2) then return(false); fi;
-  h2:=Sh2pair[2];
+IsIsomShs:=function(Sh1rec, Sh2)
+  #
+  local beep, GramS2, h2, GramP2, basisrec2, T, Tinv, h2Tinv,
+  pos, tg;
+  #
+  beep:=function(beepnumb)
+    localbeep("IsIsomShs", beepnumb); Error();
+  end;
+  #
+  GramS2:=Sh2[1];
+  if Sh1rec.rank<>Length(GramS2) then return(false); fi;
+  h2:=Sh2[2];
   GramP2:=GetGramP(GramS2, h2);
   basisrec2:=BasisRec(GramP2); 
+  T:=IsIsomBasisRecs(Sh1rec, basisrec2);
+  if T=false then return(false); fi;
+  Tinv:=InverseMat(T);
+  h2Tinv:=h2*Tinv;
+  if not h2Tinv in Sh1rec.horbit then 
+    return(false);
+  fi; 
+  pos:=SinglePosition(Sh1rec.horbit, h2Tinv);
+  tg:=Sh1rec.transporters[pos]*T;
+  if TMTTmult(tg, GramS2)<> Sh1rec.GramS then beep(578517865); fi;
+  if Sh1rec.h*tg<>h2 then beep(8121123); fi;
+  return(tg);
+end;
+
+
+FoundShRecs:=[];
+
+IsNewSh:=function(tK3rec)
+  #
+  local beep, isnewflag, nowSh, oldrec, tg, tginv, newspcons;
+  #
+  beep:=function(beepnumb)
+    localbeep("IsNewSh", beepnumb); Error();
+  end;
+  #
+  isnewflag:=true;
+  nowSh:=[tK3rec.Gram, tK3rec.h];
+  for oldrec in FoundShRecs do 
+    tg:=IsIsomShs(oldrec, nowSh);
+    if tg<>false then 
+      isnewflag:=false;
+      #
+      tginv:=InverseMat(tg);
+      newspcons:=(tK3rec.givenspcons)*tginv;
+      if TMTTmult(newspcons, oldrec.Gram)<>tK3rec.tadj then beep(5817718); fi;
+      Add(oldrec.spconss, newspcons);
+      Add(oldrec.wgs, tK3rec.wg);
+      #
+      return();
+    fi;
+  od;
+  #
+  if isnewflag then 
+    Add(FoundShRecs, GetIniData(tK3rec));
+  fi;
+  #
+  return();
+  #
 end;
 
 ######
