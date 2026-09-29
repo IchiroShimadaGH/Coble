@@ -295,74 +295,67 @@ end;
 
 ###############
 
-MakeGramN:=function(GramS, h)
-  local beep, trec, T;
-  #
-  beep:=function(beepnumb)
-    localbeep("MakeGramN", beepnumb); Error();
-  end;
-  #
-  trec:=OrthogonalCompRec(GramS, h);
-  T:=StackMats([h], trec.basis);
-  if AbsInt(DeterminantIntMat(T))<>1 then beep(851871); fi;
-  trec.T:=T;
-  return(trec);
-end;
-
-
 HperpRec:=function(GramS, h)
-  local beep, orthorec, T, Tinv, GramN, Nbasisrec, 
-  Nogrec, OGShgens, tg, ttg, trec;
-  #
-  beep:=function(beepnumb)
-    localbeep("HperpRec", beepnumb); Error();
-  end;
-  #
-  orthorec:=MakeGramN(GramS, h);
-  T:=orthorec.T;
-  Tinv:=InverseMat(T);
-  if not IsIntMat(Tinv) then beep(878778); fi;
-  GramN:=orthorec.Gram;
-  Nbasisrec:=BasisRec(-GramN);
-  Nogrec:=OGLatFromBasisRec(Nbasisrec);
-  OGShgens:=[];
-  for tg in Nogrec.totalgens do 
-    ttg:=Tinv*DiagonalMats([ [[1]], tg ])*T;
-    if h*ttg<>h then beep(888111); fi;
-    if TMTTmult(ttg, GramS)<>GramS then beep(558112); fi;
-    Add(OGShgens, ttg);
-  od;
-  trec:=rec(
-    GramS:=GramS,
-    h:=h,
-    GramN:=GramN,
-    T:=T,
-    Tinv:=Tinv,
-    Nbasisrec:=Nbasisrec,
-    AutShsize:=Nogrec.size, 
-    AutShgens:=OGShgens
-  );
+  local hdual, GramP;
+  orthorec:=OrthogonalCompRec(GramS, h);
+  T:=StackMats([h], orthorec.basis);
+  Tinv:=InverseMat()
   return(trec);
 end;
 
+##### positive majorant
 
-GetIniData:=function(tK3rec)
+GetGramP:=function(GramS, h)
+  local hdual, GramP;
+  hdual:=h*GramS;
+  GramP:=TransposedMat([hdual])*[hdual]-GramS;
+  if h*GramP*h<>2 then beep(998912); fi;
+  return(GramP);
+end;
+
+GetIniData:=function(tK3rec, GramP, basisrec)
   #
-  local GramS, h, n,  inirec;
+  local GramS, h, n,  ogrec, gs, hs, pos, th, tgen, thtgen, inirec;
   #
   GramS:=tK3rec.Gram;
   h:=tK3rec.h;
   n:=Length(h);
-  inirec:=HperpRec(GramS, h);
-  inirec.wgs:=[tK3rec.wg];
-  inirec.spconss:=[tK3rec.givenspcons];
+  ogrec:=OGLatFromBasisRec(basisrec);
+  gs:=[IdentityMat(n)];
+  hs:=[h];
+  pos:=0;
+  for th in hs do
+    pos:=pos+1;
+    for tgen in ogrec.totalgens do 
+      thtgen:=th*tgen;
+      if not thtgen in hs then 
+        Add(hs, thtgen);
+        Add(gs, gs[pos]*tgen);
+      fi;
+    od;
+  od;
   #
+  if hs<>[h, -h] then beep(44671746); fi; #Thanks to Codex
+  #
+  inirec:=rec(
+    rank:=Length(h),
+    GramS:=GramS,
+    GramP:=GramP,
+    basisrec:=basisrec, 
+    ogrec:=ogrec,
+    h:=h,
+    horbit:=hs,
+    transporters:=gs,
+    wgs:=[tK3rec.wg],
+    spconss:=[tK3rec.givenspcons]
+  );
   return(inirec);
 end;
 
-IsIsomShs:=function(Sh1rec, Sh2, GramN2, Nbasisrec2, T2)
+IsIsomShs:=function(Sh1rec, Sh2, GramP2, basisrec2)
   #
-  local beep, GramS2, h2, A, AA, tg;
+  local beep, GramS2, h2, T, Tinv, h2Tinv,
+  pos, tg;
   #
   beep:=function(beepnumb)
     localbeep("IsIsomShs", beepnumb); Error();
@@ -371,10 +364,15 @@ IsIsomShs:=function(Sh1rec, Sh2, GramN2, Nbasisrec2, T2)
   GramS2:=Sh2[1];
   if Sh1rec.rank<>Length(GramS2) then return(false); fi;
   h2:=Sh2[2];
-  A:=IsIsomBasisRecs(Sh1rec.Nbasisrec, Nbasisrec2);
-  if A=false then return(false); fi;
-  AA:=DiagonalMats( [ [[1]], A ]);
-  tg:=Sh1rec.Tinv*AA*T2;
+  T:=IsIsomBasisRecs(Sh1rec.basisrec, basisrec2);
+  if T=false then return(false); fi;
+  Tinv:=InverseMat(T);
+  h2Tinv:=h2*Tinv;
+  if not h2Tinv in Sh1rec.horbit then 
+    return(false);
+  fi; 
+  pos:=SinglePosition(Sh1rec.horbit, h2Tinv);
+  tg:=Sh1rec.transporters[pos]*T;
   if TMTTmult(tg, GramS2)<> Sh1rec.GramS then beep(578517865); fi;
   if Sh1rec.h*tg<>h2 then beep(8121123); fi;
   return(tg);
@@ -385,8 +383,7 @@ FoundShRecs:=[];
 
 IsNewSh:=function(tK3rec)
   #
-  local beep, isnewflag, nowSh, oldrec, tg, 
-  tginv, newspcons, GramN2, Nbasisrec2, T2, trec2;
+  local beep, isnewflag, nowSh, oldrec, tg, tginv, newspcons, GramP2, basisrec2;
   #
   beep:=function(beepnumb)
     localbeep("IsNewSh", beepnumb); Error();
@@ -394,12 +391,10 @@ IsNewSh:=function(tK3rec)
   #
   isnewflag:=true;
   nowSh:=[tK3rec.Gram, tK3rec.h];
-  trec2:=MakeGramN(tK3rec.Gram, tK3rec.h);
-  GramN2:=trec2.Gram;
-  Nbasisrec2:=BasisRec(GramN2); 
-  T2:=trec2.T;
+  GramP2:=GetGramP(tK3rec.Gram, tK3rec.h);
+  basisrec2:=BasisRec(GramP2); 
   for oldrec in FoundShRecs do 
-    tg:=IsIsomShs(oldrec, nowSh, GramN2, Nbasisrec2, T2);
+    tg:=IsIsomShs(oldrec, nowSh, GramP2, basisrec2);
     if tg<>false then 
       isnewflag:=false;
       #
@@ -414,7 +409,7 @@ IsNewSh:=function(tK3rec)
   od;
   #
   if isnewflag then 
-    Add(FoundShRecs, GetIniData(tK3rec));
+    Add(FoundShRecs, GetIniData(tK3rec, GramP2, basisrec2));
   fi;
   #
   return();

@@ -1,2 +1,43 @@
 sessionnumb  20260929000413 
+gap> OrthogonalCompRec;
+function( Gram, B ) ... end
+gap> Read("MinimalWgs.g");
+Syntax warning: Unbound global variable in MinimalWgs.g:305
+  trec:=OrthogonalCompRec(GramS, h);
+  ^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:308
+  trec.T:=T;
+  ^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:309
+  return(trec);
+         ^^^^
+Syntax error: ; expected in MinimalWgs.g:357
+  inirec.wgs:=[tK3rec.wg],
+                         ^
+gap> Read("MinimalWgs.g");
+Syntax warning: Unbound global variable in MinimalWgs.g:305
+  trec:=OrthogonalCompRec(GramS, h);
+  ^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:306
+  T:=StackMats([h], orthorec.basis);
+                    ^^^^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:308
+  trec.T:=T;
+  ^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:309
+  return(trec);
+         ^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:376
+  AA:=DiagonalMatss( [ [[1]], A ]);
+      ^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:396
+  trec2:=MakeGramN(tK3rec.Gram, tK3rec.h);
+  ^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:397
+  GramN2:=trec2.Gram;
+          ^^^^^
+Syntax warning: Unbound global variable in MinimalWgs.g:399
+  T2:=trec2.T;
+      ^^^^^
+gap> Read("MinimalWgs.g");
 gap> 
