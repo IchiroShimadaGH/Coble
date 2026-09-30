@@ -288,6 +288,47 @@ PSubgroupsModG:=function(A, G)
   return(Bgens);
 end;
 
+################
+
+問題となっている (S, h)は常に
+Z hとその直交補空間に直和分解する
+（h^2-2で Sのどの元 xとも (x, h) mod 2=0 だから）
+という事実を使って，
+新しくでてきた(S, h)が
+これまで見つかったもののどれかと同型か，
+それとも新しいのかを判定する方法を書き直したの．
+positive majorant ではなく，
+hの直交補空間の自己同型をつかう方法ね．
+新しい方法は
+"MinimalWgs.g"
+に書いてある．
+添削して．
+
+################
+
+(S, h) の自己同型群 Aut(S, h) の生成元がわかっているから
+それを利用して S のoverlattice で h の直交補空間に
+(-2)-vectorsがないものを
+modulo  Aut(S, h)  で完全に求める関数
+NonSingOverLatsを書いたの．
+"NonSingOverLats.g"に書いてある．
+添削して．
+
+
+################
+
+修正した，確認して
+
+#################
+
+GramSであらわされる格子が
+K3格子にprimitive に埋め込めるかを判定する
+PrimitivelyEmbeddableInK3Lattice
+っていうfunction を書いたの．
+Coble/gapReads/Gerera.txt
+に書いてある．
+添削して．
+
 
 
 

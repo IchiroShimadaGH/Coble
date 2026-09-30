@@ -302,7 +302,7 @@ MakeGramN:=function(GramS, h)
     localbeep("MakeGramN", beepnumb); Error();
   end;
   #
-  trec:=OrthogonalCompRec(GramS, h);
+  trec:=OrthogonalCompRec(GramS, [h]);
   T:=StackMats([h], trec.basis);
   if AbsInt(DeterminantIntMat(T))<>1 then beep(851871); fi;
   trec.T:=T;
@@ -333,6 +333,7 @@ HperpRec:=function(GramS, h)
     Add(OGShgens, ttg);
   od;
   trec:=rec(
+    rank:=Length(h),
     GramS:=GramS,
     h:=h,
     GramN:=GramN,
@@ -396,7 +397,7 @@ IsNewSh:=function(tK3rec)
   nowSh:=[tK3rec.Gram, tK3rec.h];
   trec2:=MakeGramN(tK3rec.Gram, tK3rec.h);
   GramN2:=trec2.Gram;
-  Nbasisrec2:=BasisRec(GramN2); 
+  Nbasisrec2:=BasisRec(-GramN2); 
   T2:=trec2.T;
   for oldrec in FoundShRecs do 
     tg:=IsIsomShs(oldrec, nowSh, GramN2, Nbasisrec2, T2);
@@ -425,82 +426,9 @@ end;
 
 FoundShRecs:=[];
 
-EnhancedMinimalWgs:=function(oldminwgs, newkk)
-  local oldkk,  EkkRec, newminwgrecs, oldminwg, iter, ii,
-  twg, tav, minflag, tg, tgtwg, counter, stab, total,
-  orbsize, Gksize, stabgens, partss, iterpartss, swg, sswg,
-  K3rec,  K3recs, totalK3recsnops, nopsoldminwgs;
-  #
-  oldkk:=newkk-1;
-  EkkRec:=GetEkkRec(newkk);
-  Gksize:=Size(Group(EkkRec.Symkkgens));
-  newminwgrecs:=[];
-  counter:=0;
-  total:=0;
-  totalK3recsnops:=0;
-  nopsoldminwgs:=Length(oldminwgs);
-  for oldminwg in oldminwgs do 
-    counter:=counter+1;
-    iter:=IteratorOfCartesianProduct(List([1..newkk-1], ii->absW));
-    twg:=List(oldminwg);
-    for tav in iter do
-      twg:=CopyAppend(oldminwg, tav);
-      stab:=[];
-      minflag:=true;
-      for tg in Group(EkkRec.Symkkgens) do 
-        tgtwg:=ActionTauWg(tg, twg);
-        if tgtwg<twg then minflag:=false; break; fi;
-        if tgtwg=twg then Add(stab, tg); fi;
-      od; 
-      if minflag then 
-        stabgens:=GetGeneratingSetSmall(stab);
-        orbsize:=Gksize/Length(stab);
-        if not IsInt(orbsize) then buzz(163671); fi;
-        total:=total+orbsize;
-        #
-        partss:=SwQuasiMinimals(newkk, twg);
-       # Printn("_____", twg, "_____SwQuasiMinimals", 
-       #   Product(List(partss, Length)));
-        K3recs:=[];
-        iterpartss:=IteratorOfCartesianProduct(partss);
-        for sswg in iterpartss do 
-          swg:=Flat(sswg);
-          K3rec:=MakeK3Rec(newkk, swg);# MakeK3Rec is defined above.
-          if K3rec.flag then 
-            if IsGkMinimal(newkk, swg, stab) then 
-              IsNewSh(K3rec);
-              Add(K3recs, K3rec);
-            fi;
-          fi;
-        od;
-        #
-        totalK3recsnops:=totalK3recsnops+ Length(K3recs);
-        if newkk<8 then
-          Printn(newkk, "___K3recs", Length(K3recs), totalK3recsnops, ":",
-          counter, "in", nopsoldminwgs, "FoundShRecs", Length(FoundShRecs));
-          Add(newminwgrecs, rec(wg:=twg, stabgens:=stabgens));
-          # For newkk=8, the size of newminwgrecs would be too large.
-        elif newkk<>8 then
-          beep(999999999999);
-        fi;
-      fi;
-    od; #for tav in iter do
-    #
-    if newkk=8 then #monitor only for newkk=8
-      if counter mod 10000=0 then 
-        Printn(newkk,  counter, "in", nopsoldminwgs, "FoundShRecs", Length(FoundShRecs));
-      fi;
-    fi;
-    #
-  od;#for oldminwg in oldminwgs do 
-  #
-  Printn("____finish", counter, "in", Length(oldminwgs), ":", 
-  Length(newminwgrecs), totalK3recsnops, "FoundShRecs", Length(FoundShRecs));
-  if total<>(Length(absW))^EkkRec.leng then beep(919191); fi;
-  return(newminwgrecs);
- end;
 
-NewEnhancedMinimalWgs:=function(oldminwgs, newkk) #monitor だけが上と違う
+
+EnhancedMinimalWgs:=function(oldminwgs, newkk) 
   local oldkk,  EkkRec, newminwgrecs, oldminwg, iter, ii,
   twg, tav, minflag, tg, tgtwg, counter, stab, total,
   orbsize, Gksize, stabgens, partss, iterpartss, swg, sswg,

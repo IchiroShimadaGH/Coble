@@ -50,4 +50,13 @@ Syntax warning: Unbound global variable in MinimalWgs.g:235
   givenspcons:=List([1..kk], ii->MakeVect(rho, ii+1)*tGrec.phi);
                                  ^^^^^^^^
 gap> Read("MinimalWgs.g");
+gap> ModDiscg;
+Error, Variable: 'ModDiscg' must have a value
+not in any function at *stdin*:74
+gap> Moddiscg;
+Error, Variable: 'Moddiscg' must have a value
+not in any function at *stdin*:75
+gap> DiscgMod;
+Error, Variable: 'DiscgMod' must have a value
+not in any function at *stdin*:76
 gap> 

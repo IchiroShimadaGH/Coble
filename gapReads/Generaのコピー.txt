@@ -1,0 +1,622 @@
+#Read("Genera.txt");
+
+#Legendre( n, m )	( function )
+#Legendre returns the value of the Legendre symbol of the integer n modulo the positive integer m.
+
+_nonquadresidue:=function(p)
+	local aa;
+	for aa in [1..p-1] do
+		if Legendre(aa, p)=-1 then return(aa); fi;
+	od;
+	Printn("wrong _nonquadresidue"); Error();
+end;
+
+
+smallLLLoddp:=function(p, n, pnu, stdpfqf)
+	#
+	# the output is the list of the possibilities of sr=[p-excess, reddsisc].
+	#
+	local nq,  nu, aa, lambda;
+	#
+	if n<=0 then Printn("wrong smallLLLoddp 1"); Error(); fi;
+	nq:=_nonquadresidue(p);
+	#
+	if pnu=1 then return([ [0,1], [0, nq] ]); # the unimodular part
+	else
+		if n<>1 then Printn("wrong smallLLLoddp 2"); Error();  fi;
+		nu:=Ordp(pnu, p);
+		aa:=pnu*stdpfqf[1][1];
+		#
+		if Gcd(aa, p)<>1  then Printn("wrong smallLLLoddp 3"); Error();  fi;
+		#
+		lambda:=Legendre(aa, p);
+		if lambda=1 then return([[pnu-1, 1]]);
+		elif lambda=-1 then
+			if nu mod 2 = 0 then return([[pnu-1, nq]]);
+			else return([[pnu+3, nq]]);
+			fi;
+		fi;
+	fi;
+	Printn("wrong smallLLLoddp 4"); Error();
+	return([]);
+end;
+
+smallLLLtwo:=function(n, pnu, stdpfqf)
+	#
+	# the output is the list of the possibilities of [2-excess, reddsisc].
+	#
+	local nq, U, V,  nu, aa, aamod;
+	#
+	if n<=0 then Printn("wrong smallLLLtwo 1"); Error(); fi;
+	U:=[[0,1],[1,0]]; V:=[[2,1],[1,2]];
+	#
+	if pnu=1 then
+		if n mod 2 =1 then return([]);
+		elif n mod 4 =0 then return([ [n, 1], [n, 5] ]);
+		elif n mod 4 =2 then return([ [n, 3], [n, 7] ]);
+		else
+			Printn("wrong smallLLLtwo 2"); Error();
+		fi;
+	elif Length(stdpfqf)=1 then
+		if n<>1 then Printn("wrong smallLLLtwo 3"); Error();  fi;
+		nu:=Ordp(pnu, 2);
+		aa:=pnu*stdpfqf[1][1];
+		#
+		if Gcd(aa, 2)<>1  then Printn("wrong smallLLLtwo 31"); Error();  fi;
+		#
+		if nu mod 2 =0 then
+			return([[1-aa, aa]]);
+		elif nu mod 2 =1 and nu>=2 then
+		 	aamod:=aa mod 8;
+			if aamod in [1, 7] then  return([[1-aa, aa]]);
+			elif aamod in [3, 5] then  return([[5-aa, aa]]);
+			else Printn("wrong smallLLLtwo 4"); Error();
+			fi;
+		elif nu=1 then
+			aamod:=aa mod 4;
+			if aamod in [1] then  return([ [0,1], [0,5]] );
+			elif aamod in [3] then  return([[2,3], [2,7]]);
+			else Printn("wrong smallLLLtwo 5"); Error();
+			fi;
+		else
+			Printn("wrong smallLLLtwo 6"); Error();
+		fi;
+	elif Length(stdpfqf)=2 then
+		if n<>2 then Printn("wrong smallLLLtwo 7"); Error();  fi;
+		nu:=Ordp(pnu, 2);
+		if pnu*stdpfqf=U then
+			return([[2,7]]);
+		elif pnu*stdpfqf=V then
+			if nu mod 2 =0 then return([[2,3]]);
+			else return([[6,3]]);
+			fi;
+		else
+			Printn("wrong smallLLLtwo 8"); Error();
+		fi;
+	else
+		Printn("wrong smallLLLtwo 9"); Error();
+	fi;
+	return([]);
+end;
+
+
+
+
+LLLoddp:=function(p, n, pfag, pfqf)
+	local ii, lists, unimodn;
+	#
+	unimodn:=n-Length(pfag);
+	if unimodn<0 then return([]); fi;
+	#
+	lists:=[];
+	for ii in [1..Length(pfqf)] do
+		Add(lists, smallLLLoddp(p, 1, pfag[ii], pfqf[ii]));
+	od;
+	if unimodn>0 then
+		Add(lists, smallLLLoddp(p, unimodn, 1, [[]]));
+	fi;
+	return(Cartesian(lists));
+end;
+
+LLLtwo:=function(n, pfag, pfqf)
+	local ii, jj, lists, stdpfqf, unimodn;
+	#
+	unimodn:=n-Length(pfag);
+	if unimodn<0 then return([]); fi;
+	#
+	lists:=[];
+	ii:=1; jj:=1;
+	while ii<=Length(pfag) do
+		stdpfqf:=pfqf[jj];
+		if Length(stdpfqf)=1 then
+			Add(lists, smallLLLtwo(1, pfag[ii], stdpfqf));
+			ii:=ii+1;jj:=jj+1;
+		elif Length(stdpfqf)=2 then
+			if pfag[ii]<>pfag[ii+1] then Printn("wrong LLLtwo"); Error(); fi;
+			Add(lists, smallLLLtwo(2, pfag[ii], stdpfqf));
+			ii:=ii+2;jj:=jj+1;
+		else
+			Printn("wrong LLLtwo 2"); Error();
+		fi;
+	od;
+	if unimodn>0 then
+		Add(lists, smallLLLtwo(unimodn, 1, [[]]));
+	fi;
+	return(Cartesian(lists));
+end;
+
+LLLp:=function(p, n, pfag, pfqf)
+	if p=2 then return(LLLtwo(n, pfag, pfqf));
+	else return(LLLoddp(p, n, pfag, pfqf));
+	fi;
+end;
+
+
+_reddiscsq:=function(p, d)
+	local reddisc, lambda;
+	reddisc:=d/p^(Ordp(d, p));
+	if p=2 then
+		return(reddisc mod 8);
+	else
+		lambda:=Legendre(reddisc, p);
+		if lambda=1 then return(true);
+		elif lambda=-1 then  return(false);
+		else Printn("wrong _reddiscsq"); Error();
+		fi;
+	fi;
+end;
+
+_starop:=function(p, sigmarhos)
+	local tsigma, trho,  sigmarho;
+	#
+	tsigma:=0;
+	trho:=1;
+	#
+	for sigmarho in sigmarhos do
+		tsigma:=(tsigma+sigmarho[1]) mod 8;
+		trho:=trho*sigmarho[2];
+	od;
+	if Gcd(trho, p)<>1 then
+		Printn("wrong _starop"); Error();
+	fi;
+	return([tsigma, _reddiscsq(p, trho)]);
+end;
+
+NormalformFag:=function(fag)
+	local M, cs, newfag, c;
+	M:=DiagonalMat(fag);
+	M:=SmithNormalFormIntegerMat(M);
+	cs:=DiagonalOfMat(M);
+	newfag:=[];
+	for c in cs do
+		if c>1 then Add(newfag, c); fi;
+	od;
+	return(newfag);
+end;
+
+
+Genera:=function(sgn, fag, fqf)
+	#
+	# [fag, fqf] need not be standard.
+	# The list of genera with signatrure=[dim, splus, sminus] and
+	# disc=[fag, fqf].
+	# The outpult is the list of
+	# the list of [p, srs, star] (# sr: [sigma, rho]),
+	# srs is the list of [sigma, rho] corresponding factors of
+	# the p-part of disc form fqf
+	# (the [sigma, rho] corresponding to the unimodular part comes last).
+	# star is the *-product of these srs.
+	#
+	local n, fqfpdecomprec, splus, sminus, diffsn, dd, ps, decompdata,
+	reddiscs, psrstarss, tempgenus, ii, iithp, iithpdecompdata, srs, srstars,
+	newpdecompdatafqf, genera, genusjob;
+	#
+	splus:=sgn[2]; sminus:=sgn[3];
+	n:=splus+sminus;
+	if n<>sgn[1] then Printn("wrong input Genera"); Error();  fi;
+	#
+	if fag=[] then
+		if (splus-sminus) mod 8=0 then
+			return(["unimod"]) ;
+		else
+			return([]);
+		fi;
+	fi;
+	#
+	diffsn:=splus-sminus-n;
+	if Length(NormalformFag(fag))>n then return([]); fi;
+	#
+	dd:=(-1)^(sminus)*Product(fag);
+	fqfpdecomprec:=Normalform_fqf(fag, fqf);
+	ps:=fqfpdecomprec.ps;
+	decompdata:=fqfpdecomprec.decompdata;
+	#
+	if not 2 in ps then
+		ps:=Concatenation([2], ps);
+		newpdecompdatafqf:=rec(
+			p:=2,
+			pfag:=[],
+			pfqf:=[[]]
+		);
+		decompdata:=Concatenation([newpdecompdatafqf], decompdata);
+	fi;
+	#
+	reddiscs:=List(ps, pp->_reddiscsq(pp, dd));
+	psrstarss:=[];
+	for ii in [1..Length(ps)] do
+		iithp:=ps[ii];
+		iithpdecompdata:=decompdata[ii];
+		if iithpdecompdata.p<>iithp then Printn("wrong making psrstarss"); Error();  fi;
+		srs:=LLLp(iithp, n, iithpdecompdata.pfag, iithpdecompdata.pfqf);
+		srstars:=List(srs, xx->[xx, _starop(iithp, xx)]);
+		Add(psrstarss, [iithp, srstars]);
+	od;
+	#
+	tempgenus:=List([1..Length(ps)], ii->[]);
+	genera:=[];
+	#
+	genusjob:=function(ii, sigmasum)
+		local  srstar, newsigmasum, sr, star, iithreddisc;
+		if ii=Length(ps)+1 then
+			if (diffsn+sigmasum) mod 8 =0 then
+				Add(genera, StructuralCopy(tempgenus));
+			fi;
+		elif ii<=Length(ps) then
+			iithp:=ps[ii];
+			iithpdecompdata:=decompdata[ii];
+			iithreddisc:=reddiscs[ii];
+			if iithpdecompdata.p<>iithp then Printn("wrong genusjob"); Error();  fi;
+			if psrstarss[ii][1]<>iithp then Printn("wrong genusjob 2"); Error();  fi;
+			for srstar in psrstarss[ii][2] do
+				star:=srstar[2];
+				if star[2]=iithreddisc then
+					tempgenus[ii]:=[iithp, srstar[1], star];
+					newsigmasum:=(sigmasum+star[1]) mod 8;
+					genusjob(ii+1, newsigmasum);
+				fi;
+			od;
+		fi;
+	end;
+	#
+	genusjob(1, 0);
+	#
+	return(genera);
+	#
+end;
+
+
+#######################
+
+
+MinimalNonsquare:=function(p) # p is an odd prime
+	local a;
+	for a in [2..p-1] do
+		if Legendre(a, p)=-1 then return(a); fi;
+	od;
+	Printn("wrong MinimalNonsquare"); Error();
+	return();
+end;
+
+# The elements u*p^nu=[u, nu, p]  of Z_p setminus {0} / (Z_p^times)^2 are given by
+# when p is 2,
+# [1,0,2],[3,0,2], [5,0,2], [7,0,2], [1,1,2], [3,1,2], [5,1,2], [7,1,2];
+# when p is odd,
+# 1*1=[1,0,p], 1*p=[1,1,p], ns*1=[-1,0,p], ns*p=[-1,1,p], where ns=MinimalNonsquare(p)
+#
+
+pPartOfDisc:=function(dd, p)
+	local nu, uu;
+	nu:=Ordp(dd, p);
+	uu:=dd/p^nu;
+	if uu mod p =0 then Printn("wrong pPartOfDisc0"); Error(); fi;
+	if p=2 then
+		return([uu mod 8, nu mod 2, p]);
+	else
+		return([Legendre(uu, p), nu mod 2, p]);
+	fi;
+	Printn("wrong pPartOfDisc2"); Error();
+	return();
+end;
+
+newGenera:=function(sgn, fag, fqf)
+	#
+	# [fag, fqf] need not be standard.
+	# The list of genera with signatrure=[dim, splus, sminus] and
+	# disc=[fag, fqf].
+	#
+	# Based on Mirand-Morrison's book, Chapter VI, Theorem 5.2.
+	# The outpult is true or false.
+	#
+	local n, beep,  fqfpdecomprec, splus, sminus, sigma, dd, ps, decompdata,
+	redpdisc, ordp, Brown, pddata, p, pos,
+	pfag, pfqf, lengp, gg, kk, aa, taa, fqfpos, pfqfcomp, splitflag,
+	discordG, discLq2, mdiscLq2;
+	#
+	beep:=function(n) Printn("wrong in newGenera", n); Error(); end;
+	#
+	splus:=sgn[2]; sminus:=sgn[3];
+	n:=splus+sminus;
+	if sgn[2]<0 or sgn[3]<0 or n<1 then Printn("wrong input newGenera"); Error();  fi;
+	if n<>sgn[1] then Printn("wrong input newGenera"); Error();  fi;
+	#
+	if fag=[] then
+		if (sgn[2]-sgn[3]) mod 8 =0  then return(true);
+		else return(false);
+		fi;
+	fi;
+	#
+	if Length(NormalformFag(fag))>n then return(false); fi;
+	#
+	sigma:=(splus-sminus) mod 8;
+	#
+	if fag=[] then return( sigma=0); fi; # the case of unimodular
+	#
+	dd:=(-1)^(sminus)*Product(fag);
+	fqfpdecomprec:=Normalform_fqf(fag, fqf);
+	#
+	ps:=fqfpdecomprec.ps;
+	decompdata:=fqfpdecomprec.decompdata;
+	#
+	#
+	Brown:=0; # For the Brown invariant
+	#
+	for pddata in decompdata do
+		p:=pddata.p;
+		pfag:=pddata.pfag;
+		pfqf:=pddata.pfqf;
+		lengp:=Length(pfag);
+		ordp:=0;
+		redpdisc:=1;
+		splitflag:=false;
+		#
+		if p=2 then
+			pos:=1;
+			fqfpos:=1;
+			while pos<=lengp do
+				gg:=pfag[pos];
+				kk:=Ordp(gg, p);
+				if gg<>p^kk then beep(2); fi;
+				pfqfcomp:=pfqf[fqfpos];
+			 	if Length(pfqfcomp)=1 then # w
+			 		aa:=gg*pfqfcomp[1][1];
+			 		if not ( aa in [1,3,5,7]) then beep(5); fi;
+			 		if kk=0 then beep(6); fi;
+			 		Brown:=Brown+(aa+kk*(aa^2-1)/2);
+			 		if kk=1 then splitflag:=true; fi;
+			 		ordp:=ordp+kk;
+			 		redpdisc:=redpdisc*aa;
+			 		pos:=pos+1;
+			 		fqfpos:=fqfpos+1;
+			 	else # U or V
+			 		if pfqfcomp[1][2]<>1/2^kk or pfqfcomp[2][1]<>1/2^kk then beep(10); fi;
+			 		#
+			 		ordp:=ordp+2*kk;
+			 		if pfqfcomp[1][1]=0 then # U=[[0, 2^kk],[2^kk,0]]
+			 			if pfqfcomp[2][2]<>0 then beep(12); fi;
+			 			redpdisc:=redpdisc*(-1);
+			 			Brown:=Brown+0;
+			 		else # V=[[2^(kk+1), 2^kk],[2^kk,2^(kk+1)]]
+			 			if pfqfcomp[1][1]<>1/2^(kk-1) or pfqfcomp[2][2]<>1/2^(kk-1) then beep(20); fi;
+			 			redpdisc:=redpdisc*(3);
+			 			Brown:=Brown +4*kk;
+			 		fi;
+			 		pos:=pos+2;
+			 		fqfpos:=fqfpos+1;
+			 	fi;
+			od;
+			if fqfpos<>Length(pfqf)+1 then beep(21); fi;
+			#
+			if n=lengp and not splitflag then
+				discLq2:=[redpdisc mod 8, ordp mod 2, p];
+				mdiscLq2:=[((-1)*redpdisc) mod 8, ordp mod 2, p];
+				discordG:=pPartOfDisc(Product(fag), p);
+				if discordG<>discLq2 and discordG<>mdiscLq2 then
+					return(false);
+				fi;
+			fi;
+			#
+		else
+			pos:=1;
+			while pos<=lengp do
+				gg:=pfag[pos];
+				kk:=Ordp(gg, p);
+				if gg<>p^kk then beep(28); fi;
+				taa:=gg*pfqf[pos][1][1];
+				if not ( IsInt(taa) and taa mod 2=0) then beep(30); fi;
+				if taa mod p=0 then beep(35); fi;
+				if kk mod 2 =1 then
+					Brown:=Brown+2*Legendre(taa/2, p)-Legendre(-1, p)-1;
+				else
+					Brown:=Brown+0;
+				fi;
+				ordp:=ordp+kk;
+				redpdisc:=redpdisc*taa;
+				pos:=pos+1;
+			od;
+			#
+			if n=lengp then
+				if [Legendre(redpdisc, p), ordp mod 2, p]<>pPartOfDisc(dd, p) then
+					return(false);
+				fi;
+			fi;
+			#
+		fi;
+	od;
+	#
+	if (Brown mod 8)<>sigma then return(false); fi;
+	return(true);
+end;
+
+
+
+new2Genera:=function(sgn, fag, fqf)
+	#
+	# [fag, fqf] need not be standard.
+	# The list of genera with signatrure=[dim, splus, sminus] and
+	# disc=[fag, fqf].
+	#
+	# Based on Mirand-Morrison's book, Chapter VI, Theorem 5.2.
+	# The outpult is true or false.
+	#
+	local n, beep,  fqfpdecomprec, splus, sminus, sigma, dd, ps, decompdata,
+	redppartofdd,   Brown, pddata, p, pos,
+	pfag, pfqf, lengp, gg, kk, aa, taa, fqfpos, pfqfcomp,
+	pssblrds, pssblrds1, pssblrds2, xx,mm,lap;
+	#
+	# pssblrds: possible reduced discs
+	#
+	beep:=function(n) Printn("wrong in new2Genera", n); Error(); end;
+	#
+	splus:=sgn[2]; sminus:=sgn[3];
+	n:=splus+sminus;
+	if sgn[2]<0 or sgn[3]<0 or n<1 then Printn("wrong input new2Genera"); Error();  fi;
+	if n<>sgn[1] then Printn("wrong input new2Genera"); Error();  fi;
+	#
+	if fag=[] then
+		if (sgn[2]-sgn[3]) mod 8 =0  then return(true);
+		else return(false);
+		fi;
+	fi;
+	#
+	if Length(NormalformFag(fag))>n then return(false); fi;
+	#
+	sigma:=(splus-sminus) mod 8;
+	#
+	if fag=[] then return( sigma=0); fi; # the case of unimodular
+	#
+	dd:=(-1)^(sminus)*Product(fag);
+	fqfpdecomprec:=Normalform_fqf(fag, fqf);
+	#
+	ps:=fqfpdecomprec.ps;
+	decompdata:=fqfpdecomprec.decompdata;
+	#
+	#
+	Brown:=0; # For the Brown invariant
+	#
+	for pddata in decompdata do
+		p:=pddata.p;
+		pfag:=pddata.pfag;
+		pfqf:=pddata.pfqf;
+		lengp:=Length(pfag);
+		redppartofdd:=dd/p^Ordp(dd, p);
+		pssblrds:=[1];
+		#
+		if p=2 then
+			redppartofdd:=redppartofdd mod 8;
+			pos:=1;
+			fqfpos:=1;
+			while pos<=lengp do
+				gg:=pfag[pos];
+				kk:=Ordp(gg, p);
+				if gg<>p^kk then beep(2); fi;
+				pfqfcomp:=pfqf[fqfpos];
+			 	if Length(pfqfcomp)=1 then # the indecomp fqf of type w
+			 		aa:=gg*pfqfcomp[1][1];
+			 		if kk=0 then beep(6); fi;
+			 		Brown:=Brown+(aa+kk*(aa^2-1)/2);
+			 		if kk=1 then
+			 			if not ( aa in [1,3]) then beep(51); fi;
+			 			pssblrds1:=List(pssblrds, xx->xx*aa mod 8);
+			 			pssblrds2:=List(pssblrds, xx->5*xx*aa mod 8);
+			 			pssblrds:=Concatenation(pssblrds1, pssblrds2);
+			 		else
+			 			if not ( aa in [1,3,5,7]) then beep(5); fi;
+			 			pssblrds:=List(pssblrds, xx->xx*aa mod 8);
+			 		fi;
+			 		pos:=pos+1;
+			 		fqfpos:=fqfpos+1;
+			 	else # the indecomp fqf u or v
+			 		if pfqfcomp[1][2]<>1/2^kk or pfqfcomp[2][1]<>1/2^kk then
+			 			beep(10);
+			 		fi;
+			 		#
+			 		if pfqfcomp[1][1]=0 then # U=[[0, 2^kk],[2^kk,0]]
+			 			if pfqfcomp[2][2]<>0 then beep(12); fi;
+			 			pssblrds:=List(pssblrds, xx->xx*(-1) mod 8);
+			 			Brown:=Brown+0;
+			 		else # V=[[2^(kk+1), 2^kk],[2^kk,2^(kk+1)]]
+			 			if pfqfcomp[1][1]<>1/2^(kk-1)
+			 				or pfqfcomp[2][2]<>1/2^(kk-1)
+			 			then
+			 				beep(20);
+			 			fi;
+			 			pssblrds:=List(pssblrds, xx->xx*(3) mod 8);
+			 			Brown:=Brown +4*kk;
+			 		fi;
+			 		pos:=pos+2;
+			 		fqfpos:=fqfpos+1;
+			 	fi;
+			od;
+			if fqfpos<>Length(pfqf)+1 then beep(21); fi;
+			#
+			if (n-lengp) mod 2<>0 then return(false); fi;
+			#
+			mm:=(n-lengp)/2;
+			if mm>0 then
+				if mm mod 2 =0 then
+					pssblrds1:=List(pssblrds, xx->xx mod 8);
+			 		pssblrds2:=List(pssblrds, xx->5*xx mod 8);
+			 		pssblrds:=Concatenation(pssblrds1, pssblrds2);
+				else
+					pssblrds1:=List(pssblrds, xx->3*xx mod 8);
+			 		pssblrds2:=List(pssblrds, xx->7*xx mod 8);
+			 		pssblrds:=Concatenation(pssblrds1, pssblrds2);
+				fi;
+			fi;
+			#
+			pssblrds:=Set(pssblrds);
+			if not redppartofdd in pssblrds then
+				return(false);
+			fi;
+			#
+		else
+			redppartofdd:=Legendre(redppartofdd, p);
+			pos:=1;
+			while pos<=lengp do
+				gg:=pfag[pos];
+				kk:=Ordp(gg, p);
+				if gg<>p^kk then beep(28); fi;
+				taa:=gg*pfqf[pos][1][1];
+				if not ( IsInt(taa) and taa mod 2=0) then beep(30); fi;
+				if taa mod p=0 then beep(35); fi;
+				if kk mod 2 =1 then
+					Brown:=Brown+2*Legendre(taa/2, p)-Legendre(-1, p)-1;
+				else
+					Brown:=Brown+0;
+				fi;
+				lap:=Legendre(taa, p);
+				pssblrds:=List(pssblrds, xx->lap*xx);
+				pos:=pos+1;
+			od;
+			#
+			if n>lengp then
+				pssblrds1:=List(pssblrds, xx->xx);
+			 	pssblrds2:=List(pssblrds, xx->(-1)*xx);
+			 	pssblrds:=Concatenation(pssblrds1, pssblrds2);
+			fi;
+			#
+			#
+			pssblrds:=Set(pssblrds);
+			if not redppartofdd in pssblrds then
+				return(false);
+			fi;
+			#
+		fi;
+	od;
+	#
+	if (Brown mod 8)<>sigma then return(false); fi;
+	return(true);
+end;
+
+
+PrimitivelyEmbeddableInK3Lattice:=function(GramS)
+  local targetsignature,discmS;
+  discmS:=DiscriminantForm(-GramS);
+  targetsignature:=[22,3,19]-SignatureQ(GramS);
+  if targetsignature[1]<2 or targetsignature[2]<2 then return(false); fi;
+  return(new2Genera(targetsignature, discmS.discg, discmS.discf));
+end;
+
+
+
+#### end 

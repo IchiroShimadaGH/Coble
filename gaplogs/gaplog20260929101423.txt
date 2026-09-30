@@ -1,2 +1,61 @@
 sessionnumb  20260929101423 
+gap> Read("NonSingOverLats.g");
+Syntax warning: Unbound global variable in NonSingOverLats.g:65
+    poss:=List(isotwordstg, tw->Position(isotwords));
+    ^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:66
+    Add(autShgensperms, PermList(poss));
+                                 ^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:72
+  IsGminimal:=finction(iis)
+              ^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:72
+  IsGminimal:=finction(iis)
+                       ^^^
+Syntax error: ; expected in NonSingOverLats.g:73
+    local tgp, iistgqp;
+    ^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:74
+    for tgp in theG do 
+        ^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:75
+      iistgqp:=List(iis, ii->ii^tgp);
+      ^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:75
+      iistgqp:=List(iis, ii->ii^tgp);
+                    ^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:76
+      Sort(iistgqp);
+           ^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:77
+      if iistgqp<iis then return(false); fi;
+         ^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:77
+      if iistgqp<iis then return(false); fi;
+                 ^^^
+gap> Read("NonSingOverLats.g");
+Syntax warning: Unbound global variable in NonSingOverLats.g:158
+    oldiis:=torec.addwordiis;
+    ^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:161
+      newiis:=CopyAdd(oldiis, pos);
+      ^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:161
+      newiis:=CopyAdd(oldiis, pos);
+                      ^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:162
+      if not IsGminimal(newiis) then continue; fi; #in for pos in poss do 
+                        ^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:169
+        if IsIntVect(stw*ewwdbasisinv) then 
+                         ^^^^^^^^^^^^
+Syntax warning: Unbound global variable in NonSingOverLats.g:191
+      );
+ ^^^^^^
+gap> Read("NonSingOverLats.g");
 gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> restart();
