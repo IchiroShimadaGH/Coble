@@ -1,0 +1,1324 @@
+sessionnumb  20261001141140 
+gap> 
+gap> 
+gap> 
+gap> Read("Task20261001Ua.g");
+FoundShRecs0930Ua 5380 
+Syntax error: ; expected in Task20261001Ua.g:64
+    fi;
+    ^^
+Syntax error: expression expected in Task20261001Ua.g:66
+  Printn(counter, Length(FoundShRecsOverLats), );
+                                               ^
+gap> Read("Task20261001Ua.g");
+FoundShRecs0930Ua 5380 
+Syntax error: ; expected in Task20261001Ua.g:64
+    fi;
+    ^^
+gap> Read("Task20261001Ua.g");
+FoundShRecs0930Ua 5380 
+_____________ 1 
+__OLrecs 1 [ 1 ] 
+Error, Variable: 'tGramS' must have an assigned value in
+  Tgenus := GetTGenus( tGramS ); at Task20261001Ua.g:52 called from 
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20261001Ua.g:67
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20261001Ua.g");
+FoundShRecs0930Ua 5380 
+_____________ 1 
+__OLrecs 1 [ 1 ] 
+_____ rho 3 true : Tcount 1 : sprats [ 0, 2 ] 
+1 1 0 
+_____________ 2 
+__OLrecs 1 [ 1 ] 
+_____ rho 3 true : Tcount 1 : sprats [ 0, 2 ] 
+2 2 0 
+_____________ 3 
+__OLrecs 1 [ 1 ] 
+_____ rho 3 true : Tcount 1 : sprats [ 0, 3 ] 
+3 3 0 
+_____________ 4 
+__OLrecs 1 [ 1 ] 
+_____ rho 4 true : Tcount 1 : sprats [ 0, 3 ] 
+4 4 0 
+_____________ 5 
+__OLrecs 1 [ 1 ] 
+_____ rho 4 true : Tcount 1 : sprats [ 0, 3 ] 
+5 5 0 
+_____________ 6 
+__OLrecs 1 [ 1 ] 
+_____ rho 4 true : Tcount 1 : sprats [ 0, 4 ] 
+6 6 0 
+_____________ 7 
+__OLrecs 1 [ 1 ] 
+_____ rho 4 true : Tcount 1 : sprats [ 0, 3 ] 
+7 7 0 
+_____________ 8 
+__OLrecs 1 [ 1 ] 
+_____ rho 4 true : Tcount 1 : sprats [ 0, 4 ] 
+8 8 0 
+_____________ 9 
+__OLrecs 1 [ 1 ] 
+_____ rho 4 true : Tcount 1 : sprats [ 0, 6 ] 
+9 9 0 
+_____________ 10 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 4 true : Tcount 1 : sprats [ 0, 3 ] 
+_____ rho 4 true : Tcount 1 : sprats [ 3, 0 ] 
+10 11 0 
+_____________ 11 
+__OLrecs 1 [ 1 ] 
+_____ rho 4 true : Tcount 1 : sprats [ 0, 3 ] 
+11 12 0 
+_____________ 12 
+__OLrecs 1 [ 1 ] 
+_____ rho 4 true : Tcount 1 : sprats [ 0, 5 ] 
+12 13 0 
+_____________ 13 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 12 ] 
+13 15 0 
+_____________ 14 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] 
+14 16 0 
+_____________ 15 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 5 ] 
+15 17 0 
+_____________ 16 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] 
+16 18 0 
+_____________ 17 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 5 ] 
+17 19 0 
+_____________ 18 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 7 ] 
+18 20 0 
+_____________ 19 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] 
+19 21 0 
+_____________ 20 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 5 ] 
+20 22 0 
+_____________ 21 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 7 ] 
+21 23 0 
+_____________ 22 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 12 ] 
+22 24 0 
+_____________ 23 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 3, 1 ] 
+23 26 0 
+_____________ 24 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 2, 3 ] 
+24 28 0 
+_____________ 25 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 6 ] 
+25 29 0 
+_____________ 26 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] 
+26 30 0 
+_____________ 27 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] 
+27 31 0 
+_____________ 28 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 5 ] 
+28 32 0 
+_____________ 29 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] 
+29 33 0 
+_____________ 30 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] 
+30 34 0 
+_____________ 31 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 6 ] 
+31 35 0 
+_____________ 32 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 5 ] 
+32 36 0 
+_____________ 33 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 5 ] 
+33 37 0 
+_____________ 34 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 7 ] 
+34 38 0 
+_____________ 35 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 5 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 3, 2 ] 
+35 40 0 
+_____________ 36 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 5 ] 
+36 41 0 
+_____________ 37 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 9 ] 
+37 42 0 
+_____________ 38 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 6 ] 
+38 43 0 
+_____________ 39 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 6 ] 
+39 44 0 
+_____________ 40 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 6 ] 
+40 45 0 
+_____________ 41 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 10 ] 
+41 46 0 
+_____________ 42 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 8 ] 
+42 47 0 
+_____________ 43 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] 
+43 48 0 
+_____________ 44 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] 
+44 49 0 
+_____________ 45 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 3, 1 ] 
+45 51 0 
+_____________ 46 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] 
+46 52 0 
+_____________ 47 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 3, 1 ] 
+47 54 0 
+_____________ 48 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 5 ] 
+48 55 0 
+_____________ 49 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 5 ] 
+49 56 0 
+_____________ 50 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 7 ] 
+50 57 0 
+_____________ 51 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 6 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 4, 0 ] 
+51 59 0 
+_____________ 52 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 6 ] 
+52 60 0 
+_____________ 53 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] 
+53 61 0 
+_____________ 54 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] 
+54 62 0 
+_____________ 55 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 5 ] 
+55 63 0 
+_____________ 56 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 7 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 4, 1 ] 
+56 65 0 
+_____________ 57 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 9 ] 
+57 66 0 
+_____________ 58 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 13 ] 
+58 68 0 
+_____________ 59 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+59 69 0 
+_____________ 60 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 14 ] 
+60 71 0 
+_____________ 61 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 13 ] 
+61 73 0 
+_____________ 62 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+62 74 0 
+_____________ 63 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 20 ] 
+63 76 0 
+_____________ 64 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+64 77 0 
+_____________ 65 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 16 ] 
+65 79 0 
+_____________ 66 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+66 80 0 
+_____________ 67 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 13 ] 
+67 81 0 
+_____________ 68 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 14 ] 
+68 83 0 
+_____________ 69 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+69 84 0 
+_____________ 70 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+70 85 0 
+_____________ 71 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 14 ] 
+71 86 0 
+_____________ 72 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] 
+72 89 0 
+_____________ 73 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 2, 4 ] 
+73 91 0 
+_____________ 74 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+74 92 0 
+_____________ 75 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+75 93 0 
+_____________ 76 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+76 94 0 
+_____________ 77 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+77 95 0 
+_____________ 78 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+78 96 0 
+_____________ 79 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+79 97 0 
+_____________ 80 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+80 98 0 
+_____________ 81 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+81 99 0 
+_____________ 82 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+82 100 0 
+_____________ 83 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+83 101 0 
+_____________ 84 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 3 ] 
+84 103 0 
+_____________ 85 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 2, 5 ] 
+85 105 0 
+_____________ 86 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 10 ] 
+86 106 0 
+_____________ 87 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+87 107 0 
+_____________ 88 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+88 108 0 
+_____________ 89 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+89 109 0 
+_____________ 90 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+90 110 0 
+_____________ 91 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+91 111 0 
+_____________ 92 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+92 112 0 
+_____________ 93 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+93 113 0 
+_____________ 94 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+94 114 0 
+_____________ 95 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+95 115 0 
+_____________ 96 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+96 116 0 
+_____________ 97 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+97 117 0 
+_____________ 98 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 10 ] 
+98 118 0 
+_____________ 99 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+99 119 0 
+_____________ 100 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+100 120 0 
+_____________ 101 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 13 ] 
+101 121 0 
+_____________ 102 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 5 ] 
+102 123 0 
+_____________ 103 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+103 124 0 
+_____________ 104 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+104 125 0 
+_____________ 105 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+105 126 0 
+_____________ 106 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+106 127 0 
+_____________ 107 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 11 ] 
+107 128 0 
+_____________ 108 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] 
+108 129 0 
+_____________ 109 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+109 130 0 
+_____________ 110 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+110 131 0 
+_____________ 111 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+111 132 0 
+_____________ 112 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+112 133 0 
+_____________ 113 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+113 134 0 
+_____________ 114 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+114 135 0 
+_____________ 115 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 11 ] 
+115 136 0 
+_____________ 116 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] 
+116 137 0 
+_____________ 117 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] 
+117 138 0 
+_____________ 118 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] 
+118 139 0 
+_____________ 119 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 20 ] 
+119 140 0 
+_____________ 120 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+120 141 0 
+_____________ 121 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 13 ] 
+121 143 0 
+_____________ 122 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] 
+122 145 0 
+_____________ 123 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 2, 4 ] 
+123 147 0 
+_____________ 124 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 2, 4 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] 
+124 150 0 
+_____________ 125 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+125 151 0 
+_____________ 126 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+126 152 0 
+_____________ 127 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+127 153 0 
+_____________ 128 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+128 154 0 
+_____________ 129 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+129 155 0 
+_____________ 130 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+130 156 0 
+_____________ 131 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+131 157 0 
+_____________ 132 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+132 158 0 
+_____________ 133 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+133 159 0 
+_____________ 134 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+134 160 0 
+_____________ 135 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+135 161 0 
+_____________ 136 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+136 162 0 
+_____________ 137 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+137 163 0 
+_____________ 138 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+138 164 0 
+_____________ 139 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+139 165 0 
+_____________ 140 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] 
+140 166 0 
+_____________ 141 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+141 167 0 
+_____________ 142 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+142 168 0 
+_____________ 143 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+143 169 0 
+_____________ 144 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+144 170 0 
+_____________ 145 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+145 171 0 
+_____________ 146 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+146 172 0 
+_____________ 147 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+147 173 0 
+_____________ 148 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+148 174 0 
+_____________ 149 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 10 ] 
+149 175 0 
+_____________ 150 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+150 176 0 
+_____________ 151 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 10 ] 
+151 177 0 
+_____________ 152 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+152 178 0 
+_____________ 153 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+153 179 0 
+_____________ 154 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 3 ] 
+154 181 0 
+_____________ 155 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+155 182 0 
+_____________ 156 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 3 ] 
+156 184 0 
+_____________ 157 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 16 ] 
+157 185 0 
+_____________ 158 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+158 186 0 
+_____________ 159 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+159 187 0 
+_____________ 160 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 13 ] 
+160 188 0 
+_____________ 161 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 4, 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 2, 6 ] 
+161 191 0 
+_____________ 162 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+162 192 0 
+_____________ 163 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+163 193 0 
+_____________ 164 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+164 194 0 
+_____________ 165 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+165 195 0 
+_____________ 166 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+166 196 0 
+_____________ 167 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] 
+167 197 0 
+_____________ 168 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+168 198 0 
+_____________ 169 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+169 199 0 
+_____________ 170 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+170 200 0 
+_____________ 171 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 11 ] 
+171 201 0 
+_____________ 172 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] 
+172 202 0 
+_____________ 173 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+173 203 0 
+_____________ 174 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 4 ] 
+174 205 0 
+_____________ 175 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+175 206 0 
+_____________ 176 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+176 207 0 
+_____________ 177 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+177 208 0 
+_____________ 178 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 11 ] 
+178 209 0 
+_____________ 179 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 13 ] 
+179 210 0 
+_____________ 180 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 4, 3 ] 
+180 212 0 
+_____________ 181 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] 
+181 213 0 
+_____________ 182 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] 
+182 214 0 
+_____________ 183 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 15 ] 
+183 215 0 
+_____________ 184 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 11 ] 
+184 216 0 
+_____________ 185 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+185 217 0 
+_____________ 186 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+186 218 0 
+_____________ 187 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 1, 5 ] 
+187 221 0 
+_____________ 188 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+188 222 0 
+_____________ 189 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] 
+189 224 0 
+_____________ 190 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 2, 4 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] 
+190 227 0 
+_____________ 191 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+191 228 0 
+_____________ 192 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+192 229 0 
+_____________ 193 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+193 230 0 
+_____________ 194 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 10 ] 
+194 231 0 
+_____________ 195 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+195 232 0 
+_____________ 196 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 4, 1 ] 
+196 234 0 
+_____________ 197 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 4, 1 ] 
+197 236 0 
+_____________ 198 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] 
+198 237 0 
+_____________ 199 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+199 238 0 
+_____________ 200 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+200 239 0 
+_____________ 201 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+201 240 0 
+_____________ 202 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+202 241 0 
+_____________ 203 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 4, 2 ] 
+203 243 0 
+_____________ 204 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 10 ] 
+204 244 0 
+_____________ 205 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] 
+205 246 0 
+_____________ 206 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+206 247 0 
+_____________ 207 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+207 248 0 
+_____________ 208 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 2, 4 ] 
+208 250 0 
+_____________ 209 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 3 ] 
+209 252 0 
+_____________ 210 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+210 253 0 
+_____________ 211 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] 
+211 255 0 
+_____________ 212 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] 
+212 257 0 
+_____________ 213 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+213 258 0 
+_____________ 214 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+214 259 0 
+_____________ 215 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+215 260 0 
+_____________ 216 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+216 261 0 
+_____________ 217 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 5 ] 
+217 263 0 
+_____________ 218 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 2, 5 ] 
+218 265 0 
+_____________ 219 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 4, 1 ] 
+219 267 0 
+_____________ 220 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+220 268 0 
+_____________ 221 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+221 269 0 
+_____________ 222 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+222 270 0 
+_____________ 223 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 2, 4 ] 
+223 272 0 
+_____________ 224 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 3 ] 
+224 274 0 
+_____________ 225 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 4, 2 ] 
+225 276 0 
+_____________ 226 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 10 ] 
+226 277 0 
+_____________ 227 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 3 ] 
+227 279 0 
+_____________ 228 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 2, 5 ] 
+228 281 0 
+_____________ 229 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+229 282 0 
+_____________ 230 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+230 283 0 
+_____________ 231 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 5 ] 
+231 285 0 
+_____________ 232 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 5 ] 
+232 287 0 
+_____________ 233 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 3 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 3 ] 
+233 290 0 
+_____________ 234 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 3 ] 
+234 292 0 
+_____________ 235 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 3 ] 
+235 294 0 
+_____________ 236 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 3 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 2, 5 ] 
+236 297 0 
+_____________ 237 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+237 298 0 
+_____________ 238 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 10 ] 
+238 299 0 
+_____________ 239 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 12 ] 
+239 300 0 
+_____________ 240 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+240 301 0 
+_____________ 241 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 10 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 5, 0 ] 
+241 303 0 
+_____________ 242 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 10 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 4, 4 ] 
+242 305 0 
+_____________ 243 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+243 306 0 
+_____________ 244 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+244 307 0 
+_____________ 245 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+245 308 0 
+_____________ 246 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+246 309 0 
+_____________ 247 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 12 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 5, 2 ] 
+247 311 0 
+_____________ 248 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+248 312 0 
+_____________ 249 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+249 313 0 
+_____________ 250 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] 
+250 314 0 
+_____________ 251 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+251 315 0 
+_____________ 252 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+252 316 0 
+_____________ 253 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+253 317 0 
+_____________ 254 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+254 318 0 
+_____________ 255 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 10 ] 
+255 319 0 
+_____________ 256 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+256 320 0 
+_____________ 257 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+257 321 0 
+_____________ 258 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 14 ] 
+258 322 0 
+_____________ 259 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 12 ] 
+259 323 0 
+_____________ 260 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+260 324 0 
+_____________ 261 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 10 ] 
+261 325 0 
+_____________ 262 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 10 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 4, 4 ] 
+262 327 0 
+_____________ 263 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 4, 2 ] 
+263 329 0 
+_____________ 264 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 14 ] 
+264 330 0 
+_____________ 265 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 14 ] 
+265 332 0 
+_____________ 266 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+266 333 0 
+_____________ 267 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+267 334 0 
+_____________ 268 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 4 ] 
+268 336 0 
+_____________ 269 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+269 337 0 
+_____________ 270 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+270 338 0 
+_____________ 271 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 1, 5 ] 
+271 340 0 
+_____________ 272 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+272 341 0 
+_____________ 273 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+273 342 0 
+_____________ 274 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+274 343 0 
+_____________ 275 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+275 344 0 
+_____________ 276 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 4 ] 
+276 346 0 
+_____________ 277 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+277 347 0 
+_____________ 278 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] 
+278 349 0 
+_____________ 279 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+279 350 0 
+_____________ 280 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] 
+280 352 0 
+_____________ 281 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] 
+281 354 0 
+_____________ 282 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+282 355 0 
+_____________ 283 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+283 356 0 
+_____________ 284 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+284 357 0 
+_____________ 285 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+285 358 0 
+_____________ 286 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] 
+286 359 0 
+_____________ 287 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+287 360 0 
+_____________ 288 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+288 361 0 
+_____________ 289 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 3 ] 
+289 363 0 
+_____________ 290 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+290 364 0 
+_____________ 291 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 3 ] 
+291 366 0 
+_____________ 292 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+292 367 0 
+_____________ 293 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+293 368 0 
+_____________ 294 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+294 369 0 
+_____________ 295 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+295 370 0 
+_____________ 296 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 4, 2 ] 
+296 372 0 
+_____________ 297 
+__OLrecs 1 [ 1 ] 
+Error, Sage computation failed (this is NOT a zero class number). Output:  Input retained at /var/folders/92/6_gqhzx52n3b8zyts56k__gw0000gn/T//gaptempdir6v3oiu/input.json at even_lattice_genus.g:54 called from
+EvenLatticeGenus( Tgenus.sign, Tgenus.discg, Tgenus.discf ) at Task20261001Ua.g:53 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20261001Ua.g:67
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> quit;
+gap> 
+gap> 
+gap> 
+gap> 
+gap> savedataas(FoundShRecsOverLats), "ttFoundShRecsOverLats");
+Error, Function: number of arguments must be 2 (not 1)
+not in any function at *stdin*:11
+type 'quit;' to quit to outer loop
+brk> quit;
+Syntax error: ; expected
+savedataas(FoundShRecsOverLats), "ttFoundShRecsOverLats");
+                               ^
+gap> savedataas(FoundShRecsOverLats, "ttFoundShRecsOverLats");
+gap> RecNames(Trec);
+[ "count", "method", "grams", "spinorPrimes" ]
+gap> sprats;
+rec( nopss := [ 4, 2 ], scons := [ [ [ 2, -2, 2, 2, 1, -3 ], [ 2, 6, 2, 2, 3, -7 ] ], [ [ 2, 0, 3, 3, 3, -6 ], [ 2, 4, 1, 1, 1, -4 ] ] ], 
+  slins := [ [ [ 1, 0, 3, 3, 1, -4 ], [ 1, 2, -1, -1, 1, -1 ] ], [ [ 1, 0, 2, -1, -1, 1 ], [ 1, 2, 0, 3, 3, -6 ] ], 
+      [ [ 1, 2, 3, 0, 1, -2 ], [ 1, 0, -1, 2, 1, -3 ] ], [ [ 1, 1, 2, 1, 3, -4 ], [ 1, 1, 0, 1, -1, -1 ] ] ] )
+gap> ADEHrootnumb;
+function( typelist ) ... end
+gap>  ADEHrootnumb(["D4"]);
+24
+gap> ADEHrootnumb(["D5"]);
+40
+gap> 

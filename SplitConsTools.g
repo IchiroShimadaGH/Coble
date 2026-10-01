@@ -234,5 +234,29 @@ GetSpRats:=function(Gram, h)
 end;
 
 
+SpconsIntType:=function(tGram, spcon1, spcon2)
+  local tM;
+  tM:=spcon1*tGram*TransposedMat(spcon2);
+  if tM=[[4,0], [0,4]] or tM=[[0,4], [4,0] ] then return("zf"); fi;
+  if tM=[[1,3], [3,1]] or tM=[[3,1], [1,3] ] then return("odd"); fi;
+  if tM=[[2,2], [2,2]] then return("tt"); fi;
+  beep(1142444111);
+end;
+
+SpconsIntTypes:=function(tGram, spcons)
+  local types, pos1, pos2, nops, spcon1, spcon2;
+  nops:=Length(spcons);
+  types:=[];
+  for pos1 in [1..nops] do
+    spcon1:=spcons[pos1];
+      for pos2 in [pos1+1..nops] do
+        spcon2:=spcons[pos2];
+        Add(types, SpconsIntType(tGram, spcon1, spcon2));
+      od;
+  od;
+  return(Collected(types));
+end;
+
+
 
   ####################

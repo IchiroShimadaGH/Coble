@@ -3617,3 +3617,2820 @@ __size of G 1
 __new verlattice 2 2 
 377 2 [ 1, 2 ] 
 gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> Read("Task20261001Ua.g");
+FoundShRecs0930Ua 5380 
+Syntax warning: Unbound global variable in Task20261001Ua.g:25
+    discg:= discTdiscg,
+            ^^^^^^^^^^
+_____________ 1 
+__OLrecs 1 [ 1 ] 
+Error, Variable: 'tGram' must have an assigned value in
+  if th * tGram * th <> 2 then
+    buzz( 41764 );
+fi; at Task20261001Ua.g:44 called from 
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20261001Ua.g:66
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20261001Ua.g");
+FoundShRecs0930Ua 5380 
+_____________ 1 
+__OLrecs 1 [ 1 ] 
+Error, Variable: 'tGram' must have an assigned value in
+  if th * tGram * th <> 2 then
+    buzz( 41764 );
+fi; at Task20261001Ua.g:44 called from 
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20261001Ua.g:66
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20261001Ua.g");
+FoundShRecs0930Ua 5380 
+_____________ 1 
+__OLrecs 1 [ 1 ] 
+Error, Variable: 'GetSpRats' must have an assigned value in
+  sprats := GetSpRats( tGram, th ); at Task20261001Ua.g:53 called from 
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20261001Ua.g:66
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20261001Ua.g");
+FoundShRecs0930Ua 5380 
+_____________ 1 
+__OLrecs 1 [ 1 ] 
+Error, no method found! For debugging hints type ?Recovery from NoMethodFound
+Error, no 1st choice method found for `ListOp' on 2 arguments at /usr/local/Cellar/gap/4.15.1/share/gap/lib/methsel2.g:250 called from
+CallFuncList( ListOp, arg ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:675 called from
+List( sprats, Length ) at Task20261001Ua.g:55 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20261001Ua.g:67
+type 'quit;' to quit to outer loop
+brk> sprats;
+rec( nopss := [ 0, 2 ], scons := [ [ [ 1, 0, -1 ], [ 1, 0, 1 ] ], [ [ 1, -1, 0 ], [ 1, 1, 0 ] ] ], slins := [  ] )
+brk> Printn("_____",  rho, ampleflag, Trec.counter, sprats.nopss);
+Syntax warning: Unbound global variable in *errin*:2
+Printn("_____",  rho, ampleflag, Trec.counter, sprats.nopss);
+                 ^^^
+Error, Variable: 'rho' must have a value in
+  ErrorNoReturn( no_method_found ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/methsel2.g:250 called from 
+CallFuncList( ListOp, arg ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:675 called from
+List( sprats, Length ) at Task20261001Ua.g:55 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at *errin*:2
+brk>   Printn("_____",  trho, ampleflag, Trec.counter, sprats.nopss);
+Error, Record Element: '<rec>.counter' must have an assigned value in
+  ErrorNoReturn( no_method_found ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/methsel2.g:250 called from 
+CallFuncList( ListOp, arg ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:675 called from
+List( sprats, Length ) at Task20261001Ua.g:55 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at *errin*:3
+type 'quit;' to quit to outer loop
+brk_2> Trec;
+rec( count := 1, grams := [ [ [ -2, 1, 1, 1, -1, 1, -1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 1, -2, -1, 0, 0, 0, 1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], 
+          [ 1, -1, -2, -1, 0, -1, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 0, -1, -2, 1, -1, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], 
+          [ -1, 0, 0, 1, -2, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 0, -1, -1, 1, -2, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], 
+          [ -1, 1, 0, 0, 0, 0, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 1, -1, -1, -1, 1, -1, 0, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], 
+          [ 0, 0, 0, 0, 0, 0, 0, 0, -2, 1, 1, 1, -1, 1, -1, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1, -2, -1, 0, 0, 0, 1, -1, 0, 0, 0 ], 
+          [ 0, 0, 0, 0, 0, 0, 0, 0, 1, -1, -2, -1, 0, -1, 0, -1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, -1, -2, 1, -1, 0, -1, 0, 0, 0 ], 
+          [ 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 1, -2, 1, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, -1, -1, 1, -2, 0, -1, 0, 0, 0 ], 
+          [ 0, 0, 0, 0, 0, 0, 0, 0, -1, 1, 0, 0, 0, 0, -2, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 1, -1, -1, -1, 1, -1, 0, -2, 0, 0, 0 ], 
+          [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0 ], 
+          [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -4 ] ] ], method := "Nikulin uniqueness", spinorPrimes := [  ] )
+brk_2> Printn("_____",  trho, ampleflag, Trec.count, sprats.nopss);
+_____ 3 true 1 [ 0, 2 ] 
+brk_2> Printn("_____",  trho, ampleflag, "Tcount", Trec.count, "sprats", sprats.nopss);
+_____ 3 true Tcount 1 sprats [ 0, 2 ] 
+brk_2>  Printn("_____",  trho, ampleflag, ": Tcount", Trec.count, ": sprats", sprats.nopss);
+_____ 3 true : Tcount 1 : sprats [ 0, 2 ] 
+brk_2> quit;
+brk> 
+brk> 
+brk> 
+brk> 
+brk> 
+brk> quit;
+gap> Read("Task20261001Ua.g");
+FoundShRecs0930Ua 5380 
+Syntax error: ) expected in Task20261001Ua.g:56
+    Printn("_____",  "rho2, trho, ampleflag, ": Tcount", Trec.count, ": sprats", sprats.nopss);
+                                                      ^^^^^^^^^^^^^^^^
+Syntax error: while parsing a 'for' loop: statement or 'od' expected in Task20261001Ua.g:63
+    fi;
+    ^^
+gap> Read("Task20261001Ua.g");
+FoundShRecs0930Ua 5380 
+_____________ 1 
+__OLrecs 1 [ 1 ] 
+Error, no method found! For debugging hints type ?Recovery from NoMethodFound
+Error, no 1st choice method found for `ListOp' on 2 arguments at /usr/local/Cellar/gap/4.15.1/share/gap/lib/methsel2.g:250 called from
+CallFuncList( ListOp, arg ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:675 called from
+List( sprats, Length ) at Task20261001Ua.g:55 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20261001Ua.g:66
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20261001Ua.g");
+FoundShRecs0930Ua 5380 
+_____________ 1 
+__OLrecs 1 [ 1 ] 
+_____ rho 3 true : Tcount 1 : sprats [ 0, 2 ] 
+Error, Record Element: '<rec>.counter' must have an assigned value in
+  if ampleflag and Trec.counter > 0 then
+    OLrec.rho := trho;
+    OLrec.ampleflag := ampleflag;
+    OLrec.Trec := Trec;
+    OLrec.sprats := sprats;
+    Add( FoundShRecsOverLats, OLflag );
+fi; at Task20261001Ua.g:62 called from 
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20261001Ua.g:65
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20261001Ua.g");
+FoundShRecs0930Ua 5380 
+_____________ 1 
+__OLrecs 1 [ 1 ] 
+_____ rho 3 true : Tcount 1 : sprats [ 0, 2 ] 
+Error, Variable: 'OLflag' must have an assigned value in
+  Add( FoundShRecsOverLats, OLflag ); at Task20261001Ua.g:61 called from 
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20261001Ua.g:65
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20261001Ua.g");
+FoundShRecs0930Ua 5380 
+_____________ 1 
+__OLrecs 1 [ 1 ] 
+_____ rho 3 true : Tcount 1 : sprats [ 0, 2 ] 
+1 1 
+_____________ 2 
+__OLrecs 1 [ 1 ] 
+_____ rho 3 true : Tcount 1 : sprats [ 0, 2 ] 
+2 2 
+_____________ 3 
+__OLrecs 1 [ 1 ] 
+_____ rho 3 true : Tcount 1 : sprats [ 0, 3 ] 
+3 3 
+_____________ 4 
+__OLrecs 1 [ 1 ] 
+_____ rho 4 true : Tcount 1 : sprats [ 0, 3 ] 
+4 4 
+_____________ 5 
+__OLrecs 1 [ 1 ] 
+_____ rho 4 true : Tcount 1 : sprats [ 0, 3 ] 
+5 5 
+_____________ 6 
+__OLrecs 1 [ 1 ] 
+_____ rho 4 true : Tcount 1 : sprats [ 0, 4 ] 
+6 6 
+_____________ 7 
+__OLrecs 1 [ 1 ] 
+_____ rho 4 true : Tcount 1 : sprats [ 0, 3 ] 
+7 7 
+_____________ 8 
+__OLrecs 1 [ 1 ] 
+_____ rho 4 true : Tcount 1 : sprats [ 0, 4 ] 
+8 8 
+_____________ 9 
+__OLrecs 1 [ 1 ] 
+_____ rho 4 true : Tcount 1 : sprats [ 0, 6 ] 
+9 9 
+_____________ 10 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 4 true : Tcount 1 : sprats [ 0, 3 ] 
+_____ rho 4 true : Tcount 1 : sprats [ 3, 0 ] 
+10 11 
+_____________ 11 
+__OLrecs 1 [ 1 ] 
+_____ rho 4 true : Tcount 1 : sprats [ 0, 3 ] 
+11 12 
+_____________ 12 
+__OLrecs 1 [ 1 ] 
+_____ rho 4 true : Tcount 1 : sprats [ 0, 5 ] 
+12 13 
+_____________ 13 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 12 ] 
+13 15 
+_____________ 14 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] 
+14 16 
+_____________ 15 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 5 ] 
+15 17 
+_____________ 16 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] 
+16 18 
+_____________ 17 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 5 ] 
+17 19 
+_____________ 18 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 7 ] 
+18 20 
+_____________ 19 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] 
+19 21 
+_____________ 20 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 5 ] 
+20 22 
+_____________ 21 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 7 ] 
+21 23 
+_____________ 22 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 12 ] 
+22 24 
+_____________ 23 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 3, 1 ] 
+23 26 
+_____________ 24 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 2, 3 ] 
+24 28 
+_____________ 25 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 6 ] 
+25 29 
+_____________ 26 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] 
+26 30 
+_____________ 27 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] 
+27 31 
+_____________ 28 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 5 ] 
+28 32 
+_____________ 29 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] 
+29 33 
+_____________ 30 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] 
+30 34 
+_____________ 31 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 6 ] 
+31 35 
+_____________ 32 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 5 ] 
+32 36 
+_____________ 33 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 5 ] 
+33 37 
+_____________ 34 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 7 ] 
+34 38 
+_____________ 35 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 5 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 3, 2 ] 
+35 40 
+_____________ 36 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 5 ] 
+36 41 
+_____________ 37 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 9 ] 
+37 42 
+_____________ 38 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 6 ] 
+38 43 
+_____________ 39 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 6 ] 
+39 44 
+_____________ 40 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 6 ] 
+40 45 
+_____________ 41 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 10 ] 
+41 46 
+_____________ 42 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 8 ] 
+42 47 
+_____________ 43 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] 
+43 48 
+_____________ 44 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] 
+44 49 
+_____________ 45 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 3, 1 ] 
+45 51 
+_____________ 46 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] 
+46 52 
+_____________ 47 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 3, 1 ] 
+47 54 
+_____________ 48 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 5 ] 
+48 55 
+_____________ 49 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 5 ] 
+49 56 
+_____________ 50 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 7 ] 
+50 57 
+_____________ 51 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 6 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 4, 0 ] 
+51 59 
+_____________ 52 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 6 ] 
+52 60 
+_____________ 53 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] 
+53 61 
+_____________ 54 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] 
+54 62 
+_____________ 55 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 5 ] 
+55 63 
+_____________ 56 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 7 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 4, 1 ] 
+56 65 
+_____________ 57 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 9 ] 
+57 66 
+_____________ 58 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 13 ] 
+58 68 
+_____________ 59 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+59 69 
+_____________ 60 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 14 ] 
+60 71 
+_____________ 61 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 13 ] 
+61 73 
+_____________ 62 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+62 74 
+_____________ 63 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 20 ] 
+63 76 
+_____________ 64 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+64 77 
+_____________ 65 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 16 ] 
+65 79 
+_____________ 66 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+66 80 
+_____________ 67 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 13 ] 
+67 81 
+_____________ 68 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 14 ] 
+68 83 
+_____________ 69 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+69 84 
+_____________ 70 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+70 85 
+_____________ 71 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 14 ] 
+71 86 
+_____________ 72 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] 
+72 89 
+_____________ 73 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 2, 4 ] 
+73 91 
+_____________ 74 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+74 92 
+_____________ 75 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+75 93 
+_____________ 76 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+76 94 
+_____________ 77 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+77 95 
+_____________ 78 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+78 96 
+_____________ 79 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+79 97 
+_____________ 80 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+80 98 
+_____________ 81 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+81 99 
+_____________ 82 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+82 100 
+_____________ 83 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+83 101 
+_____________ 84 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 3 ] 
+84 103 
+_____________ 85 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 2, 5 ] 
+85 105 
+_____________ 86 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 10 ] 
+86 106 
+_____________ 87 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+87 107 
+_____________ 88 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+88 108 
+_____________ 89 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+89 109 
+_____________ 90 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+90 110 
+_____________ 91 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+91 111 
+_____________ 92 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+92 112 
+_____________ 93 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+93 113 
+_____________ 94 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+94 114 
+_____________ 95 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+95 115 
+_____________ 96 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+96 116 
+_____________ 97 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+97 117 
+_____________ 98 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 10 ] 
+98 118 
+_____________ 99 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+99 119 
+_____________ 100 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+100 120 
+_____________ 101 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 13 ] 
+101 121 
+_____________ 102 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 5 ] 
+102 123 
+_____________ 103 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+103 124 
+_____________ 104 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+104 125 
+_____________ 105 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+105 126 
+_____________ 106 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+106 127 
+_____________ 107 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 11 ] 
+107 128 
+_____________ 108 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] 
+108 129 
+_____________ 109 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+109 130 
+_____________ 110 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+110 131 
+_____________ 111 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+111 132 
+_____________ 112 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+112 133 
+_____________ 113 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+113 134 
+_____________ 114 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+114 135 
+_____________ 115 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 11 ] 
+115 136 
+_____________ 116 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] 
+116 137 
+_____________ 117 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] 
+117 138 
+_____________ 118 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] 
+118 139 
+_____________ 119 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 20 ] 
+119 140 
+_____________ 120 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+120 141 
+_____________ 121 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 13 ] 
+121 143 
+_____________ 122 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] 
+122 145 
+_____________ 123 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 2, 4 ] 
+123 147 
+_____________ 124 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 2, 4 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] 
+124 150 
+_____________ 125 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+125 151 
+_____________ 126 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+126 152 
+_____________ 127 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+127 153 
+_____________ 128 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+128 154 
+_____________ 129 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+129 155 
+_____________ 130 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+130 156 
+_____________ 131 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+131 157 
+_____________ 132 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+132 158 
+_____________ 133 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+133 159 
+_____________ 134 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+134 160 
+_____________ 135 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+135 161 
+_____________ 136 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+136 162 
+_____________ 137 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+137 163 
+_____________ 138 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+138 164 
+_____________ 139 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] 
+139 165 
+_____________ 140 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] 
+140 166 
+_____________ 141 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+141 167 
+_____________ 142 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+142 168 
+_____________ 143 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+143 169 
+_____________ 144 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+144 170 
+_____________ 145 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+145 171 
+_____________ 146 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+146 172 
+_____________ 147 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+147 173 
+_____________ 148 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+148 174 
+_____________ 149 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 10 ] 
+149 175 
+_____________ 150 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+150 176 
+_____________ 151 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 10 ] 
+151 177 
+_____________ 152 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+152 178 
+_____________ 153 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+153 179 
+_____________ 154 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 3 ] 
+154 181 
+_____________ 155 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+155 182 
+_____________ 156 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 3 ] 
+156 184 
+_____________ 157 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 16 ] 
+157 185 
+_____________ 158 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+158 186 
+_____________ 159 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+159 187 
+_____________ 160 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 13 ] 
+160 188 
+_____________ 161 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 4, 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 2, 6 ] 
+161 191 
+_____________ 162 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+162 192 
+_____________ 163 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+163 193 
+_____________ 164 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+164 194 
+_____________ 165 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] 
+165 195 
+_____________ 166 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] 
+166 196 
+_____________ 167 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] 
+167 197 
+_____________ 168 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] 
+168 198 
+_____________ 169 
+__OLrecs 1 [ 1 ] 
+Error, Sage computation failed (this is NOT a zero class number). Output:  Input retained at /var/folders/92/6_gqhzx52n3b8zyts56k__gw0000gn/T//gaptempdircYQPoL/input.json at even_lattice_genus.g:54 called from
+EvenLatticeGenus( Tgenus.sign, Tgenus.discg, Tgenus.discf ) at Task20261001Ua.g:53 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20261001Ua.g:65
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> quit;
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> readdata("Data1845");
+gap> RecNames(Data1845);
+[ "h", "adj", "Gram", "Trec", "kk", "gensplcons", "scons" ]
+gap> Read("Task20261001Ub.g");
+Error, Variable: 'spcon2' must have an assigned value in
+  Add( types, SpconsIntType( tGram, spcon1, spcon2 ) ); at Task20261001Ub.g:24 called from 
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20261001Ub.g:27
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20261001Ub.g");
+wrong global beep 1142444111 
+Error,  at gapReads/gaptools.txt:139 called from
+beep( 1142444111 ); at SplitConsTools.g:243 called from
+SpconsIntType( tGram, spcon1, spcon2 ) at Task20261001Ub.g:24 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20261001Ub.g:27
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> tM;
+[ [ -42683, 30975 ], [ 35071, -25451 ] ]
+brk> spcon1;
+[ [ 12, 1, 0, 0, 0, -1, -2, -2, -2, 0, -2, -1, -3, 1, -1, 1, -1, 1 ], [ -10, -1, 0, 0, 0, 1, 2, 2, 2, 0, 2, 1, 3, -1, 1, -1, 1, -1 ] ]
+brk> TMTTmult(spcon1, tGram);
+[ [ -65650, 53942 ], [ 53942, -44322 ] ]
+brk> Length(tGram);
+6
+brk> quit;
+gap> Read("Task20261001Ub.g");
+1 [ [ "odd", 928 ], [ "tt", 720 ], [ "zf", 196 ] ] 
+2 [ [ "odd", 1840 ], [ "tt", 1452 ], [ "zf", 395 ] ] 
+3 [ [ "odd", 2768 ], [ "tt", 2172 ], [ "zf", 589 ] ] 
+4 [ [ "odd", 3679 ], [ "tt", 2904 ], [ "zf", 787 ] ] 
+5 [ [ "odd", 4591 ], [ "tt", 3636 ], [ "zf", 983 ] ] 
+6 [ [ "odd", 5502 ], [ "tt", 4368 ], [ "zf", 1179 ] ] 
+7 [ [ "odd", 6427 ], [ "tt", 5088 ], [ "zf", 1372 ] ] 
+8 [ [ "odd", 7306 ], [ "tt", 5844 ], [ "zf", 1574 ] ] 
+9 [ [ "odd", 8233 ], [ "tt", 6564 ], [ "zf", 1763 ] ] 
+10 [ [ "odd", 9158 ], [ "tt", 7284 ], [ "zf", 1953 ] ] 
+11 [ [ "odd", 10067 ], [ "tt", 8016 ], [ "zf", 2146 ] ] 
+12 [ [ "odd", 10974 ], [ "tt", 8748 ], [ "zf", 2340 ] ] 
+13 [ [ "odd", 11883 ], [ "tt", 9480 ], [ "zf", 2531 ] ] 
+14 [ [ "odd", 12805 ], [ "tt", 10200 ], [ "zf", 2720 ] ] 
+15 [ [ "odd", 13730 ], [ "tt", 10920 ], [ "zf", 2905 ] ] 
+16 [ [ "odd", 14652 ], [ "tt", 11640 ], [ "zf", 3092 ] ] 
+17 [ [ "odd", 15575 ], [ "tt", 12360 ], [ "zf", 3277 ] ] 
+18 [ [ "odd", 16481 ], [ "tt", 13091 ], [ "zf", 3467 ] ] 
+19 [ [ "odd", 17401 ], [ "tt", 13811 ], [ "zf", 3653 ] ] 
+20 [ [ "odd", 18306 ], [ "tt", 14542 ], [ "zf", 3842 ] ] 
+21 [ [ "odd", 19228 ], [ "tt", 15261 ], [ "zf", 4025 ] ] 
+22 [ [ "odd", 20134 ], [ "tt", 15992 ], [ "zf", 4211 ] ] 
+23 [ [ "odd", 21038 ], [ "tt", 16724 ], [ "zf", 4397 ] ] 
+24 [ [ "odd", 21942 ], [ "tt", 17456 ], [ "zf", 4582 ] ] 
+25 [ [ "odd", 22843 ], [ "tt", 18188 ], [ "zf", 4769 ] ] 
+26 [ [ "odd", 23743 ], [ "tt", 18919 ], [ "zf", 4957 ] ] 
+27 [ [ "odd", 24644 ], [ "tt", 19650 ], [ "zf", 5143 ] ] 
+28 [ [ "odd", 25560 ], [ "tt", 20370 ], [ "zf", 5324 ] ] 
+29 [ [ "odd", 26461 ], [ "tt", 21101 ], [ "zf", 5508 ] ] 
+30 [ [ "odd", 27362 ], [ "tt", 21832 ], [ "zf", 5691 ] ] 
+31 [ [ "odd", 28262 ], [ "tt", 22563 ], [ "zf", 5874 ] ] 
+32 [ [ "odd", 29161 ], [ "tt", 23295 ], [ "zf", 6056 ] ] 
+33 [ [ "odd", 30062 ], [ "tt", 24025 ], [ "zf", 6237 ] ] 
+34 [ [ "odd", 30977 ], [ "tt", 24744 ], [ "zf", 6414 ] ] 
+35 [ [ "odd", 31873 ], [ "tt", 25476 ], [ "zf", 6596 ] ] 
+36 [ [ "odd", 32787 ], [ "tt", 26195 ], [ "zf", 6772 ] ] 
+37 [ [ "odd", 33685 ], [ "tt", 26926 ], [ "zf", 6951 ] ] 
+38 [ [ "odd", 34599 ], [ "tt", 27645 ], [ "zf", 7125 ] ] 
+39 [ [ "odd", 35467 ], [ "tt", 28399 ], [ "zf", 7309 ] ] 
+40 [ [ "odd", 36381 ], [ "tt", 29118 ], [ "zf", 7481 ] ] 
+41 [ [ "odd", 37279 ], [ "tt", 29849 ], [ "zf", 7656 ] ] 
+42 [ [ "odd", 38174 ], [ "tt", 30580 ], [ "zf", 7833 ] ] 
+43 [ [ "odd", 39063 ], [ "tt", 31307 ], [ "zf", 8019 ] ] 
+44 [ [ "odd", 39967 ], [ "tt", 32022 ], [ "zf", 8201 ] ] 
+45 [ [ "odd", 40869 ], [ "tt", 32738 ], [ "zf", 8383 ] ] 
+46 [ [ "odd", 41771 ], [ "tt", 33454 ], [ "zf", 8564 ] ] 
+47 [ [ "odd", 42658 ], [ "tt", 34182 ], [ "zf", 8747 ] ] 
+48 [ [ "odd", 43560 ], [ "tt", 34897 ], [ "zf", 8927 ] ] 
+49 [ [ "odd", 44447 ], [ "tt", 35625 ], [ "zf", 9108 ] ] 
+50 [ [ "odd", 45333 ], [ "tt", 36352 ], [ "zf", 9290 ] ] 
+51 [ [ "odd", 46220 ], [ "tt", 37079 ], [ "zf", 9470 ] ] 
+52 [ [ "odd", 47107 ], [ "tt", 37807 ], [ "zf", 9648 ] ] 
+53 [ [ "odd", 48009 ], [ "tt", 38522 ], [ "zf", 9823 ] ] 
+54 [ [ "odd", 48895 ], [ "tt", 39250 ], [ "zf", 10000 ] ] 
+55 [ [ "odd", 49750 ], [ "tt", 40000 ], [ "zf", 10185 ] ] 
+56 [ [ "odd", 50636 ], [ "tt", 40726 ], [ "zf", 10362 ] ] 
+57 [ [ "odd", 51535 ], [ "tt", 41441 ], [ "zf", 10536 ] ] 
+58 [ [ "odd", 52419 ], [ "tt", 42168 ], [ "zf", 10712 ] ] 
+59 [ [ "odd", 53302 ], [ "tt", 42894 ], [ "zf", 10889 ] ] 
+60 [ [ "odd", 54183 ], [ "tt", 43622 ], [ "zf", 11065 ] ] 
+61 [ [ "odd", 55066 ], [ "tt", 44349 ], [ "zf", 11239 ] ] 
+62 [ [ "odd", 55962 ], [ "tt", 45064 ], [ "zf", 11411 ] ] 
+63 [ [ "odd", 56842 ], [ "tt", 45791 ], [ "zf", 11586 ] ] 
+64 [ [ "odd", 57736 ], [ "tt", 46506 ], [ "zf", 11758 ] ] 
+65 [ [ "odd", 58617 ], [ "tt", 47233 ], [ "zf", 11930 ] ] 
+66 [ [ "odd", 59498 ], [ "tt", 47959 ], [ "zf", 12102 ] ] 
+67 [ [ "odd", 60392 ], [ "tt", 48674 ], [ "zf", 12271 ] ] 
+68 [ [ "odd", 61272 ], [ "tt", 49400 ], [ "zf", 12442 ] ] 
+69 [ [ "odd", 62150 ], [ "tt", 50127 ], [ "zf", 12613 ] ] 
+70 [ [ "odd", 63030 ], [ "tt", 50852 ], [ "zf", 12783 ] ] 
+71 [ [ "odd", 63922 ], [ "tt", 51567 ], [ "zf", 12950 ] ] 
+72 [ [ "odd", 64802 ], [ "tt", 52292 ], [ "zf", 13118 ] ] 
+73 [ [ "odd", 65650 ], [ "tt", 53040 ], [ "zf", 13294 ] ] 
+74 [ [ "odd", 66543 ], [ "tt", 53754 ], [ "zf", 13458 ] ] 
+75 [ [ "odd", 67421 ], [ "tt", 54479 ], [ "zf", 13625 ] ] 
+76 [ [ "odd", 68311 ], [ "tt", 55194 ], [ "zf", 13789 ] ] 
+77 [ [ "odd", 69204 ], [ "tt", 55908 ], [ "zf", 13950 ] ] 
+78 [ [ "odd", 70077 ], [ "tt", 56635 ], [ "zf", 14117 ] ] 
+79 [ [ "odd", 70949 ], [ "tt", 57362 ], [ "zf", 14284 ] ] 
+80 [ [ "odd", 71822 ], [ "tt", 58089 ], [ "zf", 14449 ] ] 
+81 [ [ "odd", 72710 ], [ "tt", 58804 ], [ "zf", 14610 ] ] 
+82 [ [ "odd", 73598 ], [ "tt", 59519 ], [ "zf", 14770 ] ] 
+83 [ [ "odd", 74470 ], [ "tt", 60246 ], [ "zf", 14933 ] ] 
+84 [ [ "odd", 75360 ], [ "tt", 60960 ], [ "zf", 15090 ] ] 
+85 [ [ "odd", 76229 ], [ "tt", 61666 ], [ "zf", 15275 ] ] 
+86 [ [ "odd", 77110 ], [ "tt", 62362 ], [ "zf", 15457 ] ] 
+87 [ [ "odd", 77993 ], [ "tt", 63057 ], [ "zf", 15637 ] ] 
+88 [ [ "odd", 78876 ], [ "tt", 63751 ], [ "zf", 15817 ] ] 
+89 [ [ "odd", 79745 ], [ "tt", 64456 ], [ "zf", 15999 ] ] 
+90 [ [ "odd", 80630 ], [ "tt", 65149 ], [ "zf", 16176 ] ] 
+91 [ [ "odd", 81498 ], [ "tt", 65854 ], [ "zf", 16357 ] ] 
+92 [ [ "odd", 82340 ], [ "tt", 66579 ], [ "zf", 16543 ] ] 
+93 [ [ "odd", 83206 ], [ "tt", 67285 ], [ "zf", 16723 ] ] 
+94 [ [ "odd", 84072 ], [ "tt", 67991 ], [ "zf", 16902 ] ] 
+95 [ [ "odd", 84940 ], [ "tt", 68696 ], [ "zf", 17079 ] ] 
+96 [ [ "odd", 85806 ], [ "tt", 69402 ], [ "zf", 17256 ] ] 
+97 [ [ "odd", 86674 ], [ "tt", 70106 ], [ "zf", 17432 ] ] 
+98 [ [ "odd", 87554 ], [ "tt", 70801 ], [ "zf", 17604 ] ] 
+99 [ [ "odd", 88420 ], [ "tt", 71506 ], [ "zf", 17779 ] ] 
+100 [ [ "odd", 89284 ], [ "tt", 72210 ], [ "zf", 17956 ] ] 
+101 [ [ "odd", 90166 ], [ "tt", 72902 ], [ "zf", 18126 ] ] 
+102 [ [ "odd", 91031 ], [ "tt", 73606 ], [ "zf", 18300 ] ] 
+103 [ [ "odd", 91894 ], [ "tt", 74311 ], [ "zf", 18474 ] ] 
+104 [ [ "odd", 92771 ], [ "tt", 75004 ], [ "zf", 18645 ] ] 
+105 [ [ "odd", 93647 ], [ "tt", 75697 ], [ "zf", 18816 ] ] 
+106 [ [ "odd", 94508 ], [ "tt", 76402 ], [ "zf", 18989 ] ] 
+107 [ [ "odd", 95383 ], [ "tt", 77095 ], [ "zf", 19159 ] ] 
+108 [ [ "odd", 96244 ], [ "tt", 77800 ], [ "zf", 19330 ] ] 
+109 [ [ "odd", 97104 ], [ "tt", 78505 ], [ "zf", 19501 ] ] 
+110 [ [ "odd", 97967 ], [ "tt", 79208 ], [ "zf", 19670 ] ] 
+111 [ [ "odd", 98827 ], [ "tt", 79912 ], [ "zf", 19840 ] ] 
+112 [ [ "odd", 99688 ], [ "tt", 80615 ], [ "zf", 20009 ] ] 
+113 [ [ "odd", 100565 ], [ "tt", 81306 ], [ "zf", 20173 ] ] 
+114 [ [ "odd", 101426 ], [ "tt", 82009 ], [ "zf", 20340 ] ] 
+115 [ [ "odd", 102298 ], [ "tt", 82702 ], [ "zf", 20505 ] ] 
+116 [ [ "odd", 103170 ], [ "tt", 83395 ], [ "zf", 20669 ] ] 
+117 [ [ "odd", 104042 ], [ "tt", 84089 ], [ "zf", 20831 ] ] 
+118 [ [ "odd", 104875 ], [ "tt", 84812 ], [ "zf", 21002 ] ] 
+119 [ [ "odd", 105734 ], [ "tt", 85515 ], [ "zf", 21166 ] ] 
+120 [ [ "odd", 106589 ], [ "tt", 86219 ], [ "zf", 21332 ] ] 
+121 [ [ "odd", 107443 ], [ "tt", 86923 ], [ "zf", 21498 ] ] 
+122 [ [ "odd", 108312 ], [ "tt", 87616 ], [ "zf", 21659 ] ] 
+123 [ [ "odd", 109166 ], [ "tt", 88321 ], [ "zf", 21822 ] ] 
+124 [ [ "odd", 110035 ], [ "tt", 89015 ], [ "zf", 21980 ] ] 
+125 [ [ "odd", 110889 ], [ "tt", 89719 ], [ "zf", 22142 ] ] 
+126 [ [ "odd", 111756 ], [ "tt", 90414 ], [ "zf", 22299 ] ] 
+127 [ [ "odd", 112613 ], [ "tt", 91098 ], [ "zf", 22476 ] ] 
+128 [ [ "odd", 113484 ], [ "tt", 91772 ], [ "zf", 22648 ] ] 
+129 [ [ "odd", 114327 ], [ "tt", 92466 ], [ "zf", 22827 ] ] 
+130 [ [ "odd", 115170 ], [ "tt", 93160 ], [ "zf", 23005 ] ] 
+131 [ [ "odd", 116037 ], [ "tt", 93836 ], [ "zf", 23176 ] ] 
+132 [ [ "odd", 116879 ], [ "tt", 94528 ], [ "zf", 23355 ] ] 
+133 [ [ "odd", 117729 ], [ "tt", 95216 ], [ "zf", 23529 ] ] 
+134 [ [ "odd", 118570 ], [ "tt", 95911 ], [ "zf", 23704 ] ] 
+135 [ [ "odd", 119424 ], [ "tt", 96595 ], [ "zf", 23876 ] ] 
+136 [ [ "odd", 120278 ], [ "tt", 97279 ], [ "zf", 24047 ] ] 
+137 [ [ "odd", 121118 ], [ "tt", 97974 ], [ "zf", 24220 ] ] 
+138 [ [ "odd", 121963 ], [ "tt", 98665 ], [ "zf", 24391 ] ] 
+139 [ [ "odd", 122811 ], [ "tt", 99352 ], [ "zf", 24562 ] ] 
+140 [ [ "odd", 123658 ], [ "tt", 100039 ], [ "zf", 24733 ] ] 
+141 [ [ "odd", 124477 ], [ "tt", 100749 ], [ "zf", 24908 ] ] 
+142 [ [ "odd", 125323 ], [ "tt", 101436 ], [ "zf", 25078 ] ] 
+143 [ [ "odd", 126175 ], [ "tt", 102119 ], [ "zf", 25245 ] ] 
+144 [ [ "odd", 127013 ], [ "tt", 102811 ], [ "zf", 25416 ] ] 
+145 [ [ "odd", 127874 ], [ "tt", 103487 ], [ "zf", 25579 ] ] 
+146 [ [ "odd", 128678 ], [ "tt", 104206 ], [ "zf", 25755 ] ] 
+147 [ [ "odd", 129528 ], [ "tt", 104887 ], [ "zf", 25922 ] ] 
+148 [ [ "odd", 130366 ], [ "tt", 105579 ], [ "zf", 26089 ] ] 
+149 [ [ "odd", 131203 ], [ "tt", 106270 ], [ "zf", 26257 ] ] 
+150 [ [ "odd", 132039 ], [ "tt", 106958 ], [ "zf", 26428 ] ] 
+151 [ [ "odd", 132882 ], [ "tt", 107642 ], [ "zf", 26595 ] ] 
+152 [ [ "odd", 133719 ], [ "tt", 108330 ], [ "zf", 26763 ] ] 
+153 [ [ "odd", 134552 ], [ "tt", 109020 ], [ "zf", 26932 ] ] 
+154 [ [ "odd", 135387 ], [ "tt", 109713 ], [ "zf", 27095 ] ] 
+155 [ [ "odd", 136199 ], [ "tt", 110419 ], [ "zf", 27267 ] ] 
+156 [ [ "odd", 137035 ], [ "tt", 111109 ], [ "zf", 27430 ] ] 
+157 [ [ "odd", 137895 ], [ "tt", 111779 ], [ "zf", 27588 ] ] 
+158 [ [ "odd", 138729 ], [ "tt", 112466 ], [ "zf", 27754 ] ] 
+159 [ [ "odd", 139563 ], [ "tt", 113152 ], [ "zf", 27920 ] ] 
+160 [ [ "odd", 140393 ], [ "tt", 113841 ], [ "zf", 28086 ] ] 
+161 [ [ "odd", 141224 ], [ "tt", 114528 ], [ "zf", 28252 ] ] 
+162 [ [ "odd", 142056 ], [ "tt", 115217 ], [ "zf", 28414 ] ] 
+163 [ [ "odd", 142896 ], [ "tt", 115899 ], [ "zf", 28574 ] ] 
+164 [ [ "odd", 143730 ], [ "tt", 116584 ], [ "zf", 28736 ] ] 
+165 [ [ "odd", 144571 ], [ "tt", 117264 ], [ "zf", 28895 ] ] 
+166 [ [ "odd", 145399 ], [ "tt", 117952 ], [ "zf", 29058 ] ] 
+167 [ [ "odd", 146230 ], [ "tt", 118638 ], [ "zf", 29219 ] ] 
+168 [ [ "odd", 147054 ], [ "tt", 119327 ], [ "zf", 29383 ] ] 
+169 [ [ "odd", 147877 ], [ "tt", 120018 ], [ "zf", 29545 ] ] 
+170 [ [ "odd", 148704 ], [ "tt", 120706 ], [ "zf", 29705 ] ] 
+171 [ [ "odd", 149541 ], [ "tt", 121385 ], [ "zf", 29863 ] ] 
+172 [ [ "odd", 150386 ], [ "tt", 122059 ], [ "zf", 30017 ] ] 
+173 [ [ "odd", 151222 ], [ "tt", 122738 ], [ "zf", 30174 ] ] 
+174 [ [ "odd", 152068 ], [ "tt", 123410 ], [ "zf", 30327 ] ] 
+175 [ [ "odd", 152897 ], [ "tt", 124096 ], [ "zf", 30482 ] ] 
+176 [ [ "odd", 153718 ], [ "tt", 124787 ], [ "zf", 30639 ] ] 
+177 [ [ "odd", 154554 ], [ "tt", 125453 ], [ "zf", 30805 ] ] 
+178 [ [ "odd", 155385 ], [ "tt", 126123 ], [ "zf", 30971 ] ] 
+179 [ [ "odd", 156211 ], [ "tt", 126797 ], [ "zf", 31137 ] ] 
+180 [ [ "odd", 157032 ], [ "tt", 127474 ], [ "zf", 31304 ] ] 
+181 [ [ "odd", 157855 ], [ "tt", 128148 ], [ "zf", 31471 ] ] 
+182 [ [ "odd", 158654 ], [ "tt", 128841 ], [ "zf", 31642 ] ] 
+183 [ [ "odd", 159477 ], [ "tt", 129515 ], [ "zf", 31807 ] ] 
+184 [ [ "odd", 160298 ], [ "tt", 130192 ], [ "zf", 31970 ] ] 
+185 [ [ "odd", 161123 ], [ "tt", 130863 ], [ "zf", 32134 ] ] 
+186 [ [ "odd", 161954 ], [ "tt", 131531 ], [ "zf", 32294 ] ] 
+187 [ [ "odd", 162772 ], [ "tt", 132206 ], [ "zf", 32459 ] ] 
+188 [ [ "odd", 163596 ], [ "tt", 132877 ], [ "zf", 32621 ] ] 
+189 [ [ "odd", 164425 ], [ "tt", 133545 ], [ "zf", 32780 ] ] 
+190 [ [ "odd", 165255 ], [ "tt", 134213 ], [ "zf", 32937 ] ] 
+191 [ [ "odd", 166076 ], [ "tt", 134887 ], [ "zf", 33096 ] ] 
+192 [ [ "odd", 166892 ], [ "tt", 135558 ], [ "zf", 33262 ] ] 
+193 [ [ "odd", 167725 ], [ "tt", 136216 ], [ "zf", 33423 ] ] 
+194 [ [ "odd", 168558 ], [ "tt", 136874 ], [ "zf", 33583 ] ] 
+195 [ [ "odd", 169383 ], [ "tt", 137536 ], [ "zf", 33746 ] ] 
+196 [ [ "odd", 170195 ], [ "tt", 138208 ], [ "zf", 33911 ] ] 
+197 [ [ "odd", 171021 ], [ "tt", 138871 ], [ "zf", 34070 ] ] 
+198 [ [ "odd", 171850 ], [ "tt", 139531 ], [ "zf", 34228 ] ] 
+199 [ [ "odd", 172674 ], [ "tt", 140194 ], [ "zf", 34387 ] ] 
+200 [ [ "odd", 173489 ], [ "tt", 140863 ], [ "zf", 34548 ] ] 
+201 [ [ "odd", 174303 ], [ "tt", 141533 ], [ "zf", 34708 ] ] 
+202 [ [ "odd", 175129 ], [ "tt", 142192 ], [ "zf", 34866 ] ] 
+203 [ [ "odd", 175934 ], [ "tt", 142866 ], [ "zf", 35029 ] ] 
+204 [ [ "odd", 176745 ], [ "tt", 143537 ], [ "zf", 35188 ] ] 
+205 [ [ "odd", 177556 ], [ "tt", 144207 ], [ "zf", 35347 ] ] 
+206 [ [ "odd", 178366 ], [ "tt", 144878 ], [ "zf", 35505 ] ] 
+207 [ [ "odd", 179171 ], [ "tt", 145548 ], [ "zf", 35668 ] ] 
+208 [ [ "odd", 179974 ], [ "tt", 146221 ], [ "zf", 35829 ] ] 
+209 [ [ "odd", 180783 ], [ "tt", 146887 ], [ "zf", 35990 ] ] 
+210 [ [ "odd", 181593 ], [ "tt", 147554 ], [ "zf", 36148 ] ] 
+211 [ [ "odd", 182405 ], [ "tt", 148220 ], [ "zf", 36304 ] ] 
+212 [ [ "odd", 183224 ], [ "tt", 148879 ], [ "zf", 36459 ] ] 
+213 [ [ "odd", 184028 ], [ "tt", 149547 ], [ "zf", 36619 ] ] 
+214 [ [ "odd", 184846 ], [ "tt", 150204 ], [ "zf", 36775 ] ] 
+215 [ [ "odd", 185654 ], [ "tt", 150869 ], [ "zf", 36932 ] ] 
+216 [ [ "odd", 186465 ], [ "tt", 151528 ], [ "zf", 37091 ] ] 
+217 [ [ "odd", 187268 ], [ "tt", 152195 ], [ "zf", 37249 ] ] 
+218 [ [ "odd", 188086 ], [ "tt", 152852 ], [ "zf", 37401 ] ] 
+219 [ [ "odd", 188889 ], [ "tt", 153519 ], [ "zf", 37557 ] ] 
+220 [ [ "odd", 189701 ], [ "tt", 154178 ], [ "zf", 37711 ] ] 
+221 [ [ "odd", 190504 ], [ "tt", 154842 ], [ "zf", 37868 ] ] 
+222 [ [ "odd", 191312 ], [ "tt", 155503 ], [ "zf", 38022 ] ] 
+223 [ [ "odd", 192115 ], [ "tt", 156168 ], [ "zf", 38176 ] ] 
+224 [ [ "odd", 192931 ], [ "tt", 156822 ], [ "zf", 38327 ] ] 
+225 [ [ "odd", 193742 ], [ "tt", 157474 ], [ "zf", 38484 ] ] 
+226 [ [ "odd", 194557 ], [ "tt", 158125 ], [ "zf", 38637 ] ] 
+227 [ [ "odd", 195351 ], [ "tt", 158790 ], [ "zf", 38796 ] ] 
+228 [ [ "odd", 196159 ], [ "tt", 159446 ], [ "zf", 38949 ] ] 
+229 [ [ "odd", 196963 ], [ "tt", 160104 ], [ "zf", 39103 ] ] 
+230 [ [ "odd", 197758 ], [ "tt", 160768 ], [ "zf", 39259 ] ] 
+231 [ [ "odd", 198549 ], [ "tt", 161432 ], [ "zf", 39418 ] ] 
+232 [ [ "odd", 199356 ], [ "tt", 162087 ], [ "zf", 39569 ] ] 
+233 [ [ "odd", 200126 ], [ "tt", 162766 ], [ "zf", 39732 ] ] 
+234 [ [ "odd", 200925 ], [ "tt", 163425 ], [ "zf", 39885 ] ] 
+235 [ [ "odd", 201733 ], [ "tt", 164076 ], [ "zf", 40036 ] ] 
+236 [ [ "odd", 202528 ], [ "tt", 164735 ], [ "zf", 40191 ] ] 
+237 [ [ "odd", 203338 ], [ "tt", 165382 ], [ "zf", 40342 ] ] 
+238 [ [ "odd", 204137 ], [ "tt", 166038 ], [ "zf", 40494 ] ] 
+239 [ [ "odd", 204954 ], [ "tt", 166678 ], [ "zf", 40643 ] ] 
+240 [ [ "odd", 205741 ], [ "tt", 167341 ], [ "zf", 40798 ] ] 
+241 [ [ "odd", 206534 ], [ "tt", 167998 ], [ "zf", 40952 ] ] 
+242 [ [ "odd", 207329 ], [ "tt", 168653 ], [ "zf", 41105 ] ] 
+243 [ [ "odd", 208124 ], [ "tt", 169308 ], [ "zf", 41257 ] ] 
+244 [ [ "odd", 208930 ], [ "tt", 169952 ], [ "zf", 41408 ] ] 
+245 [ [ "odd", 209729 ], [ "tt", 170603 ], [ "zf", 41558 ] ] 
+246 [ [ "odd", 210535 ], [ "tt", 171247 ], [ "zf", 41707 ] ] 
+247 [ [ "odd", 211323 ], [ "tt", 171907 ], [ "zf", 41857 ] ] 
+248 [ [ "odd", 212116 ], [ "tt", 172559 ], [ "zf", 42009 ] ] 
+249 [ [ "odd", 212907 ], [ "tt", 173212 ], [ "zf", 42161 ] ] 
+250 [ [ "odd", 213700 ], [ "tt", 173864 ], [ "zf", 42311 ] ] 
+251 [ [ "odd", 214505 ], [ "tt", 174506 ], [ "zf", 42458 ] ] 
+252 [ [ "odd", 215289 ], [ "tt", 175161 ], [ "zf", 42612 ] ] 
+253 [ [ "odd", 216074 ], [ "tt", 175816 ], [ "zf", 42764 ] ] 
+254 [ [ "odd", 216880 ], [ "tt", 176455 ], [ "zf", 42910 ] ] 
+255 [ [ "odd", 217672 ], [ "tt", 177103 ], [ "zf", 43060 ] ] 
+256 [ [ "odd", 218462 ], [ "tt", 177753 ], [ "zf", 43209 ] ] 
+257 [ [ "odd", 219255 ], [ "tt", 178401 ], [ "zf", 43356 ] ] 
+258 [ [ "odd", 220050 ], [ "tt", 179049 ], [ "zf", 43500 ] ] 
+259 [ [ "odd", 220846 ], [ "tt", 179692 ], [ "zf", 43647 ] ] 
+260 [ [ "odd", 221655 ], [ "tt", 180327 ], [ "zf", 43788 ] ] 
+261 [ [ "odd", 222454 ], [ "tt", 180967 ], [ "zf", 43933 ] ] 
+262 [ [ "odd", 223240 ], [ "tt", 181619 ], [ "zf", 44078 ] ] 
+263 [ [ "odd", 224038 ], [ "tt", 182253 ], [ "zf", 44228 ] ] 
+264 [ [ "odd", 224827 ], [ "tt", 182895 ], [ "zf", 44378 ] ] 
+265 [ [ "odd", 225611 ], [ "tt", 183539 ], [ "zf", 44530 ] ] 
+266 [ [ "odd", 226369 ], [ "tt", 184201 ], [ "zf", 44689 ] ] 
+267 [ [ "odd", 227151 ], [ "tt", 184845 ], [ "zf", 44841 ] ] 
+268 [ [ "odd", 227946 ], [ "tt", 185480 ], [ "zf", 44988 ] ] 
+269 [ [ "odd", 228713 ], [ "tt", 186135 ], [ "zf", 45142 ] ] 
+270 [ [ "odd", 229511 ], [ "tt", 186766 ], [ "zf", 45288 ] ] 
+271 [ [ "odd", 230289 ], [ "tt", 187412 ], [ "zf", 45438 ] ] 
+272 [ [ "odd", 231072 ], [ "tt", 188054 ], [ "zf", 45586 ] ] 
+273 [ [ "odd", 231851 ], [ "tt", 188699 ], [ "zf", 45734 ] ] 
+274 [ [ "odd", 232617 ], [ "tt", 189352 ], [ "zf", 45886 ] ] 
+275 [ [ "odd", 233408 ], [ "tt", 189987 ], [ "zf", 46030 ] ] 
+276 [ [ "odd", 234200 ], [ "tt", 190623 ], [ "zf", 46171 ] ] 
+277 [ [ "odd", 234993 ], [ "tt", 191254 ], [ "zf", 46315 ] ] 
+278 [ [ "odd", 235771 ], [ "tt", 191895 ], [ "zf", 46463 ] ] 
+279 [ [ "odd", 236551 ], [ "tt", 192533 ], [ "zf", 46611 ] ] 
+280 [ [ "odd", 237330 ], [ "tt", 193172 ], [ "zf", 46758 ] ] 
+281 [ [ "odd", 238107 ], [ "tt", 193812 ], [ "zf", 46905 ] ] 
+282 [ [ "odd", 238883 ], [ "tt", 194452 ], [ "zf", 47052 ] ] 
+283 [ [ "odd", 239667 ], [ "tt", 195087 ], [ "zf", 47195 ] ] 
+284 [ [ "odd", 240443 ], [ "tt", 195728 ], [ "zf", 47339 ] ] 
+285 [ [ "odd", 241193 ], [ "tt", 196384 ], [ "zf", 47493 ] ] 
+286 [ [ "odd", 241988 ], [ "tt", 197008 ], [ "zf", 47633 ] ] 
+287 [ [ "odd", 242754 ], [ "tt", 197650 ], [ "zf", 47783 ] ] 
+288 [ [ "odd", 243533 ], [ "tt", 198286 ], [ "zf", 47925 ] ] 
+289 [ [ "odd", 244317 ], [ "tt", 198917 ], [ "zf", 48066 ] ] 
+290 [ [ "odd", 245090 ], [ "tt", 199556 ], [ "zf", 48209 ] ] 
+291 [ [ "odd", 245866 ], [ "tt", 200194 ], [ "zf", 48349 ] ] 
+292 [ [ "odd", 246654 ], [ "tt", 200821 ], [ "zf", 48487 ] ] 
+293 [ [ "odd", 247447 ], [ "tt", 201444 ], [ "zf", 48623 ] ] 
+294 [ [ "odd", 248233 ], [ "tt", 202070 ], [ "zf", 48762 ] ] 
+295 [ [ "odd", 249008 ], [ "tt", 202704 ], [ "zf", 48903 ] ] 
+296 [ [ "odd", 249779 ], [ "tt", 203341 ], [ "zf", 49044 ] ] 
+297 [ [ "odd", 250526 ], [ "tt", 203997 ], [ "zf", 49189 ] ] 
+298 [ [ "odd", 251294 ], [ "tt", 204636 ], [ "zf", 49329 ] ] 
+299 [ [ "odd", 252065 ], [ "tt", 205272 ], [ "zf", 49468 ] ] 
+300 [ [ "odd", 252844 ], [ "tt", 205904 ], [ "zf", 49602 ] ] 
+301 [ [ "odd", 253622 ], [ "tt", 206523 ], [ "zf", 49749 ] ] 
+302 [ [ "odd", 254404 ], [ "tt", 207140 ], [ "zf", 49893 ] ] 
+303 [ [ "odd", 255178 ], [ "tt", 207761 ], [ "zf", 50040 ] ] 
+304 [ [ "odd", 255950 ], [ "tt", 208384 ], [ "zf", 50186 ] ] 
+305 [ [ "odd", 256728 ], [ "tt", 209003 ], [ "zf", 50329 ] ] 
+306 [ [ "odd", 257486 ], [ "tt", 209634 ], [ "zf", 50479 ] ] 
+307 [ [ "odd", 258245 ], [ "tt", 210266 ], [ "zf", 50626 ] ] 
+308 [ [ "odd", 259002 ], [ "tt", 210898 ], [ "zf", 50774 ] ] 
+309 [ [ "odd", 259759 ], [ "tt", 211529 ], [ "zf", 50922 ] ] 
+310 [ [ "odd", 260510 ], [ "tt", 212166 ], [ "zf", 51069 ] ] 
+311 [ [ "odd", 261268 ], [ "tt", 212798 ], [ "zf", 51213 ] ] 
+312 [ [ "odd", 262038 ], [ "tt", 213421 ], [ "zf", 51353 ] ] 
+313 [ [ "odd", 262777 ], [ "tt", 214063 ], [ "zf", 51504 ] ] 
+314 [ [ "odd", 263529 ], [ "tt", 214694 ], [ "zf", 51652 ] ] 
+315 [ [ "odd", 264284 ], [ "tt", 215323 ], [ "zf", 51798 ] ] 
+316 [ [ "odd", 265042 ], [ "tt", 215951 ], [ "zf", 51941 ] ] 
+317 [ [ "odd", 265811 ], [ "tt", 216568 ], [ "zf", 52083 ] ] 
+318 [ [ "odd", 266567 ], [ "tt", 217196 ], [ "zf", 52226 ] ] 
+319 [ [ "odd", 267324 ], [ "tt", 217822 ], [ "zf", 52369 ] ] 
+320 [ [ "odd", 268091 ], [ "tt", 218440 ], [ "zf", 52509 ] ] 
+321 [ [ "odd", 268851 ], [ "tt", 219064 ], [ "zf", 52649 ] ] 
+322 [ [ "odd", 269619 ], [ "tt", 219682 ], [ "zf", 52786 ] ] 
+323 [ [ "odd", 270382 ], [ "tt", 220304 ], [ "zf", 52923 ] ] 
+324 [ [ "odd", 271152 ], [ "tt", 220920 ], [ "zf", 53058 ] ] 
+325 [ [ "odd", 271905 ], [ "tt", 221546 ], [ "zf", 53199 ] ] 
+326 [ [ "odd", 272668 ], [ "tt", 222163 ], [ "zf", 53338 ] ] 
+327 [ [ "odd", 273422 ], [ "tt", 222788 ], [ "zf", 53477 ] ] 
+328 [ [ "odd", 274185 ], [ "tt", 223406 ], [ "zf", 53613 ] ] 
+329 [ [ "odd", 274958 ], [ "tt", 224016 ], [ "zf", 53746 ] ] 
+330 [ [ "odd", 275724 ], [ "tt", 224629 ], [ "zf", 53882 ] ] 
+331 [ [ "odd", 276491 ], [ "tt", 225243 ], [ "zf", 54015 ] ] 
+332 [ [ "odd", 277257 ], [ "tt", 225853 ], [ "zf", 54152 ] ] 
+333 [ [ "odd", 278001 ], [ "tt", 226481 ], [ "zf", 54292 ] ] 
+334 [ [ "odd", 278752 ], [ "tt", 227105 ], [ "zf", 54428 ] ] 
+335 [ [ "odd", 279503 ], [ "tt", 227725 ], [ "zf", 54567 ] ] 
+336 [ [ "odd", 280247 ], [ "tt", 228351 ], [ "zf", 54706 ] ] 
+337 [ [ "odd", 280997 ], [ "tt", 228973 ], [ "zf", 54842 ] ] 
+338 [ [ "odd", 281750 ], [ "tt", 229592 ], [ "zf", 54977 ] ] 
+339 [ [ "odd", 282505 ], [ "tt", 230210 ], [ "zf", 55110 ] ] 
+340 [ [ "odd", 283257 ], [ "tt", 230830 ], [ "zf", 55243 ] ] 
+341 [ [ "odd", 284006 ], [ "tt", 231450 ], [ "zf", 55378 ] ] 
+342 [ [ "odd", 284768 ], [ "tt", 232063 ], [ "zf", 55506 ] ] 
+343 [ [ "odd", 285510 ], [ "tt", 232686 ], [ "zf", 55643 ] ] 
+344 [ [ "odd", 286259 ], [ "tt", 233304 ], [ "zf", 55777 ] ] 
+345 [ [ "odd", 287019 ], [ "tt", 233916 ], [ "zf", 55905 ] ] 
+346 [ [ "odd", 287766 ], [ "tt", 234536 ], [ "zf", 56037 ] ] 
+347 [ [ "odd", 288517 ], [ "tt", 235151 ], [ "zf", 56169 ] ] 
+348 [ [ "odd", 289268 ], [ "tt", 235767 ], [ "zf", 56299 ] ] 
+349 [ [ "odd", 289986 ], [ "tt", 236408 ], [ "zf", 56436 ] ] 
+350 [ [ "odd", 290729 ], [ "tt", 237030 ], [ "zf", 56566 ] ] 
+351 [ [ "odd", 291482 ], [ "tt", 237628 ], [ "zf", 56709 ] ] 
+352 [ [ "odd", 292233 ], [ "tt", 238229 ], [ "zf", 56850 ] ] 
+353 [ [ "odd", 292972 ], [ "tt", 238839 ], [ "zf", 56993 ] ] 
+354 [ [ "odd", 293711 ], [ "tt", 239449 ], [ "zf", 57135 ] ] 
+355 [ [ "odd", 294453 ], [ "tt", 240054 ], [ "zf", 57278 ] ] 
+356 [ [ "odd", 295170 ], [ "tt", 240681 ], [ "zf", 57423 ] ] 
+357 [ [ "odd", 295921 ], [ "tt", 241282 ], [ "zf", 57559 ] ] 
+358 [ [ "odd", 296665 ], [ "tt", 241888 ], [ "zf", 57696 ] ] 
+359 [ [ "odd", 297406 ], [ "tt", 242493 ], [ "zf", 57836 ] ] 
+360 [ [ "odd", 298148 ], [ "tt", 243101 ], [ "zf", 57971 ] ] 
+361 [ [ "odd", 298902 ], [ "tt", 243698 ], [ "zf", 58104 ] ] 
+362 [ [ "odd", 299648 ], [ "tt", 244300 ], [ "zf", 58239 ] ] 
+363 [ [ "odd", 300376 ], [ "tt", 244912 ], [ "zf", 58381 ] ] 
+364 [ [ "odd", 301123 ], [ "tt", 245510 ], [ "zf", 58517 ] ] 
+365 [ [ "odd", 301872 ], [ "tt", 246107 ], [ "zf", 58651 ] ] 
+366 [ [ "odd", 302615 ], [ "tt", 246707 ], [ "zf", 58787 ] ] 
+367 [ [ "odd", 303349 ], [ "tt", 247313 ], [ "zf", 58925 ] ] 
+368 [ [ "odd", 304085 ], [ "tt", 247918 ], [ "zf", 59061 ] ] 
+369 [ [ "odd", 304818 ], [ "tt", 248526 ], [ "zf", 59196 ] ] 
+370 [ [ "odd", 305544 ], [ "tt", 249138 ], [ "zf", 59333 ] ] 
+371 [ [ "odd", 306281 ], [ "tt", 249743 ], [ "zf", 59465 ] ] 
+372 [ [ "odd", 307022 ], [ "tt", 250343 ], [ "zf", 59597 ] ] 
+373 [ [ "odd", 307765 ], [ "tt", 250944 ], [ "zf", 59725 ] ] 
+374 [ [ "odd", 308504 ], [ "tt", 251544 ], [ "zf", 59857 ] ] 
+375 [ [ "odd", 309234 ], [ "tt", 252151 ], [ "zf", 59990 ] ] 
+376 [ [ "odd", 309965 ], [ "tt", 252757 ], [ "zf", 60122 ] ] 
+377 [ [ "odd", 310699 ], [ "tt", 253360 ], [ "zf", 60253 ] ] 
+378 [ [ "odd", 311435 ], [ "tt", 253961 ], [ "zf", 60383 ] ] 
+379 [ [ "odd", 312163 ], [ "tt", 254569 ], [ "zf", 60513 ] ] 
+380 [ [ "odd", 312893 ], [ "tt", 255175 ], [ "zf", 60642 ] ] 
+381 [ [ "odd", 313628 ], [ "tt", 255776 ], [ "zf", 60770 ] ] 
+382 [ [ "odd", 314351 ], [ "tt", 256385 ], [ "zf", 60901 ] ] 
+383 [ [ "odd", 315075 ], [ "tt", 256993 ], [ "zf", 61031 ] ] 
+384 [ [ "odd", 315807 ], [ "tt", 257593 ], [ "zf", 61160 ] ] 
+385 [ [ "odd", 316536 ], [ "tt", 258196 ], [ "zf", 61288 ] ] 
+386 [ [ "odd", 317260 ], [ "tt", 258803 ], [ "zf", 61416 ] ] 
+387 [ [ "odd", 317989 ], [ "tt", 259406 ], [ "zf", 61542 ] ] 
+388 [ [ "odd", 318721 ], [ "tt", 260005 ], [ "zf", 61668 ] ] 
+389 [ [ "odd", 319454 ], [ "tt", 260603 ], [ "zf", 61793 ] ] 
+390 [ [ "odd", 320177 ], [ "tt", 261208 ], [ "zf", 61920 ] ] 
+391 [ [ "odd", 320909 ], [ "tt", 261806 ], [ "zf", 62044 ] ] 
+392 [ [ "odd", 321654 ], [ "tt", 262396 ], [ "zf", 62162 ] ] 
+393 [ [ "odd", 322378 ], [ "tt", 263001 ], [ "zf", 62285 ] ] 
+394 [ [ "odd", 323099 ], [ "tt", 263607 ], [ "zf", 62409 ] ] 
+395 [ [ "odd", 323825 ], [ "tt", 264209 ], [ "zf", 62531 ] ] 
+396 [ [ "odd", 324544 ], [ "tt", 264817 ], [ "zf", 62653 ] ] 
+397 [ [ "odd", 325272 ], [ "tt", 265416 ], [ "zf", 62774 ] ] 
+398 [ [ "odd", 326002 ], [ "tt", 266012 ], [ "zf", 62895 ] ] 
+399 [ [ "odd", 326724 ], [ "tt", 266616 ], [ "zf", 63015 ] ] 
+400 [ [ "odd", 327435 ], [ "tt", 267209 ], [ "zf", 63156 ] ] 
+401 [ [ "odd", 328159 ], [ "tt", 267794 ], [ "zf", 63291 ] ] 
+402 [ [ "odd", 328874 ], [ "tt", 268385 ], [ "zf", 63428 ] ] 
+403 [ [ "odd", 329589 ], [ "tt", 268976 ], [ "zf", 63564 ] ] 
+404 [ [ "odd", 330300 ], [ "tt", 269569 ], [ "zf", 63701 ] ] 
+405 [ [ "odd", 331014 ], [ "tt", 270161 ], [ "zf", 63835 ] ] 
+406 [ [ "odd", 331726 ], [ "tt", 270754 ], [ "zf", 63969 ] ] 
+407 [ [ "odd", 332447 ], [ "tt", 271338 ], [ "zf", 64102 ] ] 
+408 [ [ "odd", 333168 ], [ "tt", 271923 ], [ "zf", 64233 ] ] 
+409 [ [ "odd", 333886 ], [ "tt", 272507 ], [ "zf", 64367 ] ] 
+410 [ [ "odd", 334606 ], [ "tt", 273092 ], [ "zf", 64497 ] ] 
+411 [ [ "odd", 335327 ], [ "tt", 273677 ], [ "zf", 64625 ] ] 
+412 [ [ "odd", 336037 ], [ "tt", 274269 ], [ "zf", 64756 ] ] 
+413 [ [ "odd", 336723 ], [ "tt", 274877 ], [ "zf", 64894 ] ] 
+414 [ [ "odd", 337441 ], [ "tt", 275462 ], [ "zf", 65022 ] ] 
+415 [ [ "odd", 338149 ], [ "tt", 276053 ], [ "zf", 65153 ] ] 
+416 [ [ "odd", 338854 ], [ "tt", 276646 ], [ "zf", 65284 ] ] 
+417 [ [ "odd", 339562 ], [ "tt", 277237 ], [ "zf", 65413 ] ] 
+418 [ [ "odd", 340268 ], [ "tt", 277829 ], [ "zf", 65542 ] ] 
+419 [ [ "odd", 340981 ], [ "tt", 278416 ], [ "zf", 65668 ] ] 
+420 [ [ "odd", 341699 ], [ "tt", 278999 ], [ "zf", 65792 ] ] 
+421 [ [ "odd", 342417 ], [ "tt", 279581 ], [ "zf", 65916 ] ] 
+422 [ [ "odd", 343128 ], [ "tt", 280167 ], [ "zf", 66042 ] ] 
+423 [ [ "odd", 343831 ], [ "tt", 280759 ], [ "zf", 66169 ] ] 
+424 [ [ "odd", 344514 ], [ "tt", 281367 ], [ "zf", 66299 ] ] 
+425 [ [ "odd", 345232 ], [ "tt", 281950 ], [ "zf", 66418 ] ] 
+426 [ [ "odd", 345945 ], [ "tt", 282534 ], [ "zf", 66540 ] ] 
+427 [ [ "odd", 346646 ], [ "tt", 283125 ], [ "zf", 66666 ] ] 
+428 [ [ "odd", 347359 ], [ "tt", 283709 ], [ "zf", 66786 ] ] 
+429 [ [ "odd", 348062 ], [ "tt", 284299 ], [ "zf", 66909 ] ] 
+430 [ [ "odd", 348766 ], [ "tt", 284889 ], [ "zf", 67030 ] ] 
+431 [ [ "odd", 349469 ], [ "tt", 285479 ], [ "zf", 67151 ] ] 
+432 [ [ "odd", 350168 ], [ "tt", 286071 ], [ "zf", 67273 ] ] 
+433 [ [ "odd", 350869 ], [ "tt", 286661 ], [ "zf", 67394 ] ] 
+434 [ [ "odd", 351568 ], [ "tt", 287252 ], [ "zf", 67515 ] ] 
+435 [ [ "odd", 352266 ], [ "tt", 287843 ], [ "zf", 67636 ] ] 
+436 [ [ "odd", 352976 ], [ "tt", 288426 ], [ "zf", 67752 ] ] 
+437 [ [ "odd", 353674 ], [ "tt", 289018 ], [ "zf", 67870 ] ] 
+438 [ [ "odd", 354373 ], [ "tt", 289609 ], [ "zf", 67987 ] ] 
+439 [ [ "odd", 355069 ], [ "tt", 290201 ], [ "zf", 68105 ] ] 
+440 [ [ "odd", 355775 ], [ "tt", 290786 ], [ "zf", 68219 ] ] 
+441 [ [ "odd", 356472 ], [ "tt", 291378 ], [ "zf", 68334 ] ] 
+442 [ [ "odd", 357164 ], [ "tt", 291949 ], [ "zf", 68474 ] ] 
+443 [ [ "odd", 357869 ], [ "tt", 292512 ], [ "zf", 68608 ] ] 
+444 [ [ "odd", 358564 ], [ "tt", 293082 ], [ "zf", 68744 ] ] 
+445 [ [ "odd", 359259 ], [ "tt", 293652 ], [ "zf", 68879 ] ] 
+446 [ [ "odd", 359951 ], [ "tt", 294223 ], [ "zf", 69015 ] ] 
+447 [ [ "odd", 360647 ], [ "tt", 294792 ], [ "zf", 69148 ] ] 
+448 [ [ "odd", 361341 ], [ "tt", 295362 ], [ "zf", 69281 ] ] 
+449 [ [ "odd", 362041 ], [ "tt", 295926 ], [ "zf", 69413 ] ] 
+450 [ [ "odd", 362743 ], [ "tt", 296489 ], [ "zf", 69543 ] ] 
+451 [ [ "odd", 363437 ], [ "tt", 297058 ], [ "zf", 69674 ] ] 
+452 [ [ "odd", 364138 ], [ "tt", 297621 ], [ "zf", 69803 ] ] 
+453 [ [ "odd", 364830 ], [ "tt", 298190 ], [ "zf", 69934 ] ] 
+454 [ [ "odd", 365500 ], [ "tt", 298774 ], [ "zf", 70071 ] ] 
+455 [ [ "odd", 366195 ], [ "tt", 299338 ], [ "zf", 70202 ] ] 
+456 [ [ "odd", 366893 ], [ "tt", 299901 ], [ "zf", 70330 ] ] 
+457 [ [ "odd", 367580 ], [ "tt", 300472 ], [ "zf", 70460 ] ] 
+458 [ [ "odd", 368278 ], [ "tt", 301036 ], [ "zf", 70585 ] ] 
+459 [ [ "odd", 368974 ], [ "tt", 301599 ], [ "zf", 70712 ] ] 
+460 [ [ "odd", 369662 ], [ "tt", 302169 ], [ "zf", 70839 ] ] 
+461 [ [ "odd", 370349 ], [ "tt", 302738 ], [ "zf", 70967 ] ] 
+462 [ [ "odd", 371036 ], [ "tt", 303308 ], [ "zf", 71093 ] ] 
+463 [ [ "odd", 371731 ], [ "tt", 303871 ], [ "zf", 71217 ] ] 
+464 [ [ "odd", 372428 ], [ "tt", 304433 ], [ "zf", 71339 ] ] 
+465 [ [ "odd", 373126 ], [ "tt", 304996 ], [ "zf", 71458 ] ] 
+466 [ [ "odd", 373795 ], [ "tt", 305578 ], [ "zf", 71586 ] ] 
+467 [ [ "odd", 374491 ], [ "tt", 306141 ], [ "zf", 71705 ] ] 
+468 [ [ "odd", 375175 ], [ "tt", 306709 ], [ "zf", 71830 ] ] 
+469 [ [ "odd", 375869 ], [ "tt", 307271 ], [ "zf", 71950 ] ] 
+470 [ [ "odd", 376552 ], [ "tt", 307839 ], [ "zf", 72074 ] ] 
+471 [ [ "odd", 377246 ], [ "tt", 308401 ], [ "zf", 72192 ] ] 
+472 [ [ "odd", 377929 ], [ "tt", 308970 ], [ "zf", 72313 ] ] 
+473 [ [ "odd", 378614 ], [ "tt", 309538 ], [ "zf", 72432 ] ] 
+474 [ [ "odd", 379295 ], [ "tt", 310107 ], [ "zf", 72553 ] ] 
+475 [ [ "odd", 379975 ], [ "tt", 310675 ], [ "zf", 72675 ] ] 
+476 [ [ "odd", 380657 ], [ "tt", 311243 ], [ "zf", 72794 ] ] 
+477 [ [ "odd", 381346 ], [ "tt", 311806 ], [ "zf", 72910 ] ] 
+478 [ [ "odd", 382027 ], [ "tt", 312374 ], [ "zf", 73028 ] ] 
+479 [ [ "odd", 382707 ], [ "tt", 312943 ], [ "zf", 73145 ] ] 
+480 [ [ "odd", 383387 ], [ "tt", 313512 ], [ "zf", 73261 ] ] 
+481 [ [ "odd", 384065 ], [ "tt", 314081 ], [ "zf", 73378 ] ] 
+482 [ [ "odd", 384752 ], [ "tt", 314644 ], [ "zf", 73491 ] ] 
+483 [ [ "odd", 385430 ], [ "tt", 315214 ], [ "zf", 73605 ] ] 
+484 [ [ "odd", 386109 ], [ "tt", 315773 ], [ "zf", 73728 ] ] 
+485 [ [ "odd", 386781 ], [ "tt", 316338 ], [ "zf", 73851 ] ] 
+486 [ [ "odd", 387460 ], [ "tt", 316897 ], [ "zf", 73972 ] ] 
+487 [ [ "odd", 388132 ], [ "tt", 317462 ], [ "zf", 74093 ] ] 
+488 [ [ "odd", 388804 ], [ "tt", 318028 ], [ "zf", 74212 ] ] 
+489 [ [ "odd", 389480 ], [ "tt", 318587 ], [ "zf", 74333 ] ] 
+490 [ [ "odd", 390132 ], [ "tt", 319165 ], [ "zf", 74458 ] ] 
+491 [ [ "odd", 390812 ], [ "tt", 319723 ], [ "zf", 74574 ] ] 
+492 [ [ "odd", 391492 ], [ "tt", 320281 ], [ "zf", 74689 ] ] 
+493 [ [ "odd", 392170 ], [ "tt", 320840 ], [ "zf", 74804 ] ] 
+494 [ [ "odd", 392839 ], [ "tt", 321405 ], [ "zf", 74921 ] ] 
+495 [ [ "odd", 393507 ], [ "tt", 321969 ], [ "zf", 75039 ] ] 
+496 [ [ "odd", 394180 ], [ "tt", 322528 ], [ "zf", 75156 ] ] 
+497 [ [ "odd", 394847 ], [ "tt", 323093 ], [ "zf", 75272 ] ] 
+498 [ [ "odd", 395510 ], [ "tt", 323658 ], [ "zf", 75391 ] ] 
+499 [ [ "odd", 396179 ], [ "tt", 324222 ], [ "zf", 75504 ] ] 
+500 [ [ "odd", 396847 ], [ "tt", 324786 ], [ "zf", 75617 ] ] 
+501 [ [ "odd", 397515 ], [ "tt", 325350 ], [ "zf", 75729 ] ] 
+502 [ [ "odd", 398186 ], [ "tt", 325909 ], [ "zf", 75842 ] ] 
+503 [ [ "odd", 398851 ], [ "tt", 326474 ], [ "zf", 75954 ] ] 
+504 [ [ "odd", 399512 ], [ "tt", 327039 ], [ "zf", 76069 ] ] 
+505 [ [ "odd", 400182 ], [ "tt", 327598 ], [ "zf", 76180 ] ] 
+506 [ [ "odd", 400855 ], [ "tt", 328156 ], [ "zf", 76288 ] ] 
+507 [ [ "odd", 401520 ], [ "tt", 328720 ], [ "zf", 76397 ] ] 
+508 [ [ "odd", 402191 ], [ "tt", 329278 ], [ "zf", 76505 ] ] 
+509 [ [ "odd", 402853 ], [ "tt", 329843 ], [ "zf", 76614 ] ] 
+510 [ [ "odd", 403511 ], [ "tt", 330408 ], [ "zf", 76726 ] ] 
+511 [ [ "odd", 404172 ], [ "tt", 330972 ], [ "zf", 76835 ] ] 
+512 [ [ "odd", 404832 ], [ "tt", 331536 ], [ "zf", 76944 ] ] 
+513 [ [ "odd", 405491 ], [ "tt", 332100 ], [ "zf", 77053 ] ] 
+514 [ [ "odd", 406158 ], [ "tt", 332658 ], [ "zf", 77159 ] ] 
+515 [ [ "odd", 406817 ], [ "tt", 333222 ], [ "zf", 77266 ] ] 
+516 [ [ "odd", 407476 ], [ "tt", 333786 ], [ "zf", 77372 ] ] 
+517 [ [ "odd", 408133 ], [ "tt", 334350 ], [ "zf", 77479 ] ] 
+518 [ [ "odd", 408798 ], [ "tt", 334908 ], [ "zf", 77583 ] ] 
+519 [ [ "odd", 409455 ], [ "tt", 335472 ], [ "zf", 77688 ] ] 
+520 [ [ "odd", 410119 ], [ "tt", 336030 ], [ "zf", 77791 ] ] 
+521 [ [ "odd", 410775 ], [ "tt", 336594 ], [ "zf", 77895 ] ] 
+522 [ [ "odd", 411440 ], [ "tt", 337152 ], [ "zf", 77995 ] ] 
+523 [ [ "odd", 412096 ], [ "tt", 337716 ], [ "zf", 78097 ] ] 
+524 [ [ "odd", 412736 ], [ "tt", 338292 ], [ "zf", 78202 ] ] 
+525 [ [ "odd", 413400 ], [ "tt", 338850 ], [ "zf", 78300 ] ] 
+526 [ [ "odd", 414024 ], [ "tt", 339375 ], [ "zf", 78470 ] ] 
+527 [ [ "odd", 414648 ], [ "tt", 339900 ], [ "zf", 78639 ] ] 
+528 [ [ "odd", 415272 ], [ "tt", 340425 ], [ "zf", 78807 ] ] 
+529 [ [ "odd", 415896 ], [ "tt", 340950 ], [ "zf", 78974 ] ] 
+530 [ [ "odd", 416517 ], [ "tt", 341475 ], [ "zf", 79143 ] ] 
+531 [ [ "odd", 417138 ], [ "tt", 342000 ], [ "zf", 79311 ] ] 
+532 [ [ "odd", 417759 ], [ "tt", 342525 ], [ "zf", 79478 ] ] 
+533 [ [ "odd", 418380 ], [ "tt", 343050 ], [ "zf", 79644 ] ] 
+534 [ [ "odd", 419002 ], [ "tt", 343573 ], [ "zf", 79810 ] ] 
+535 [ [ "odd", 419622 ], [ "tt", 344097 ], [ "zf", 79976 ] ] 
+536 [ [ "odd", 420244 ], [ "tt", 344620 ], [ "zf", 80140 ] ] 
+537 [ [ "odd", 420864 ], [ "tt", 345144 ], [ "zf", 80304 ] ] 
+538 [ [ "odd", 421481 ], [ "tt", 345669 ], [ "zf", 80469 ] ] 
+539 [ [ "odd", 422098 ], [ "tt", 346194 ], [ "zf", 80633 ] ] 
+540 [ [ "odd", 422754 ], [ "tt", 346689 ], [ "zf", 80787 ] ] 
+541 [ [ "odd", 423411 ], [ "tt", 347183 ], [ "zf", 80940 ] ] 
+542 [ [ "odd", 424067 ], [ "tt", 347678 ], [ "zf", 81092 ] ] 
+543 [ [ "odd", 424688 ], [ "tt", 348201 ], [ "zf", 81250 ] ] 
+544 [ [ "odd", 425305 ], [ "tt", 348725 ], [ "zf", 81410 ] ] 
+545 [ [ "odd", 425959 ], [ "tt", 349220 ], [ "zf", 81561 ] ] 
+546 [ [ "odd", 426576 ], [ "tt", 349744 ], [ "zf", 81719 ] ] 
+547 [ [ "odd", 427232 ], [ "tt", 350238 ], [ "zf", 81867 ] ] 
+548 [ [ "odd", 427887 ], [ "tt", 350733 ], [ "zf", 82014 ] ] 
+549 [ [ "odd", 428537 ], [ "tt", 351228 ], [ "zf", 82165 ] ] 
+550 [ [ "odd", 429188 ], [ "tt", 351723 ], [ "zf", 82314 ] ] 
+551 [ [ "odd", 429842 ], [ "tt", 352216 ], [ "zf", 82461 ] ] 
+552 [ [ "odd", 430495 ], [ "tt", 352709 ], [ "zf", 82608 ] ] 
+553 [ [ "odd", 431144 ], [ "tt", 353203 ], [ "zf", 82757 ] ] 
+554 [ [ "odd", 431754 ], [ "tt", 353728 ], [ "zf", 82913 ] ] 
+555 [ [ "odd", 432403 ], [ "tt", 354223 ], [ "zf", 83059 ] ] 
+556 [ [ "odd", 433018 ], [ "tt", 354745 ], [ "zf", 83211 ] ] 
+557 [ [ "odd", 433666 ], [ "tt", 355240 ], [ "zf", 83356 ] ] 
+558 [ [ "odd", 434276 ], [ "tt", 355765 ], [ "zf", 83508 ] ] 
+559 [ [ "odd", 434926 ], [ "tt", 356259 ], [ "zf", 83650 ] ] 
+560 [ [ "odd", 435570 ], [ "tt", 356747 ], [ "zf", 83803 ] ] 
+561 [ [ "odd", 436217 ], [ "tt", 357234 ], [ "zf", 83953 ] ] 
+562 [ [ "odd", 436864 ], [ "tt", 357721 ], [ "zf", 84102 ] ] 
+563 [ [ "odd", 437503 ], [ "tt", 358212 ], [ "zf", 84254 ] ] 
+564 [ [ "odd", 438111 ], [ "tt", 358728 ], [ "zf", 84411 ] ] 
+565 [ [ "odd", 438754 ], [ "tt", 359216 ], [ "zf", 84560 ] ] 
+566 [ [ "odd", 439399 ], [ "tt", 359703 ], [ "zf", 84707 ] ] 
+567 [ [ "odd", 440008 ], [ "tt", 360218 ], [ "zf", 84861 ] ] 
+568 [ [ "odd", 440652 ], [ "tt", 360705 ], [ "zf", 85007 ] ] 
+569 [ [ "odd", 441296 ], [ "tt", 361192 ], [ "zf", 85152 ] ] 
+570 [ [ "odd", 441935 ], [ "tt", 361682 ], [ "zf", 85298 ] ] 
+571 [ [ "odd", 442538 ], [ "tt", 362199 ], [ "zf", 85452 ] ] 
+572 [ [ "odd", 443180 ], [ "tt", 362687 ], [ "zf", 85595 ] ] 
+573 [ [ "odd", 443824 ], [ "tt", 363174 ], [ "zf", 85736 ] ] 
+574 [ [ "odd", 444423 ], [ "tt", 363693 ], [ "zf", 85889 ] ] 
+575 [ [ "odd", 445018 ], [ "tt", 364213 ], [ "zf", 86044 ] ] 
+576 [ [ "odd", 445620 ], [ "tt", 364729 ], [ "zf", 86195 ] ] 
+577 [ [ "odd", 446258 ], [ "tt", 365218 ], [ "zf", 86336 ] ] 
+578 [ [ "odd", 446856 ], [ "tt", 365737 ], [ "zf", 86486 ] ] 
+579 [ [ "odd", 447456 ], [ "tt", 366253 ], [ "zf", 86636 ] ] 
+580 [ [ "odd", 448094 ], [ "tt", 366741 ], [ "zf", 86775 ] ] 
+581 [ [ "odd", 448690 ], [ "tt", 367259 ], [ "zf", 86925 ] ] 
+582 [ [ "odd", 449326 ], [ "tt", 367741 ], [ "zf", 87070 ] ] 
+583 [ [ "odd", 449960 ], [ "tt", 368222 ], [ "zf", 87217 ] ] 
+584 [ [ "odd", 450556 ], [ "tt", 368734 ], [ "zf", 87370 ] ] 
+585 [ [ "odd", 451151 ], [ "tt", 369246 ], [ "zf", 87523 ] ] 
+586 [ [ "odd", 451780 ], [ "tt", 369729 ], [ "zf", 87670 ] ] 
+587 [ [ "odd", 452379 ], [ "tt", 370236 ], [ "zf", 87822 ] ] 
+588 [ [ "odd", 452975 ], [ "tt", 370745 ], [ "zf", 87974 ] ] 
+589 [ [ "odd", 453574 ], [ "tt", 371252 ], [ "zf", 88124 ] ] 
+590 [ [ "odd", 454202 ], [ "tt", 371735 ], [ "zf", 88268 ] ] 
+591 [ [ "odd", 454834 ], [ "tt", 372216 ], [ "zf", 88409 ] ] 
+592 [ [ "odd", 455462 ], [ "tt", 372699 ], [ "zf", 88551 ] ] 
+593 [ [ "odd", 456088 ], [ "tt", 373180 ], [ "zf", 88696 ] ] 
+594 [ [ "odd", 456715 ], [ "tt", 373661 ], [ "zf", 88839 ] ] 
+595 [ [ "odd", 457313 ], [ "tt", 374164 ], [ "zf", 88988 ] ] 
+596 [ [ "odd", 457888 ], [ "tt", 374680 ], [ "zf", 89146 ] ] 
+597 [ [ "odd", 458513 ], [ "tt", 375162 ], [ "zf", 89287 ] ] 
+598 [ [ "odd", 459107 ], [ "tt", 375665 ], [ "zf", 89437 ] ] 
+599 [ [ "odd", 459734 ], [ "tt", 376144 ], [ "zf", 89577 ] ] 
+600 [ [ "odd", 460330 ], [ "tt", 376647 ], [ "zf", 89723 ] ] 
+601 [ [ "odd", 460953 ], [ "tt", 377126 ], [ "zf", 89865 ] ] 
+602 [ [ "odd", 461576 ], [ "tt", 377604 ], [ "zf", 90007 ] ] 
+603 [ [ "odd", 462202 ], [ "tt", 378082 ], [ "zf", 90145 ] ] 
+604 [ [ "odd", 462831 ], [ "tt", 378556 ], [ "zf", 90283 ] ] 
+605 [ [ "odd", 463419 ], [ "tt", 379060 ], [ "zf", 90431 ] ] 
+606 [ [ "odd", 464009 ], [ "tt", 379563 ], [ "zf", 90577 ] ] 
+607 [ [ "odd", 464629 ], [ "tt", 380043 ], [ "zf", 90715 ] ] 
+608 [ [ "odd", 465217 ], [ "tt", 380547 ], [ "zf", 90860 ] ] 
+609 [ [ "odd", 465840 ], [ "tt", 381024 ], [ "zf", 90996 ] ] 
+610 [ [ "odd", 466462 ], [ "tt", 381502 ], [ "zf", 91131 ] ] 
+611 [ [ "odd", 467087 ], [ "tt", 381973 ], [ "zf", 91269 ] ] 
+612 [ [ "odd", 467670 ], [ "tt", 382476 ], [ "zf", 91416 ] ] 
+613 [ [ "odd", 468256 ], [ "tt", 382973 ], [ "zf", 91565 ] ] 
+614 [ [ "odd", 468876 ], [ "tt", 383448 ], [ "zf", 91701 ] ] 
+615 [ [ "odd", 469495 ], [ "tt", 383920 ], [ "zf", 91840 ] ] 
+616 [ [ "odd", 470112 ], [ "tt", 384394 ], [ "zf", 91978 ] ] 
+617 [ [ "odd", 470729 ], [ "tt", 384867 ], [ "zf", 92116 ] ] 
+618 [ [ "odd", 471313 ], [ "tt", 385366 ], [ "zf", 92260 ] ] 
+619 [ [ "odd", 471926 ], [ "tt", 385841 ], [ "zf", 92398 ] ] 
+620 [ [ "odd", 472546 ], [ "tt", 386311 ], [ "zf", 92533 ] ] 
+621 [ [ "odd", 473163 ], [ "tt", 386782 ], [ "zf", 92669 ] ] 
+622 [ [ "odd", 473749 ], [ "tt", 387280 ], [ "zf", 92808 ] ] 
+623 [ [ "odd", 474367 ], [ "tt", 387749 ], [ "zf", 92943 ] ] 
+624 [ [ "odd", 474979 ], [ "tt", 388218 ], [ "zf", 93083 ] ] 
+625 [ [ "odd", 475553 ], [ "tt", 388718 ], [ "zf", 93229 ] ] 
+626 [ [ "odd", 476132 ], [ "tt", 389216 ], [ "zf", 93371 ] ] 
+627 [ [ "odd", 476709 ], [ "tt", 389712 ], [ "zf", 93516 ] ] 
+628 [ [ "odd", 477322 ], [ "tt", 390180 ], [ "zf", 93652 ] ] 
+629 [ [ "odd", 477930 ], [ "tt", 390652 ], [ "zf", 93788 ] ] 
+630 [ [ "odd", 478544 ], [ "tt", 391120 ], [ "zf", 93921 ] ] 
+631 [ [ "odd", 479115 ], [ "tt", 391616 ], [ "zf", 94068 ] ] 
+632 [ [ "odd", 479692 ], [ "tt", 392112 ], [ "zf", 94208 ] ] 
+633 [ [ "odd", 480306 ], [ "tt", 392579 ], [ "zf", 94339 ] ] 
+634 [ [ "odd", 480917 ], [ "tt", 393045 ], [ "zf", 94473 ] ] 
+635 [ [ "odd", 481529 ], [ "tt", 393508 ], [ "zf", 94608 ] ] 
+636 [ [ "odd", 482096 ], [ "tt", 394004 ], [ "zf", 94754 ] ] 
+637 [ [ "odd", 482708 ], [ "tt", 394468 ], [ "zf", 94886 ] ] 
+638 [ [ "odd", 483319 ], [ "tt", 394934 ], [ "zf", 95016 ] ] 
+639 [ [ "odd", 483930 ], [ "tt", 395396 ], [ "zf", 95149 ] ] 
+640 [ [ "odd", 484538 ], [ "tt", 395860 ], [ "zf", 95282 ] ] 
+641 [ [ "odd", 485115 ], [ "tt", 396348 ], [ "zf", 95421 ] ] 
+642 [ [ "odd", 485677 ], [ "tt", 396846 ], [ "zf", 95564 ] ] 
+643 [ [ "odd", 486246 ], [ "tt", 397338 ], [ "zf", 95705 ] ] 
+644 [ [ "odd", 486859 ], [ "tt", 397798 ], [ "zf", 95833 ] ] 
+645 [ [ "odd", 487431 ], [ "tt", 398286 ], [ "zf", 95973 ] ] 
+646 [ [ "odd", 488037 ], [ "tt", 398745 ], [ "zf", 96107 ] ] 
+647 [ [ "odd", 488638 ], [ "tt", 399210 ], [ "zf", 96239 ] ] 
+648 [ [ "odd", 489210 ], [ "tt", 399696 ], [ "zf", 96378 ] ] 
+649 [ [ "odd", 489774 ], [ "tt", 400187 ], [ "zf", 96519 ] ] 
+650 [ [ "odd", 490371 ], [ "tt", 400651 ], [ "zf", 96653 ] ] 
+651 [ [ "odd", 490933 ], [ "tt", 401144 ], [ "zf", 96792 ] ] 
+652 [ [ "odd", 491506 ], [ "tt", 401628 ], [ "zf", 96928 ] ] 
+653 [ [ "odd", 492075 ], [ "tt", 402113 ], [ "zf", 97066 ] ] 
+654 [ [ "odd", 492676 ], [ "tt", 402575 ], [ "zf", 97194 ] ] 
+655 [ [ "odd", 493277 ], [ "tt", 403035 ], [ "zf", 97323 ] ] 
+656 [ [ "odd", 493876 ], [ "tt", 403496 ], [ "zf", 97452 ] ] 
+657 [ [ "odd", 494479 ], [ "tt", 403951 ], [ "zf", 97582 ] ] 
+658 [ [ "odd", 495035 ], [ "tt", 404442 ], [ "zf", 97722 ] ] 
+659 [ [ "odd", 495634 ], [ "tt", 404901 ], [ "zf", 97850 ] ] 
+660 [ [ "odd", 496236 ], [ "tt", 405355 ], [ "zf", 97979 ] ] 
+661 [ [ "odd", 496833 ], [ "tt", 405814 ], [ "zf", 98107 ] ] 
+662 [ [ "odd", 497429 ], [ "tt", 406272 ], [ "zf", 98236 ] ] 
+663 [ [ "odd", 497994 ], [ "tt", 406755 ], [ "zf", 98370 ] ] 
+664 [ [ "odd", 498594 ], [ "tt", 407210 ], [ "zf", 98496 ] ] 
+665 [ [ "odd", 499159 ], [ "tt", 407691 ], [ "zf", 98630 ] ] 
+666 [ [ "odd", 499721 ], [ "tt", 408173 ], [ "zf", 98765 ] ] 
+667 [ [ "odd", 500317 ], [ "tt", 408624 ], [ "zf", 98896 ] ] 
+668 [ [ "odd", 500868 ], [ "tt", 409109 ], [ "zf", 99037 ] ] 
+669 [ [ "odd", 501427 ], [ "tt", 409587 ], [ "zf", 99176 ] ] 
+670 [ [ "odd", 501988 ], [ "tt", 410065 ], [ "zf", 99312 ] ] 
+671 [ [ "odd", 502588 ], [ "tt", 410513 ], [ "zf", 99438 ] ] 
+672 [ [ "odd", 503136 ], [ "tt", 410999 ], [ "zf", 99577 ] ] 
+673 [ [ "odd", 503729 ], [ "tt", 411450 ], [ "zf", 99705 ] ] 
+674 [ [ "odd", 504322 ], [ "tt", 411903 ], [ "zf", 99830 ] ] 
+675 [ [ "odd", 504915 ], [ "tt", 412353 ], [ "zf", 99957 ] ] 
+676 [ [ "odd", 505477 ], [ "tt", 412827 ], [ "zf", 100090 ] ] 
+677 [ [ "odd", 506033 ], [ "tt", 413305 ], [ "zf", 100224 ] ] 
+678 [ [ "odd", 506625 ], [ "tt", 413756 ], [ "zf", 100348 ] ] 
+679 [ [ "odd", 507173 ], [ "tt", 414238 ], [ "zf", 100484 ] ] 
+680 [ [ "odd", 507763 ], [ "tt", 414691 ], [ "zf", 100606 ] ] 
+681 [ [ "odd", 508353 ], [ "tt", 415141 ], [ "zf", 100730 ] ] 
+682 [ [ "odd", 508905 ], [ "tt", 415619 ], [ "zf", 100863 ] ] 
+683 [ [ "odd", 509461 ], [ "tt", 416095 ], [ "zf", 100993 ] ] 
+684 [ [ "odd", 510049 ], [ "tt", 416545 ], [ "zf", 101116 ] ] 
+685 [ [ "odd", 510638 ], [ "tt", 416995 ], [ "zf", 101237 ] ] 
+686 [ [ "odd", 511221 ], [ "tt", 417440 ], [ "zf", 101368 ] ] 
+687 [ [ "odd", 511809 ], [ "tt", 417882 ], [ "zf", 101496 ] ] 
+688 [ [ "odd", 512363 ], [ "tt", 418351 ], [ "zf", 101630 ] ] 
+689 [ [ "odd", 512944 ], [ "tt", 418798 ], [ "zf", 101758 ] ] 
+690 [ [ "odd", 513527 ], [ "tt", 419243 ], [ "zf", 101885 ] ] 
+691 [ [ "odd", 514081 ], [ "tt", 419709 ], [ "zf", 102019 ] ] 
+692 [ [ "odd", 514629 ], [ "tt", 420179 ], [ "zf", 102154 ] ] 
+693 [ [ "odd", 515211 ], [ "tt", 420623 ], [ "zf", 102280 ] ] 
+694 [ [ "odd", 515755 ], [ "tt", 421096 ], [ "zf", 102414 ] ] 
+695 [ [ "odd", 516308 ], [ "tt", 421562 ], [ "zf", 102545 ] ] 
+696 [ [ "odd", 516847 ], [ "tt", 422038 ], [ "zf", 102679 ] ] 
+697 [ [ "odd", 517424 ], [ "tt", 422485 ], [ "zf", 102803 ] ] 
+698 [ [ "odd", 517969 ], [ "tt", 422957 ], [ "zf", 102933 ] ] 
+699 [ [ "odd", 518544 ], [ "tt", 423401 ], [ "zf", 103060 ] ] 
+700 [ [ "odd", 519128 ], [ "tt", 423838 ], [ "zf", 103184 ] ] 
+701 [ [ "odd", 519667 ], [ "tt", 424308 ], [ "zf", 103319 ] ] 
+702 [ [ "odd", 520205 ], [ "tt", 424780 ], [ "zf", 103452 ] ] 
+703 [ [ "odd", 520789 ], [ "tt", 425217 ], [ "zf", 103573 ] ] 
+704 [ [ "odd", 521372 ], [ "tt", 425654 ], [ "zf", 103694 ] ] 
+705 [ [ "odd", 521946 ], [ "tt", 426097 ], [ "zf", 103817 ] ] 
+706 [ [ "odd", 522522 ], [ "tt", 426539 ], [ "zf", 103938 ] ] 
+707 [ [ "odd", 523066 ], [ "tt", 427005 ], [ "zf", 104066 ] ] 
+708 [ [ "odd", 523598 ], [ "tt", 427480 ], [ "zf", 104196 ] ] 
+709 [ [ "odd", 524174 ], [ "tt", 427920 ], [ "zf", 104316 ] ] 
+710 [ [ "odd", 524744 ], [ "tt", 428363 ], [ "zf", 104438 ] ] 
+711 [ [ "odd", 525286 ], [ "tt", 428829 ], [ "zf", 104564 ] ] 
+712 [ [ "odd", 525860 ], [ "tt", 429271 ], [ "zf", 104681 ] ] 
+713 [ [ "odd", 526432 ], [ "tt", 429713 ], [ "zf", 104799 ] ] 
+714 [ [ "odd", 527007 ], [ "tt", 430152 ], [ "zf", 104916 ] ] 
+715 [ [ "odd", 527580 ], [ "tt", 430593 ], [ "zf", 105032 ] ] 
+716 [ [ "odd", 528148 ], [ "tt", 431036 ], [ "zf", 105150 ] ] 
+717 [ [ "odd", 528680 ], [ "tt", 431507 ], [ "zf", 105275 ] ] 
+718 [ [ "odd", 529196 ], [ "tt", 431990 ], [ "zf", 105403 ] ] 
+719 [ [ "odd", 529731 ], [ "tt", 432443 ], [ "zf", 105541 ] ] 
+720 [ [ "odd", 530304 ], [ "tt", 432868 ], [ "zf", 105668 ] ] 
+721 [ [ "odd", 530871 ], [ "tt", 433297 ], [ "zf", 105796 ] ] 
+722 [ [ "odd", 531439 ], [ "tt", 433725 ], [ "zf", 105923 ] ] 
+723 [ [ "odd", 532008 ], [ "tt", 434152 ], [ "zf", 106049 ] ] 
+724 [ [ "odd", 532574 ], [ "tt", 434581 ], [ "zf", 106175 ] ] 
+725 [ [ "odd", 533105 ], [ "tt", 435034 ], [ "zf", 106311 ] ] 
+726 [ [ "odd", 533639 ], [ "tt", 435487 ], [ "zf", 106443 ] ] 
+727 [ [ "odd", 534206 ], [ "tt", 435915 ], [ "zf", 106566 ] ] 
+728 [ [ "odd", 534740 ], [ "tt", 436367 ], [ "zf", 106697 ] ] 
+729 [ [ "odd", 535306 ], [ "tt", 436795 ], [ "zf", 106819 ] ] 
+730 [ [ "odd", 535872 ], [ "tt", 437222 ], [ "zf", 106941 ] ] 
+731 [ [ "odd", 536435 ], [ "tt", 437650 ], [ "zf", 107064 ] ] 
+732 [ [ "odd", 536968 ], [ "tt", 438102 ], [ "zf", 107192 ] ] 
+733 [ [ "odd", 537534 ], [ "tt", 438529 ], [ "zf", 107311 ] ] 
+734 [ [ "odd", 538098 ], [ "tt", 438955 ], [ "zf", 107432 ] ] 
+735 [ [ "odd", 538612 ], [ "tt", 439418 ], [ "zf", 107565 ] ] 
+736 [ [ "odd", 539176 ], [ "tt", 439844 ], [ "zf", 107684 ] ] 
+737 [ [ "odd", 539735 ], [ "tt", 440273 ], [ "zf", 107804 ] ] 
+738 [ [ "odd", 540295 ], [ "tt", 440701 ], [ "zf", 107923 ] ] 
+739 [ [ "odd", 540824 ], [ "tt", 441153 ], [ "zf", 108048 ] ] 
+740 [ [ "odd", 541387 ], [ "tt", 441578 ], [ "zf", 108165 ] ] 
+741 [ [ "odd", 541914 ], [ "tt", 442030 ], [ "zf", 108290 ] ] 
+742 [ [ "odd", 542469 ], [ "tt", 442455 ], [ "zf", 108413 ] ] 
+743 [ [ "odd", 542998 ], [ "tt", 442900 ], [ "zf", 108541 ] ] 
+744 [ [ "odd", 543513 ], [ "tt", 443357 ], [ "zf", 108670 ] ] 
+745 [ [ "odd", 544027 ], [ "tt", 443815 ], [ "zf", 108798 ] ] 
+746 [ [ "odd", 544581 ], [ "tt", 444240 ], [ "zf", 108918 ] ] 
+747 [ [ "odd", 545134 ], [ "tt", 444665 ], [ "zf", 109038 ] ] 
+748 [ [ "odd", 545659 ], [ "tt", 445113 ], [ "zf", 109162 ] ] 
+749 [ [ "odd", 546188 ], [ "tt", 445556 ], [ "zf", 109286 ] ] 
+750 [ [ "odd", 546744 ], [ "tt", 445978 ], [ "zf", 109403 ] ] 
+751 [ [ "odd", 547302 ], [ "tt", 446397 ], [ "zf", 109520 ] ] 
+752 [ [ "odd", 547856 ], [ "tt", 446820 ], [ "zf", 109636 ] ] 
+753 [ [ "odd", 548367 ], [ "tt", 447277 ], [ "zf", 109760 ] ] 
+754 [ [ "odd", 548917 ], [ "tt", 447702 ], [ "zf", 109876 ] ] 
+755 [ [ "odd", 549442 ], [ "tt", 448145 ], [ "zf", 109998 ] ] 
+756 [ [ "odd", 549991 ], [ "tt", 448569 ], [ "zf", 110114 ] ] 
+757 [ [ "odd", 550512 ], [ "tt", 449014 ], [ "zf", 110236 ] ] 
+758 [ [ "odd", 551032 ], [ "tt", 449460 ], [ "zf", 110357 ] ] 
+759 [ [ "odd", 551580 ], [ "tt", 449884 ], [ "zf", 110471 ] ] 
+760 [ [ "odd", 552131 ], [ "tt", 450307 ], [ "zf", 110582 ] ] 
+761 [ [ "odd", 552652 ], [ "tt", 450748 ], [ "zf", 110704 ] ] 
+762 [ [ "odd", 553166 ], [ "tt", 451193 ], [ "zf", 110828 ] ] 
+763 [ [ "odd", 553715 ], [ "tt", 451613 ], [ "zf", 110941 ] ] 
+764 [ [ "odd", 554230 ], [ "tt", 452057 ], [ "zf", 111063 ] ] 
+765 [ [ "odd", 554747 ], [ "tt", 452501 ], [ "zf", 111182 ] ] 
+766 [ [ "odd", 555296 ], [ "tt", 452920 ], [ "zf", 111293 ] ] 
+767 [ [ "odd", 555813 ], [ "tt", 453363 ], [ "zf", 111411 ] ] 
+768 [ [ "odd", 556358 ], [ "tt", 453783 ], [ "zf", 111523 ] ] 
+769 [ [ "odd", 556904 ], [ "tt", 454203 ], [ "zf", 111633 ] ] 
+770 [ [ "odd", 557422 ], [ "tt", 454645 ], [ "zf", 111748 ] ] 
+771 [ [ "odd", 557935 ], [ "tt", 455089 ], [ "zf", 111865 ] ] 
+772 [ [ "odd", 558479 ], [ "tt", 455509 ], [ "zf", 111974 ] ] 
+773 [ [ "odd", 559021 ], [ "tt", 455928 ], [ "zf", 112085 ] ] 
+774 [ [ "odd", 559536 ], [ "tt", 456367 ], [ "zf", 112202 ] ] 
+775 [ [ "odd", 560049 ], [ "tt", 456808 ], [ "zf", 112318 ] ] 
+776 [ [ "odd", 560592 ], [ "tt", 457227 ], [ "zf", 112425 ] ] 
+777 [ [ "odd", 561134 ], [ "tt", 457645 ], [ "zf", 112533 ] ] 
+778 [ [ "odd", 561680 ], [ "tt", 458062 ], [ "zf", 112637 ] ] 
+779 [ [ "odd", 562220 ], [ "tt", 458481 ], [ "zf", 112744 ] ] 
+780 [ [ "odd", 562762 ], [ "tt", 458899 ], [ "zf", 112849 ] ] 
+781 [ [ "odd", 563306 ], [ "tt", 459316 ], [ "zf", 112952 ] ] 
+782 [ [ "odd", 563814 ], [ "tt", 459758 ], [ "zf", 113065 ] ] 
+783 [ [ "odd", 564320 ], [ "tt", 460201 ], [ "zf", 113178 ] ] 
+784 [ [ "odd", 564862 ], [ "tt", 460617 ], [ "zf", 113281 ] ] 
+785 [ [ "odd", 565356 ], [ "tt", 461070 ], [ "zf", 113394 ] ] 
+786 [ [ "odd", 565892 ], [ "tt", 461460 ], [ "zf", 113527 ] ] 
+787 [ [ "odd", 566424 ], [ "tt", 461852 ], [ "zf", 113661 ] ] 
+788 [ [ "odd", 566927 ], [ "tt", 462265 ], [ "zf", 113802 ] ] 
+789 [ [ "odd", 567459 ], [ "tt", 462657 ], [ "zf", 113934 ] ] 
+790 [ [ "odd", 567960 ], [ "tt", 463072 ], [ "zf", 114073 ] ] 
+791 [ [ "odd", 568494 ], [ "tt", 463463 ], [ "zf", 114202 ] ] 
+792 [ [ "odd", 568999 ], [ "tt", 463875 ], [ "zf", 114338 ] ] 
+793 [ [ "odd", 569504 ], [ "tt", 464287 ], [ "zf", 114473 ] ] 
+794 [ [ "odd", 570030 ], [ "tt", 464679 ], [ "zf", 114606 ] ] 
+795 [ [ "odd", 570558 ], [ "tt", 465070 ], [ "zf", 114737 ] ] 
+796 [ [ "odd", 571090 ], [ "tt", 465460 ], [ "zf", 114864 ] ] 
+797 [ [ "odd", 571577 ], [ "tt", 465885 ], [ "zf", 115000 ] ] 
+798 [ [ "odd", 572108 ], [ "tt", 466275 ], [ "zf", 115126 ] ] 
+799 [ [ "odd", 572611 ], [ "tt", 466685 ], [ "zf", 115259 ] ] 
+800 [ [ "odd", 573135 ], [ "tt", 467079 ], [ "zf", 115386 ] ] 
+801 [ [ "odd", 573657 ], [ "tt", 467474 ], [ "zf", 115513 ] ] 
+802 [ [ "odd", 574159 ], [ "tt", 467886 ], [ "zf", 115642 ] ] 
+803 [ [ "odd", 574685 ], [ "tt", 468277 ], [ "zf", 115767 ] ] 
+804 [ [ "odd", 575182 ], [ "tt", 468691 ], [ "zf", 115897 ] ] 
+805 [ [ "odd", 575682 ], [ "tt", 469102 ], [ "zf", 116026 ] ] 
+806 [ [ "odd", 576203 ], [ "tt", 469494 ], [ "zf", 116152 ] ] 
+807 [ [ "odd", 576726 ], [ "tt", 469885 ], [ "zf", 116276 ] ] 
+808 [ [ "odd", 577247 ], [ "tt", 470276 ], [ "zf", 116401 ] ] 
+809 [ [ "odd", 577764 ], [ "tt", 470668 ], [ "zf", 116528 ] ] 
+810 [ [ "odd", 578284 ], [ "tt", 471059 ], [ "zf", 116652 ] ] 
+811 [ [ "odd", 578781 ], [ "tt", 471468 ], [ "zf", 116780 ] ] 
+812 [ [ "odd", 579303 ], [ "tt", 471858 ], [ "zf", 116901 ] ] 
+813 [ [ "odd", 579793 ], [ "tt", 472271 ], [ "zf", 117030 ] ] 
+814 [ [ "odd", 580317 ], [ "tt", 472661 ], [ "zf", 117147 ] ] 
+815 [ [ "odd", 580838 ], [ "tt", 473051 ], [ "zf", 117266 ] ] 
+816 [ [ "odd", 581353 ], [ "tt", 473444 ], [ "zf", 117387 ] ] 
+817 [ [ "odd", 581872 ], [ "tt", 473835 ], [ "zf", 117505 ] ] 
+818 [ [ "odd", 582386 ], [ "tt", 474229 ], [ "zf", 117624 ] ] 
+819 [ [ "odd", 582882 ], [ "tt", 474638 ], [ "zf", 117745 ] ] 
+820 [ [ "odd", 583374 ], [ "tt", 475049 ], [ "zf", 117867 ] ] 
+821 [ [ "odd", 583890 ], [ "tt", 475431 ], [ "zf", 117993 ] ] 
+822 [ [ "odd", 584405 ], [ "tt", 475812 ], [ "zf", 118120 ] ] 
+823 [ [ "odd", 584915 ], [ "tt", 476196 ], [ "zf", 118248 ] ] 
+824 [ [ "odd", 585427 ], [ "tt", 476578 ], [ "zf", 118375 ] ] 
+825 [ [ "odd", 585941 ], [ "tt", 476959 ], [ "zf", 118500 ] ] 
+826 [ [ "odd", 586429 ], [ "tt", 477360 ], [ "zf", 118630 ] ] 
+827 [ [ "odd", 586912 ], [ "tt", 477765 ], [ "zf", 118760 ] ] 
+828 [ [ "odd", 587427 ], [ "tt", 478145 ], [ "zf", 118882 ] ] 
+829 [ [ "odd", 587929 ], [ "tt", 478534 ], [ "zf", 119007 ] ] 
+830 [ [ "odd", 588445 ], [ "tt", 478914 ], [ "zf", 119126 ] ] 
+831 [ [ "odd", 588953 ], [ "tt", 479299 ], [ "zf", 119247 ] ] 
+832 [ [ "odd", 589469 ], [ "tt", 479678 ], [ "zf", 119365 ] ] 
+833 [ [ "odd", 589950 ], [ "tt", 480080 ], [ "zf", 119494 ] ] 
+834 [ [ "odd", 590460 ], [ "tt", 480461 ], [ "zf", 119614 ] ] 
+835 [ [ "odd", 590946 ], [ "tt", 480860 ], [ "zf", 119739 ] ] 
+836 [ [ "odd", 591412 ], [ "tt", 481273 ], [ "zf", 119869 ] ] 
+837 [ [ "odd", 591917 ], [ "tt", 481657 ], [ "zf", 119988 ] ] 
+838 [ [ "odd", 592401 ], [ "tt", 482057 ], [ "zf", 120111 ] ] 
+839 [ [ "odd", 592877 ], [ "tt", 482460 ], [ "zf", 120238 ] ] 
+840 [ [ "odd", 593381 ], [ "tt", 482842 ], [ "zf", 120357 ] ] 
+841 [ [ "odd", 593859 ], [ "tt", 483245 ], [ "zf", 120480 ] ] 
+842 [ [ "odd", 594338 ], [ "tt", 483646 ], [ "zf", 120603 ] ] 
+843 [ [ "odd", 594848 ], [ "tt", 484024 ], [ "zf", 120717 ] ] 
+844 [ [ "odd", 595318 ], [ "tt", 484433 ], [ "zf", 120839 ] ] 
+845 [ [ "odd", 595820 ], [ "tt", 484816 ], [ "zf", 120954 ] ] 
+846 [ [ "odd", 596321 ], [ "tt", 485190 ], [ "zf", 121078 ] ] 
+847 [ [ "odd", 596820 ], [ "tt", 485566 ], [ "zf", 121201 ] ] 
+848 [ [ "odd", 597325 ], [ "tt", 485939 ], [ "zf", 121320 ] ] 
+849 [ [ "odd", 597828 ], [ "tt", 486312 ], [ "zf", 121440 ] ] 
+850 [ [ "odd", 598309 ], [ "tt", 486704 ], [ "zf", 121562 ] ] 
+851 [ [ "odd", 598802 ], [ "tt", 487084 ], [ "zf", 121683 ] ] 
+852 [ [ "odd", 599267 ], [ "tt", 487487 ], [ "zf", 121808 ] ] 
+853 [ [ "odd", 599764 ], [ "tt", 487864 ], [ "zf", 121926 ] ] 
+854 [ [ "odd", 600239 ], [ "tt", 488258 ], [ "zf", 122048 ] ] 
+855 [ [ "odd", 600732 ], [ "tt", 488635 ], [ "zf", 122168 ] ] 
+856 [ [ "odd", 601203 ], [ "tt", 489031 ], [ "zf", 122290 ] ] 
+857 [ [ "odd", 601680 ], [ "tt", 489424 ], [ "zf", 122408 ] ] 
+858 [ [ "odd", 602145 ], [ "tt", 489822 ], [ "zf", 122532 ] ] 
+859 [ [ "odd", 602616 ], [ "tt", 490213 ], [ "zf", 122656 ] ] 
+860 [ [ "odd", 603082 ], [ "tt", 490606 ], [ "zf", 122782 ] ] 
+861 [ [ "odd", 603572 ], [ "tt", 490982 ], [ "zf", 122900 ] ] 
+862 [ [ "odd", 604066 ], [ "tt", 491354 ], [ "zf", 123017 ] ] 
+863 [ [ "odd", 604539 ], [ "tt", 491744 ], [ "zf", 123136 ] ] 
+864 [ [ "odd", 605034 ], [ "tt", 492113 ], [ "zf", 123253 ] ] 
+865 [ [ "odd", 605528 ], [ "tt", 492484 ], [ "zf", 123368 ] ] 
+866 [ [ "odd", 605999 ], [ "tt", 492873 ], [ "zf", 123487 ] ] 
+867 [ [ "odd", 606489 ], [ "tt", 493244 ], [ "zf", 123604 ] ] 
+868 [ [ "odd", 606977 ], [ "tt", 493618 ], [ "zf", 123719 ] ] 
+869 [ [ "odd", 607467 ], [ "tt", 493987 ], [ "zf", 123836 ] ] 
+870 [ [ "odd", 607958 ], [ "tt", 494355 ], [ "zf", 123952 ] ] 
+871 [ [ "odd", 608446 ], [ "tt", 494724 ], [ "zf", 124069 ] ] 
+872 [ [ "odd", 608910 ], [ "tt", 495113 ], [ "zf", 124189 ] ] 
+873 [ [ "odd", 609403 ], [ "tt", 495477 ], [ "zf", 124304 ] ] 
+874 [ [ "odd", 609892 ], [ "tt", 495845 ], [ "zf", 124418 ] ] 
+875 [ [ "odd", 610359 ], [ "tt", 496230 ], [ "zf", 124536 ] ] 
+876 [ [ "odd", 610847 ], [ "tt", 496597 ], [ "zf", 124650 ] ] 
+877 [ [ "odd", 611347 ], [ "tt", 496958 ], [ "zf", 124757 ] ] 
+878 [ [ "odd", 611811 ], [ "tt", 497343 ], [ "zf", 124875 ] ] 
+879 [ [ "odd", 612276 ], [ "tt", 497727 ], [ "zf", 124992 ] ] 
+880 [ [ "odd", 612763 ], [ "tt", 498094 ], [ "zf", 125103 ] ] 
+881 [ [ "odd", 613220 ], [ "tt", 498483 ], [ "zf", 125221 ] ] 
+882 [ [ "odd", 613682 ], [ "tt", 498866 ], [ "zf", 125339 ] ] 
+883 [ [ "odd", 614129 ], [ "tt", 499257 ], [ "zf", 125463 ] ] 
+884 [ [ "odd", 614588 ], [ "tt", 499642 ], [ "zf", 125580 ] ] 
+885 [ [ "odd", 615050 ], [ "tt", 500024 ], [ "zf", 125696 ] ] 
+886 [ [ "odd", 615511 ], [ "tt", 500407 ], [ "zf", 125811 ] ] 
+887 [ [ "odd", 615992 ], [ "tt", 500772 ], [ "zf", 125923 ] ] 
+888 [ [ "odd", 616438 ], [ "tt", 501165 ], [ "zf", 126041 ] ] 
+889 [ [ "odd", 616919 ], [ "tt", 501529 ], [ "zf", 126152 ] ] 
+890 [ [ "odd", 617398 ], [ "tt", 501894 ], [ "zf", 126263 ] ] 
+891 [ [ "odd", 617878 ], [ "tt", 502255 ], [ "zf", 126376 ] ] 
+892 [ [ "odd", 618358 ], [ "tt", 502617 ], [ "zf", 126487 ] ] 
+893 [ [ "odd", 618836 ], [ "tt", 502978 ], [ "zf", 126600 ] ] 
+894 [ [ "odd", 619294 ], [ "tt", 503357 ], [ "zf", 126714 ] ] 
+895 [ [ "odd", 619770 ], [ "tt", 503719 ], [ "zf", 126826 ] ] 
+896 [ [ "odd", 620247 ], [ "tt", 504081 ], [ "zf", 126936 ] ] 
+897 [ [ "odd", 620703 ], [ "tt", 504456 ], [ "zf", 127053 ] ] 
+898 [ [ "odd", 621184 ], [ "tt", 504815 ], [ "zf", 127160 ] ] 
+899 [ [ "odd", 621646 ], [ "tt", 505187 ], [ "zf", 127272 ] ] 
+900 [ [ "odd", 622098 ], [ "tt", 505567 ], [ "zf", 127385 ] ] 
+901 [ [ "odd", 622557 ], [ "tt", 505940 ], [ "zf", 127497 ] ] 
+902 [ [ "odd", 623035 ], [ "tt", 506294 ], [ "zf", 127608 ] ] 
+903 [ [ "odd", 623509 ], [ "tt", 506652 ], [ "zf", 127718 ] ] 
+904 [ [ "odd", 623955 ], [ "tt", 507031 ], [ "zf", 127834 ] ] 
+905 [ [ "odd", 624399 ], [ "tt", 507411 ], [ "zf", 127950 ] ] 
+906 [ [ "odd", 624848 ], [ "tt", 507787 ], [ "zf", 128064 ] ] 
+907 [ [ "odd", 625321 ], [ "tt", 508145 ], [ "zf", 128171 ] ] 
+908 [ [ "odd", 625770 ], [ "tt", 508518 ], [ "zf", 128286 ] ] 
+909 [ [ "odd", 626244 ], [ "tt", 508872 ], [ "zf", 128394 ] ] 
+910 [ [ "odd", 626717 ], [ "tt", 509227 ], [ "zf", 128501 ] ] 
+911 [ [ "odd", 627191 ], [ "tt", 509582 ], [ "zf", 128606 ] ] 
+912 [ [ "odd", 627665 ], [ "tt", 509934 ], [ "zf", 128713 ] ] 
+913 [ [ "odd", 628138 ], [ "tt", 510288 ], [ "zf", 128818 ] ] 
+914 [ [ "odd", 628582 ], [ "tt", 510663 ], [ "zf", 128930 ] ] 
+915 [ [ "odd", 629030 ], [ "tt", 511033 ], [ "zf", 129042 ] ] 
+916 [ [ "odd", 629499 ], [ "tt", 511388 ], [ "zf", 129147 ] ] 
+917 [ [ "odd", 629965 ], [ "tt", 511741 ], [ "zf", 129256 ] ] 
+918 [ [ "odd", 630414 ], [ "tt", 512107 ], [ "zf", 129368 ] ] 
+919 [ [ "odd", 630885 ], [ "tt", 512455 ], [ "zf", 129475 ] ] 
+920 [ [ "odd", 631358 ], [ "tt", 512804 ], [ "zf", 129578 ] ] 
+921 [ [ "odd", 631803 ], [ "tt", 513172 ], [ "zf", 129689 ] ] 
+922 [ [ "odd", 632243 ], [ "tt", 513542 ], [ "zf", 129802 ] ] 
+923 [ [ "odd", 632713 ], [ "tt", 513890 ], [ "zf", 129906 ] ] 
+924 [ [ "odd", 633180 ], [ "tt", 514239 ], [ "zf", 130011 ] ] 
+925 [ [ "odd", 633646 ], [ "tt", 514590 ], [ "zf", 130114 ] ] 
+926 [ [ "odd", 634075 ], [ "tt", 514967 ], [ "zf", 130227 ] ] 
+927 [ [ "odd", 634542 ], [ "tt", 515315 ], [ "zf", 130330 ] ] 
+928 [ [ "odd", 635010 ], [ "tt", 515662 ], [ "zf", 130432 ] ] 
+929 [ [ "odd", 635452 ], [ "tt", 516029 ], [ "zf", 130539 ] ] 
+930 [ [ "odd", 635898 ], [ "tt", 516395 ], [ "zf", 130642 ] ] 
+931 [ [ "odd", 636336 ], [ "tt", 516761 ], [ "zf", 130752 ] ] 
+932 [ [ "odd", 636762 ], [ "tt", 517138 ], [ "zf", 130862 ] ] 
+933 [ [ "odd", 637224 ], [ "tt", 517486 ], [ "zf", 130964 ] ] 
+934 [ [ "odd", 637688 ], [ "tt", 517833 ], [ "zf", 131064 ] ] 
+935 [ [ "odd", 638123 ], [ "tt", 518196 ], [ "zf", 131176 ] ] 
+936 [ [ "odd", 638564 ], [ "tt", 518555 ], [ "zf", 131285 ] ] 
+937 [ [ "odd", 639027 ], [ "tt", 518897 ], [ "zf", 131388 ] ] 
+938 [ [ "odd", 639490 ], [ "tt", 519240 ], [ "zf", 131489 ] ] 
+939 [ [ "odd", 639954 ], [ "tt", 519581 ], [ "zf", 131590 ] ] 
+940 [ [ "odd", 640376 ], [ "tt", 519954 ], [ "zf", 131700 ] ] 
+941 [ [ "odd", 640808 ], [ "tt", 520316 ], [ "zf", 131810 ] ] 
+942 [ [ "odd", 641267 ], [ "tt", 520660 ], [ "zf", 131910 ] ] 
+943 [ [ "odd", 641729 ], [ "tt", 520999 ], [ "zf", 132011 ] ] 
+944 [ [ "odd", 642193 ], [ "tt", 521338 ], [ "zf", 132109 ] ] 
+945 [ [ "odd", 642631 ], [ "tt", 521695 ], [ "zf", 132214 ] ] 
+946 [ [ "odd", 643067 ], [ "tt", 522053 ], [ "zf", 132319 ] ] 
+947 [ [ "odd", 643481 ], [ "tt", 522428 ], [ "zf", 132428 ] ] 
+948 [ [ "odd", 643908 ], [ "tt", 522793 ], [ "zf", 132533 ] ] 
+949 [ [ "odd", 644367 ], [ "tt", 523132 ], [ "zf", 132631 ] ] 
+950 [ [ "odd", 644818 ], [ "tt", 523477 ], [ "zf", 132730 ] ] 
+951 [ [ "odd", 645233 ], [ "tt", 523852 ], [ "zf", 132834 ] ] 
+952 [ [ "odd", 645692 ], [ "tt", 524193 ], [ "zf", 132927 ] ] 
+953 [ [ "odd", 646120 ], [ "tt", 524548 ], [ "zf", 133036 ] ] 
+954 [ [ "odd", 646568 ], [ "tt", 524885 ], [ "zf", 133142 ] ] 
+955 [ [ "odd", 646995 ], [ "tt", 525239 ], [ "zf", 133251 ] ] 
+956 [ [ "odd", 647422 ], [ "tt", 525592 ], [ "zf", 133360 ] ] 
+957 [ [ "odd", 647845 ], [ "tt", 525947 ], [ "zf", 133470 ] ] 
+958 [ [ "odd", 648292 ], [ "tt", 526283 ], [ "zf", 133574 ] ] 
+959 [ [ "odd", 648742 ], [ "tt", 526619 ], [ "zf", 133674 ] ] 
+960 [ [ "odd", 649163 ], [ "tt", 526977 ], [ "zf", 133780 ] ] 
+961 [ [ "odd", 649586 ], [ "tt", 527333 ], [ "zf", 133885 ] ] 
+962 [ [ "odd", 650008 ], [ "tt", 527688 ], [ "zf", 133991 ] ] 
+963 [ [ "odd", 650455 ], [ "tt", 528024 ], [ "zf", 134090 ] ] 
+964 [ [ "odd", 650884 ], [ "tt", 528376 ], [ "zf", 134190 ] ] 
+965 [ [ "odd", 651325 ], [ "tt", 528715 ], [ "zf", 134290 ] ] 
+966 [ [ "odd", 651741 ], [ "tt", 529070 ], [ "zf", 134398 ] ] 
+967 [ [ "odd", 652182 ], [ "tt", 529407 ], [ "zf", 134498 ] ] 
+968 [ [ "odd", 652597 ], [ "tt", 529766 ], [ "zf", 134601 ] ] 
+969 [ [ "odd", 653041 ], [ "tt", 530101 ], [ "zf", 134698 ] ] 
+970 [ [ "odd", 653488 ], [ "tt", 530433 ], [ "zf", 134794 ] ] 
+971 [ [ "odd", 653908 ], [ "tt", 530785 ], [ "zf", 134896 ] ] 
+972 [ [ "odd", 654349 ], [ "tt", 531119 ], [ "zf", 134994 ] ] 
+973 [ [ "odd", 654789 ], [ "tt", 531455 ], [ "zf", 135090 ] ] 
+974 [ [ "odd", 655200 ], [ "tt", 531815 ], [ "zf", 135190 ] ] 
+975 [ [ "odd", 655648 ], [ "tt", 532145 ], [ "zf", 135282 ] ] 
+976 [ [ "odd", 656064 ], [ "tt", 532497 ], [ "zf", 135383 ] ] 
+977 [ [ "odd", 656483 ], [ "tt", 532847 ], [ "zf", 135482 ] ] 
+978 [ [ "odd", 656927 ], [ "tt", 533178 ], [ "zf", 135574 ] ] 
+979 [ [ "odd", 657367 ], [ "tt", 533514 ], [ "zf", 135664 ] ] 
+980 [ [ "odd", 657805 ], [ "tt", 533849 ], [ "zf", 135756 ] ] 
+981 [ [ "odd", 658248 ], [ "tt", 534181 ], [ "zf", 135845 ] ] 
+982 [ [ "odd", 658685 ], [ "tt", 534503 ], [ "zf", 135949 ] ] 
+983 [ [ "odd", 659098 ], [ "tt", 534846 ], [ "zf", 136055 ] ] 
+984 [ [ "odd", 659514 ], [ "tt", 535183 ], [ "zf", 136163 ] ] 
+985 [ [ "odd", 659927 ], [ "tt", 535522 ], [ "zf", 136271 ] ] 
+986 [ [ "odd", 660361 ], [ "tt", 535845 ], [ "zf", 136373 ] ] 
+987 [ [ "odd", 660795 ], [ "tt", 536168 ], [ "zf", 136474 ] ] 
+988 [ [ "odd", 661233 ], [ "tt", 536489 ], [ "zf", 136572 ] ] 
+989 [ [ "odd", 661648 ], [ "tt", 536826 ], [ "zf", 136676 ] ] 
+990 [ [ "odd", 662051 ], [ "tt", 537173 ], [ "zf", 136781 ] ] 
+991 [ [ "odd", 662483 ], [ "tt", 537495 ], [ "zf", 136881 ] ] 
+992 [ [ "odd", 662892 ], [ "tt", 537838 ], [ "zf", 136982 ] ] 
+993 [ [ "odd", 663327 ], [ "tt", 538159 ], [ "zf", 137078 ] ] 
+994 [ [ "odd", 663756 ], [ "tt", 538483 ], [ "zf", 137176 ] ] 
+995 [ [ "odd", 664193 ], [ "tt", 538802 ], [ "zf", 137270 ] ] 
+996 [ [ "odd", 664605 ], [ "tt", 539138 ], [ "zf", 137371 ] ] 
+997 [ [ "odd", 665018 ], [ "tt", 539474 ], [ "zf", 137470 ] ] 
+998 [ [ "odd", 665451 ], [ "tt", 539794 ], [ "zf", 137564 ] ] 
+999 [ [ "odd", 665883 ], [ "tt", 540115 ], [ "zf", 137657 ] ] 
+1000 [ [ "odd", 666313 ], [ "tt", 540438 ], [ "zf", 137749 ] ] 
+1001 [ [ "odd", 666745 ], [ "tt", 540759 ], [ "zf", 137840 ] ] 
+1002 [ [ "odd", 667175 ], [ "tt", 541081 ], [ "zf", 137931 ] ] 
+1003 [ [ "odd", 667585 ], [ "tt", 541412 ], [ "zf", 138032 ] ] 
+1004 [ [ "odd", 667991 ], [ "tt", 541746 ], [ "zf", 138133 ] ] 
+1005 [ [ "odd", 668413 ], [ "tt", 542066 ], [ "zf", 138231 ] ] 
+1006 [ [ "odd", 668836 ], [ "tt", 542386 ], [ "zf", 138327 ] ] 
+1007 [ [ "odd", 669230 ], [ "tt", 542729 ], [ "zf", 138428 ] ] 
+1008 [ [ "odd", 669656 ], [ "tt", 543048 ], [ "zf", 138520 ] ] 
+1009 [ [ "odd", 670081 ], [ "tt", 543365 ], [ "zf", 138614 ] ] 
+1010 [ [ "odd", 670484 ], [ "tt", 543699 ], [ "zf", 138712 ] ] 
+1011 [ [ "odd", 670888 ], [ "tt", 544031 ], [ "zf", 138810 ] ] 
+1012 [ [ "odd", 671282 ], [ "tt", 544374 ], [ "zf", 138906 ] ] 
+1013 [ [ "odd", 671703 ], [ "tt", 544693 ], [ "zf", 138998 ] ] 
+1014 [ [ "odd", 672128 ], [ "tt", 545010 ], [ "zf", 139087 ] ] 
+1015 [ [ "odd", 672550 ], [ "tt", 545328 ], [ "zf", 139177 ] ] 
+1016 [ [ "odd", 672973 ], [ "tt", 545645 ], [ "zf", 139266 ] ] 
+1017 [ [ "odd", 673366 ], [ "tt", 545986 ], [ "zf", 139360 ] ] 
+1018 [ [ "odd", 673759 ], [ "tt", 546328 ], [ "zf", 139452 ] ] 
+1019 [ [ "odd", 674159 ], [ "tt", 546661 ], [ "zf", 139545 ] ] 
+1020 [ [ "odd", 674578 ], [ "tt", 546980 ], [ "zf", 139632 ] ] 
+1021 [ [ "odd", 674996 ], [ "tt", 547296 ], [ "zf", 139722 ] ] 
+1022 [ [ "odd", 675411 ], [ "tt", 547613 ], [ "zf", 139813 ] ] 
+1023 [ [ "odd", 675829 ], [ "tt", 547929 ], [ "zf", 139901 ] ] 
+1024 [ [ "odd", 676247 ], [ "tt", 548245 ], [ "zf", 139988 ] ] 
+1025 [ [ "odd", 676645 ], [ "tt", 548576 ], [ "zf", 140079 ] ] 
+1026 [ [ "odd", 677041 ], [ "tt", 548908 ], [ "zf", 140170 ] ] 
+1027 [ [ "odd", 677460 ], [ "tt", 549224 ], [ "zf", 140253 ] ] 
+1028 [ [ "odd", 677876 ], [ "tt", 549540 ], [ "zf", 140338 ] ] 
+1029 [ [ "odd", 678292 ], [ "tt", 549855 ], [ "zf", 140423 ] ] 
+1030 [ [ "odd", 678686 ], [ "tt", 550187 ], [ "zf", 140512 ] ] 
+1031 [ [ "odd", 679082 ], [ "tt", 550517 ], [ "zf", 140600 ] ] 
+1032 [ [ "odd", 679495 ], [ "tt", 550833 ], [ "zf", 140684 ] ] 
+1033 [ [ "odd", 679908 ], [ "tt", 551149 ], [ "zf", 140767 ] ] 
+1034 [ [ "odd", 680302 ], [ "tt", 551479 ], [ "zf", 140854 ] ] 
+1035 [ [ "odd", 680716 ], [ "tt", 551794 ], [ "zf", 140935 ] ] 
+1036 [ [ "odd", 681128 ], [ "tt", 552110 ], [ "zf", 141016 ] ] 
+1037 [ [ "odd", 681540 ], [ "tt", 552426 ], [ "zf", 141096 ] ] 
+1038 [ [ "odd", 681921 ], [ "tt", 552765 ], [ "zf", 141183 ] ] 
+1039 [ [ "odd", 682302 ], [ "tt", 553104 ], [ "zf", 141269 ] ] 
+1040 [ [ "odd", 682683 ], [ "tt", 553443 ], [ "zf", 141354 ] ] 
+1041 [ [ "odd", 683064 ], [ "tt", 553782 ], [ "zf", 141438 ] ] 
+1042 [ [ "odd", 683448 ], [ "tt", 554087 ], [ "zf", 141552 ] ] 
+1043 [ [ "odd", 683850 ], [ "tt", 554378 ], [ "zf", 141661 ] ] 
+1044 [ [ "odd", 684236 ], [ "tt", 554681 ], [ "zf", 141773 ] ] 
+1045 [ [ "odd", 684622 ], [ "tt", 554984 ], [ "zf", 141884 ] ] 
+1046 [ [ "odd", 685023 ], [ "tt", 555275 ], [ "zf", 141991 ] ] 
+1047 [ [ "odd", 685393 ], [ "tt", 555592 ], [ "zf", 142102 ] ] 
+1048 [ [ "odd", 685797 ], [ "tt", 555881 ], [ "zf", 142206 ] ] 
+1049 [ [ "odd", 686198 ], [ "tt", 556172 ], [ "zf", 142310 ] ] 
+1050 [ [ "odd", 686580 ], [ "tt", 556476 ], [ "zf", 142419 ] ] 
+1051 [ [ "odd", 686970 ], [ "tt", 556774 ], [ "zf", 142525 ] ] 
+1052 [ [ "odd", 687337 ], [ "tt", 557091 ], [ "zf", 142634 ] ] 
+1053 [ [ "odd", 687740 ], [ "tt", 557379 ], [ "zf", 142735 ] ] 
+1054 [ [ "odd", 688140 ], [ "tt", 557668 ], [ "zf", 142837 ] ] 
+1055 [ [ "odd", 688528 ], [ "tt", 557968 ], [ "zf", 142939 ] ] 
+1056 [ [ "odd", 688927 ], [ "tt", 558257 ], [ "zf", 143040 ] ] 
+1057 [ [ "odd", 689313 ], [ "tt", 558558 ], [ "zf", 143141 ] ] 
+1058 [ [ "odd", 689712 ], [ "tt", 558847 ], [ "zf", 143240 ] ] 
+1059 [ [ "odd", 690077 ], [ "tt", 559163 ], [ "zf", 143345 ] ] 
+1060 [ [ "odd", 690475 ], [ "tt", 559452 ], [ "zf", 143443 ] ] 
+1061 [ [ "odd", 690860 ], [ "tt", 559751 ], [ "zf", 143543 ] ] 
+1062 [ [ "odd", 691251 ], [ "tt", 560042 ], [ "zf", 143644 ] ] 
+1063 [ [ "odd", 691645 ], [ "tt", 560331 ], [ "zf", 143743 ] ] 
+1064 [ [ "odd", 692039 ], [ "tt", 560621 ], [ "zf", 143840 ] ] 
+1065 [ [ "odd", 692433 ], [ "tt", 560910 ], [ "zf", 143937 ] ] 
+1066 [ [ "odd", 692823 ], [ "tt", 561200 ], [ "zf", 144036 ] ] 
+1067 [ [ "odd", 693198 ], [ "tt", 561502 ], [ "zf", 144137 ] ] 
+1068 [ [ "odd", 693579 ], [ "tt", 561801 ], [ "zf", 144234 ] ] 
+1069 [ [ "odd", 693966 ], [ "tt", 562091 ], [ "zf", 144333 ] ] 
+1070 [ [ "odd", 694355 ], [ "tt", 562381 ], [ "zf", 144429 ] ] 
+1071 [ [ "odd", 694744 ], [ "tt", 562671 ], [ "zf", 144524 ] ] 
+1072 [ [ "odd", 695123 ], [ "tt", 562968 ], [ "zf", 144621 ] ] 
+1073 [ [ "odd", 695514 ], [ "tt", 563257 ], [ "zf", 144713 ] ] 
+1074 [ [ "odd", 695892 ], [ "tt", 563555 ], [ "zf", 144808 ] ] 
+1075 [ [ "odd", 696272 ], [ "tt", 563854 ], [ "zf", 144899 ] ] 
+1076 [ [ "odd", 696644 ], [ "tt", 564157 ], [ "zf", 144993 ] ] 
+1077 [ [ "odd", 697028 ], [ "tt", 564438 ], [ "zf", 145096 ] ] 
+1078 [ [ "odd", 697416 ], [ "tt", 564718 ], [ "zf", 145195 ] ] 
+1079 [ [ "odd", 697802 ], [ "tt", 564997 ], [ "zf", 145296 ] ] 
+1080 [ [ "odd", 698186 ], [ "tt", 565277 ], [ "zf", 145397 ] ] 
+1081 [ [ "odd", 698554 ], [ "tt", 565571 ], [ "zf", 145499 ] ] 
+1082 [ [ "odd", 698940 ], [ "tt", 565851 ], [ "zf", 145596 ] ] 
+1083 [ [ "odd", 699312 ], [ "tt", 566142 ], [ "zf", 145695 ] ] 
+1084 [ [ "odd", 699693 ], [ "tt", 566422 ], [ "zf", 145795 ] ] 
+1085 [ [ "odd", 700079 ], [ "tt", 566700 ], [ "zf", 145891 ] ] 
+1086 [ [ "odd", 700460 ], [ "tt", 566982 ], [ "zf", 145987 ] ] 
+1087 [ [ "odd", 700825 ], [ "tt", 567275 ], [ "zf", 146087 ] ] 
+1088 [ [ "odd", 701203 ], [ "tt", 567559 ], [ "zf", 146182 ] ] 
+1089 [ [ "odd", 701583 ], [ "tt", 567839 ], [ "zf", 146278 ] ] 
+1090 [ [ "odd", 701965 ], [ "tt", 568118 ], [ "zf", 146372 ] ] 
+1091 [ [ "odd", 702349 ], [ "tt", 568395 ], [ "zf", 146465 ] ] 
+1092 [ [ "odd", 702708 ], [ "tt", 568689 ], [ "zf", 146565 ] ] 
+1093 [ [ "odd", 703078 ], [ "tt", 568977 ], [ "zf", 146659 ] ] 
+1094 [ [ "odd", 703445 ], [ "tt", 569266 ], [ "zf", 146754 ] ] 
+1095 [ [ "odd", 703806 ], [ "tt", 569559 ], [ "zf", 146850 ] ] 
+1096 [ [ "odd", 704173 ], [ "tt", 569849 ], [ "zf", 146942 ] ] 
+1097 [ [ "odd", 704540 ], [ "tt", 570135 ], [ "zf", 147037 ] ] 
+1098 [ [ "odd", 704896 ], [ "tt", 570430 ], [ "zf", 147133 ] ] 
+1099 [ [ "odd", 705256 ], [ "tt", 570723 ], [ "zf", 147226 ] ] 
+1100 [ [ "odd", 705601 ], [ "tt", 571028 ], [ "zf", 147321 ] ] 
+1101 [ [ "odd", 705938 ], [ "tt", 571339 ], [ "zf", 147417 ] ] 
+1102 [ [ "odd", 706297 ], [ "tt", 571623 ], [ "zf", 147517 ] ] 
+1103 [ [ "odd", 706649 ], [ "tt", 571911 ], [ "zf", 147619 ] ] 
+1104 [ [ "odd", 706996 ], [ "tt", 572206 ], [ "zf", 147718 ] ] 
+1105 [ [ "odd", 707370 ], [ "tt", 572477 ], [ "zf", 147813 ] ] 
+1106 [ [ "odd", 707743 ], [ "tt", 572749 ], [ "zf", 147907 ] ] 
+1107 [ [ "odd", 708117 ], [ "tt", 573021 ], [ "zf", 147999 ] ] 
+1108 [ [ "odd", 708481 ], [ "tt", 573303 ], [ "zf", 148090 ] ] 
+1109 [ [ "odd", 708824 ], [ "tt", 573599 ], [ "zf", 148187 ] ] 
+1110 [ [ "odd", 709196 ], [ "tt", 573872 ], [ "zf", 148277 ] ] 
+1111 [ [ "odd", 709557 ], [ "tt", 574155 ], [ "zf", 148367 ] ] 
+1112 [ [ "odd", 709925 ], [ "tt", 574430 ], [ "zf", 148457 ] ] 
+1113 [ [ "odd", 710282 ], [ "tt", 574711 ], [ "zf", 148551 ] ] 
+1114 [ [ "odd", 710640 ], [ "tt", 574990 ], [ "zf", 148645 ] ] 
+1115 [ [ "odd", 710996 ], [ "tt", 575270 ], [ "zf", 148739 ] ] 
+1116 [ [ "odd", 711370 ], [ "tt", 575536 ], [ "zf", 148828 ] ] 
+1117 [ [ "odd", 711742 ], [ "tt", 575803 ], [ "zf", 148917 ] ] 
+1118 [ [ "odd", 712100 ], [ "tt", 576079 ], [ "zf", 149010 ] ] 
+1119 [ [ "odd", 712462 ], [ "tt", 576353 ], [ "zf", 149100 ] ] 
+1120 [ [ "odd", 712812 ], [ "tt", 576637 ], [ "zf", 149191 ] ] 
+1121 [ [ "odd", 713165 ], [ "tt", 576916 ], [ "zf", 149283 ] ] 
+1122 [ [ "odd", 713524 ], [ "tt", 577188 ], [ "zf", 149375 ] ] 
+1123 [ [ "odd", 713873 ], [ "tt", 577468 ], [ "zf", 149468 ] ] 
+1124 [ [ "odd", 714219 ], [ "tt", 577749 ], [ "zf", 149562 ] ] 
+1125 [ [ "odd", 714578 ], [ "tt", 578019 ], [ "zf", 149653 ] ] 
+1126 [ [ "odd", 714924 ], [ "tt", 578298 ], [ "zf", 149747 ] ] 
+1127 [ [ "odd", 715286 ], [ "tt", 578566 ], [ "zf", 149835 ] ] 
+1128 [ [ "odd", 715640 ], [ "tt", 578839 ], [ "zf", 149925 ] ] 
+1129 [ [ "odd", 715996 ], [ "tt", 579110 ], [ "zf", 150014 ] ] 
+1130 [ [ "odd", 716350 ], [ "tt", 579382 ], [ "zf", 150103 ] ] 
+1131 [ [ "odd", 716711 ], [ "tt", 579649 ], [ "zf", 150189 ] ] 
+1132 [ [ "odd", 717072 ], [ "tt", 579916 ], [ "zf", 150274 ] ] 
+1133 [ [ "odd", 717432 ], [ "tt", 580182 ], [ "zf", 150360 ] ] 
+1134 [ [ "odd", 717778 ], [ "tt", 580460 ], [ "zf", 150447 ] ] 
+1135 [ [ "odd", 718122 ], [ "tt", 580733 ], [ "zf", 150540 ] ] 
+1136 [ [ "odd", 718479 ], [ "tt", 580996 ], [ "zf", 150629 ] ] 
+1137 [ [ "odd", 718830 ], [ "tt", 581263 ], [ "zf", 150719 ] ] 
+1138 [ [ "odd", 719187 ], [ "tt", 581526 ], [ "zf", 150806 ] ] 
+1139 [ [ "odd", 719536 ], [ "tt", 581794 ], [ "zf", 150895 ] ] 
+1140 [ [ "odd", 719876 ], [ "tt", 582069 ], [ "zf", 150985 ] ] 
+1141 [ [ "odd", 720234 ], [ "tt", 582329 ], [ "zf", 151071 ] ] 
+1142 [ [ "odd", 720591 ], [ "tt", 582591 ], [ "zf", 151155 ] ] 
+1143 [ [ "odd", 720937 ], [ "tt", 582861 ], [ "zf", 151241 ] ] 
+1144 [ [ "odd", 721270 ], [ "tt", 583138 ], [ "zf", 151332 ] ] 
+1145 [ [ "odd", 721601 ], [ "tt", 583417 ], [ "zf", 151422 ] ] 
+1146 [ [ "odd", 721930 ], [ "tt", 583698 ], [ "zf", 151511 ] ] 
+1147 [ [ "odd", 722279 ], [ "tt", 583961 ], [ "zf", 151597 ] ] 
+1148 [ [ "odd", 722629 ], [ "tt", 584221 ], [ "zf", 151684 ] ] 
+1149 [ [ "odd", 722964 ], [ "tt", 584491 ], [ "zf", 151775 ] ] 
+1150 [ [ "odd", 723313 ], [ "tt", 584752 ], [ "zf", 151860 ] ] 
+1151 [ [ "odd", 723664 ], [ "tt", 585010 ], [ "zf", 151945 ] ] 
+1152 [ [ "odd", 724018 ], [ "tt", 585265 ], [ "zf", 152029 ] ] 
+1153 [ [ "odd", 724375 ], [ "tt", 585519 ], [ "zf", 152110 ] ] 
+1154 [ [ "odd", 724725 ], [ "tt", 585777 ], [ "zf", 152193 ] ] 
+1155 [ [ "odd", 725067 ], [ "tt", 586041 ], [ "zf", 152277 ] ] 
+1156 [ [ "odd", 725386 ], [ "tt", 586321 ], [ "zf", 152367 ] ] 
+1157 [ [ "odd", 725729 ], [ "tt", 586579 ], [ "zf", 152454 ] ] 
+1158 [ [ "odd", 726048 ], [ "tt", 586858 ], [ "zf", 152543 ] ] 
+1159 [ [ "odd", 726369 ], [ "tt", 587136 ], [ "zf", 152630 ] ] 
+1160 [ [ "odd", 726700 ], [ "tt", 587402 ], [ "zf", 152718 ] ] 
+1161 [ [ "odd", 727011 ], [ "tt", 587686 ], [ "zf", 152807 ] ] 
+1162 [ [ "odd", 727345 ], [ "tt", 587951 ], [ "zf", 152891 ] ] 
+1163 [ [ "odd", 727692 ], [ "tt", 588203 ], [ "zf", 152974 ] ] 
+1164 [ [ "odd", 728025 ], [ "tt", 588466 ], [ "zf", 153059 ] ] 
+1165 [ [ "odd", 728351 ], [ "tt", 588736 ], [ "zf", 153143 ] ] 
+1166 [ [ "odd", 728695 ], [ "tt", 588987 ], [ "zf", 153227 ] ] 
+1167 [ [ "odd", 729032 ], [ "tt", 589243 ], [ "zf", 153312 ] ] 
+1168 [ [ "odd", 729382 ], [ "tt", 589493 ], [ "zf", 153389 ] ] 
+1169 [ [ "odd", 729726 ], [ "tt", 589744 ], [ "zf", 153470 ] ] 
+1170 [ [ "odd", 730050 ], [ "tt", 590009 ], [ "zf", 153556 ] ] 
+1171 [ [ "odd", 730388 ], [ "tt", 590264 ], [ "zf", 153637 ] ] 
+1172 [ [ "odd", 730727 ], [ "tt", 590516 ], [ "zf", 153719 ] ] 
+1173 [ [ "odd", 731051 ], [ "tt", 590778 ], [ "zf", 153805 ] ] 
+1174 [ [ "odd", 731388 ], [ "tt", 591032 ], [ "zf", 153885 ] ] 
+1175 [ [ "odd", 731719 ], [ "tt", 591289 ], [ "zf", 153967 ] ] 
+1176 [ [ "odd", 732045 ], [ "tt", 591547 ], [ "zf", 154052 ] ] 
+1177 [ [ "odd", 732374 ], [ "tt", 591804 ], [ "zf", 154134 ] ] 
+1178 [ [ "odd", 732694 ], [ "tt", 592070 ], [ "zf", 154215 ] ] 
+1179 [ [ "odd", 733034 ], [ "tt", 592319 ], [ "zf", 154292 ] ] 
+1180 [ [ "odd", 733369 ], [ "tt", 592570 ], [ "zf", 154371 ] ] 
+1181 [ [ "odd", 733708 ], [ "tt", 592815 ], [ "zf", 154451 ] ] 
+1182 [ [ "odd", 734045 ], [ "tt", 593063 ], [ "zf", 154529 ] ] 
+1183 [ [ "odd", 734382 ], [ "tt", 593309 ], [ "zf", 154608 ] ] 
+1184 [ [ "odd", 734717 ], [ "tt", 593557 ], [ "zf", 154686 ] ] 
+1185 [ [ "odd", 735048 ], [ "tt", 593807 ], [ "zf", 154765 ] ] 
+1186 [ [ "odd", 735390 ], [ "tt", 594048 ], [ "zf", 154841 ] ] 
+1187 [ [ "odd", 735719 ], [ "tt", 594300 ], [ "zf", 154918 ] ] 
+1188 [ [ "odd", 736028 ], [ "tt", 594567 ], [ "zf", 154999 ] ] 
+1189 [ [ "odd", 736359 ], [ "tt", 594818 ], [ "zf", 155073 ] ] 
+1190 [ [ "odd", 736682 ], [ "tt", 595076 ], [ "zf", 155147 ] ] 
+1191 [ [ "odd", 736987 ], [ "tt", 595340 ], [ "zf", 155232 ] ] 
+1192 [ [ "odd", 737306 ], [ "tt", 595591 ], [ "zf", 155315 ] ] 
+1193 [ [ "odd", 737631 ], [ "tt", 595837 ], [ "zf", 155396 ] ] 
+1194 [ [ "odd", 737948 ], [ "tt", 596092 ], [ "zf", 155475 ] ] 
+1195 [ [ "odd", 738250 ], [ "tt", 596357 ], [ "zf", 155558 ] ] 
+1196 [ [ "odd", 738547 ], [ "tt", 596625 ], [ "zf", 155642 ] ] 
+1197 [ [ "odd", 738867 ], [ "tt", 596874 ], [ "zf", 155721 ] ] 
+1198 [ [ "odd", 739185 ], [ "tt", 597124 ], [ "zf", 155800 ] ] 
+1199 [ [ "odd", 739513 ], [ "tt", 597366 ], [ "zf", 155876 ] ] 
+1200 [ [ "odd", 739849 ], [ "tt", 597602 ], [ "zf", 155949 ] ] 
+1201 [ [ "odd", 740184 ], [ "tt", 597840 ], [ "zf", 156020 ] ] 
+1202 [ [ "odd", 740484 ], [ "tt", 598104 ], [ "zf", 156099 ] ] 
+1203 [ [ "odd", 740816 ], [ "tt", 598343 ], [ "zf", 156170 ] ] 
+1204 [ [ "odd", 741146 ], [ "tt", 598581 ], [ "zf", 156243 ] ] 
+1205 [ [ "odd", 741479 ], [ "tt", 598820 ], [ "zf", 156311 ] ] 
+1206 [ [ "odd", 741811 ], [ "tt", 599059 ], [ "zf", 156379 ] ] 
+1207 [ [ "odd", 742107 ], [ "tt", 599324 ], [ "zf", 156456 ] ] 
+1208 [ [ "odd", 742422 ], [ "tt", 599574 ], [ "zf", 156528 ] ] 
+1209 [ [ "odd", 742741 ], [ "tt", 599810 ], [ "zf", 156609 ] ] 
+1210 [ [ "odd", 743061 ], [ "tt", 600045 ], [ "zf", 156689 ] ] 
+1211 [ [ "odd", 743382 ], [ "tt", 600280 ], [ "zf", 156767 ] ] 
+1212 [ [ "odd", 743692 ], [ "tt", 600525 ], [ "zf", 156845 ] ] 
+1213 [ [ "odd", 743996 ], [ "tt", 600772 ], [ "zf", 156926 ] ] 
+1214 [ [ "odd", 744300 ], [ "tt", 601018 ], [ "zf", 157007 ] ] 
+1215 [ [ "odd", 744604 ], [ "tt", 601265 ], [ "zf", 157086 ] ] 
+1216 [ [ "odd", 744914 ], [ "tt", 601505 ], [ "zf", 157165 ] ] 
+1217 [ [ "odd", 745218 ], [ "tt", 601753 ], [ "zf", 157241 ] ] 
+1218 [ [ "odd", 745532 ], [ "tt", 601993 ], [ "zf", 157314 ] ] 
+1219 [ [ "odd", 745837 ], [ "tt", 602239 ], [ "zf", 157389 ] ] 
+1220 [ [ "odd", 746143 ], [ "tt", 602484 ], [ "zf", 157463 ] ] 
+1221 [ [ "odd", 746439 ], [ "tt", 602738 ], [ "zf", 157537 ] ] 
+1222 [ [ "odd", 746744 ], [ "tt", 602980 ], [ "zf", 157613 ] ] 
+1223 [ [ "odd", 747059 ], [ "tt", 603212 ], [ "zf", 157688 ] ] 
+1224 [ [ "odd", 747379 ], [ "tt", 603442 ], [ "zf", 157759 ] ] 
+1225 [ [ "odd", 747692 ], [ "tt", 603676 ], [ "zf", 157832 ] ] 
+1226 [ [ "odd", 747990 ], [ "tt", 603925 ], [ "zf", 157904 ] ] 
+1227 [ [ "odd", 748299 ], [ "tt", 604161 ], [ "zf", 157977 ] ] 
+1228 [ [ "odd", 748610 ], [ "tt", 604397 ], [ "zf", 158047 ] ] 
+1229 [ [ "odd", 748910 ], [ "tt", 604639 ], [ "zf", 158121 ] ] 
+1230 [ [ "odd", 749218 ], [ "tt", 604874 ], [ "zf", 158193 ] ] 
+1231 [ [ "odd", 749534 ], [ "tt", 605105 ], [ "zf", 158260 ] ] 
+1232 [ [ "odd", 749830 ], [ "tt", 605354 ], [ "zf", 158328 ] ] 
+1233 [ [ "odd", 750141 ], [ "tt", 605586 ], [ "zf", 158397 ] ] 
+1234 [ [ "odd", 750450 ], [ "tt", 605821 ], [ "zf", 158464 ] ] 
+1235 [ [ "odd", 750746 ], [ "tt", 606064 ], [ "zf", 158535 ] ] 
+1236 [ [ "odd", 751045 ], [ "tt", 606305 ], [ "zf", 158604 ] ] 
+1237 [ [ "odd", 751354 ], [ "tt", 606539 ], [ "zf", 158669 ] ] 
+1238 [ [ "odd", 751655 ], [ "tt", 606765 ], [ "zf", 158749 ] ] 
+1239 [ [ "odd", 751951 ], [ "tt", 606994 ], [ "zf", 158830 ] ] 
+1240 [ [ "odd", 752248 ], [ "tt", 607227 ], [ "zf", 158905 ] ] 
+1241 [ [ "odd", 752549 ], [ "tt", 607453 ], [ "zf", 158982 ] ] 
+1242 [ [ "odd", 752862 ], [ "tt", 607671 ], [ "zf", 159054 ] ] 
+1243 [ [ "odd", 753166 ], [ "tt", 607893 ], [ "zf", 159130 ] ] 
+1244 [ [ "odd", 753462 ], [ "tt", 608121 ], [ "zf", 159207 ] ] 
+1245 [ [ "odd", 753765 ], [ "tt", 608343 ], [ "zf", 159282 ] ] 
+1246 [ [ "odd", 754066 ], [ "tt", 608565 ], [ "zf", 159358 ] ] 
+1247 [ [ "odd", 754368 ], [ "tt", 608786 ], [ "zf", 159433 ] ] 
+1248 [ [ "odd", 754672 ], [ "tt", 609006 ], [ "zf", 159506 ] ] 
+1249 [ [ "odd", 754958 ], [ "tt", 609243 ], [ "zf", 159579 ] ] 
+1250 [ [ "odd", 755262 ], [ "tt", 609463 ], [ "zf", 159650 ] ] 
+1251 [ [ "odd", 755555 ], [ "tt", 609695 ], [ "zf", 159719 ] ] 
+1252 [ [ "odd", 755856 ], [ "tt", 609916 ], [ "zf", 159790 ] ] 
+1253 [ [ "odd", 756153 ], [ "tt", 610141 ], [ "zf", 159860 ] ] 
+1254 [ [ "odd", 756453 ], [ "tt", 610363 ], [ "zf", 159929 ] ] 
+1255 [ [ "odd", 756746 ], [ "tt", 610590 ], [ "zf", 159999 ] ] 
+1256 [ [ "odd", 757039 ], [ "tt", 610817 ], [ "zf", 160068 ] ] 
+1257 [ [ "odd", 757343 ], [ "tt", 611036 ], [ "zf", 160133 ] ] 
+1258 [ [ "odd", 757637 ], [ "tt", 611262 ], [ "zf", 160200 ] ] 
+1259 [ [ "odd", 757923 ], [ "tt", 611486 ], [ "zf", 160276 ] ] 
+1260 [ [ "odd", 758200 ], [ "tt", 611720 ], [ "zf", 160350 ] ] 
+1261 [ [ "odd", 758487 ], [ "tt", 611943 ], [ "zf", 160424 ] ] 
+1262 [ [ "odd", 758765 ], [ "tt", 612176 ], [ "zf", 160496 ] ] 
+1263 [ [ "odd", 759040 ], [ "tt", 612411 ], [ "zf", 160568 ] ] 
+1264 [ [ "odd", 759323 ], [ "tt", 612642 ], [ "zf", 160635 ] ] 
+1265 [ [ "odd", 759622 ], [ "tt", 612858 ], [ "zf", 160700 ] ] 
+1266 [ [ "odd", 759905 ], [ "tt", 613083 ], [ "zf", 160771 ] ] 
+1267 [ [ "odd", 760187 ], [ "tt", 613309 ], [ "zf", 160841 ] ] 
+1268 [ [ "odd", 760460 ], [ "tt", 613543 ], [ "zf", 160911 ] ] 
+1269 [ [ "odd", 760756 ], [ "tt", 613759 ], [ "zf", 160975 ] ] 
+1270 [ [ "odd", 761048 ], [ "tt", 613976 ], [ "zf", 161041 ] ] 
+1271 [ [ "odd", 761343 ], [ "tt", 614193 ], [ "zf", 161103 ] ] 
+1272 [ [ "odd", 761635 ], [ "tt", 614410 ], [ "zf", 161167 ] ] 
+1273 [ [ "odd", 761910 ], [ "tt", 614643 ], [ "zf", 161231 ] ] 
+1274 [ [ "odd", 762204 ], [ "tt", 614858 ], [ "zf", 161293 ] ] 
+1275 [ [ "odd", 762496 ], [ "tt", 615074 ], [ "zf", 161355 ] ] 
+1276 [ [ "odd", 762776 ], [ "tt", 615299 ], [ "zf", 161419 ] ] 
+1277 [ [ "odd", 763056 ], [ "tt", 615520 ], [ "zf", 161486 ] ] 
+1278 [ [ "odd", 763337 ], [ "tt", 615742 ], [ "zf", 161550 ] ] 
+1279 [ [ "odd", 763625 ], [ "tt", 615957 ], [ "zf", 161613 ] ] 
+1280 [ [ "odd", 763913 ], [ "tt", 616172 ], [ "zf", 161675 ] ] 
+1281 [ [ "odd", 764200 ], [ "tt", 616387 ], [ "zf", 161737 ] ] 
+1282 [ [ "odd", 764487 ], [ "tt", 616602 ], [ "zf", 161798 ] ] 
+1283 [ [ "odd", 764764 ], [ "tt", 616825 ], [ "zf", 161860 ] ] 
+1284 [ [ "odd", 765051 ], [ "tt", 617040 ], [ "zf", 161919 ] ] 
+1285 [ [ "odd", 765314 ], [ "tt", 617273 ], [ "zf", 161983 ] ] 
+1286 [ [ "odd", 765589 ], [ "tt", 617494 ], [ "zf", 162046 ] ] 
+1287 [ [ "odd", 765874 ], [ "tt", 617709 ], [ "zf", 162104 ] ] 
+1288 [ [ "odd", 766158 ], [ "tt", 617924 ], [ "zf", 162162 ] ] 
+1289 [ [ "odd", 766441 ], [ "tt", 618139 ], [ "zf", 162220 ] ] 
+1290 [ [ "odd", 766724 ], [ "tt", 618354 ], [ "zf", 162277 ] ] 
+1291 [ [ "odd", 767008 ], [ "tt", 618568 ], [ "zf", 162333 ] ] 
+1292 [ [ "odd", 767292 ], [ "tt", 618782 ], [ "zf", 162388 ] ] 
+1293 [ [ "odd", 767568 ], [ "tt", 619002 ], [ "zf", 162444 ] ] 
+1294 [ [ "odd", 767836 ], [ "tt", 619199 ], [ "zf", 162530 ] ] 
+1295 [ [ "odd", 768084 ], [ "tt", 619406 ], [ "zf", 162625 ] ] 
+1296 [ [ "odd", 768352 ], [ "tt", 619603 ], [ "zf", 162709 ] ] 
+1297 [ [ "odd", 768600 ], [ "tt", 619809 ], [ "zf", 162803 ] ] 
+1298 [ [ "odd", 768874 ], [ "tt", 620000 ], [ "zf", 162885 ] ] 
+1299 [ [ "odd", 769147 ], [ "tt", 620191 ], [ "zf", 162967 ] ] 
+1300 [ [ "odd", 769421 ], [ "tt", 620382 ], [ "zf", 163047 ] ] 
+1301 [ [ "odd", 769675 ], [ "tt", 620591 ], [ "zf", 163128 ] ] 
+1302 [ [ "odd", 769943 ], [ "tt", 620787 ], [ "zf", 163207 ] ] 
+1303 [ [ "odd", 770216 ], [ "tt", 620978 ], [ "zf", 163285 ] ] 
+1304 [ [ "odd", 770481 ], [ "tt", 621175 ], [ "zf", 163364 ] ] 
+1305 [ [ "odd", 770746 ], [ "tt", 621372 ], [ "zf", 163442 ] ] 
+1306 [ [ "odd", 771005 ], [ "tt", 621569 ], [ "zf", 163525 ] ] 
+1307 [ [ "odd", 771212 ], [ "tt", 621799 ], [ "zf", 163626 ] ] 
+1308 [ [ "odd", 771389 ], [ "tt", 622052 ], [ "zf", 163733 ] ] 
+1309 [ [ "odd", 771657 ], [ "tt", 622241 ], [ "zf", 163812 ] ] 
+1310 [ [ "odd", 771868 ], [ "tt", 622468 ], [ "zf", 163909 ] ] 
+1311 [ [ "odd", 772080 ], [ "tt", 622695 ], [ "zf", 164004 ] ] 
+1312 [ [ "odd", 772347 ], [ "tt", 622882 ], [ "zf", 164083 ] ] 
+1313 [ [ "odd", 772585 ], [ "tt", 623088 ], [ "zf", 164171 ] ] 
+1314 [ [ "odd", 772852 ], [ "tt", 623277 ], [ "zf", 164246 ] ] 
+1315 [ [ "odd", 773083 ], [ "tt", 623486 ], [ "zf", 164336 ] ] 
+1316 [ [ "odd", 773316 ], [ "tt", 623695 ], [ "zf", 164423 ] ] 
+1317 [ [ "odd", 773575 ], [ "tt", 623888 ], [ "zf", 164499 ] ] 
+1318 [ [ "odd", 773804 ], [ "tt", 624099 ], [ "zf", 164586 ] ] 
+1319 [ [ "odd", 774044 ], [ "tt", 624302 ], [ "zf", 164669 ] ] 
+1320 [ [ "odd", 774253 ], [ "tt", 624527 ], [ "zf", 164760 ] ] 
+1321 [ [ "odd", 774514 ], [ "tt", 624715 ], [ "zf", 164835 ] ] 
+1322 [ [ "odd", 774770 ], [ "tt", 624907 ], [ "zf", 164910 ] ] 
+1323 [ [ "odd", 774977 ], [ "tt", 625129 ], [ "zf", 165003 ] ] 
+1324 [ [ "odd", 775233 ], [ "tt", 625318 ], [ "zf", 165079 ] ] 
+1325 [ [ "odd", 775490 ], [ "tt", 625508 ], [ "zf", 165152 ] ] 
+1326 [ [ "odd", 775718 ], [ "tt", 625712 ], [ "zf", 165239 ] ] 
+1327 [ [ "odd", 775972 ], [ "tt", 625900 ], [ "zf", 165315 ] ] 
+1328 [ [ "odd", 776221 ], [ "tt", 626093 ], [ "zf", 165390 ] ] 
+1329 [ [ "odd", 776462 ], [ "tt", 626294 ], [ "zf", 165464 ] ] 
+1330 [ [ "odd", 776689 ], [ "tt", 626498 ], [ "zf", 165548 ] ] 
+1331 [ [ "odd", 776864 ], [ "tt", 626741 ], [ "zf", 165644 ] ] 
+1332 [ [ "odd", 777071 ], [ "tt", 626960 ], [ "zf", 165731 ] ] 
+1333 [ [ "odd", 777329 ], [ "tt", 627143 ], [ "zf", 165802 ] ] 
+1334 [ [ "odd", 777556 ], [ "tt", 627343 ], [ "zf", 165886 ] ] 
+1335 [ [ "odd", 777796 ], [ "tt", 627534 ], [ "zf", 165965 ] ] 
+1336 [ [ "odd", 778032 ], [ "tt", 627726 ], [ "zf", 166046 ] ] 
+1337 [ [ "odd", 778236 ], [ "tt", 627942 ], [ "zf", 166134 ] ] 
+1338 [ [ "odd", 778489 ], [ "tt", 628126 ], [ "zf", 166204 ] ] 
+1339 [ [ "odd", 778691 ], [ "tt", 628342 ], [ "zf", 166292 ] ] 
+1340 [ [ "odd", 778922 ], [ "tt", 628536 ], [ "zf", 166372 ] ] 
+1341 [ [ "odd", 779147 ], [ "tt", 628734 ], [ "zf", 166453 ] ] 
+1342 [ [ "odd", 779403 ], [ "tt", 628910 ], [ "zf", 166524 ] ] 
+1343 [ [ "odd", 779644 ], [ "tt", 629098 ], [ "zf", 166597 ] ] 
+1344 [ [ "odd", 779885 ], [ "tt", 629287 ], [ "zf", 166668 ] ] 
+1345 [ [ "odd", 780139 ], [ "tt", 629463 ], [ "zf", 166738 ] ] 
+1346 [ [ "odd", 780379 ], [ "tt", 629651 ], [ "zf", 166809 ] ] 
+1347 [ [ "odd", 780611 ], [ "tt", 629843 ], [ "zf", 166883 ] ] 
+1348 [ [ "odd", 780861 ], [ "tt", 630019 ], [ "zf", 166954 ] ] 
+1349 [ [ "odd", 781109 ], [ "tt", 630196 ], [ "zf", 167025 ] ] 
+1350 [ [ "odd", 781362 ], [ "tt", 630370 ], [ "zf", 167093 ] ] 
+1351 [ [ "odd", 781611 ], [ "tt", 630546 ], [ "zf", 167162 ] ] 
+1352 [ [ "odd", 781770 ], [ "tt", 630785 ], [ "zf", 167257 ] ] 
+1353 [ [ "odd", 781962 ], [ "tt", 631001 ], [ "zf", 167341 ] ] 
+1354 [ [ "odd", 782130 ], [ "tt", 631234 ], [ "zf", 167431 ] ] 
+1355 [ [ "odd", 782367 ], [ "tt", 631417 ], [ "zf", 167501 ] ] 
+1356 [ [ "odd", 782595 ], [ "tt", 631604 ], [ "zf", 167575 ] ] 
+1357 [ [ "odd", 782826 ], [ "tt", 631789 ], [ "zf", 167647 ] ] 
+1358 [ [ "odd", 783069 ], [ "tt", 631966 ], [ "zf", 167714 ] ] 
+1359 [ [ "odd", 783262 ], [ "tt", 632177 ], [ "zf", 167796 ] ] 
+1360 [ [ "odd", 783493 ], [ "tt", 632362 ], [ "zf", 167865 ] ] 
+1361 [ [ "odd", 783728 ], [ "tt", 632542 ], [ "zf", 167934 ] ] 
+1362 [ [ "odd", 783973 ], [ "tt", 632714 ], [ "zf", 168000 ] ] 
+1363 [ [ "odd", 784202 ], [ "tt", 632898 ], [ "zf", 168069 ] ] 
+1364 [ [ "odd", 784426 ], [ "tt", 633084 ], [ "zf", 168140 ] ] 
+1365 [ [ "odd", 784651 ], [ "tt", 633271 ], [ "zf", 168208 ] ] 
+1366 [ [ "odd", 784892 ], [ "tt", 633444 ], [ "zf", 168273 ] ] 
+1367 [ [ "odd", 785123 ], [ "tt", 633617 ], [ "zf", 168347 ] ] 
+1368 [ [ "odd", 785360 ], [ "tt", 633786 ], [ "zf", 168418 ] ] 
+1369 [ [ "odd", 785595 ], [ "tt", 633956 ], [ "zf", 168489 ] ] 
+1370 [ [ "odd", 785835 ], [ "tt", 634124 ], [ "zf", 168556 ] ] 
+1371 [ [ "odd", 786068 ], [ "tt", 634294 ], [ "zf", 168627 ] ] 
+1372 [ [ "odd", 786304 ], [ "tt", 634462 ], [ "zf", 168696 ] ] 
+1373 [ [ "odd", 786538 ], [ "tt", 634632 ], [ "zf", 168764 ] ] 
+1374 [ [ "odd", 786764 ], [ "tt", 634806 ], [ "zf", 168835 ] ] 
+1375 [ [ "odd", 787000 ], [ "tt", 634971 ], [ "zf", 168904 ] ] 
+1376 [ [ "odd", 787232 ], [ "tt", 635138 ], [ "zf", 168974 ] ] 
+1377 [ [ "odd", 787467 ], [ "tt", 635304 ], [ "zf", 169041 ] ] 
+1378 [ [ "odd", 787689 ], [ "tt", 635480 ], [ "zf", 169110 ] ] 
+1379 [ [ "odd", 787928 ], [ "tt", 635643 ], [ "zf", 169174 ] ] 
+1380 [ [ "odd", 788161 ], [ "tt", 635807 ], [ "zf", 169242 ] ] 
+1381 [ [ "odd", 788394 ], [ "tt", 635971 ], [ "zf", 169309 ] ] 
+1382 [ [ "odd", 788626 ], [ "tt", 636133 ], [ "zf", 169378 ] ] 
+1383 [ [ "odd", 788848 ], [ "tt", 636304 ], [ "zf", 169447 ] ] 
+1384 [ [ "odd", 789075 ], [ "tt", 636470 ], [ "zf", 169515 ] ] 
+1385 [ [ "odd", 789305 ], [ "tt", 636634 ], [ "zf", 169581 ] ] 
+1386 [ [ "odd", 789529 ], [ "tt", 636801 ], [ "zf", 169649 ] ] 
+1387 [ [ "odd", 789760 ], [ "tt", 636963 ], [ "zf", 169714 ] ] 
+1388 [ [ "odd", 789986 ], [ "tt", 637128 ], [ "zf", 169780 ] ] 
+1389 [ [ "odd", 790212 ], [ "tt", 637291 ], [ "zf", 169847 ] ] 
+1390 [ [ "odd", 790445 ], [ "tt", 637451 ], [ "zf", 169909 ] ] 
+1391 [ [ "odd", 790665 ], [ "tt", 637619 ], [ "zf", 169975 ] ] 
+1392 [ [ "odd", 790892 ], [ "tt", 637781 ], [ "zf", 170039 ] ] 
+1393 [ [ "odd", 791117 ], [ "tt", 637944 ], [ "zf", 170103 ] ] 
+1394 [ [ "odd", 791342 ], [ "tt", 638103 ], [ "zf", 170170 ] ] 
+1395 [ [ "odd", 791558 ], [ "tt", 638269 ], [ "zf", 170238 ] ] 
+1396 [ [ "odd", 791776 ], [ "tt", 638434 ], [ "zf", 170304 ] ] 
+1397 [ [ "odd", 792005 ], [ "tt", 638591 ], [ "zf", 170366 ] ] 
+1398 [ [ "odd", 792227 ], [ "tt", 638749 ], [ "zf", 170433 ] ] 
+1399 [ [ "odd", 792447 ], [ "tt", 638910 ], [ "zf", 170498 ] ] 
+1400 [ [ "odd", 792668 ], [ "tt", 639070 ], [ "zf", 170562 ] ] 
+1401 [ [ "odd", 792895 ], [ "tt", 639227 ], [ "zf", 170622 ] ] 
+1402 [ [ "odd", 793114 ], [ "tt", 639385 ], [ "zf", 170688 ] ] 
+1403 [ [ "odd", 793335 ], [ "tt", 639544 ], [ "zf", 170750 ] ] 
+1404 [ [ "odd", 793559 ], [ "tt", 639700 ], [ "zf", 170811 ] ] 
+1405 [ [ "odd", 793787 ], [ "tt", 639852 ], [ "zf", 170871 ] ] 
+1406 [ [ "odd", 794000 ], [ "tt", 640012 ], [ "zf", 170937 ] ] 
+1407 [ [ "odd", 794217 ], [ "tt", 640171 ], [ "zf", 170999 ] ] 
+1408 [ [ "odd", 794433 ], [ "tt", 640329 ], [ "zf", 171062 ] ] 
+1409 [ [ "odd", 794654 ], [ "tt", 640482 ], [ "zf", 171124 ] ] 
+1410 [ [ "odd", 794879 ], [ "tt", 640632 ], [ "zf", 171184 ] ] 
+1411 [ [ "odd", 795094 ], [ "tt", 640789 ], [ "zf", 171246 ] ] 
+1412 [ [ "odd", 795311 ], [ "tt", 640944 ], [ "zf", 171307 ] ] 
+1413 [ [ "odd", 795524 ], [ "tt", 641102 ], [ "zf", 171368 ] ] 
+1414 [ [ "odd", 795739 ], [ "tt", 641258 ], [ "zf", 171428 ] ] 
+1415 [ [ "odd", 795946 ], [ "tt", 641418 ], [ "zf", 171491 ] ] 
+1416 [ [ "odd", 796161 ], [ "tt", 641569 ], [ "zf", 171554 ] ] 
+1417 [ [ "odd", 796380 ], [ "tt", 641719 ], [ "zf", 171613 ] ] 
+1418 [ [ "odd", 796597 ], [ "tt", 641869 ], [ "zf", 171673 ] ] 
+1419 [ [ "odd", 796809 ], [ "tt", 642024 ], [ "zf", 171732 ] ] 
+1420 [ [ "odd", 797013 ], [ "tt", 642185 ], [ "zf", 171792 ] ] 
+1421 [ [ "odd", 797213 ], [ "tt", 642346 ], [ "zf", 171855 ] ] 
+1422 [ [ "odd", 797429 ], [ "tt", 642496 ], [ "zf", 171912 ] ] 
+1423 [ [ "odd", 797642 ], [ "tt", 642647 ], [ "zf", 171970 ] ] 
+1424 [ [ "odd", 797843 ], [ "tt", 642807 ], [ "zf", 172030 ] ] 
+1425 [ [ "odd", 798053 ], [ "tt", 642957 ], [ "zf", 172090 ] ] 
+1426 [ [ "odd", 798267 ], [ "tt", 643106 ], [ "zf", 172146 ] ] 
+1427 [ [ "odd", 798471 ], [ "tt", 643261 ], [ "zf", 172205 ] ] 
+1428 [ [ "odd", 798684 ], [ "tt", 643408 ], [ "zf", 172262 ] ] 
+1429 [ [ "odd", 798897 ], [ "tt", 643557 ], [ "zf", 172316 ] ] 
+1430 [ [ "odd", 799104 ], [ "tt", 643708 ], [ "zf", 172373 ] ] 
+1431 [ [ "odd", 799313 ], [ "tt", 643858 ], [ "zf", 172428 ] ] 
+1432 [ [ "odd", 799518 ], [ "tt", 644012 ], [ "zf", 172482 ] ] 
+1433 [ [ "odd", 799731 ], [ "tt", 644159 ], [ "zf", 172534 ] ] 
+1434 [ [ "odd", 799938 ], [ "tt", 644312 ], [ "zf", 172585 ] ] 
+1435 [ [ "odd", 800140 ], [ "tt", 644456 ], [ "zf", 172649 ] ] 
+1436 [ [ "odd", 800345 ], [ "tt", 644595 ], [ "zf", 172714 ] ] 
+1437 [ [ "odd", 800547 ], [ "tt", 644739 ], [ "zf", 172776 ] ] 
+1438 [ [ "odd", 800750 ], [ "tt", 644880 ], [ "zf", 172839 ] ] 
+1439 [ [ "odd", 800939 ], [ "tt", 645033 ], [ "zf", 172903 ] ] 
+1440 [ [ "odd", 801144 ], [ "tt", 645172 ], [ "zf", 172964 ] ] 
+1441 [ [ "odd", 801343 ], [ "tt", 645316 ], [ "zf", 173025 ] ] 
+1442 [ [ "odd", 801542 ], [ "tt", 645460 ], [ "zf", 173085 ] ] 
+1443 [ [ "odd", 801722 ], [ "tt", 645609 ], [ "zf", 173158 ] ] 
+1444 [ [ "odd", 801916 ], [ "tt", 645751 ], [ "zf", 173223 ] ] 
+1445 [ [ "odd", 802106 ], [ "tt", 645896 ], [ "zf", 173288 ] ] 
+1446 [ [ "odd", 802304 ], [ "tt", 646035 ], [ "zf", 173350 ] ] 
+1447 [ [ "odd", 802482 ], [ "tt", 646185 ], [ "zf", 173420 ] ] 
+1448 [ [ "odd", 802682 ], [ "tt", 646321 ], [ "zf", 173481 ] ] 
+1449 [ [ "odd", 802873 ], [ "tt", 646463 ], [ "zf", 173544 ] ] 
+1450 [ [ "odd", 803006 ], [ "tt", 646645 ], [ "zf", 173624 ] ] 
+1451 [ [ "odd", 803206 ], [ "tt", 646780 ], [ "zf", 173683 ] ] 
+1452 [ [ "odd", 803397 ], [ "tt", 646923 ], [ "zf", 173742 ] ] 
+1453 [ [ "odd", 803554 ], [ "tt", 647085 ], [ "zf", 173815 ] ] 
+1454 [ [ "odd", 803719 ], [ "tt", 647240 ], [ "zf", 173886 ] ] 
+1455 [ [ "odd", 803886 ], [ "tt", 647396 ], [ "zf", 173953 ] ] 
+1456 [ [ "odd", 804086 ], [ "tt", 647531 ], [ "zf", 174007 ] ] 
+1457 [ [ "odd", 804276 ], [ "tt", 647669 ], [ "zf", 174067 ] ] 
+1458 [ [ "odd", 804471 ], [ "tt", 647804 ], [ "zf", 174124 ] ] 
+1459 [ [ "odd", 804667 ], [ "tt", 647937 ], [ "zf", 174181 ] ] 
+1460 [ [ "odd", 804847 ], [ "tt", 648078 ], [ "zf", 174245 ] ] 
+1461 [ [ "odd", 805022 ], [ "tt", 648221 ], [ "zf", 174311 ] ] 
+1462 [ [ "odd", 805217 ], [ "tt", 648354 ], [ "zf", 174366 ] ] 
+1463 [ [ "odd", 805391 ], [ "tt", 648496 ], [ "zf", 174432 ] ] 
+1464 [ [ "odd", 805561 ], [ "tt", 648642 ], [ "zf", 174497 ] ] 
+1465 [ [ "odd", 805740 ], [ "tt", 648783 ], [ "zf", 174557 ] ] 
+1466 [ [ "odd", 805916 ], [ "tt", 648926 ], [ "zf", 174617 ] ] 
+1467 [ [ "odd", 806027 ], [ "tt", 649116 ], [ "zf", 174694 ] ] 
+1468 [ [ "odd", 806198 ], [ "tt", 649258 ], [ "zf", 174758 ] ] 
+1469 [ [ "odd", 806329 ], [ "tt", 649430 ], [ "zf", 174831 ] ] 
+1470 [ [ "odd", 806483 ], [ "tt", 649583 ], [ "zf", 174899 ] ] 
+1471 [ [ "odd", 806639 ], [ "tt", 649735 ], [ "zf", 174965 ] ] 
+1472 [ [ "odd", 806783 ], [ "tt", 649895 ], [ "zf", 175034 ] ] 
+1473 [ [ "odd", 806952 ], [ "tt", 650036 ], [ "zf", 175096 ] ] 
+1474 [ [ "odd", 807066 ], [ "tt", 650221 ], [ "zf", 175168 ] ] 
+1475 [ [ "odd", 807241 ], [ "tt", 650359 ], [ "zf", 175225 ] ] 
+1476 [ [ "odd", 807419 ], [ "tt", 650491 ], [ "zf", 175284 ] ] 
+1477 [ [ "odd", 807596 ], [ "tt", 650624 ], [ "zf", 175342 ] ] 
+1478 [ [ "odd", 807778 ], [ "tt", 650754 ], [ "zf", 175397 ] ] 
+1479 [ [ "odd", 807959 ], [ "tt", 650885 ], [ "zf", 175451 ] ] 
+1480 [ [ "odd", 808142 ], [ "tt", 651012 ], [ "zf", 175506 ] ] 
+1481 [ [ "odd", 808322 ], [ "tt", 651142 ], [ "zf", 175560 ] ] 
+1482 [ [ "odd", 808504 ], [ "tt", 651269 ], [ "zf", 175614 ] ] 
+1483 [ [ "odd", 808682 ], [ "tt", 651398 ], [ "zf", 175669 ] ] 
+1484 [ [ "odd", 808857 ], [ "tt", 651529 ], [ "zf", 175724 ] ] 
+1485 [ [ "odd", 809038 ], [ "tt", 651656 ], [ "zf", 175776 ] ] 
+1486 [ [ "odd", 809207 ], [ "tt", 651786 ], [ "zf", 175836 ] ] 
+1487 [ [ "odd", 809333 ], [ "tt", 651948 ], [ "zf", 175906 ] ] 
+1488 [ [ "odd", 809507 ], [ "tt", 652076 ], [ "zf", 175961 ] ] 
+1489 [ [ "odd", 809670 ], [ "tt", 652210 ], [ "zf", 176020 ] ] 
+1490 [ [ "odd", 809852 ], [ "tt", 652332 ], [ "zf", 176071 ] ] 
+1491 [ [ "odd", 810028 ], [ "tt", 652456 ], [ "zf", 176125 ] ] 
+1492 [ [ "odd", 810166 ], [ "tt", 652606 ], [ "zf", 176190 ] ] 
+1493 [ [ "odd", 810294 ], [ "tt", 652765 ], [ "zf", 176255 ] ] 
+1494 [ [ "odd", 810469 ], [ "tt", 652888 ], [ "zf", 176308 ] ] 
+1495 [ [ "odd", 810638 ], [ "tt", 653015 ], [ "zf", 176362 ] ] 
+1496 [ [ "odd", 810811 ], [ "tt", 653141 ], [ "zf", 176412 ] ] 
+1497 [ [ "odd", 810979 ], [ "tt", 653268 ], [ "zf", 176465 ] ] 
+1498 [ [ "odd", 811154 ], [ "tt", 653389 ], [ "zf", 176516 ] ] 
+1499 [ [ "odd", 811317 ], [ "tt", 653518 ], [ "zf", 176570 ] ] 
+1500 [ [ "odd", 811482 ], [ "tt", 653644 ], [ "zf", 176624 ] ] 
+1501 [ [ "odd", 811641 ], [ "tt", 653773 ], [ "zf", 176680 ] ] 
+1502 [ [ "odd", 811809 ], [ "tt", 653897 ], [ "zf", 176731 ] ] 
+1503 [ [ "odd", 811977 ], [ "tt", 654019 ], [ "zf", 176783 ] ] 
+1504 [ [ "odd", 812149 ], [ "tt", 654138 ], [ "zf", 176833 ] ] 
+1505 [ [ "odd", 812322 ], [ "tt", 654254 ], [ "zf", 176884 ] ] 
+1506 [ [ "odd", 812481 ], [ "tt", 654380 ], [ "zf", 176938 ] ] 
+1507 [ [ "odd", 812653 ], [ "tt", 654497 ], [ "zf", 176987 ] ] 
+1508 [ [ "odd", 812793 ], [ "tt", 654636 ], [ "zf", 177045 ] ] 
+1509 [ [ "odd", 812942 ], [ "tt", 654772 ], [ "zf", 177096 ] ] 
+1510 [ [ "odd", 813091 ], [ "tt", 654905 ], [ "zf", 177149 ] ] 
+1511 [ [ "odd", 813260 ], [ "tt", 655022 ], [ "zf", 177197 ] ] 
+1512 [ [ "odd", 813427 ], [ "tt", 655141 ], [ "zf", 177244 ] ] 
+1513 [ [ "odd", 813595 ], [ "tt", 655259 ], [ "zf", 177290 ] ] 
+1514 [ [ "odd", 813743 ], [ "tt", 655388 ], [ "zf", 177344 ] ] 
+1515 [ [ "odd", 813902 ], [ "tt", 655507 ], [ "zf", 177396 ] ] 
+1516 [ [ "odd", 814065 ], [ "tt", 655622 ], [ "zf", 177447 ] ] 
+1517 [ [ "odd", 814221 ], [ "tt", 655743 ], [ "zf", 177498 ] ] 
+1518 [ [ "odd", 814363 ], [ "tt", 655877 ], [ "zf", 177549 ] ] 
+1519 [ [ "odd", 814518 ], [ "tt", 655999 ], [ "zf", 177598 ] ] 
+1520 [ [ "odd", 814678 ], [ "tt", 656116 ], [ "zf", 177646 ] ] 
+1521 [ [ "odd", 814839 ], [ "tt", 656232 ], [ "zf", 177693 ] ] 
+1522 [ [ "odd", 814997 ], [ "tt", 656348 ], [ "zf", 177742 ] ] 
+1523 [ [ "odd", 815141 ], [ "tt", 656476 ], [ "zf", 177792 ] ] 
+1524 [ [ "odd", 815297 ], [ "tt", 656594 ], [ "zf", 177839 ] ] 
+1525 [ [ "odd", 815447 ], [ "tt", 656716 ], [ "zf", 177887 ] ] 
+1526 [ [ "odd", 815609 ], [ "tt", 656828 ], [ "zf", 177932 ] ] 
+1527 [ [ "odd", 815760 ], [ "tt", 656948 ], [ "zf", 177979 ] ] 
+1528 [ [ "odd", 815917 ], [ "tt", 657063 ], [ "zf", 178024 ] ] 
+1529 [ [ "odd", 816068 ], [ "tt", 657184 ], [ "zf", 178068 ] ] 
+1530 [ [ "odd", 816219 ], [ "tt", 657303 ], [ "zf", 178113 ] ] 
+1531 [ [ "odd", 816365 ], [ "tt", 657423 ], [ "zf", 178161 ] ] 
+1532 [ [ "odd", 816520 ], [ "tt", 657539 ], [ "zf", 178203 ] ] 
+1533 [ [ "odd", 816656 ], [ "tt", 657657 ], [ "zf", 178261 ] ] 
+1534 [ [ "odd", 816805 ], [ "tt", 657765 ], [ "zf", 178315 ] ] 
+1535 [ [ "odd", 816902 ], [ "tt", 657907 ], [ "zf", 178386 ] ] 
+1536 [ [ "odd", 817051 ], [ "tt", 658012 ], [ "zf", 178441 ] ] 
+1537 [ [ "odd", 817206 ], [ "tt", 658116 ], [ "zf", 178490 ] ] 
+1538 [ [ "odd", 817361 ], [ "tt", 658219 ], [ "zf", 178539 ] ] 
+1539 [ [ "odd", 817504 ], [ "tt", 658329 ], [ "zf", 178592 ] ] 
+1540 [ [ "odd", 817653 ], [ "tt", 658435 ], [ "zf", 178642 ] ] 
+1541 [ [ "odd", 817793 ], [ "tt", 658544 ], [ "zf", 178697 ] ] 
+1542 [ [ "odd", 817935 ], [ "tt", 658652 ], [ "zf", 178750 ] ] 
+1543 [ [ "odd", 818060 ], [ "tt", 658772 ], [ "zf", 178807 ] ] 
+1544 [ [ "odd", 818185 ], [ "tt", 658890 ], [ "zf", 178865 ] ] 
+1545 [ [ "odd", 818316 ], [ "tt", 659007 ], [ "zf", 178917 ] ] 
+1546 [ [ "odd", 818472 ], [ "tt", 659107 ], [ "zf", 178960 ] ] 
+1547 [ [ "odd", 818613 ], [ "tt", 659214 ], [ "zf", 179010 ] ] 
+1548 [ [ "odd", 818759 ], [ "tt", 659317 ], [ "zf", 179058 ] ] 
+1549 [ [ "odd", 818904 ], [ "tt", 659418 ], [ "zf", 179108 ] ] 
+1550 [ [ "odd", 819022 ], [ "tt", 659537 ], [ "zf", 179166 ] ] 
+1551 [ [ "odd", 819158 ], [ "tt", 659642 ], [ "zf", 179219 ] ] 
+1552 [ [ "odd", 819292 ], [ "tt", 659750 ], [ "zf", 179270 ] ] 
+1553 [ [ "odd", 819434 ], [ "tt", 659854 ], [ "zf", 179316 ] ] 
+1554 [ [ "odd", 819571 ], [ "tt", 659958 ], [ "zf", 179366 ] ] 
+1555 [ [ "odd", 819663 ], [ "tt", 660095 ], [ "zf", 179427 ] ] 
+1556 [ [ "odd", 819794 ], [ "tt", 660201 ], [ "zf", 179479 ] ] 
+1557 [ [ "odd", 819940 ], [ "tt", 660297 ], [ "zf", 179525 ] ] 
+1558 [ [ "odd", 820076 ], [ "tt", 660400 ], [ "zf", 179573 ] ] 
+1559 [ [ "odd", 820195 ], [ "tt", 660512 ], [ "zf", 179628 ] ] 
+1560 [ [ "odd", 820317 ], [ "tt", 660624 ], [ "zf", 179679 ] ] 
+1561 [ [ "odd", 820430 ], [ "tt", 660741 ], [ "zf", 179733 ] ] 
+1562 [ [ "odd", 820561 ], [ "tt", 660845 ], [ "zf", 179781 ] ] 
+1563 [ [ "odd", 820692 ], [ "tt", 660943 ], [ "zf", 179834 ] ] 
+1564 [ [ "odd", 820830 ], [ "tt", 661040 ], [ "zf", 179880 ] ] 
+1565 [ [ "odd", 820968 ], [ "tt", 661137 ], [ "zf", 179925 ] ] 
+1566 [ [ "odd", 821054 ], [ "tt", 661271 ], [ "zf", 179984 ] ] 
+1567 [ [ "odd", 821197 ], [ "tt", 661362 ], [ "zf", 180028 ] ] 
+1568 [ [ "odd", 821331 ], [ "tt", 661458 ], [ "zf", 180075 ] ] 
+1569 [ [ "odd", 821468 ], [ "tt", 661556 ], [ "zf", 180116 ] ] 
+1570 [ [ "odd", 821597 ], [ "tt", 661653 ], [ "zf", 180165 ] ] 
+1571 [ [ "odd", 821736 ], [ "tt", 661747 ], [ "zf", 180206 ] ] 
+1572 [ [ "odd", 821871 ], [ "tt", 661843 ], [ "zf", 180248 ] ] 
+1573 [ [ "odd", 822008 ], [ "tt", 661936 ], [ "zf", 180290 ] ] 
+1574 [ [ "odd", 822143 ], [ "tt", 662030 ], [ "zf", 180332 ] ] 
+1575 [ [ "odd", 822275 ], [ "tt", 662125 ], [ "zf", 180375 ] ] 
+1576 [ [ "odd", 822405 ], [ "tt", 662219 ], [ "zf", 180420 ] ] 
+1577 [ [ "odd", 822535 ], [ "tt", 662316 ], [ "zf", 180461 ] ] 
+1578 [ [ "odd", 822670 ], [ "tt", 662408 ], [ "zf", 180501 ] ] 
+1579 [ [ "odd", 822797 ], [ "tt", 662503 ], [ "zf", 180545 ] ] 
+1580 [ [ "odd", 822928 ], [ "tt", 662598 ], [ "zf", 180584 ] ] 
+1581 [ [ "odd", 823059 ], [ "tt", 662694 ], [ "zf", 180621 ] ] 
+1582 [ [ "odd", 823162 ], [ "tt", 662801 ], [ "zf", 180674 ] ] 
+1583 [ [ "odd", 823291 ], [ "tt", 662890 ], [ "zf", 180718 ] ] 
+1584 [ [ "odd", 823375 ], [ "tt", 663012 ], [ "zf", 180773 ] ] 
+1585 [ [ "odd", 823505 ], [ "tt", 663100 ], [ "zf", 180815 ] ] 
+1586 [ [ "odd", 823609 ], [ "tt", 663205 ], [ "zf", 180865 ] ] 
+1587 [ [ "odd", 823727 ], [ "tt", 663300 ], [ "zf", 180910 ] ] 
+1588 [ [ "odd", 823859 ], [ "tt", 663388 ], [ "zf", 180947 ] ] 
+1589 [ [ "odd", 823979 ], [ "tt", 663478 ], [ "zf", 180993 ] ] 
+1590 [ [ "odd", 824103 ], [ "tt", 663565 ], [ "zf", 181037 ] ] 
+1591 [ [ "odd", 824235 ], [ "tt", 663647 ], [ "zf", 181077 ] ] 
+1592 [ [ "odd", 824367 ], [ "tt", 663729 ], [ "zf", 181116 ] ] 
+1593 [ [ "odd", 824468 ], [ "tt", 663832 ], [ "zf", 181164 ] ] 
+1594 [ [ "odd", 824596 ], [ "tt", 663916 ], [ "zf", 181203 ] ] 
+1595 [ [ "odd", 824723 ], [ "tt", 664002 ], [ "zf", 181240 ] ] 
+1596 [ [ "odd", 824828 ], [ "tt", 664102 ], [ "zf", 181284 ] ] 
+1597 [ [ "odd", 824954 ], [ "tt", 664184 ], [ "zf", 181324 ] ] 
+1598 [ [ "odd", 825074 ], [ "tt", 664273 ], [ "zf", 181362 ] ] 
+1599 [ [ "odd", 825188 ], [ "tt", 664367 ], [ "zf", 181400 ] ] 
+1600 [ [ "odd", 825296 ], [ "tt", 664464 ], [ "zf", 181440 ] ] 
+1601 [ [ "odd", 825419 ], [ "tt", 664547 ], [ "zf", 181478 ] ] 
+1602 [ [ "odd", 825540 ], [ "tt", 664632 ], [ "zf", 181515 ] ] 
+1603 [ [ "odd", 825667 ], [ "tt", 664710 ], [ "zf", 181552 ] ] 
+1604 [ [ "odd", 825790 ], [ "tt", 664792 ], [ "zf", 181588 ] ] 
+1605 [ [ "odd", 825913 ], [ "tt", 664876 ], [ "zf", 181621 ] ] 
+1606 [ [ "odd", 826026 ], [ "tt", 664956 ], [ "zf", 181667 ] ] 
+1607 [ [ "odd", 826135 ], [ "tt", 665040 ], [ "zf", 181712 ] ] 
+1608 [ [ "odd", 826245 ], [ "tt", 665123 ], [ "zf", 181756 ] ] 
+1609 [ [ "odd", 826362 ], [ "tt", 665204 ], [ "zf", 181794 ] ] 
+1610 [ [ "odd", 826473 ], [ "tt", 665284 ], [ "zf", 181838 ] ] 
+1611 [ [ "odd", 826581 ], [ "tt", 665365 ], [ "zf", 181883 ] ] 
+1612 [ [ "odd", 826692 ], [ "tt", 665447 ], [ "zf", 181923 ] ] 
+1613 [ [ "odd", 826805 ], [ "tt", 665525 ], [ "zf", 181964 ] ] 
+1614 [ [ "odd", 826889 ], [ "tt", 665623 ], [ "zf", 182013 ] ] 
+1615 [ [ "odd", 827001 ], [ "tt", 665701 ], [ "zf", 182053 ] ] 
+1616 [ [ "odd", 827112 ], [ "tt", 665778 ], [ "zf", 182094 ] ] 
+1617 [ [ "odd", 827220 ], [ "tt", 665858 ], [ "zf", 182134 ] ] 
+1618 [ [ "odd", 827331 ], [ "tt", 665935 ], [ "zf", 182173 ] ] 
+1619 [ [ "odd", 827443 ], [ "tt", 666011 ], [ "zf", 182211 ] ] 
+1620 [ [ "odd", 827554 ], [ "tt", 666088 ], [ "zf", 182248 ] ] 
+1621 [ [ "odd", 827662 ], [ "tt", 666167 ], [ "zf", 182285 ] ] 
+1622 [ [ "odd", 827755 ], [ "tt", 666252 ], [ "zf", 182330 ] ] 
+1623 [ [ "odd", 827868 ], [ "tt", 666323 ], [ "zf", 182368 ] ] 
+1624 [ [ "odd", 827980 ], [ "tt", 666395 ], [ "zf", 182405 ] ] 
+1625 [ [ "odd", 828085 ], [ "tt", 666471 ], [ "zf", 182444 ] ] 
+1626 [ [ "odd", 828164 ], [ "tt", 666566 ], [ "zf", 182489 ] ] 
+1627 [ [ "odd", 828257 ], [ "tt", 666652 ], [ "zf", 182528 ] ] 
+1628 [ [ "odd", 828362 ], [ "tt", 666728 ], [ "zf", 182564 ] ] 
+1629 [ [ "odd", 828469 ], [ "tt", 666803 ], [ "zf", 182598 ] ] 
+1630 [ [ "odd", 828574 ], [ "tt", 666877 ], [ "zf", 182634 ] ] 
+1631 [ [ "odd", 828678 ], [ "tt", 666951 ], [ "zf", 182670 ] ] 
+1632 [ [ "odd", 828776 ], [ "tt", 667030 ], [ "zf", 182706 ] ] 
+1633 [ [ "odd", 828884 ], [ "tt", 667103 ], [ "zf", 182737 ] ] 
+1634 [ [ "odd", 828990 ], [ "tt", 667176 ], [ "zf", 182769 ] ] 
+1635 [ [ "odd", 829093 ], [ "tt", 667248 ], [ "zf", 182804 ] ] 
+1636 [ [ "odd", 829198 ], [ "tt", 667317 ], [ "zf", 182839 ] ] 
+1637 [ [ "odd", 829305 ], [ "tt", 667383 ], [ "zf", 182874 ] ] 
+1638 [ [ "odd", 829410 ], [ "tt", 667452 ], [ "zf", 182907 ] ] 
+1639 [ [ "odd", 829516 ], [ "tt", 667519 ], [ "zf", 182940 ] ] 
+1640 [ [ "odd", 829618 ], [ "tt", 667589 ], [ "zf", 182973 ] ] 
+1641 [ [ "odd", 829716 ], [ "tt", 667661 ], [ "zf", 183007 ] ] 
+1642 [ [ "odd", 829818 ], [ "tt", 667726 ], [ "zf", 183043 ] ] 
+1643 [ [ "odd", 829910 ], [ "tt", 667803 ], [ "zf", 183076 ] ] 
+1644 [ [ "odd", 830008 ], [ "tt", 667873 ], [ "zf", 183109 ] ] 
+1645 [ [ "odd", 830103 ], [ "tt", 667943 ], [ "zf", 183144 ] ] 
+1646 [ [ "odd", 830203 ], [ "tt", 668011 ], [ "zf", 183175 ] ] 
+1647 [ [ "odd", 830305 ], [ "tt", 668077 ], [ "zf", 183205 ] ] 
+1648 [ [ "odd", 830406 ], [ "tt", 668141 ], [ "zf", 183237 ] ] 
+1649 [ [ "odd", 830510 ], [ "tt", 668201 ], [ "zf", 183269 ] ] 
+1650 [ [ "odd", 830603 ], [ "tt", 668270 ], [ "zf", 183302 ] ] 
+1651 [ [ "odd", 830703 ], [ "tt", 668334 ], [ "zf", 183332 ] ] 
+1652 [ [ "odd", 830798 ], [ "tt", 668400 ], [ "zf", 183364 ] ] 
+1653 [ [ "odd", 830880 ], [ "tt", 668476 ], [ "zf", 183398 ] ] 
+1654 [ [ "odd", 830981 ], [ "tt", 668536 ], [ "zf", 183428 ] ] 
+1655 [ [ "odd", 831068 ], [ "tt", 668607 ], [ "zf", 183460 ] ] 
+1656 [ [ "odd", 831170 ], [ "tt", 668666 ], [ "zf", 183488 ] ] 
+1657 [ [ "odd", 831262 ], [ "tt", 668732 ], [ "zf", 183518 ] ] 
+1658 [ [ "odd", 831361 ], [ "tt", 668793 ], [ "zf", 183545 ] ] 
+1659 [ [ "odd", 831455 ], [ "tt", 668857 ], [ "zf", 183573 ] ] 
+1660 [ [ "odd", 831547 ], [ "tt", 668924 ], [ "zf", 183599 ] ] 
+1661 [ [ "odd", 831642 ], [ "tt", 668986 ], [ "zf", 183626 ] ] 
+1662 [ [ "odd", 831738 ], [ "tt", 669047 ], [ "zf", 183652 ] ] 
+1663 [ [ "odd", 831830 ], [ "tt", 669111 ], [ "zf", 183678 ] ] 
+1664 [ [ "odd", 831919 ], [ "tt", 669169 ], [ "zf", 183712 ] ] 
+1665 [ [ "odd", 832008 ], [ "tt", 669229 ], [ "zf", 183743 ] ] 
+1666 [ [ "odd", 832102 ], [ "tt", 669284 ], [ "zf", 183773 ] ] 
+1667 [ [ "odd", 832189 ], [ "tt", 669344 ], [ "zf", 183804 ] ] 
+1668 [ [ "odd", 832281 ], [ "tt", 669399 ], [ "zf", 183834 ] ] 
+1669 [ [ "odd", 832366 ], [ "tt", 669458 ], [ "zf", 183866 ] ] 
+1670 [ [ "odd", 832456 ], [ "tt", 669517 ], [ "zf", 183892 ] ] 
+1671 [ [ "odd", 832537 ], [ "tt", 669575 ], [ "zf", 183927 ] ] 
+1672 [ [ "odd", 832612 ], [ "tt", 669640 ], [ "zf", 183960 ] ] 
+1673 [ [ "odd", 832697 ], [ "tt", 669698 ], [ "zf", 183989 ] ] 
+1674 [ [ "odd", 832779 ], [ "tt", 669757 ], [ "zf", 184019 ] ] 
+1675 [ [ "odd", 832868 ], [ "tt", 669809 ], [ "zf", 184048 ] ] 
+1676 [ [ "odd", 832956 ], [ "tt", 669862 ], [ "zf", 184076 ] ] 
+1677 [ [ "odd", 833042 ], [ "tt", 669913 ], [ "zf", 184107 ] ] 
+1678 [ [ "odd", 833122 ], [ "tt", 669971 ], [ "zf", 184136 ] ] 
+1679 [ [ "odd", 833204 ], [ "tt", 670027 ], [ "zf", 184164 ] ] 
+1680 [ [ "odd", 833275 ], [ "tt", 670090 ], [ "zf", 184195 ] ] 
+1681 [ [ "odd", 833347 ], [ "tt", 670152 ], [ "zf", 184225 ] ] 
+1682 [ [ "odd", 833430 ], [ "tt", 670206 ], [ "zf", 184251 ] ] 
+1683 [ [ "odd", 833510 ], [ "tt", 670259 ], [ "zf", 184280 ] ] 
+1684 [ [ "odd", 833588 ], [ "tt", 670312 ], [ "zf", 184310 ] ] 
+1685 [ [ "odd", 833670 ], [ "tt", 670362 ], [ "zf", 184338 ] ] 
+1686 [ [ "odd", 833750 ], [ "tt", 670414 ], [ "zf", 184365 ] ] 
+1687 [ [ "odd", 833831 ], [ "tt", 670462 ], [ "zf", 184394 ] ] 
+1688 [ [ "odd", 833910 ], [ "tt", 670513 ], [ "zf", 184421 ] ] 
+1689 [ [ "odd", 833991 ], [ "tt", 670562 ], [ "zf", 184447 ] ] 
+1690 [ [ "odd", 834073 ], [ "tt", 670613 ], [ "zf", 184469 ] ] 
+1691 [ [ "odd", 834146 ], [ "tt", 670664 ], [ "zf", 184499 ] ] 
+1692 [ [ "odd", 834208 ], [ "tt", 670722 ], [ "zf", 184532 ] ] 
+1693 [ [ "odd", 834282 ], [ "tt", 670773 ], [ "zf", 184559 ] ] 
+1694 [ [ "odd", 834346 ], [ "tt", 670830 ], [ "zf", 184589 ] ] 
+1695 [ [ "odd", 834420 ], [ "tt", 670880 ], [ "zf", 184615 ] ] 
+1696 [ [ "odd", 834488 ], [ "tt", 670931 ], [ "zf", 184645 ] ] 
+1697 [ [ "odd", 834560 ], [ "tt", 670981 ], [ "zf", 184671 ] ] 
+1698 [ [ "odd", 834635 ], [ "tt", 671027 ], [ "zf", 184697 ] ] 
+1699 [ [ "odd", 834704 ], [ "tt", 671075 ], [ "zf", 184726 ] ] 
+1700 [ [ "odd", 834779 ], [ "tt", 671120 ], [ "zf", 184751 ] ] 
+1701 [ [ "odd", 834854 ], [ "tt", 671163 ], [ "zf", 184777 ] ] 
+1702 [ [ "odd", 834927 ], [ "tt", 671210 ], [ "zf", 184800 ] ] 
+1703 [ [ "odd", 835001 ], [ "tt", 671253 ], [ "zf", 184825 ] ] 
+1704 [ [ "odd", 835070 ], [ "tt", 671299 ], [ "zf", 184851 ] ] 
+1705 [ [ "odd", 835130 ], [ "tt", 671354 ], [ "zf", 184876 ] ] 
+1706 [ [ "odd", 835197 ], [ "tt", 671403 ], [ "zf", 184899 ] ] 
+1707 [ [ "odd", 835260 ], [ "tt", 671453 ], [ "zf", 184924 ] ] 
+1708 [ [ "odd", 835332 ], [ "tt", 671493 ], [ "zf", 184949 ] ] 
+1709 [ [ "odd", 835397 ], [ "tt", 671537 ], [ "zf", 184976 ] ] 
+1710 [ [ "odd", 835466 ], [ "tt", 671578 ], [ "zf", 185001 ] ] 
+1711 [ [ "odd", 835532 ], [ "tt", 671621 ], [ "zf", 185026 ] ] 
+1712 [ [ "odd", 835604 ], [ "tt", 671661 ], [ "zf", 185047 ] ] 
+1713 [ [ "odd", 835672 ], [ "tt", 671703 ], [ "zf", 185069 ] ] 
+1714 [ [ "odd", 835741 ], [ "tt", 671744 ], [ "zf", 185090 ] ] 
+1715 [ [ "odd", 835802 ], [ "tt", 671791 ], [ "zf", 185112 ] ] 
+1716 [ [ "odd", 835844 ], [ "tt", 671849 ], [ "zf", 185141 ] ] 
+1717 [ [ "odd", 835912 ], [ "tt", 671890 ], [ "zf", 185160 ] ] 
+1718 [ [ "odd", 835979 ], [ "tt", 671930 ], [ "zf", 185180 ] ] 
+1719 [ [ "odd", 836037 ], [ "tt", 671977 ], [ "zf", 185201 ] ] 
+1720 [ [ "odd", 836101 ], [ "tt", 672017 ], [ "zf", 185222 ] ] 
+1721 [ [ "odd", 836166 ], [ "tt", 672055 ], [ "zf", 185243 ] ] 
+1722 [ [ "odd", 836227 ], [ "tt", 672098 ], [ "zf", 185262 ] ] 
+1723 [ [ "odd", 836290 ], [ "tt", 672136 ], [ "zf", 185283 ] ] 
+1724 [ [ "odd", 836353 ], [ "tt", 672174 ], [ "zf", 185303 ] ] 
+1725 [ [ "odd", 836415 ], [ "tt", 672211 ], [ "zf", 185324 ] ] 
+1726 [ [ "odd", 836478 ], [ "tt", 672249 ], [ "zf", 185342 ] ] 
+1727 [ [ "odd", 836540 ], [ "tt", 672287 ], [ "zf", 185360 ] ] 
+1728 [ [ "odd", 836598 ], [ "tt", 672327 ], [ "zf", 185379 ] ] 
+1729 [ [ "odd", 836646 ], [ "tt", 672367 ], [ "zf", 185407 ] ] 
+1730 [ [ "odd", 836703 ], [ "tt", 672402 ], [ "zf", 185430 ] ] 
+1731 [ [ "odd", 836761 ], [ "tt", 672436 ], [ "zf", 185452 ] ] 
+1732 [ [ "odd", 836803 ], [ "tt", 672482 ], [ "zf", 185477 ] ] 
+1733 [ [ "odd", 836859 ], [ "tt", 672516 ], [ "zf", 185499 ] ] 
+1734 [ [ "odd", 836914 ], [ "tt", 672550 ], [ "zf", 185521 ] ] 
+1735 [ [ "odd", 836956 ], [ "tt", 672589 ], [ "zf", 185550 ] ] 
+1736 [ [ "odd", 837006 ], [ "tt", 672626 ], [ "zf", 185572 ] ] 
+1737 [ [ "odd", 837058 ], [ "tt", 672663 ], [ "zf", 185591 ] ] 
+1738 [ [ "odd", 837101 ], [ "tt", 672701 ], [ "zf", 185617 ] ] 
+1739 [ [ "odd", 837142 ], [ "tt", 672741 ], [ "zf", 185642 ] ] 
+1740 [ [ "odd", 837183 ], [ "tt", 672782 ], [ "zf", 185665 ] ] 
+1741 [ [ "odd", 837229 ], [ "tt", 672817 ], [ "zf", 185688 ] ] 
+1742 [ [ "odd", 837282 ], [ "tt", 672847 ], [ "zf", 185708 ] ] 
+1743 [ [ "odd", 837331 ], [ "tt", 672881 ], [ "zf", 185727 ] ] 
+1744 [ [ "odd", 837372 ], [ "tt", 672915 ], [ "zf", 185753 ] ] 
+1745 [ [ "odd", 837418 ], [ "tt", 672951 ], [ "zf", 185771 ] ] 
+1746 [ [ "odd", 837455 ], [ "tt", 672987 ], [ "zf", 185797 ] ] 
+1747 [ [ "odd", 837490 ], [ "tt", 673025 ], [ "zf", 185822 ] ] 
+1748 [ [ "odd", 837539 ], [ "tt", 673055 ], [ "zf", 185840 ] ] 
+1749 [ [ "odd", 837586 ], [ "tt", 673084 ], [ "zf", 185860 ] ] 
+1750 [ [ "odd", 837635 ], [ "tt", 673111 ], [ "zf", 185879 ] ] 
+1751 [ [ "odd", 837673 ], [ "tt", 673144 ], [ "zf", 185902 ] ] 
+1752 [ [ "odd", 837708 ], [ "tt", 673180 ], [ "zf", 185924 ] ] 
+1753 [ [ "odd", 837749 ], [ "tt", 673211 ], [ "zf", 185944 ] ] 
+1754 [ [ "odd", 837782 ], [ "tt", 673250 ], [ "zf", 185963 ] ] 
+1755 [ [ "odd", 837820 ], [ "tt", 673282 ], [ "zf", 185983 ] ] 
+1756 [ [ "odd", 837863 ], [ "tt", 673310 ], [ "zf", 186001 ] ] 
+1757 [ [ "odd", 837904 ], [ "tt", 673337 ], [ "zf", 186021 ] ] 
+1758 [ [ "odd", 837947 ], [ "tt", 673364 ], [ "zf", 186038 ] ] 
+1759 [ [ "odd", 837990 ], [ "tt", 673391 ], [ "zf", 186054 ] ] 
+1760 [ [ "odd", 838037 ], [ "tt", 673417 ], [ "zf", 186066 ] ] 
+1761 [ [ "odd", 838073 ], [ "tt", 673444 ], [ "zf", 186087 ] ] 
+1762 [ [ "odd", 838113 ], [ "tt", 673471 ], [ "zf", 186103 ] ] 
+1763 [ [ "odd", 838154 ], [ "tt", 673495 ], [ "zf", 186120 ] ] 
+1764 [ [ "odd", 838197 ], [ "tt", 673518 ], [ "zf", 186135 ] ] 
+1765 [ [ "odd", 838238 ], [ "tt", 673540 ], [ "zf", 186152 ] ] 
+1766 [ [ "odd", 838276 ], [ "tt", 673565 ], [ "zf", 186168 ] ] 
+1767 [ [ "odd", 838311 ], [ "tt", 673593 ], [ "zf", 186183 ] ] 
+1768 [ [ "odd", 838346 ], [ "tt", 673619 ], [ "zf", 186199 ] ] 
+1769 [ [ "odd", 838381 ], [ "tt", 673647 ], [ "zf", 186212 ] ] 
+1770 [ [ "odd", 838413 ], [ "tt", 673671 ], [ "zf", 186231 ] ] 
+1771 [ [ "odd", 838441 ], [ "tt", 673695 ], [ "zf", 186253 ] ] 
+1772 [ [ "odd", 838463 ], [ "tt", 673727 ], [ "zf", 186272 ] ] 
+1773 [ [ "odd", 838484 ], [ "tt", 673757 ], [ "zf", 186293 ] ] 
+1774 [ [ "odd", 838520 ], [ "tt", 673777 ], [ "zf", 186308 ] ] 
+1775 [ [ "odd", 838551 ], [ "tt", 673799 ], [ "zf", 186325 ] ] 
+1776 [ [ "odd", 838583 ], [ "tt", 673820 ], [ "zf", 186341 ] ] 
+1777 [ [ "odd", 838604 ], [ "tt", 673847 ], [ "zf", 186361 ] ] 
+1778 [ [ "odd", 838636 ], [ "tt", 673867 ], [ "zf", 186376 ] ] 
+1779 [ [ "odd", 838668 ], [ "tt", 673886 ], [ "zf", 186391 ] ] 
+1780 [ [ "odd", 838695 ], [ "tt", 673911 ], [ "zf", 186404 ] ] 
+1781 [ [ "odd", 838726 ], [ "tt", 673932 ], [ "zf", 186416 ] ] 
+1782 [ [ "odd", 838754 ], [ "tt", 673954 ], [ "zf", 186429 ] ] 
+1783 [ [ "odd", 838786 ], [ "tt", 673970 ], [ "zf", 186443 ] ] 
+1784 [ [ "odd", 838812 ], [ "tt", 673987 ], [ "zf", 186461 ] ] 
+1785 [ [ "odd", 838844 ], [ "tt", 674003 ], [ "zf", 186473 ] ] 
+1786 [ [ "odd", 838866 ], [ "tt", 674023 ], [ "zf", 186490 ] ] 
+1787 [ [ "odd", 838890 ], [ "tt", 674043 ], [ "zf", 186504 ] ] 
+1788 [ [ "odd", 838919 ], [ "tt", 674060 ], [ "zf", 186515 ] ] 
+1789 [ [ "odd", 838947 ], [ "tt", 674075 ], [ "zf", 186528 ] ] 
+1790 [ [ "odd", 838975 ], [ "tt", 674095 ], [ "zf", 186535 ] ] 
+1791 [ [ "odd", 839001 ], [ "tt", 674113 ], [ "zf", 186545 ] ] 
+1792 [ [ "odd", 839022 ], [ "tt", 674131 ], [ "zf", 186559 ] ] 
+1793 [ [ "odd", 839039 ], [ "tt", 674150 ], [ "zf", 186575 ] ] 
+1794 [ [ "odd", 839066 ], [ "tt", 674163 ], [ "zf", 186586 ] ] 
+1795 [ [ "odd", 839091 ], [ "tt", 674182 ], [ "zf", 186592 ] ] 
+1796 [ [ "odd", 839114 ], [ "tt", 674198 ], [ "zf", 186602 ] ] 
+1797 [ [ "odd", 839136 ], [ "tt", 674214 ], [ "zf", 186612 ] ] 
+1798 [ [ "odd", 839162 ], [ "tt", 674226 ], [ "zf", 186621 ] ] 
+1799 [ [ "odd", 839183 ], [ "tt", 674241 ], [ "zf", 186631 ] ] 
+1800 [ [ "odd", 839203 ], [ "tt", 674253 ], [ "zf", 186644 ] ] 
+1801 [ [ "odd", 839220 ], [ "tt", 674267 ], [ "zf", 186657 ] ] 
+1802 [ [ "odd", 839242 ], [ "tt", 674279 ], [ "zf", 186666 ] ] 
+1803 [ [ "odd", 839261 ], [ "tt", 674292 ], [ "zf", 186676 ] ] 
+1804 [ [ "odd", 839282 ], [ "tt", 674303 ], [ "zf", 186685 ] ] 
+1805 [ [ "odd", 839301 ], [ "tt", 674316 ], [ "zf", 186693 ] ] 
+1806 [ [ "odd", 839317 ], [ "tt", 674329 ], [ "zf", 186703 ] ] 
+1807 [ [ "odd", 839336 ], [ "tt", 674338 ], [ "zf", 186713 ] ] 
+1808 [ [ "odd", 839356 ], [ "tt", 674349 ], [ "zf", 186719 ] ] 
+1809 [ [ "odd", 839372 ], [ "tt", 674360 ], [ "zf", 186728 ] ] 
+1810 [ [ "odd", 839382 ], [ "tt", 674376 ], [ "zf", 186737 ] ] 
+1811 [ [ "odd", 839397 ], [ "tt", 674387 ], [ "zf", 186745 ] ] 
+1812 [ [ "odd", 839404 ], [ "tt", 674400 ], [ "zf", 186758 ] ] 
+1813 [ [ "odd", 839417 ], [ "tt", 674410 ], [ "zf", 186767 ] ] 
+1814 [ [ "odd", 839429 ], [ "tt", 674418 ], [ "zf", 186778 ] ] 
+1815 [ [ "odd", 839440 ], [ "tt", 674428 ], [ "zf", 186787 ] ] 
+1816 [ [ "odd", 839453 ], [ "tt", 674437 ], [ "zf", 186794 ] ] 
+1817 [ [ "odd", 839465 ], [ "tt", 674447 ], [ "zf", 186800 ] ] 
+1818 [ [ "odd", 839480 ], [ "tt", 674456 ], [ "zf", 186803 ] ] 
+1819 [ [ "odd", 839488 ], [ "tt", 674467 ], [ "zf", 186810 ] ] 
+1820 [ [ "odd", 839503 ], [ "tt", 674471 ], [ "zf", 186816 ] ] 
+1821 [ [ "odd", 839517 ], [ "tt", 674475 ], [ "zf", 186822 ] ] 
+1822 [ [ "odd", 839527 ], [ "tt", 674482 ], [ "zf", 186828 ] ] 
+1823 [ [ "odd", 839541 ], [ "tt", 674488 ], [ "zf", 186830 ] ] 
+1824 [ [ "odd", 839549 ], [ "tt", 674493 ], [ "zf", 186838 ] ] 
+1825 [ [ "odd", 839561 ], [ "tt", 674495 ], [ "zf", 186844 ] ] 
+1826 [ [ "odd", 839570 ], [ "tt", 674502 ], [ "zf", 186847 ] ] 
+1827 [ [ "odd", 839581 ], [ "tt", 674506 ], [ "zf", 186850 ] ] 
+1828 [ [ "odd", 839588 ], [ "tt", 674510 ], [ "zf", 186856 ] ] 
+1829 [ [ "odd", 839593 ], [ "tt", 674516 ], [ "zf", 186861 ] ] 
+1830 [ [ "odd", 839597 ], [ "tt", 674521 ], [ "zf", 186867 ] ] 
+1831 [ [ "odd", 839604 ], [ "tt", 674526 ], [ "zf", 186869 ] ] 
+1832 [ [ "odd", 839605 ], [ "tt", 674530 ], [ "zf", 186877 ] ] 
+1833 [ [ "odd", 839611 ], [ "tt", 674533 ], [ "zf", 186880 ] ] 
+1834 [ [ "odd", 839617 ], [ "tt", 674535 ], [ "zf", 186883 ] ] 
+1835 [ [ "odd", 839621 ], [ "tt", 674537 ], [ "zf", 186887 ] ] 
+1836 [ [ "odd", 839623 ], [ "tt", 674540 ], [ "zf", 186891 ] ] 
+1837 [ [ "odd", 839625 ], [ "tt", 674545 ], [ "zf", 186892 ] ] 
+1838 [ [ "odd", 839630 ], [ "tt", 674545 ], [ "zf", 186894 ] ] 
+1839 [ [ "odd", 839634 ], [ "tt", 674547 ], [ "zf", 186894 ] ] 
+1840 [ [ "odd", 839636 ], [ "tt", 674548 ], [ "zf", 186896 ] ] 
+1841 [ [ "odd", 839638 ], [ "tt", 674549 ], [ "zf", 186897 ] ] 
+1842 [ [ "odd", 839639 ], [ "tt", 674549 ], [ "zf", 186899 ] ] 
+1843 [ [ "odd", 839639 ], [ "tt", 674550 ], [ "zf", 186900 ] ] 
+1844 [ [ "odd", 839640 ], [ "tt", 674550 ], [ "zf", 186900 ] ] 
+1845 [ [ "odd", 839640 ], [ "tt", 674550 ], [ "zf", 186900 ] ] 
+[ [ "odd", 839640 ], [ "tt", 674550 ], [ "zf", 186900 ] ] 
+gap> F := FreeGroup(3);;
+gap> w := F.1 * F.2^-2 * F.3;;
+gap> letters:=GeneratorsOfGroup(F);
+[ f1, f2, f3 ]
+gap> Read(ReidemeisterSchreier.g);
+Error, Variable: 'ReidemeisterSchreier' must have a value
+not in any function at *stdin*:53
+gap> Read("ReidemeisterSchreier.g");
+gap> Read("AutShByGramP.g");
+Syntax error: ; expected in AutShByGramP.g:16
+  GramP:=GetGramP(GramS, h));
+                           ^
+Syntax warning: Unbound global variable in AutShByGramP.g:43
+    ttg:=IdentityMat(n);
+    ^^^
+Syntax warning: Unbound global variable in AutShByGramP.g:45
+      if xx>0 then ttg:=ttg*ogrec.totalgens[xx];
+                   ^^^
+Syntax warning: Unbound global variable in AutShByGramP.g:45
+      if xx>0 then ttg:=ttg*ogrec.totalgens[xx];
+                        ^^^
+Syntax warning: Unbound global variable in AutShByGramP.g:47
+        tth:=InverseMat(ogrec.totalgens[-xx]);
+        ^^^
+Syntax warning: Unbound global variable in AutShByGramP.g:48
+        ttg:=ttg*tth;
+        ^^^
+Syntax warning: Unbound global variable in AutShByGramP.g:48
+        ttg:=ttg*tth;
+             ^^^
+Syntax warning: Unbound global variable in AutShByGramP.g:48
+        ttg:=ttg*tth;
+                 ^^^
+Syntax warning: Unbound global variable in AutShByGramP.g:52
+    if h*ttg<>h then buzz(5157641); fi;
+         ^^^
+Syntax warning: Unbound global variable in AutShByGramP.g:53
+    Add(hstabgens, ttg);
+                   ^^^
+gap> Read("AutShByGramP.g");
+Syntax warning: Unbound global variable in AutShByGramP.g:47
+        tth:=InverseMat(ogrec.totalgens[-xx]);
+        ^^^
+Syntax warning: Unbound global variable in AutShByGramP.g:48
+        ttg:=ttg*tth;
+                 ^^^
+gap> Read("AutShByGramP.g");
+gap> 

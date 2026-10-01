@@ -1,0 +1,7 @@
+sessionnumb  20261001140425 
+gap> Read("SplitConsTools.g");
+Syntax warning: Unbound global variable in SplitConsTools.g:254
+        Add(types, SpconsIntType(Gram, spcon1, spcon2));
+                                 ^^^^
+gap> Read("SplitConsTools.g");
+gap> 

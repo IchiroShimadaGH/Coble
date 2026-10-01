@@ -1,0 +1,4993 @@
+sessionnumb  20261001150647 
+gap> Read("Task20261001Ua.g");
+FoundShRecs0930Ua 5380 
+Syntax error: then expected in Task20261001Ua.g:58
+        if SignatureQ(tGramT)<>[22-trho, 2, 20-trho] the buzz(616782); fi;
+                                                     ^^^
+Syntax error: while parsing a 'for' loop: statement or 'od' expected in Task20261001Ua.g:61
+      fi;
+      ^^
+Syntax error: while parsing a 'for' loop: statement or 'od' expected in Task20261001Ua.g:62
+    fi;
+    ^^
+Syntax error: found an expression when a statement was expected in Task20261001Ua.g:66
+    sprats,sconstypes:=sconsinttypes;
+          ^
+Syntax error: String must not include <newline> in Task20261001Ua.g:67
+    Printn("_____",  "rho", trho, ampleflag, ": Tcount", Trec.count, ": 
+                                                                     ^^^
+Syntax error: ) expected in Task20261001Ua.g:68
+    sprats", sprats.nopss, sconsinttypes);
+    ^^^^^^
+gap> Read("Task20261001Ua.g");
+FoundShRecs0930Ua 5380 
+Syntax error: found an expression when a statement was expected in Task20261001Ua.g:66
+    sprats,sconstypes:=sconsinttypes;
+          ^
+gap> Read("Task20261001Ua.g");
+FoundShRecs0930Ua 5380 
+_____________ 1 
+__OLrecs 1 [ 1 ] 
+_____ rho 3 true : Tcount 1 : sprats [ 0, 2 ] [ [ "tt", 1 ] ] 
+1 1 0 
+_____________ 2 
+__OLrecs 1 [ 1 ] 
+_____ rho 3 true : Tcount 1 : sprats [ 0, 2 ] [ [ "odd", 1 ] ] 
+2 2 0 
+_____________ 3 
+__OLrecs 1 [ 1 ] 
+_____ rho 3 true : Tcount 1 : sprats [ 0, 3 ] [ [ "zf", 3 ] ] 
+3 3 0 
+_____________ 4 
+__OLrecs 1 [ 1 ] 
+_____ rho 4 true : Tcount 1 : sprats [ 0, 3 ] [ [ "tt", 3 ] ] 
+4 4 0 
+_____________ 5 
+__OLrecs 1 [ 1 ] 
+_____ rho 4 true : Tcount 1 : sprats [ 0, 3 ] [ [ "odd", 1 ], [ "tt", 2 ] ] 
+5 5 0 
+_____________ 6 
+__OLrecs 1 [ 1 ] 
+_____ rho 4 true : Tcount 1 : sprats [ 0, 4 ] [ [ "tt", 3 ], [ "zf", 3 ] ] 
+6 6 0 
+_____________ 7 
+__OLrecs 1 [ 1 ] 
+_____ rho 4 true : Tcount 1 : sprats [ 0, 3 ] [ [ "odd", 2 ], [ "tt", 1 ] ] 
+7 7 0 
+_____________ 8 
+__OLrecs 1 [ 1 ] 
+_____ rho 4 true : Tcount 1 : sprats [ 0, 4 ] [ [ "odd", 2 ], [ "tt", 1 ], [ "zf", 3 ] ] 
+8 8 0 
+_____________ 9 
+__OLrecs 1 [ 1 ] 
+_____ rho 4 true : Tcount 1 : sprats [ 0, 6 ] [ [ "tt", 3 ], [ "zf", 12 ] ] 
+9 9 0 
+_____________ 10 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 4 true : Tcount 1 : sprats [ 0, 3 ] [ [ "odd", 3 ] ] 
+_____ rho 4 true : Tcount 1 : sprats [ 3, 0 ] [  ] 
+10 11 0 
+_____________ 11 
+__OLrecs 1 [ 1 ] 
+_____ rho 4 true : Tcount 1 : sprats [ 0, 3 ] [ [ "odd", 3 ] ] 
+11 12 0 
+_____________ 12 
+__OLrecs 1 [ 1 ] 
+_____ rho 4 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 4 ], [ "zf", 6 ] ] 
+12 13 0 
+_____________ 13 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] [ [ "tt", 6 ] ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 12 ] [ [ "tt", 18 ], [ "zf", 48 ] ] 
+13 15 0 
+_____________ 14 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] [ [ "odd", 1 ], [ "tt", 5 ] ] 
+14 16 0 
+_____________ 15 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 5 ] [ [ "tt", 7 ], [ "zf", 3 ] ] 
+15 17 0 
+_____________ 16 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] [ [ "odd", 2 ], [ "tt", 4 ] ] 
+16 18 0 
+_____________ 17 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 2 ], [ "tt", 5 ], [ "zf", 3 ] ] 
+17 19 0 
+_____________ 18 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 7 ] [ [ "tt", 9 ], [ "zf", 12 ] ] 
+18 20 0 
+_____________ 19 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] [ [ "odd", 3 ], [ "tt", 3 ] ] 
+19 21 0 
+_____________ 20 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 4 ], [ "tt", 3 ], [ "zf", 3 ] ] 
+20 22 0 
+_____________ 21 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 4 ], [ "tt", 5 ], [ "zf", 12 ] ] 
+21 23 0 
+_____________ 22 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 12 ] [ [ "tt", 18 ], [ "zf", 48 ] ] 
+22 24 0 
+_____________ 23 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] [ [ "odd", 3 ], [ "tt", 3 ] ] 
+_____ rho 5 true : Tcount 1 : sprats [ 3, 1 ] [  ] 
+23 26 0 
+_____________ 24 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] [ [ "odd", 3 ], [ "tt", 3 ] ] 
+_____ rho 5 true : Tcount 1 : sprats [ 2, 3 ] [ [ "odd", 3 ] ] 
+24 28 0 
+_____________ 25 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 4 ], [ "tt", 5 ], [ "zf", 6 ] ] 
+25 29 0 
+_____________ 26 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] [ [ "odd", 2 ], [ "tt", 4 ] ] 
+26 30 0 
+_____________ 27 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] [ [ "odd", 3 ], [ "tt", 3 ] ] 
+27 31 0 
+_____________ 28 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 4 ], [ "tt", 3 ], [ "zf", 3 ] ] 
+28 32 0 
+_____________ 29 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] [ [ "odd", 4 ], [ "tt", 2 ] ] 
+29 33 0 
+_____________ 30 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] [ [ "odd", 4 ], [ "tt", 2 ] ] 
+30 34 0 
+_____________ 31 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 2 ], [ "zf", 6 ] ] 
+31 35 0 
+_____________ 32 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 1 ], [ "tt", 6 ], [ "zf", 3 ] ] 
+32 36 0 
+_____________ 33 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 3 ], [ "tt", 4 ], [ "zf", 3 ] ] 
+33 37 0 
+_____________ 34 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 3 ], [ "tt", 6 ], [ "zf", 12 ] ] 
+34 38 0 
+_____________ 35 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 5 ], [ "tt", 2 ], [ "zf", 3 ] ] 
+_____ rho 5 true : Tcount 1 : sprats [ 3, 2 ] [ [ "zf", 1 ] ] 
+35 40 0 
+_____________ 36 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 5 ], [ "tt", 2 ], [ "zf", 3 ] ] 
+36 41 0 
+_____________ 37 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 9 ], [ "tt", 6 ], [ "zf", 21 ] ] 
+37 42 0 
+_____________ 38 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 3 ], [ "zf", 6 ] ] 
+38 43 0 
+_____________ 39 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 6 ] [ [ "tt", 9 ], [ "zf", 6 ] ] 
+39 44 0 
+_____________ 40 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 4 ], [ "tt", 5 ], [ "zf", 6 ] ] 
+40 45 0 
+_____________ 41 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 10 ] [ [ "tt", 15 ], [ "zf", 30 ] ] 
+41 46 0 
+_____________ 42 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 8 ], [ "tt", 5 ], [ "zf", 15 ] ] 
+42 47 0 
+_____________ 43 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] [ [ "odd", 4 ], [ "tt", 2 ] ] 
+43 48 0 
+_____________ 44 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] [ [ "odd", 4 ], [ "tt", 2 ] ] 
+44 49 0 
+_____________ 45 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] [ [ "odd", 5 ], [ "tt", 1 ] ] 
+_____ rho 5 true : Tcount 1 : sprats [ 3, 1 ] [  ] 
+45 51 0 
+_____________ 46 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] [ [ "odd", 5 ], [ "tt", 1 ] ] 
+46 52 0 
+_____________ 47 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] [ [ "odd", 5 ], [ "tt", 1 ] ] 
+_____ rho 5 true : Tcount 1 : sprats [ 3, 1 ] [  ] 
+47 54 0 
+_____________ 48 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 5 ], [ "tt", 2 ], [ "zf", 3 ] ] 
+48 55 0 
+_____________ 49 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 5 ], [ "tt", 2 ], [ "zf", 3 ] ] 
+49 56 0 
+_____________ 50 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 10 ], [ "tt", 2 ], [ "zf", 9 ] ] 
+50 57 0 
+_____________ 51 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 8 ], [ "tt", 1 ], [ "zf", 6 ] ] 
+_____ rho 5 true : Tcount 1 : sprats [ 4, 0 ] [  ] 
+51 59 0 
+_____________ 52 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 3 ], [ "zf", 6 ] ] 
+52 60 0 
+_____________ 53 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] [ [ "odd", 6 ] ] 
+53 61 0 
+_____________ 54 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 4 ] [ [ "odd", 6 ] ] 
+54 62 0 
+_____________ 55 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 10 ] ] 
+55 63 0 
+_____________ 56 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 12 ], [ "zf", 9 ] ] 
+_____ rho 5 true : Tcount 1 : sprats [ 4, 1 ] [  ] 
+56 65 0 
+_____________ 57 
+__OLrecs 1 [ 1 ] 
+_____ rho 5 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 18 ], [ "zf", 18 ] ] 
+57 66 0 
+_____________ 58 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "tt", 10 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 13 ] [ [ "tt", 30 ], [ "zf", 48 ] ] 
+58 68 0 
+_____________ 59 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 1 ], [ "tt", 9 ] ] 
+59 69 0 
+_____________ 60 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "tt", 12 ], [ "zf", 3 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 16 ], [ "tt", 24 ], [ "zf", 51 ] ] 
+60 71 0 
+_____________ 61 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 2 ], [ "tt", 8 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 13 ] [ [ "odd", 6 ], [ "tt", 24 ], [ "zf", 48 ] ] 
+61 73 0 
+_____________ 62 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 2 ], [ "tt", 10 ], [ "zf", 3 ] ] 
+62 74 0 
+_____________ 63 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "tt", 16 ], [ "zf", 12 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 20 ] [ [ "tt", 70 ], [ "zf", 120 ] ] 
+63 76 0 
+_____________ 64 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 3 ], [ "tt", 7 ] ] 
+64 77 0 
+_____________ 65 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 4 ], [ "tt", 8 ], [ "zf", 3 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 16 ] [ [ "odd", 24 ], [ "tt", 30 ], [ "zf", 66 ] ] 
+65 79 0 
+_____________ 66 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 4 ], [ "tt", 12 ], [ "zf", 12 ] ] 
+66 80 0 
+_____________ 67 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 13 ] [ [ "tt", 30 ], [ "zf", 48 ] ] 
+67 81 0 
+_____________ 68 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 4 ], [ "tt", 6 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 16 ], [ "tt", 24 ], [ "zf", 51 ] ] 
+68 83 0 
+_____________ 69 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 6 ], [ "zf", 3 ] ] 
+69 84 0 
+_____________ 70 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 8 ], [ "tt", 8 ], [ "zf", 12 ] ] 
+70 85 0 
+_____________ 71 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 16 ], [ "tt", 24 ], [ "zf", 51 ] ] 
+71 86 0 
+_____________ 72 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 3 ], [ "tt", 7 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 3 ], [ "tt", 7 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] [ [ "tt", 1 ] ] 
+72 89 0 
+_____________ 73 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 3 ], [ "tt", 7 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 2, 4 ] [ [ "odd", 3 ], [ "tt", 3 ] ] 
+73 91 0 
+_____________ 74 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 4 ], [ "tt", 11 ], [ "zf", 6 ] ] 
+74 92 0 
+_____________ 75 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 2 ], [ "tt", 8 ] ] 
+75 93 0 
+_____________ 76 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 3 ], [ "tt", 7 ] ] 
+76 94 0 
+_____________ 77 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 4 ], [ "tt", 8 ], [ "zf", 3 ] ] 
+77 95 0 
+_____________ 78 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 4 ], [ "tt", 6 ] ] 
+78 96 0 
+_____________ 79 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 4 ], [ "tt", 6 ] ] 
+79 97 0 
+_____________ 80 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 8 ], [ "zf", 6 ] ] 
+80 98 0 
+_____________ 81 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 1 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+81 99 0 
+_____________ 82 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 3 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+82 100 0 
+_____________ 83 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 3 ], [ "tt", 13 ], [ "zf", 12 ] ] 
+83 101 0 
+_____________ 84 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 5 ], [ "tt", 7 ], [ "zf", 3 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 3 ] [ [ "tt", 2 ], [ "zf", 1 ] ] 
+84 103 0 
+_____________ 85 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 5 ], [ "tt", 7 ], [ "zf", 3 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 2, 5 ] [ [ "odd", 5 ], [ "tt", 2 ], [ "zf", 3 ] ] 
+85 105 0 
+_____________ 86 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 9 ], [ "tt", 15 ], [ "zf", 21 ] ] 
+86 106 0 
+_____________ 87 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 3 ], [ "tt", 7 ] ] 
+87 107 0 
+_____________ 88 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 4 ], [ "tt", 6 ] ] 
+88 108 0 
+_____________ 89 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 6 ], [ "zf", 3 ] ] 
+89 109 0 
+_____________ 90 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 5 ], [ "tt", 5 ] ] 
+90 110 0 
+_____________ 91 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 5 ], [ "tt", 5 ] ] 
+91 111 0 
+_____________ 92 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 10 ], [ "tt", 5 ], [ "zf", 6 ] ] 
+92 112 0 
+_____________ 93 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 3 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+93 113 0 
+_____________ 94 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 5 ], [ "tt", 7 ], [ "zf", 3 ] ] 
+94 114 0 
+_____________ 95 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 7 ], [ "tt", 9 ], [ "zf", 12 ] ] 
+95 115 0 
+_____________ 96 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 5 ], [ "zf", 3 ] ] 
+96 116 0 
+_____________ 97 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 5 ], [ "zf", 3 ] ] 
+97 117 0 
+_____________ 98 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 15 ], [ "tt", 9 ], [ "zf", 21 ] ] 
+98 118 0 
+_____________ 99 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 1 ], [ "tt", 15 ], [ "zf", 12 ] ] 
+99 119 0 
+_____________ 100 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 5 ], [ "tt", 11 ], [ "zf", 12 ] ] 
+100 120 0 
+_____________ 101 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 13 ] [ [ "odd", 6 ], [ "tt", 24 ], [ "zf", 48 ] ] 
+101 121 0 
+_____________ 102 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 9 ], [ "tt", 7 ], [ "zf", 12 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 5 ] [ [ "tt", 2 ], [ "zf", 8 ] ] 
+102 123 0 
+_____________ 103 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 9 ], [ "tt", 7 ], [ "zf", 12 ] ] 
+103 124 0 
+_____________ 104 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 6 ], [ "tt", 9 ], [ "zf", 6 ] ] 
+104 125 0 
+_____________ 105 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "tt", 15 ], [ "zf", 6 ] ] 
+105 126 0 
+_____________ 106 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 4 ], [ "tt", 11 ], [ "zf", 6 ] ] 
+106 127 0 
+_____________ 107 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 11 ] [ [ "tt", 25 ], [ "zf", 30 ] ] 
+107 128 0 
+_____________ 108 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 8 ], [ "tt", 13 ], [ "zf", 15 ] ] 
+108 129 0 
+_____________ 109 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 2 ], [ "tt", 10 ], [ "zf", 3 ] ] 
+109 130 0 
+_____________ 110 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 4 ], [ "tt", 8 ], [ "zf", 3 ] ] 
+110 131 0 
+_____________ 111 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 6 ], [ "tt", 10 ], [ "zf", 12 ] ] 
+111 132 0 
+_____________ 112 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 7 ], [ "zf", 6 ] ] 
+112 133 0 
+_____________ 113 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 2 ], [ "tt", 13 ], [ "zf", 6 ] ] 
+113 134 0 
+_____________ 114 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 6 ], [ "tt", 9 ], [ "zf", 6 ] ] 
+114 135 0 
+_____________ 115 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 6 ], [ "tt", 19 ], [ "zf", 30 ] ] 
+115 136 0 
+_____________ 116 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 12 ], [ "tt", 9 ], [ "zf", 15 ] ] 
+116 137 0 
+_____________ 117 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] [ [ "tt", 21 ], [ "zf", 15 ] ] 
+117 138 0 
+_____________ 118 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 8 ], [ "tt", 13 ], [ "zf", 15 ] ] 
+118 139 0 
+_____________ 119 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 20 ] [ [ "tt", 70 ], [ "zf", 120 ] ] 
+119 140 0 
+_____________ 120 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 4 ], [ "tt", 6 ] ] 
+120 141 0 
+_____________ 121 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 4 ], [ "tt", 6 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 13 ] [ [ "odd", 28 ], [ "tt", 14 ], [ "zf", 36 ] ] 
+121 143 0 
+_____________ 122 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 5 ], [ "tt", 5 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] [ [ "tt", 1 ] ] 
+122 145 0 
+_____________ 123 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 5 ], [ "tt", 5 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 2, 4 ] [ [ "odd", 5 ], [ "tt", 1 ] ] 
+123 147 0 
+_____________ 124 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 5 ], [ "tt", 5 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 2, 4 ] [ [ "odd", 5 ], [ "tt", 1 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] [ [ "tt", 1 ] ] 
+124 150 0 
+_____________ 125 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 5 ], [ "tt", 7 ], [ "zf", 3 ] ] 
+125 151 0 
+_____________ 126 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 5 ], [ "tt", 7 ], [ "zf", 3 ] ] 
+126 152 0 
+_____________ 127 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 10 ], [ "tt", 9 ], [ "zf", 9 ] ] 
+127 153 0 
+_____________ 128 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 4 ], [ "tt", 6 ] ] 
+128 154 0 
+_____________ 129 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 5 ], [ "tt", 5 ] ] 
+129 155 0 
+_____________ 130 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 5 ], [ "tt", 5 ] ] 
+130 156 0 
+_____________ 131 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 6 ], [ "zf", 3 ] ] 
+131 157 0 
+_____________ 132 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 10 ], [ "tt", 5 ], [ "zf", 6 ] ] 
+132 158 0 
+_____________ 133 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 5 ], [ "tt", 7 ], [ "zf", 3 ] ] 
+133 159 0 
+_____________ 134 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 6 ], [ "zf", 6 ] ] 
+134 160 0 
+_____________ 135 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 5 ], [ "tt", 5 ] ] 
+135 161 0 
+_____________ 136 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 5 ], [ "tt", 5 ] ] 
+136 162 0 
+_____________ 137 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 6 ], [ "tt", 4 ] ] 
+137 163 0 
+_____________ 138 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 6 ], [ "tt", 4 ] ] 
+138 164 0 
+_____________ 139 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 6 ], [ "tt", 4 ] ] 
+139 165 0 
+_____________ 140 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 13 ], [ "tt", 8 ], [ "zf", 15 ] ] 
+140 166 0 
+_____________ 141 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 5 ], [ "zf", 3 ] ] 
+141 167 0 
+_____________ 142 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 5 ], [ "zf", 3 ] ] 
+142 168 0 
+_____________ 143 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 14 ], [ "tt", 5 ], [ "zf", 9 ] ] 
+143 169 0 
+_____________ 144 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 8 ], [ "tt", 8 ], [ "zf", 12 ] ] 
+144 170 0 
+_____________ 145 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 4 ], [ "tt", 8 ], [ "zf", 3 ] ] 
+145 171 0 
+_____________ 146 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 6 ], [ "zf", 3 ] ] 
+146 172 0 
+_____________ 147 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 6 ], [ "zf", 3 ] ] 
+147 173 0 
+_____________ 148 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 6 ], [ "tt", 10 ], [ "zf", 12 ] ] 
+148 174 0 
+_____________ 149 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 14 ], [ "tt", 10 ], [ "zf", 21 ] ] 
+149 175 0 
+_____________ 150 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 4 ], [ "tt", 12 ], [ "zf", 12 ] ] 
+150 176 0 
+_____________ 151 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 12 ], [ "tt", 12 ], [ "zf", 21 ] ] 
+151 177 0 
+_____________ 152 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 6 ], [ "zf", 3 ] ] 
+152 178 0 
+_____________ 153 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 6 ], [ "zf", 3 ] ] 
+153 179 0 
+_____________ 154 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 8 ], [ "tt", 4 ], [ "zf", 3 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 3 ] [ [ "odd", 1 ], [ "tt", 1 ], [ "zf", 1 ] ] 
+154 181 0 
+_____________ 155 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 8 ], [ "tt", 4 ], [ "zf", 3 ] ] 
+155 182 0 
+_____________ 156 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 8 ], [ "tt", 4 ], [ "zf", 3 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 3 ] [ [ "odd", 1 ], [ "tt", 1 ], [ "zf", 1 ] ] 
+156 184 0 
+_____________ 157 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 16 ] [ [ "odd", 24 ], [ "tt", 30 ], [ "zf", 66 ] ] 
+157 185 0 
+_____________ 158 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 8 ], [ "tt", 8 ], [ "zf", 12 ] ] 
+158 186 0 
+_____________ 159 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 8 ], [ "tt", 8 ], [ "zf", 12 ] ] 
+159 187 0 
+_____________ 160 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 13 ] [ [ "odd", 28 ], [ "tt", 14 ], [ "zf", 36 ] ] 
+160 188 0 
+_____________ 161 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 7 ], [ "zf", 6 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 4, 1 ] [  ] 
+_____ rho 6 true : Tcount 1 : sprats [ 2, 6 ] [ [ "odd", 8 ], [ "tt", 1 ], [ "zf", 6 ] ] 
+161 191 0 
+_____________ 162 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 6 ], [ "tt", 9 ], [ "zf", 6 ] ] 
+162 192 0 
+_____________ 163 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 7 ], [ "zf", 6 ] ] 
+163 193 0 
+_____________ 164 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 6 ], [ "zf", 3 ] ] 
+164 194 0 
+_____________ 165 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 6 ], [ "zf", 3 ] ] 
+165 195 0 
+_____________ 166 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 13 ], [ "tt", 6 ], [ "zf", 9 ] ] 
+166 196 0 
+_____________ 167 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 12 ], [ "tt", 9 ], [ "zf", 15 ] ] 
+167 197 0 
+_____________ 168 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 10 ], [ "tt", 5 ], [ "zf", 6 ] ] 
+168 198 0 
+_____________ 169 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 6 ], [ "tt", 9 ], [ "zf", 6 ] ] 
+169 199 0 
+_____________ 170 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 7 ], [ "zf", 6 ] ] 
+170 200 0 
+_____________ 171 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 4 ], [ "tt", 21 ], [ "zf", 30 ] ] 
+171 201 0 
+_____________ 172 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 10 ], [ "tt", 11 ], [ "zf", 15 ] ] 
+172 202 0 
+_____________ 173 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 4 ], [ "tt", 11 ], [ "zf", 6 ] ] 
+173 203 0 
+_____________ 174 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 7 ], [ "zf", 6 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 4 ] [ [ "odd", 1 ], [ "tt", 3 ], [ "zf", 2 ] ] 
+174 205 0 
+_____________ 175 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 7 ], [ "zf", 6 ] ] 
+175 206 0 
+_____________ 176 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 7 ], [ "zf", 6 ] ] 
+176 207 0 
+_____________ 177 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 7 ], [ "zf", 6 ] ] 
+177 208 0 
+_____________ 178 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 20 ], [ "tt", 11 ], [ "zf", 24 ] ] 
+178 209 0 
+_____________ 179 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 13 ] [ [ "odd", 18 ], [ "tt", 21 ], [ "zf", 39 ] ] 
+179 210 0 
+_____________ 180 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 14 ], [ "tt", 7 ], [ "zf", 15 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 4, 3 ] [ [ "zf", 3 ] ] 
+180 212 0 
+_____________ 181 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 6 ], [ "tt", 15 ], [ "zf", 15 ] ] 
+181 213 0 
+_____________ 182 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 10 ], [ "tt", 11 ], [ "zf", 15 ] ] 
+182 214 0 
+_____________ 183 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 15 ] [ [ "tt", 45 ], [ "zf", 60 ] ] 
+183 215 0 
+_____________ 184 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 16 ], [ "tt", 15 ], [ "zf", 24 ] ] 
+184 216 0 
+_____________ 185 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 6 ], [ "tt", 4 ] ] 
+185 217 0 
+_____________ 186 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 6 ], [ "tt", 4 ] ] 
+186 218 0 
+_____________ 187 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 7 ], [ "tt", 3 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] [ [ "tt", 1 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 1, 5 ] [ [ "odd", 7 ], [ "tt", 3 ] ] 
+187 221 0 
+_____________ 188 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 7 ], [ "tt", 3 ] ] 
+188 222 0 
+_____________ 189 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 7 ], [ "tt", 3 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] [ [ "tt", 1 ] ] 
+189 224 0 
+_____________ 190 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 7 ], [ "tt", 3 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 2, 4 ] [ [ "odd", 5 ], [ "tt", 1 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] [ [ "tt", 1 ] ] 
+190 227 0 
+_____________ 191 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 8 ], [ "tt", 4 ], [ "zf", 3 ] ] 
+191 228 0 
+_____________ 192 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 8 ], [ "tt", 4 ], [ "zf", 3 ] ] 
+192 229 0 
+_____________ 193 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 8 ], [ "tt", 4 ], [ "zf", 3 ] ] 
+193 230 0 
+_____________ 194 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 18 ], [ "tt", 9 ], [ "zf", 18 ] ] 
+194 231 0 
+_____________ 195 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 9 ], [ "tt", 7 ], [ "zf", 12 ] ] 
+195 232 0 
+_____________ 196 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 12 ], [ "tt", 3 ], [ "zf", 6 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 4, 1 ] [  ] 
+196 234 0 
+_____________ 197 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 12 ], [ "tt", 3 ], [ "zf", 6 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 4, 1 ] [  ] 
+197 236 0 
+_____________ 198 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 18 ], [ "tt", 6 ], [ "zf", 12 ] ] 
+198 237 0 
+_____________ 199 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 10 ], [ "tt", 5 ], [ "zf", 6 ] ] 
+199 238 0 
+_____________ 200 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 6 ], [ "tt", 4 ] ] 
+200 239 0 
+_____________ 201 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 6 ], [ "tt", 4 ] ] 
+201 240 0 
+_____________ 202 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 10 ], [ "tt", 5 ] ] 
+202 241 0 
+_____________ 203 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 12 ], [ "tt", 7 ], [ "zf", 9 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 4, 2 ] [ [ "tt", 1 ] ] 
+203 243 0 
+_____________ 204 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 18 ], [ "tt", 9 ], [ "zf", 18 ] ] 
+204 244 0 
+_____________ 205 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 4 ], [ "tt", 6 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] [ [ "odd", 1 ] ] 
+205 246 0 
+_____________ 206 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 4 ], [ "tt", 6 ] ] 
+206 247 0 
+_____________ 207 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 5 ], [ "tt", 5 ] ] 
+207 248 0 
+_____________ 208 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 5 ], [ "tt", 5 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 2, 4 ] [ [ "odd", 4 ], [ "tt", 2 ] ] 
+208 250 0 
+_____________ 209 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 5 ], [ "zf", 3 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 3 ] [ [ "odd", 2 ], [ "zf", 1 ] ] 
+209 252 0 
+_____________ 210 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 5 ], [ "zf", 3 ] ] 
+210 253 0 
+_____________ 211 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 6 ], [ "tt", 4 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] [ [ "odd", 1 ] ] 
+211 255 0 
+_____________ 212 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 6 ], [ "tt", 4 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] [ [ "odd", 1 ] ] 
+212 257 0 
+_____________ 213 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 6 ], [ "tt", 4 ] ] 
+213 258 0 
+_____________ 214 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 6 ], [ "tt", 4 ] ] 
+214 259 0 
+_____________ 215 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 5 ], [ "zf", 3 ] ] 
+215 260 0 
+_____________ 216 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 10 ], [ "tt", 5 ], [ "zf", 6 ] ] 
+216 261 0 
+_____________ 217 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 14 ], [ "tt", 5 ], [ "zf", 9 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 5 ] [ [ "odd", 5 ], [ "zf", 5 ] ] 
+217 263 0 
+_____________ 218 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 5 ], [ "zf", 3 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 2, 5 ] [ [ "odd", 5 ], [ "tt", 2 ], [ "zf", 3 ] ] 
+218 265 0 
+_____________ 219 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 11 ], [ "tt", 4 ], [ "zf", 6 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 4, 1 ] [  ] 
+219 267 0 
+_____________ 220 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 11 ], [ "tt", 4 ], [ "zf", 6 ] ] 
+220 268 0 
+_____________ 221 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 7 ], [ "tt", 3 ] ] 
+221 269 0 
+_____________ 222 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 7 ], [ "tt", 3 ] ] 
+222 270 0 
+_____________ 223 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 7 ], [ "tt", 3 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 2, 4 ] [ [ "odd", 6 ] ] 
+223 272 0 
+_____________ 224 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 12 ], [ "tt", 3 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 3 ] [ [ "odd", 3 ] ] 
+224 274 0 
+_____________ 225 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 16 ], [ "tt", 3 ], [ "zf", 9 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 4, 2 ] [ [ "odd", 1 ] ] 
+225 276 0 
+_____________ 226 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 24 ], [ "tt", 3 ], [ "zf", 18 ] ] 
+226 277 0 
+_____________ 227 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 3 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 3 ] [ [ "zf", 3 ] ] 
+227 279 0 
+_____________ 228 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 3 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 2, 5 ] [ [ "odd", 3 ], [ "tt", 6 ], [ "zf", 1 ] ] 
+228 281 0 
+_____________ 229 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 5 ], [ "tt", 7 ], [ "zf", 3 ] ] 
+229 282 0 
+_____________ 230 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 5 ], [ "tt", 7 ], [ "zf", 3 ] ] 
+230 283 0 
+_____________ 231 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 7 ], [ "tt", 9 ], [ "zf", 12 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 5 ] [ [ "tt", 2 ], [ "zf", 8 ] ] 
+231 285 0 
+_____________ 232 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 7 ], [ "tt", 9 ], [ "zf", 12 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 5 ] [ [ "odd", 7 ], [ "zf", 3 ] ] 
+232 287 0 
+_____________ 233 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 5 ], [ "zf", 3 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 3 ] [ [ "tt", 2 ], [ "zf", 1 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 3 ] [ [ "zf", 3 ] ] 
+233 290 0 
+_____________ 234 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 5 ], [ "zf", 3 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 3 ] [ [ "zf", 3 ] ] 
+234 292 0 
+_____________ 235 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 5 ], [ "zf", 3 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 3 ] [ [ "odd", 3 ] ] 
+235 294 0 
+_____________ 236 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 5 ], [ "zf", 3 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 3 ] [ [ "tt", 2 ], [ "zf", 1 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 2, 5 ] [ [ "odd", 7 ], [ "tt", 2 ], [ "zf", 1 ] ] 
+236 297 0 
+_____________ 237 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 7 ], [ "tt", 9 ], [ "zf", 12 ] ] 
+237 298 0 
+_____________ 238 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 13 ], [ "tt", 11 ], [ "zf", 21 ] ] 
+238 299 0 
+_____________ 239 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 12 ] [ [ "odd", 23 ], [ "tt", 13 ], [ "zf", 30 ] ] 
+239 300 0 
+_____________ 240 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 7 ], [ "tt", 9 ], [ "zf", 12 ] ] 
+240 301 0 
+_____________ 241 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 15 ], [ "tt", 9 ], [ "zf", 21 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 5, 0 ] [  ] 
+241 303 0 
+_____________ 242 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 15 ], [ "tt", 9 ], [ "zf", 21 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 4, 4 ] [ [ "odd", 1 ], [ "zf", 5 ] ] 
+242 305 0 
+_____________ 243 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 9 ], [ "tt", 3 ], [ "zf", 3 ] ] 
+243 306 0 
+_____________ 244 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 9 ], [ "tt", 3 ], [ "zf", 3 ] ] 
+244 307 0 
+_____________ 245 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 9 ], [ "tt", 3 ], [ "zf", 3 ] ] 
+245 308 0 
+_____________ 246 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 19 ], [ "tt", 3 ], [ "zf", 6 ] ] 
+246 309 0 
+_____________ 247 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 12 ] [ [ "odd", 27 ], [ "tt", 9 ], [ "zf", 30 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 5, 2 ] [ [ "zf", 1 ] ] 
+247 311 0 
+_____________ 248 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 5 ], [ "tt", 10 ], [ "zf", 6 ] ] 
+248 312 0 
+_____________ 249 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 7 ], [ "zf", 6 ] ] 
+249 313 0 
+_____________ 250 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 11 ], [ "tt", 10 ], [ "zf", 15 ] ] 
+250 314 0 
+_____________ 251 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 8 ], [ "zf", 6 ] ] 
+251 315 0 
+_____________ 252 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 12 ], [ "tt", 7 ], [ "zf", 9 ] ] 
+252 316 0 
+_____________ 253 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 14 ], [ "tt", 5 ], [ "zf", 9 ] ] 
+253 317 0 
+_____________ 254 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 6 ], [ "zf", 6 ] ] 
+254 318 0 
+_____________ 255 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 22 ], [ "tt", 5 ], [ "zf", 18 ] ] 
+255 319 0 
+_____________ 256 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 4 ], [ "tt", 15 ], [ "zf", 9 ] ] 
+256 320 0 
+_____________ 257 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 10 ], [ "tt", 9 ], [ "zf", 9 ] ] 
+257 321 0 
+_____________ 258 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 16 ], [ "tt", 27 ], [ "zf", 48 ] ] 
+258 322 0 
+_____________ 259 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 12 ] [ [ "odd", 12 ], [ "tt", 21 ], [ "zf", 33 ] ] 
+259 323 0 
+_____________ 260 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 8 ], [ "tt", 11 ], [ "zf", 9 ] ] 
+260 324 0 
+_____________ 261 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 16 ], [ "tt", 11 ], [ "zf", 18 ] ] 
+261 325 0 
+_____________ 262 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 20 ], [ "tt", 7 ], [ "zf", 18 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 4, 4 ] [ [ "tt", 1 ], [ "zf", 5 ] ] 
+262 327 0 
+_____________ 263 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 12 ], [ "tt", 7 ], [ "zf", 9 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 4, 2 ] [ [ "zf", 1 ] ] 
+263 329 0 
+_____________ 264 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 36 ], [ "tt", 13 ], [ "zf", 42 ] ] 
+264 330 0 
+_____________ 265 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 6 ], [ "tt", 4 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 36 ], [ "tt", 13 ], [ "zf", 42 ] ] 
+265 332 0 
+_____________ 266 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 6 ], [ "tt", 4 ] ] 
+266 333 0 
+_____________ 267 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 6 ], [ "tt", 4 ] ] 
+267 334 0 
+_____________ 268 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 11 ], [ "tt", 4 ], [ "zf", 6 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 4 ] [ [ "odd", 4 ], [ "zf", 2 ] ] 
+268 336 0 
+_____________ 269 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 11 ], [ "tt", 4 ], [ "zf", 6 ] ] 
+269 337 0 
+_____________ 270 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 5 ], [ "tt", 5 ] ] 
+270 338 0 
+_____________ 271 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 5 ], [ "tt", 5 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 1, 5 ] [ [ "odd", 5 ], [ "tt", 5 ] ] 
+271 340 0 
+_____________ 272 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 6 ], [ "tt", 4 ] ] 
+272 341 0 
+_____________ 273 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 6 ], [ "tt", 4 ] ] 
+273 342 0 
+_____________ 274 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 6 ], [ "tt", 4 ] ] 
+274 343 0 
+_____________ 275 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 6 ], [ "tt", 4 ] ] 
+275 344 0 
+_____________ 276 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 11 ], [ "tt", 4 ], [ "zf", 6 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 4 ] [ [ "odd", 2 ], [ "zf", 4 ] ] 
+276 346 0 
+_____________ 277 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 11 ], [ "tt", 4 ], [ "zf", 6 ] ] 
+277 347 0 
+_____________ 278 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 7 ], [ "tt", 3 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] [ [ "tt", 1 ] ] 
+278 349 0 
+_____________ 279 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 7 ], [ "tt", 3 ] ] 
+279 350 0 
+_____________ 280 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 7 ], [ "tt", 3 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] [ [ "tt", 1 ] ] 
+280 352 0 
+_____________ 281 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 7 ], [ "tt", 3 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] [ [ "tt", 1 ] ] 
+281 354 0 
+_____________ 282 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 7 ], [ "tt", 3 ] ] 
+282 355 0 
+_____________ 283 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 7 ], [ "tt", 3 ] ] 
+283 356 0 
+_____________ 284 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 10 ], [ "tt", 5 ], [ "zf", 6 ] ] 
+284 357 0 
+_____________ 285 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 10 ], [ "tt", 5 ], [ "zf", 6 ] ] 
+285 358 0 
+_____________ 286 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 19 ], [ "tt", 5 ], [ "zf", 12 ] ] 
+286 359 0 
+_____________ 287 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 6 ], [ "zf", 3 ] ] 
+287 360 0 
+_____________ 288 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 6 ], [ "zf", 3 ] ] 
+288 361 0 
+_____________ 289 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 8 ], [ "tt", 4 ], [ "zf", 3 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 3 ] [ [ "odd", 1 ], [ "tt", 1 ], [ "zf", 1 ] ] 
+289 363 0 
+_____________ 290 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 8 ], [ "tt", 4 ], [ "zf", 3 ] ] 
+290 364 0 
+_____________ 291 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 8 ], [ "tt", 4 ], [ "zf", 3 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 3 ] [ [ "odd", 1 ], [ "tt", 1 ], [ "zf", 1 ] ] 
+291 366 0 
+_____________ 292 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 8 ], [ "tt", 4 ], [ "zf", 3 ] ] 
+292 367 0 
+_____________ 293 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 8 ], [ "tt", 4 ], [ "zf", 3 ] ] 
+293 368 0 
+_____________ 294 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 8 ], [ "tt", 4 ], [ "zf", 3 ] ] 
+294 369 0 
+_____________ 295 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 8 ], [ "tt", 4 ], [ "zf", 3 ] ] 
+295 370 0 
+_____________ 296 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 15 ], [ "tt", 4 ], [ "zf", 9 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 4, 2 ] [ [ "zf", 1 ] ] 
+296 372 0 
+_____________ 297 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 15 ], [ "tt", 4 ], [ "zf", 9 ] ] 
+297 373 0 
+_____________ 298 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 18 ], [ "tt", 9 ], [ "zf", 18 ] ] 
+298 374 0 
+_____________ 299 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 7 ], [ "zf", 6 ] ] 
+299 375 0 
+_____________ 300 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 7 ], [ "zf", 6 ] ] 
+300 376 0 
+_____________ 301 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 10 ], [ "tt", 5 ], [ "zf", 6 ] ] 
+301 377 0 
+_____________ 302 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 10 ], [ "tt", 5 ], [ "zf", 6 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 4 ] [ [ "odd", 3 ], [ "tt", 1 ], [ "zf", 2 ] ] 
+302 379 0 
+_____________ 303 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 18 ], [ "tt", 6 ], [ "zf", 12 ] ] 
+303 380 0 
+_____________ 304 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 7 ], [ "tt", 3 ] ] 
+304 381 0 
+_____________ 305 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 7 ], [ "tt", 3 ] ] 
+305 382 0 
+_____________ 306 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 7 ], [ "tt", 3 ] ] 
+306 383 0 
+_____________ 307 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 7 ], [ "tt", 3 ] ] 
+307 384 0 
+_____________ 308 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 7 ], [ "tt", 3 ] ] 
+308 385 0 
+_____________ 309 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 8 ], [ "tt", 2 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] [ [ "odd", 1 ] ] 
+309 387 0 
+_____________ 310 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 8 ], [ "tt", 2 ] ] 
+310 388 0 
+_____________ 311 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 8 ], [ "tt", 2 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] [ [ "odd", 1 ] ] 
+311 390 0 
+_____________ 312 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 8 ], [ "tt", 2 ] ] 
+312 391 0 
+_____________ 313 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 8 ], [ "tt", 2 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] [ [ "odd", 1 ] ] 
+313 393 0 
+_____________ 314 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 8 ], [ "tt", 2 ] ] 
+314 394 0 
+_____________ 315 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 8 ], [ "tt", 2 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] [ [ "odd", 1 ] ] 
+315 396 0 
+_____________ 316 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 14 ], [ "tt", 4 ], [ "zf", 3 ] ] 
+316 397 0 
+_____________ 317 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 8 ], [ "tt", 2 ] ] 
+317 398 0 
+_____________ 318 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 21 ], [ "tt", 10 ], [ "zf", 24 ] ] 
+318 399 0 
+_____________ 319 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 13 ], [ "tt", 8 ], [ "zf", 15 ] ] 
+319 400 0 
+_____________ 320 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 6 ], [ "zf", 6 ] ] 
+320 401 0 
+_____________ 321 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 6 ], [ "zf", 6 ] ] 
+321 402 0 
+_____________ 322 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 11 ], [ "tt", 4 ], [ "zf", 6 ] ] 
+322 403 0 
+_____________ 323 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 11 ], [ "tt", 4 ], [ "zf", 6 ] ] 
+323 404 0 
+_____________ 324 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 17 ], [ "tt", 7 ], [ "zf", 12 ] ] 
+324 405 0 
+_____________ 325 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 12 ], [ "tt", 3 ], [ "zf", 6 ] ] 
+325 406 0 
+_____________ 326 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 12 ], [ "tt", 3 ], [ "zf", 6 ] ] 
+326 407 0 
+_____________ 327 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 20 ], [ "tt", 4 ], [ "zf", 12 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 4, 3 ] [ [ "odd", 2 ], [ "zf", 1 ] ] 
+327 409 0 
+_____________ 328 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 12 ], [ "tt", 3 ], [ "zf", 6 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 4, 1 ] [  ] 
+328 411 0 
+_____________ 329 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 5 ], [ "zf", 3 ] ] 
+329 412 0 
+_____________ 330 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 5 ], [ "zf", 3 ] ] 
+330 413 0 
+_____________ 331 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 5 ], [ "zf", 3 ] ] 
+331 414 0 
+_____________ 332 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 5 ], [ "zf", 3 ] ] 
+332 415 0 
+_____________ 333 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 9 ], [ "tt", 3 ], [ "zf", 3 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 3 ] [ [ "odd", 2 ], [ "zf", 1 ] ] 
+333 417 0 
+_____________ 334 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 9 ], [ "tt", 3 ], [ "zf", 3 ] ] 
+334 418 0 
+_____________ 335 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 9 ], [ "tt", 3 ], [ "zf", 3 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 3 ] [ [ "odd", 2 ], [ "zf", 1 ] ] 
+335 420 0 
+_____________ 336 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 9 ], [ "tt", 3 ], [ "zf", 3 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 3 ] [ [ "odd", 2 ], [ "zf", 1 ] ] 
+336 422 0 
+_____________ 337 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 9 ], [ "tt", 3 ], [ "zf", 3 ] ] 
+337 423 0 
+_____________ 338 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 30 ], [ "tt", 4 ], [ "zf", 21 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 5, 1 ] [  ] 
+338 425 0 
+_____________ 339 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 12 ], [ "tt", 7 ], [ "zf", 9 ] ] 
+339 426 0 
+_____________ 340 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 14 ], [ "tt", 5 ], [ "zf", 9 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 4, 2 ] [ [ "zf", 1 ] ] 
+340 428 0 
+_____________ 341 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 6 ], [ "zf", 6 ] ] 
+341 429 0 
+_____________ 342 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 11 ], [ "tt", 4 ], [ "zf", 6 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 4 ] [ [ "odd", 2 ], [ "zf", 4 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 4, 1 ] [  ] 
+342 432 0 
+_____________ 343 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 11 ], [ "tt", 4 ], [ "zf", 6 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 4, 1 ] [  ] 
+343 434 0 
+_____________ 344 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 13 ], [ "tt", 2 ], [ "zf", 6 ] ] 
+344 435 0 
+_____________ 345 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 13 ], [ "tt", 2 ], [ "zf", 6 ] ] 
+345 436 0 
+_____________ 346 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 16 ], [ "tt", 11 ], [ "zf", 18 ] ] 
+346 437 0 
+_____________ 347 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 16 ], [ "tt", 3 ], [ "zf", 9 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 4, 2 ] [ [ "tt", 1 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 4, 2 ] [ [ "zf", 1 ] ] 
+347 440 0 
+_____________ 348 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 14 ], [ "tt", 5 ], [ "zf", 9 ] ] 
+348 441 0 
+_____________ 349 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 14 ], [ "tt", 5 ], [ "zf", 9 ] ] 
+349 442 0 
+_____________ 350 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 12 ] [ [ "odd", 30 ], [ "tt", 9 ], [ "zf", 27 ] ] 
+350 443 0 
+_____________ 351 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 12 ], [ "tt", 7 ], [ "zf", 9 ] ] 
+351 444 0 
+_____________ 352 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 20 ], [ "tt", 7 ], [ "zf", 18 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 5, 0 ] [  ] 
+352 446 0 
+_____________ 353 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 8 ], [ "tt", 2 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] [ [ "odd", 1 ] ] 
+353 448 0 
+_____________ 354 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 8 ], [ "tt", 2 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] [ [ "odd", 1 ] ] 
+354 450 0 
+_____________ 355 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 12 ], [ "tt", 3 ] ] 
+355 451 0 
+_____________ 356 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 8 ], [ "tt", 2 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] [ [ "odd", 1 ] ] 
+356 453 0 
+_____________ 357 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 8 ], [ "tt", 2 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] [ [ "odd", 1 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] [ [ "odd", 1 ] ] 
+357 456 0 
+_____________ 358 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 8 ], [ "tt", 2 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 2 ] [ [ "odd", 1 ] ] 
+358 458 0 
+_____________ 359 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 9 ], [ "tt", 1 ] ] 
+359 459 0 
+_____________ 360 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 9 ], [ "tt", 1 ] ] 
+360 460 0 
+_____________ 361 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 9 ], [ "tt", 1 ] ] 
+361 461 0 
+_____________ 362 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 9 ], [ "tt", 1 ] ] 
+362 462 0 
+_____________ 363 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 9 ], [ "tt", 1 ] ] 
+363 463 0 
+_____________ 364 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 14 ], [ "tt", 1 ] ] 
+364 464 0 
+_____________ 365 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 9 ], [ "tt", 1 ] ] 
+365 465 0 
+_____________ 366 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 9 ], [ "tt", 3 ], [ "zf", 3 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 3 ] [ [ "zf", 3 ] ] 
+366 467 0 
+_____________ 367 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 9 ], [ "tt", 3 ], [ "zf", 3 ] ] 
+367 468 0 
+_____________ 368 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 9 ], [ "tt", 3 ], [ "zf", 3 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 3, 3 ] [ [ "zf", 3 ] ] 
+368 470 0 
+_____________ 369 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 9 ], [ "tt", 3 ], [ "zf", 3 ] ] 
+369 471 0 
+_____________ 370 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 25 ], [ "tt", 5 ], [ "zf", 15 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 5, 0 ] [  ] 
+370 473 0 
+_____________ 371 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 18 ], [ "tt", 1 ], [ "zf", 9 ] ] 
+371 474 0 
+_____________ 372 
+__OLrecs 3 [ 1, 2, 4 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 10 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 15 ] [ [ "odd", 60 ], [ "zf", 45 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 6, 0 ] [  ] 
+372 477 0 
+_____________ 373 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 10 ] ] 
+373 478 0 
+_____________ 374 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 10 ] ] 
+374 479 0 
+_____________ 375 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 5 ] [ [ "odd", 10 ] ] 
+375 480 0 
+_____________ 376 
+__OLrecs 1 [ 1 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 24 ], [ "zf", 12 ] ] 
+376 481 0 
+_____________ 377 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 6 true : Tcount 1 : sprats [ 0, 15 ] [ [ "odd", 60 ], [ "zf", 45 ] ] 
+_____ rho 6 true : Tcount 1 : sprats [ 6, 0 ] [  ] 
+377 483 0 
+_____________ 378 
+__OLrecs 4 [ 1, 2, 4, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "tt", 15 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "tt", 43 ], [ "zf", 48 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 30 ] [ [ "tt", 195 ], [ "zf", 240 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "tt", 15 ] ] 
+378 487 0 
+_____________ 379 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 1 ], [ "tt", 14 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 1 ], [ "tt", 42 ], [ "zf", 48 ] ] 
+379 489 0 
+_____________ 380 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "tt", 18 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 15 ] [ [ "tt", 54 ], [ "zf", 51 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 15 ] [ [ "odd", 16 ], [ "tt", 38 ], [ "zf", 51 ] ] 
+380 492 0 
+_____________ 381 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 2 ], [ "tt", 13 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 6 ], [ "tt", 37 ], [ "zf", 48 ] ] 
+381 494 0 
+_____________ 382 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 2 ], [ "tt", 16 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 15 ] [ [ "odd", 18 ], [ "tt", 36 ], [ "zf", 51 ] ] 
+382 496 0 
+_____________ 383 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "tt", 24 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 21 ] [ [ "tt", 90 ], [ "zf", 120 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 17 ] [ [ "odd", 32 ], [ "tt", 44 ], [ "zf", 60 ] ] 
+383 499 0 
+_____________ 384 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 3 ], [ "tt", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 7 ], [ "tt", 36 ], [ "zf", 48 ] ] 
+384 501 0 
+_____________ 385 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 4 ], [ "tt", 14 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 15 ] [ [ "odd", 12 ], [ "tt", 42 ], [ "zf", 51 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 17 ] [ [ "odd", 24 ], [ "tt", 46 ], [ "zf", 66 ] ] 
+385 504 0 
+_____________ 386 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 4 ], [ "tt", 20 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 21 ] [ [ "odd", 8 ], [ "tt", 82 ], [ "zf", 120 ] ] 
+386 506 0 
+_____________ 387 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "tt", 43 ], [ "zf", 48 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 30 ] [ [ "tt", 195 ], [ "zf", 240 ] ] 
+387 508 0 
+_____________ 388 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 4 ], [ "tt", 11 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 15 ] [ [ "odd", 16 ], [ "tt", 38 ], [ "zf", 51 ] ] 
+388 510 0 
+_____________ 389 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 6 ], [ "tt", 12 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 17 ] [ [ "odd", 28 ], [ "tt", 42 ], [ "zf", 66 ] ] 
+389 512 0 
+_____________ 390 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 8 ], [ "tt", 16 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 21 ] [ [ "odd", 48 ], [ "tt", 66 ], [ "zf", 96 ] ] 
+390 514 0 
+_____________ 391 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 15 ] [ [ "odd", 16 ], [ "tt", 38 ], [ "zf", 51 ] ] 
+391 515 0 
+_____________ 392 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 5 ], [ "tt", 10 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 15 ] [ [ "odd", 18 ], [ "tt", 36 ], [ "zf", 51 ] ] 
+392 517 0 
+_____________ 393 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 10 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 17 ] [ [ "odd", 32 ], [ "tt", 44 ], [ "zf", 60 ] ] 
+393 519 0 
+_____________ 394 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 12 ], [ "tt", 12 ], [ "zf", 12 ] ] 
+394 520 0 
+_____________ 395 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 17 ] [ [ "odd", 32 ], [ "tt", 44 ], [ "zf", 60 ] ] 
+395 521 0 
+_____________ 396 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 3 ], [ "tt", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 3 ], [ "tt", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 3 ] [ [ "tt", 3 ] ] 
+396 524 0 
+_____________ 397 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 3 ], [ "tt", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 5 ] [ [ "odd", 3 ], [ "tt", 7 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 3 ], [ "tt", 12 ] ] 
+397 527 0 
+_____________ 398 
+__OLrecs 3 [ 1, 4, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 4 ], [ "tt", 18 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 4, 10 ] [ [ "tt", 12 ], [ "zf", 33 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 16 ] [ [ "odd", 36 ], [ "tt", 30 ], [ "zf", 54 ] ] 
+398 530 0 
+_____________ 399 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 2 ], [ "tt", 13 ] ] 
+399 531 0 
+_____________ 400 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 3 ], [ "tt", 12 ] ] 
+400 532 0 
+_____________ 401 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 4 ], [ "tt", 14 ], [ "zf", 3 ] ] 
+401 533 0 
+_____________ 402 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 4 ], [ "tt", 11 ] ] 
+402 534 0 
+_____________ 403 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 4 ], [ "tt", 11 ] ] 
+403 535 0 
+_____________ 404 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 7 ], [ "tt", 15 ], [ "zf", 6 ] ] 
+404 536 0 
+_____________ 405 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 1 ], [ "tt", 17 ], [ "zf", 3 ] ] 
+405 537 0 
+_____________ 406 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 3 ], [ "tt", 15 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 15 ] [ [ "odd", 23 ], [ "tt", 31 ], [ "zf", 51 ] ] 
+406 539 0 
+_____________ 407 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 3 ], [ "tt", 21 ], [ "zf", 12 ] ] 
+407 540 0 
+_____________ 408 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 5 ], [ "tt", 13 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 4 ] [ [ "tt", 5 ], [ "zf", 1 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 5 ], [ "tt", 13 ], [ "zf", 3 ] ] 
+408 543 0 
+_____________ 409 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 5 ], [ "tt", 13 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 6 ] [ [ "odd", 5 ], [ "tt", 7 ], [ "zf", 3 ] ] 
+409 545 0 
+_____________ 410 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 9 ], [ "tt", 25 ], [ "zf", 21 ] ] 
+410 546 0 
+_____________ 411 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 3 ], [ "tt", 12 ] ] 
+411 547 0 
+_____________ 412 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 4 ], [ "tt", 11 ] ] 
+412 548 0 
+_____________ 413 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 6 ], [ "tt", 12 ], [ "zf", 3 ] ] 
+413 549 0 
+_____________ 414 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 5 ], [ "tt", 10 ] ] 
+414 550 0 
+_____________ 415 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 5 ], [ "tt", 10 ] ] 
+415 551 0 
+_____________ 416 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 10 ], [ "tt", 12 ], [ "zf", 6 ] ] 
+416 552 0 
+_____________ 417 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 3 ], [ "tt", 15 ], [ "zf", 3 ] ] 
+417 553 0 
+_____________ 418 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 5 ], [ "tt", 13 ], [ "zf", 3 ] ] 
+418 554 0 
+_____________ 419 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 7 ], [ "tt", 17 ], [ "zf", 12 ] ] 
+419 555 0 
+_____________ 420 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+420 556 0 
+_____________ 421 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+421 557 0 
+_____________ 422 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 15 ], [ "tt", 19 ], [ "zf", 21 ] ] 
+422 558 0 
+_____________ 423 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 1 ], [ "tt", 23 ], [ "zf", 12 ] ] 
+423 559 0 
+_____________ 424 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 5 ], [ "tt", 19 ], [ "zf", 12 ] ] 
+424 560 0 
+_____________ 425 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 6 ], [ "tt", 37 ], [ "zf", 48 ] ] 
+425 561 0 
+_____________ 426 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 9 ], [ "tt", 15 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 6 ] [ [ "tt", 7 ], [ "zf", 8 ] ] 
+426 563 0 
+_____________ 427 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 9 ], [ "tt", 15 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 8 ] [ [ "odd", 9 ], [ "tt", 7 ], [ "zf", 12 ] ] 
+427 565 0 
+_____________ 428 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 4 ], [ "tt", 11 ] ] 
+428 566 0 
+_____________ 429 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 5 ], [ "tt", 10 ] ] 
+429 567 0 
+_____________ 430 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 10 ], [ "zf", 3 ] ] 
+430 568 0 
+_____________ 431 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+431 569 0 
+_____________ 432 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+432 570 0 
+_____________ 433 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 13 ], [ "tt", 9 ], [ "zf", 6 ] ] 
+433 571 0 
+_____________ 434 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 5 ], [ "tt", 13 ], [ "zf", 3 ] ] 
+434 572 0 
+_____________ 435 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+435 573 0 
+_____________ 436 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 11 ], [ "tt", 13 ], [ "zf", 12 ] ] 
+436 574 0 
+_____________ 437 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+437 575 0 
+_____________ 438 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+438 576 0 
+_____________ 439 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 21 ], [ "tt", 13 ], [ "zf", 21 ] ] 
+439 577 0 
+_____________ 440 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 5 ], [ "tt", 19 ], [ "zf", 12 ] ] 
+440 578 0 
+_____________ 441 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 9 ], [ "tt", 15 ], [ "zf", 12 ] ] 
+441 579 0 
+_____________ 442 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 15 ] [ [ "odd", 23 ], [ "tt", 31 ], [ "zf", 51 ] ] 
+442 580 0 
+_____________ 443 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 13 ], [ "tt", 11 ], [ "zf", 12 ] ] 
+443 581 0 
+_____________ 444 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 13 ], [ "tt", 11 ], [ "zf", 12 ] ] 
+444 582 0 
+_____________ 445 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 1 ], [ "tt", 42 ], [ "zf", 48 ] ] 
+445 583 0 
+_____________ 446 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 15 ] [ [ "odd", 18 ], [ "tt", 36 ], [ "zf", 51 ] ] 
+446 584 0 
+_____________ 447 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 16 ] [ [ "odd", 36 ], [ "tt", 30 ], [ "zf", 54 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 4, 10 ] [ [ "tt", 12 ], [ "zf", 33 ] ] 
+447 586 0 
+_____________ 448 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 6 ], [ "tt", 16 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 16 ] [ [ "odd", 30 ], [ "tt", 36 ], [ "zf", 54 ] ] 
+448 588 0 
+_____________ 449 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "tt", 22 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 16 ] [ [ "odd", 32 ], [ "tt", 34 ], [ "zf", 54 ] ] 
+449 590 0 
+_____________ 450 
+__OLrecs 3 [ 1, 4, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 4 ], [ "tt", 18 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 5, 6 ] [ [ "tt", 3 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 16 ] [ [ "odd", 36 ], [ "tt", 30 ], [ "zf", 54 ] ] 
+450 593 0 
+_____________ 451 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 12 ] [ [ "tt", 36 ], [ "zf", 30 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 24 ] [ [ "odd", 48 ], [ "tt", 90 ], [ "zf", 138 ] ] 
+451 595 0 
+_____________ 452 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 8 ], [ "tt", 22 ], [ "zf", 15 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 22 ] [ [ "odd", 24 ], [ "tt", 84 ], [ "zf", 123 ] ] 
+452 597 0 
+_____________ 453 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 2 ], [ "tt", 16 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 15 ] [ [ "odd", 22 ], [ "tt", 32 ], [ "zf", 51 ] ] 
+453 599 0 
+_____________ 454 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 4 ], [ "tt", 14 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 15 ] [ [ "odd", 24 ], [ "tt", 30 ], [ "zf", 51 ] ] 
+454 601 0 
+_____________ 455 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 6 ], [ "tt", 18 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 19 ] [ [ "odd", 52 ], [ "tt", 44 ], [ "zf", 75 ] ] 
+455 603 0 
+_____________ 456 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 8 ], [ "tt", 14 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 18 ] [ [ "odd", 44 ], [ "tt", 40 ], [ "zf", 69 ] ] 
+456 605 0 
+_____________ 457 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 2 ], [ "tt", 20 ], [ "zf", 6 ] ] 
+457 606 0 
+_____________ 458 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 6 ], [ "tt", 16 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 18 ] [ [ "odd", 44 ], [ "tt", 40 ], [ "zf", 69 ] ] 
+458 608 0 
+_____________ 459 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 12 ] [ [ "odd", 6 ], [ "tt", 30 ], [ "zf", 30 ] ] 
+459 609 0 
+_____________ 460 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 12 ], [ "tt", 18 ], [ "zf", 15 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 22 ] [ [ "odd", 80 ], [ "tt", 52 ], [ "zf", 99 ] ] 
+460 611 0 
+_____________ 461 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "tt", 30 ], [ "zf", 15 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 22 ] [ [ "odd", 24 ], [ "tt", 84 ], [ "zf", 123 ] ] 
+461 613 0 
+_____________ 462 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 8 ], [ "tt", 22 ], [ "zf", 15 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 24 ] [ [ "odd", 48 ], [ "tt", 90 ], [ "zf", 138 ] ] 
+462 615 0 
+_____________ 463 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 21 ] [ [ "tt", 90 ], [ "zf", 120 ] ] 
+463 616 0 
+_____________ 464 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 3 ], [ "tt", 15 ], [ "zf", 3 ] ] 
+464 617 0 
+_____________ 465 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 5 ], [ "tt", 13 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 16 ] [ [ "odd", 34 ], [ "tt", 32 ], [ "zf", 54 ] ] 
+465 619 0 
+_____________ 466 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 9 ], [ "tt", 15 ], [ "zf", 12 ] ] 
+466 620 0 
+_____________ 467 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 10 ], [ "tt", 12 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 18 ] [ [ "odd", 54 ], [ "tt", 36 ], [ "zf", 63 ] ] 
+467 622 0 
+_____________ 468 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 4 ], [ "tt", 18 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 18 ] [ [ "odd", 44 ], [ "tt", 40 ], [ "zf", 69 ] ] 
+468 624 0 
+_____________ 469 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 8 ], [ "tt", 14 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 19 ] [ [ "odd", 52 ], [ "tt", 44 ], [ "zf", 75 ] ] 
+469 626 0 
+_____________ 470 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 12 ] [ [ "odd", 12 ], [ "tt", 24 ], [ "zf", 30 ] ] 
+470 627 0 
+_____________ 471 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 16 ], [ "tt", 14 ], [ "zf", 15 ] ] 
+471 628 0 
+_____________ 472 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 4 ], [ "tt", 26 ], [ "zf", 15 ] ] 
+472 629 0 
+_____________ 473 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 12 ], [ "tt", 18 ], [ "zf", 15 ] ] 
+473 630 0 
+_____________ 474 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 24 ] [ [ "odd", 48 ], [ "tt", 90 ], [ "zf", 138 ] ] 
+474 631 0 
+_____________ 475 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 16 ] [ [ "odd", 32 ], [ "tt", 34 ], [ "zf", 54 ] ] 
+475 632 0 
+_____________ 476 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 15 ] [ [ "tt", 54 ], [ "zf", 51 ] ] 
+476 633 0 
+_____________ 477 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 4 ], [ "tt", 11 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 12 ], [ "tt", 31 ], [ "zf", 48 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 20 ], [ "tt", 13 ], [ "zf", 12 ] ] 
+477 636 0 
+_____________ 478 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 4 ], [ "tt", 11 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 12 ], [ "tt", 31 ], [ "zf", 48 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 28 ], [ "tt", 27 ], [ "zf", 36 ] ] 
+478 639 0 
+_____________ 479 
+__OLrecs 6 [ 1, 4, 2, 4, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 5 ], [ "tt", 10 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 11 ] [ [ "tt", 15 ], [ "zf", 40 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 13 ], [ "tt", 30 ], [ "zf", 48 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 11 ] [ [ "tt", 15 ], [ "zf", 40 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 3 ] [ [ "tt", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 5 ], [ "tt", 10 ] ] 
+479 645 0 
+_____________ 480 
+__OLrecs 4 [ 1, 2, 4, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 5 ], [ "tt", 10 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 13 ], [ "tt", 30 ], [ "zf", 48 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 4, 8 ] [ [ "odd", 13 ], [ "tt", 3 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 5 ] [ [ "odd", 5 ], [ "tt", 5 ] ] 
+480 649 0 
+_____________ 481 
+__OLrecs 5 [ 1, 2, 2, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 5 ], [ "tt", 10 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 13 ], [ "tt", 30 ], [ "zf", 48 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 5 ] [ [ "odd", 5 ], [ "tt", 5 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 3 ] [ [ "tt", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 5 ], [ "tt", 10 ] ] 
+481 654 0 
+_____________ 482 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 5 ], [ "tt", 13 ], [ "zf", 3 ] ] 
+482 655 0 
+_____________ 483 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 5 ], [ "tt", 13 ], [ "zf", 3 ] ] 
+483 656 0 
+_____________ 484 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 10 ], [ "tt", 17 ], [ "zf", 9 ] ] 
+484 657 0 
+_____________ 485 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 4 ], [ "tt", 11 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 12 ], [ "tt", 31 ], [ "zf", 48 ] ] 
+485 659 0 
+_____________ 486 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 5 ], [ "tt", 10 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 13 ], [ "tt", 30 ], [ "zf", 48 ] ] 
+486 661 0 
+_____________ 487 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 5 ], [ "tt", 10 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 13 ], [ "tt", 30 ], [ "zf", 48 ] ] 
+487 663 0 
+_____________ 488 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 6 ], [ "tt", 12 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 15 ] [ [ "odd", 18 ], [ "tt", 36 ], [ "zf", 51 ] ] 
+488 665 0 
+_____________ 489 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 10 ], [ "tt", 12 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 18 ] [ [ "odd", 42 ], [ "tt", 42 ], [ "zf", 69 ] ] 
+489 667 0 
+_____________ 490 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 5 ], [ "tt", 13 ], [ "zf", 3 ] ] 
+490 668 0 
+_____________ 491 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 9 ], [ "tt", 13 ], [ "zf", 6 ] ] 
+491 669 0 
+_____________ 492 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 5 ], [ "tt", 10 ] ] 
+492 670 0 
+_____________ 493 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 5 ], [ "tt", 10 ] ] 
+493 671 0 
+_____________ 494 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+494 672 0 
+_____________ 495 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+495 673 0 
+_____________ 496 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+496 674 0 
+_____________ 497 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 13 ], [ "tt", 17 ], [ "zf", 15 ] ] 
+497 675 0 
+_____________ 498 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 17 ] [ [ "odd", 33 ], [ "tt", 37 ], [ "zf", 66 ] ] 
+498 677 0 
+_____________ 499 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 17 ] [ [ "odd", 31 ], [ "tt", 39 ], [ "zf", 66 ] ] 
+499 679 0 
+_____________ 500 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 14 ], [ "tt", 13 ], [ "zf", 9 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 21 ] [ [ "odd", 62 ], [ "tt", 55 ], [ "zf", 93 ] ] 
+500 681 0 
+_____________ 501 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 8 ], [ "tt", 16 ], [ "zf", 12 ] ] 
+501 682 0 
+_____________ 502 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 4 ], [ "tt", 14 ], [ "zf", 3 ] ] 
+502 683 0 
+_____________ 503 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 6 ], [ "tt", 12 ], [ "zf", 3 ] ] 
+503 684 0 
+_____________ 504 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 6 ], [ "tt", 12 ], [ "zf", 3 ] ] 
+504 685 0 
+_____________ 505 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 6 ], [ "tt", 18 ], [ "zf", 12 ] ] 
+505 686 0 
+_____________ 506 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 14 ], [ "tt", 20 ], [ "zf", 21 ] ] 
+506 687 0 
+_____________ 507 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 4 ], [ "tt", 20 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 21 ] [ [ "odd", 10 ], [ "tt", 80 ], [ "zf", 120 ] ] 
+507 689 0 
+_____________ 508 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 12 ], [ "tt", 22 ], [ "zf", 21 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 25 ] [ [ "odd", 50 ], [ "tt", 100 ], [ "zf", 150 ] ] 
+508 691 0 
+_____________ 509 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 6 ], [ "tt", 12 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 17 ] [ [ "odd", 32 ], [ "tt", 38 ], [ "zf", 66 ] ] 
+509 693 0 
+_____________ 510 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 6 ], [ "tt", 12 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 17 ] [ [ "odd", 30 ], [ "tt", 40 ], [ "zf", 66 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 15 ] [ [ "odd", 42 ], [ "tt", 24 ], [ "zf", 39 ] ] 
+510 696 0 
+_____________ 511 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 10 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 17 ] [ [ "odd", 32 ], [ "tt", 38 ], [ "zf", 66 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 4 ] [ [ "odd", 1 ], [ "tt", 4 ], [ "zf", 1 ] ] 
+511 699 0 
+_____________ 512 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 10 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 19 ] [ [ "odd", 52 ], [ "tt", 44 ], [ "zf", 75 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 6 ] [ [ "odd", 8 ], [ "tt", 4 ], [ "zf", 3 ] ] 
+512 702 0 
+_____________ 513 
+__OLrecs 6 [ 1, 2, 4, 4, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 10 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 17 ] [ [ "odd", 34 ], [ "tt", 36 ], [ "zf", 66 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 5, 7 ] [ [ "odd", 3 ], [ "tt", 3 ], [ "zf", 15 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 5, 7 ] [ [ "odd", 3 ], [ "tt", 3 ], [ "zf", 15 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 4 ] [ [ "odd", 1 ], [ "tt", 4 ], [ "zf", 1 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 6 ] [ [ "odd", 8 ], [ "tt", 4 ], [ "zf", 3 ] ] 
+513 708 0 
+_____________ 514 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 17 ] [ [ "odd", 24 ], [ "tt", 46 ], [ "zf", 66 ] ] 
+514 709 0 
+_____________ 515 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 8 ], [ "tt", 16 ], [ "zf", 12 ] ] 
+515 710 0 
+_____________ 516 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 8 ], [ "tt", 16 ], [ "zf", 12 ] ] 
+516 711 0 
+_____________ 517 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 28 ], [ "tt", 27 ], [ "zf", 36 ] ] 
+517 712 0 
+_____________ 518 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 4 ], [ "tt", 11 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 12 ], [ "tt", 31 ], [ "zf", 48 ] ] 
+518 714 0 
+_____________ 519 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 5 ], [ "tt", 10 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 13 ], [ "tt", 30 ], [ "zf", 48 ] ] 
+519 716 0 
+_____________ 520 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 10 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 16 ] [ [ "odd", 30 ], [ "tt", 36 ], [ "zf", 54 ] ] 
+520 718 0 
+_____________ 521 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 5 ], [ "tt", 10 ] ] 
+521 719 0 
+_____________ 522 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+522 720 0 
+_____________ 523 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+523 721 0 
+_____________ 524 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 10 ], [ "zf", 3 ] ] 
+524 722 0 
+_____________ 525 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 13 ], [ "tt", 9 ], [ "zf", 6 ] ] 
+525 723 0 
+_____________ 526 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 17 ] [ [ "odd", 32 ], [ "tt", 38 ], [ "zf", 66 ] ] 
+526 725 0 
+_____________ 527 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 12 ], [ "tt", 10 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 19 ] [ [ "odd", 52 ], [ "tt", 44 ], [ "zf", 75 ] ] 
+527 727 0 
+_____________ 528 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 15 ] [ [ "odd", 23 ], [ "tt", 31 ], [ "zf", 51 ] ] 
+528 729 0 
+_____________ 529 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 15 ] [ [ "odd", 22 ], [ "tt", 32 ], [ "zf", 51 ] ] 
+529 731 0 
+_____________ 530 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 15 ] [ [ "odd", 23 ], [ "tt", 31 ], [ "zf", 51 ] ] 
+530 733 0 
+_____________ 531 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 16 ] [ [ "odd", 30 ], [ "tt", 36 ], [ "zf", 54 ] ] 
+531 735 0 
+_____________ 532 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 15 ] [ [ "odd", 24 ], [ "tt", 30 ], [ "zf", 51 ] ] 
+532 737 0 
+_____________ 533 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 18 ], [ "tt", 12 ], [ "zf", 15 ] ] 
+533 738 0 
+_____________ 534 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+534 739 0 
+_____________ 535 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+535 740 0 
+_____________ 536 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 18 ], [ "tt", 9 ], [ "zf", 9 ] ] 
+536 741 0 
+_____________ 537 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 12 ], [ "tt", 12 ], [ "zf", 12 ] ] 
+537 742 0 
+_____________ 538 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 4 ], [ "tt", 14 ], [ "zf", 3 ] ] 
+538 743 0 
+_____________ 539 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 6 ], [ "tt", 12 ], [ "zf", 3 ] ] 
+539 744 0 
+_____________ 540 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 10 ], [ "tt", 14 ], [ "zf", 12 ] ] 
+540 745 0 
+_____________ 541 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 6 ], [ "tt", 12 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 17 ] [ [ "odd", 31 ], [ "tt", 39 ], [ "zf", 66 ] ] 
+541 747 0 
+_____________ 542 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 10 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 17 ] [ [ "odd", 33 ], [ "tt", 37 ], [ "zf", 66 ] ] 
+542 749 0 
+_____________ 543 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 10 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 18 ] [ [ "odd", 42 ], [ "tt", 42 ], [ "zf", 69 ] ] 
+543 751 0 
+_____________ 544 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 10 ], [ "tt", 14 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 21 ] [ [ "odd", 62 ], [ "tt", 55 ], [ "zf", 93 ] ] 
+544 753 0 
+_____________ 545 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 20 ], [ "tt", 14 ], [ "zf", 21 ] ] 
+545 754 0 
+_____________ 546 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 8 ], [ "tt", 16 ], [ "zf", 12 ] ] 
+546 755 0 
+_____________ 547 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 18 ], [ "tt", 16 ], [ "zf", 21 ] ] 
+547 756 0 
+_____________ 548 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 10 ], [ "zf", 3 ] ] 
+548 757 0 
+_____________ 549 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 10 ], [ "zf", 3 ] ] 
+549 758 0 
+_____________ 550 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 10 ], [ "tt", 8 ], [ "zf", 3 ] ] 
+550 759 0 
+_____________ 551 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 10 ], [ "tt", 8 ], [ "zf", 3 ] ] 
+551 760 0 
+_____________ 552 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 10 ], [ "tt", 8 ], [ "zf", 3 ] ] 
+552 761 0 
+_____________ 553 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 19 ] [ [ "odd", 52 ], [ "tt", 44 ], [ "zf", 75 ] ] 
+553 762 0 
+_____________ 554 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 12 ], [ "tt", 12 ], [ "zf", 12 ] ] 
+554 763 0 
+_____________ 555 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 12 ], [ "tt", 12 ], [ "zf", 12 ] ] 
+555 764 0 
+_____________ 556 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 15 ] [ [ "odd", 42 ], [ "tt", 24 ], [ "zf", 39 ] ] 
+556 765 0 
+_____________ 557 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 15 ] [ [ "odd", 22 ], [ "tt", 32 ], [ "zf", 51 ] ] 
+557 766 0 
+_____________ 558 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 2 ], [ "tt", 22 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 21 ] [ [ "odd", 8 ], [ "tt", 82 ], [ "zf", 120 ] ] 
+558 768 0 
+_____________ 559 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 6 ], [ "tt", 18 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 22 ] [ [ "odd", 24 ], [ "tt", 84 ], [ "zf", 123 ] ] 
+559 770 0 
+_____________ 560 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 12 ], [ "tt", 31 ], [ "zf", 48 ] ] 
+560 771 0 
+_____________ 561 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 6 ], [ "tt", 18 ], [ "zf", 12 ] ] 
+561 772 0 
+_____________ 562 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 10 ], [ "tt", 14 ], [ "zf", 12 ] ] 
+562 773 0 
+_____________ 563 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 10 ], [ "tt", 14 ], [ "zf", 12 ] ] 
+563 774 0 
+_____________ 564 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 12 ], [ "tt", 31 ], [ "zf", 48 ] ] 
+564 775 0 
+_____________ 565 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 7 ], [ "tt", 36 ], [ "zf", 48 ] ] 
+565 776 0 
+_____________ 566 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 10 ], [ "tt", 14 ], [ "zf", 12 ] ] 
+566 777 0 
+_____________ 567 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 10 ], [ "tt", 14 ], [ "zf", 12 ] ] 
+567 778 0 
+_____________ 568 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 14 ], [ "tt", 10 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 6 ] [ [ "odd", 3 ], [ "tt", 4 ], [ "zf", 8 ] ] 
+568 780 0 
+_____________ 569 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 20 ], [ "tt", 13 ], [ "zf", 12 ] ] 
+569 781 0 
+_____________ 570 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 14 ], [ "tt", 10 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 6 ] [ [ "odd", 3 ], [ "tt", 4 ], [ "zf", 8 ] ] 
+570 783 0 
+_____________ 571 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 16 ] [ [ "odd", 30 ], [ "tt", 36 ], [ "zf", 54 ] ] 
+571 784 0 
+_____________ 572 
+__OLrecs 4 [ 1, 2, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 8 ], [ "tt", 14 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 4, 2 ] [ [ "tt", 1 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 7 ] [ [ "odd", 8 ], [ "tt", 7 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 8 ], [ "tt", 14 ], [ "zf", 6 ] ] 
+572 788 0 
+_____________ 573 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 6 ], [ "tt", 16 ], [ "zf", 6 ] ] 
+573 789 0 
+_____________ 574 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 8 ], [ "tt", 14 ], [ "zf", 6 ] ] 
+574 790 0 
+_____________ 575 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 6 ], [ "tt", 12 ], [ "zf", 3 ] ] 
+575 791 0 
+_____________ 576 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 6 ], [ "tt", 12 ], [ "zf", 3 ] ] 
+576 792 0 
+_____________ 577 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 13 ], [ "tt", 14 ], [ "zf", 9 ] ] 
+577 793 0 
+_____________ 578 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 12 ], [ "tt", 18 ], [ "zf", 15 ] ] 
+578 794 0 
+_____________ 579 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 10 ], [ "tt", 12 ], [ "zf", 6 ] ] 
+579 795 0 
+_____________ 580 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 6 ], [ "tt", 16 ], [ "zf", 6 ] ] 
+580 796 0 
+_____________ 581 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 8 ], [ "tt", 14 ], [ "zf", 6 ] ] 
+581 797 0 
+_____________ 582 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 12 ] [ [ "odd", 4 ], [ "tt", 32 ], [ "zf", 30 ] ] 
+582 798 0 
+_____________ 583 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 10 ], [ "tt", 20 ], [ "zf", 15 ] ] 
+583 799 0 
+_____________ 584 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 4 ], [ "tt", 18 ], [ "zf", 6 ] ] 
+584 800 0 
+_____________ 585 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 8 ], [ "tt", 14 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 5 ] [ [ "odd", 1 ], [ "tt", 7 ], [ "zf", 2 ] ] 
+585 802 0 
+_____________ 586 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 8 ], [ "tt", 14 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 7 ] [ [ "odd", 8 ], [ "tt", 7 ], [ "zf", 6 ] ] 
+586 804 0 
+_____________ 587 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 8 ], [ "tt", 14 ], [ "zf", 6 ] ] 
+587 805 0 
+_____________ 588 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 8 ], [ "tt", 14 ], [ "zf", 6 ] ] 
+588 806 0 
+_____________ 589 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 12 ] [ [ "odd", 20 ], [ "tt", 22 ], [ "zf", 24 ] ] 
+589 807 0 
+_____________ 590 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 18 ], [ "tt", 34 ], [ "zf", 39 ] ] 
+590 808 0 
+_____________ 591 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 14 ], [ "tt", 16 ], [ "zf", 15 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 4, 4 ] [ [ "tt", 3 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 9 ] [ [ "odd", 14 ], [ "tt", 7 ], [ "zf", 15 ] ] 
+591 811 0 
+_____________ 592 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 6 ], [ "tt", 24 ], [ "zf", 15 ] ] 
+592 812 0 
+_____________ 593 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 10 ], [ "tt", 20 ], [ "zf", 15 ] ] 
+593 813 0 
+_____________ 594 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 6 ], [ "tt", 12 ], [ "zf", 3 ] ] 
+594 814 0 
+_____________ 595 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 11 ], [ "tt", 11 ], [ "zf", 6 ] ] 
+595 815 0 
+_____________ 596 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 9 ], [ "tt", 15 ], [ "zf", 12 ] ] 
+596 816 0 
+_____________ 597 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 10 ], [ "tt", 12 ], [ "zf", 6 ] ] 
+597 817 0 
+_____________ 598 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 5 ], [ "tt", 13 ], [ "zf", 3 ] ] 
+598 818 0 
+_____________ 599 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+599 819 0 
+_____________ 600 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+600 820 0 
+_____________ 601 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 19 ], [ "tt", 15 ], [ "zf", 21 ] ] 
+601 821 0 
+_____________ 602 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+602 822 0 
+_____________ 603 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+603 823 0 
+_____________ 604 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 16 ], [ "tt", 11 ], [ "zf", 9 ] ] 
+604 824 0 
+_____________ 605 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 16 ], [ "tt", 14 ], [ "zf", 15 ] ] 
+605 825 0 
+_____________ 606 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 12 ], [ "tt", 10 ], [ "zf", 6 ] ] 
+606 826 0 
+_____________ 607 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 8 ], [ "tt", 14 ], [ "zf", 6 ] ] 
+607 827 0 
+_____________ 608 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 10 ], [ "tt", 12 ], [ "zf", 6 ] ] 
+608 828 0 
+_____________ 609 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 4 ], [ "tt", 18 ], [ "zf", 6 ] ] 
+609 829 0 
+_____________ 610 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 8 ], [ "tt", 14 ], [ "zf", 6 ] ] 
+610 830 0 
+_____________ 611 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 12 ] [ [ "odd", 12 ], [ "tt", 24 ], [ "zf", 30 ] ] 
+611 831 0 
+_____________ 612 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 8 ], [ "tt", 14 ], [ "zf", 6 ] ] 
+612 832 0 
+_____________ 613 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 16 ], [ "tt", 14 ], [ "zf", 15 ] ] 
+613 833 0 
+_____________ 614 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 12 ] [ [ "odd", 10 ], [ "tt", 26 ], [ "zf", 30 ] ] 
+614 834 0 
+_____________ 615 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 14 ], [ "tt", 16 ], [ "zf", 15 ] ] 
+615 835 0 
+_____________ 616 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 6 ], [ "tt", 16 ], [ "zf", 6 ] ] 
+616 836 0 
+_____________ 617 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 10 ], [ "tt", 12 ], [ "zf", 6 ] ] 
+617 837 0 
+_____________ 618 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 10 ], [ "tt", 12 ], [ "zf", 6 ] ] 
+618 838 0 
+_____________ 619 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 18 ] [ [ "odd", 44 ], [ "tt", 40 ], [ "zf", 69 ] ] 
+619 839 0 
+_____________ 620 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 10 ], [ "tt", 12 ], [ "zf", 6 ] ] 
+620 840 0 
+_____________ 621 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 10 ], [ "tt", 12 ], [ "zf", 6 ] ] 
+621 841 0 
+_____________ 622 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 12 ] [ [ "odd", 26 ], [ "tt", 16 ], [ "zf", 24 ] ] 
+622 842 0 
+_____________ 623 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 26 ], [ "tt", 26 ], [ "zf", 39 ] ] 
+623 843 0 
+_____________ 624 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 18 ], [ "tt", 12 ], [ "zf", 15 ] ] 
+624 844 0 
+_____________ 625 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 10 ], [ "tt", 20 ], [ "zf", 15 ] ] 
+625 845 0 
+_____________ 626 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 14 ], [ "tt", 16 ], [ "zf", 15 ] ] 
+626 846 0 
+_____________ 627 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 2 ], [ "tt", 28 ], [ "zf", 15 ] ] 
+627 847 0 
+_____________ 628 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 10 ], [ "tt", 20 ], [ "zf", 15 ] ] 
+628 848 0 
+_____________ 629 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 22 ] [ [ "odd", 24 ], [ "tt", 84 ], [ "zf", 123 ] ] 
+629 849 0 
+_____________ 630 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 10 ], [ "tt", 20 ], [ "zf", 15 ] ] 
+630 850 0 
+_____________ 631 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 21 ] [ [ "odd", 8 ], [ "tt", 82 ], [ "zf", 120 ] ] 
+631 851 0 
+_____________ 632 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 6 ], [ "tt", 24 ], [ "zf", 15 ] ] 
+632 852 0 
+_____________ 633 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 14 ], [ "tt", 16 ], [ "zf", 15 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 7 ] [ [ "odd", 3 ], [ "tt", 9 ], [ "zf", 9 ] ] 
+633 854 0 
+_____________ 634 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 14 ], [ "tt", 16 ], [ "zf", 15 ] ] 
+634 855 0 
+_____________ 635 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 14 ], [ "tt", 16 ], [ "zf", 15 ] ] 
+635 856 0 
+_____________ 636 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 14 ], [ "tt", 16 ], [ "zf", 15 ] ] 
+636 857 0 
+_____________ 637 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 16 ] [ [ "odd", 36 ], [ "tt", 30 ], [ "zf", 54 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 5, 6 ] [ [ "tt", 3 ], [ "zf", 12 ] ] 
+637 859 0 
+_____________ 638 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 15 ] [ [ "odd", 12 ], [ "tt", 42 ], [ "zf", 51 ] ] 
+638 860 0 
+_____________ 639 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 16 ] [ [ "tt", 60 ], [ "zf", 60 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 36 ] [ [ "tt", 270 ], [ "zf", 360 ] ] 
+639 862 0 
+_____________ 640 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 12 ] [ [ "odd", 16 ], [ "tt", 26 ], [ "zf", 24 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 28 ] [ [ "odd", 64 ], [ "tt", 122 ], [ "zf", 192 ] ] 
+640 864 0 
+_____________ 641 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 5 ], [ "tt", 19 ], [ "zf", 12 ] ] 
+641 865 0 
+_____________ 642 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 15 ], [ "tt", 19 ], [ "zf", 21 ] ] 
+642 866 0 
+_____________ 643 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 12 ] [ [ "odd", 8 ], [ "tt", 28 ], [ "zf", 30 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 28 ] [ [ "odd", 64 ], [ "tt", 122 ], [ "zf", 192 ] ] 
+643 868 0 
+_____________ 644 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 12 ], [ "tt", 18 ], [ "zf", 15 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 24 ] [ [ "odd", 48 ], [ "tt", 90 ], [ "zf", 138 ] ] 
+644 870 0 
+_____________ 645 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 8 ], [ "tt", 22 ], [ "zf", 15 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 25 ] [ [ "odd", 50 ], [ "tt", 100 ], [ "zf", 150 ] ] 
+645 872 0 
+_____________ 646 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 24 ], [ "tt", 28 ], [ "zf", 39 ] ] 
+646 873 0 
+_____________ 647 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 16 ] [ [ "odd", 8 ], [ "tt", 52 ], [ "zf", 60 ] ] 
+647 874 0 
+_____________ 648 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 12 ] [ [ "odd", 20 ], [ "tt", 22 ], [ "zf", 24 ] ] 
+648 875 0 
+_____________ 649 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 12 ] [ [ "tt", 42 ], [ "zf", 24 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 30 ] [ [ "tt", 195 ], [ "zf", 240 ] ] 
+649 877 0 
+_____________ 650 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 12 ] [ [ "odd", 16 ], [ "tt", 26 ], [ "zf", 24 ] ] 
+650 878 0 
+_____________ 651 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 12 ] [ [ "odd", 12 ], [ "tt", 30 ], [ "zf", 24 ] ] 
+651 879 0 
+_____________ 652 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 30 ] [ [ "tt", 195 ], [ "zf", 240 ] ] 
+652 880 0 
+_____________ 653 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+653 881 0 
+_____________ 654 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 34 ], [ "tt", 21 ], [ "zf", 36 ] ] 
+654 883 0 
+_____________ 655 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 3 ] [ [ "tt", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 1, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+655 886 0 
+_____________ 656 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 5 ] [ [ "odd", 7 ], [ "tt", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 5 ] [ [ "odd", 7 ], [ "tt", 3 ] ] 
+656 889 0 
+_____________ 657 
+__OLrecs 4 [ 1, 2, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 5 ] [ [ "odd", 7 ], [ "tt", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 3 ] [ [ "tt", 3 ] ] 
+657 893 0 
+_____________ 658 
+__OLrecs 4 [ 1, 2, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 5 ] [ [ "odd", 5 ], [ "tt", 5 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 3 ] [ [ "tt", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 5 ] [ [ "odd", 7 ], [ "tt", 3 ] ] 
+658 897 0 
+_____________ 659 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 10 ], [ "zf", 3 ] ] 
+659 898 0 
+_____________ 660 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 10 ], [ "zf", 3 ] ] 
+660 899 0 
+_____________ 661 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 10 ], [ "zf", 3 ] ] 
+661 900 0 
+_____________ 662 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 18 ], [ "tt", 19 ], [ "zf", 18 ] ] 
+662 901 0 
+_____________ 663 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 9 ], [ "tt", 15 ], [ "zf", 12 ] ] 
+663 902 0 
+_____________ 664 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+664 903 0 
+_____________ 665 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+665 904 0 
+_____________ 666 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+666 905 0 
+_____________ 667 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+667 906 0 
+_____________ 668 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+668 907 0 
+_____________ 669 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 18 ], [ "tt", 12 ], [ "zf", 15 ] ] 
+669 908 0 
+_____________ 670 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 12 ], [ "tt", 10 ], [ "zf", 6 ] ] 
+670 909 0 
+_____________ 671 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 10 ], [ "zf", 3 ] ] 
+671 910 0 
+_____________ 672 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 10 ], [ "zf", 3 ] ] 
+672 911 0 
+_____________ 673 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 17 ], [ "tt", 10 ], [ "zf", 9 ] ] 
+673 912 0 
+_____________ 674 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 15 ], [ "tt", 15 ], [ "zf", 15 ] ] 
+674 913 0 
+_____________ 675 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 9 ], [ "tt", 15 ], [ "zf", 12 ] ] 
+675 914 0 
+_____________ 676 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+676 915 0 
+_____________ 677 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+677 916 0 
+_____________ 678 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 8 ], [ "tt", 7 ] ] 
+678 917 0 
+_____________ 679 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 8 ], [ "tt", 7 ] ] 
+679 918 0 
+_____________ 680 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 8 ], [ "tt", 7 ] ] 
+680 919 0 
+_____________ 681 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 8 ], [ "tt", 7 ] ] 
+681 920 0 
+_____________ 682 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 16 ] [ [ "odd", 34 ], [ "tt", 32 ], [ "zf", 54 ] ] 
+682 921 0 
+_____________ 683 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 10 ], [ "tt", 8 ], [ "zf", 3 ] ] 
+683 922 0 
+_____________ 684 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 10 ], [ "tt", 8 ], [ "zf", 3 ] ] 
+684 923 0 
+_____________ 685 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 10 ], [ "tt", 8 ], [ "zf", 3 ] ] 
+685 924 0 
+_____________ 686 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 24 ], [ "tt", 13 ], [ "zf", 18 ] ] 
+686 925 0 
+_____________ 687 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 13 ], [ "tt", 11 ], [ "zf", 12 ] ] 
+687 926 0 
+_____________ 688 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+688 927 0 
+_____________ 689 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+689 928 0 
+_____________ 690 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+690 929 0 
+_____________ 691 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+691 930 0 
+_____________ 692 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+692 931 0 
+_____________ 693 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 18 ] [ [ "odd", 44 ], [ "tt", 40 ], [ "zf", 69 ] ] 
+693 932 0 
+_____________ 694 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 17 ], [ "tt", 17 ], [ "zf", 21 ] ] 
+694 933 0 
+_____________ 695 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 9 ], [ "tt", 15 ], [ "zf", 12 ] ] 
+695 934 0 
+_____________ 696 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 9 ], [ "tt", 15 ], [ "zf", 12 ] ] 
+696 935 0 
+_____________ 697 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 34 ], [ "tt", 21 ], [ "zf", 36 ] ] 
+697 936 0 
+_____________ 698 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 17 ] [ [ "odd", 28 ], [ "tt", 42 ], [ "zf", 66 ] ] 
+698 937 0 
+_____________ 699 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+699 938 0 
+_____________ 700 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+700 939 0 
+_____________ 701 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 11 ], [ "tt", 7 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 1, 7 ] [ [ "odd", 11 ], [ "tt", 7 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 4 ] [ [ "odd", 2 ], [ "tt", 3 ], [ "zf", 1 ] ] 
+701 942 0 
+_____________ 702 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 11 ], [ "tt", 7 ], [ "zf", 3 ] ] 
+702 943 0 
+_____________ 703 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 11 ], [ "tt", 7 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 4 ] [ [ "odd", 2 ], [ "tt", 3 ], [ "zf", 1 ] ] 
+703 945 0 
+_____________ 704 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 11 ], [ "tt", 7 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 6 ] [ [ "odd", 8 ], [ "tt", 4 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 4 ] [ [ "odd", 2 ], [ "tt", 3 ], [ "zf", 1 ] ] 
+704 948 0 
+_____________ 705 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 13 ], [ "tt", 11 ], [ "zf", 12 ] ] 
+705 949 0 
+_____________ 706 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 13 ], [ "tt", 11 ], [ "zf", 12 ] ] 
+706 950 0 
+_____________ 707 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 13 ], [ "tt", 11 ], [ "zf", 12 ] ] 
+707 951 0 
+_____________ 708 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 15 ] [ [ "odd", 24 ], [ "tt", 30 ], [ "zf", 51 ] ] 
+708 952 0 
+_____________ 709 
+__OLrecs 6 [ 1, 4, 2, 4, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 12 ], [ "tt", 10 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 6, 5 ] [ [ "tt", 2 ], [ "zf", 8 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 20 ] [ [ "odd", 64 ], [ "tt", 42 ], [ "zf", 84 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 6, 5 ] [ [ "tt", 2 ], [ "zf", 8 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 4, 2 ] [ [ "tt", 1 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 7 ] [ [ "odd", 12 ], [ "tt", 3 ], [ "zf", 6 ] ] 
+709 958 0 
+_____________ 710 
+__OLrecs 4 [ 1, 2, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 12 ], [ "tt", 10 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 20 ] [ [ "odd", 56 ], [ "tt", 50 ], [ "zf", 84 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 4, 2 ] [ [ "tt", 1 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 7 ] [ [ "odd", 12 ], [ "tt", 3 ], [ "zf", 6 ] ] 
+710 962 0 
+_____________ 711 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 18 ], [ "tt", 15 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 24 ] [ [ "odd", 90 ], [ "tt", 63 ], [ "zf", 123 ] ] 
+711 964 0 
+_____________ 712 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 10 ], [ "tt", 12 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 20 ] [ [ "odd", 58 ], [ "tt", 48 ], [ "zf", 84 ] ] 
+712 966 0 
+_____________ 713 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 16 ], [ "tt", 14 ], [ "zf", 15 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 24 ] [ [ "odd", 90 ], [ "tt", 63 ], [ "zf", 123 ] ] 
+713 968 0 
+_____________ 714 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 12 ], [ "tt", 10 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 20 ] [ [ "odd", 58 ], [ "tt", 48 ], [ "zf", 84 ] ] 
+714 970 0 
+_____________ 715 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 16 ], [ "tt", 11 ], [ "zf", 9 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 22 ] [ [ "odd", 80 ], [ "tt", 52 ], [ "zf", 99 ] ] 
+715 972 0 
+_____________ 716 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 10 ], [ "tt", 12 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 20 ] [ [ "odd", 56 ], [ "tt", 50 ], [ "zf", 84 ] ] 
+716 974 0 
+_____________ 717 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 19 ] [ [ "odd", 52 ], [ "tt", 44 ], [ "zf", 75 ] ] 
+717 976 0 
+_____________ 718 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 18 ] [ [ "odd", 44 ], [ "tt", 40 ], [ "zf", 69 ] ] 
+718 978 0 
+_____________ 719 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 18 ] [ [ "odd", 44 ], [ "tt", 40 ], [ "zf", 69 ] ] 
+719 980 0 
+_____________ 720 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 23 ], [ "tt", 14 ], [ "zf", 18 ] ] 
+720 981 0 
+_____________ 721 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 12 ] [ [ "odd", 22 ], [ "tt", 20 ], [ "zf", 24 ] ] 
+721 982 0 
+_____________ 722 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 14 ], [ "tt", 8 ], [ "zf", 6 ] ] 
+722 983 0 
+_____________ 723 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 14 ], [ "tt", 8 ], [ "zf", 6 ] ] 
+723 984 0 
+_____________ 724 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 10 ], [ "tt", 12 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 21 ] [ [ "odd", 62 ], [ "tt", 55 ], [ "zf", 93 ] ] 
+724 986 0 
+_____________ 725 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 10 ], [ "tt", 12 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 20 ] [ [ "odd", 58 ], [ "tt", 48 ], [ "zf", 84 ] ] 
+725 988 0 
+_____________ 726 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 12 ] [ [ "odd", 26 ], [ "tt", 16 ], [ "zf", 24 ] ] 
+726 989 0 
+_____________ 727 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 22 ], [ "tt", 11 ], [ "zf", 12 ] ] 
+727 990 0 
+_____________ 728 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 12 ], [ "tt", 10 ], [ "zf", 6 ] ] 
+728 991 0 
+_____________ 729 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 12 ], [ "tt", 18 ], [ "zf", 15 ] ] 
+729 992 0 
+_____________ 730 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 24 ], [ "tt", 28 ], [ "zf", 39 ] ] 
+730 993 0 
+_____________ 731 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 16 ], [ "tt", 14 ], [ "zf", 15 ] ] 
+731 994 0 
+_____________ 732 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 12 ] [ [ "odd", 24 ], [ "tt", 18 ], [ "zf", 24 ] ] 
+732 995 0 
+_____________ 733 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 12 ], [ "tt", 18 ], [ "zf", 15 ] ] 
+733 996 0 
+_____________ 734 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 8 ], [ "tt", 14 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 21 ] [ [ "odd", 48 ], [ "tt", 66 ], [ "zf", 96 ] ] 
+734 998 0 
+_____________ 735 
+__OLrecs 2 [ 1, 2 ] 
+#I  1000 temporary directories made in this session
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 8 ], [ "tt", 14 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 20 ] [ [ "odd", 56 ], [ "tt", 50 ], [ "zf", 84 ] ] 
+735 1000 0 
+_____________ 736 
+__OLrecs 5 [ 1, 2, 4, 4, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 12 ], [ "tt", 10 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 20 ] [ [ "odd", 64 ], [ "tt", 42 ], [ "zf", 84 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 6, 5 ] [ [ "tt", 2 ], [ "zf", 8 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 6, 5 ] [ [ "tt", 2 ], [ "zf", 8 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 5 ] [ [ "odd", 3 ], [ "tt", 5 ], [ "zf", 2 ] ] 
+736 1005 0 
+_____________ 737 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 12 ], [ "tt", 10 ], [ "zf", 6 ] ] 
+737 1006 0 
+_____________ 738 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 12 ], [ "tt", 10 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 5 ] [ [ "odd", 3 ], [ "tt", 5 ], [ "zf", 2 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 22 ] [ [ "odd", 80 ], [ "tt", 52 ], [ "zf", 99 ] ] 
+738 1009 0 
+_____________ 739 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 12 ], [ "tt", 10 ], [ "zf", 6 ] ] 
+739 1010 0 
+_____________ 740 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 12 ], [ "tt", 10 ], [ "zf", 6 ] ] 
+740 1011 0 
+_____________ 741 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 12 ], [ "tt", 10 ], [ "zf", 6 ] ] 
+741 1012 0 
+_____________ 742 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 21 ] [ [ "odd", 48 ], [ "tt", 66 ], [ "zf", 96 ] ] 
+742 1013 0 
+_____________ 743 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 20 ], [ "tt", 10 ], [ "zf", 15 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 4, 4 ] [ [ "odd", 2 ], [ "tt", 1 ], [ "zf", 3 ] ] 
+743 1015 0 
+_____________ 744 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 20 ], [ "tt", 10 ], [ "zf", 15 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 4, 4 ] [ [ "odd", 2 ], [ "tt", 1 ], [ "zf", 3 ] ] 
+744 1017 0 
+_____________ 745 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 12 ], [ "tt", 18 ], [ "zf", 15 ] ] 
+745 1018 0 
+_____________ 746 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 12 ], [ "tt", 18 ], [ "zf", 15 ] ] 
+746 1019 0 
+_____________ 747 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 22 ] [ [ "odd", 80 ], [ "tt", 52 ], [ "zf", 99 ] ] 
+747 1020 0 
+_____________ 748 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 16 ], [ "tt", 14 ], [ "zf", 15 ] ] 
+748 1021 0 
+_____________ 749 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 21 ], [ "tt", 16 ], [ "zf", 18 ] ] 
+749 1022 0 
+_____________ 750 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 10 ], [ "tt", 14 ], [ "zf", 12 ] ] 
+750 1023 0 
+_____________ 751 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 12 ] [ [ "odd", 24 ], [ "tt", 18 ], [ "zf", 24 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 4, 6 ] [ [ "odd", 4 ], [ "tt", 5 ], [ "zf", 6 ] ] 
+751 1025 0 
+_____________ 752 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 34 ], [ "tt", 24 ], [ "zf", 33 ] ] 
+752 1026 0 
+_____________ 753 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 14 ], [ "tt", 16 ], [ "zf", 15 ] ] 
+753 1027 0 
+_____________ 754 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 16 ] [ [ "odd", 40 ], [ "tt", 32 ], [ "zf", 48 ] ] 
+754 1028 0 
+_____________ 755 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 12 ] [ [ "odd", 16 ], [ "tt", 26 ], [ "zf", 24 ] ] 
+755 1029 0 
+_____________ 756 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 8 ], [ "tt", 7 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 17 ] [ [ "odd", 32 ], [ "tt", 44 ], [ "zf", 60 ] ] 
+756 1031 0 
+_____________ 757 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 8 ], [ "tt", 7 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 16 ] [ [ "odd", 34 ], [ "tt", 32 ], [ "zf", 54 ] ] 
+757 1033 0 
+_____________ 758 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 8 ], [ "tt", 7 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 16 ] [ [ "odd", 32 ], [ "tt", 34 ], [ "zf", 54 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 40 ], [ "tt", 21 ], [ "zf", 30 ] ] 
+758 1036 0 
+_____________ 759 
+__OLrecs 6 [ 1, 2, 4, 4, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 9 ], [ "tt", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 16 ] [ [ "odd", 36 ], [ "tt", 30 ], [ "zf", 54 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 4, 10 ] [ [ "tt", 12 ], [ "zf", 33 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 4, 10 ] [ [ "tt", 12 ], [ "zf", 33 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 3 ] [ [ "tt", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 1, 6 ] [ [ "odd", 9 ], [ "tt", 6 ] ] 
+759 1042 0 
+_____________ 760 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 9 ], [ "tt", 6 ] ] 
+760 1043 0 
+_____________ 761 
+__OLrecs 4 [ 1, 2, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 9 ], [ "tt", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 16 ] [ [ "odd", 34 ], [ "tt", 32 ], [ "zf", 54 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 3 ] [ [ "tt", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 1, 6 ] [ [ "odd", 9 ], [ "tt", 6 ] ] 
+761 1047 0 
+_____________ 762 
+__OLrecs 4 [ 1, 2, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 9 ], [ "tt", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 18 ] [ [ "odd", 54 ], [ "tt", 36 ], [ "zf", 63 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 5 ] [ [ "odd", 7 ], [ "tt", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 3 ] [ [ "tt", 3 ] ] 
+762 1051 0 
+_____________ 763 
+__OLrecs 6 [ 1, 2, 4, 4, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 9 ], [ "tt", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 16 ] [ [ "odd", 36 ], [ "tt", 30 ], [ "zf", 54 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 5, 6 ] [ [ "tt", 3 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 5, 6 ] [ [ "tt", 3 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 5 ] [ [ "odd", 7 ], [ "tt", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 3 ] [ [ "tt", 3 ] ] 
+763 1057 0 
+_____________ 764 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 11 ], [ "tt", 7 ], [ "zf", 3 ] ] 
+764 1058 0 
+_____________ 765 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 11 ], [ "tt", 7 ], [ "zf", 3 ] ] 
+765 1059 0 
+_____________ 766 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 11 ], [ "tt", 7 ], [ "zf", 3 ] ] 
+766 1060 0 
+_____________ 767 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 11 ], [ "tt", 7 ], [ "zf", 3 ] ] 
+767 1061 0 
+_____________ 768 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 18 ] [ [ "odd", 54 ], [ "tt", 36 ], [ "zf", 63 ] ] 
+768 1062 0 
+_____________ 769 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 40 ], [ "tt", 21 ], [ "zf", 30 ] ] 
+769 1063 0 
+_____________ 770 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 14 ], [ "tt", 10 ], [ "zf", 12 ] ] 
+770 1064 0 
+_____________ 771 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 14 ], [ "tt", 10 ], [ "zf", 12 ] ] 
+771 1065 0 
+_____________ 772 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 16 ], [ "tt", 6 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 4, 2 ] [ [ "tt", 1 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 7 ] [ [ "odd", 16 ], [ "tt", 3 ], [ "zf", 2 ] ] 
+772 1068 0 
+_____________ 773 
+__OLrecs 4 [ 1, 2, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 16 ], [ "tt", 6 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 4, 2 ] [ [ "tt", 1 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 7 ] [ [ "odd", 12 ], [ "tt", 3 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 4, 2 ] [ [ "tt", 1 ] ] 
+773 1072 0 
+_____________ 774 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 12 ] [ [ "odd", 30 ], [ "tt", 15 ], [ "zf", 21 ] ] 
+774 1073 0 
+_____________ 775 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 14 ], [ "tt", 8 ], [ "zf", 6 ] ] 
+775 1074 0 
+_____________ 776 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 14 ], [ "tt", 8 ], [ "zf", 6 ] ] 
+776 1075 0 
+_____________ 777 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+777 1076 0 
+_____________ 778 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+778 1077 0 
+_____________ 779 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 10 ], [ "tt", 11 ] ] 
+779 1078 0 
+_____________ 780 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 12 ], [ "tt", 15 ], [ "zf", 9 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 4, 3 ] [ [ "tt", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 12 ], [ "tt", 15 ], [ "zf", 9 ] ] 
+780 1081 0 
+_____________ 781 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 18 ], [ "tt", 19 ], [ "zf", 18 ] ] 
+781 1082 0 
+_____________ 782 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 4 ], [ "tt", 11 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 3 ] [ [ "odd", 1 ], [ "tt", 2 ] ] 
+782 1084 0 
+_____________ 783 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 4 ], [ "tt", 11 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 5 ] [ [ "odd", 4 ], [ "tt", 6 ] ] 
+783 1086 0 
+_____________ 784 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 5 ], [ "tt", 10 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 5 ], [ "tt", 10 ] ] 
+784 1088 0 
+_____________ 785 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 5 ], [ "tt", 10 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 5 ] [ [ "odd", 4 ], [ "tt", 6 ] ] 
+785 1090 0 
+_____________ 786 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 4 ] [ [ "odd", 2 ], [ "tt", 3 ], [ "zf", 1 ] ] 
+786 1092 0 
+_____________ 787 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 6 ] [ [ "odd", 7 ], [ "tt", 5 ], [ "zf", 3 ] ] 
+787 1094 0 
+_____________ 788 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 3 ] [ [ "odd", 1 ], [ "tt", 2 ] ] 
+788 1096 0 
+_____________ 789 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 3 ] [ [ "odd", 1 ], [ "tt", 2 ] ] 
+789 1098 0 
+_____________ 790 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 5 ] [ [ "odd", 6 ], [ "tt", 4 ] ] 
+790 1100 0 
+_____________ 791 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 5 ] [ [ "odd", 6 ], [ "tt", 4 ] ] 
+791 1102 0 
+_____________ 792 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+792 1104 0 
+_____________ 793 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 10 ], [ "tt", 12 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 10 ], [ "tt", 12 ], [ "zf", 6 ] ] 
+793 1106 0 
+_____________ 794 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 14 ], [ "tt", 13 ], [ "zf", 9 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 6 ] [ [ "odd", 5 ], [ "tt", 5 ], [ "zf", 5 ] ] 
+794 1108 0 
+_____________ 795 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 6 ] [ [ "odd", 5 ], [ "tt", 7 ], [ "zf", 3 ] ] 
+795 1110 0 
+_____________ 796 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 11 ], [ "tt", 11 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 4, 2 ] [ [ "tt", 1 ] ] 
+796 1112 0 
+_____________ 797 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 11 ], [ "tt", 11 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 7 ] [ [ "odd", 11 ], [ "tt", 4 ], [ "zf", 6 ] ] 
+797 1114 0 
+_____________ 798 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+798 1116 0 
+_____________ 799 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+799 1118 0 
+_____________ 800 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 5 ] [ [ "odd", 6 ], [ "tt", 4 ] ] 
+800 1120 0 
+_____________ 801 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 12 ], [ "tt", 9 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 4 ] [ [ "odd", 3 ], [ "tt", 3 ] ] 
+801 1122 0 
+_____________ 802 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 16 ], [ "tt", 11 ], [ "zf", 9 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 4, 3 ] [ [ "odd", 1 ], [ "tt", 2 ] ] 
+802 1124 0 
+_____________ 803 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 24 ], [ "tt", 13 ], [ "zf", 18 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 10 ] [ [ "odd", 24 ], [ "tt", 3 ], [ "zf", 18 ] ] 
+803 1126 0 
+_____________ 804 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 3 ], [ "tt", 15 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 3 ], [ "tt", 15 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 4 ] [ [ "tt", 3 ], [ "zf", 3 ] ] 
+804 1129 0 
+_____________ 805 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 3 ], [ "tt", 15 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 6 ] [ [ "odd", 3 ], [ "tt", 11 ], [ "zf", 1 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 6 ] [ [ "odd", 3 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+805 1132 0 
+_____________ 806 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 5 ], [ "tt", 13 ], [ "zf", 3 ] ] 
+806 1133 0 
+_____________ 807 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 5 ], [ "tt", 13 ], [ "zf", 3 ] ] 
+807 1134 0 
+_____________ 808 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 7 ], [ "tt", 17 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 6 ] [ [ "tt", 7 ], [ "zf", 8 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 7 ], [ "tt", 17 ], [ "zf", 12 ] ] 
+808 1137 0 
+_____________ 809 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 7 ], [ "tt", 17 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 8 ] [ [ "odd", 7 ], [ "tt", 9 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 6 ] [ [ "odd", 7 ], [ "tt", 5 ], [ "zf", 3 ] ] 
+809 1140 0 
+_____________ 810 
+__OLrecs 4 [ 1, 2, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 4 ] [ [ "tt", 5 ], [ "zf", 1 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 4 ] [ [ "tt", 3 ], [ "zf", 3 ] ] 
+810 1144 0 
+_____________ 811 
+__OLrecs 4 [ 1, 2, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 6 ] [ [ "odd", 7 ], [ "tt", 5 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 4 ] [ [ "tt", 3 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+811 1148 0 
+_____________ 812 
+__OLrecs 4 [ 1, 2, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 6 ] [ [ "odd", 7 ], [ "tt", 5 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 4 ] [ [ "odd", 3 ], [ "tt", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 6 ] [ [ "odd", 7 ], [ "tt", 5 ], [ "zf", 3 ] ] 
+812 1152 0 
+_____________ 813 
+__OLrecs 4 [ 1, 2, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 4 ] [ [ "tt", 5 ], [ "zf", 1 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 6 ] [ [ "odd", 7 ], [ "tt", 5 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 6 ] [ [ "odd", 7 ], [ "tt", 7 ], [ "zf", 1 ] ] 
+813 1156 0 
+_____________ 814 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 7 ], [ "tt", 17 ], [ "zf", 12 ] ] 
+814 1157 0 
+_____________ 815 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 13 ], [ "tt", 21 ], [ "zf", 21 ] ] 
+815 1158 0 
+_____________ 816 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 13 ] [ [ "odd", 23 ], [ "tt", 25 ], [ "zf", 30 ] ] 
+816 1159 0 
+_____________ 817 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 7 ], [ "tt", 17 ], [ "zf", 12 ] ] 
+817 1160 0 
+_____________ 818 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 15 ], [ "tt", 19 ], [ "zf", 21 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 10 ] [ [ "odd", 15 ], [ "tt", 9 ], [ "zf", 21 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 5, 1 ] [  ] 
+818 1163 0 
+_____________ 819 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 15 ], [ "tt", 19 ], [ "zf", 21 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 4, 5 ] [ [ "odd", 1 ], [ "tt", 4 ], [ "zf", 5 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 10 ] [ [ "odd", 15 ], [ "tt", 9 ], [ "zf", 21 ] ] 
+819 1166 0 
+_____________ 820 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+820 1167 0 
+_____________ 821 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+821 1168 0 
+_____________ 822 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+822 1169 0 
+_____________ 823 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 19 ], [ "tt", 11 ], [ "zf", 6 ] ] 
+823 1170 0 
+_____________ 824 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 13 ] [ [ "odd", 27 ], [ "tt", 21 ], [ "zf", 30 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 5, 3 ] [ [ "tt", 2 ], [ "zf", 1 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 12 ] [ [ "odd", 27 ], [ "tt", 9 ], [ "zf", 30 ] ] 
+824 1173 0 
+_____________ 825 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 5 ], [ "tt", 10 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 5 ], [ "tt", 10 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 3 ] [ [ "odd", 2 ], [ "tt", 1 ] ] 
+825 1176 0 
+_____________ 826 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 5 ], [ "tt", 10 ] ] 
+826 1177 0 
+_____________ 827 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+827 1178 0 
+_____________ 828 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 5 ] [ [ "odd", 5 ], [ "tt", 5 ] ] 
+828 1180 0 
+_____________ 829 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 4 ] [ [ "odd", 4 ], [ "tt", 1 ], [ "zf", 1 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+829 1183 0 
+_____________ 830 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+830 1184 0 
+_____________ 831 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 3 ] [ [ "odd", 2 ], [ "tt", 1 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+831 1187 0 
+_____________ 832 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 3 ] [ [ "odd", 2 ], [ "tt", 1 ] ] 
+832 1190 0 
+_____________ 833 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+833 1191 0 
+_____________ 834 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+834 1192 0 
+_____________ 835 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+835 1193 0 
+_____________ 836 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 13 ], [ "tt", 9 ], [ "zf", 6 ] ] 
+836 1194 0 
+_____________ 837 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 18 ], [ "tt", 9 ], [ "zf", 9 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 6 ] [ [ "odd", 7 ], [ "tt", 3 ], [ "zf", 5 ] ] 
+837 1196 0 
+_____________ 838 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 6 ] [ [ "odd", 7 ], [ "tt", 5 ], [ "zf", 3 ] ] 
+838 1198 0 
+_____________ 839 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 14 ], [ "tt", 8 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 4, 2 ] [ [ "tt", 1 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 1, 8 ] [ [ "odd", 14 ], [ "tt", 8 ], [ "zf", 6 ] ] 
+839 1201 0 
+_____________ 840 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 14 ], [ "tt", 8 ], [ "zf", 6 ] ] 
+840 1202 0 
+_____________ 841 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 8 ], [ "tt", 7 ] ] 
+841 1203 0 
+_____________ 842 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 8 ], [ "tt", 7 ] ] 
+842 1204 0 
+_____________ 843 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 8 ], [ "tt", 7 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 5 ] [ [ "odd", 7 ], [ "tt", 3 ] ] 
+843 1206 0 
+_____________ 844 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 14 ], [ "tt", 7 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 4 ] [ [ "odd", 3 ], [ "tt", 3 ] ] 
+844 1208 0 
+_____________ 845 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 20 ], [ "tt", 7 ], [ "zf", 9 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 4, 3 ] [ [ "odd", 2 ], [ "tt", 1 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 1, 9 ] [ [ "odd", 20 ], [ "tt", 7 ], [ "zf", 9 ] ] 
+845 1211 0 
+_____________ 846 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 30 ], [ "tt", 7 ], [ "zf", 18 ] ] 
+846 1212 0 
+_____________ 847 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 5 ], [ "tt", 13 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 4 ] [ [ "odd", 2 ], [ "tt", 1 ], [ "zf", 3 ] ] 
+847 1214 0 
+_____________ 848 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 5 ], [ "tt", 13 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 6 ] [ [ "odd", 5 ], [ "tt", 9 ], [ "zf", 1 ] ] 
+848 1216 0 
+_____________ 849 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+849 1218 0 
+_____________ 850 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 6 ] [ [ "odd", 5 ], [ "tt", 7 ], [ "zf", 3 ] ] 
+850 1220 0 
+_____________ 851 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 11 ], [ "tt", 13 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 6 ] [ [ "odd", 4 ], [ "tt", 3 ], [ "zf", 8 ] ] 
+851 1222 0 
+_____________ 852 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 11 ], [ "tt", 13 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 6 ] [ [ "odd", 9 ], [ "tt", 3 ], [ "zf", 3 ] ] 
+852 1224 0 
+_____________ 853 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 4 ] [ [ "odd", 2 ], [ "tt", 1 ], [ "zf", 3 ] ] 
+853 1226 0 
+_____________ 854 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 4 ] [ [ "odd", 2 ], [ "tt", 1 ], [ "zf", 3 ] ] 
+854 1228 0 
+_____________ 855 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 4 ] [ [ "odd", 3 ], [ "tt", 3 ] ] 
+855 1230 0 
+_____________ 856 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 6 ] [ [ "odd", 9 ], [ "tt", 5 ], [ "zf", 1 ] ] 
+856 1232 0 
+_____________ 857 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 11 ], [ "tt", 13 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 1, 9 ] [ [ "odd", 11 ], [ "tt", 13 ], [ "zf", 12 ] ] 
+857 1234 0 
+_____________ 858 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 19 ], [ "tt", 15 ], [ "zf", 21 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 10 ] [ [ "odd", 15 ], [ "tt", 9 ], [ "zf", 21 ] ] 
+858 1236 0 
+_____________ 859 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 13 ] [ [ "odd", 31 ], [ "tt", 17 ], [ "zf", 30 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 4, 7 ] [ [ "odd", 7 ], [ "tt", 2 ], [ "zf", 12 ] ] 
+859 1238 0 
+_____________ 860 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 11 ], [ "tt", 13 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 8 ] [ [ "odd", 7 ], [ "tt", 9 ], [ "zf", 12 ] ] 
+860 1240 0 
+_____________ 861 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 21 ], [ "tt", 13 ], [ "zf", 21 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 5, 1 ] [  ] 
+861 1242 0 
+_____________ 862 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 21 ], [ "tt", 13 ], [ "zf", 21 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 4, 5 ] [ [ "odd", 3 ], [ "tt", 2 ], [ "zf", 5 ] ] 
+862 1244 0 
+_____________ 863 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 11 ], [ "tt", 7 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 11 ], [ "tt", 7 ], [ "zf", 3 ] ] 
+863 1246 0 
+_____________ 864 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 11 ], [ "tt", 7 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 1, 7 ] [ [ "odd", 11 ], [ "tt", 7 ], [ "zf", 3 ] ] 
+864 1248 0 
+_____________ 865 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 11 ], [ "tt", 7 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 6 ] [ [ "odd", 9 ], [ "tt", 3 ], [ "zf", 3 ] ] 
+865 1250 0 
+_____________ 866 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 23 ], [ "tt", 7 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 4, 3 ] [ [ "odd", 3 ] ] 
+866 1252 0 
+_____________ 867 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 13 ] [ [ "odd", 35 ], [ "tt", 13 ], [ "zf", 30 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 5, 3 ] [ [ "odd", 2 ], [ "zf", 1 ] ] 
+867 1254 0 
+_____________ 868 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 3 ], [ "tt", 21 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 6 ] [ [ "tt", 3 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 3 ], [ "tt", 21 ], [ "zf", 12 ] ] 
+868 1257 0 
+_____________ 869 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 3 ], [ "tt", 21 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 8 ] [ [ "odd", 3 ], [ "tt", 17 ], [ "zf", 8 ] ] 
+869 1259 0 
+_____________ 870 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 7 ], [ "tt", 17 ], [ "zf", 12 ] ] 
+870 1260 0 
+_____________ 871 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 7 ], [ "tt", 17 ], [ "zf", 12 ] ] 
+871 1261 0 
+_____________ 872 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 13 ], [ "tt", 30 ], [ "zf", 48 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 11 ] [ [ "tt", 15 ], [ "zf", 40 ] ] 
+872 1263 0 
+_____________ 873 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 13 ], [ "tt", 30 ], [ "zf", 48 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 4, 8 ] [ [ "odd", 13 ], [ "tt", 3 ], [ "zf", 12 ] ] 
+873 1265 0 
+_____________ 874 
+__OLrecs 4 [ 1, 2, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 11 ], [ "tt", 13 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 6 ] [ [ "tt", 7 ], [ "zf", 8 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 1, 9 ] [ [ "odd", 11 ], [ "tt", 13 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 6 ] [ [ "tt", 3 ], [ "zf", 12 ] ] 
+874 1269 0 
+_____________ 875 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 11 ], [ "tt", 13 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 6 ] [ [ "tt", 3 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 8 ] [ [ "odd", 9 ], [ "tt", 7 ], [ "zf", 12 ] ] 
+875 1272 0 
+_____________ 876 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 11 ], [ "tt", 13 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 4, 3 ] [ [ "odd", 3 ] ] 
+876 1274 0 
+_____________ 877 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 11 ], [ "tt", 13 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 6 ] [ [ "tt", 7 ], [ "zf", 8 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 8 ] [ [ "odd", 11 ], [ "tt", 9 ], [ "zf", 8 ] ] 
+877 1277 0 
+_____________ 878 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 13 ], [ "tt", 30 ], [ "zf", 48 ] ] 
+878 1278 0 
+_____________ 879 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 15 ], [ "tt", 9 ], [ "zf", 12 ] ] 
+879 1279 0 
+_____________ 880 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 15 ], [ "tt", 9 ], [ "zf", 12 ] ] 
+880 1280 0 
+_____________ 881 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 15 ], [ "tt", 9 ], [ "zf", 12 ] ] 
+881 1281 0 
+_____________ 882 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 5 ], [ "tt", 17 ], [ "zf", 6 ] ] 
+882 1282 0 
+_____________ 883 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 8 ], [ "tt", 14 ], [ "zf", 6 ] ] 
+883 1283 0 
+_____________ 884 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 11 ], [ "tt", 19 ], [ "zf", 15 ] ] 
+884 1284 0 
+_____________ 885 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 7 ], [ "tt", 15 ], [ "zf", 6 ] ] 
+885 1285 0 
+_____________ 886 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 12 ], [ "tt", 15 ], [ "zf", 9 ] ] 
+886 1286 0 
+_____________ 887 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 14 ], [ "tt", 13 ], [ "zf", 9 ] ] 
+887 1287 0 
+_____________ 888 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 9 ], [ "tt", 13 ], [ "zf", 6 ] ] 
+888 1288 0 
+_____________ 889 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 22 ], [ "tt", 15 ], [ "zf", 18 ] ] 
+889 1289 0 
+_____________ 890 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 4 ], [ "tt", 23 ], [ "zf", 9 ] ] 
+890 1290 0 
+_____________ 891 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 10 ], [ "tt", 17 ], [ "zf", 9 ] ] 
+891 1291 0 
+_____________ 892 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 15 ] [ [ "odd", 16 ], [ "tt", 41 ], [ "zf", 48 ] ] 
+892 1292 0 
+_____________ 893 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 13 ] [ [ "odd", 12 ], [ "tt", 33 ], [ "zf", 33 ] ] 
+893 1293 0 
+_____________ 894 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 8 ], [ "tt", 19 ], [ "zf", 9 ] ] 
+894 1294 0 
+_____________ 895 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 16 ], [ "tt", 21 ], [ "zf", 18 ] ] 
+895 1295 0 
+_____________ 896 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 20 ], [ "tt", 17 ], [ "zf", 18 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 4, 5 ] [ [ "tt", 5 ], [ "zf", 5 ] ] 
+896 1297 0 
+_____________ 897 
+__OLrecs 3 [ 1, 2, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 12 ], [ "tt", 15 ], [ "zf", 9 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 4, 3 ] [ [ "tt", 2 ], [ "zf", 1 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 8 ] [ [ "odd", 12 ], [ "tt", 7 ], [ "zf", 9 ] ] 
+897 1300 0 
+_____________ 898 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 15 ] [ [ "odd", 36 ], [ "tt", 27 ], [ "zf", 42 ] ] 
+898 1301 0 
+_____________ 899 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 6 ], [ "tt", 16 ], [ "zf", 6 ] ] 
+899 1302 0 
+_____________ 900 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 9 ], [ "tt", 13 ], [ "zf", 6 ] ] 
+900 1303 0 
+_____________ 901 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 17 ], [ "tt", 17 ], [ "zf", 21 ] ] 
+901 1304 0 
+_____________ 902 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 14 ], [ "tt", 16 ], [ "zf", 15 ] ] 
+902 1305 0 
+_____________ 903 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 8 ], [ "tt", 14 ], [ "zf", 6 ] ] 
+903 1306 0 
+_____________ 904 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 14 ], [ "tt", 13 ], [ "zf", 9 ] ] 
+904 1307 0 
+_____________ 905 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 16 ], [ "tt", 11 ], [ "zf", 9 ] ] 
+905 1308 0 
+_____________ 906 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 10 ], [ "tt", 12 ], [ "zf", 6 ] ] 
+906 1309 0 
+_____________ 907 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 26 ], [ "tt", 11 ], [ "zf", 18 ] ] 
+907 1310 0 
+_____________ 908 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 6 ], [ "tt", 21 ], [ "zf", 9 ] ] 
+908 1311 0 
+_____________ 909 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 12 ], [ "tt", 15 ], [ "zf", 9 ] ] 
+909 1312 0 
+_____________ 910 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 15 ] [ [ "odd", 24 ], [ "tt", 33 ], [ "zf", 48 ] ] 
+910 1313 0 
+_____________ 911 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 13 ] [ [ "odd", 18 ], [ "tt", 27 ], [ "zf", 33 ] ] 
+911 1314 0 
+_____________ 912 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 10 ], [ "tt", 17 ], [ "zf", 9 ] ] 
+912 1315 0 
+_____________ 913 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 20 ], [ "tt", 17 ], [ "zf", 18 ] ] 
+913 1316 0 
+_____________ 914 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 24 ], [ "tt", 13 ], [ "zf", 18 ] ] 
+914 1317 0 
+_____________ 915 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 14 ], [ "tt", 13 ], [ "zf", 9 ] ] 
+915 1318 0 
+_____________ 916 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 15 ] [ [ "odd", 44 ], [ "tt", 19 ], [ "zf", 42 ] ] 
+916 1319 0 
+_____________ 917 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 4 ], [ "tt", 33 ], [ "zf", 18 ] ] 
+917 1320 0 
+_____________ 918 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 16 ], [ "tt", 21 ], [ "zf", 18 ] ] 
+918 1321 0 
+_____________ 919 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 12 ], [ "tt", 25 ], [ "zf", 18 ] ] 
+919 1322 0 
+_____________ 920 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 20 ], [ "tt", 17 ], [ "zf", 18 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 4, 5 ] [ [ "tt", 2 ], [ "zf", 8 ] ] 
+920 1324 0 
+_____________ 921 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 15 ] [ [ "odd", 36 ], [ "tt", 27 ], [ "zf", 42 ] ] 
+921 1326 0 
+_____________ 922 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 12 ] [ [ "odd", 30 ], [ "tt", 15 ], [ "zf", 21 ] ] 
+922 1328 0 
+_____________ 923 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+923 1329 0 
+_____________ 924 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 11 ], [ "tt", 11 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 5 ] [ [ "odd", 4 ], [ "tt", 4 ], [ "zf", 2 ] ] 
+924 1331 0 
+_____________ 925 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 11 ], [ "tt", 11 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 7 ] [ [ "odd", 11 ], [ "tt", 4 ], [ "zf", 6 ] ] 
+925 1333 0 
+_____________ 926 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 3 ], [ "tt", 12 ] ] 
+926 1334 0 
+_____________ 927 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 4 ], [ "tt", 11 ] ] 
+927 1335 0 
+_____________ 928 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 5 ], [ "tt", 13 ], [ "zf", 3 ] ] 
+928 1336 0 
+_____________ 929 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 5 ], [ "tt", 10 ] ] 
+929 1337 0 
+_____________ 930 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+930 1338 0 
+_____________ 931 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 10 ], [ "tt", 14 ], [ "zf", 12 ] ] 
+931 1339 0 
+_____________ 932 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 5 ], [ "tt", 10 ] ] 
+932 1340 0 
+_____________ 933 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 5 ], [ "tt", 10 ] ] 
+933 1341 0 
+_____________ 934 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+934 1342 0 
+_____________ 935 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+935 1343 0 
+_____________ 936 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+936 1344 0 
+_____________ 937 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+937 1345 0 
+_____________ 938 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 8 ], [ "tt", 14 ], [ "zf", 6 ] ] 
+938 1346 0 
+_____________ 939 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 11 ], [ "tt", 11 ], [ "zf", 6 ] ] 
+939 1347 0 
+_____________ 940 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 19 ], [ "tt", 15 ], [ "zf", 21 ] ] 
+940 1348 0 
+_____________ 941 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+941 1349 0 
+_____________ 942 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+942 1350 0 
+_____________ 943 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+943 1351 0 
+_____________ 944 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 14 ], [ "tt", 8 ], [ "zf", 6 ] ] 
+944 1352 0 
+_____________ 945 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 14 ], [ "tt", 8 ], [ "zf", 6 ] ] 
+945 1353 0 
+_____________ 946 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 16 ] [ [ "odd", 54 ], [ "tt", 21 ], [ "zf", 45 ] ] 
+946 1354 0 
+_____________ 947 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 2 ], [ "tt", 16 ], [ "zf", 3 ] ] 
+947 1355 0 
+_____________ 948 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 4 ], [ "tt", 14 ], [ "zf", 3 ] ] 
+948 1356 0 
+_____________ 949 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 4 ], [ "tt", 20 ], [ "zf", 12 ] ] 
+949 1357 0 
+_____________ 950 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 6 ], [ "tt", 12 ], [ "zf", 3 ] ] 
+950 1358 0 
+_____________ 951 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 8 ], [ "tt", 16 ], [ "zf", 12 ] ] 
+951 1359 0 
+_____________ 952 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 12 ], [ "tt", 31 ], [ "zf", 48 ] ] 
+952 1360 0 
+_____________ 953 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 6 ], [ "tt", 12 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 4 ] [ [ "odd", 1 ], [ "tt", 4 ], [ "zf", 1 ] ] 
+953 1362 0 
+_____________ 954 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 6 ], [ "tt", 12 ], [ "zf", 3 ] ] 
+954 1363 0 
+_____________ 955 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 10 ], [ "zf", 3 ] ] 
+955 1364 0 
+_____________ 956 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 10 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 6 ] [ [ "odd", 7 ], [ "tt", 5 ], [ "zf", 3 ] ] 
+956 1366 0 
+_____________ 957 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 12 ], [ "tt", 12 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 6 ] [ [ "odd", 3 ], [ "tt", 4 ], [ "zf", 8 ] ] 
+957 1368 0 
+_____________ 958 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 12 ], [ "tt", 12 ], [ "zf", 12 ] ] 
+958 1369 0 
+_____________ 959 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 10 ], [ "tt", 24 ], [ "zf", 21 ] ] 
+959 1370 0 
+_____________ 960 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 16 ], [ "tt", 18 ], [ "zf", 21 ] ] 
+960 1371 0 
+_____________ 961 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 10 ], [ "tt", 8 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 16 ] [ [ "odd", 54 ], [ "tt", 21 ], [ "zf", 45 ] ] 
+961 1373 0 
+_____________ 962 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 10 ], [ "tt", 8 ], [ "zf", 3 ] ] 
+962 1374 0 
+_____________ 963 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 10 ], [ "tt", 8 ], [ "zf", 3 ] ] 
+963 1375 0 
+_____________ 964 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 22 ], [ "tt", 12 ], [ "zf", 21 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 8 ] [ [ "odd", 9 ], [ "tt", 4 ], [ "zf", 15 ] ] 
+964 1377 0 
+_____________ 965 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 12 ] [ [ "odd", 30 ], [ "tt", 15 ], [ "zf", 21 ] ] 
+965 1378 0 
+_____________ 966 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 5 ], [ "tt", 10 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 5 ], [ "tt", 10 ] ] 
+966 1380 0 
+_____________ 967 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 5 ], [ "tt", 10 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 1, 6 ] [ [ "odd", 5 ], [ "tt", 10 ] ] 
+967 1382 0 
+_____________ 968 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+968 1383 0 
+_____________ 969 
+__OLrecs 3 [ 1, 4, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 4, 8 ] [ [ "odd", 8 ], [ "tt", 4 ], [ "zf", 16 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 36 ], [ "tt", 19 ], [ "zf", 36 ] ] 
+969 1386 0 
+_____________ 970 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 32 ], [ "tt", 23 ], [ "zf", 36 ] ] 
+970 1388 0 
+_____________ 971 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+971 1389 0 
+_____________ 972 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 11 ], [ "tt", 11 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 5 ] [ [ "odd", 2 ], [ "tt", 4 ], [ "zf", 4 ] ] 
+972 1391 0 
+_____________ 973 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 11 ], [ "tt", 11 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 7 ] [ [ "odd", 11 ], [ "tt", 4 ], [ "zf", 6 ] ] 
+973 1393 0 
+_____________ 974 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 3 ] [ [ "tt", 3 ] ] 
+974 1395 0 
+_____________ 975 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 5 ] [ [ "odd", 7 ], [ "tt", 3 ] ] 
+975 1397 0 
+_____________ 976 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 3 ] [ [ "tt", 3 ] ] 
+976 1399 0 
+_____________ 977 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 3 ] [ [ "tt", 3 ] ] 
+977 1401 0 
+_____________ 978 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 5 ] [ [ "odd", 7 ], [ "tt", 3 ] ] 
+978 1403 0 
+_____________ 979 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 5 ] [ [ "odd", 7 ], [ "tt", 3 ] ] 
+979 1405 0 
+_____________ 980 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 10 ], [ "tt", 12 ], [ "zf", 6 ] ] 
+980 1406 0 
+_____________ 981 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 10 ], [ "tt", 12 ], [ "zf", 6 ] ] 
+981 1407 0 
+_____________ 982 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 19 ], [ "tt", 14 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 9 ] [ [ "odd", 19 ], [ "tt", 5 ], [ "zf", 12 ] ] 
+982 1409 0 
+_____________ 983 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 6 ], [ "tt", 12 ], [ "zf", 3 ] ] 
+983 1410 0 
+_____________ 984 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 6 ], [ "tt", 12 ], [ "zf", 3 ] ] 
+984 1411 0 
+_____________ 985 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 10 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 4 ] [ [ "odd", 1 ], [ "tt", 4 ], [ "zf", 1 ] ] 
+985 1413 0 
+_____________ 986 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 10 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 6 ] [ [ "odd", 8 ], [ "tt", 4 ], [ "zf", 3 ] ] 
+986 1415 0 
+_____________ 987 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 10 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 4 ] [ [ "odd", 1 ], [ "tt", 4 ], [ "zf", 1 ] ] 
+987 1417 0 
+_____________ 988 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 10 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 6 ] [ [ "odd", 8 ], [ "tt", 4 ], [ "zf", 3 ] ] 
+988 1419 0 
+_____________ 989 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+989 1420 0 
+_____________ 990 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+990 1421 0 
+_____________ 991 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+991 1422 0 
+_____________ 992 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 12 ], [ "tt", 10 ], [ "zf", 6 ] ] 
+992 1423 0 
+_____________ 993 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 11 ], [ "tt", 11 ], [ "zf", 6 ] ] 
+993 1424 0 
+_____________ 994 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 5 ], [ "tt", 10 ] ] 
+994 1425 0 
+_____________ 995 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+995 1426 0 
+_____________ 996 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+996 1427 0 
+_____________ 997 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+997 1428 0 
+_____________ 998 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+998 1429 0 
+_____________ 999 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+999 1430 0 
+_____________ 1000 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+1000 1431 0 
+_____________ 1001 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+1001 1432 0 
+_____________ 1002 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+1002 1433 0 
+_____________ 1003 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+1003 1434 0 
+_____________ 1004 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+1004 1435 0 
+_____________ 1005 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+1005 1436 0 
+_____________ 1006 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 13 ], [ "tt", 9 ], [ "zf", 6 ] ] 
+1006 1437 0 
+_____________ 1007 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 18 ], [ "tt", 9 ], [ "zf", 9 ] ] 
+1007 1438 0 
+_____________ 1008 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+1008 1439 0 
+_____________ 1009 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 11 ], [ "tt", 11 ], [ "zf", 6 ] ] 
+1009 1440 0 
+_____________ 1010 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 16 ], [ "tt", 14 ], [ "zf", 15 ] ] 
+1010 1441 0 
+_____________ 1011 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 10 ], [ "tt", 12 ], [ "zf", 6 ] ] 
+1011 1442 0 
+_____________ 1012 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 16 ], [ "tt", 11 ], [ "zf", 9 ] ] 
+1012 1443 0 
+_____________ 1013 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 6 ], [ "tt", 12 ], [ "zf", 3 ] ] 
+1013 1444 0 
+_____________ 1014 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 10 ], [ "zf", 3 ] ] 
+1014 1445 0 
+_____________ 1015 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 10 ], [ "zf", 3 ] ] 
+1015 1446 0 
+_____________ 1016 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 17 ], [ "tt", 13 ], [ "zf", 15 ] ] 
+1016 1447 0 
+_____________ 1017 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 11 ], [ "tt", 13 ], [ "zf", 12 ] ] 
+1017 1448 0 
+_____________ 1018 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+1018 1449 0 
+_____________ 1019 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 6 ], [ "tt", 9 ] ] 
+1019 1450 0 
+_____________ 1020 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+1020 1451 0 
+_____________ 1021 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+1021 1452 0 
+_____________ 1022 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+1022 1453 0 
+_____________ 1023 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 7 ], [ "tt", 8 ] ] 
+1023 1454 0 
+_____________ 1024 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 14 ], [ "tt", 8 ], [ "zf", 6 ] ] 
+1024 1455 0 
+_____________ 1025 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 14 ], [ "tt", 8 ], [ "zf", 6 ] ] 
+1025 1456 0 
+_____________ 1026 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 8 ], [ "tt", 7 ] ] 
+1026 1457 0 
+_____________ 1027 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 8 ], [ "tt", 7 ] ] 
+1027 1458 0 
+_____________ 1028 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 8 ], [ "tt", 7 ] ] 
+1028 1459 0 
+_____________ 1029 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 8 ], [ "tt", 7 ] ] 
+1029 1460 0 
+_____________ 1030 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 8 ], [ "tt", 7 ] ] 
+1030 1461 0 
+_____________ 1031 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 6 ] [ [ "odd", 8 ], [ "tt", 7 ] ] 
+1031 1462 0 
+_____________ 1032 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 13 ], [ "tt", 9 ], [ "zf", 6 ] ] 
+1032 1463 0 
+_____________ 1033 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 12 ] [ [ "odd", 27 ], [ "tt", 15 ], [ "zf", 24 ] ] 
+1033 1464 0 
+_____________ 1034 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 13 ], [ "tt", 9 ], [ "zf", 6 ] ] 
+1034 1465 0 
+_____________ 1035 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 24 ], [ "tt", 9 ], [ "zf", 12 ] ] 
+1035 1466 0 
+_____________ 1036 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 10 ], [ "zf", 3 ] ] 
+1036 1467 0 
+_____________ 1037 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 10 ], [ "zf", 3 ] ] 
+1037 1468 0 
+_____________ 1038 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 10 ], [ "tt", 8 ], [ "zf", 3 ] ] 
+1038 1469 0 
+_____________ 1039 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 10 ], [ "tt", 8 ], [ "zf", 3 ] ] 
+1039 1470 0 
+_____________ 1040 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 10 ], [ "tt", 8 ], [ "zf", 3 ] ] 
+1040 1471 0 
+_____________ 1041 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 10 ], [ "tt", 8 ], [ "zf", 3 ] ] 
+1041 1472 0 
+_____________ 1042 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 20 ], [ "tt", 14 ], [ "zf", 21 ] ] 
+1042 1473 0 
+_____________ 1043 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 13 ] [ [ "odd", 31 ], [ "tt", 17 ], [ "zf", 30 ] ] 
+1043 1474 0 
+_____________ 1044 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 11 ], [ "tt", 13 ], [ "zf", 12 ] ] 
+1044 1475 0 
+_____________ 1045 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 11 ], [ "tt", 13 ], [ "zf", 12 ] ] 
+1045 1476 0 
+_____________ 1046 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 3 ], [ "tt", 15 ], [ "zf", 3 ] ] 
+1046 1477 0 
+_____________ 1047 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 5 ], [ "tt", 13 ], [ "zf", 3 ] ] 
+1047 1478 0 
+_____________ 1048 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 7 ], [ "tt", 17 ], [ "zf", 12 ] ] 
+1048 1479 0 
+_____________ 1049 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+1049 1480 0 
+_____________ 1050 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+1050 1481 0 
+_____________ 1051 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 7 ], [ "tt", 17 ], [ "zf", 12 ] ] 
+1051 1482 0 
+_____________ 1052 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 17 ], [ "tt", 17 ], [ "zf", 21 ] ] 
+1052 1483 0 
+_____________ 1053 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 15 ], [ "tt", 19 ], [ "zf", 21 ] ] 
+1053 1484 0 
+_____________ 1054 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 5 ], [ "tt", 13 ], [ "zf", 3 ] ] 
+1054 1485 0 
+_____________ 1055 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+1055 1486 0 
+_____________ 1056 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+1056 1487 0 
+_____________ 1057 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 11 ], [ "tt", 13 ], [ "zf", 12 ] ] 
+1057 1488 0 
+_____________ 1058 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 11 ], [ "tt", 13 ], [ "zf", 12 ] ] 
+1058 1489 0 
+_____________ 1059 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+1059 1490 0 
+_____________ 1060 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 6 ] [ [ "odd", 6 ], [ "tt", 6 ], [ "zf", 3 ] ] 
+1060 1492 0 
+_____________ 1061 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 4 ] [ [ "odd", 2 ], [ "tt", 3 ], [ "zf", 1 ] ] 
+1061 1494 0 
+_____________ 1062 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 4 ] [ [ "odd", 2 ], [ "tt", 3 ], [ "zf", 1 ] ] 
+1062 1496 0 
+_____________ 1063 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+1063 1497 0 
+_____________ 1064 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+1064 1498 0 
+_____________ 1065 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 11 ], [ "tt", 13 ], [ "zf", 12 ] ] 
+1065 1499 0 
+_____________ 1066 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 19 ], [ "tt", 15 ], [ "zf", 21 ] ] 
+1066 1500 0 
+_____________ 1067 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 36 ], [ "tt", 19 ], [ "zf", 36 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 4, 8 ] [ [ "odd", 8 ], [ "tt", 4 ], [ "zf", 16 ] ] 
+1067 1502 0 
+_____________ 1068 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 11 ], [ "tt", 13 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 8 ] [ [ "odd", 8 ], [ "tt", 8 ], [ "zf", 12 ] ] 
+1068 1504 0 
+_____________ 1069 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 15 ], [ "tt", 19 ], [ "zf", 21 ] ] 
+1069 1505 0 
+_____________ 1070 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 17 ] [ [ "odd", 31 ], [ "tt", 39 ], [ "zf", 66 ] ] 
+1070 1506 0 
+_____________ 1071 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 13 ], [ "tt", 21 ], [ "zf", 21 ] ] 
+1071 1507 0 
+_____________ 1072 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 32 ], [ "tt", 23 ], [ "zf", 36 ] ] 
+1072 1508 0 
+_____________ 1073 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 5 ], [ "tt", 19 ], [ "zf", 12 ] ] 
+1073 1509 0 
+_____________ 1074 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 9 ], [ "tt", 15 ], [ "zf", 12 ] ] 
+1074 1510 0 
+_____________ 1075 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 9 ], [ "tt", 15 ], [ "zf", 12 ] ] 
+1075 1511 0 
+_____________ 1076 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 17 ] [ [ "odd", 33 ], [ "tt", 37 ], [ "zf", 66 ] ] 
+1076 1512 0 
+_____________ 1077 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+1077 1513 0 
+_____________ 1078 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 1, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+1078 1515 0 
+_____________ 1079 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+1079 1516 0 
+_____________ 1080 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+1080 1517 0 
+_____________ 1081 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+1081 1518 0 
+_____________ 1082 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 9 ], [ "tt", 9 ], [ "zf", 3 ] ] 
+1082 1519 0 
+_____________ 1083 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 21 ], [ "tt", 13 ], [ "zf", 21 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 8 ] [ [ "odd", 6 ], [ "tt", 5 ], [ "zf", 17 ] ] 
+1083 1521 0 
+_____________ 1084 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 21 ], [ "tt", 13 ], [ "zf", 21 ] ] 
+1084 1522 0 
+_____________ 1085 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 11 ], [ "tt", 7 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 4 ] [ [ "odd", 2 ], [ "tt", 3 ], [ "zf", 1 ] ] 
+1085 1524 0 
+_____________ 1086 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 11 ], [ "tt", 7 ], [ "zf", 3 ] ] 
+1086 1525 0 
+_____________ 1087 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 11 ], [ "tt", 7 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 4 ] [ [ "odd", 2 ], [ "tt", 3 ], [ "zf", 1 ] ] 
+1087 1527 0 
+_____________ 1088 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 11 ], [ "tt", 7 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 4 ] [ [ "odd", 2 ], [ "tt", 3 ], [ "zf", 1 ] ] 
+1088 1529 0 
+_____________ 1089 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 11 ], [ "tt", 7 ], [ "zf", 3 ] ] 
+1089 1530 0 
+_____________ 1090 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 11 ], [ "tt", 7 ], [ "zf", 3 ] ] 
+1090 1531 0 
+_____________ 1091 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 19 ], [ "tt", 15 ], [ "zf", 21 ] ] 
+1091 1532 0 
+_____________ 1092 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 19 ], [ "tt", 15 ], [ "zf", 21 ] ] 
+1092 1533 0 
+_____________ 1093 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 9 ], [ "tt", 15 ], [ "zf", 12 ] ] 
+1093 1534 0 
+_____________ 1094 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 9 ], [ "tt", 15 ], [ "zf", 12 ] ] 
+1094 1535 0 
+_____________ 1095 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 13 ], [ "tt", 11 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 6 ] [ [ "odd", 2 ], [ "tt", 5 ], [ "zf", 8 ] ] 
+1095 1537 0 
+_____________ 1096 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 13 ], [ "tt", 11 ], [ "zf", 12 ] ] 
+1096 1538 0 
+_____________ 1097 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 13 ], [ "tt", 11 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 6 ] [ [ "odd", 2 ], [ "tt", 5 ], [ "zf", 8 ] ] 
+1097 1540 0 
+_____________ 1098 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 13 ], [ "tt", 11 ], [ "zf", 12 ] ] 
+1098 1541 0 
+_____________ 1099 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 13 ], [ "tt", 30 ], [ "zf", 48 ] ] 
+1099 1542 0 
+_____________ 1100 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 14 ] [ [ "odd", 13 ], [ "tt", 30 ], [ "zf", 48 ] ] 
+1100 1543 0 
+_____________ 1101 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 10 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 15 ] [ [ "odd", 44 ], [ "tt", 22 ], [ "zf", 39 ] ] 
+1101 1545 0 
+_____________ 1102 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 10 ], [ "zf", 3 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 17 ] [ [ "odd", 48 ], [ "tt", 34 ], [ "zf", 54 ] ] 
+1102 1547 0 
+_____________ 1103 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 10 ], [ "zf", 3 ] ] 
+1103 1548 0 
+_____________ 1104 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 15 ], [ "tt", 12 ], [ "zf", 9 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 4, 3 ] [ [ "tt", 2 ], [ "zf", 1 ] ] 
+1104 1550 0 
+_____________ 1105 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 15 ], [ "tt", 12 ], [ "zf", 9 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 8 ] [ [ "odd", 15 ], [ "tt", 4 ], [ "zf", 9 ] ] 
+1105 1552 0 
+_____________ 1106 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 18 ], [ "tt", 19 ], [ "zf", 18 ] ] 
+1106 1553 0 
+_____________ 1107 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 8 ], [ "tt", 14 ], [ "zf", 6 ] ] 
+1107 1554 0 
+_____________ 1108 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 8 ], [ "tt", 14 ], [ "zf", 6 ] ] 
+1108 1555 0 
+_____________ 1109 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 10 ], [ "tt", 12 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 7 ] [ [ "odd", 10 ], [ "tt", 5 ], [ "zf", 6 ] ] 
+1109 1557 0 
+_____________ 1110 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 10 ], [ "tt", 12 ], [ "zf", 6 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 3, 5 ] [ [ "odd", 3 ], [ "tt", 5 ], [ "zf", 2 ] ] 
+1110 1559 0 
+_____________ 1111 
+__OLrecs 2 [ 1, 2 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 18 ], [ "tt", 15 ], [ "zf", 12 ] ] 
+_____ rho 7 true : Tcount 1 : sprats [ 2, 9 ] [ [ "odd", 18 ], [ "tt", 6 ], [ "zf", 12 ] ] 
+1111 1561 0 
+_____________ 1112 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 9 ], [ "tt", 15 ], [ "zf", 12 ] ] 
+1112 1562 0 
+_____________ 1113 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 10 ], [ "zf", 3 ] ] 
+1113 1563 0 
+_____________ 1114 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 10 ], [ "zf", 3 ] ] 
+1114 1564 0 
+_____________ 1115 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 10 ], [ "zf", 3 ] ] 
+1115 1565 0 
+_____________ 1116 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 12 ], [ "tt", 10 ], [ "zf", 6 ] ] 
+1116 1566 0 
+_____________ 1117 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 17 ], [ "tt", 10 ], [ "zf", 9 ] ] 
+1117 1567 0 
+_____________ 1118 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 8 ], [ "tt", 10 ], [ "zf", 3 ] ] 
+1118 1568 0 
+_____________ 1119 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 13 ], [ "tt", 9 ], [ "zf", 6 ] ] 
+1119 1569 0 
+_____________ 1120 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 13 ], [ "tt", 9 ], [ "zf", 6 ] ] 
+1120 1570 0 
+_____________ 1121 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 18 ], [ "tt", 16 ], [ "zf", 21 ] ] 
+1121 1571 0 
+_____________ 1122 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 15 ], [ "tt", 12 ], [ "zf", 9 ] ] 
+1122 1572 0 
+_____________ 1123 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 10 ] [ [ "odd", 15 ], [ "tt", 15 ], [ "zf", 15 ] ] 
+1123 1573 0 
+_____________ 1124 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 8 ], [ "tt", 14 ], [ "zf", 6 ] ] 
+1124 1574 0 
+_____________ 1125 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 9 ] [ [ "odd", 16 ], [ "tt", 11 ], [ "zf", 9 ] ] 
+1125 1575 0 
+_____________ 1126 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 8 ] [ [ "odd", 10 ], [ "tt", 12 ], [ "zf", 6 ] ] 
+1126 1576 0 
+_____________ 1127 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 11 ] [ [ "odd", 19 ], [ "tt", 15 ], [ "zf", 21 ] ] 
+1127 1577 0 
+_____________ 1128 
+__OLrecs 1 [ 1 ] 
+_____ rho 7 true : Tcount 1 : sprats [ 0, 7 ] [ [ "odd", 7 ], [ "tt", 11 ], [ "zf", 3 ] ] 
+1128 1578 0 
+_____________ 1129 
+__OLrecs 1 [ 1 ] 

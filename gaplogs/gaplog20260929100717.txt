@@ -59,4 +59,11 @@ not in any function at *stdin*:75
 gap> DiscgMod;
 Error, Variable: 'DiscgMod' must have a value
 not in any function at *stdin*:76
+gap> GetSpRats;
+function( Gram, h ) ... end
+gap> Read("even_lattice_genus.g");
+gap> EvenLatticeGenus;
+function( signature, invariants, form ) ... end
+gap> GetSpRats;
+function( Gram, h ) ... end
 gap> 

@@ -55,8 +55,8 @@ NonSingOverLats:=function(Gram, h, autShgens)
     fi;
   od;
   #
-  #Printn("__nonsingisotwords", Length(isotwords));
-  #Printn("__singisotwords", Length(singisotwords));
+  Printn("__nonsingisotwords", Length(isotwords));
+  Printn("__singisotwords", Length(singisotwords));
   #
   autShgensperms:=[];
   for tg in autShgens do 
@@ -67,7 +67,7 @@ NonSingOverLats:=function(Gram, h, autShgens)
   od;
   #
   theG:=Group(autShgensperms);
-  #Printn("__size of G", Size(theG));
+  Printn("__size of G", Size(theG));
   #
   IsGminimal:=function(iis)
     local tgp, iistgp;
@@ -179,7 +179,7 @@ NonSingOverLats:=function(Gram, h, autShgens)
         Add(minelmss, minnewelms);
         newOLrec:=GetOLrec(minnewelms);
         Add(nonsingOLrecs, newOLrec);
-        #Printn("__new overlattice", newOLrec.extdeg, Length(nonsingOLrecs));
+        Printn("__new overlattice", newOLrec.extdeg, Length(nonsingOLrecs));
       fi;
       #
       newaddwords:=ShallowCopy(torec.addwords); Add(newaddwords, tw);
