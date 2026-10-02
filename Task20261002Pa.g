@@ -6,7 +6,9 @@
 
 Read("SplitConsTools.g");
 Read("NonSingOverLats.g");
+Read("ReidemeisterSchreier.g");
 Read("AutShByGramP.g");
+
 
 resetMT(sessionnumb);
 
@@ -33,13 +35,14 @@ taskcounter:=0;
 
 task:=function(adj)
   local kk, tA, ttA, newadj, trec,tGram, th,isgeom, sprats,
-  cc, mm, nn, tAutShgens, tOLrecs, tOLrec, ttflag, ttGram, tth, geomflag, tAutShrec;
+  cc, mm, nn, tAutShgens, tOLrecs, tOLrec, ttflag, ttGram, tth, geomflag, tAutShrec,
+  geomflag0;
   #
   taskcounter:=taskcounter+1;
   #
   kk:=Length(adj);
   mm:=Maximum(50, 10*kk);
-  if kk>14 then mm:=2^(kk-14)*mm;fi;
+  if kk>15 then mm:=2^(kk-15)*mm;fi;
   for cc in [1..mm] do
     tA:=[RandomVectFromL(kk, [1, 3])];
     ttA:=TransposedMat(tA);
@@ -48,7 +51,11 @@ task:=function(adj)
     tGram:=trec.Gram;
     th:=trec.h;
     nn:=Length(th);
-    if SignatureQ(tGram)<>[nn, 1, nn-1] then continue; fi;
+    geomflag0:=NewIsGeom(tGram, th);
+    if not (geomflag0=true or geomflag0=[false, "genus"]) then 
+      continue;
+    fi;
+    #
     tAutShrec:=AutShByGramP(tGram, th);
     tAutShgens:=tAutShrec.AutShgens;
     tOLrecs:=NonSingOverLats(tGram, th, tAutShgens);

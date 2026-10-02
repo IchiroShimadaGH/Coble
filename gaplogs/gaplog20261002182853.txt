@@ -1,0 +1,36 @@
+sessionnumb  20261002182853 
+Error, user interrupt in
+  return n mod 2 = 1; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/integer.gi:924 called from 
+IsOddInt( depth2 ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3596 called from
+psol * tvdual at gapReads/OGLat.g:304 called from
+simpleextend( psol ); at gapReads/OGLat.g:318 called from
+simpleextend( psol ); at gapReads/OGLat.g:318 called from
+simpleextend( psol ); at gapReads/OGLat.g:318 called from
+...  at Task20261002Pa.g:80
+you can 'return;'
+brk> quit;
+gap> Read("Task20261002Pa.g");
+Syntax warning: Unbound global variable in Task20261002Pa.g:53
+    geomflag0:=NewIsGeom(tGram, th);
+    ^^^^^^^^^
+Syntax warning: Unbound global variable in Task20261002Pa.g:54
+    if not (geomflag0=true or geomflag0=[false, "genus"]) then 
+            ^^^^^^^^^
+Syntax warning: Unbound global variable in Task20261002Pa.g:54
+    if not (geomflag0=true or geomflag0=[false, "genus"]) then 
+                              ^^^^^^^^^
+Error, user interrupt in
+  return fail; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/vecmat.gi:1333 called from 
+ConvertToVectorRepNC( vc, f ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2531 called from
+SemiEchelonMatTransformation( mat ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2201 called from
+NullspaceMat( TransposedMat( [ v * sQ ] ) ) at gapReads/LatticeTools.txt:40 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+...  at Task20261002Pa.g:84
+you can 'return;'
+brk> quit;
+gap> 
+gap> 
+gap> 
+gap> 
+gap> Read("Task20261002Pa.g");

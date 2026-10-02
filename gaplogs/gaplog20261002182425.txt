@@ -1,0 +1,30 @@
+sessionnumb  20261002182425 
+Syntax warning: Unbound global variable in AutShByGramP.g:82
+  hstabwds:=ReidemeisterSchreierStabilizer(tgenspermsonhs);
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error, Variable: 'ReidemeisterSchreierStabilizer' must have an assigned value in
+  hstabwds := ReidemeisterSchreierStabilizer( tgenspermsonhs ); at AutShByGramP.g:82 called from 
+AutShByGramP( tGram, th ) at Task20261002Pa.g:52 called from
+<function "task">( <arguments> )
+ called from read-eval loop at Task20261002Pa.g:78
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("ReidenisterSchrier.g");
+Error, file "ReidenisterSchrier.g" must exist and be readable at /usr/local/Cellar/gap/4.15.1/share/gap/lib/files.gi:207 called from
+<function "Read string">( <arguments> )
+ called from read-eval loop at *stdin*:1
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> quit;
+gap> Read("ReidemeisterSchreier");
+Error, file "ReidemeisterSchreier" must exist and be readable at /usr/local/Cellar/gap/4.15.1/share/gap/lib/files.gi:207 called from
+<function "Read string">( <arguments> )
+ called from read-eval loop at *stdin*:1
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> Read("ReidemeisterSchreier.g");
+brk> quit;
+gap> 
+gap> 
+gap> 
+gap> restart();Read("Task20261002Pa.g");

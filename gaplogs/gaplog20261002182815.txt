@@ -1,0 +1,15 @@
+sessionnumb  20261002182815 
+Error, user interrupt in
+  return prod; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3603 called from 
+psol * tvdual at gapReads/OGLat.g:304 called from
+simpleextend( psol ); at gapReads/OGLat.g:318 called from
+simpleextend( psol ); at gapReads/OGLat.g:318 called from
+simpleextend( psol ); at gapReads/OGLat.g:318 called from
+simpleextend( psol ); at gapReads/OGLat.g:318 called from
+...  at Task20261002Pa.g:80
+you can 'return;'
+brk> quit;
+gap> 
+gap> 
+gap> 
+gap> Read("Task20261002Pa.g");

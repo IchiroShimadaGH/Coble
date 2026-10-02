@@ -1,0 +1,29 @@
+sessionnumb  20261002182631 
+gap> Read("Task20261002Pa.g");
+Syntax warning: Unbound global variable in AutShByGramP.g:82
+  hstabwds:=ReidemeisterSchreierStabilizer(tgenspermsonhs);
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error, user interrupt in
+  return not IsPlistRep( r ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3619 called from 
+func( elm ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:1643 called from
+ForAny( mat, function ( r )
+      return not IsPlistRep( r );
+  end ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3619 called from
+yy * T at gapReads/IntegerVectorsQF.txt:364 called from
+task( xx * Hinv ); at gapReads/IntegerVectorsQF.txt:328 called from
+task( tempx ); at gapReads/IntegerVectorsQF.txt:280 called from
+...  at Task20261002Pa.g:79
+you can 'return;'
+brk> quit;
+gap> Read("Task20261002Pa.g");
+Error, user interrupt in
+  pos := pos + 1; at gapReads/OGLat.g:299 called from 
+simpleextend( psol ); at gapReads/OGLat.g:318 called from
+simpleextend( psol ); at gapReads/OGLat.g:318 called from
+simpleextend( psol ); at gapReads/OGLat.g:318 called from
+simpleextend( psol ); at gapReads/OGLat.g:318 called from
+simpleextend( psol ); at gapReads/OGLat.g:318 called from
+...  at Task20261002Pa.g:80
+you can 'return;'
+brk> quit;
+gap> Read("Task20261002Pa.g");

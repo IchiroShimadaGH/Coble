@@ -1,0 +1,16 @@
+sessionnumb  20261002182830 
+Error, user interrupt in
+  t := TNUM_OBJ( m[1] ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:37 called from 
+NestingDepthM( left ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3574 called from
+tvs * tvdual at gapReads/OGLat.g:56 called from
+Webrint( tv, Gram, tvs ) at gapReads/OGLat.g:61 called from
+func( C[i] ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from
+List( tvss, function ( tvs )
+      return Webrint( tv, Gram, tvs );
+  end ) at gapReads/OGLat.g:61 called from
+...  at Task20261002Pa.g:80
+you can 'return;'
+brk> quit;
+gap> 
+gap> 
+gap> Read("Task20261002Pa.g");

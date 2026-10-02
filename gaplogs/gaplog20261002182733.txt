@@ -1,0 +1,31 @@
+sessionnumb  20261002182733 
+gap> Read("Task20261002Pa.g");
+Error, user interrupt in
+  return RankMatDestructive( MutableCopyMatrix( mat ) ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2417 called from 
+Rank( tvs ) at gapReads/OGLat.g:31 called from
+VssRec( GramL, nrmcandidate ) at gapReads/OGLat.g:114 called from
+BasisRec( GramP ) at AutShByGramP.g:60 called from
+AutShByGramP( tGram, th ) at Task20261002Pa.g:54 called from
+task( newadj ); at Task20261002Pa.g:75 called from
+...  at Task20261002Pa.g:80
+you can 'return;'
+brk> quit;
+gap> Read("Task20261002Pa.g");
+Error, user interrupt in
+  w := w + v[j] * llg.transformation[j][i]; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/zlattice.gi:1298 called from 
+vschr( dam ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/zlattice.gi:1259 called from
+srt( d - 1, k1 ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/zlattice.gi:1282 called from
+srt( d - 1, k1 ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/zlattice.gi:1282 called from
+srt( d - 1, k1 ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/zlattice.gi:1282 called from
+srt( d - 1, k1 ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/zlattice.gi:1282 called from
+...  at Task20261002Pa.g:85
+you can 'return;'
+brk> taskcounter;
+115
+brk> quit;
+gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> Read("Task20261002Pa.g");
