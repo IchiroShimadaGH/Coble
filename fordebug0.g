@@ -1,64 +1,31 @@
-tGram:=[ [ 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 ],
- [ 2, -2, 2, 2, 0, 2, 2, 2, 2, 2, 0, 2 ], 
-  [ 2, 2, -2, 0, 2, 2, 2, 2, 2, 4, 2, 4 ], [ 2, 2, 0, -2, 0, 2, 2, 2, 2, 1, 0, 1 ], 
-  [ 2, 0, 2, 0, -2, 0, 2, 2, 2, 1, 2, 3 ], [ 2, 2, 2, 2, 0, -2, 0, 2, 2, 1, 4, 2 ], 
-  [ 2, 2, 2, 2, 2, 0, -2, 0, 2, 0, 2, 0 ], [ 2, 2, 2, 2, 2, 2, 0, -2, 0, 2, 2, 2 ], 
-  [ 2, 2, 2, 2, 2, 2, 2, 0, -2, 4, 0, 0 ], [ 2, 2, 4, 1, 1, 1, 0, 2, 4, -2, 4, 4 ], 
-  [ 2, 0, 2, 0, 2, 4, 2, 2, 0, 2, -2, 1 ], [ 2, 2, 4, 1, 3, 2, 0, 2, 0, 1, 2, -2 ] ];
+#read("Task20261003Va.g");
+)
 
+tG:=4*IdentityMat(19);
 
+resuts:=[];
 
-  
-  tModLatticeKerRec:=function(bigGram)
-	#
-	local  beep, bigleng, id, hn, rk, basis, basisKer, ii, redGram, T,
-  trec, phi, zzredGram, diff;
-	#
-  beep:=function(beepnumb)
-    localbeep("ModLatticeKerRec", beepnumb); Error();
-  end;
-	#
-	bigleng:=Length(bigGram);
-  rk:=Rank(bigGram);
-  if rk=bigleng then 
-    id:=IdentityMat(bigleng);
-    trec:=rec(
-      redGram:=CopyMat(bigGram), 
-      basis:= id, 
-      basisKer:=[], 
-      phi:=id
-    );
-	  return(trec);
+while true do 
+  ii:=Random([1..19]);
+  jj:=Random([1..19]);
+  if ii=jj then continue; fi;
+  if tG[ii][jj]=0 then 
+    aa:=Random([1,-1]);
+    tG[ii][jj]:=aa;
+    tG[jj][ii]:=aa;
+  else 
+    aa:=tG[ii][jj];
+    tG[ii][jj]:=-aa;
+    tG[jj][ii]:=-aa;
   fi;
-  #
-  diff:=bigleng-rk;
-	hn:=HermiteNormalFormIntegerMatTransform(bigGram);
-	T:=hn.rowtrans;
-	basis:=List([1..rk], ii->T[ii]);
-	basisKer:=List([rk+1..bigleng], ii->T[ii]);
-	redGram:=TMTTmult(basis, bigGram);
-  zzredGram:=MatMatToMat(
-      [[redGram, NullMat(rk, diff)], 
-        [NullMat(diff, rk), NullMat(diff, diff)]]
-      );
-  if TMTTmult(T, bigGram)<>zzredGram then beep(1481472); fi;
-  if CokerTorsion(basis)<>[] then beep(613321); fi;
-  if basisKer=[] then beep(333321); fi;
-  if CokerTorsion(basisKer)<>[] then beep(615221); fi;
-  if not IsZeroMat(basisKer*bigGram) then beep(225221); fi;
-  phi:=SubMatrix(InverseMat(T), [1..bigleng], [1..rk]);
-  if TMTTmult(phi, redGram)<>bigGram then beep(616996); fi;
-  trec:=rec(
-    redGram:=redGram, 
-    basis:= basis,
-    basisKer:=basisKer, 
-    phi:=phi
-  );
-	return(trec);
-end;
-
-
-  tModLatticeKerRec(tGram);
-
-
-  ######
+  sntG:=SmithNormalFormIntegerMat(tG);
+  nzs:=Filtered(List([1..19], ii->sntG[ii][ii], xx-> xx<>1));
+  if Length(nzs)=1 then 
+    tGramS:=DiagonalMats([ [[2]], -tG]);
+    th:=MakeVectei(20, 1);
+    if IsGeom(tGramS, th)=true then 
+      Add(resuts, List(tG)) ;
+    fi;
+  fi;
+   
+od;

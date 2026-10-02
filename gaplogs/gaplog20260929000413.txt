@@ -143,4 +143,97 @@ gap> IsGeom(tGramS, th);
 true
 gap> Read("Task20261002Va.g");
 [ 0, 19 ] [ [ "odd", 18 ], [ "tt", 153 ] ] 
+gap> Read("Task20261003Va.g");
+Syntax warning: Unbound global variable in Task20261003Va.g:22
+  nzs:=Filtered(List([1..19], ii->sntG[ii][ii], xx-> xx<>1));
+                                  ^^^^
+Error, usage: List( <C>[, <func>] ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:647 called from
+List( [ 1 .. 19 ], function ( ii )
+      return sntG[ii][ii];
+  end, function ( xx )
+      return xx <> 1;
+  end ) at Task20261003Va.g:22 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20261003Va.g:34
+type 'quit;' to quit to outer loop
+brk> Filtered([1..19], ii->sntG[ii][ii], xx-> xx<>1);
+Error, Function: number of arguments must be 2 (not 3) in
+  ErrorNoReturn( "usage: List( <C>[, <func>] )" 
+ ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:647 called from 
+List( [ 1 .. 19 ], function ( ii )
+      return sntG[ii][ii];
+  end, function ( xx )
+      return xx <> 1;
+  end ) at Task20261003Va.g:22 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at *errin*:1
+type 'quit;' to quit to outer loop
+brk_2> quit;
+brk> quit;
+gap> Read("Task20261003Va.g");
+[ 0, 19 ] 
+[ 0, 19 ] 
+[ 0, 19 ] 
+[ 0, 19 ] 
+[ 0, 19 ] 
+[ 0, 19 ] 
+[ 0, 19 ] 
+Error, user interrupt in
+  t ^ 2 at gapReads/pDiscriminantForms.txt:200 called from 
+findt( numalpha / 2, pnuii ) at gapReads/pDiscriminantForms.txt:246 called from
+_Normalform_oddpfqf( p, fag, fqf ) at gapReads/pDiscriminantForms.txt:502 called from
+Normalform_pfqf( p, pfag, pfqf ) at gapReads/pDiscriminantForms.txt:545 called from
+Normalform_fqf( fag, fqf ) at gapReads/Genera.txt:488 called from
+new2Genera( targetsignature, discmS.discg, discmS.discf ) at gapReads/Genera.txt:617 called from
+...  at Task20261003Va.g:37
+you can 'return;'
+brk> quit;
+gap> Read("Task20261003Va.g");
+[ 0, 19 ] [ [ "odd", 20 ], [ "tt", 151 ] ] -113796848760 
+[ 0, 19 ] [ [ "odd", 21 ], [ "tt", 150 ] ] -105004813560 
+[ 0, 19 ] [ [ "odd", 23 ], [ "tt", 148 ] ] -87497061720 
+[ 0, 19 ] [ [ "odd", 24 ], [ "tt", 147 ] ] -79449034620 
+[ 0, 19 ] [ [ "odd", 25 ], [ "tt", 146 ] ] -70707535620 
+[ 0, 19 ] [ [ "odd", 25 ], [ "tt", 146 ] ] -68179045380 
+[ 0, 19 ] [ [ "odd", 26 ], [ "tt", 145 ] ] -62233691068 
+[ 0, 19 ] [ [ "odd", 27 ], [ "tt", 144 ] ] -58601897788 
+[ 0, 19 ] [ [ "odd", 27 ], [ "tt", 144 ] ] -61929457468 
+[ 0, 19 ] [ [ "odd", 28 ], [ "tt", 143 ] ] -50642960408 
+[ 0, 19 ] [ [ "odd", 29 ], [ "tt", 142 ] ] -38561984912 
+[ 0, 19 ] [ [ "odd", 30 ], [ "tt", 141 ] ] -32919004408 
+[ 0, 19 ] [ [ "odd", 31 ], [ "tt", 140 ] ] -31869984292 
+[ 0, 19 ] [ [ "odd", 32 ], [ "tt", 139 ] ] -31515998264 
+[ 0, 19 ] [ [ "odd", 33 ], [ "tt", 138 ] ] -27672478232 
+[ 0, 19 ] [ [ "odd", 34 ], [ "tt", 137 ] ] -15686643056 
+[ 0, 19 ] [ [ "odd", 35 ], [ "tt", 136 ] ] -11222650736 
+[ 0, 19 ] [ [ "odd", 36 ], [ "tt", 135 ] ] -9556100552 
+[ 0, 19 ] [ [ "odd", 37 ], [ "tt", 134 ] ] -5435159976 
+[ 0, 19 ] [ [ "odd", 39 ], [ "tt", 132 ] ] -2703401112 
+[ 0, 19 ] [ [ "odd", 40 ], [ "tt", 131 ] ] -1604884580 
+[ 0, 19 ] [ [ "odd", 40 ], [ "tt", 131 ] ] -1604884580 
+[ 0, 19 ] [ [ "odd", 40 ], [ "tt", 131 ] ] -3614415716 
+[ 0, 19 ] [ [ "odd", 42 ], [ "tt", 129 ] ] -6441377904 
+[ 0, 19 ] [ [ "odd", 50 ], [ "tt", 121 ] ] -2846292840 
+[ 0, 19 ] [ [ "odd", 51 ], [ "tt", 120 ] ] -2706943168 
+[ 0, 19 ] [ [ "odd", 52 ], [ "tt", 119 ] ] -2693023608 
+[ 0, 19 ] [ [ "odd", 54 ], [ "tt", 117 ] ] -1578291640 
+[ 0, 19 ] [ [ "odd", 55 ], [ "tt", 116 ] ] -979079892 
+[ 0, 26 ] [ [ "odd", 126 ], [ "tt", 178 ], [ "zf", 21 ] ] -147915708 
+[ 0, 19 ] [ [ "odd", 58 ], [ "tt", 113 ] ] -297829644 
+[ 0, 34 ] [ [ "odd", 249 ], [ "tt", 264 ], [ "zf", 48 ] ] -36144596 
+Error, user interrupt in
+  g := h; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matint.gi:92 called from 
+MATINTmgcdex( AbsInt( A[r, c1] ), A[r + 1, c1], A{[ r + 2 .. n ]}[c1] 
+ ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matint.gi:409 called from
+DoNFIM( mat, 1 ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matint.gi:678 called from
+SmithNormalFormIntegerMat( tG ) at Task20261003Va.g:23 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20261003Va.g:38
+you can 'return;'
+brk> quit;
 gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> Read("Task20261003Va.g");
