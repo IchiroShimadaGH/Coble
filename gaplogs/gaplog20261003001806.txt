@@ -1,0 +1,67 @@
+sessionnumb  20261003001806 
+gap> Read("Task20261003Va.g");
+Error, Variable: 'IsGeom' must have an assigned value in
+  if IsGeom( tGramS, th ) = true then
+    sprats := GetSpRats( tGramS, th );
+    Printn( sprats.nopss, SpconsIntTypes( tGramS, sprats.scons ), 
+     DeterminantIntMat( tGramS ) );
+    Add( results2, [ tGramS, th, sprats, List( tG ) ] );
+    savedata( results2 );
+fi; at Task20261003Va.g:36 called from 
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20261003Va.g:39
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20261003Va.g");
+[ 0, 19 ] [ [ "odd", 22 ], [ "tt", 149 ] ] -103877565176 
+[ 0, 19 ] [ [ "odd", 23 ], [ "tt", 148 ] ] -99162694136 
+[ 0, 19 ] [ [ "odd", 24 ], [ "tt", 147 ] ] -91102494952 
+[ 0, 19 ] [ [ "odd", 25 ], [ "tt", 146 ] ] -83701445152 
+[ 0, 19 ] [ [ "odd", 26 ], [ "tt", 145 ] ] -75629162328 
+[ 0, 19 ] [ [ "odd", 27 ], [ "tt", 144 ] ] -70789279192 
+[ 0, 19 ] [ [ "odd", 27 ], [ "tt", 144 ] ] -60295000792 
+[ 0, 19 ] [ [ "odd", 28 ], [ "tt", 143 ] ] -53812612516 
+[ 0, 19 ] [ [ "odd", 29 ], [ "tt", 142 ] ] -46766248996 
+[ 0, 19 ] [ [ "odd", 30 ], [ "tt", 141 ] ] -43022962996 
+[ 0, 19 ] [ [ "odd", 31 ], [ "tt", 140 ] ] -32958130284 
+[ 0, 19 ] [ [ "odd", 31 ], [ "tt", 140 ] ] -37076488572 
+[ 0, 19 ] [ [ "odd", 32 ], [ "tt", 139 ] ] -32047457252 
+[ 0, 19 ] [ [ "odd", 33 ], [ "tt", 138 ] ] -29612879732 
+[ 0, 19 ] [ [ "odd", 34 ], [ "tt", 137 ] ] -22798322528 
+[ 0, 19 ] [ [ "odd", 35 ], [ "tt", 136 ] ] -11924277240 
+[ 0, 19 ] [ [ "odd", 37 ], [ "tt", 134 ] ] -14367215940 
+[ 0, 19 ] [ [ "odd", 38 ], [ "tt", 133 ] ] -7443684900 
+[ 0, 19 ] [ [ "odd", 39 ], [ "tt", 132 ] ] -6800199880 
+[ 0, 19 ] [ [ "odd", 40 ], [ "tt", 131 ] ] -7136231228 
+[ 0, 19 ] [ [ "odd", 41 ], [ "tt", 130 ] ] -6224525256 
+[ 0, 19 ] [ [ "odd", 42 ], [ "tt", 129 ] ] -4154604140 
+[ 0, 19 ] [ [ "odd", 43 ], [ "tt", 128 ] ] -4667541236 
+[ 0, 19 ] [ [ "odd", 45 ], [ "tt", 126 ] ] -3042781068 
+[ 0, 22 ] [ [ "odd", 84 ], [ "tt", 147 ] ] -27431292 
+Error, user interrupt in
+  tnum := TNUM_OBJ( C ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:1639 called from 
+ForAny( m2, function ( r )
+      return not IsPlistRep( r );
+  end ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3636 called from
+T * M * TransposedMat( T ) at gapReads/LinearAlgebra.txt:252 called from
+TMTTmult( orthoB, sQ ) at gapReads/LatticeTools.txt:41 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+...  at Task20261003Va.g:39
+you can 'return;'
+brk> quit;
+gap> Read("Task20261003Vc.g");
+[ 0, 19 ] [ [ "odd", 38 ], [ "tt", 133 ] ] -19392368784 50 50 
+[ 0, 19 ] [ [ "odd", 39 ], [ "tt", 132 ] ] -17147563536 51 1 
+[ 0, 19 ] [ [ "odd", 39 ], [ "tt", 132 ] ] -5160231056 52 1 
+[ 0, 20 ] [ [ "odd", 51 ], [ "tt", 139 ] ] -1339329944 53 1 
+[ 0, 20 ] [ [ "odd", 53 ], [ "tt", 137 ] ] -645220728 54 1 
+[ 0, 20 ] [ [ "odd", 54 ], [ "tt", 136 ] ] -672276672 55 1 
+[ 0, 20 ] [ [ "odd", 54 ], [ "tt", 136 ] ] -758433348 56 1 
+[ 0, 20 ] [ [ "odd", 54 ], [ "tt", 136 ] ] -630635060 57 1 
+[ 0, 29 ] [ [ "odd", 149 ], [ "tt", 233 ], [ "zf", 24 ] ] -68688660 62 5 
+reset 10062 
+[ 0, 19 ] [ [ "odd", 25 ], [ "tt", 146 ] ] -76182475312 10089 27 
+[ 0, 19 ] [ [ "odd", 26 ], [ "tt", 145 ] ] -70578571160 10090 1 
+[ 0, 19 ] [ [ "odd", 27 ], [ "tt", 144 ] ] -67960505772 10091 1 
+[ 0, 19 ] [ [ "odd", 28 ], [ "tt", 143 ] ] -61505318364 10092 1 

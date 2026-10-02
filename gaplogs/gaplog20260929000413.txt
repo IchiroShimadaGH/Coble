@@ -237,3 +237,129 @@ gap>
 gap> 
 gap> 
 gap> Read("Task20261003Va.g");
+Error, user interrupt in
+  t ^ 2 at gapReads/pDiscriminantForms.txt:200 called from 
+findt( numalpha / 2, pnuii ) at gapReads/pDiscriminantForms.txt:246 called from
+_Normalform_oddpfqf( p, fag, fqf ) at gapReads/pDiscriminantForms.txt:502 called from
+Normalform_pfqf( p, pfag, pfqf ) at gapReads/pDiscriminantForms.txt:545 called from
+Normalform_fqf( fag, fqf ) at gapReads/Genera.txt:488 called from
+new2Genera( targetsignature, discmS.discg, discmS.discf ) at gapReads/Genera.txt:617 called from
+...  at Task20261003Va.g:39
+you can 'return;'
+brk> quit;
+gap> 
+gap> 
+gap> 
+gap> 
+gap> Read("Task20261003Va.g");
+[ 0, 19 ] [ [ "odd", 35 ], [ "tt", 136 ] ] -22070262648 
+[ 0, 19 ] [ [ "odd", 37 ], [ "tt", 134 ] ] -17631086584 
+[ 0, 19 ] [ [ "odd", 38 ], [ "tt", 133 ] ] -16304345840 
+[ 0, 19 ] [ [ "odd", 38 ], [ "tt", 133 ] ] -15918979568 
+[ 0, 19 ] [ [ "odd", 39 ], [ "tt", 132 ] ] -12758139888 
+[ 0, 19 ] [ [ "odd", 40 ], [ "tt", 131 ] ] -11330803168 
+[ 0, 19 ] [ [ "odd", 41 ], [ "tt", 130 ] ] -5741425088 
+[ 0, 19 ] [ [ "odd", 42 ], [ "tt", 129 ] ] -4427828992 
+[ 0, 19 ] [ [ "odd", 42 ], [ "tt", 129 ] ] -4292287496 
+[ 0, 19 ] [ [ "odd", 43 ], [ "tt", 128 ] ] -3874699496 
+[ 0, 19 ] [ [ "odd", 44 ], [ "tt", 127 ] ] -3164750680 
+[ 0, 20 ] [ [ "odd", 55 ], [ "tt", 135 ] ] -270768116 
+[ 0, 19 ] [ [ "odd", 46 ], [ "tt", 125 ] ] -562680056 
+[ 0, 19 ] [ [ "odd", 51 ], [ "tt", 120 ] ] -2231846452 
+[ 0, 19 ] [ [ "odd", 54 ], [ "tt", 117 ] ] -828526288 
+[ 0, 19 ] [ [ "odd", 55 ], [ "tt", 116 ] ] -648239928 
+[ 0, 19 ] [ [ "odd", 55 ], [ "tt", 116 ] ] -365324992 
+[ 0, 19 ] [ [ "odd", 56 ], [ "tt", 115 ] ] -483868592 
+[ 0, 19 ] [ [ "odd", 57 ], [ "tt", 114 ] ] -546228820 
+Error, user interrupt in
+  return Length( mat[1] ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:1344 called from 
+NrCols( mat ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2558 called from
+DoSemiEchelonMatTransformationDestructive( DefaultFieldOfMatrix( mat ), mat 
+ ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2621 called from
+SemiEchelonMatTransformationDestructive( copymat 
+ ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2534 called from
+SemiEchelonMatTransformation( mat 
+ ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2201 called from
+NullspaceMat( TransposedMat( [ v * sQ ] ) ) at gapReads/LatticeTools.txt:40 called from
+...  at Task20261003Va.g:39
+you can 'return;'
+brk> quit;
+gap> Read("Task20261003Vb.g");
+[ 0, 19 ] [ [ "odd", 24 ], [ "tt", 147 ] ] -80545125360 24 24 
+[ 0, 19 ] [ [ "odd", 24 ], [ "tt", 147 ] ] -90857737712 25 1 
+[ 0, 19 ] [ [ "odd", 25 ], [ "tt", 146 ] ] -81721289328 26 1 
+[ 0, 19 ] [ [ "odd", 27 ], [ "tt", 144 ] ] -70888730224 28 2 
+Error, user interrupt in
+  t ^ 2 at gapReads/pDiscriminantForms.txt:200 called from 
+findt( numalpha / 2, pnuii ) at gapReads/pDiscriminantForms.txt:246 called from
+_Normalform_oddpfqf( p, fag, fqf ) at gapReads/pDiscriminantForms.txt:502 called from
+Normalform_pfqf( p, pfag, pfqf ) at gapReads/pDiscriminantForms.txt:545 called from
+Normalform_fqf( fag, fqf ) at gapReads/Genera.txt:488 called from
+new2Genera( targetsignature, discmS.discg, discmS.discf ) at gapReads/Genera.txt:617 called from
+...  at Task20261003Vb.g:44
+you can 'return;'
+brk> fcc;
+12
+brk> tcc;
+40
+brk> quit;
+gap>   if fcc=10000 then 
+> ;
+> quit;
+Syntax error: 'quit;' cannot be used in this context
+quit;
+^^^^
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 1;
+Syntax error: while parsing an 'if' statement: statement or 'fi' expected
+1;
+^
+gap> 
+gap> 
+gap> 
+gap> 
+gap> Read("Task20261003Vb.g");
+Error, user interrupt in
+  return not IsPlistRep( r ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3636 called from 
+func( elm ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:1643 called from
+ForAny( m2, function ( r )
+      return not IsPlistRep( r );
+  end ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3636 called from
+T * M * TransposedMat( T ) at gapReads/LinearAlgebra.txt:252 called from
+TMTTmult( orthoB, sQ ) at gapReads/LatticeTools.txt:41 called from
+signaturejob( dim, Q ); at gapReads/LatticeTools.txt:48 called from
+...  at Task20261003Vb.g:41
+you can 'return;'
+brk> tcc;
+22256
+brk> fcc;
+22256
+brk> quit;
+gap> Read("Task20261003Vb.g");
+[ 0, 36 ] [ [ "odd", 116 ], [ "tt", 403 ], [ "zf", 111 ] ] -1865147056 37 37 
+[ 0, 37 ] [ [ "odd", 119 ], [ "tt", 433 ], [ "zf", 114 ] ] -1079888880 38 1 
+reset 10038 
+reset 20038 
+reset 30038 
+reset 40038 
+[ 0, 33 ] [ [ "odd", 144 ], [ "tt", 324 ], [ "zf", 60 ] ] -1377677144 40075 37 
+reset 50075 
+reset 60075 
+reset 70075 
+[ 0, 26 ] [ [ "odd", 74 ], [ "tt", 230 ], [ "zf", 21 ] ] -4796349544 70108 33 
+[ 0, 26 ] [ [ "odd", 74 ], [ "tt", 230 ], [ "zf", 21 ] ] -3353948008 70109 1 
+[ 0, 25 ] [ [ "odd", 69 ], [ "tt", 213 ], [ "zf", 18 ] ] -4457957152 70110 1 
+[ 0, 25 ] [ [ "odd", 69 ], [ "tt", 213 ], [ "zf", 18 ] ] -4683104544 70111 1 
+[ 0, 30 ] [ [ "odd", 133 ], [ "tt", 263 ], [ "zf", 39 ] ] -311052768 70112 1 
+reset 80112 
+[ 0, 27 ] [ [ "odd", 70 ], [ "tt", 245 ], [ "zf", 36 ] ] -4643368620 80144 32 
+[ 0, 27 ] [ [ "odd", 72 ], [ "tt", 243 ], [ "zf", 36 ] ] -3138032636 80146 2 
+reset 90146 
+reset 100146 
