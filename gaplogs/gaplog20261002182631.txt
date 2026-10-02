@@ -27,3 +27,7 @@ simpleextend( psol ); at gapReads/OGLat.g:318 called from
 you can 'return;'
 brk> quit;
 gap> Read("Task20261002Pa.g");
+17 18 [ 0, 184 ] 1 : 24 : 15153 
+17 18 [ 0, 207 ] 1 : 4 : 19737 
+17 18 [ 0, 240 ] 1 : 2 : 20062 
+17 18 [ 0, 724 ] 1 : 2 : 24883 

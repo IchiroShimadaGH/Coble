@@ -34,3 +34,15 @@ gap>
 gap> 
 gap> 
 gap> Read("Task20261002Pa.g");
+17 18 [ 0, 194 ] 1 : 4 : 33177 
+17 18 [ 0, 257 ] 1 : 4 : 60157 
+Error, user interrupt in
+  x := row[nzheads[j]]; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2454 called from 
+SemiEchelonMatDestructive( mat ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2407 called from
+RankMatDestructive( MutableCopyMatrix( mat ) ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2417 called from
+Rank( tGram ) at Task20261002Pa.g:19 called from
+NewIsGeom( tGram, th ) at Task20261002Pa.g:54 called from
+task( newadj ); at Task20261002Pa.g:80 called from
+...  at Task20261002Pa.g:85
+you can 'return;'
+brk> 
