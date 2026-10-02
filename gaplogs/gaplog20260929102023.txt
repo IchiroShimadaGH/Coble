@@ -6434,3 +6434,8 @@ Syntax warning: Unbound global variable in AutShByGramP.g:48
                  ^^^
 gap> Read("AutShByGramP.g");
 gap> 
+gap> 
+gap> 
+gap> 
+gap> 
+gap> quit;

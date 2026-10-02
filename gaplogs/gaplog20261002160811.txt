@@ -1,0 +1,4969 @@
+sessionnumb  20261002160811 
+gap> Read("Task20261002Ua.g");
+Error, Variable: 'FoundShRecsOverLats' must have an assigned value in
+  for trec in FoundShRecsOverLats do
+    counter := counter + 1;
+    if trec.rho <> Length( trec.Gram ) then
+        Error( "Inconsistent rho" );
+    fi;
+    if trec.rho > 7 then
+        continue;
+    fi;
+    if trec.Trec.count <> 1 then
+        Error( "Expected a unique T" );
+    fi;
+    if trec.sprats.scons = [  ] or RankMat( Concatenation( trec.sprats.scons ) ) < trec.rho then
+        continue;
+    fi;
+    IsNewPic( trec );
+    Printn( "____", counter, "in", Length( FoundShRecsOverLats ) );
+od; at Task20261002Ua.g:32 called from 
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20261002Ua.g:32
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20261002Ua.g");
+newrec 1 
+____ 1 in 7556 
+newrec 2 
+____ 2 in 7556 
+newrec 3 
+____ 3 in 7556 
+newrec 4 
+special newrec 1 
+____ 4 in 7556 
+newrec 5 
+____ 5 in 7556 
+newrec 6 
+____ 6 in 7556 
+newrec 7 
+____ 7 in 7556 
+newrec 8 
+____ 8 in 7556 
+newrec 9 
+____ 9 in 7556 
+newrec 10 
+____ 10 in 7556 
+newrec 11 
+special newrec 2 
+____ 12 in 7556 
+newrec 12 
+____ 13 in 7556 
+newrec 13 
+special newrec 3 
+____ 14 in 7556 
+newrec 14 
+____ 15 in 7556 
+newrec 15 
+____ 16 in 7556 
+newrec 16 
+special newrec 4 
+____ 17 in 7556 
+newrec 17 
+special newrec 5 
+____ 18 in 7556 
+newrec 18 
+special newrec 6 
+____ 19 in 7556 
+newrec 19 
+special newrec 7 
+____ 20 in 7556 
+newrec 20 
+special newrec 8 
+____ 21 in 7556 
+newrec 21 
+special newrec 9 
+____ 22 in 7556 
+newrec 22 
+____ 23 in 7556 
+____ 24 in 7556 
+newrec 23 
+special newrec 10 
+____ 25 in 7556 
+newrec 24 
+special newrec 11 
+____ 27 in 7556 
+newrec 25 
+special newrec 12 
+____ 29 in 7556 
+newrec 26 
+special newrec 13 
+____ 30 in 7556 
+newrec 27 
+____ 31 in 7556 
+newrec 28 
+____ 32 in 7556 
+newrec 29 
+____ 33 in 7556 
+newrec 30 
+____ 34 in 7556 
+newrec 31 
+____ 35 in 7556 
+newrec 32 
+____ 36 in 7556 
+newrec 33 
+____ 37 in 7556 
+newrec 34 
+____ 38 in 7556 
+newrec 35 
+____ 39 in 7556 
+newrec 36 
+special newrec 14 
+____ 41 in 7556 
+newrec 37 
+____ 42 in 7556 
+newrec 38 
+____ 43 in 7556 
+newrec 39 
+special newrec 15 
+____ 44 in 7556 
+newrec 40 
+special newrec 16 
+____ 45 in 7556 
+newrec 41 
+____ 46 in 7556 
+newrec 42 
+____ 47 in 7556 
+newrec 43 
+special newrec 17 
+____ 48 in 7556 
+newrec 44 
+special newrec 18 
+____ 49 in 7556 
+newrec 45 
+special newrec 19 
+____ 50 in 7556 
+newrec 46 
+special newrec 20 
+____ 52 in 7556 
+newrec 47 
+special newrec 21 
+____ 53 in 7556 
+newrec 48 
+____ 55 in 7556 
+newrec 49 
+____ 56 in 7556 
+newrec 50 
+____ 57 in 7556 
+newrec 51 
+special newrec 22 
+____ 58 in 7556 
+newrec 52 
+____ 60 in 7556 
+newrec 53 
+special newrec 23 
+____ 61 in 7556 
+newrec 54 
+____ 62 in 7556 
+newrec 55 
+____ 63 in 7556 
+newrec 56 
+____ 64 in 7556 
+newrec 57 
+____ 66 in 7556 
+Error, user interrupt in
+  res[i] := func( C[i] ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from 
+List( newpiis, function ( kk )
+      return tv[kk];
+  end ) at gapReads/AutDiscfByStabilizerChain.g:57 called from
+task( newpiis, leng + 1 ) at gapReads/AutDiscfByStabilizerChain.g:58 called from
+task( newpiis, leng + 1 ) at gapReads/AutDiscfByStabilizerChain.g:58 called from
+task( newpiis, leng + 1 ) at gapReads/AutDiscfByStabilizerChain.g:58 called from
+task( newpiis, leng + 1 ) at gapReads/AutDiscfByStabilizerChain.g:58 called from
+...  at Task20261002Ua.g:32
+you can 'return;'
+brk> quit;
+gap> Read("Task20261002Ua.g");
+newrec 1 
+____ 1 in 7556 
+newrec 2 
+____ 2 in 7556 
+newrec 3 
+____ 3 in 7556 
+newrec 4 
+____ 4 in 7556 
+newrec 5 
+____ 5 in 7556 
+newrec 6 
+____ 6 in 7556 
+newrec 7 
+____ 7 in 7556 
+newrec 8 
+____ 8 in 7556 
+newrec 9 
+____ 9 in 7556 
+newrec 10 
+____ 10 in 7556 
+newrec 11 
+____ 12 in 7556 
+newrec 12 
+____ 13 in 7556 
+newrec 13 
+____ 14 in 7556 
+newrec 14 
+____ 15 in 7556 
+newrec 15 
+____ 16 in 7556 
+newrec 16 
+____ 17 in 7556 
+newrec 17 
+____ 18 in 7556 
+newrec 18 
+____ 19 in 7556 
+newrec 19 
+____ 20 in 7556 
+newrec 20 
+____ 21 in 7556 
+newrec 21 
+____ 22 in 7556 
+newrec 22 
+____ 23 in 7556 
+____ 24 in 7556 
+newrec 23 
+____ 25 in 7556 
+newrec 24 
+____ 27 in 7556 
+newrec 25 
+____ 29 in 7556 
+newrec 26 
+____ 30 in 7556 
+newrec 27 
+____ 31 in 7556 
+newrec 28 
+____ 32 in 7556 
+newrec 29 
+____ 33 in 7556 
+newrec 30 
+____ 34 in 7556 
+newrec 31 
+____ 35 in 7556 
+newrec 32 
+____ 36 in 7556 
+newrec 33 
+____ 37 in 7556 
+newrec 34 
+____ 38 in 7556 
+newrec 35 
+____ 39 in 7556 
+newrec 36 
+____ 41 in 7556 
+newrec 37 
+____ 42 in 7556 
+newrec 38 
+____ 43 in 7556 
+newrec 39 
+____ 44 in 7556 
+newrec 40 
+____ 45 in 7556 
+newrec 41 
+____ 46 in 7556 
+newrec 42 
+____ 47 in 7556 
+newrec 43 
+____ 48 in 7556 
+newrec 44 
+____ 49 in 7556 
+newrec 45 
+____ 50 in 7556 
+newrec 46 
+____ 52 in 7556 
+newrec 47 
+____ 53 in 7556 
+newrec 48 
+____ 55 in 7556 
+newrec 49 
+____ 56 in 7556 
+newrec 50 
+____ 57 in 7556 
+newrec 51 
+____ 58 in 7556 
+newrec 52 
+____ 60 in 7556 
+newrec 53 
+____ 61 in 7556 
+newrec 54 
+____ 62 in 7556 
+newrec 55 
+____ 63 in 7556 
+newrec 56 
+____ 64 in 7556 
+newrec 57 
+____ 66 in 7556 
+newrec 58 
+____ 67 in 7556 
+newrec 59 
+____ 68 in 7556 
+newrec 60 
+____ 69 in 7556 
+newrec 61 
+____ 70 in 7556 
+newrec 62 
+____ 71 in 7556 
+newrec 63 
+____ 72 in 7556 
+newrec 64 
+____ 73 in 7556 
+newrec 65 
+____ 74 in 7556 
+newrec 66 
+____ 75 in 7556 
+newrec 67 
+____ 76 in 7556 
+newrec 68 
+____ 77 in 7556 
+newrec 69 
+____ 78 in 7556 
+newrec 70 
+____ 79 in 7556 
+newrec 71 
+____ 80 in 7556 
+____ 81 in 7556 
+newrec 72 
+____ 82 in 7556 
+____ 83 in 7556 
+newrec 73 
+____ 84 in 7556 
+newrec 74 
+____ 85 in 7556 
+____ 86 in 7556 
+newrec 75 
+____ 87 in 7556 
+newrec 76 
+____ 88 in 7556 
+newrec 77 
+____ 90 in 7556 
+newrec 78 
+____ 92 in 7556 
+newrec 79 
+____ 93 in 7556 
+newrec 80 
+____ 94 in 7556 
+newrec 81 
+____ 95 in 7556 
+newrec 82 
+____ 96 in 7556 
+newrec 83 
+____ 97 in 7556 
+newrec 84 
+____ 98 in 7556 
+newrec 85 
+____ 99 in 7556 
+newrec 86 
+____ 100 in 7556 
+newrec 87 
+____ 101 in 7556 
+newrec 88 
+____ 102 in 7556 
+newrec 89 
+____ 104 in 7556 
+newrec 90 
+____ 106 in 7556 
+newrec 91 
+____ 107 in 7556 
+newrec 92 
+____ 108 in 7556 
+newrec 93 
+____ 109 in 7556 
+newrec 94 
+____ 110 in 7556 
+newrec 95 
+____ 111 in 7556 
+newrec 96 
+____ 112 in 7556 
+newrec 97 
+____ 113 in 7556 
+newrec 98 
+____ 114 in 7556 
+newrec 99 
+____ 115 in 7556 
+newrec 100 
+____ 116 in 7556 
+newrec 101 
+____ 117 in 7556 
+newrec 102 
+____ 118 in 7556 
+newrec 103 
+____ 119 in 7556 
+newrec 104 
+____ 120 in 7556 
+____ 121 in 7556 
+newrec 105 
+____ 122 in 7556 
+newrec 106 
+____ 124 in 7556 
+newrec 107 
+____ 125 in 7556 
+newrec 108 
+____ 126 in 7556 
+newrec 109 
+____ 127 in 7556 
+newrec 110 
+____ 128 in 7556 
+newrec 111 
+____ 129 in 7556 
+newrec 112 
+____ 130 in 7556 
+newrec 113 
+____ 131 in 7556 
+newrec 114 
+____ 132 in 7556 
+newrec 115 
+____ 133 in 7556 
+newrec 116 
+____ 134 in 7556 
+newrec 117 
+____ 135 in 7556 
+newrec 118 
+____ 136 in 7556 
+newrec 119 
+____ 137 in 7556 
+newrec 120 
+____ 138 in 7556 
+newrec 121 
+____ 139 in 7556 
+____ 140 in 7556 
+newrec 122 
+____ 141 in 7556 
+newrec 123 
+____ 142 in 7556 
+newrec 124 
+____ 143 in 7556 
+newrec 125 
+____ 144 in 7556 
+newrec 126 
+____ 146 in 7556 
+newrec 127 
+____ 148 in 7556 
+newrec 128 
+____ 151 in 7556 
+newrec 129 
+____ 152 in 7556 
+newrec 130 
+____ 153 in 7556 
+newrec 131 
+____ 154 in 7556 
+newrec 132 
+____ 155 in 7556 
+newrec 133 
+____ 156 in 7556 
+newrec 134 
+____ 157 in 7556 
+newrec 135 
+____ 158 in 7556 
+newrec 136 
+____ 159 in 7556 
+newrec 137 
+____ 160 in 7556 
+newrec 138 
+____ 161 in 7556 
+newrec 139 
+____ 162 in 7556 
+newrec 140 
+____ 163 in 7556 
+newrec 141 
+____ 164 in 7556 
+newrec 142 
+____ 165 in 7556 
+newrec 143 
+____ 166 in 7556 
+newrec 144 
+____ 167 in 7556 
+newrec 145 
+____ 168 in 7556 
+newrec 146 
+____ 169 in 7556 
+newrec 147 
+____ 170 in 7556 
+newrec 148 
+____ 171 in 7556 
+newrec 149 
+____ 172 in 7556 
+newrec 150 
+____ 173 in 7556 
+newrec 151 
+____ 174 in 7556 
+newrec 152 
+____ 175 in 7556 
+newrec 153 
+____ 176 in 7556 
+newrec 154 
+____ 177 in 7556 
+newrec 155 
+____ 178 in 7556 
+newrec 156 
+____ 179 in 7556 
+newrec 157 
+____ 180 in 7556 
+newrec 158 
+____ 182 in 7556 
+newrec 159 
+____ 183 in 7556 
+____ 185 in 7556 
+newrec 160 
+____ 186 in 7556 
+newrec 161 
+____ 187 in 7556 
+____ 188 in 7556 
+newrec 162 
+____ 189 in 7556 
+newrec 163 
+____ 192 in 7556 
+newrec 164 
+____ 193 in 7556 
+newrec 165 
+____ 194 in 7556 
+newrec 166 
+____ 195 in 7556 
+newrec 167 
+____ 196 in 7556 
+newrec 168 
+____ 197 in 7556 
+newrec 169 
+____ 198 in 7556 
+newrec 170 
+____ 199 in 7556 
+newrec 171 
+____ 200 in 7556 
+newrec 172 
+____ 201 in 7556 
+newrec 173 
+____ 202 in 7556 
+newrec 174 
+____ 203 in 7556 
+newrec 175 
+____ 204 in 7556 
+newrec 176 
+____ 206 in 7556 
+newrec 177 
+____ 207 in 7556 
+newrec 178 
+____ 208 in 7556 
+newrec 179 
+____ 209 in 7556 
+newrec 180 
+____ 210 in 7556 
+newrec 181 
+____ 211 in 7556 
+newrec 182 
+____ 213 in 7556 
+newrec 183 
+____ 214 in 7556 
+newrec 184 
+____ 215 in 7556 
+newrec 185 
+____ 216 in 7556 
+newrec 186 
+____ 217 in 7556 
+newrec 187 
+____ 218 in 7556 
+newrec 188 
+____ 219 in 7556 
+newrec 189 
+____ 221 in 7556 
+newrec 190 
+____ 222 in 7556 
+newrec 191 
+____ 223 in 7556 
+newrec 192 
+____ 225 in 7556 
+newrec 193 
+____ 228 in 7556 
+newrec 194 
+____ 229 in 7556 
+newrec 195 
+____ 230 in 7556 
+newrec 196 
+____ 231 in 7556 
+newrec 197 
+____ 232 in 7556 
+newrec 198 
+____ 233 in 7556 
+newrec 199 
+____ 235 in 7556 
+newrec 200 
+____ 237 in 7556 
+newrec 201 
+____ 238 in 7556 
+newrec 202 
+____ 239 in 7556 
+newrec 203 
+____ 240 in 7556 
+newrec 204 
+____ 241 in 7556 
+newrec 205 
+____ 242 in 7556 
+newrec 206 
+____ 244 in 7556 
+newrec 207 
+____ 245 in 7556 
+newrec 208 
+____ 247 in 7556 
+newrec 209 
+____ 248 in 7556 
+newrec 210 
+____ 249 in 7556 
+newrec 211 
+____ 251 in 7556 
+newrec 212 
+____ 253 in 7556 
+newrec 213 
+____ 254 in 7556 
+newrec 214 
+____ 256 in 7556 
+newrec 215 
+____ 258 in 7556 
+newrec 216 
+____ 259 in 7556 
+newrec 217 
+____ 260 in 7556 
+newrec 218 
+____ 261 in 7556 
+newrec 219 
+____ 262 in 7556 
+newrec 220 
+____ 264 in 7556 
+newrec 221 
+____ 266 in 7556 
+newrec 222 
+____ 268 in 7556 
+newrec 223 
+____ 269 in 7556 
+newrec 224 
+____ 270 in 7556 
+newrec 225 
+____ 271 in 7556 
+newrec 226 
+____ 273 in 7556 
+newrec 227 
+____ 275 in 7556 
+newrec 228 
+____ 277 in 7556 
+newrec 229 
+____ 278 in 7556 
+newrec 230 
+____ 280 in 7556 
+newrec 231 
+____ 281 in 7556 
+newrec 232 
+____ 282 in 7556 
+newrec 233 
+____ 283 in 7556 
+newrec 234 
+____ 284 in 7556 
+newrec 235 
+____ 286 in 7556 
+newrec 236 
+____ 287 in 7556 
+newrec 237 
+____ 288 in 7556 
+newrec 238 
+____ 291 in 7556 
+newrec 239 
+____ 293 in 7556 
+newrec 240 
+____ 295 in 7556 
+newrec 241 
+____ 297 in 7556 
+newrec 242 
+____ 298 in 7556 
+newrec 243 
+____ 299 in 7556 
+newrec 244 
+____ 300 in 7556 
+newrec 245 
+____ 301 in 7556 
+newrec 246 
+____ 302 in 7556 
+newrec 247 
+____ 304 in 7556 
+newrec 248 
+____ 306 in 7556 
+newrec 249 
+____ 307 in 7556 
+newrec 250 
+____ 308 in 7556 
+newrec 251 
+____ 309 in 7556 
+newrec 252 
+____ 310 in 7556 
+newrec 253 
+____ 312 in 7556 
+newrec 254 
+____ 313 in 7556 
+newrec 255 
+____ 314 in 7556 
+newrec 256 
+____ 315 in 7556 
+newrec 257 
+____ 316 in 7556 
+newrec 258 
+____ 317 in 7556 
+newrec 259 
+____ 318 in 7556 
+newrec 260 
+____ 319 in 7556 
+newrec 261 
+____ 320 in 7556 
+newrec 262 
+____ 321 in 7556 
+newrec 263 
+____ 322 in 7556 
+newrec 264 
+____ 323 in 7556 
+newrec 265 
+____ 324 in 7556 
+newrec 266 
+____ 325 in 7556 
+newrec 267 
+____ 326 in 7556 
+newrec 268 
+____ 328 in 7556 
+newrec 269 
+____ 330 in 7556 
+newrec 270 
+____ 331 in 7556 
+____ 332 in 7556 
+newrec 271 
+____ 333 in 7556 
+newrec 272 
+____ 334 in 7556 
+newrec 273 
+____ 335 in 7556 
+newrec 274 
+____ 337 in 7556 
+newrec 275 
+____ 338 in 7556 
+newrec 276 
+____ 339 in 7556 
+newrec 277 
+____ 340 in 7556 
+newrec 278 
+____ 341 in 7556 
+newrec 279 
+____ 342 in 7556 
+newrec 280 
+____ 343 in 7556 
+newrec 281 
+____ 344 in 7556 
+newrec 282 
+____ 345 in 7556 
+newrec 283 
+____ 347 in 7556 
+newrec 284 
+____ 348 in 7556 
+newrec 285 
+____ 350 in 7556 
+newrec 286 
+____ 351 in 7556 
+newrec 287 
+____ 353 in 7556 
+newrec 288 
+____ 355 in 7556 
+newrec 289 
+____ 356 in 7556 
+newrec 290 
+____ 357 in 7556 
+newrec 291 
+____ 358 in 7556 
+newrec 292 
+____ 359 in 7556 
+newrec 293 
+____ 360 in 7556 
+newrec 294 
+____ 361 in 7556 
+newrec 295 
+____ 362 in 7556 
+newrec 296 
+____ 364 in 7556 
+newrec 297 
+____ 365 in 7556 
+newrec 298 
+____ 367 in 7556 
+newrec 299 
+____ 368 in 7556 
+newrec 300 
+____ 369 in 7556 
+newrec 301 
+____ 370 in 7556 
+newrec 302 
+____ 371 in 7556 
+newrec 303 
+____ 373 in 7556 
+newrec 304 
+____ 374 in 7556 
+newrec 305 
+____ 375 in 7556 
+newrec 306 
+____ 376 in 7556 
+newrec 307 
+____ 377 in 7556 
+newrec 308 
+____ 378 in 7556 
+newrec 309 
+____ 380 in 7556 
+newrec 310 
+____ 381 in 7556 
+newrec 311 
+____ 382 in 7556 
+newrec 312 
+____ 383 in 7556 
+newrec 313 
+____ 384 in 7556 
+newrec 314 
+____ 385 in 7556 
+newrec 315 
+____ 386 in 7556 
+newrec 316 
+____ 388 in 7556 
+newrec 317 
+____ 389 in 7556 
+newrec 318 
+____ 391 in 7556 
+newrec 319 
+____ 392 in 7556 
+newrec 320 
+____ 394 in 7556 
+newrec 321 
+____ 395 in 7556 
+newrec 322 
+____ 397 in 7556 
+newrec 323 
+____ 398 in 7556 
+newrec 324 
+____ 399 in 7556 
+newrec 325 
+____ 400 in 7556 
+newrec 326 
+____ 401 in 7556 
+newrec 327 
+____ 402 in 7556 
+newrec 328 
+____ 403 in 7556 
+newrec 329 
+____ 404 in 7556 
+newrec 330 
+____ 405 in 7556 
+newrec 331 
+____ 406 in 7556 
+newrec 332 
+____ 407 in 7556 
+newrec 333 
+____ 408 in 7556 
+newrec 334 
+____ 410 in 7556 
+newrec 335 
+____ 412 in 7556 
+newrec 336 
+____ 413 in 7556 
+newrec 337 
+____ 414 in 7556 
+newrec 338 
+____ 415 in 7556 
+newrec 339 
+____ 416 in 7556 
+newrec 340 
+____ 418 in 7556 
+newrec 341 
+____ 419 in 7556 
+newrec 342 
+____ 421 in 7556 
+newrec 343 
+____ 423 in 7556 
+newrec 344 
+____ 424 in 7556 
+newrec 345 
+____ 426 in 7556 
+newrec 346 
+____ 427 in 7556 
+newrec 347 
+____ 429 in 7556 
+newrec 348 
+____ 430 in 7556 
+newrec 349 
+____ 433 in 7556 
+newrec 350 
+____ 435 in 7556 
+newrec 351 
+____ 436 in 7556 
+newrec 352 
+____ 437 in 7556 
+newrec 353 
+____ 438 in 7556 
+newrec 354 
+____ 441 in 7556 
+newrec 355 
+____ 442 in 7556 
+newrec 356 
+____ 443 in 7556 
+newrec 357 
+____ 444 in 7556 
+newrec 358 
+____ 445 in 7556 
+newrec 359 
+____ 447 in 7556 
+newrec 360 
+____ 449 in 7556 
+newrec 361 
+____ 451 in 7556 
+newrec 362 
+____ 452 in 7556 
+newrec 363 
+____ 454 in 7556 
+newrec 364 
+____ 457 in 7556 
+newrec 365 
+____ 459 in 7556 
+newrec 366 
+____ 460 in 7556 
+newrec 367 
+____ 461 in 7556 
+newrec 368 
+____ 462 in 7556 
+newrec 369 
+____ 463 in 7556 
+newrec 370 
+____ 464 in 7556 
+newrec 371 
+____ 465 in 7556 
+newrec 372 
+____ 466 in 7556 
+newrec 373 
+____ 468 in 7556 
+newrec 374 
+____ 469 in 7556 
+newrec 375 
+____ 471 in 7556 
+newrec 376 
+____ 472 in 7556 
+newrec 377 
+____ 474 in 7556 
+newrec 378 
+____ 475 in 7556 
+newrec 379 
+____ 476 in 7556 
+newrec 380 
+____ 478 in 7556 
+newrec 381 
+____ 479 in 7556 
+newrec 382 
+____ 480 in 7556 
+newrec 383 
+____ 481 in 7556 
+____ 482 in 7556 
+newrec 384 
+____ 484 in 7556 
+newrec 385 
+____ 485 in 7556 
+newrec 386 
+____ 486 in 7556 
+newrec 387 
+____ 487 in 7556 
+newrec 388 
+____ 488 in 7556 
+newrec 389 
+____ 489 in 7556 
+newrec 390 
+____ 490 in 7556 
+newrec 391 
+____ 491 in 7556 
+newrec 392 
+____ 492 in 7556 
+newrec 393 
+____ 493 in 7556 
+newrec 394 
+____ 494 in 7556 
+newrec 395 
+____ 495 in 7556 
+newrec 396 
+____ 496 in 7556 
+newrec 397 
+____ 497 in 7556 
+newrec 398 
+____ 498 in 7556 
+newrec 399 
+____ 499 in 7556 
+newrec 400 
+____ 500 in 7556 
+newrec 401 
+____ 501 in 7556 
+newrec 402 
+____ 502 in 7556 
+newrec 403 
+____ 503 in 7556 
+newrec 404 
+____ 504 in 7556 
+newrec 405 
+____ 505 in 7556 
+newrec 406 
+____ 506 in 7556 
+____ 507 in 7556 
+____ 508 in 7556 
+newrec 407 
+____ 509 in 7556 
+____ 510 in 7556 
+newrec 408 
+____ 511 in 7556 
+newrec 409 
+____ 512 in 7556 
+newrec 410 
+____ 513 in 7556 
+newrec 411 
+____ 514 in 7556 
+____ 515 in 7556 
+newrec 412 
+____ 516 in 7556 
+____ 517 in 7556 
+newrec 413 
+____ 518 in 7556 
+____ 519 in 7556 
+newrec 414 
+____ 520 in 7556 
+____ 521 in 7556 
+newrec 415 
+____ 522 in 7556 
+newrec 416 
+____ 523 in 7556 
+newrec 417 
+____ 525 in 7556 
+newrec 418 
+____ 527 in 7556 
+newrec 419 
+____ 528 in 7556 
+newrec 420 
+____ 530 in 7556 
+newrec 421 
+____ 531 in 7556 
+newrec 422 
+____ 532 in 7556 
+newrec 423 
+____ 533 in 7556 
+newrec 424 
+____ 534 in 7556 
+newrec 425 
+____ 535 in 7556 
+newrec 426 
+____ 536 in 7556 
+newrec 427 
+____ 537 in 7556 
+newrec 428 
+____ 538 in 7556 
+newrec 429 
+____ 539 in 7556 
+newrec 430 
+____ 540 in 7556 
+newrec 431 
+____ 541 in 7556 
+newrec 432 
+____ 543 in 7556 
+newrec 433 
+____ 544 in 7556 
+newrec 434 
+____ 546 in 7556 
+newrec 435 
+____ 547 in 7556 
+newrec 436 
+____ 548 in 7556 
+newrec 437 
+____ 549 in 7556 
+newrec 438 
+____ 550 in 7556 
+newrec 439 
+____ 551 in 7556 
+newrec 440 
+____ 552 in 7556 
+newrec 441 
+____ 553 in 7556 
+newrec 442 
+____ 554 in 7556 
+newrec 443 
+____ 555 in 7556 
+newrec 444 
+____ 556 in 7556 
+newrec 445 
+____ 557 in 7556 
+newrec 446 
+____ 558 in 7556 
+newrec 447 
+____ 559 in 7556 
+newrec 448 
+____ 560 in 7556 
+____ 561 in 7556 
+newrec 449 
+____ 562 in 7556 
+newrec 450 
+____ 564 in 7556 
+newrec 451 
+____ 566 in 7556 
+newrec 452 
+____ 567 in 7556 
+newrec 453 
+____ 568 in 7556 
+newrec 454 
+____ 569 in 7556 
+newrec 455 
+____ 570 in 7556 
+newrec 456 
+____ 571 in 7556 
+newrec 457 
+____ 572 in 7556 
+newrec 458 
+____ 573 in 7556 
+newrec 459 
+____ 574 in 7556 
+newrec 460 
+____ 575 in 7556 
+newrec 461 
+____ 576 in 7556 
+newrec 462 
+____ 577 in 7556 
+newrec 463 
+____ 578 in 7556 
+newrec 464 
+____ 579 in 7556 
+____ 580 in 7556 
+newrec 465 
+____ 581 in 7556 
+newrec 466 
+____ 582 in 7556 
+____ 583 in 7556 
+____ 584 in 7556 
+____ 585 in 7556 
+newrec 467 
+____ 587 in 7556 
+newrec 468 
+____ 588 in 7556 
+newrec 469 
+____ 589 in 7556 
+newrec 470 
+____ 590 in 7556 
+newrec 471 
+____ 591 in 7556 
+newrec 472 
+____ 593 in 7556 
+newrec 473 
+____ 594 in 7556 
+newrec 474 
+____ 595 in 7556 
+newrec 475 
+____ 596 in 7556 
+newrec 476 
+____ 597 in 7556 
+newrec 477 
+____ 598 in 7556 
+newrec 478 
+____ 599 in 7556 
+newrec 479 
+____ 600 in 7556 
+newrec 480 
+____ 601 in 7556 
+newrec 481 
+____ 602 in 7556 
+newrec 482 
+____ 603 in 7556 
+newrec 483 
+____ 604 in 7556 
+newrec 484 
+____ 605 in 7556 
+newrec 485 
+____ 606 in 7556 
+newrec 486 
+____ 607 in 7556 
+newrec 487 
+____ 608 in 7556 
+newrec 488 
+____ 609 in 7556 
+newrec 489 
+____ 610 in 7556 
+newrec 490 
+____ 611 in 7556 
+newrec 491 
+____ 612 in 7556 
+____ 613 in 7556 
+newrec 492 
+____ 614 in 7556 
+____ 615 in 7556 
+____ 616 in 7556 
+newrec 493 
+____ 617 in 7556 
+newrec 494 
+____ 618 in 7556 
+newrec 495 
+____ 619 in 7556 
+newrec 496 
+____ 620 in 7556 
+newrec 497 
+____ 621 in 7556 
+newrec 498 
+____ 622 in 7556 
+newrec 499 
+____ 623 in 7556 
+____ 624 in 7556 
+newrec 500 
+____ 625 in 7556 
+____ 626 in 7556 
+newrec 501 
+____ 627 in 7556 
+newrec 502 
+____ 628 in 7556 
+newrec 503 
+____ 629 in 7556 
+newrec 504 
+____ 630 in 7556 
+____ 631 in 7556 
+____ 632 in 7556 
+____ 633 in 7556 
+newrec 505 
+____ 634 in 7556 
+newrec 506 
+____ 635 in 7556 
+newrec 507 
+____ 636 in 7556 
+newrec 508 
+____ 637 in 7556 
+newrec 509 
+____ 638 in 7556 
+newrec 510 
+____ 639 in 7556 
+newrec 511 
+____ 640 in 7556 
+newrec 512 
+____ 642 in 7556 
+newrec 513 
+____ 645 in 7556 
+newrec 514 
+____ 646 in 7556 
+newrec 515 
+____ 647 in 7556 
+newrec 516 
+____ 648 in 7556 
+newrec 517 
+____ 650 in 7556 
+newrec 518 
+____ 651 in 7556 
+newrec 519 
+____ 654 in 7556 
+newrec 520 
+____ 655 in 7556 
+newrec 521 
+____ 656 in 7556 
+newrec 522 
+____ 657 in 7556 
+newrec 523 
+____ 658 in 7556 
+newrec 524 
+____ 659 in 7556 
+newrec 525 
+____ 660 in 7556 
+newrec 526 
+____ 661 in 7556 
+newrec 527 
+____ 662 in 7556 
+newrec 528 
+____ 663 in 7556 
+newrec 529 
+____ 664 in 7556 
+newrec 530 
+____ 665 in 7556 
+newrec 531 
+____ 666 in 7556 
+newrec 532 
+____ 667 in 7556 
+newrec 533 
+____ 668 in 7556 
+newrec 534 
+____ 669 in 7556 
+newrec 535 
+____ 670 in 7556 
+newrec 536 
+____ 671 in 7556 
+newrec 537 
+____ 672 in 7556 
+newrec 538 
+____ 673 in 7556 
+newrec 539 
+____ 674 in 7556 
+newrec 540 
+____ 675 in 7556 
+newrec 541 
+____ 676 in 7556 
+newrec 542 
+____ 677 in 7556 
+newrec 543 
+____ 678 in 7556 
+newrec 544 
+____ 679 in 7556 
+newrec 545 
+____ 680 in 7556 
+newrec 546 
+____ 681 in 7556 
+newrec 547 
+____ 682 in 7556 
+newrec 548 
+____ 683 in 7556 
+newrec 549 
+____ 684 in 7556 
+newrec 550 
+____ 685 in 7556 
+newrec 551 
+____ 686 in 7556 
+newrec 552 
+____ 687 in 7556 
+newrec 553 
+____ 688 in 7556 
+newrec 554 
+____ 689 in 7556 
+newrec 555 
+____ 690 in 7556 
+newrec 556 
+____ 691 in 7556 
+newrec 557 
+____ 692 in 7556 
+newrec 558 
+____ 693 in 7556 
+newrec 559 
+____ 694 in 7556 
+newrec 560 
+____ 695 in 7556 
+newrec 561 
+____ 696 in 7556 
+newrec 562 
+____ 697 in 7556 
+____ 698 in 7556 
+newrec 563 
+____ 700 in 7556 
+____ 701 in 7556 
+newrec 564 
+____ 703 in 7556 
+newrec 565 
+____ 704 in 7556 
+____ 709 in 7556 
+newrec 566 
+____ 710 in 7556 
+newrec 567 
+____ 711 in 7556 
+____ 712 in 7556 
+newrec 568 
+____ 713 in 7556 
+____ 714 in 7556 
+newrec 569 
+____ 715 in 7556 
+____ 716 in 7556 
+newrec 570 
+____ 717 in 7556 
+____ 718 in 7556 
+newrec 571 
+____ 719 in 7556 
+newrec 572 
+____ 720 in 7556 
+newrec 573 
+____ 721 in 7556 
+newrec 574 
+____ 722 in 7556 
+newrec 575 
+____ 723 in 7556 
+newrec 576 
+____ 724 in 7556 
+____ 725 in 7556 
+newrec 577 
+____ 726 in 7556 
+____ 727 in 7556 
+newrec 578 
+____ 728 in 7556 
+____ 729 in 7556 
+newrec 579 
+____ 730 in 7556 
+____ 731 in 7556 
+newrec 580 
+____ 732 in 7556 
+____ 733 in 7556 
+newrec 581 
+____ 734 in 7556 
+____ 735 in 7556 
+newrec 582 
+____ 736 in 7556 
+____ 737 in 7556 
+newrec 583 
+____ 738 in 7556 
+newrec 584 
+____ 739 in 7556 
+newrec 585 
+____ 740 in 7556 
+newrec 586 
+____ 741 in 7556 
+newrec 587 
+____ 742 in 7556 
+newrec 588 
+____ 743 in 7556 
+newrec 589 
+____ 744 in 7556 
+newrec 590 
+____ 745 in 7556 
+newrec 591 
+____ 746 in 7556 
+____ 747 in 7556 
+newrec 592 
+____ 748 in 7556 
+____ 749 in 7556 
+newrec 593 
+____ 750 in 7556 
+____ 751 in 7556 
+newrec 594 
+____ 752 in 7556 
+____ 753 in 7556 
+newrec 595 
+____ 754 in 7556 
+newrec 596 
+____ 755 in 7556 
+newrec 597 
+____ 756 in 7556 
+newrec 598 
+____ 757 in 7556 
+newrec 599 
+____ 758 in 7556 
+newrec 600 
+____ 759 in 7556 
+newrec 601 
+____ 760 in 7556 
+newrec 602 
+____ 761 in 7556 
+____ 762 in 7556 
+newrec 603 
+____ 763 in 7556 
+newrec 604 
+____ 764 in 7556 
+____ 765 in 7556 
+____ 766 in 7556 
+newrec 605 
+____ 767 in 7556 
+____ 768 in 7556 
+newrec 606 
+____ 769 in 7556 
+____ 770 in 7556 
+____ 771 in 7556 
+newrec 607 
+____ 772 in 7556 
+newrec 608 
+____ 773 in 7556 
+newrec 609 
+____ 774 in 7556 
+____ 775 in 7556 
+____ 776 in 7556 
+newrec 610 
+____ 777 in 7556 
+newrec 611 
+____ 778 in 7556 
+newrec 612 
+____ 779 in 7556 
+____ 781 in 7556 
+newrec 613 
+____ 782 in 7556 
+____ 784 in 7556 
+newrec 614 
+____ 785 in 7556 
+newrec 615 
+____ 788 in 7556 
+newrec 616 
+____ 789 in 7556 
+newrec 617 
+____ 790 in 7556 
+newrec 618 
+____ 791 in 7556 
+newrec 619 
+____ 792 in 7556 
+newrec 620 
+____ 793 in 7556 
+newrec 621 
+____ 794 in 7556 
+newrec 622 
+____ 795 in 7556 
+newrec 623 
+____ 796 in 7556 
+newrec 624 
+____ 797 in 7556 
+newrec 625 
+____ 798 in 7556 
+newrec 626 
+____ 799 in 7556 
+newrec 627 
+____ 800 in 7556 
+newrec 628 
+____ 801 in 7556 
+newrec 629 
+____ 803 in 7556 
+newrec 630 
+____ 805 in 7556 
+newrec 631 
+____ 806 in 7556 
+newrec 632 
+____ 807 in 7556 
+newrec 633 
+____ 808 in 7556 
+newrec 634 
+____ 809 in 7556 
+newrec 635 
+____ 812 in 7556 
+newrec 636 
+____ 813 in 7556 
+newrec 637 
+____ 814 in 7556 
+newrec 638 
+____ 815 in 7556 
+newrec 639 
+____ 816 in 7556 
+newrec 640 
+____ 817 in 7556 
+newrec 641 
+____ 818 in 7556 
+newrec 642 
+____ 819 in 7556 
+newrec 643 
+____ 820 in 7556 
+newrec 644 
+____ 821 in 7556 
+newrec 645 
+____ 822 in 7556 
+newrec 646 
+____ 823 in 7556 
+newrec 647 
+____ 824 in 7556 
+newrec 648 
+____ 825 in 7556 
+newrec 649 
+____ 826 in 7556 
+newrec 650 
+____ 827 in 7556 
+newrec 651 
+____ 828 in 7556 
+newrec 652 
+____ 829 in 7556 
+newrec 653 
+____ 830 in 7556 
+newrec 654 
+____ 831 in 7556 
+newrec 655 
+____ 832 in 7556 
+newrec 656 
+____ 833 in 7556 
+newrec 657 
+____ 834 in 7556 
+newrec 658 
+____ 835 in 7556 
+newrec 659 
+____ 836 in 7556 
+newrec 660 
+____ 837 in 7556 
+newrec 661 
+____ 838 in 7556 
+____ 839 in 7556 
+newrec 662 
+____ 840 in 7556 
+newrec 663 
+____ 841 in 7556 
+newrec 664 
+____ 842 in 7556 
+newrec 665 
+____ 843 in 7556 
+newrec 666 
+____ 844 in 7556 
+newrec 667 
+____ 845 in 7556 
+newrec 668 
+____ 846 in 7556 
+newrec 669 
+____ 847 in 7556 
+newrec 670 
+____ 848 in 7556 
+____ 849 in 7556 
+newrec 671 
+____ 850 in 7556 
+____ 851 in 7556 
+newrec 672 
+____ 852 in 7556 
+newrec 673 
+____ 853 in 7556 
+newrec 674 
+____ 855 in 7556 
+newrec 675 
+____ 856 in 7556 
+newrec 676 
+____ 857 in 7556 
+____ 858 in 7556 
+____ 860 in 7556 
+newrec 677 
+____ 861 in 7556 
+newrec 678 
+____ 862 in 7556 
+newrec 679 
+____ 863 in 7556 
+newrec 680 
+____ 864 in 7556 
+newrec 681 
+____ 865 in 7556 
+newrec 682 
+____ 866 in 7556 
+newrec 683 
+____ 867 in 7556 
+____ 868 in 7556 
+newrec 684 
+____ 869 in 7556 
+____ 870 in 7556 
+newrec 685 
+____ 871 in 7556 
+____ 872 in 7556 
+newrec 686 
+____ 873 in 7556 
+newrec 687 
+____ 874 in 7556 
+newrec 688 
+____ 875 in 7556 
+newrec 689 
+____ 876 in 7556 
+____ 877 in 7556 
+newrec 690 
+____ 878 in 7556 
+newrec 691 
+____ 879 in 7556 
+____ 880 in 7556 
+newrec 692 
+____ 881 in 7556 
+newrec 693 
+____ 882 in 7556 
+newrec 694 
+____ 883 in 7556 
+newrec 695 
+____ 884 in 7556 
+newrec 696 
+____ 886 in 7556 
+newrec 697 
+____ 887 in 7556 
+newrec 698 
+____ 890 in 7556 
+newrec 699 
+____ 892 in 7556 
+newrec 700 
+____ 894 in 7556 
+newrec 701 
+____ 898 in 7556 
+newrec 702 
+____ 899 in 7556 
+newrec 703 
+____ 900 in 7556 
+newrec 704 
+____ 901 in 7556 
+newrec 705 
+____ 902 in 7556 
+newrec 706 
+____ 903 in 7556 
+newrec 707 
+____ 904 in 7556 
+newrec 708 
+____ 905 in 7556 
+newrec 709 
+____ 906 in 7556 
+newrec 710 
+____ 907 in 7556 
+newrec 711 
+____ 908 in 7556 
+newrec 712 
+____ 909 in 7556 
+newrec 713 
+____ 910 in 7556 
+newrec 714 
+____ 911 in 7556 
+newrec 715 
+____ 912 in 7556 
+newrec 716 
+____ 913 in 7556 
+newrec 717 
+____ 914 in 7556 
+newrec 718 
+____ 915 in 7556 
+newrec 719 
+____ 916 in 7556 
+newrec 720 
+____ 917 in 7556 
+newrec 721 
+____ 918 in 7556 
+newrec 722 
+____ 919 in 7556 
+newrec 723 
+____ 920 in 7556 
+____ 921 in 7556 
+newrec 724 
+____ 922 in 7556 
+newrec 725 
+____ 923 in 7556 
+newrec 726 
+____ 924 in 7556 
+newrec 727 
+____ 925 in 7556 
+newrec 728 
+____ 926 in 7556 
+newrec 729 
+____ 927 in 7556 
+newrec 730 
+____ 928 in 7556 
+newrec 731 
+____ 929 in 7556 
+newrec 732 
+____ 930 in 7556 
+newrec 733 
+____ 931 in 7556 
+____ 932 in 7556 
+newrec 734 
+____ 933 in 7556 
+newrec 735 
+____ 934 in 7556 
+newrec 736 
+____ 935 in 7556 
+____ 936 in 7556 
+____ 937 in 7556 
+newrec 737 
+____ 938 in 7556 
+newrec 738 
+____ 939 in 7556 
+newrec 739 
+____ 940 in 7556 
+newrec 740 
+____ 941 in 7556 
+newrec 741 
+____ 943 in 7556 
+newrec 742 
+____ 944 in 7556 
+newrec 743 
+____ 946 in 7556 
+newrec 744 
+____ 949 in 7556 
+newrec 745 
+____ 950 in 7556 
+newrec 746 
+____ 951 in 7556 
+____ 952 in 7556 
+newrec 747 
+____ 953 in 7556 
+newrec 748 
+____ 955 in 7556 
+newrec 749 
+____ 959 in 7556 
+newrec 750 
+____ 960 in 7556 
+newrec 751 
+____ 963 in 7556 
+newrec 752 
+____ 964 in 7556 
+newrec 753 
+____ 965 in 7556 
+newrec 754 
+____ 966 in 7556 
+newrec 755 
+____ 967 in 7556 
+____ 968 in 7556 
+newrec 756 
+____ 969 in 7556 
+____ 970 in 7556 
+newrec 757 
+____ 971 in 7556 
+____ 972 in 7556 
+newrec 758 
+____ 973 in 7556 
+____ 974 in 7556 
+newrec 759 
+____ 975 in 7556 
+____ 976 in 7556 
+newrec 760 
+____ 977 in 7556 
+____ 978 in 7556 
+newrec 761 
+____ 979 in 7556 
+____ 980 in 7556 
+newrec 762 
+____ 981 in 7556 
+newrec 763 
+____ 982 in 7556 
+newrec 764 
+____ 983 in 7556 
+newrec 765 
+____ 984 in 7556 
+newrec 766 
+____ 985 in 7556 
+____ 986 in 7556 
+newrec 767 
+____ 987 in 7556 
+____ 988 in 7556 
+newrec 768 
+____ 989 in 7556 
+newrec 769 
+____ 990 in 7556 
+newrec 770 
+____ 991 in 7556 
+newrec 771 
+____ 992 in 7556 
+newrec 772 
+____ 993 in 7556 
+newrec 773 
+____ 994 in 7556 
+newrec 774 
+____ 995 in 7556 
+newrec 775 
+____ 996 in 7556 
+newrec 776 
+____ 997 in 7556 
+____ 998 in 7556 
+newrec 777 
+____ 999 in 7556 
+____ 1000 in 7556 
+newrec 778 
+____ 1001 in 7556 
+____ 1002 in 7556 
+newrec 779 
+____ 1006 in 7556 
+newrec 780 
+____ 1007 in 7556 
+____ 1009 in 7556 
+newrec 781 
+____ 1010 in 7556 
+newrec 782 
+____ 1011 in 7556 
+newrec 783 
+____ 1012 in 7556 
+____ 1013 in 7556 
+newrec 784 
+____ 1014 in 7556 
+newrec 785 
+____ 1016 in 7556 
+newrec 786 
+____ 1018 in 7556 
+newrec 787 
+____ 1019 in 7556 
+____ 1020 in 7556 
+newrec 788 
+____ 1021 in 7556 
+newrec 789 
+____ 1022 in 7556 
+newrec 790 
+____ 1023 in 7556 
+newrec 791 
+____ 1024 in 7556 
+newrec 792 
+____ 1026 in 7556 
+newrec 793 
+____ 1027 in 7556 
+newrec 794 
+____ 1028 in 7556 
+newrec 795 
+____ 1029 in 7556 
+newrec 796 
+____ 1030 in 7556 
+____ 1031 in 7556 
+newrec 797 
+____ 1032 in 7556 
+____ 1033 in 7556 
+newrec 798 
+____ 1034 in 7556 
+____ 1035 in 7556 
+newrec 799 
+____ 1036 in 7556 
+newrec 800 
+____ 1037 in 7556 
+____ 1038 in 7556 
+newrec 801 
+____ 1042 in 7556 
+newrec 802 
+____ 1043 in 7556 
+newrec 803 
+____ 1044 in 7556 
+____ 1045 in 7556 
+newrec 804 
+____ 1047 in 7556 
+newrec 805 
+____ 1048 in 7556 
+____ 1049 in 7556 
+newrec 806 
+____ 1052 in 7556 
+____ 1053 in 7556 
+newrec 807 
+____ 1058 in 7556 
+newrec 808 
+____ 1059 in 7556 
+newrec 809 
+____ 1060 in 7556 
+newrec 810 
+____ 1061 in 7556 
+____ 1062 in 7556 
+____ 1063 in 7556 
+newrec 811 
+____ 1064 in 7556 
+newrec 812 
+____ 1065 in 7556 
+newrec 813 
+____ 1066 in 7556 
+newrec 814 
+____ 1068 in 7556 
+newrec 815 
+____ 1069 in 7556 
+newrec 816 
+____ 1073 in 7556 
+newrec 817 
+____ 1074 in 7556 
+newrec 818 
+____ 1075 in 7556 
+newrec 819 
+____ 1076 in 7556 
+newrec 820 
+____ 1077 in 7556 
+newrec 821 
+____ 1078 in 7556 
+newrec 822 
+____ 1079 in 7556 
+newrec 823 
+____ 1081 in 7556 
+newrec 824 
+____ 1082 in 7556 
+newrec 825 
+____ 1083 in 7556 
+newrec 826 
+____ 1085 in 7556 
+newrec 827 
+____ 1087 in 7556 
+newrec 828 
+____ 1088 in 7556 
+newrec 829 
+____ 1089 in 7556 
+newrec 830 
+____ 1091 in 7556 
+newrec 831 
+____ 1093 in 7556 
+newrec 832 
+____ 1095 in 7556 
+newrec 833 
+____ 1097 in 7556 
+newrec 834 
+____ 1099 in 7556 
+newrec 835 
+____ 1101 in 7556 
+newrec 836 
+____ 1103 in 7556 
+newrec 837 
+____ 1104 in 7556 
+newrec 838 
+____ 1105 in 7556 
+newrec 839 
+____ 1106 in 7556 
+newrec 840 
+____ 1107 in 7556 
+newrec 841 
+____ 1109 in 7556 
+newrec 842 
+____ 1111 in 7556 
+newrec 843 
+____ 1113 in 7556 
+newrec 844 
+____ 1115 in 7556 
+newrec 845 
+____ 1116 in 7556 
+newrec 846 
+____ 1117 in 7556 
+newrec 847 
+____ 1118 in 7556 
+newrec 848 
+____ 1119 in 7556 
+newrec 849 
+____ 1121 in 7556 
+newrec 850 
+____ 1123 in 7556 
+newrec 851 
+____ 1125 in 7556 
+newrec 852 
+____ 1127 in 7556 
+newrec 853 
+____ 1128 in 7556 
+newrec 854 
+____ 1130 in 7556 
+newrec 855 
+____ 1131 in 7556 
+newrec 856 
+____ 1133 in 7556 
+newrec 857 
+____ 1134 in 7556 
+newrec 858 
+____ 1135 in 7556 
+newrec 859 
+____ 1137 in 7556 
+newrec 860 
+____ 1138 in 7556 
+newrec 861 
+____ 1140 in 7556 
+newrec 862 
+____ 1141 in 7556 
+newrec 863 
+____ 1143 in 7556 
+newrec 864 
+____ 1145 in 7556 
+newrec 865 
+____ 1148 in 7556 
+newrec 866 
+____ 1149 in 7556 
+newrec 867 
+____ 1153 in 7556 
+newrec 868 
+____ 1156 in 7556 
+newrec 869 
+____ 1157 in 7556 
+newrec 870 
+____ 1158 in 7556 
+newrec 871 
+____ 1159 in 7556 
+newrec 872 
+____ 1160 in 7556 
+newrec 873 
+____ 1161 in 7556 
+newrec 874 
+____ 1164 in 7556 
+newrec 875 
+____ 1167 in 7556 
+newrec 876 
+____ 1168 in 7556 
+newrec 877 
+____ 1169 in 7556 
+newrec 878 
+____ 1170 in 7556 
+newrec 879 
+____ 1171 in 7556 
+newrec 880 
+____ 1174 in 7556 
+newrec 881 
+____ 1175 in 7556 
+newrec 882 
+____ 1177 in 7556 
+newrec 883 
+____ 1178 in 7556 
+newrec 884 
+____ 1179 in 7556 
+newrec 885 
+____ 1181 in 7556 
+newrec 886 
+____ 1183 in 7556 
+newrec 887 
+____ 1184 in 7556 
+newrec 888 
+____ 1185 in 7556 
+newrec 889 
+____ 1187 in 7556 
+newrec 890 
+____ 1188 in 7556 
+newrec 891 
+____ 1189 in 7556 
+newrec 892 
+____ 1191 in 7556 
+newrec 893 
+____ 1192 in 7556 
+newrec 894 
+____ 1193 in 7556 
+newrec 895 
+____ 1194 in 7556 
+newrec 896 
+____ 1195 in 7556 
+newrec 897 
+____ 1197 in 7556 
+newrec 898 
+____ 1199 in 7556 
+newrec 899 
+____ 1201 in 7556 
+newrec 900 
+____ 1202 in 7556 
+newrec 901 
+____ 1203 in 7556 
+newrec 902 
+____ 1204 in 7556 
+newrec 903 
+____ 1205 in 7556 
+newrec 904 
+____ 1207 in 7556 
+newrec 905 
+____ 1209 in 7556 
+newrec 906 
+____ 1211 in 7556 
+newrec 907 
+____ 1212 in 7556 
+newrec 908 
+____ 1213 in 7556 
+newrec 909 
+____ 1215 in 7556 
+newrec 910 
+____ 1216 in 7556 
+newrec 911 
+____ 1217 in 7556 
+newrec 912 
+____ 1218 in 7556 
+newrec 913 
+____ 1219 in 7556 
+newrec 914 
+____ 1221 in 7556 
+newrec 915 
+____ 1223 in 7556 
+newrec 916 
+____ 1224 in 7556 
+newrec 917 
+____ 1225 in 7556 
+newrec 918 
+____ 1227 in 7556 
+newrec 919 
+____ 1229 in 7556 
+newrec 920 
+____ 1231 in 7556 
+newrec 921 
+____ 1232 in 7556 
+newrec 922 
+____ 1233 in 7556 
+newrec 923 
+____ 1234 in 7556 
+newrec 924 
+____ 1235 in 7556 
+newrec 925 
+____ 1237 in 7556 
+newrec 926 
+____ 1239 in 7556 
+newrec 927 
+____ 1241 in 7556 
+newrec 928 
+____ 1243 in 7556 
+newrec 929 
+____ 1245 in 7556 
+newrec 930 
+____ 1246 in 7556 
+newrec 931 
+____ 1247 in 7556 
+newrec 932 
+____ 1248 in 7556 
+newrec 933 
+____ 1249 in 7556 
+newrec 934 
+____ 1251 in 7556 
+newrec 935 
+____ 1253 in 7556 
+newrec 936 
+____ 1255 in 7556 
+newrec 937 
+____ 1257 in 7556 
+newrec 938 
+____ 1258 in 7556 
+newrec 939 
+____ 1259 in 7556 
+newrec 940 
+____ 1260 in 7556 
+newrec 941 
+____ 1261 in 7556 
+____ 1262 in 7556 
+____ 1264 in 7556 
+____ 1265 in 7556 
+newrec 942 
+____ 1266 in 7556 
+newrec 943 
+____ 1268 in 7556 
+newrec 944 
+____ 1270 in 7556 
+newrec 945 
+____ 1273 in 7556 
+newrec 946 
+____ 1275 in 7556 
+newrec 947 
+____ 1277 in 7556 
+____ 1278 in 7556 
+newrec 948 
+____ 1279 in 7556 
+newrec 949 
+____ 1280 in 7556 
+newrec 950 
+____ 1281 in 7556 
+newrec 951 
+____ 1282 in 7556 
+newrec 952 
+____ 1283 in 7556 
+newrec 953 
+____ 1284 in 7556 
+newrec 954 
+____ 1285 in 7556 
+newrec 955 
+____ 1286 in 7556 
+newrec 956 
+____ 1287 in 7556 
+newrec 957 
+____ 1288 in 7556 
+newrec 958 
+____ 1289 in 7556 
+newrec 959 
+____ 1290 in 7556 
+newrec 960 
+____ 1291 in 7556 
+newrec 961 
+____ 1292 in 7556 
+newrec 962 
+____ 1293 in 7556 
+newrec 963 
+____ 1294 in 7556 
+newrec 964 
+____ 1295 in 7556 
+newrec 965 
+____ 1296 in 7556 
+newrec 966 
+____ 1298 in 7556 
+newrec 967 
+____ 1301 in 7556 
+newrec 968 
+____ 1302 in 7556 
+newrec 969 
+____ 1303 in 7556 
+newrec 970 
+____ 1304 in 7556 
+newrec 971 
+____ 1305 in 7556 
+newrec 972 
+____ 1306 in 7556 
+newrec 973 
+____ 1307 in 7556 
+newrec 974 
+____ 1308 in 7556 
+newrec 975 
+____ 1309 in 7556 
+newrec 976 
+____ 1310 in 7556 
+newrec 977 
+____ 1311 in 7556 
+newrec 978 
+____ 1312 in 7556 
+newrec 979 
+____ 1313 in 7556 
+newrec 980 
+____ 1314 in 7556 
+newrec 981 
+____ 1315 in 7556 
+newrec 982 
+____ 1316 in 7556 
+newrec 983 
+____ 1317 in 7556 
+newrec 984 
+____ 1318 in 7556 
+newrec 985 
+____ 1319 in 7556 
+newrec 986 
+____ 1320 in 7556 
+newrec 987 
+____ 1321 in 7556 
+newrec 988 
+____ 1322 in 7556 
+newrec 989 
+____ 1323 in 7556 
+newrec 990 
+____ 1325 in 7556 
+____ 1326 in 7556 
+newrec 991 
+____ 1327 in 7556 
+newrec 992 
+____ 1328 in 7556 
+newrec 993 
+____ 1329 in 7556 
+newrec 994 
+____ 1330 in 7556 
+newrec 995 
+____ 1332 in 7556 
+newrec 996 
+____ 1334 in 7556 
+newrec 997 
+____ 1335 in 7556 
+newrec 998 
+____ 1336 in 7556 
+newrec 999 
+____ 1337 in 7556 
+newrec 1000 
+____ 1338 in 7556 
+newrec 1001 
+____ 1339 in 7556 
+newrec 1002 
+____ 1340 in 7556 
+newrec 1003 
+____ 1341 in 7556 
+newrec 1004 
+____ 1342 in 7556 
+newrec 1005 
+____ 1343 in 7556 
+newrec 1006 
+____ 1344 in 7556 
+newrec 1007 
+____ 1345 in 7556 
+newrec 1008 
+____ 1346 in 7556 
+newrec 1009 
+____ 1347 in 7556 
+newrec 1010 
+____ 1348 in 7556 
+newrec 1011 
+____ 1349 in 7556 
+newrec 1012 
+____ 1350 in 7556 
+newrec 1013 
+____ 1351 in 7556 
+newrec 1014 
+____ 1352 in 7556 
+newrec 1015 
+____ 1353 in 7556 
+newrec 1016 
+____ 1354 in 7556 
+newrec 1017 
+____ 1355 in 7556 
+newrec 1018 
+____ 1356 in 7556 
+newrec 1019 
+____ 1357 in 7556 
+newrec 1020 
+____ 1358 in 7556 
+newrec 1021 
+____ 1359 in 7556 
+____ 1360 in 7556 
+newrec 1022 
+____ 1361 in 7556 
+newrec 1023 
+____ 1363 in 7556 
+newrec 1024 
+____ 1364 in 7556 
+newrec 1025 
+____ 1365 in 7556 
+newrec 1026 
+____ 1367 in 7556 
+newrec 1027 
+____ 1369 in 7556 
+newrec 1028 
+____ 1370 in 7556 
+newrec 1029 
+____ 1371 in 7556 
+newrec 1030 
+____ 1372 in 7556 
+____ 1373 in 7556 
+newrec 1031 
+____ 1374 in 7556 
+newrec 1032 
+____ 1375 in 7556 
+newrec 1033 
+____ 1376 in 7556 
+____ 1378 in 7556 
+newrec 1034 
+____ 1379 in 7556 
+newrec 1035 
+____ 1380 in 7556 
+newrec 1036 
+____ 1381 in 7556 
+newrec 1037 
+____ 1382 in 7556 
+newrec 1038 
+____ 1383 in 7556 
+newrec 1039 
+____ 1384 in 7556 
+newrec 1040 
+____ 1386 in 7556 
+newrec 1041 
+____ 1387 in 7556 
+newrec 1042 
+____ 1388 in 7556 
+newrec 1043 
+____ 1389 in 7556 
+newrec 1044 
+____ 1390 in 7556 
+newrec 1045 
+____ 1392 in 7556 
+newrec 1046 
+____ 1394 in 7556 
+newrec 1047 
+____ 1396 in 7556 
+newrec 1048 
+____ 1398 in 7556 
+newrec 1049 
+____ 1400 in 7556 
+newrec 1050 
+____ 1402 in 7556 
+newrec 1051 
+____ 1404 in 7556 
+newrec 1052 
+____ 1406 in 7556 
+newrec 1053 
+____ 1407 in 7556 
+newrec 1054 
+____ 1408 in 7556 
+newrec 1055 
+____ 1410 in 7556 
+newrec 1056 
+____ 1411 in 7556 
+newrec 1057 
+____ 1412 in 7556 
+newrec 1058 
+____ 1414 in 7556 
+newrec 1059 
+____ 1416 in 7556 
+newrec 1060 
+____ 1418 in 7556 
+newrec 1061 
+____ 1420 in 7556 
+newrec 1062 
+____ 1421 in 7556 
+newrec 1063 
+____ 1422 in 7556 
+newrec 1064 
+____ 1423 in 7556 
+newrec 1065 
+____ 1424 in 7556 
+newrec 1066 
+____ 1425 in 7556 
+newrec 1067 
+____ 1426 in 7556 
+newrec 1068 
+____ 1427 in 7556 
+newrec 1069 
+____ 1428 in 7556 
+newrec 1070 
+____ 1429 in 7556 
+newrec 1071 
+____ 1430 in 7556 
+newrec 1072 
+____ 1431 in 7556 
+newrec 1073 
+____ 1432 in 7556 
+newrec 1074 
+____ 1433 in 7556 
+newrec 1075 
+____ 1434 in 7556 
+newrec 1076 
+____ 1435 in 7556 
+newrec 1077 
+____ 1436 in 7556 
+newrec 1078 
+____ 1437 in 7556 
+newrec 1079 
+____ 1438 in 7556 
+newrec 1080 
+____ 1439 in 7556 
+newrec 1081 
+____ 1440 in 7556 
+newrec 1082 
+____ 1441 in 7556 
+newrec 1083 
+____ 1442 in 7556 
+newrec 1084 
+____ 1443 in 7556 
+newrec 1085 
+____ 1444 in 7556 
+newrec 1086 
+____ 1445 in 7556 
+newrec 1087 
+____ 1446 in 7556 
+newrec 1088 
+____ 1447 in 7556 
+newrec 1089 
+____ 1448 in 7556 
+newrec 1090 
+____ 1449 in 7556 
+newrec 1091 
+____ 1450 in 7556 
+newrec 1092 
+____ 1451 in 7556 
+newrec 1093 
+____ 1452 in 7556 
+newrec 1094 
+____ 1453 in 7556 
+newrec 1095 
+____ 1454 in 7556 
+newrec 1096 
+____ 1455 in 7556 
+newrec 1097 
+____ 1456 in 7556 
+newrec 1098 
+____ 1457 in 7556 
+newrec 1099 
+____ 1458 in 7556 
+newrec 1100 
+____ 1459 in 7556 
+newrec 1101 
+____ 1460 in 7556 
+newrec 1102 
+____ 1461 in 7556 
+newrec 1103 
+____ 1462 in 7556 
+newrec 1104 
+____ 1463 in 7556 
+newrec 1105 
+____ 1464 in 7556 
+newrec 1106 
+____ 1465 in 7556 
+newrec 1107 
+____ 1466 in 7556 
+newrec 1108 
+____ 1467 in 7556 
+newrec 1109 
+____ 1468 in 7556 
+newrec 1110 
+____ 1469 in 7556 
+newrec 1111 
+____ 1470 in 7556 
+newrec 1112 
+____ 1471 in 7556 
+newrec 1113 
+____ 1472 in 7556 
+newrec 1114 
+____ 1473 in 7556 
+newrec 1115 
+____ 1474 in 7556 
+newrec 1116 
+____ 1475 in 7556 
+newrec 1117 
+____ 1476 in 7556 
+newrec 1118 
+____ 1477 in 7556 
+newrec 1119 
+____ 1478 in 7556 
+newrec 1120 
+____ 1479 in 7556 
+newrec 1121 
+____ 1480 in 7556 
+newrec 1122 
+____ 1481 in 7556 
+newrec 1123 
+____ 1482 in 7556 
+newrec 1124 
+____ 1483 in 7556 
+newrec 1125 
+____ 1484 in 7556 
+newrec 1126 
+____ 1485 in 7556 
+newrec 1127 
+____ 1486 in 7556 
+newrec 1128 
+____ 1487 in 7556 
+newrec 1129 
+____ 1488 in 7556 
+newrec 1130 
+____ 1489 in 7556 
+newrec 1131 
+____ 1490 in 7556 
+newrec 1132 
+____ 1491 in 7556 
+newrec 1133 
+____ 1493 in 7556 
+newrec 1134 
+____ 1495 in 7556 
+newrec 1135 
+____ 1497 in 7556 
+newrec 1136 
+____ 1498 in 7556 
+newrec 1137 
+____ 1499 in 7556 
+newrec 1138 
+____ 1500 in 7556 
+____ 1501 in 7556 
+newrec 1139 
+____ 1503 in 7556 
+newrec 1140 
+____ 1505 in 7556 
+____ 1506 in 7556 
+newrec 1141 
+____ 1507 in 7556 
+____ 1508 in 7556 
+newrec 1142 
+____ 1509 in 7556 
+newrec 1143 
+____ 1510 in 7556 
+newrec 1144 
+____ 1511 in 7556 
+____ 1512 in 7556 
+newrec 1145 
+____ 1513 in 7556 
+newrec 1146 
+____ 1514 in 7556 
+newrec 1147 
+____ 1515 in 7556 
+newrec 1148 
+____ 1516 in 7556 
+newrec 1149 
+____ 1517 in 7556 
+newrec 1150 
+____ 1518 in 7556 
+newrec 1151 
+____ 1519 in 7556 
+newrec 1152 
+____ 1520 in 7556 
+newrec 1153 
+____ 1522 in 7556 
+newrec 1154 
+____ 1523 in 7556 
+newrec 1155 
+____ 1525 in 7556 
+newrec 1156 
+____ 1526 in 7556 
+newrec 1157 
+____ 1528 in 7556 
+newrec 1158 
+____ 1530 in 7556 
+newrec 1159 
+____ 1531 in 7556 
+newrec 1160 
+____ 1532 in 7556 
+newrec 1161 
+____ 1533 in 7556 
+newrec 1162 
+____ 1534 in 7556 
+newrec 1163 
+____ 1535 in 7556 
+newrec 1164 
+____ 1536 in 7556 
+newrec 1165 
+____ 1538 in 7556 
+newrec 1166 
+____ 1539 in 7556 
+newrec 1167 
+____ 1541 in 7556 
+____ 1542 in 7556 
+____ 1543 in 7556 
+newrec 1168 
+____ 1544 in 7556 
+newrec 1169 
+____ 1545 in 7556 
+newrec 1170 
+____ 1546 in 7556 
+newrec 1171 
+____ 1547 in 7556 
+newrec 1172 
+____ 1548 in 7556 
+newrec 1173 
+____ 1549 in 7556 
+newrec 1174 
+____ 1551 in 7556 
+newrec 1175 
+____ 1553 in 7556 
+newrec 1176 
+____ 1554 in 7556 
+newrec 1177 
+____ 1555 in 7556 
+newrec 1178 
+____ 1556 in 7556 
+newrec 1179 
+____ 1558 in 7556 
+newrec 1180 
+____ 1560 in 7556 
+newrec 1181 
+____ 1562 in 7556 
+newrec 1182 
+____ 1563 in 7556 
+newrec 1183 
+____ 1564 in 7556 
+newrec 1184 
+____ 1565 in 7556 
+newrec 1185 
+____ 1566 in 7556 
+newrec 1186 
+____ 1567 in 7556 
+newrec 1187 
+____ 1568 in 7556 
+newrec 1188 
+____ 1569 in 7556 
+newrec 1189 
+____ 1570 in 7556 
+newrec 1190 
+____ 1571 in 7556 
+newrec 1191 
+____ 1572 in 7556 
+newrec 1192 
+____ 1573 in 7556 
+newrec 1193 
+____ 1574 in 7556 
+newrec 1194 
+____ 1575 in 7556 
+newrec 1195 
+____ 1576 in 7556 
+newrec 1196 
+____ 1577 in 7556 
+newrec 1197 
+____ 1578 in 7556 
+newrec 1198 
+____ 1579 in 7556 
+newrec 1199 
+____ 1580 in 7556 
+newrec 1200 
+____ 1581 in 7556 
+newrec 1201 
+____ 1582 in 7556 
+newrec 1202 
+____ 1583 in 7556 
+newrec 1203 
+____ 1584 in 7556 
+newrec 1204 
+____ 1585 in 7556 
+newrec 1205 
+____ 1586 in 7556 
+newrec 1206 
+____ 1587 in 7556 
+newrec 1207 
+____ 1588 in 7556 
+newrec 1208 
+____ 1589 in 7556 
+newrec 1209 
+____ 1590 in 7556 
+newrec 1210 
+____ 1591 in 7556 
+newrec 1211 
+____ 1592 in 7556 
+newrec 1212 
+____ 1593 in 7556 
+newrec 1213 
+____ 1594 in 7556 
+newrec 1214 
+____ 1595 in 7556 
+newrec 1215 
+____ 1596 in 7556 
+newrec 1216 
+____ 1597 in 7556 
+newrec 1217 
+____ 1598 in 7556 
+newrec 1218 
+____ 1599 in 7556 
+newrec 1219 
+____ 1600 in 7556 
+newrec 1220 
+____ 1601 in 7556 
+newrec 1221 
+____ 1602 in 7556 
+newrec 1222 
+____ 1603 in 7556 
+newrec 1223 
+____ 1604 in 7556 
+newrec 1224 
+____ 1605 in 7556 
+newrec 1225 
+____ 1606 in 7556 
+newrec 1226 
+____ 1607 in 7556 
+newrec 1227 
+____ 1608 in 7556 
+newrec 1228 
+____ 1609 in 7556 
+newrec 1229 
+____ 1610 in 7556 
+newrec 1230 
+____ 1611 in 7556 
+newrec 1231 
+____ 1613 in 7556 
+newrec 1232 
+____ 1614 in 7556 
+newrec 1233 
+____ 1615 in 7556 
+newrec 1234 
+____ 1616 in 7556 
+newrec 1235 
+____ 1618 in 7556 
+newrec 1236 
+____ 1620 in 7556 
+newrec 1237 
+____ 1622 in 7556 
+newrec 1238 
+____ 1623 in 7556 
+newrec 1239 
+____ 1624 in 7556 
+newrec 1240 
+____ 1625 in 7556 
+newrec 1241 
+____ 1626 in 7556 
+newrec 1242 
+____ 1627 in 7556 
+newrec 1243 
+____ 1628 in 7556 
+newrec 1244 
+____ 1629 in 7556 
+newrec 1245 
+____ 1630 in 7556 
+newrec 1246 
+____ 1632 in 7556 
+newrec 1247 
+____ 1633 in 7556 
+newrec 1248 
+____ 1635 in 7556 
+newrec 1249 
+____ 1636 in 7556 
+newrec 1250 
+____ 1637 in 7556 
+newrec 1251 
+____ 1638 in 7556 
+____ 1639 in 7556 
+newrec 1252 
+____ 1640 in 7556 
+newrec 1253 
+____ 1642 in 7556 
+____ 1643 in 7556 
+newrec 1254 
+____ 1644 in 7556 
+newrec 1255 
+____ 1645 in 7556 
+newrec 1256 
+____ 1646 in 7556 
+newrec 1257 
+____ 1647 in 7556 
+____ 1649 in 7556 
+____ 1650 in 7556 
+newrec 1258 
+____ 1651 in 7556 
+newrec 1259 
+____ 1652 in 7556 
+newrec 1260 
+____ 1653 in 7556 
+newrec 1261 
+____ 1654 in 7556 
+newrec 1262 
+____ 1655 in 7556 
+newrec 1263 
+____ 1656 in 7556 
+newrec 1264 
+____ 1658 in 7556 
+newrec 1265 
+____ 1660 in 7556 
+newrec 1266 
+____ 1662 in 7556 
+newrec 1267 
+____ 1664 in 7556 
+newrec 1268 
+____ 1666 in 7556 
+newrec 1269 
+____ 1668 in 7556 
+newrec 1270 
+____ 1670 in 7556 
+newrec 1271 
+____ 1672 in 7556 
+newrec 1272 
+____ 1674 in 7556 
+newrec 1273 
+____ 1675 in 7556 
+newrec 1274 
+____ 1676 in 7556 
+newrec 1275 
+____ 1677 in 7556 
+newrec 1276 
+____ 1678 in 7556 
+newrec 1277 
+____ 1679 in 7556 
+newrec 1278 
+____ 1680 in 7556 
+newrec 1279 
+____ 1682 in 7556 
+newrec 1280 
+____ 1683 in 7556 
+newrec 1281 
+____ 1685 in 7556 
+newrec 1282 
+____ 1687 in 7556 
+newrec 1283 
+____ 1689 in 7556 
+newrec 1284 
+____ 1691 in 7556 
+newrec 1285 
+____ 1692 in 7556 
+newrec 1286 
+____ 1693 in 7556 
+newrec 1287 
+____ 1694 in 7556 
+newrec 1288 
+____ 1695 in 7556 
+newrec 1289 
+____ 1697 in 7556 
+newrec 1290 
+____ 1699 in 7556 
+newrec 1291 
+____ 1701 in 7556 
+newrec 1292 
+____ 1703 in 7556 
+newrec 1293 
+____ 1705 in 7556 
+newrec 1294 
+____ 1706 in 7556 
+newrec 1295 
+____ 1707 in 7556 
+newrec 1296 
+____ 1708 in 7556 
+newrec 1297 
+____ 1709 in 7556 
+newrec 1298 
+____ 1710 in 7556 
+newrec 1299 
+____ 1711 in 7556 
+newrec 1300 
+____ 1712 in 7556 
+newrec 1301 
+____ 1713 in 7556 
+newrec 1302 
+____ 1714 in 7556 
+newrec 1303 
+____ 1715 in 7556 
+newrec 1304 
+____ 1716 in 7556 
+newrec 1305 
+____ 1717 in 7556 
+newrec 1306 
+____ 1718 in 7556 
+newrec 1307 
+____ 1719 in 7556 
+newrec 1308 
+____ 1720 in 7556 
+newrec 1309 
+____ 1721 in 7556 
+newrec 1310 
+____ 1722 in 7556 
+newrec 1311 
+____ 1723 in 7556 
+newrec 1312 
+____ 1724 in 7556 
+newrec 1313 
+____ 1725 in 7556 
+newrec 1314 
+____ 1726 in 7556 
+newrec 1315 
+____ 1727 in 7556 
+newrec 1316 
+____ 1728 in 7556 
+newrec 1317 
+____ 1729 in 7556 
+newrec 1318 
+____ 1730 in 7556 
+newrec 1319 
+____ 1731 in 7556 
+newrec 1320 
+____ 1732 in 7556 
+newrec 1321 
+____ 1733 in 7556 
+newrec 1322 
+____ 1734 in 7556 
+newrec 1323 
+____ 1735 in 7556 
+newrec 1324 
+____ 1736 in 7556 
+newrec 1325 
+____ 1737 in 7556 
+newrec 1326 
+____ 1738 in 7556 
+newrec 1327 
+____ 1739 in 7556 
+newrec 1328 
+____ 1740 in 7556 
+newrec 1329 
+____ 1741 in 7556 
+newrec 1330 
+____ 1742 in 7556 
+newrec 1331 
+____ 1743 in 7556 
+newrec 1332 
+____ 1744 in 7556 
+newrec 1333 
+____ 1745 in 7556 
+newrec 1334 
+____ 1746 in 7556 
+newrec 1335 
+____ 1747 in 7556 
+newrec 1336 
+____ 1748 in 7556 
+newrec 1337 
+____ 1749 in 7556 
+newrec 1338 
+____ 1750 in 7556 
+newrec 1339 
+____ 1751 in 7556 
+newrec 1340 
+____ 1752 in 7556 
+newrec 1341 
+____ 1753 in 7556 
+newrec 1342 
+____ 1754 in 7556 
+newrec 1343 
+____ 1755 in 7556 
+newrec 1344 
+____ 1756 in 7556 
+newrec 1345 
+____ 1757 in 7556 
+newrec 1346 
+____ 1758 in 7556 
+newrec 1347 
+____ 1759 in 7556 
+newrec 1348 
+____ 1760 in 7556 
+newrec 1349 
+____ 1761 in 7556 
+newrec 1350 
+____ 1762 in 7556 
+newrec 1351 
+____ 1763 in 7556 
+newrec 1352 
+____ 1764 in 7556 
+newrec 1353 
+____ 1765 in 7556 
+newrec 1354 
+____ 1766 in 7556 
+newrec 1355 
+____ 1767 in 7556 
+newrec 1356 
+____ 1768 in 7556 
+newrec 1357 
+____ 1769 in 7556 
+newrec 1358 
+____ 1770 in 7556 
+newrec 1359 
+____ 1771 in 7556 
+newrec 1360 
+____ 1772 in 7556 
+newrec 1361 
+____ 1773 in 7556 
+newrec 1362 
+____ 1774 in 7556 
+newrec 1363 
+____ 1775 in 7556 
+newrec 1364 
+____ 1776 in 7556 
+newrec 1365 
+____ 1777 in 7556 
+newrec 1366 
+____ 1778 in 7556 
+newrec 1367 
+____ 1779 in 7556 
+newrec 1368 
+____ 1780 in 7556 
+newrec 1369 
+____ 1781 in 7556 
+newrec 1370 
+____ 1782 in 7556 
+newrec 1371 
+____ 1783 in 7556 
+newrec 1372 
+____ 1784 in 7556 
+newrec 1373 
+____ 1785 in 7556 
+newrec 1374 
+____ 1786 in 7556 
+newrec 1375 
+____ 1787 in 7556 
+newrec 1376 
+____ 1788 in 7556 
+newrec 1377 
+____ 1789 in 7556 
+newrec 1378 
+____ 1790 in 7556 
+newrec 1379 
+____ 1791 in 7556 
+newrec 1380 
+____ 1792 in 7556 
+newrec 1381 
+____ 1793 in 7556 
+newrec 1382 
+____ 1794 in 7556 
+newrec 1383 
+____ 1795 in 7556 
+newrec 1384 
+____ 1796 in 7556 
+newrec 1385 
+____ 1797 in 7556 
+newrec 1386 
+____ 1798 in 7556 
+newrec 1387 
+____ 1799 in 7556 
+newrec 1388 
+____ 1800 in 7556 
+newrec 1389 
+____ 1801 in 7556 
+newrec 1390 
+____ 1802 in 7556 
+newrec 1391 
+____ 1803 in 7556 
+newrec 1392 
+____ 1804 in 7556 
+newrec 1393 
+____ 1805 in 7556 
+newrec 1394 
+____ 1806 in 7556 
+newrec 1395 
+____ 1807 in 7556 
+newrec 1396 
+____ 1808 in 7556 
+newrec 1397 
+____ 1809 in 7556 
+newrec 1398 
+____ 1810 in 7556 
+newrec 1399 
+____ 1811 in 7556 
+newrec 1400 
+____ 1812 in 7556 
+newrec 1401 
+____ 1813 in 7556 
+newrec 1402 
+____ 1814 in 7556 
+newrec 1403 
+____ 1815 in 7556 
+newrec 1404 
+____ 1816 in 7556 
+newrec 1405 
+____ 1817 in 7556 
+newrec 1406 
+____ 1818 in 7556 
+newrec 1407 
+____ 1819 in 7556 
+newrec 1408 
+____ 1820 in 7556 
+newrec 1409 
+____ 1821 in 7556 
+newrec 1410 
+____ 1822 in 7556 
+newrec 1411 
+____ 1823 in 7556 
+newrec 1412 
+____ 1824 in 7556 
+newrec 1413 
+____ 1825 in 7556 
+newrec 1414 
+____ 1826 in 7556 
+newrec 1415 
+____ 1827 in 7556 
+newrec 1416 
+____ 1829 in 7556 
+newrec 1417 
+____ 1830 in 7556 
+newrec 1418 
+____ 1832 in 7556 
+newrec 1419 
+____ 1833 in 7556 
+newrec 1420 
+____ 1834 in 7556 
+newrec 1421 
+____ 1835 in 7556 
+newrec 1422 
+____ 1837 in 7556 
+newrec 1423 
+____ 1838 in 7556 
+newrec 1424 
+____ 1840 in 7556 
+newrec 1425 
+____ 1842 in 7556 
+newrec 1426 
+____ 1844 in 7556 
+newrec 1427 
+____ 1846 in 7556 
+newrec 1428 
+____ 1847 in 7556 
+newrec 1429 
+____ 1849 in 7556 
+newrec 1430 
+____ 1850 in 7556 
+newrec 1431 
+____ 1851 in 7556 
+newrec 1432 
+____ 1852 in 7556 
+newrec 1433 
+____ 1853 in 7556 
+newrec 1434 
+____ 1854 in 7556 
+newrec 1435 
+____ 1855 in 7556 
+newrec 1436 
+____ 1856 in 7556 
+newrec 1437 
+____ 1857 in 7556 
+newrec 1438 
+____ 1858 in 7556 
+____ 1859 in 7556 
+newrec 1439 
+____ 1860 in 7556 
+newrec 1440 
+____ 1861 in 7556 
+newrec 1441 
+____ 1862 in 7556 
+newrec 1442 
+____ 1863 in 7556 
+newrec 1443 
+____ 1865 in 7556 
+newrec 1444 
+____ 1866 in 7556 
+newrec 1445 
+____ 1867 in 7556 
+newrec 1446 
+____ 1868 in 7556 
+newrec 1447 
+____ 1869 in 7556 
+newrec 1448 
+____ 1870 in 7556 
+newrec 1449 
+____ 1872 in 7556 
+newrec 1450 
+____ 1873 in 7556 
+newrec 1451 
+____ 1874 in 7556 
+newrec 1452 
+____ 1876 in 7556 
+newrec 1453 
+____ 1877 in 7556 
+newrec 1454 
+____ 1879 in 7556 
+newrec 1455 
+____ 1881 in 7556 
+newrec 1456 
+____ 1882 in 7556 
+newrec 1457 
+____ 1883 in 7556 
+newrec 1458 
+____ 1884 in 7556 
+newrec 1459 
+____ 1886 in 7556 
+newrec 1460 
+____ 1888 in 7556 
+newrec 1461 
+____ 1889 in 7556 
+newrec 1462 
+____ 1890 in 7556 
+newrec 1463 
+____ 1891 in 7556 
+newrec 1464 
+____ 1892 in 7556 
+newrec 1465 
+____ 1893 in 7556 
+____ 1894 in 7556 
+newrec 1466 
+____ 1895 in 7556 
+newrec 1467 
+____ 1896 in 7556 
+newrec 1468 
+____ 1897 in 7556 
+newrec 1469 
+____ 1898 in 7556 
+newrec 1470 
+____ 1899 in 7556 
+newrec 1471 
+____ 1900 in 7556 
+newrec 1472 
+____ 1901 in 7556 
+newrec 1473 
+____ 1903 in 7556 
+newrec 1474 
+____ 1904 in 7556 
+newrec 1475 
+____ 1906 in 7556 
+newrec 1476 
+____ 1907 in 7556 
+newrec 1477 
+____ 1909 in 7556 
+newrec 1478 
+____ 1910 in 7556 
+newrec 1479 
+____ 1912 in 7556 
+newrec 1480 
+____ 1913 in 7556 
+newrec 1481 
+____ 1915 in 7556 
+newrec 1482 
+____ 1916 in 7556 
+newrec 1483 
+____ 1917 in 7556 
+newrec 1484 
+____ 1918 in 7556 
+newrec 1485 
+____ 1919 in 7556 
+newrec 1486 
+____ 1920 in 7556 
+____ 1921 in 7556 
+newrec 1487 
+____ 1923 in 7556 
+newrec 1488 
+____ 1925 in 7556 
+newrec 1489 
+____ 1926 in 7556 
+newrec 1490 
+____ 1927 in 7556 
+newrec 1491 
+____ 1928 in 7556 
+newrec 1492 
+____ 1929 in 7556 
+newrec 1493 
+____ 1930 in 7556 
+newrec 1494 
+____ 1931 in 7556 
+newrec 1495 
+____ 1933 in 7556 
+newrec 1496 
+____ 1934 in 7556 
+newrec 1497 
+____ 1936 in 7556 
+newrec 1498 
+____ 1938 in 7556 
+newrec 1499 
+____ 1939 in 7556 
+newrec 1500 
+____ 1941 in 7556 
+newrec 1501 
+____ 1942 in 7556 
+newrec 1502 
+____ 1944 in 7556 
+newrec 1503 
+____ 1945 in 7556 
+newrec 1504 
+____ 1946 in 7556 
+newrec 1505 
+____ 1947 in 7556 
+newrec 1506 
+____ 1948 in 7556 
+newrec 1507 
+____ 1949 in 7556 
+newrec 1508 
+____ 1950 in 7556 
+newrec 1509 
+____ 1951 in 7556 
+newrec 1510 
+____ 1952 in 7556 
+newrec 1511 
+____ 1953 in 7556 
+newrec 1512 
+____ 1954 in 7556 
+newrec 1513 
+____ 1955 in 7556 
+newrec 1514 
+____ 1956 in 7556 
+newrec 1515 
+____ 1957 in 7556 
+newrec 1516 
+____ 1958 in 7556 
+newrec 1517 
+____ 1959 in 7556 
+newrec 1518 
+____ 1960 in 7556 
+newrec 1519 
+____ 1961 in 7556 
+newrec 1520 
+____ 1962 in 7556 
+newrec 1521 
+____ 1963 in 7556 
+newrec 1522 
+____ 1964 in 7556 
+newrec 1523 
+____ 1965 in 7556 
+newrec 1524 
+____ 1966 in 7556 
+newrec 1525 
+____ 1967 in 7556 
+newrec 1526 
+____ 1968 in 7556 
+newrec 1527 
+____ 1969 in 7556 
+newrec 1528 
+____ 1970 in 7556 
+newrec 1529 
+____ 1971 in 7556 
+newrec 1530 
+____ 1972 in 7556 
+newrec 1531 
+____ 1973 in 7556 
+newrec 1532 
+____ 1974 in 7556 
+newrec 1533 
+____ 1975 in 7556 
+newrec 1534 
+____ 1976 in 7556 
+newrec 1535 
+____ 1977 in 7556 
+newrec 1536 
+____ 1978 in 7556 
+newrec 1537 
+____ 1979 in 7556 
+newrec 1538 
+____ 1980 in 7556 
+newrec 1539 
+____ 1981 in 7556 
+newrec 1540 
+____ 1982 in 7556 
+newrec 1541 
+____ 1983 in 7556 
+newrec 1542 
+____ 1985 in 7556 
+newrec 1543 
+____ 1987 in 7556 
+newrec 1544 
+____ 1989 in 7556 
+newrec 1545 
+____ 1990 in 7556 
+newrec 1546 
+____ 1991 in 7556 
+newrec 1547 
+____ 1992 in 7556 
+newrec 1548 
+____ 1993 in 7556 
+newrec 1549 
+____ 1994 in 7556 
+newrec 1550 
+____ 1996 in 7556 
+newrec 1551 
+____ 1997 in 7556 
+newrec 1552 
+____ 1999 in 7556 
+newrec 1553 
+____ 2000 in 7556 
+newrec 1554 
+____ 2001 in 7556 
+newrec 1555 
+____ 2002 in 7556 
+newrec 1556 
+____ 2003 in 7556 
+newrec 1557 
+____ 2005 in 7556 
+newrec 1558 
+____ 2006 in 7556 
+newrec 1559 
+____ 2007 in 7556 
+newrec 1560 
+____ 2008 in 7556 
+newrec 1561 
+____ 2009 in 7556 
+newrec 1562 
+____ 2010 in 7556 
+newrec 1563 
+____ 2011 in 7556 
+newrec 1564 
+____ 2013 in 7556 
+newrec 1565 
+____ 2014 in 7556 
+newrec 1566 
+____ 2016 in 7556 
+newrec 1567 
+____ 2017 in 7556 
+newrec 1568 
+____ 2018 in 7556 
+newrec 1569 
+____ 2019 in 7556 
+newrec 1570 
+____ 2021 in 7556 
+newrec 1571 
+____ 2022 in 7556 
+newrec 1572 
+____ 2023 in 7556 
+newrec 1573 
+____ 2024 in 7556 
+newrec 1574 
+____ 2025 in 7556 
+newrec 1575 
+____ 2026 in 7556 
+newrec 1576 
+____ 2027 in 7556 
+newrec 1577 
+____ 2028 in 7556 
+newrec 1578 
+____ 2029 in 7556 
+newrec 1579 
+____ 2030 in 7556 
+newrec 1580 
+____ 2031 in 7556 
+newrec 1581 
+____ 2032 in 7556 
+newrec 1582 
+____ 2033 in 7556 
+newrec 1583 
+____ 2034 in 7556 
+____ 2035 in 7556 
+newrec 1584 
+____ 2036 in 7556 
+newrec 1585 
+____ 2038 in 7556 
+newrec 1586 
+____ 2039 in 7556 
+newrec 1587 
+____ 2040 in 7556 
+newrec 1588 
+____ 2041 in 7556 
+newrec 1589 
+____ 2042 in 7556 
+newrec 1590 
+____ 2044 in 7556 
+newrec 1591 
+____ 2045 in 7556 
+newrec 1592 
+____ 2046 in 7556 
+newrec 1593 
+____ 2047 in 7556 
+newrec 1594 
+____ 2048 in 7556 
+newrec 1595 
+____ 2049 in 7556 
+newrec 1596 
+____ 2050 in 7556 
+newrec 1597 
+____ 2051 in 7556 
+newrec 1598 
+____ 2052 in 7556 
+newrec 1599 
+____ 2053 in 7556 
+newrec 1600 
+____ 2054 in 7556 
+newrec 1601 
+____ 2058 in 7556 
+newrec 1602 
+____ 2062 in 7556 
+newrec 1603 
+____ 2063 in 7556 
+newrec 1604 
+____ 2064 in 7556 
+newrec 1605 
+____ 2065 in 7556 
+newrec 1606 
+____ 2066 in 7556 
+newrec 1607 
+____ 2067 in 7556 
+newrec 1608 
+____ 2068 in 7556 
+newrec 1609 
+____ 2069 in 7556 
+newrec 1610 
+____ 2070 in 7556 
+newrec 1611 
+____ 2071 in 7556 
+newrec 1612 
+____ 2072 in 7556 
+newrec 1613 
+____ 2073 in 7556 
+newrec 1614 
+____ 2074 in 7556 
+newrec 1615 
+____ 2075 in 7556 
+newrec 1616 
+____ 2076 in 7556 
+newrec 1617 
+____ 2077 in 7556 
+newrec 1618 
+____ 2078 in 7556 
+newrec 1619 
+____ 2079 in 7556 
+newrec 1620 
+____ 2080 in 7556 
+newrec 1621 
+____ 2081 in 7556 
+newrec 1622 
+____ 2082 in 7556 
+newrec 1623 
+____ 2083 in 7556 
+newrec 1624 
+____ 2084 in 7556 
+newrec 1625 
+____ 2085 in 7556 
+newrec 1626 
+____ 2086 in 7556 
+newrec 1627 
+____ 2087 in 7556 
+newrec 1628 
+____ 2088 in 7556 
+newrec 1629 
+____ 2089 in 7556 
+newrec 1630 
+____ 2090 in 7556 
+newrec 1631 
+____ 2091 in 7556 
+newrec 1632 
+____ 2092 in 7556 
+____ 2093 in 7556 
+newrec 1633 
+____ 2094 in 7556 
+newrec 1634 
+____ 2095 in 7556 
+newrec 1635 
+____ 2096 in 7556 
+newrec 1636 
+____ 2097 in 7556 
+newrec 1637 
+____ 2098 in 7556 
+newrec 1638 
+____ 2099 in 7556 
+newrec 1639 
+____ 2100 in 7556 
+newrec 1640 
+____ 2101 in 7556 
+newrec 1641 
+____ 2102 in 7556 
+newrec 1642 
+____ 2103 in 7556 
+newrec 1643 
+____ 2104 in 7556 
+newrec 1644 
+____ 2105 in 7556 
+newrec 1645 
+____ 2108 in 7556 
+newrec 1646 
+____ 2110 in 7556 
+newrec 1647 
+____ 2112 in 7556 
+newrec 1648 
+____ 2114 in 7556 
+newrec 1649 
+____ 2115 in 7556 
+____ 2116 in 7556 
+newrec 1650 
+____ 2117 in 7556 
+newrec 1651 
+____ 2118 in 7556 
+____ 2119 in 7556 
+newrec 1652 
+____ 2120 in 7556 
+____ 2121 in 7556 
+newrec 1653 
+____ 2122 in 7556 
+newrec 1654 
+____ 2123 in 7556 
+newrec 1655 
+____ 2124 in 7556 
+newrec 1656 
+____ 2125 in 7556 
+newrec 1657 
+____ 2126 in 7556 
+newrec 1658 
+____ 2127 in 7556 
+newrec 1659 
+____ 2128 in 7556 
+newrec 1660 
+____ 2129 in 7556 
+newrec 1661 
+____ 2130 in 7556 
+newrec 1662 
+____ 2131 in 7556 
+newrec 1663 
+____ 2132 in 7556 
+newrec 1664 
+____ 2133 in 7556 
+newrec 1665 
+____ 2134 in 7556 
+newrec 1666 
+____ 2135 in 7556 
+newrec 1667 
+____ 2136 in 7556 
+newrec 1668 
+____ 2137 in 7556 
+newrec 1669 
+____ 2138 in 7556 
+newrec 1670 
+____ 2139 in 7556 
+newrec 1671 
+____ 2140 in 7556 
+newrec 1672 
+____ 2141 in 7556 
+newrec 1673 
+____ 2142 in 7556 
+newrec 1674 
+____ 2143 in 7556 
+newrec 1675 
+____ 2144 in 7556 
+newrec 1676 
+____ 2145 in 7556 
+newrec 1677 
+____ 2146 in 7556 
+newrec 1678 
+____ 2149 in 7556 
+newrec 1679 
+____ 2151 in 7556 
+newrec 1680 
+____ 2152 in 7556 
+newrec 1681 
+____ 2153 in 7556 
+newrec 1682 
+____ 2154 in 7556 
+newrec 1683 
+____ 2155 in 7556 
+newrec 1684 
+____ 2156 in 7556 
+newrec 1685 
+____ 2158 in 7556 
+newrec 1686 
+____ 2159 in 7556 
+newrec 1687 
+____ 2160 in 7556 
+newrec 1688 
+____ 2161 in 7556 
+newrec 1689 
+____ 2162 in 7556 
+newrec 1690 
+____ 2163 in 7556 
+newrec 1691 
+____ 2165 in 7556 
+newrec 1692 
+____ 2167 in 7556 
+newrec 1693 
+____ 2168 in 7556 
+newrec 1694 
+____ 2169 in 7556 
+newrec 1695 
+____ 2170 in 7556 
+newrec 1696 
+____ 2171 in 7556 
+newrec 1697 
+____ 2172 in 7556 
+newrec 1698 
+____ 2173 in 7556 
+newrec 1699 
+____ 2174 in 7556 
+newrec 1700 
+____ 2175 in 7556 
+newrec 1701 
+____ 2176 in 7556 
+newrec 1702 
+____ 2178 in 7556 
+newrec 1703 
+____ 2180 in 7556 
+newrec 1704 
+____ 2182 in 7556 
+newrec 1705 
+____ 2184 in 7556 
+newrec 1706 
+____ 2186 in 7556 
+newrec 1707 
+____ 2188 in 7556 
+newrec 1708 
+____ 2190 in 7556 
+newrec 1709 
+____ 2192 in 7556 
+newrec 1710 
+____ 2194 in 7556 
+newrec 1711 
+____ 2196 in 7556 
+newrec 1712 
+____ 2198 in 7556 
+newrec 1713 
+____ 2200 in 7556 
+newrec 1714 
+____ 2202 in 7556 
+newrec 1715 
+____ 2204 in 7556 
+newrec 1716 
+____ 2206 in 7556 
+newrec 1717 
+____ 2208 in 7556 
+newrec 1718 
+____ 2210 in 7556 
+newrec 1719 
+____ 2212 in 7556 
+newrec 1720 
+____ 2214 in 7556 
+newrec 1721 
+____ 2216 in 7556 
+newrec 1722 
+____ 2218 in 7556 
+newrec 1723 
+____ 2220 in 7556 
+newrec 1724 
+____ 2222 in 7556 
+newrec 1725 
+____ 2224 in 7556 
+newrec 1726 
+____ 2226 in 7556 
+newrec 1727 
+____ 2228 in 7556 
+newrec 1728 
+____ 2229 in 7556 
+newrec 1729 
+____ 2231 in 7556 
+newrec 1730 
+____ 2233 in 7556 
+newrec 1731 
+____ 2234 in 7556 
+newrec 1732 
+____ 2235 in 7556 
+newrec 1733 
+____ 2236 in 7556 
+newrec 1734 
+____ 2238 in 7556 
+newrec 1735 
+____ 2240 in 7556 
+newrec 1736 
+____ 2242 in 7556 
+newrec 1737 
+____ 2243 in 7556 
+newrec 1738 
+____ 2245 in 7556 
+newrec 1739 
+____ 2246 in 7556 
+newrec 1740 
+____ 2247 in 7556 
+newrec 1741 
+____ 2248 in 7556 
+newrec 1742 
+____ 2249 in 7556 
+newrec 1743 
+____ 2250 in 7556 
+____ 2252 in 7556 
+newrec 1744 
+____ 2254 in 7556 
+newrec 1745 
+____ 2255 in 7556 
+newrec 1746 
+____ 2256 in 7556 
+newrec 1747 
+____ 2257 in 7556 
+newrec 1748 
+____ 2258 in 7556 
+newrec 1749 
+____ 2260 in 7556 
+newrec 1750 
+____ 2262 in 7556 
+newrec 1751 
+____ 2263 in 7556 
+newrec 1752 
+____ 2264 in 7556 
+newrec 1753 
+____ 2266 in 7556 
+newrec 1754 
+____ 2267 in 7556 
+newrec 1755 
+____ 2268 in 7556 
+newrec 1756 
+____ 2270 in 7556 
+newrec 1757 
+____ 2271 in 7556 
+newrec 1758 
+____ 2272 in 7556 
+newrec 1759 
+____ 2274 in 7556 
+newrec 1760 
+____ 2276 in 7556 
+newrec 1761 
+____ 2277 in 7556 
+newrec 1762 
+____ 2278 in 7556 
+newrec 1763 
+____ 2280 in 7556 
+newrec 1764 
+____ 2282 in 7556 
+newrec 1765 
+____ 2284 in 7556 
+newrec 1766 
+____ 2285 in 7556 
+newrec 1767 
+____ 2286 in 7556 
+newrec 1768 
+____ 2288 in 7556 
+newrec 1769 
+____ 2290 in 7556 
+newrec 1770 
+____ 2291 in 7556 
+newrec 1771 
+____ 2292 in 7556 
+newrec 1772 
+____ 2293 in 7556 
+newrec 1773 
+____ 2294 in 7556 
+newrec 1774 
+____ 2296 in 7556 
+newrec 1775 
+____ 2298 in 7556 
+newrec 1776 
+____ 2300 in 7556 
+newrec 1777 
+____ 2302 in 7556 
+newrec 1778 
+____ 2304 in 7556 
+newrec 1779 
+____ 2305 in 7556 
+newrec 1780 
+____ 2306 in 7556 
+newrec 1781 
+____ 2308 in 7556 
+newrec 1782 
+____ 2310 in 7556 
+newrec 1783 
+____ 2312 in 7556 
+newrec 1784 
+____ 2314 in 7556 
+newrec 1785 
+____ 2315 in 7556 
+newrec 1786 
+____ 2316 in 7556 
+newrec 1787 
+____ 2319 in 7556 
+newrec 1788 
+____ 2320 in 7556 
+newrec 1789 
+____ 2322 in 7556 
+newrec 1790 
+____ 2323 in 7556 
+newrec 1791 
+____ 2324 in 7556 
+newrec 1792 
+____ 2325 in 7556 
+newrec 1793 
+____ 2326 in 7556 
+newrec 1794 
+____ 2327 in 7556 
+newrec 1795 
+____ 2328 in 7556 
+newrec 1796 
+____ 2329 in 7556 
+newrec 1797 
+____ 2330 in 7556 
+newrec 1798 
+____ 2331 in 7556 
+newrec 1799 
+____ 2333 in 7556 
+newrec 1800 
+____ 2334 in 7556 
+newrec 1801 
+____ 2336 in 7556 
+newrec 1802 
+____ 2337 in 7556 
+newrec 1803 
+____ 2338 in 7556 
+newrec 1804 
+____ 2339 in 7556 
+newrec 1805 
+____ 2340 in 7556 
+newrec 1806 
+____ 2342 in 7556 
+newrec 1807 
+____ 2344 in 7556 
+newrec 1808 
+____ 2345 in 7556 
+newrec 1809 
+____ 2346 in 7556 
+newrec 1810 
+____ 2347 in 7556 
+newrec 1811 
+____ 2349 in 7556 
+newrec 1812 
+____ 2350 in 7556 
+newrec 1813 
+____ 2352 in 7556 
+newrec 1814 
+____ 2353 in 7556 
+newrec 1815 
+____ 2355 in 7556 
+newrec 1816 
+____ 2356 in 7556 
+newrec 1817 
+____ 2357 in 7556 
+newrec 1818 
+____ 2358 in 7556 
+newrec 1819 
+____ 2360 in 7556 
+____ 2361 in 7556 
+newrec 1820 
+____ 2362 in 7556 
+newrec 1821 
+____ 2363 in 7556 
+newrec 1822 
+____ 2364 in 7556 
+newrec 1823 
+____ 2365 in 7556 
+____ 2366 in 7556 
+newrec 1824 
+____ 2367 in 7556 
+newrec 1825 
+____ 2368 in 7556 
+newrec 1826 
+____ 2371 in 7556 
+newrec 1827 
+____ 2372 in 7556 
+newrec 1828 
+____ 2373 in 7556 
+newrec 1829 
+____ 2374 in 7556 
+newrec 1830 
+____ 2376 in 7556 
+newrec 1831 
+____ 2377 in 7556 
+newrec 1832 
+____ 2379 in 7556 
+newrec 1833 
+____ 2380 in 7556 
+newrec 1834 
+____ 2381 in 7556 
+newrec 1835 
+____ 2382 in 7556 
+newrec 1836 
+____ 2383 in 7556 
+newrec 1837 
+____ 2384 in 7556 
+newrec 1838 
+____ 2385 in 7556 
+newrec 1839 
+____ 2386 in 7556 
+____ 2387 in 7556 
+newrec 1840 
+____ 2388 in 7556 
+newrec 1841 
+____ 2389 in 7556 
+newrec 1842 
+____ 2390 in 7556 
+newrec 1843 
+____ 2391 in 7556 
+newrec 1844 
+____ 2392 in 7556 
+newrec 1845 
+____ 2393 in 7556 
+newrec 1846 
+____ 2394 in 7556 
+newrec 1847 
+____ 2395 in 7556 
+newrec 1848 
+____ 2396 in 7556 
+newrec 1849 
+____ 2398 in 7556 
+newrec 1850 
+____ 2399 in 7556 
+newrec 1851 
+____ 2400 in 7556 
+newrec 1852 
+____ 2401 in 7556 
+newrec 1853 
+____ 2402 in 7556 
+newrec 1854 
+____ 2404 in 7556 
+newrec 1855 
+____ 2405 in 7556 
+newrec 1856 
+____ 2407 in 7556 
+newrec 1857 
+____ 2408 in 7556 
+newrec 1858 
+____ 2410 in 7556 
+newrec 1859 
+____ 2412 in 7556 
+newrec 1860 
+____ 2413 in 7556 
+newrec 1861 
+____ 2414 in 7556 
+newrec 1862 
+____ 2415 in 7556 
+newrec 1863 
+____ 2416 in 7556 
+newrec 1864 
+____ 2417 in 7556 
+newrec 1865 
+____ 2419 in 7556 
+newrec 1866 
+____ 2421 in 7556 
+newrec 1867 
+____ 2423 in 7556 
+newrec 1868 
+____ 2424 in 7556 
+newrec 1869 
+____ 2425 in 7556 
+newrec 1870 
+____ 2426 in 7556 
+newrec 1871 
+____ 2427 in 7556 
+newrec 1872 
+____ 2428 in 7556 
+newrec 1873 
+____ 2429 in 7556 
+newrec 1874 
+____ 2430 in 7556 
+newrec 1875 
+____ 2431 in 7556 
+newrec 1876 
+____ 2432 in 7556 
+newrec 1877 
+____ 2433 in 7556 
+newrec 1878 
+____ 2434 in 7556 
+newrec 1879 
+____ 2435 in 7556 
+newrec 1880 
+____ 2436 in 7556 
+newrec 1881 
+____ 2437 in 7556 
+newrec 1882 
+____ 2439 in 7556 
+newrec 1883 
+____ 2440 in 7556 
+newrec 1884 
+____ 2441 in 7556 
+newrec 1885 
+____ 2442 in 7556 
+newrec 1886 
+____ 2443 in 7556 
+newrec 1887 
+____ 2444 in 7556 
+newrec 1888 
+____ 2445 in 7556 
+newrec 1889 
+____ 2446 in 7556 
+newrec 1890 
+____ 2447 in 7556 
+newrec 1891 
+____ 2449 in 7556 
+newrec 1892 
+____ 2450 in 7556 
+newrec 1893 
+____ 2451 in 7556 
+newrec 1894 
+____ 2454 in 7556 
+newrec 1895 
+____ 2456 in 7556 
+newrec 1896 
+____ 2457 in 7556 
+newrec 1897 
+____ 2458 in 7556 
+newrec 1898 
+____ 2459 in 7556 
+newrec 1899 
+____ 2462 in 7556 
+newrec 1900 
+____ 2464 in 7556 
+newrec 1901 
+____ 2466 in 7556 
+newrec 1902 
+____ 2468 in 7556 
+newrec 1903 
+____ 2470 in 7556 
+newrec 1904 
+____ 2471 in 7556 
+newrec 1905 
+____ 2472 in 7556 
+newrec 1906 
+____ 2474 in 7556 
+newrec 1907 
+____ 2475 in 7556 
+newrec 1908 
+____ 2477 in 7556 
+newrec 1909 
+____ 2478 in 7556 
+newrec 1910 
+____ 2479 in 7556 
+____ 2480 in 7556 
+newrec 1911 
+____ 2481 in 7556 
+newrec 1912 
+____ 2482 in 7556 
+newrec 1913 
+____ 2483 in 7556 
+newrec 1914 
+____ 2484 in 7556 
+newrec 1915 
+____ 2486 in 7556 
+newrec 1916 
+____ 2487 in 7556 
+newrec 1917 
+____ 2489 in 7556 
+newrec 1918 
+____ 2490 in 7556 
+newrec 1919 
+____ 2492 in 7556 
+newrec 1920 
+____ 2494 in 7556 
+newrec 1921 
+____ 2495 in 7556 
+newrec 1922 
+____ 2496 in 7556 
+newrec 1923 
+____ 2497 in 7556 
+newrec 1924 
+____ 2498 in 7556 
+newrec 1925 
+____ 2499 in 7556 
+newrec 1926 
+____ 2500 in 7556 
+newrec 1927 
+____ 2501 in 7556 
+newrec 1928 
+____ 2502 in 7556 
+newrec 1929 
+____ 2503 in 7556 
+newrec 1930 
+____ 2504 in 7556 
+newrec 1931 
+____ 2505 in 7556 
+newrec 1932 
+____ 2506 in 7556 
+newrec 1933 
+____ 2507 in 7556 
+newrec 1934 
+____ 2508 in 7556 
+newrec 1935 
+____ 2509 in 7556 
+newrec 1936 
+____ 2510 in 7556 
+newrec 1937 
+____ 2511 in 7556 
+newrec 1938 
+____ 2512 in 7556 
+newrec 1939 
+____ 2513 in 7556 
+newrec 1940 
+____ 2514 in 7556 
+newrec 1941 
+____ 2515 in 7556 
+newrec 1942 
+____ 2516 in 7556 
+newrec 1943 
+____ 2517 in 7556 
+newrec 1944 
+____ 2518 in 7556 
+____ 2519 in 7556 
+newrec 1945 
+____ 2520 in 7556 
+____ 2521 in 7556 
+newrec 1946 
+____ 2522 in 7556 
+newrec 1947 
+____ 2523 in 7556 
+newrec 1948 
+____ 2524 in 7556 
+newrec 1949 
+____ 2525 in 7556 
+newrec 1950 
+____ 2526 in 7556 
+newrec 1951 
+____ 2527 in 7556 
+newrec 1952 
+____ 2528 in 7556 
+newrec 1953 
+____ 2531 in 7556 
+newrec 1954 
+____ 2532 in 7556 
+newrec 1955 
+____ 2533 in 7556 
+newrec 1956 
+____ 2535 in 7556 
+newrec 1957 
+____ 2536 in 7556 
+newrec 1958 
+____ 2538 in 7556 
+newrec 1959 
+____ 2541 in 7556 
+newrec 1960 
+____ 2542 in 7556 
+newrec 1961 
+____ 2543 in 7556 
+newrec 1962 
+____ 2544 in 7556 
+newrec 1963 
+____ 2546 in 7556 
+newrec 1964 
+____ 2548 in 7556 
+newrec 1965 
+____ 2550 in 7556 
+newrec 1966 
+____ 2551 in 7556 
+newrec 1967 
+____ 2552 in 7556 
+newrec 1968 
+____ 2553 in 7556 
+newrec 1969 
+____ 2554 in 7556 
+newrec 1970 
+____ 2555 in 7556 
+newrec 1971 
+____ 2556 in 7556 
+newrec 1972 
+____ 2559 in 7556 
+newrec 1973 
+____ 2560 in 7556 
+newrec 1974 
+____ 2562 in 7556 
+newrec 1975 
+____ 2563 in 7556 
+newrec 1976 
+____ 2565 in 7556 
+newrec 1977 
+____ 2566 in 7556 
+newrec 1978 
+____ 2567 in 7556 
+newrec 1979 
+____ 2568 in 7556 
+newrec 1980 
+____ 2569 in 7556 
+newrec 1981 
+____ 2570 in 7556 
+newrec 1982 
+____ 2572 in 7556 
+newrec 1983 
+____ 2573 in 7556 
+newrec 1984 
+____ 2575 in 7556 
+newrec 1985 
+____ 2576 in 7556 
+newrec 1986 
+____ 2577 in 7556 
+newrec 1987 
+____ 2578 in 7556 
+newrec 1988 
+____ 2579 in 7556 
+newrec 1989 
+____ 2580 in 7556 
+newrec 1990 
+____ 2581 in 7556 
+newrec 1991 
+____ 2582 in 7556 
+newrec 1992 
+____ 2583 in 7556 
+newrec 1993 
+____ 2584 in 7556 
+newrec 1994 
+____ 2585 in 7556 
+newrec 1995 
+____ 2586 in 7556 
+newrec 1996 
+____ 2587 in 7556 
+newrec 1997 
+____ 2588 in 7556 
+newrec 1998 
+____ 2589 in 7556 
+newrec 1999 
+____ 2590 in 7556 
+newrec 2000 
+____ 2591 in 7556 
+newrec 2001 
+____ 2592 in 7556 
+newrec 2002 
+____ 2593 in 7556 
+newrec 2003 
+____ 2594 in 7556 
+newrec 2004 
+____ 2595 in 7556 
+newrec 2005 
+____ 2596 in 7556 
+newrec 2006 
+____ 2597 in 7556 
+newrec 2007 
+____ 2598 in 7556 
+newrec 2008 
+____ 2599 in 7556 
+newrec 2009 
+____ 2600 in 7556 
+newrec 2010 
+____ 2601 in 7556 
+newrec 2011 
+____ 2602 in 7556 
+newrec 2012 
+____ 2603 in 7556 
+newrec 2013 
+____ 2604 in 7556 
+newrec 2014 
+____ 2605 in 7556 
+newrec 2015 
+____ 2607 in 7556 
+newrec 2016 
+____ 2608 in 7556 
+newrec 2017 
+____ 2610 in 7556 
+newrec 2018 
+____ 2611 in 7556 
+newrec 2019 
+____ 2613 in 7556 
+newrec 2020 
+____ 2614 in 7556 
+newrec 2021 
+____ 2616 in 7556 
+newrec 2022 
+____ 2618 in 7556 
+newrec 2023 
+____ 2620 in 7556 
+newrec 2024 
+____ 2622 in 7556 
+newrec 2025 
+____ 2623 in 7556 
+newrec 2026 
+____ 2624 in 7556 
+newrec 2027 
+____ 2626 in 7556 
+newrec 2028 
+____ 2627 in 7556 
+newrec 2029 
+____ 2628 in 7556 
+newrec 2030 
+____ 2629 in 7556 
+newrec 2031 
+____ 2630 in 7556 
+newrec 2032 
+____ 2631 in 7556 
+newrec 2033 
+____ 2632 in 7556 
+newrec 2034 
+____ 2635 in 7556 
+newrec 2035 
+____ 2637 in 7556 
+newrec 2036 
+____ 2638 in 7556 
+newrec 2037 
+____ 2640 in 7556 
+newrec 2038 
+____ 2642 in 7556 
+newrec 2039 
+____ 2643 in 7556 
+newrec 2040 
+____ 2644 in 7556 
+newrec 2041 
+____ 2645 in 7556 
+newrec 2042 
+____ 2646 in 7556 
+newrec 2043 
+____ 2647 in 7556 
+newrec 2044 
+____ 2648 in 7556 
+newrec 2045 
+____ 2649 in 7556 
+newrec 2046 
+____ 2650 in 7556 
+newrec 2047 
+____ 2651 in 7556 
+newrec 2048 
+____ 2652 in 7556 
+newrec 2049 
+____ 2653 in 7556 
+newrec 2050 
+____ 2654 in 7556 
+newrec 2051 
+____ 2655 in 7556 
+newrec 2052 
+____ 2656 in 7556 
+newrec 2053 
+____ 2657 in 7556 
+newrec 2054 
+____ 2658 in 7556 
+newrec 2055 
+____ 2659 in 7556 
+newrec 2056 
+____ 2660 in 7556 
+newrec 2057 
+____ 2661 in 7556 
+newrec 2058 
+____ 2662 in 7556 
+newrec 2059 
+____ 2663 in 7556 
+newrec 2060 
+____ 2664 in 7556 
+newrec 2061 
+____ 2665 in 7556 
+newrec 2062 
+____ 2666 in 7556 
+newrec 2063 
+____ 2667 in 7556 
+newrec 2064 
+____ 2668 in 7556 
+newrec 2065 
+____ 2669 in 7556 
+newrec 2066 
+____ 2670 in 7556 
+newrec 2067 
+____ 2671 in 7556 
+newrec 2068 
+____ 2672 in 7556 
+newrec 2069 
+____ 2673 in 7556 
+newrec 2070 
+____ 2674 in 7556 
+newrec 2071 
+____ 2675 in 7556 
+newrec 2072 
+____ 2676 in 7556 
+newrec 2073 
+____ 2677 in 7556 
+newrec 2074 
+____ 2678 in 7556 
+newrec 2075 
+____ 2679 in 7556 
+newrec 2076 
+____ 2680 in 7556 
+newrec 2077 
+____ 2681 in 7556 
+newrec 2078 
+____ 2682 in 7556 
+newrec 2079 
+____ 2683 in 7556 
+newrec 2080 
+____ 2685 in 7556 
+newrec 2081 
+____ 2686 in 7556 
+newrec 2082 
+____ 2688 in 7556 
+newrec 2083 
+____ 2690 in 7556 
+newrec 2084 
+____ 2691 in 7556 
+newrec 2085 
+____ 2692 in 7556 
+newrec 2086 
+____ 2693 in 7556 
+newrec 2087 
+____ 2694 in 7556 
+newrec 2088 
+____ 2695 in 7556 
+newrec 2089 
+____ 2696 in 7556 
+newrec 2090 
+____ 2697 in 7556 
+newrec 2091 
+____ 2698 in 7556 
+newrec 2092 
+____ 2699 in 7556 
+newrec 2093 
+____ 2700 in 7556 
+newrec 2094 
+____ 2702 in 7556 
+newrec 2095 
+____ 2704 in 7556 
+newrec 2096 
+____ 2706 in 7556 
+____ 2707 in 7556 
+newrec 2097 
+____ 2708 in 7556 
+newrec 2098 
+____ 2709 in 7556 
+newrec 2099 
+____ 2711 in 7556 
+newrec 2100 
+____ 2712 in 7556 
+newrec 2101 
+____ 2713 in 7556 
+newrec 2102 
+____ 2714 in 7556 
+newrec 2103 
+____ 2715 in 7556 
+newrec 2104 
+____ 2716 in 7556 
+newrec 2105 
+____ 2717 in 7556 
+newrec 2106 
+____ 2719 in 7556 
+newrec 2107 
+____ 2721 in 7556 
+newrec 2108 
+____ 2722 in 7556 
+newrec 2109 
+____ 2723 in 7556 
+newrec 2110 
+____ 2725 in 7556 
+newrec 2111 
+____ 2727 in 7556 
+newrec 2112 
+____ 2729 in 7556 
+newrec 2113 
+____ 2731 in 7556 
+newrec 2114 
+____ 2733 in 7556 
+newrec 2115 
+____ 2735 in 7556 
+newrec 2116 
+____ 2736 in 7556 
+newrec 2117 
+____ 2737 in 7556 
+newrec 2118 
+____ 2738 in 7556 
+newrec 2119 
+____ 2739 in 7556 
+newrec 2120 
+____ 2740 in 7556 
+newrec 2121 
+____ 2742 in 7556 
+newrec 2122 
+____ 2744 in 7556 
+newrec 2123 
+____ 2746 in 7556 
+newrec 2124 
+____ 2747 in 7556 
+newrec 2125 
+____ 2748 in 7556 
+newrec 2126 
+____ 2749 in 7556 
+newrec 2127 
+____ 2753 in 7556 
+newrec 2128 
+____ 2754 in 7556 
+newrec 2129 
+____ 2755 in 7556 
+newrec 2130 
+____ 2756 in 7556 
+newrec 2131 
+____ 2757 in 7556 
+newrec 2132 
+____ 2758 in 7556 
+newrec 2133 
+____ 2759 in 7556 
+newrec 2134 
+____ 2760 in 7556 
+newrec 2135 
+____ 2761 in 7556 
+newrec 2136 
+____ 2762 in 7556 
+newrec 2137 
+____ 2763 in 7556 
+newrec 2138 
+____ 2764 in 7556 
+newrec 2139 
+____ 2765 in 7556 
+newrec 2140 
+____ 2766 in 7556 
+newrec 2141 
+____ 2767 in 7556 
+newrec 2142 
+____ 2768 in 7556 
+newrec 2143 
+____ 2769 in 7556 
+newrec 2144 
+____ 2770 in 7556 
+newrec 2145 
+____ 2771 in 7556 
+newrec 2146 
+____ 2772 in 7556 
+newrec 2147 
+____ 2773 in 7556 
+newrec 2148 
+____ 2774 in 7556 
+newrec 2149 
+____ 2775 in 7556 
+newrec 2150 
+____ 2776 in 7556 
+newrec 2151 
+____ 2777 in 7556 
+newrec 2152 
+____ 2778 in 7556 
+newrec 2153 
+____ 2779 in 7556 
+newrec 2154 
+____ 2780 in 7556 
+newrec 2155 
+____ 2781 in 7556 
+newrec 2156 
+____ 2782 in 7556 
+newrec 2157 
+____ 2783 in 7556 
+newrec 2158 
+____ 2784 in 7556 
+newrec 2159 
+____ 2785 in 7556 
+newrec 2160 
+____ 2786 in 7556 
+newrec 2161 
+____ 2787 in 7556 
+newrec 2162 
+____ 2788 in 7556 
+newrec 2163 
+____ 2789 in 7556 
+newrec 2164 
+____ 2790 in 7556 
+newrec 2165 
+____ 2791 in 7556 
+newrec 2166 
+____ 2792 in 7556 
+newrec 2167 
+____ 2793 in 7556 
+newrec 2168 
+____ 2794 in 7556 
+newrec 2169 
+____ 2795 in 7556 
+newrec 2170 
+____ 2796 in 7556 
+newrec 2171 
+____ 2797 in 7556 
+newrec 2172 
+____ 2798 in 7556 
+newrec 2173 
+____ 2799 in 7556 
+newrec 2174 
+____ 2800 in 7556 
+newrec 2175 
+____ 2801 in 7556 
+newrec 2176 
+____ 2802 in 7556 
+newrec 2177 
+____ 2803 in 7556 
+newrec 2178 
+____ 2804 in 7556 
+newrec 2179 
+____ 2805 in 7556 
+newrec 2180 
+____ 2806 in 7556 
+newrec 2181 
+____ 2809 in 7556 
+newrec 2182 
+____ 2811 in 7556 
+newrec 2183 
+____ 2814 in 7556 
+newrec 2184 
+____ 2815 in 7556 
+newrec 2185 
+____ 2816 in 7556 
+newrec 2186 
+____ 2817 in 7556 
+newrec 2187 
+____ 2818 in 7556 
+newrec 2188 
+____ 2819 in 7556 
+newrec 2189 
+____ 2820 in 7556 
+____ 2821 in 7556 
+newrec 2190 
+____ 2822 in 7556 
+newrec 2191 
+____ 2823 in 7556 
+newrec 2192 
+____ 2824 in 7556 
+newrec 2193 
+____ 2825 in 7556 
+____ 2826 in 7556 
+newrec 2194 
+____ 2827 in 7556 
+newrec 2195 
+____ 2828 in 7556 
+newrec 2196 
+____ 2829 in 7556 
+newrec 2197 
+____ 2832 in 7556 
+newrec 2198 
+____ 2833 in 7556 
+newrec 2199 
+____ 2834 in 7556 
+newrec 2200 
+____ 2835 in 7556 
+newrec 2201 
+____ 2836 in 7556 
+newrec 2202 
+____ 2837 in 7556 
+newrec 2203 
+____ 2838 in 7556 
+newrec 2204 
+____ 2839 in 7556 
+newrec 2205 
+____ 2840 in 7556 
+newrec 2206 
+____ 2841 in 7556 
+newrec 2207 
+____ 2842 in 7556 
+newrec 2208 
+____ 2843 in 7556 
+newrec 2209 
+____ 2844 in 7556 
+newrec 2210 
+____ 2845 in 7556 
+newrec 2211 
+____ 2846 in 7556 
+newrec 2212 
+____ 2847 in 7556 
+newrec 2213 
+____ 2848 in 7556 
+newrec 2214 
+____ 2849 in 7556 
+newrec 2215 
+____ 2850 in 7556 
+____ 2852 in 7556 
+newrec 2216 
+____ 2853 in 7556 
+newrec 2217 
+____ 2854 in 7556 
+newrec 2218 
+____ 2855 in 7556 
+newrec 2219 
+____ 2856 in 7556 
+newrec 2220 
+____ 2857 in 7556 
+newrec 2221 
+____ 2858 in 7556 
+newrec 2222 
+____ 2859 in 7556 
+newrec 2223 
+____ 2860 in 7556 
+newrec 2224 
+____ 2861 in 7556 
+newrec 2225 
+____ 2862 in 7556 
+newrec 2226 
+____ 2863 in 7556 
+newrec 2227 
+____ 2864 in 7556 
+newrec 2228 
+____ 2865 in 7556 
+newrec 2229 
+____ 2866 in 7556 
+newrec 2230 
+____ 2867 in 7556 
+newrec 2231 
+____ 2868 in 7556 
+newrec 2232 
+____ 2869 in 7556 
+newrec 2233 
+____ 2870 in 7556 
+newrec 2234 
+____ 2872 in 7556 
+newrec 2235 
+____ 2873 in 7556 
+newrec 2236 
+____ 2874 in 7556 
+newrec 2237 
+____ 2875 in 7556 
+newrec 2238 
+____ 2876 in 7556 
+newrec 2239 
+____ 2877 in 7556 
+newrec 2240 
+____ 2878 in 7556 
+newrec 2241 
+____ 2879 in 7556 
+newrec 2242 
+____ 2880 in 7556 
+newrec 2243 
+____ 2881 in 7556 
+newrec 2244 
+____ 2882 in 7556 
+newrec 2245 
+____ 2884 in 7556 
+____ 2885 in 7556 
+newrec 2246 
+____ 2886 in 7556 
+newrec 2247 
+____ 2887 in 7556 
+newrec 2248 
+____ 2888 in 7556 
+newrec 2249 
+____ 2890 in 7556 
+newrec 2250 
+____ 2891 in 7556 
+newrec 2251 
+____ 2892 in 7556 
+newrec 2252 
+____ 2893 in 7556 
+newrec 2253 
+____ 2895 in 7556 
+newrec 2254 
+____ 2896 in 7556 
+newrec 2255 
+____ 2897 in 7556 
+newrec 2256 
+____ 2898 in 7556 
+newrec 2257 
+____ 2899 in 7556 
+newrec 2258 
+____ 2900 in 7556 
+newrec 2259 
+____ 2901 in 7556 
+____ 2902 in 7556 
+newrec 2260 
+____ 2903 in 7556 
+newrec 2261 
+____ 2905 in 7556 
+newrec 2262 
+____ 2906 in 7556 
+newrec 2263 
+____ 2907 in 7556 
+newrec 2264 
+____ 2909 in 7556 
+newrec 2265 
+____ 2910 in 7556 
+newrec 2266 
+____ 2911 in 7556 
+newrec 2267 
+____ 2912 in 7556 
+newrec 2268 
+____ 2913 in 7556 
+newrec 2269 
+____ 2914 in 7556 
+newrec 2270 
+____ 2915 in 7556 
+newrec 2271 
+____ 2916 in 7556 
+newrec 2272 
+____ 2917 in 7556 
+newrec 2273 
+____ 2918 in 7556 
+newrec 2274 
+____ 2919 in 7556 
+newrec 2275 
+____ 2920 in 7556 
+newrec 2276 
+____ 2921 in 7556 
+newrec 2277 
+____ 2922 in 7556 
+newrec 2278 
+____ 2923 in 7556 
+newrec 2279 
+____ 2924 in 7556 
+____ 2925 in 7556 
+newrec 2280 
+____ 2926 in 7556 
+newrec 2281 
+____ 2927 in 7556 
+newrec 2282 
+____ 2928 in 7556 
+____ 2929 in 7556 
+newrec 2283 
+____ 2930 in 7556 
+newrec 2284 
+____ 2932 in 7556 
+newrec 2285 
+____ 2934 in 7556 
+newrec 2286 
+____ 2936 in 7556 
+newrec 2287 
+____ 2938 in 7556 
+newrec 2288 
+____ 2939 in 7556 
+newrec 2289 
+____ 2941 in 7556 
+newrec 2290 
+____ 2942 in 7556 
+newrec 2291 
+____ 2944 in 7556 
+newrec 2292 
+____ 2946 in 7556 
+newrec 2293 
+____ 2950 in 7556 
+newrec 2294 
+____ 2951 in 7556 
+newrec 2295 
+____ 2952 in 7556 
+newrec 2296 
+____ 2953 in 7556 
+newrec 2297 
+____ 2954 in 7556 
+newrec 2298 
+____ 2955 in 7556 
+newrec 2299 
+____ 2956 in 7556 
+newrec 2300 
+____ 2957 in 7556 
+newrec 2301 
+____ 2958 in 7556 
+newrec 2302 
+____ 2959 in 7556 
+newrec 2303 
+____ 2960 in 7556 
+newrec 2304 
+____ 2961 in 7556 
+newrec 2305 
+____ 2962 in 7556 
+newrec 2306 
+____ 2963 in 7556 
+newrec 2307 
+____ 2964 in 7556 
+newrec 2308 
+____ 2965 in 7556 
+newrec 2309 
+____ 2966 in 7556 
+newrec 2310 
+____ 2967 in 7556 
+newrec 2311 
+____ 2968 in 7556 
+newrec 2312 
+____ 2969 in 7556 
+newrec 2313 
+____ 2970 in 7556 
+newrec 2314 
+____ 2971 in 7556 
+newrec 2315 
+____ 2974 in 7556 
+newrec 2316 
+____ 2975 in 7556 
+newrec 2317 
+____ 2978 in 7556 
+newrec 2318 
+____ 2982 in 7556 
+newrec 2319 
+____ 2983 in 7556 
+newrec 2320 
+____ 2984 in 7556 
+newrec 2321 
+____ 2985 in 7556 
+newrec 2322 
+____ 2986 in 7556 
+newrec 2323 
+____ 2987 in 7556 
+newrec 2324 
+____ 2988 in 7556 
+newrec 2325 
+____ 2989 in 7556 
+newrec 2326 
+____ 2990 in 7556 
+newrec 2327 
+____ 2991 in 7556 
+newrec 2328 

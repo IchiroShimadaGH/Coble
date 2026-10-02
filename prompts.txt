@@ -364,5 +364,113 @@ Reidemeister-Schreier をGAPでかいて.
 g1, \dots, gNのwordsの集合の形で書いて．
 （もちろん GからPGへの核も含むのね.）
 
+#########################
 
+
+GramLをGram行列にもつ偶格子 Lの自己同型群の部分集合OGgensがあたえられたとき，
+ OGgensで生成される O(L) の部分群 G の自然な準同型
+ O(L) to O(qL) (qLは Lのdiscriminant form ね)
+ による像のindex を求める関数 IsSurjOLtoOqL を書いたの.
+ sizeautはO(qL) のサイズ，
+ sizeimage Gの像のサイズね．
+ 批評して修正点を指摘して：
+
+IsSurjOLtoOqL:=function(OGgens, GramL) 
+  local discrec, discg, vs, aa, leng, tpermgens, 
+  tg, tqg, vstqg, ii, poss, sizeaut, ttv, sizeimage,
+  indeximage, bigmat, inibiis, OqLrec, issuujrec, beep;
+  #
+  beep:=function(beepnumb)
+    localbeep("IsSurjOLtoOqL", beepnumb); Error();
+  end;
+  #
+  discrec:=DiscriminantForm(GramL);
+  discg:=discrec.discg;
+  leng:=Length(discg);
+  vs:=Set(Cartesian(List(discg, aa->[0..aa-1])));
+  bigmat:=CopyNormalDiscf(TMTTmult(vs, discrec.discf));
+  inibiis:=List(IdentityMat(leng), tv->SinglePosition(vs, tv));
+  OqLrec:=AutDiscfByStabilizerChain(inibiis, bigmat);
+  sizeaut:=OqLrec.order;
+  #
+  tpermgens:=[];
+  for tg in OGgens do 
+    tqg:=OLtoOqL(tg, discrec);
+    vstqg:=List(vs*tqg, ttv->List([1..leng], ii-> (ttv[ii] mod discg[ii])));
+    poss:=List(vstqg, ttv->Position(vs, ttv));
+    Add(tpermgens, PermList(poss));
+  od;
+  sizeimage:=Size(Group(tpermgens));
+  indeximage:=sizeaut/sizeimage;
+  if not IsInt(indeximage) then beep(615825885); fi;
+  issuujrec:=rec(
+    sizeaut:=sizeaut, 
+    sizeimage:=sizeimage,
+    indeximage:=indeximage
+  );
+  return(issuujrec);
+end;
+
+#########################
+
+splitting conics がPicard 格子　S を有理数体 上span するような (S, h) を
+rank S<=7 で，変形同値を除いて，全部求めたいの．
+いままで見つかったのは重複も含めて全部
+ FoundShRecsOverLats
+ に書いてある．
+  FoundShRecsOverLatsはrecord shrec のリストで，
+ shrec .Trec には transcendental 格子 Tの同型類が書いてある．
+ rank S<=7なら結果として Trec.count=1 だから同型類は一個ね．
+ 
+ AutShByGramPで(S, h) の自己同型群の生成系を求めている．
+ DiscfImageIndexをつかって，この自己同型群が
+Aut(discriminant form of S) に全射に写像されるか調べている．
+もし全射なら，SとTの張り合わせ方は mod 自己同型で unique だから
+ (S, h) だけで変形同値類は定まる．
+ （もし全射でないならあとで考えることにする．
+ thespecialShrecsとして傍に寄せてある．）
+ 
+  FoundShRecsOverLatsから
+  それまでtheShrecsに登録されているものと同型かどうかを
+  IsIsomShsByGramPをつかってしらべている．
+  もしどれとも同型でなければ recordをつくってtheShrecsに登録．
+  
+  
+    splitting conics がPicard 格子　S を有理数体 上span しないものを取り除いて，
+    上の作業を行うのが
+    "Task20261002Ua.g"
+    
+    添削おねがい．
+    
+    ###########
+    
+修正した，あなたはかしこい！
+もういっぺん添削！
+
+    Simon Brandhorst and Davide Cesare Veniani. Hensel lifting algorithms for quadratic forms.
+Math. Comp., 93(348):1963–1991, 2024.
+
+###########
+不定符号偶格子 L が与えられた時，
+L の自己同型群 O(L) から
+Aut(discriminant form of L) 
+への自然な準同型が全射かどうか確かめるアルゴリズムを
+GAP で書いて
+
+
+「不定符号偶格子 Lのdiscriminant group をA_L,
+その長さを leng (A_L) として
+rank L >= leng (A_L)+2 なら
+L の自己同型群 O(L) から
+Aut(discriminant form of L) 
+への自然な準同型が全射」
+は正しい？
+
+
+
+###########
+
+
+
+ 
 
