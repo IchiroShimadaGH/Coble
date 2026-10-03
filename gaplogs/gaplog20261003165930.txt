@@ -1,0 +1,241 @@
+sessionnumb  20261003165930 
+gap> rho:=20;
+20
+gap> Read("Task20261003Ua.g");
+reset 10000 
+reset 20000 
+reset 30000 
+reset 40000 
+reset 50000 
+reset 60000 
+reset 70000 
+Error, user interrupt in
+  res[Length( C )] := 1; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:659 called from 
+List( m1, function ( row )
+      return PROD_VECTOR_MATRIX( row, m2 );
+  end ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3640 called from
+T * M at gapReads/LinearAlgebra.txt:252 called from
+TMTTmult( orthoB, sQ ) at gapReads/LatticeTools.txt:41 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+...  at Task20261003Ua.g:54
+you can 'return;'
+brk> quit;
+gap> Read("Task20261003Ua.g");
+reset 10000 
+Error, user interrupt in
+  tnum := TNUM_OBJ( C ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:1639 called from 
+ForAny( m2, function ( r )
+      return not IsPlistRep( r );
+  end ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3636 called from
+T * M * TransposedMat( T ) at gapReads/LinearAlgebra.txt:252 called from
+TMTTmult( orthoB, sQ ) at gapReads/LatticeTools.txt:41 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+...  at Task20261003Ua.g:55
+you can 'return;'
+brk> abs;
+[ 513, 0, 9538, 28, 0, 0 ]
+brk> quit;
+gap> Read("Task20261003Ua.g");
+reset 10000 
+reset 20000 
+Error, user interrupt in
+  Add( copymat, vc ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2532 called from 
+SemiEchelonMatTransformation( mat ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2201 called from
+NullspaceMat( TransposedMat( [ v * sQ ] ) ) at gapReads/LatticeTools.txt:40 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+...  at Task20261003Ua.g:55
+you can 'return;'
+brk> abs;
+[ 1192, 0, 21677, 28, 0, 0 ]
+brk> SignatureQ(tG);
+[ 19, 13, 6 ]
+brk> quit;
+gap> Read("Task20261003Ua.g");
+reset 10000 
+reset 20000 
+reset 30000 
+reset 40000 
+reset 50000 
+Error, user interrupt in
+  v := arg[1]; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/vecmat.gi:1228 called from 
+ConvertToVectorRepNC( vc, f ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2531 called from
+SemiEchelonMatTransformation( mat ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2201 called from
+NullspaceMat( TransposedMat( [ v * sQ ] ) ) at gapReads/LatticeTools.txt:40 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+signaturejob( dim, Q ); at gapReads/LatticeTools.txt:48 called from
+...  at Task20261003Ua.g:56
+you can 'return;'
+brk> abs;
+[ 2895, 0, 53586, 22, 0, 0 ]
+brk>  SignatureQ(tG);
+[ 19, 14, 5 ]
+brk> quit;
+gap>  SignatureQ(tG);
+[ 19, 14, 5 ]
+gap> Read("Task20261003Ua.g");
+reset 10000 rho 20 
+reset 20000 rho 20 
+reset 30000 rho 20 
+Error, user interrupt in
+  return CF( deg ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:1252 called from 
+DefaultFieldOfMatrix( mat ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2528 called from
+SemiEchelonMatTransformation( mat ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2201 called from
+NullspaceMat( TransposedMat( [ v * sQ ] ) ) at gapReads/LatticeTools.txt:40 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+...  at Task20261003Ua.g:56
+you can 'return;'
+brk> quit;
+gap> abs;
+[ 1874, 0, 34404, 28, 0, 0 ]
+gap> Read("Task20261003Ua.g");
+[ 0, 19 ] 51844057584 [ [ "odd", 30 ], [ "tt", 141 ] ] 37 37 
+[ 0, 19 ] 44995794960 [ [ "odd", 31 ], [ "tt", 140 ] ] 38 1 
+[ 0, 19 ] 5699733024 [ [ "odd", 40 ], [ "tt", 131 ] ] 47 9 
+[ 0, 19 ] 6064848896 [ [ "odd", 41 ], [ "tt", 130 ] ] 48 1 
+[ 0, 19 ] 4267872464 [ [ "odd", 41 ], [ "tt", 130 ] ] 49 1 
+reset 10049 rho 20 [ 525, 0, 9475, 43, 0, 0 ] 
+reset 20049 rho 20 [ 1098, 0, 18902, 43, 0, 0 ] 
+reset 30049 rho 20 [ 1628, 0, 28372, 43, 0, 0 ] 
+reset 40049 rho 20 [ 2175, 0, 37825, 43, 0, 0 ] 
+reset 50049 rho 20 [ 2731, 0, 47269, 43, 0, 0 ] 
+reset 60049 rho 20 [ 3248, 0, 56752, 43, 0, 0 ] 
+reset 70049 rho 20 [ 3778, 0, 66222, 43, 0, 0 ] 
+reset 80049 rho 20 [ 4311, 0, 75689, 43, 0, 0 ] 
+reset 90049 rho 20 [ 4798, 0, 85202, 43, 0, 0 ] 
+reset 100049 rho 20 [ 5369, 0, 94631, 43, 0, 0 ] 
+reset 110049 rho 20 [ 5955, 0, 104045, 43, 0, 0 ] 
+reset 120049 rho 20 [ 6469, 0, 113531, 43, 0, 0 ] 
+reset 130049 rho 20 [ 6960, 0, 123040, 43, 0, 0 ] 
+reset 140049 rho 20 [ 7488, 0, 132512, 43, 0, 0 ] 
+reset 150049 rho 20 [ 7997, 0, 142003, 43, 0, 0 ] 
+reset 160049 rho 20 [ 8557, 0, 151443, 43, 0, 0 ] 
+reset 170049 rho 20 [ 9095, 0, 160905, 43, 0, 0 ] 
+reset 180049 rho 20 [ 9618, 0, 170382, 43, 0, 0 ] 
+reset 190049 rho 20 [ 10179, 0, 179821, 43, 0, 0 ] 
+reset 200049 rho 20 [ 10741, 0, 189259, 43, 0, 0 ] 
+Error, user interrupt in
+  m := arg[1]; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:3504 called from 
+IdentityMat( nrows, f ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2568 called from
+DoSemiEchelonMatTransformationDestructive( DefaultFieldOfMatrix( mat ), mat ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2621 called from
+SemiEchelonMatTransformationDestructive( copymat ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2534 called from
+SemiEchelonMatTransformation( mat ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2201 called from
+NullspaceMat( TransposedMat( [ v * sQ ] ) ) at gapReads/LatticeTools.txt:40 called from
+...  at Task20261003Ua.g:60
+you can 'return;'
+brk> quit;
+gap> Read("Task20261003Ua.g");
+reset 10000 rho 20 [ 523, 0, 9476, 0, 0, 0 ] 
+reset 20000 rho 20 [ 1096, 0, 18903, 0, 0, 0 ] 
+reset 30000 rho 20 [ 1626, 0, 28373, 0, 0, 0 ] 
+reset 40000 rho 20 [ 2174, 0, 37825, 0, 0, 0 ] 
+Error, user interrupt in
+  C := arg[1]; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:652 called from 
+List( m1, function ( row )
+      return PROD_VECTOR_MATRIX( row, m2 );
+  end ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3640 called from
+T * M * TransposedMat( T ) at gapReads/LinearAlgebra.txt:252 called from
+TMTTmult( orthoB, sQ ) at gapReads/LatticeTools.txt:41 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+...  at Task20261003Ua.g:69
+you can 'return;'
+brk> quit;
+gap> Read("Task20261003Ua.g");
+reset 10000 rho 20 [ 523, 0, 9476, 0, 0, 0 ] 
+reset 20000 rho 20 [ 1096, 0, 18903, 0, 0, 0 ] 
+reset 30000 rho 20 [ 1625, 0, 28374, 0, 0, 0 ] 
+Error, user interrupt in
+  trn[j] := mat{m}[j]; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2082 called from 
+TransposedMatMutable( M ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matobj.gi:1259 called from
+TransposedMat( [ v * sQ ] ) at gapReads/LatticeTools.txt:40 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+...  at Task20261003Ua.g:69
+you can 'return;'
+brk> quit;
+gap> Read("Task20261003Ua.g");
+reset 10000 rho 20 [ 522, 0, 9477, 0, 0, 0 ] 
+reset 20000 rho 20 [ 1067, 0, 18932, 0, 0, 0 ] 
+reset 30000 rho 20 [ 1587, 0, 28412, 0, 0, 0 ] 
+reset 40000 rho 20 [ 2183, 0, 37816, 0, 0, 0 ] 
+reset 50000 rho 20 [ 2696, 0, 47303, 0, 0, 0 ] 
+reset 60000 rho 20 [ 3233, 0, 56766, 0, 0, 0 ] 
+reset 70000 rho 20 [ 3760, 0, 66239, 0, 0, 0 ] 
+reset 80000 rho 20 [ 4283, 0, 75716, 0, 0, 0 ] 
+Error, user interrupt in
+  tnum := TNUM_OBJ( C ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:1639 called from 
+ForAny( m2, function ( r )
+      return not IsPlistRep( r );
+  end ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3636 called from
+T * M at gapReads/LinearAlgebra.txt:252 called from
+TMTTmult( orthoB, sQ ) at gapReads/LatticeTools.txt:41 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+...  at Task20261003Ua.g:69
+you can 'return;'
+brk> quit;
+gap> Read("Task20261003Ua.g");
+reset 10000 rho 20 [ 514, 0, 9485, 0, 0, 0 ] 
+reset 20000 rho 20 [ 1059, 0, 18924, 16, 0, 0 ] 
+reset 30000 rho 20 [ 1604, 0, 28363, 32, 0, 0 ] 
+reset 40000 rho 20 [ 2131, 0, 37814, 54, 0, 0 ] 
+reset 50000 rho 20 [ 2676, 0, 47238, 85, 0, 0 ] 
+reset 60000 rho 20 [ 3202, 0, 56693, 104, 0, 0 ] 
+reset 70000 rho 20 [ 3739, 0, 66138, 122, 0, 0 ] 
+reset 80000 rho 20 [ 4268, 0, 75587, 144, 0, 0 ] 
+reset 90000 rho 20 [ 4777, 0, 85050, 172, 0, 0 ] 
+reset 100000 rho 20 [ 5283, 0, 94526, 190, 0, 0 ] 
+reset 110000 rho 20 [ 5847, 0, 103943, 209, 0, 0 ] 
+Error, user interrupt in
+  return SemiEchelonMatTransformation( mat ).relations; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2201 called from 
+NullspaceMat( TransposedMat( [ v * sQ ] ) ) at gapReads/LatticeTools.txt:40 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+...  at Task20261003Ua.g:69
+you can 'return;'
+brk> quit;
+gap> Read("Task20261003Ua.g");
+[ 0, 19 ] 12720487072 [ [ "odd", 42 ], [ "tt", 129 ] ] 73 73 
+[ 0, 19 ] 12720487072 [ [ "odd", 42 ], [ "tt", 129 ] ] 74 1 
+[ 0, 19 ] 7520042072 [ [ "odd", 44 ], [ "tt", 127 ] ] 78 4 
+[ 0, 19 ] 4850149952 [ [ "odd", 45 ], [ "tt", 126 ] ] 79 1 
+[ 0, 19 ] 3792714640 [ [ "odd", 45 ], [ "tt", 126 ] ] 80 1 
+[ 0, 19 ] 3792714640 [ [ "odd", 45 ], [ "tt", 126 ] ] 81 1 
+[ 0, 19 ] 2869963708 [ [ "odd", 46 ], [ "tt", 125 ] ] 82 1 
+[ 0, 20 ] 1972356812 [ [ "odd", 58 ], [ "tt", 132 ] ] 83 1 
+[ 0, 21 ] 893833164 [ [ "odd", 68 ], [ "tt", 139 ], [ "zf", 3 ] ] 84 1 
+[ 0, 21 ] 668387356 [ [ "odd", 69 ], [ "tt", 138 ], [ "zf", 3 ] ] 85 1 
+[ 0, 21 ] 571409244 [ [ "odd", 70 ], [ "tt", 137 ], [ "zf", 3 ] ] 86 1 
+[ 0, 37 ] 93638432 [ [ "odd", 302 ], [ "tt", 298 ], [ "zf", 66 ] ] 114 28 
+reset 10114 rho 20 [ 527, 0, 9496, 78, 0, 0 ] 
+[ 0, 19 ] 153658904888 [ [ "odd", 18 ], [ "tt", 153 ] ] 10145 31 
+[ 0, 19 ] 153658904888 [ [ "odd", 18 ], [ "tt", 153 ] ] 10146 1 
+[ 0, 19 ] 153658904888 [ [ "odd", 18 ], [ "tt", 153 ] ] 10147 1 
+Error, user interrupt in
+  t ^ 2 at gapReads/pDiscriminantForms.txt:200 called from 
+findt( numalpha / 2, pnuii ) at gapReads/pDiscriminantForms.txt:246 called from
+_Normalform_oddpfqf( p, fag, fqf ) at gapReads/pDiscriminantForms.txt:502 called from
+Normalform_pfqf( p, pfag, pfqf ) at gapReads/pDiscriminantForms.txt:545 called from
+Normalform_fqf( fag, fqf ) at gapReads/Genera.txt:488 called from
+new2Genera( targetsignature, discmS.discg, discmS.discf ) at gapReads/Genera.txt:617 called from
+...  at Task20261003Ua.g:70
+you can 'return;'
+brk> quit;
+gap> 
+gap> 
+gap> 
+gap> 
+gap> Read("Task20261003Ua.g");
+[ 0, 20 ] 1972356812 [ [ "odd", 58 ], [ "tt", 132 ] ] 83 83 
+[ 0, 21 ] 893833164 [ [ "odd", 68 ], [ "tt", 139 ], [ "zf", 3 ] ] 84 1 
+[ 0, 21 ] 668387356 [ [ "odd", 69 ], [ "tt", 138 ], [ "zf", 3 ] ] 85 1 
+[ 0, 21 ] 571409244 [ [ "odd", 70 ], [ "tt", 137 ], [ "zf", 3 ] ] 86 1 
+[ 0, 37 ] 93638432 [ [ "odd", 302 ], [ "tt", 298 ], [ "zf", 66 ] ] 114 28 

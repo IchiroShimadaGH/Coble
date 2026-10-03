@@ -1,0 +1,12 @@
+sessionnumb  20261003160103 
+gap> GasmanLimits().max;
+0
+gap> くぅいt；
+Syntax error: expression expected
+くぅいt；
+^
+> quit;
+gap> 
+gap> 
+gap> 
+gap> quit;

@@ -1321,4 +1321,4 @@ gap>  ADEHrootnumb(["D4"]);
 24
 gap> ADEHrootnumb(["D5"]);
 40
-gap> 
+gap> quit;

@@ -67,7 +67,7 @@ NonSingOverLats:=function(Gram, h, autShgens)
   od;
   #
   theG:=Group(autShgensperms);
-  #Printn("__size of G", Size(theG));
+  # ("__size of G", Size(theG));
   #
   IsGminimal:=function(iis)
     local tgp, iistgp;

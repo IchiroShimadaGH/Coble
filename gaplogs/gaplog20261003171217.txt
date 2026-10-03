@@ -1,0 +1,379 @@
+sessionnumb  20261003171217 
+gap> rho:=18;
+18
+gap> Read("Task20261003Ua.g");
+[ 0, 17 ] 9762684544 [ [ "odd", 17 ], [ "tt", 119 ] ] 19 19 
+[ 0, 17 ] 8727100800 [ [ "odd", 19 ], [ "tt", 117 ] ] 21 2 
+[ 0, 17 ] 7544976256 [ [ "odd", 20 ], [ "tt", 116 ] ] 22 1 
+[ 0, 17 ] 6986808584 [ [ "odd", 21 ], [ "tt", 115 ] ] 23 1 
+[ 0, 17 ] 6058207872 [ [ "odd", 22 ], [ "tt", 114 ] ] 24 1 
+[ 0, 17 ] 6058207872 [ [ "odd", 22 ], [ "tt", 114 ] ] 25 1 
+[ 0, 17 ] 6058207872 [ [ "odd", 22 ], [ "tt", 114 ] ] 26 1 
+[ 0, 17 ] 5382202496 [ [ "odd", 23 ], [ "tt", 113 ] ] 27 1 
+[ 0, 17 ] 5382202496 [ [ "odd", 23 ], [ "tt", 113 ] ] 28 1 
+[ 0, 17 ] 5473350272 [ [ "odd", 23 ], [ "tt", 113 ] ] 29 1 
+[ 0, 17 ] 4730960512 [ [ "odd", 24 ], [ "tt", 112 ] ] 30 1 
+[ 0, 17 ] 4108362368 [ [ "odd", 25 ], [ "tt", 111 ] ] 31 1 
+[ 0, 17 ] 3759980416 [ [ "odd", 26 ], [ "tt", 110 ] ] 32 1 
+[ 0, 17 ] 3759980416 [ [ "odd", 26 ], [ "tt", 110 ] ] 33 1 
+[ 0, 17 ] 3190603640 [ [ "odd", 27 ], [ "tt", 109 ] ] 34 1 
+[ 0, 17 ] 2706879224 [ [ "odd", 28 ], [ "tt", 108 ] ] 35 1 
+[ 0, 17 ] 2407412544 [ [ "odd", 29 ], [ "tt", 107 ] ] 36 1 
+[ 0, 17 ] 2407412544 [ [ "odd", 29 ], [ "tt", 107 ] ] 38 2 
+[ 0, 17 ] 1547166320 [ [ "odd", 30 ], [ "tt", 106 ] ] 39 1 
+[ 0, 17 ] 1292177492 [ [ "odd", 31 ], [ "tt", 105 ] ] 40 1 
+[ 0, 17 ] 1938106452 [ [ "odd", 31 ], [ "tt", 105 ] ] 41 1 
+[ 0, 17 ] 1753908600 [ [ "odd", 32 ], [ "tt", 104 ] ] 42 1 
+[ 0, 17 ] 1637639312 [ [ "odd", 33 ], [ "tt", 103 ] ] 43 1 
+[ 0, 17 ] 1571317312 [ [ "odd", 34 ], [ "tt", 102 ] ] 44 1 
+[ 0, 17 ] 1218372032 [ [ "odd", 35 ], [ "tt", 101 ] ] 45 1 
+[ 0, 18 ] 836128704 [ [ "odd", 45 ], [ "tt", 108 ] ] 46 1 
+[ 0, 18 ] 714373812 [ [ "odd", 47 ], [ "tt", 106 ] ] 47 1 
+[ 0, 18 ] 621806040 [ [ "odd", 48 ], [ "tt", 105 ] ] 48 1 
+[ 0, 18 ] 540013740 [ [ "odd", 50 ], [ "tt", 103 ] ] 49 1 
+[ 0, 18 ] 481372796 [ [ "odd", 51 ], [ "tt", 102 ] ] 50 1 
+[ 0, 18 ] 331877296 [ [ "odd", 52 ], [ "tt", 101 ] ] 52 2 
+[ 0, 18 ] 331877296 [ [ "odd", 52 ], [ "tt", 101 ] ] 53 1 
+[ 0, 18 ] 183212612 [ [ "odd", 54 ], [ "tt", 99 ] ] 54 1 
+[ 0, 26 ] 22067600 [ [ "odd", 152 ], [ "tt", 158 ], [ "zf", 15 ] ] 55 1 
+[ 0, 21 ] 82794464 [ [ "odd", 84 ], [ "tt", 120 ], [ "zf", 6 ] ] 57 2 
+[ 0, 21 ] 82794464 [ [ "odd", 84 ], [ "tt", 120 ], [ "zf", 6 ] ] 58 1 
+[ 0, 21 ] 82794464 [ [ "odd", 84 ], [ "tt", 120 ], [ "zf", 6 ] ] 59 1 
+[ 0, 26 ] 15807188 [ [ "odd", 144 ], [ "tt", 157 ], [ "zf", 24 ] ] 70 11 
+[ 0, 77 ] 1050512 [ [ "odd", 1417 ], [ "tt", 1143 ], [ "zf", 366 ] ] 86 16 
+reset 10086 rho 18 [ 567, 0, 9462, 17, 0, 0 ] 
+reset 20086 rho 18 [ 1193, 0, 18836, 17, 0, 0 ] 
+reset 30086 rho 18 [ 1752, 0, 28277, 17, 0, 0 ] 
+reset 40086 rho 18 [ 2366, 0, 37663, 17, 0, 0 ] 
+reset 50086 rho 18 [ 2939, 0, 47090, 17, 0, 0 ] 
+reset 60086 rho 18 [ 3503, 0, 56526, 17, 0, 0 ] 
+reset 70086 rho 18 [ 4049, 0, 65980, 17, 0, 0 ] 
+reset 80086 rho 18 [ 4621, 0, 75408, 17, 0, 0 ] 
+reset 90086 rho 18 [ 5205, 0, 84824, 17, 0, 0 ] 
+reset 100086 rho 18 [ 5788, 0, 94241, 17, 0, 0 ] 
+reset 110086 rho 18 [ 6346, 0, 103683, 17, 0, 0 ] 
+reset 120086 rho 18 [ 6977, 0, 113052, 17, 0, 0 ] 
+reset 130086 rho 18 [ 7573, 0, 122456, 17, 0, 0 ] 
+reset 140086 rho 18 [ 8163, 0, 131866, 17, 0, 0 ] 
+reset 150086 rho 18 [ 8744, 0, 141285, 17, 0, 0 ] 
+reset 160086 rho 18 [ 9299, 0, 150730, 17, 0, 0 ] 
+reset 170086 rho 18 [ 9870, 0, 160159, 17, 0, 0 ] 
+reset 180086 rho 18 [ 10433, 0, 169596, 17, 0, 0 ] 
+reset 190086 rho 18 [ 11007, 0, 179022, 17, 0, 0 ] 
+reset 200086 rho 18 [ 11597, 0, 188432, 17, 0, 0 ] 
+reset 210086 rho 18 [ 12179, 0, 197850, 17, 0, 0 ] 
+reset 220086 rho 18 [ 12746, 0, 207283, 17, 0, 0 ] 
+Error, user interrupt in
+  res[i] := func( C[i] ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from 
+List( m1, function ( row )
+      return PROD_VECTOR_MATRIX( row, m2 );
+  end ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3640 called from
+T * M at gapReads/LinearAlgebra.txt:252 called from
+TMTTmult( orthoB, sQ ) at gapReads/LatticeTools.txt:41 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+...  at Task20261003Ua.g:60
+you can 'return;'
+brk> quit;
+gap> 
+gap> 
+gap> 
+gap> Read("Task20261003Ua.g");
+Syntax warning: Unbound global variable in Task20261003Ua.g:17
+  treturn(tG);
+  ^^^^^^^
+Error, user interrupt in
+  x := row[nzheads[j]]; at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2454 called from 
+SemiEchelonMatDestructive( mat ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2407 called from
+RankMatDestructive( MutableCopyMatrix( mat ) ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2417 called from
+Rank( tG ) at Task20261003Ua.g:46 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20261003Ua.g:69
+you can 'return;'
+brk> quit;
+gap> Read("Task20261003Ua.g");
+reset 10000 rho 18 [ 561, 0, 9438, 0, 0, 0 ] 
+reset 20000 rho 18 [ 1183, 0, 18816, 0, 0, 0 ] 
+reset 30000 rho 18 [ 1742, 0, 28257, 0, 0, 0 ] 
+reset 40000 rho 18 [ 2356, 0, 37643, 0, 0, 0 ] 
+reset 50000 rho 18 [ 2929, 0, 47070, 0, 0, 0 ] 
+reset 60000 rho 18 [ 3490, 0, 56509, 0, 0, 0 ] 
+Error, user interrupt in
+  res[i] := func( C[i] ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from 
+List( m1, function ( row )
+      return PROD_VECTOR_MATRIX( row, m2 );
+  end ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3640 called from
+T * M at gapReads/LinearAlgebra.txt:252 called from
+TMTTmult( orthoB, sQ ) at gapReads/LatticeTools.txt:41 called from
+signaturejob( dim, Q ); at gapReads/LatticeTools.txt:48 called from
+SignatureQ( tG ) at Task20261003Ua.g:47 called from
+...  at Task20261003Ua.g:69
+you can 'return;'
+brk> quit;
+gap> Read("Task20261003Ua.g");
+reset 10000 rho 18 [ 561, 0, 9438, 0, 0, 0 ] 
+reset 20000 rho 18 [ 1183, 0, 18816, 0, 0, 0 ] 
+reset 30000 rho 18 [ 1743, 0, 28256, 0, 0, 0 ] 
+Error, user interrupt in
+  res[i] := func( C[i] ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/coll.gi:663 called from 
+List( m1, function ( row )
+      return PROD_VECTOR_MATRIX( row, m2 );
+  end ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/list.gi:3640 called from
+T * M at gapReads/LinearAlgebra.txt:252 called from
+TMTTmult( orthoB, sQ ) at gapReads/LatticeTools.txt:41 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+signaturejob( dim, Q ); at gapReads/LatticeTools.txt:48 called from
+...  at Task20261003Ua.g:69
+you can 'return;'
+brk> quit;
+gap> 
+gap> Read("Task20261003Ua.g");
+Error, no method found! For debugging hints type ?Recovery from NoMethodFound
+Error, no 1st choice method found for `[]' on 2 arguments
+The 2nd argument is 'fail' which might point to an earlier problem
+ at /usr/local/Cellar/gap/4.15.1/share/gap/lib/methsel2.g:250 called from
+Random( GlobalMersenneTwister, 1, Length( l ) ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/random.gi:238 called from
+Random( [ 1 .. -1 ] ) at Task20261003Ua.g:42 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20261003Ua.g:69
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20261003Ua.g");
+reset 10000 rho 18 [ 561, 0, 9438, 0, 0, 0 ] 
+reset 20000 rho 18 [ 1170, 0, 18829, 0, 0, 0 ] 
+reset 30000 rho 18 [ 1752, 0, 28247, 0, 0, 0 ] 
+reset 40000 rho 18 [ 2322, 0, 37677, 0, 0, 0 ] 
+reset 50000 rho 18 [ 2921, 0, 47078, 0, 0, 0 ] 
+reset 60000 rho 18 [ 3522, 0, 56477, 0, 0, 0 ] 
+reset 70000 rho 18 [ 4106, 0, 65893, 0, 0, 0 ] 
+Error, user interrupt in
+  AddRowVector( row, vectors[head], x ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2587 called from 
+DoSemiEchelonMatTransformationDestructive( DefaultFieldOfMatrix( mat ), mat ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2621 called from
+SemiEchelonMatTransformationDestructive( copymat ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2534 called from
+SemiEchelonMatTransformation( mat ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2201 called from
+NullspaceMat( TransposedMat( [ v * sQ ] ) ) at gapReads/LatticeTools.txt:40 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+...  at Task20261003Ua.g:69
+you can 'return;'
+brk> quit;
+gap> Read("Task20261003Ua.g");
+reset 10000 rho 18 [ 561, 0, 9438, 0, 0, 0 ] 
+[ 0, 0 ] 21204355097376 [  ] 10025 25 
+[ 0, 0 ] 21204355097376 [  ] 10026 1 
+[ 0, 0 ] 21204355097376 [  ] 10027 1 
+[ 0, 0 ] 20330653845888 [  ] 10028 1 
+[ 0, 0 ] 20975031798912 [  ] 10029 1 
+[ 0, 0 ] 20975031798912 [  ] 10030 1 
+[ 0, 0 ] 20318696614512 [  ] 10031 1 
+Error, user interrupt in
+  t ^ 2 at gapReads/pDiscriminantForms.txt:200 called from 
+findt( numalpha / 2, pnuii ) at gapReads/pDiscriminantForms.txt:246 called from
+_Normalform_oddpfqf( p, fag, fqf ) at gapReads/pDiscriminantForms.txt:502 called from
+Normalform_pfqf( p, pfag, pfqf ) at gapReads/pDiscriminantForms.txt:545 called from
+Normalform_fqf( fag, fqf ) at gapReads/Genera.txt:488 called from
+new2Genera( targetsignature, discmS.discg, discmS.discf ) at gapReads/Genera.txt:617 called from
+...  at Task20261003Ua.g:69
+you can 'return;'
+brk> quit;
+gap> Read("Task20261003Ua.g");
+Error, user interrupt in
+  t ^ 2 at gapReads/pDiscriminantForms.txt:200 called from 
+findt( numalpha / 2, pnuii ) at gapReads/pDiscriminantForms.txt:246 called from
+_Normalform_oddpfqf( p, fag, fqf ) at gapReads/pDiscriminantForms.txt:502 called from
+Normalform_pfqf( p, pfag, pfqf ) at gapReads/pDiscriminantForms.txt:545 called from
+Normalform_fqf( fag, fqf ) at gapReads/Genera.txt:488 called from
+new2Genera( targetsignature, discmS.discg, discmS.discf ) at gapReads/Genera.txt:617 called from
+...  at Task20261003Ua.g:69
+you can 'return;'
+brk> quit;
+gap> 
+gap> 
+gap> Read("Task20261003Ua.g");
+Error, user interrupt in
+  t ^ 2 at gapReads/pDiscriminantForms.txt:200 called from 
+findt( numalpha / 2, pnuii ) at gapReads/pDiscriminantForms.txt:246 called from
+_Normalform_oddpfqf( p, fag, fqf ) at gapReads/pDiscriminantForms.txt:502 called from
+Normalform_pfqf( p, pfag, pfqf ) at gapReads/pDiscriminantForms.txt:545 called from
+Normalform_fqf( fag, fqf ) at gapReads/Genera.txt:488 called from
+new2Genera( targetsignature, discmS.discg, discmS.discf ) at gapReads/Genera.txt:617 called from
+...  at Task20261003Ua.g:69
+you can 'return;'
+brk> abs;
+[ 0, 0, 0, 0, 0, 0 ]
+brk> quit;
+gap> Read("Task20261003Ua.g");
+[ 0, 17 ] 12347015040 [ [ "odd", 14 ], [ "tt", 122 ] ] 22 22 
+[ 0, 17 ] 12347015040 [ [ "odd", 14 ], [ "tt", 122 ] ] 23 1 
+[ 0, 17 ] 11052347264 [ [ "odd", 15 ], [ "tt", 121 ] ] 24 1 
+[ 0, 17 ] 11052347264 [ [ "odd", 15 ], [ "tt", 121 ] ] 25 1 
+[ 0, 17 ] 10361575560 [ [ "odd", 16 ], [ "tt", 120 ] ] 26 1 
+[ 0, 17 ] 10361575560 [ [ "odd", 16 ], [ "tt", 120 ] ] 27 1 
+[ 0, 17 ] 10361575560 [ [ "odd", 16 ], [ "tt", 120 ] ] 28 1 
+[ 0, 17 ] 11194496640 [ [ "odd", 15 ], [ "tt", 121 ] ] 29 1 
+[ 0, 17 ] 10424008320 [ [ "odd", 16 ], [ "tt", 120 ] ] 30 1 
+[ 0, 17 ] 10424008320 [ [ "odd", 16 ], [ "tt", 120 ] ] 31 1 
+[ 0, 17 ] 10013097600 [ [ "odd", 16 ], [ "tt", 120 ] ] 32 1 
+[ 0, 17 ] 9240860288 [ [ "odd", 17 ], [ "tt", 119 ] ] 33 1 
+[ 0, 17 ] 8416925312 [ [ "odd", 18 ], [ "tt", 118 ] ] 34 1 
+[ 0, 17 ] 8416925312 [ [ "odd", 18 ], [ "tt", 118 ] ] 35 1 
+[ 0, 17 ] 6689141376 [ [ "odd", 19 ], [ "tt", 117 ] ] 36 1 
+[ 0, 17 ] 6050086784 [ [ "odd", 20 ], [ "tt", 116 ] ] 37 1 
+[ 0, 17 ] 6585182080 [ [ "odd", 21 ], [ "tt", 115 ] ] 38 1 
+[ 0, 17 ] 6585182080 [ [ "odd", 21 ], [ "tt", 115 ] ] 39 1 
+[ 0, 17 ] 6585182080 [ [ "odd", 21 ], [ "tt", 115 ] ] 40 1 
+[ 0, 17 ] 6101067992 [ [ "odd", 22 ], [ "tt", 114 ] ] 42 2 
+[ 0, 17 ] 5571911960 [ [ "odd", 23 ], [ "tt", 113 ] ] 43 1 
+[ 0, 17 ] 5571911960 [ [ "odd", 23 ], [ "tt", 113 ] ] 44 1 
+[ 0, 17 ] 5093817816 [ [ "odd", 24 ], [ "tt", 112 ] ] 45 1 
+[ 0, 17 ] 4714154720 [ [ "odd", 25 ], [ "tt", 111 ] ] 46 1 
+[ 0, 17 ] 4714154720 [ [ "odd", 25 ], [ "tt", 111 ] ] 47 1 
+[ 0, 17 ] 4714154720 [ [ "odd", 25 ], [ "tt", 111 ] ] 48 1 
+[ 0, 17 ] 4570111328 [ [ "odd", 26 ], [ "tt", 110 ] ] 49 1 
+[ 0, 17 ] 3861387488 [ [ "odd", 27 ], [ "tt", 109 ] ] 50 1 
+[ 0, 17 ] 3167172456 [ [ "odd", 28 ], [ "tt", 108 ] ] 51 1 
+[ 0, 17 ] 3167172456 [ [ "odd", 28 ], [ "tt", 108 ] ] 52 1 
+[ 0, 17 ] 3167172456 [ [ "odd", 28 ], [ "tt", 108 ] ] 53 1 
+[ 0, 17 ] 2902648516 [ [ "odd", 29 ], [ "tt", 107 ] ] 54 1 
+[ 0, 17 ] 2314752144 [ [ "odd", 30 ], [ "tt", 106 ] ] 55 1 
+[ 0, 17 ] 1826938972 [ [ "odd", 31 ], [ "tt", 105 ] ] 56 1 
+[ 0, 17 ] 1826938972 [ [ "odd", 31 ], [ "tt", 105 ] ] 58 2 
+[ 0, 17 ] 1826938972 [ [ "odd", 31 ], [ "tt", 105 ] ] 59 1 
+[ 0, 17 ] 1658885948 [ [ "odd", 32 ], [ "tt", 104 ] ] 60 1 
+[ 0, 17 ] 1736867132 [ [ "odd", 32 ], [ "tt", 104 ] ] 61 1 
+[ 0, 17 ] 1333145908 [ [ "odd", 33 ], [ "tt", 103 ] ] 62 1 
+[ 0, 17 ] 1333145908 [ [ "odd", 33 ], [ "tt", 103 ] ] 64 2 
+[ 0, 17 ] 1333145908 [ [ "odd", 33 ], [ "tt", 103 ] ] 65 1 
+[ 0, 17 ] 1267612860 [ [ "odd", 34 ], [ "tt", 102 ] ] 66 1 
+[ 0, 17 ] 1267612860 [ [ "odd", 34 ], [ "tt", 102 ] ] 67 1 
+[ 0, 17 ] 1193509888 [ [ "odd", 35 ], [ "tt", 101 ] ] 68 1 
+[ 0, 17 ] 1193509888 [ [ "odd", 35 ], [ "tt", 101 ] ] 69 1 
+[ 0, 17 ] 1120198952 [ [ "odd", 36 ], [ "tt", 100 ] ] 70 1 
+[ 0, 17 ] 951383700 [ [ "odd", 37 ], [ "tt", 99 ] ] 71 1 
+[ 0, 17 ] 873019168 [ [ "odd", 38 ], [ "tt", 98 ] ] 72 1 
+[ 0, 17 ] 873019168 [ [ "odd", 38 ], [ "tt", 98 ] ] 73 1 
+[ 0, 17 ] 873019168 [ [ "odd", 38 ], [ "tt", 98 ] ] 74 1 
+[ 0, 17 ] 873019168 [ [ "odd", 38 ], [ "tt", 98 ] ] 75 1 
+[ 0, 17 ] 739589588 [ [ "odd", 39 ], [ "tt", 97 ] ] 76 1 
+[ 0, 17 ] 739589588 [ [ "odd", 39 ], [ "tt", 97 ] ] 77 1 
+[ 0, 17 ] 739589588 [ [ "odd", 39 ], [ "tt", 97 ] ] 78 1 
+[ 0, 17 ] 739589588 [ [ "odd", 39 ], [ "tt", 97 ] ] 79 1 
+[ 0, 17 ] 558349172 [ [ "odd", 40 ], [ "tt", 96 ] ] 80 1 
+[ 0, 17 ] 132829252 [ [ "odd", 41 ], [ "tt", 95 ] ] 81 1 
+reset 10081 rho 18 [ 566, 0, 9439, 18, 0, 0 ] 
+[ 0, 17 ] 14910019200 [ [ "odd", 12 ], [ "tt", 124 ] ] 10098 17 
+[ 0, 17 ] 14910019200 [ [ "odd", 12 ], [ "tt", 124 ] ] 10099 1 
+[ 0, 17 ] 14910019200 [ [ "odd", 12 ], [ "tt", 124 ] ] 10100 1 
+[ 0, 17 ] 13904784000 [ [ "odd", 13 ], [ "tt", 123 ] ] 10101 1 
+[ 0, 17 ] 12908982600 [ [ "odd", 14 ], [ "tt", 122 ] ] 10102 1 
+[ 0, 17 ] 12908982600 [ [ "odd", 14 ], [ "tt", 122 ] ] 10103 1 
+[ 0, 17 ] 11942870400 [ [ "odd", 15 ], [ "tt", 121 ] ] 10104 1 
+[ 0, 17 ] 11942870400 [ [ "odd", 15 ], [ "tt", 121 ] ] 10105 1 
+[ 0, 17 ] 12908982600 [ [ "odd", 14 ], [ "tt", 122 ] ] 10106 1 
+[ 0, 17 ] 11830712520 [ [ "odd", 15 ], [ "tt", 121 ] ] 10107 1 
+[ 0, 17 ] 12685336320 [ [ "odd", 14 ], [ "tt", 122 ] ] 10108 1 
+[ 0, 17 ] 10881997440 [ [ "odd", 16 ], [ "tt", 120 ] ] 10112 4 
+[ 0, 17 ] 10881997440 [ [ "odd", 16 ], [ "tt", 120 ] ] 10113 1 
+[ 0, 17 ] 10881997440 [ [ "odd", 16 ], [ "tt", 120 ] ] 10114 1 
+[ 0, 17 ] 10881997440 [ [ "odd", 16 ], [ "tt", 120 ] ] 10115 1 
+[ 0, 17 ] 10026119040 [ [ "odd", 17 ], [ "tt", 119 ] ] 10116 1 
+[ 0, 17 ] 10026119040 [ [ "odd", 17 ], [ "tt", 119 ] ] 10117 1 
+[ 0, 17 ] 9175136128 [ [ "odd", 18 ], [ "tt", 118 ] ] 10118 1 
+[ 0, 17 ] 8504417368 [ [ "odd", 19 ], [ "tt", 117 ] ] 10119 1 
+[ 0, 17 ] 8504417368 [ [ "odd", 19 ], [ "tt", 117 ] ] 10120 1 
+[ 0, 17 ] 7430849368 [ [ "odd", 20 ], [ "tt", 116 ] ] 10121 1 
+[ 0, 17 ] 7430849368 [ [ "odd", 20 ], [ "tt", 116 ] ] 10122 1 
+[ 0, 17 ] 6825777688 [ [ "odd", 21 ], [ "tt", 115 ] ] 10123 1 
+[ 0, 17 ] 6260704648 [ [ "odd", 22 ], [ "tt", 114 ] ] 10124 1 
+[ 0, 17 ] 6260704648 [ [ "odd", 22 ], [ "tt", 114 ] ] 10125 1 
+[ 0, 17 ] 6260704648 [ [ "odd", 22 ], [ "tt", 114 ] ] 10126 1 
+[ 0, 17 ] 5767008648 [ [ "odd", 23 ], [ "tt", 113 ] ] 10127 1 
+[ 0, 17 ] 5767008648 [ [ "odd", 23 ], [ "tt", 113 ] ] 10128 1 
+[ 0, 17 ] 5767008648 [ [ "odd", 23 ], [ "tt", 113 ] ] 10129 1 
+[ 0, 17 ] 5422605960 [ [ "odd", 24 ], [ "tt", 112 ] ] 10130 1 
+[ 0, 17 ] 5422605960 [ [ "odd", 24 ], [ "tt", 112 ] ] 10131 1 
+[ 0, 17 ] 4307770080 [ [ "odd", 25 ], [ "tt", 111 ] ] 10132 1 
+[ 0, 17 ] 4304839380 [ [ "odd", 26 ], [ "tt", 110 ] ] 10133 1 
+[ 0, 17 ] 3668452876 [ [ "odd", 27 ], [ "tt", 109 ] ] 10134 1 
+[ 0, 17 ] 3186815024 [ [ "odd", 28 ], [ "tt", 108 ] ] 10135 1 
+[ 0, 17 ] 2768111692 [ [ "odd", 29 ], [ "tt", 107 ] ] 10136 1 
+[ 0, 17 ] 2768111692 [ [ "odd", 29 ], [ "tt", 107 ] ] 10137 1 
+[ 0, 17 ] 2568744652 [ [ "odd", 30 ], [ "tt", 106 ] ] 10138 1 
+[ 0, 17 ] 2495954112 [ [ "odd", 31 ], [ "tt", 105 ] ] 10139 1 
+[ 0, 17 ] 2495954112 [ [ "odd", 31 ], [ "tt", 105 ] ] 10141 2 
+[ 0, 17 ] 1457436212 [ [ "odd", 32 ], [ "tt", 104 ] ] 10142 1 
+[ 0, 17 ] 1457436212 [ [ "odd", 32 ], [ "tt", 104 ] ] 10143 1 
+[ 0, 17 ] 1457436212 [ [ "odd", 32 ], [ "tt", 104 ] ] 10144 1 
+[ 0, 17 ] 1457436212 [ [ "odd", 32 ], [ "tt", 104 ] ] 10145 1 
+[ 0, 17 ] 1457436212 [ [ "odd", 32 ], [ "tt", 104 ] ] 10146 1 
+[ 0, 17 ] 1457436212 [ [ "odd", 32 ], [ "tt", 104 ] ] 10147 1 
+[ 0, 17 ] 1457436212 [ [ "odd", 32 ], [ "tt", 104 ] ] 10150 3 
+[ 0, 18 ] 1070428760 [ [ "odd", 40 ], [ "tt", 113 ] ] 10151 1 
+[ 0, 18 ] 880107160 [ [ "odd", 41 ], [ "tt", 112 ] ] 10152 1 
+[ 0, 18 ] 492521560 [ [ "odd", 43 ], [ "tt", 110 ] ] 10153 1 
+[ 0, 18 ] 488512640 [ [ "odd", 44 ], [ "tt", 109 ] ] 10155 2 
+[ 0, 18 ] 466824188 [ [ "odd", 45 ], [ "tt", 108 ] ] 10156 1 
+[ 0, 18 ] 927357116 [ [ "odd", 45 ], [ "tt", 108 ] ] 10157 1 
+[ 0, 18 ] 937386420 [ [ "odd", 46 ], [ "tt", 107 ] ] 10158 1 
+[ 0, 17 ] 1023098780 [ [ "odd", 38 ], [ "tt", 98 ] ] 10159 1 
+[ 0, 17 ] 1023098780 [ [ "odd", 38 ], [ "tt", 98 ] ] 10161 2 
+[ 0, 17 ] 745389180 [ [ "odd", 39 ], [ "tt", 97 ] ] 10162 1 
+[ 0, 17 ] 399737780 [ [ "odd", 40 ], [ "tt", 96 ] ] 10163 1 
+[ 0, 17 ] 399737780 [ [ "odd", 40 ], [ "tt", 96 ] ] 10164 1 
+[ 0, 17 ] 391435692 [ [ "odd", 41 ], [ "tt", 95 ] ] 10165 1 
+[ 0, 17 ] 226333616 [ [ "odd", 42 ], [ "tt", 94 ] ] 10166 1 
+[ 0, 17 ] 212503656 [ [ "odd", 43 ], [ "tt", 93 ] ] 10167 1 
+[ 0, 17 ] 63439704 [ [ "odd", 44 ], [ "tt", 92 ] ] 10168 1 
+[ 0, 17 ] 357270056 [ [ "odd", 44 ], [ "tt", 92 ] ] 10169 1 
+[ 0, 17 ] 289696812 [ [ "odd", 45 ], [ "tt", 91 ] ] 10170 1 
+[ 0, 17 ] 289696812 [ [ "odd", 45 ], [ "tt", 91 ] ] 10171 1 
+[ 0, 17 ] 497648244 [ [ "odd", 44 ], [ "tt", 92 ] ] 10172 1 
+[ 0, 17 ] 446521400 [ [ "odd", 45 ], [ "tt", 91 ] ] 10173 1 
+[ 0, 17 ] 446521400 [ [ "odd", 45 ], [ "tt", 91 ] ] 10174 1 
+[ 0, 17 ] 399945536 [ [ "odd", 46 ], [ "tt", 90 ] ] 10175 1 
+[ 0, 17 ] 404065028 [ [ "odd", 47 ], [ "tt", 89 ] ] 10176 1 
+[ 0, 17 ] 337260416 [ [ "odd", 48 ], [ "tt", 88 ] ] 10177 1 
+[ 0, 17 ] 293360244 [ [ "odd", 49 ], [ "tt", 87 ] ] 10178 1 
+[ 0, 19 ] 65624468 [ [ "odd", 71 ], [ "tt", 97 ], [ "zf", 3 ] ] 10179 1 
+[ 0, 19 ] 53397752 [ [ "odd", 72 ], [ "tt", 96 ], [ "zf", 3 ] ] 10180 1 
+[ 0, 17 ] 89148596 [ [ "odd", 52 ], [ "tt", 84 ] ] 10181 1 
+[ 0, 17 ] 89148596 [ [ "odd", 52 ], [ "tt", 84 ] ] 10182 1 
+[ 0, 17 ] 287269284 [ [ "odd", 52 ], [ "tt", 84 ] ] 10183 1 
+[ 0, 18 ] 215066476 [ [ "odd", 62 ], [ "tt", 91 ] ] 10184 1 
+[ 0, 18 ] 104640012 [ [ "odd", 64 ], [ "tt", 89 ] ] 10186 2 
+[ 0, 18 ] 108650172 [ [ "odd", 64 ], [ "tt", 89 ] ] 10187 1 
+[ 0, 17 ] 152323012 [ [ "odd", 53 ], [ "tt", 83 ] ] 10188 1 
+[ 0, 17 ] 148263900 [ [ "odd", 53 ], [ "tt", 83 ] ] 10189 1 
+[ 0, 17 ] 214089596 [ [ "odd", 52 ], [ "tt", 84 ] ] 10190 1 
+[ 0, 17 ] 304002516 [ [ "odd", 51 ], [ "tt", 85 ] ] 10191 1 
+[ 0, 17 ] 304002516 [ [ "odd", 51 ], [ "tt", 85 ] ] 10192 1 
+[ 0, 18 ] 168565780 [ [ "odd", 61 ], [ "tt", 92 ] ] 10193 1 
+[ 0, 18 ] 174964580 [ [ "odd", 62 ], [ "tt", 91 ] ] 10194 1 
+[ 0, 18 ] 245625984 [ [ "odd", 60 ], [ "tt", 93 ] ] 10195 1 
+[ 0, 18 ] 245625984 [ [ "odd", 60 ], [ "tt", 93 ] ] 10196 1 
+[ 0, 18 ] 153929188 [ [ "odd", 60 ], [ "tt", 93 ] ] 10197 1 
+[ 0, 18 ] 80592088 [ [ "odd", 61 ], [ "tt", 92 ] ] 10198 1 
+[ 0, 17 ] 83982200 [ [ "odd", 52 ], [ "tt", 84 ] ] 10199 1 
+[ 0, 17 ] 37904828 [ [ "odd", 53 ], [ "tt", 83 ] ] 10200 1 
+[ 0, 17 ] 58179260 [ [ "odd", 52 ], [ "tt", 84 ] ] 10201 1 
+[ 0, 17 ] 58179260 [ [ "odd", 52 ], [ "tt", 84 ] ] 10202 1 
+[ 0, 17 ] 90095432 [ [ "odd", 53 ], [ "tt", 83 ] ] 10203 1 
+[ 0, 17 ] 90095432 [ [ "odd", 53 ], [ "tt", 83 ] ] 10204 1 
+[ 0, 17 ] 90095432 [ [ "odd", 53 ], [ "tt", 83 ] ] 10205 1 
+[ 0, 17 ] 90095432 [ [ "odd", 53 ], [ "tt", 83 ] ] 10206 1 
+[ 0, 17 ] 90095432 [ [ "odd", 53 ], [ "tt", 83 ] ] 10207 1 
+[ 0, 17 ] 90095432 [ [ "odd", 53 ], [ "tt", 83 ] ] 10208 1 
+[ 0, 17 ] 38287908 [ [ "odd", 54 ], [ "tt", 82 ] ] 10209 1 
+[ 0, 17 ] 43195184 [ [ "odd", 55 ], [ "tt", 81 ] ] 10210 1 
+[ 0, 69 ] 897044 [ [ "odd", 1175 ], [ "tt", 910 ], [ "zf", 261 ] ] 10215 5 
+[ 0, 69 ] 897044 [ [ "odd", 1175 ], [ "tt", 910 ], [ "zf", 261 ] ] 10216 1 
+Error, user interrupt in
+  AddRowVector( row, vectors[head], x ); at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2587 called from 
+DoSemiEchelonMatTransformationDestructive( DefaultFieldOfMatrix( mat ), mat ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2621 called from
+SemiEchelonMatTransformationDestructive( copymat ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2534 called from
+SemiEchelonMatTransformation( mat ) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/matrix.gi:2201 called from
+NullspaceMat( TransposedMat( [ v * sQ ] ) ) at gapReads/LatticeTools.txt:40 called from
+signaturejob( sdim - 1, newsQ ); at gapReads/LatticeTools.txt:42 called from
+...  at Task20261003Ua.g:70
+you can 'return;'
+brk> quit;
+gap> Read("Task20261003Ua.g");

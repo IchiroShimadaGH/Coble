@@ -66,4 +66,4 @@ gap> EvenLatticeGenus;
 function( signature, invariants, form ) ... end
 gap> GetSpRats;
 function( Gram, h ) ... end
-gap> 
+gap> quit;
