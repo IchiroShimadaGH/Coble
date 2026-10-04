@@ -1,4 +1,4 @@
-#Read("Task20261003Vh.g");
+#Read("Task20261004Va.g");
 
 Read("SplitConsTools.g");
 
@@ -7,8 +7,9 @@ readdata("GramLeech");
 #savedata(Leech4s);
 #readdata("Leech4s");
 
-TCC:=NrCombinations([1..24], 5);
-kk:=5;
+
+kk:=6;
+TCC:=NrCombinations([1..24], 6);
 
 iter:=IteratorOfCombinations([1..24], kk);
  
@@ -25,7 +26,7 @@ for tt in iter do
   sntA:=SmithNormalFormIntegerMat(tA);
   diags:=List([1..kk], ii->sntA[ii][ii]);
   notones:=Filtered(diags, xx-> xx<>1);
-  if Length(notones)>2 then continue; fi;
+  if Length(notones)>3 then continue; fi;
   tvs:=List(tt, jj->MakeVectei(24, jj));
   tG:=OrthogonalCompRec(GramLeech, tvs).Gram;
   tGramS:=DiagonalMats([ [[2]], -tG]);
