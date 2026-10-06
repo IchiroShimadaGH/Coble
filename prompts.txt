@@ -471,6 +471,49 @@ Aut(discriminant form of L)
 ###########
 
 
+\documentclass[11pt]{ujarticle}
+で変な font を使わずに（つまり\setmainjfontをつかわずに） TeX のソースファイルを作って．
+
+Section 1
+
+1行目に \mathbf{C} 上で議論する，て付け加える．
+
+Del Pezzo が 1859-- 1936 であることを付け加えて．
+
+Y_p の 反標準因子が
+3H- E_1-\dots -E_n であることを付け加えて．
+
+d=3 の時の反標準因子のよるモデルが 3 次曲面であること，
+d=2 の時の反標準因子のよるモデルが 4次曲線で分岐する2重平面であること，
+
+を付け加えて．
+
+4次曲線のbitanhgent との関係ものべて．
+
+Section 2：
+W(E_6), W(E_7), W(E_8の位数も書いて．
+
+
+
 
  
+ 二つのデータ [X, Y]の組，
+ 例えば 平面曲線 C とその上の点 P の組み (C, P)
+ って英語でなんていう？
+ 
+ 
+ 非特異平面6次曲線 B と
+ a collection Gamma={C_1, \dots, C_n}
+of splitting conics to B の組み
+
+名前をつけちゃおうと思うの．
+でもsextic-conic configurationだと conics がsextic に接しているっていう感じがでない．
+なんかもうちょっと別の名前ないかな？
+
+
+
+
+###########
+
+###########
 
