@@ -49,7 +49,6 @@ EvenOverlatticeCodes := function()
         for S in levels do
             for v in IsoVectors do
                 if not v in S then
-
                     # <S,v> = S union (v+S)
                     T := Set(Concatenation(
                         S,

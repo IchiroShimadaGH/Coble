@@ -240,12 +240,6 @@ such that $(T, D)$ and $(T', D')$ are homeomorphic,
 whereas 
 we say that $D$ and $D'$ are of the same topological type
 if $(\PP^2,D)$ and $(\PP^2,D')$ are homeomorphic.
-\par
-We say that a collection of reduced plane curves
-$D_1,\ldots,D_N$ form a Zariski $N$-uple
-if they are of the same configuration type,
-but any two curves $D_i$, $D_j$ $(i \neq j)$
-are of different topological types.
 \end{definition}
 %
 For a subset $\Delta$ of $\Deltat$,
@@ -293,9 +287,127 @@ of $\Deltat$.
 See Section~\ref{sec:120rats} for the proof of this proposition and 
 further geometric properties of this configuration of $120$ conics.
 %
+\par
+%
+Let $\ps$ be a smooth plane sextic.
+A smooth conic $\con$ is called a splitting  conic to $\ps$
+if the local intersection multiplicity of $\ps$ and $\con$ at every point of
+$\ps\cap\con$ is even.
 %
 %
-\section{Enumeration of splitting conics}\label{sec:enum}
+Let $\pips\colon\Xps\to\PP^2$ be the double cover branched along $\ps$.
+Then $\Xps$ is a K3 surface.
+A smooth rational curve on $\Xps$ is called a $(-2)$-curve.
+Let $\con$ be a splitting conic of $\ps$.
+Then 
+the inverse image 
+$\pips\inv (\con)$
+ is the union of two smooth rational curves 
+$\wtcon^+$ and $\wtcon^-$.
+Let $\con_1$ and $\con_2$ be two distinct splitting conics of  $\ps$.
+Then we have
+\[
+\intf{\wtcon_1^+, \wtcon_2^+}\in \{0,1,2,3,4\},
+\qquad 
+\intf{\wtcon_1^+, \wtcon_2^+}+\intf{\wtcon_1^+, \wtcon_2^-}=4.
+\]
+\par
+Let $k$ be an integer with $k\ge 2$.
+Let $E_k$ be the set of two-element subsets of $\{1,…,k\}$,
+and  let
+$W_k$ denote the set of mappings 
+\[
+w\colon E_k\to \{0,1,2,3,4\}.
+\]
+Thus $W_k$ is the set of weighted complete graphs on $k$ vertices $\{1, \dots, k\}$  with weights $0,1,2,3,4$.
+Then the symmetric group $\SSSS_k$ acts on $W_k$  via its natural action on the vertex set
+$\{1, \dots, k\}$:
+\[
+{}^\tau w (\{i, j\}):=w(\{i^\tau, j^\tau\}).
+\]
+We let the multiplicative group $\{\pm 1\}$ act on $ \{0,1,2,3,4\}$ by 
+\[
+a^s :=
+\begin{cases}
+a     & \text{if } s=1,\\
+4-a   & \text{if } s=-1.
+\end{cases}
+\]
+Then $\{\pm 1\}^k$ acts on $W_k$ by 
+\[
+{}^{(s_1, \dots, s_k)} w(\{i, j\})=(w(\{i, j\}))^{s_i s_j}.
+\]
+Thus the semidirect product  $G:=\{\pm 1\}^k\rtimes \SSSS_k$ acts on $W_k$.
+We call a $G$-orbit in $W_k$ a splitting graph.
+%
+\begin{remark}
+The group $\SSSS_k$ acts on $\{\pm 1\}^k$ by 
+ \[
+ ({}^\tau\hskip -1pt s)_i:=s_{i^\tau}.
+\]
+The product in  $G$ is given by
+\[
+(s, \tau)(s\sprime, \tau\sprime)=(s \;{}^\tau \hskip -1pts\sprime, \tau\tau\sprime).
+\]
+The action of $G$ on $W_k$ is given by 
+\[
+{}^{(s, \tau)} w={}^s ({}^\tau w).
+\]
+%Indeed,
+%\[
+%{}^\tau({}^{s'}w)
+%   ={}^{{}^\tau s'}({}^\tau w),
+%\]
+%and hence this formula defines an action of $G$ on $W_k$.
+\end{remark}
+%
+\begin{remark}
+Our construction is a  variant of Shirane's
+splitting graph adapted to collections of splitting conics.
+\end{remark}
+%
+Suppose that a smooth plane sextic $\ps$ has 
+a collection $\col$ of $k$ distinct  splitting conics.
+By  labelling  these splitting conics
+as $\con_1, \dots, \con_k$,
+and choosing an irreducible component 
+$\wtcon_i^+$ from a the two irreducible components of 
+ $\pips\inv (\con_i)$ for each $i=1, \dots, k$,
+we obtain an element $\gra_{\col}$  of $W_k$  by 
+\[
+\gra_{\col}(\{i, j\}):=\intf{\wtcon_i^+, \wtcon_j^+}.
+\]
+Note that the $G$-orbit
+$[\gra_{\col}]:=G\cdot \gra_{\col}$ 
+%containing $\gra_{\col}$ 
+is independent of the labelling and of the choices of the irreducible components
+ $\wtcon_i^+$.
+%
+\begin{theorem}
+Let $\gamma$ be a splitting graph in the first column of Table~\ref{table:gamgam}.
+Then the family $\FFF_{\gamma}\subset \PP_*(\Gamma(\PP^2, \OOO(6)))$ of smooth plane sextics $\ps$ possessing a collection $\col$ 
+of splitting conics such that $[\gra_{\col}]=\gamma$
+is irreducible,
+and a general member of $\FFF_{\gamma}$ 
+has a collection $\col\sprime\supset \col$ 
+of splitting conics such that $[\gra_{\col\sprime}]=\gamma\sprime$,
+where $\gamma\sprime$ is the splitting graph 
+in the same row of Table~\ref{table:gamgam} as $\gamma$.
+\end{theorem}
+%
+For example, the first row of Table~\ref{table:gamgam} has the following interpretation.
+Let  $\ps$ be a general plane sextic 
+in the family of smooth plane sextics possessing 
+two splitting conics $\con_1$ and $\con_2$
+such that $\intf{\wtcon_1^+, \wtcon_2^+}=0$  for a suitable choice of the lifts 
+$\wtcon_1^+, \wtcon_2^+$.
+Then  $\ps$ has another  splitting conic $\con_3$ such that 
+\[
+\intf{\wtcon_1^+, \wtcon_3^+}=\intf{\wtcon_2^+, \wtcon_3^+}=0
+\]
+for a suitable choice of $\wtcon_3^+$.
+%
+\subsection{Enumeration of splitting conics}\label{subsec:enum}
 %
 Let $\ps$ be a smooth plane sextic,
  let $\pips\colon \Xps\to \PP^2$ be the double cover branched along $\ps$,
@@ -323,10 +435,6 @@ the set of $j$-orbits in $\RRR_2$.
 %\[
 %\set{r\in \RRR_2}{j^* r\ne r}/\angs{j^*}.
 %\]
-%
-%
-\section{Splitting conic configuration $(\Bii, \Deltat)$}
-\label{sec:A}
 %
 \subsection{Proof of Proposition~\ref{prop:120rats}}\label{subsec:120rats}
 %
