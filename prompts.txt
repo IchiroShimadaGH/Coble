@@ -515,5 +515,76 @@ of splitting conics to B の組み
 
 ###########
 
+この論文は格子 E_8の有限index の部分格子Mから
+E_8/M上のerror-correcting codeをつかって元のE_8を
+復元するという作業を行なっている．
+
+しかし，これは
+Mの even overlattices を分類すれば済む話で，
+Nikulin の  discriminant form の理論
+
+
+    AUTHOR = {Nikulin, V. V.},
+     TITLE = {Integer symmetric bilinear forms and some of their geometric
+              applications},
+   JOURNAL = {Izv. Akad. Nauk SSSR Ser. Mat.},
+    VOLUME = {43},
+      YEAR = {1979},
+    NUMBER = {1},
+     PAGES = {111--177, 238},
+      ISSN = {0373-2436},
+  Note = {English translation: Math USSR-Izv. 14 (1979), no. 1, 103--167 (1980)},
+
+
+により，極めて容易に遂行できるものである．
+
+著者は格子のテータ関数を用いた方法を使っている．
+この計算の中に，なにか物理的に興味深い事実が
+隠されているのかもしれないが,
+査読者にそれを感知することはできなかった．
+
+以上の理由によりこの論文の出版を推薦することはできない．
+
+
+
+This paper reconstructs the lattice E8
+​ from a finite-index sublattice M \subset E8​ by using the error-correcting code on the quotient E8/M.
+
+However, this is contained in a problem of classifying all the even overlattices of M, 
+and it can be carried out quite straightforwardly by means of Nikulin's theory of discriminant forms:
+
+V. V. Nikulin, Integer symmetric bilinear forms and some of their geometric applications, 
+Izv. Akad. Nauk SSSR Ser. Mat. 43 (1979), no. 1, 111-177, 238; 
+English translation: Math. USSR-Izv. 14 (1980), no. 1, 103-167.
+
+The author employs a method based on the theta functions of lattices. 
+From the referee's perspective, 
+the work seems to be translating an easy computation 
+into a complicated framework.
+It is possible that some physically interesting phenomenon
+or a cenceptual advantage  is hidden behind these calculations; 
+however, the referee was unable to discern any such significance.
+
+For this reason, I cannot recommend this paper for publication.
+
+
+This paper reconstructs the lattice E8​ from a finite-index sublattice M \subset E8​ 
+by using the error-correcting code associated with the quotient E8/M.
+
+However, this problem may also be viewed as one of classifying the even overlattices of M, 
+and, from this perspective, it can be treated rather directly using Nikulin's theory of discriminant forms:
+
+V. V. Nikulin, Integer symmetric bilinear forms and some of their geometric applications, 
+Izv. Akad. Nauk SSSR Ser. Mat. 43 (1979), no. 1, 111-177, 238; 
+English translation: Math. USSR-Izv. 14 (1980), no. 1, 103-167.
+
+The author instead adopts an approach based on theta functions of lattices. 
+While this approach is certainly different in flavor, 
+it was not clear to the referee what additional mathematical insight, conceptual advantage, 
+or physical significance is gained by introducing this framework. 
+Such benefits may indeed exist, but they are not sufficiently explained in the present manuscript.
+
+In its current form, the referee is therefore not convinced that the paper provides enough new insight or motivation to justify publication.
+
 ###########
 

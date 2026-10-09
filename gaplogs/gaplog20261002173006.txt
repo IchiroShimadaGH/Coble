@@ -12297,4 +12297,7 @@ __________________________________isom
 ____ 7555 in 7556 
 __________________________________isom 
 ____ 7556 in 7556 
+gap> ead("Task20261002Ub.g");
+Error, Variable: 'ead' must have a value
+not in any function at *stdin*:17
 gap> 
