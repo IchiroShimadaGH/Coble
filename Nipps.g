@@ -1,3 +1,4 @@
+#Read("Nipps.g");
 # Gordon L. Nipp quinary forms, Watson discriminants 2..513.
 # Source: https://www.math.rwth-aachen.de/~Gabriele.Nebe/LATTICES/nipp5.html
 # Gram convention: Q(x)=x*G*x^t/2; det(G)=2*Watson discriminant.

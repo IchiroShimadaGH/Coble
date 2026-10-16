@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.20)  9 OCT 2026 18:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.20)  16 OCT 2026 17:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -658,117 +658,96 @@ Package hyperref Info: Link coloring ON on input line 49.
 \@outlinefile=\write4
 \openout4 = `manuscript1.out'.
 
-LaTeX Font Info:    Trying to load font information for U+euf on input line 140
+ [1{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 165
 .
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [1{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+)
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 169.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 169.
+(hyperref)                removing `math shift' on input line 194.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\iota' on input line 169.
+(hyperref)                removing `subscript' on input line 194.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Delta' on input line 169.
+(hyperref)                removing `\iota' on input line 194.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 169.
+(hyperref)                removing `\Delta' on input line 194.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 169.
+(hyperref)                removing `subscript' on input line 194.
 
 
-LaTeX Warning: Citation `ShimadaTurk' on page 2 undefined on input line 182.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 194.
+
+
+LaTeX Warning: Citation `ShimadaTurk' on page 2 undefined on input line 207.
 
 [2]
 
-LaTeX Warning: Reference `rem:sn' on page 3 undefined on input line 279.
+LaTeX Warning: Reference `rem:sn' on page 3 undefined on input line 305.
 
-[3] (./table1.tex) [4] [5]
+[3]
 
-LaTeX Warning: Reference `sec:120rats' on page 6 undefined on input line 382.
-
-
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 411.
-
-[6]
-
-LaTeX Warning: Reference `table:gamgam' on page 7 undefined on input line 482.
+LaTeX Warning: Citation `compdataSplittingConics' on page 4 undefined on input 
+line 378.
 
 
-LaTeX Warning: Reference `table:gamgam' on page 7 undefined on input line 490.
+Overfull \hbox (7.90028pt too wide) in paragraph at lines 387--392
+[]$\OML/cmm/m/it/10 ^^M$ \OT1/cmr/m/n/10 is the vec-tor $[\OML/cmm/m/it/10 k[];
+ k[]; k[]\OT1/cmr/m/n/10 ]$ de-scrib-ing $\OML/cmm/m/it/10 ^^M\OT1/cmr/m/n/10 (
+\OML/cmm/m/it/10 B; \OT1/cmr/m/n/10 ^^@)$, where $\OML/cmm/m/it/10 k[]$ \OT1/cm
+r/m/n/10 (resp. $\OML/cmm/m/it/10 k[]$\OT1/cmr/m/n/10 , resp. $\OML/cmm/m/it/10
+ k[]$\OT1/cmr/m/n/10 )
+ []
+
+(./table1.tex) (./table2.tex)
+
+LaTeX Warning: Reference `table:singularK3' on page 4 undefined on input line 4
+25.
 
 
-LaTeX Warning: Reference `table:gamgam' on page 7 undefined on input line 493.
+! LaTeX Error: File `table3.tex' not found.
 
-[7] [8]
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: tex)
 
-LaTeX Warning: Citation `theNikkulin' on page 9 undefined on input line 647.
+Enter file name: q
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/q.tex File ignored
+))
+Runaway argument?
+{{Examples of configurations with $r=20$ and large $|\Gamma |$}\label \ETC.
+! File ended while scanning use of \@xdblarg.
+<inserted text> 
+                \par 
+<*> manuscript1.tex
+                   
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
 
+! Emergency stop.
+<*> manuscript1.tex
+                   
+*** (job aborted, no legal \end found)
 
-LaTeX Warning: Citation `ShimadaTurk' on page 9 undefined on input line 711.
-
-
-LaTeX Warning: Citation `ShimadaTurk' on page 9 undefined on input line 712.
-
-[9] [10] (./manuscript1.aux)
- ***********
-LaTeX2e <2025-11-01>
-L3 programming layer <2026-01-19>
- ***********
-
-
-LaTeX Warning: There were undefined references.
-
-Package rerunfilecheck Info: File `manuscript1.out' has not changed.
-(rerunfilecheck)             Checksum: C424BE6E52BA4E36B17BD4A1D0B46D17;1287.
- ) 
+ 
 Here is how much of TeX's memory you used:
- 21328 strings out of 467525
- 386205 string characters out of 5418982
- 813219 words of memory out of 5000000
- 49682 multiletter control sequences out of 15000+600000
- 642589 words of font info for 95 fonts, out of 8000000 for 9000
+ 21320 strings out of 467525
+ 386237 string characters out of 5418982
+ 801420 words of memory out of 5000000
+ 49688 multiletter control sequences out of 15000+600000
+ 642069 words of font info for 93 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 102i,16n,107p,600b,607s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
-></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
-</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></u
-sr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr
-/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/l
-ocal/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/loc
-al/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
-/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/te
-xlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texli
-ve/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
-2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/202
-6/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2026/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2026/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2026/texmf
--dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2026/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2026/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2026/texmf-dist
-/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2026/texmf-di
-st/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2026/texm
-f-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on manuscript1.pdf (10 pages, 282253 bytes).
-PDF statistics:
- 229 PDF objects out of 1000 (max. 8388607)
- 169 compressed objects within 2 object streams
- 38 named destinations out of 1000 (max. 500000)
- 53 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 102i,14n,107p,600b,616s stack positions out of 10000i,1000n,20000p,200000b,200000s
+!  ==> Fatal error occurred, no output PDF file produced!
