@@ -5107,4 +5107,463 @@ _____________
 1 
 _____ 1 [ 0, 3813 ] 
 _____________ 
+gap> readdata("new2singK3configs");
+gap> Set(new2singK3configs, RecNames);
+[ [ "h", "GramS", "rr", "sprats", "tt", "dd", "GammaSize", "LambdaSize", "gtypes", "hperprec", "nonsingOLs" ] ]
+gap> Set(new2singK3configs, xx->RecNames(xx.hperprec));
+[ [ "h", "T", "rank", "GramS", "AutShgens", "AutShsize", "GramN", "Tinv", "Nbasisrec" ] ]
+gap> 
+gap> the4455:=new2singK3configs[1];;
+gap> EvenPosDefBinaryFormGL;
+function( d ) ... end
+gap> Read("Task20261018Ua.g");
+Error, Variable: 'disctTXrecc' must have an assigned value in
+  discfTX := [ disctTXrec.discg, disctTXrecc.discf ]; at Task20261018Ua.g:28 called from 
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20261018Ua.g:31
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20261018Ua.g");
+gap> discfSX;
+[ [ 6, 60 ], [ [ 1/6, 1/6 ], [ 1/6, 83/60 ] ] ]
+gap> Read("Task20261018Ua.g");
+[ [ 2, 0 ], [ 0, 180 ] ] fail 
+[ [ 4, 0 ], [ 0, 90 ] ] fail 
+[ [ 6, 0 ], [ 0, 60 ] ] fail 
+[ [ 10, 0 ], [ 0, 36 ] ] fail 
+[ [ 12, 0 ], [ 0, 30 ] ] fail 
+[ [ 14, 2 ], [ 2, 26 ] ] fail 
+[ [ 18, 0 ], [ 0, 20 ] ] fail 
+[ [ 18, 6 ], [ 6, 22 ] ] fail 
+gap> Read("Task20261018Ua.g");
+[ [ 2, 0 ], [ 0, 180 ] ] fail 
+[ [ 4, 0 ], [ 0, 90 ] ] fail 
+[ [ 6, 0 ], [ 0, 60 ] ] fail 
+[ [ 10, 0 ], [ 0, 36 ] ] fail 
+[ [ 12, 0 ], [ 0, 30 ] ] [ [ 1, 30 ], [ 4, 7 ] ] 
+[ [ 12, 0 ], [ 0, 30 ] ] 
+[ [ 14, 2 ], [ 2, 26 ] ] fail 
+[ [ 18, 0 ], [ 0, 20 ] ] fail 
+[ [ 18, 6 ], [ 6, 22 ] ] fail 
+gap> Read("Task20261018Ua.g");
+[ [ 2, 0 ], [ 0, 180 ] ] fail 
+[ [ 4, 0 ], [ 0, 90 ] ] fail 
+[ [ 6, 0 ], [ 0, 60 ] ] fail 
+[ [ 10, 0 ], [ 0, 36 ] ] fail 
+[ [ 12, 0 ], [ 0, 30 ] ] [ [ 1, 30 ], [ 4, 7 ] ] 
+found [ [ 12, 0 ], [ 0, 30 ] ] 
+[ [ 14, 2 ], [ 2, 26 ] ] fail 
+[ [ 18, 0 ], [ 0, 20 ] ] fail 
+[ [ 18, 6 ], [ 6, 22 ] ] fail 
+gap> CopyNormalDiscf;
+function( discf ) ... end
+gap> Read("Task20261018Ua.g");
+Syntax error: ) expected in Task20261018Ua.g:31
+    if CopyNormalDiscf(TMTTmult(anisom discTXrec.discf))<>disctTXrec.discf then beep(696111); fi;
+                                       ^^^^^^^^^
+Syntax error: while parsing a 'for' loop: statement or 'od' expected in Task20261018Ua.g:33
+  fi;
+  ^^
+gap> Read("Task20261018Ua.g");
+Syntax error: while parsing a 'for' loop: statement or 'od' expected in Task20261018Ua.g:33
+  fi;
+  ^^
+gap> Read("Task20261018Ua.g");
+wrong global beep 696111 
+Error,  at gapReads/gaptools.txt:139 called from
+beep( 696111 ); at Task20261018Ua.g:31 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20261018Ua.g:34
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> CopyNormalDiscf(TMTTmult(anisom, discfmSX[2]));
+[ [ 1/6, 5/6 ], [ 5/6, 47/60 ] ]
+brk> quit;
+gap> CopyNormalDiscf(TMTTmult(anisom, discfmSX[2]));
+[ [ 1/6, 5/6 ], [ 5/6, 47/60 ] ]
+gap> Read("Task20261018Ua.g");
+found [ [ 12, 0 ], [ 0, 30 ] ] 
+gap> Read("Task20261018Ua.g");
+found [ [ 12, 0 ], [ 0, 30 ] ] 
+Error, Variable: 'isctTXrec' must have an assigned value in
+  the4455rec.discTXrec := isctTXrec; at Task20261018Ua.g:36 called from 
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20261018Ua.g:39
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20261018Ua.g");
+found [ [ 12, 0 ], [ 0, 30 ] ] 
+Error, Variable: 'tthe4455rec' must have an assigned value in
+  tthe4455rec.anisomSXTX := List( anisom ); at Task20261018Ua.g:37 called from 
+<function "unknown">( <arguments> )
+ called from read-eval loop at Task20261018Ua.g:39
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> Read("Task20261018Ua.g");
+found [ [ 12, 0 ], [ 0, 30 ] ] 
+gap> SimpleOGLat([ [ 12, 0 ], [ 0, 30 ] ] );
+rec( Gram := [ [ 12, 0 ], [ 0, 30 ] ], basis := [ [ 1, 0 ], [ 0, 1 ] ], colnorms := [ [ 12, 1 ], [ 30, 1 ] ], det := 360, order := 4, 
+  stabrecs := [ rec( candidates := [ [ 1, 0 ] ], gengs := [ [ [ 1, 0 ], [ 0, 1 ] ] ], genperms := [ () ], level := 1, order := 1, trueposs := [ 1 ] ), 
+      rec( candidates := [ [ 0, 1 ], [ 0, -1 ] ], gengs := [ [ [ 1, 0 ], [ 0, 1 ] ], [ [ 1, 0 ], [ 0, -1 ] ] ], genperms := [ (), (1,2) ], level := 2, order := 2, 
+          trueposs := [ 1, 2 ] ) ], totalgens := [ [ [ -1, 0 ], [ 0, -1 ] ], [ [ 1, 0 ], [ 0, -1 ] ], [ [ 1, 0 ], [ 0, 1 ] ] ] )
+gap> 11520/2;
+5760
+gap> 11520／/3840;
+Syntax error: ; expected
+11520／/3840;
+     ^
+gap> 11520/3840;
+3
+gap> tgs:=the4455rec.hperprec.AutShgens;;
+gap> Length(tgs);
+10
+gap> tGramS:=the4455rec.GramS;
+[ [ 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, -22, -38, -45, -17, -17, -30, -35, -25, -24, -20, -24, -35, -10, -10, -10, -16, -16, -8, -18 ], 
+  [ 0, -38, -76, -94, -34, -38, -64, -74, -50, -48, -40, -52, -74, -20, -20, -20, -32, -32, -16, -44 ], [ 0, -45, -94, -132, -46, -58, -92, -106, -66, -62, -54, -80, -104, 
+      -24, -24, -24, -40, -40, -24, -76 ], [ 0, -17, -34, -46, -18, -20, -33, -38, -24, -22, -19, -28, -37, -10, -9, -8, -14, -14, -9, -26 ], 
+  [ 0, -17, -38, -58, -20, -32, -45, -47, -27, -25, -22, -39, -50, -10, -10, -10, -14, -14, -8, -44 ], 
+  [ 0, -30, -64, -92, -33, -45, -72, -78, -45, -42, -36, -61, -78, -19, -15, -14, -25, -26, -14, -65 ], 
+  [ 0, -35, -74, -106, -38, -47, -78, -92, -54, -49, -43, -69, -86, -22, -16, -16, -32, -32, -20, -68 ], 
+  [ 0, -25, -50, -66, -24, -27, -45, -54, -36, -32, -28, -39, -52, -14, -12, -13, -22, -21, -13, -34 ], 
+  [ 0, -24, -48, -62, -22, -25, -42, -49, -32, -32, -26, -35, -48, -12, -13, -12, -21, -21, -11, -30 ], 
+  [ 0, -20, -40, -54, -19, -22, -36, -43, -28, -26, -24, -31, -41, -10, -10, -11, -17, -18, -11, -27 ], 
+  [ 0, -24, -52, -80, -28, -39, -61, -69, -39, -35, -31, -56, -67, -15, -11, -11, -22, -21, -14, -59 ], 
+  [ 0, -35, -74, -104, -37, -50, -78, -86, -52, -48, -41, -67, -88, -21, -18, -18, -30, -29, -16, -69 ], 
+  [ 0, -10, -20, -24, -10, -10, -19, -22, -14, -12, -10, -15, -21, -8, -4, -4, -8, -8, -4, -14 ], 
+  [ 0, -10, -20, -24, -9, -10, -15, -16, -12, -13, -10, -11, -18, -4, -8, -6, -8, -8, -4, -8 ], 
+  [ 0, -10, -20, -24, -8, -10, -14, -16, -13, -12, -11, -11, -18, -4, -6, -8, -8, -8, -4, -8 ], 
+  [ 0, -16, -32, -40, -14, -14, -25, -32, -22, -21, -17, -22, -30, -8, -8, -8, -16, -14, -8, -16 ], 
+  [ 0, -16, -32, -40, -14, -14, -26, -32, -21, -21, -18, -21, -29, -8, -8, -8, -14, -16, -8, -16 ], 
+  [ 0, -8, -16, -24, -9, -8, -14, -20, -13, -11, -11, -14, -16, -4, -4, -4, -8, -8, -8, -10 ], 
+  [ 0, -18, -44, -76, -26, -44, -65, -68, -34, -30, -27, -59, -69, -14, -8, -8, -16, -16, -10, -72 ] ]
+gap> th:=the4455rec.h;
+[ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+gap> tgs[1];
+[ [ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, -4, 1, 1, 4, 3, 3, 0, 2, 0, 2, 3, 1, -5, -5, -5, -3, -1, -5, -8 ], 
+  [ 0, -8, 1, 2, 6, 6, 6, 0, 4, 2, 6, 6, 2, -8, -10, -10, -6, -4, -10, -16 ], [ 0, -11, 2, 3, 7, 8, 6, 0, 8, 3, 7, 8, 2, -9, -12, -14, -10, -5, -14, -20 ], 
+  [ 0, -4, 1, 2, 3, 3, 2, 0, 3, 0, 3, 3, 1, -4, -5, -6, -4, -2, -6, -8 ], [ 0, -6, 2, 3, 3, 4, 1, 1, 4, 3, 3, 5, 1, -4, -7, -8, -8, -4, -8, -11 ], 
+  [ 0, -6, 1, 2, 4, 4, 1, -1, 5, 2, 4, 5, -1, -3, -5, -7, -5, -1, -8, -8 ], [ 0, -9, 2, 3, 6, 6, 4, -1, 7, 3, 6, 5, 1, -7, -10, -11, -8, -4, -11, -14 ], 
+  [ 0, -6, 1, 2, 4, 4, 4, 0, 4, 1, 4, 3, 2, -6, -7, -8, -5, -3, -7, -11 ], [ 0, -5, 1, 1, 3, 4, 4, 0, 3, 1, 3, 4, 1, -5, -6, -6, -4, -2, -6, -10 ], 
+  [ 0, -5, 1, 1, 4, 3, 3, 0, 3, 1, 3, 3, 2, -5, -6, -6, -4, -2, -6, -9 ], [ 0, -6, 2, 2, 3, 4, 1, -1, 5, 2, 4, 4, 0, -3, -5, -8, -6, -2, -7, -8 ], 
+  [ 0, -9, 2, 3, 5, 6, 3, 0, 6, 3, 6, 7, 1, -6, -9, -11, -9, -4, -11, -15 ], [ 0, -2, 0, 1, 2, 1, 1, 0, 1, 0, 2, 1, 0, -2, -2, -2, -1, -1, -3, -3 ], 
+  [ 0, -2, 0, 1, 1, 2, 2, 0, 1, 0, 1, 3, 1, -2, -3, -3, -2, -1, -3, -6 ], [ 0, -3, 0, 1, 2, 2, 2, 1, 1, 1, 2, 2, 2, -3, -4, -4, -3, -2, -4, -7 ], 
+  [ 0, -4, 1, 1, 2, 3, 4, 0, 2, 1, 3, 2, 1, -4, -5, -5, -3, -3, -4, -8 ], [ 0, -3, 0, 0, 3, 2, 3, 0, 2, 1, 2, 2, 1, -4, -4, -3, -2, -1, -4, -6 ], 
+  [ 0, -3, 1, 1, 2, 2, 2, 0, 3, 0, 2, 1, 2, -4, -4, -5, -3, -2, -4, -6 ], [ 0, -5, 2, 2, 2, 3, -2, -1, 5, 3, 3, 4, -2, 0, -3, -6, -6, -1, -6, -4 ] ]
+gap> debug0();
+gap> Length(the4455rec.sprats.scons);
+4455
+gap> debug0();
+Error, Variable: 'DiagonalMatts' must have a value
+not in any function at fordebug0.g:10
+gap> debug0();
+Error, Variable: 'DiagonalMatss' must have a value
+not in any function at fordebug0.g:10
+gap> debug0();
+gap> 
+gap> debug0();
+gap> PositionSorted;
+function( arg... ) ... end
+gap> debug0();
+Error, Function: number of arguments must be 1 (not 2) in
+  PermList( spconss * tg, function ( tv )
+      return PositionSorted( spconss, tv );
+  end ) at fordebug0.g:25 called from 
+<function "unknown">( <arguments> )
+ called from read-eval loop at fordebug0.g:27
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> debug0();
+gap> Group(Size(tgperms));
+#I  no groups of cyclotomics allowed because of incompatible ^
+Error, usage: Group(<gen>,...), Group(<gens>), Group(<gens>,<id>) at /usr/local/Cellar/gap/4.15.1/share/gap/lib/grp.gi:4989 called from
+<function "Group">( <arguments> )
+ called from read-eval loop at *stdin*:114
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+brk> Size(Group(tgperms));
+11520
+brk> Rank(spconss);
+20
+brk> quit;
+gap> debug0();
+gap> debug0();
+Error, Variable: 'tgen' must have an assigned value in
+  newg := tgii * tgen; at fordebug0.g:42 called from 
+<function "unknown">( <arguments> )
+ called from read-eval loop at fordebug0.g:47
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> debug0();
+Error, user interrupt in
+  newg := tgii * tgen; at fordebug0.g:42 called from 
+<function "unknown">( <arguments> )
+ called from read-eval loop at fordebug0.g:47
+you can 'return;'
+brk> Length(totalgs);
+10742
+brk> ii;
+4542
+brk> quit;
+gap> debug0();
+100 652 
+200 1247 
+300 1802 
+400 2302 
+500 2769 
+600 3254 
+700 3693 
+800 4084 
+900 4438 
+1000 4819 
+1100 5123 
+1200 5430 
+1300 5762 
+1400 6059 
+1500 6329 
+1600 6634 
+1700 6925 
+1800 7153 
+1900 7395 
+2000 7590 
+2100 7802 
+2200 7987 
+2300 8163 
+2400 8326 
+2500 8488 
+2600 8662 
+2700 8830 
+2800 9020 
+2900 9166 
+3000 9310 
+3100 9478 
+3200 9589 
+3300 9733 
+3400 9860 
+3500 9947 
+3600 10044 
+3700 10131 
+3800 10215 
+3900 10285 
+4000 10355 
+4100 10429 
+4200 10493 
+4300 10565 
+4400 10645 
+4500 10706 
+4600 10781 
+4700 10836 
+4800 10873 
+4900 10917 
+5000 10947 
+5100 10973 
+5200 11029 
+5300 11060 
+5400 11092 
+5500 11114 
+5600 11136 
+5700 11165 
+5800 11194 
+5900 11231 
+6000 11256 
+6100 11278 
+6200 11297 
+6300 11323 
+6400 11335 
+6500 11350 
+6600 11368 
+6700 11384 
+6800 11400 
+6900 11411 
+7000 11430 
+7100 11436 
+7200 11444 
+7300 11452 
+7400 11458 
+7500 11462 
+7600 11466 
+7700 11472 
+7800 11482 
+7900 11489 
+8000 11491 
+8100 11493 
+8200 11496 
+8300 11499 
+8400 11501 
+8500 11502 
+8600 11505 
+8700 11510 
+8800 11515 
+8900 11515 
+9000 11516 
+9100 11517 
+9200 11518 
+9300 11518 
+9400 11519 
+9500 11520 
+9600 11520 
+9700 11520 
+9800 11520 
+9900 11520 
+10000 11520 
+10100 11520 
+10200 11520 
+10300 11520 
+10400 11520 
+10500 11520 
+10600 11520 
+10700 11520 
+10800 11520 
+10900 11520 
+11000 11520 
+11100 11520 
+11200 11520 
+11300 11520 
+11400 11520 
+11500 11520 
+gap> savedata(totalgs);
+gap> tdiscSXrec:=DiscriminantForm(tGramS);
+rec( discf := [ [ 1/6, 1/6 ], [ 1/6, 83/60 ] ], discg := [ 6, 60 ], proj := [ [ 6, 60 ], [ -240, -5940 ], [ -516, -12300 ], [ -774, -17340 ], [ -270, -6180 ], 
+      [ -390, -8100 ], [ -594, -12900 ], [ -648, -14520 ], [ -372, -8700 ], [ -342, -8040 ], [ -300, -6960 ], [ -522, -11160 ], [ -654, -14340 ], [ -144, -3480 ], 
+      [ -120, -2880 ], [ -120, -2880 ], [ -204, -5040 ], [ -204, -5040 ], [ -120, -2880 ], [ -564, -11280 ] ], 
+  proj_dual := [ [ 3, 30 ], [ 2, 54 ], [ 0, 33 ], [ 2, 6 ], [ 0, 0 ], [ 2, 32 ], [ 0, 0 ], [ 0, 52 ], [ 0, 0 ], [ 0, 0 ], [ 0, 0 ], [ 0, 0 ], [ 0, 0 ], 
+      [ 0, 0 ], [ 0, 0 ], [ 0, 0 ], [ 0, 0 ], [ 0, 0 ], [ 0, 0 ], [ 4, 48 ] ], reps := [ [ 1/2, 1/3, 1/2, 1/3, 0, 2/3, 0, 2/3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2/3 ], 
+      [ 0, 1/30, 13/20, 19/30, 0, 3/5, 0, 14/15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1/15 ] ], 
+  reps_dual := [ [ 1, -88, -186, -266, -94, -126, -198, -222, -132, -122, -106, -172, -220, -52, -44, -44, -76, -76, -44, -176 ], 
+      [ 0, -98, -205, -285, -101, -128, -205, -235, -144, -134, -116, -177, -230, -56, -50, -50, -86, -86, -50, -172 ] ] )
+gap> debug1();
+Syntax error: ; expected in fordebug1.g:9
+tdiscSXrec.discg<>[6, 60] then beep(19198); fi;
+                          ^^^^
+gap> debug1();
+gap> Length(AutX);
+720
+gap> debug1();
+720 
+gap> Size(Group(t2gperms));
+720
+gap> StructureDescription;
+<Attribute "StructureDescription">
+gap> StructureDescription(Group(t2gperms));
+"C2 x A6"
+gap> involP2 in Aut4455X;
+true
+gap> for tg in ut4455X do if tg*involP2<>involP2*tg then beep(771621); fi; od;
+Error, Variable: 'ut4455X' must have an assigned value in
+  for tg in ut4455X do
+    if tg * involP2 <> involP2 * tg then
+        beep( 771621 );
+    fi;
+od; at *stdin*:126 called from 
+<function "unknown">( <arguments> )
+ called from read-eval loop at *stdin*:126
+type 'quit;' to quit to outer loop
+brk> quit;
+gap> for tg in Aut4455X do if tg*involP2<>involP2*tg then beep(771621); fi; od;
+gap> spconsset:=Set(spcons, Set);;
+gap> t2gperms:=[];
+[  ]
+gap> for tg in Aut4455X do 
+>   tgp:=PermList(List(spconsset, tvs->PositionSorted(spconsset, Set(tvs*tg))));
+>   Add(t2gperms, tgp);
+> od;;
+gap> Size(Group(t2gperms));
+360
+gap> StructureDescription(Group(t2gperms));
+"A6"
+gap> Length(spconsset);
+4455
+gap>  Set(t2gperms, tgp->1^tgp);
+[ 1, 3, 5, 14, 35, 43, 54, 58, 64, 65, 74, 86, 90, 124, 131, 190, 216, 233, 234, 242, 249, 250, 283, 337, 353, 441, 458, 500, 504, 516, 522, 528, 553, 554, 
+  555, 567, 596, 629, 636, 657, 710, 724, 738, 780, 786, 823, 861, 930, 938, 1118, 1119, 1121, 1125, 1138, 1140, 1146, 1149, 1153, 1163, 1164, 1167, 1177, 1208, 1209, 1235, 
+  1236, 1246, 1280, 1284, 1302, 1307, 1308, 1340, 1408, 1454, 1464, 1479, 1493, 1502, 1509, 1514, 1569, 1570, 1584, 1601, 1615, 1656, 1682, 1754, 1774, 1779, 1818, 1885, 
+  1895, 1919, 1921, 1923, 1937, 1991, 1997, 2009, 2014, 2028, 2073, 2078, 2079, 2091, 2097, 2101, 2136, 2149, 2183, 2276, 2306, 2378, 2407, 2432, 2485, 2488, 2554, 2638, 
+  2741, 2783, 2844, 2960, 3069, 3096, 3156, 3197, 3218, 3230, 3236, 3283, 3296, 3301, 3333, 3362, 3501, 3527, 3580, 3613, 3615, 3638, 3683, 3690, 3759, 3761, 3909, 3923, 
+  3968, 3970, 3974, 4008, 4082, 4086, 4093, 4106, 4160, 4169, 4174, 4179, 4203, 4228, 4229, 4230, 4257, 4268, 4300, 4310, 4325, 4337, 4338, 4348, 4378, 4396, 4402, 4415, 
+  4433, 4445, 4446 ]
+gap> Set(t2gperms, tgp->2^tgp);
+[ 2, 7, 59, 108, 128, 141, 146, 148, 150, 193, 213, 226, 246, 302, 309, 329, 350, 354, 443, 452, 502, 552, 597, 640, 644, 651, 679, 712, 784, 812, 904, 909, 933, 1011, 
+  1052, 1082, 1112, 1120, 1127, 1136, 1168, 1188, 1210, 1211, 1226, 1231, 1232, 1254, 1277, 1300, 1303, 1333, 1469, 1501, 1503, 1517, 1523, 1554, 1563, 1564, 1566, 1611, 
+  1628, 1631, 1632, 1644, 1655, 1826, 1829, 1871, 1947, 1979, 1986, 2015, 2041, 2065, 2067, 2070, 2080, 2106, 2132, 2165, 2178, 2240, 2257, 2267, 2282, 2369, 2371, 2457, 
+  2486, 2523, 2548, 2555, 2556, 2601, 2649, 2667, 2668, 2671, 2676, 2681, 2696, 2697, 2738, 2774, 2797, 2814, 2854, 2862, 2900, 2945, 2948, 2956, 2983, 3000, 3084, 3149, 
+  3166, 3173, 3176, 3188, 3196, 3205, 3210, 3225, 3228, 3231, 3245, 3252, 3264, 3266, 3308, 3348, 3349, 3411, 3412, 3416, 3441, 3470, 3473, 3587, 3599, 3604, 3622, 3663, 
+  3666, 3668, 3694, 3695, 3708, 3714, 3736, 3750, 3802, 3826, 3831, 3836, 3950, 3957, 4009, 4031, 4067, 4077, 4101, 4127, 4137, 4148, 4155, 4165, 4223, 4339, 4341, 4383, 
+  4401, 4404, 4424, 4437, 4444, 4449 ]
+gap> debug2();
+gap> Length(dones);
+4455
+gap> Length(orbs);
+35
+gap> Collection(orbs, Length);
+Error, Variable: 'Collection' must have a value
+not in any function at *stdin*:141
+gap> Collection(List(orbs, Length));
+Error, Variable: 'Collection' must have a value
+not in any function at *stdin*:142
+gap> Collect(List(orbs, Length));
+Error, Variable: 'Collect' must have a value
+not in any function at *stdin*:143
+gap> Collected(List(orbs, Length));
+[ [ 15, 2 ], [ 45, 5 ], [ 60, 4 ], [ 90, 8 ], [ 180, 14 ], [ 360, 2 ] ]
+gap> SortParralel(List(orbs, Length), orbs);
+Error, Variable: 'SortParralel' must have a value
+not in any function at *stdin*:145
+gap> SortParallel(List(orbs, Length), orbs);
+gap> List(orbs, Length);
+[ 15, 15, 45, 45, 45, 45, 45, 60, 60, 60, 60, 90, 90, 90, 90, 90, 90, 90, 90, 180, 180, 180, 180, 180, 180, 180, 180, 180, 180, 180, 180, 180, 180, 360, 360 ]
+gap> for torb in orbs do 
+>   Printn(Length(torb), SpconsIntTypes(tGramS, List(torb, ii->spconsset[ii])));
+> od;
+15 [ [ "tt", 45 ], [ "zf", 60 ] ] 
+15 [ [ "tt", 45 ], [ "zf", 60 ] ] 
+45 [ [ "tt", 765 ], [ "zf", 225 ] ] 
+45 [ [ "tt", 765 ], [ "zf", 225 ] ] 
+45 [ [ "tt", 630 ], [ "zf", 360 ] ] 
+45 [ [ "tt", 765 ], [ "zf", 225 ] ] 
+45 [ [ "tt", 765 ], [ "zf", 225 ] ] 
+60 [ [ "tt", 1350 ], [ "zf", 420 ] ] 
+60 [ [ "tt", 1350 ], [ "zf", 420 ] ] 
+60 [ [ "tt", 1350 ], [ "zf", 420 ] ] 
+60 [ [ "tt", 1350 ], [ "zf", 420 ] ] 
+90 [ [ "odd", 720 ], [ "tt", 2520 ], [ "zf", 765 ] ] 
+90 [ [ "odd", 720 ], [ "tt", 2520 ], [ "zf", 765 ] ] 
+90 [ [ "odd", 1800 ], [ "tt", 1620 ], [ "zf", 585 ] ] 
+90 [ [ "odd", 1800 ], [ "tt", 1620 ], [ "zf", 585 ] ] 
+90 [ [ "odd", 720 ], [ "tt", 2520 ], [ "zf", 765 ] ] 
+90 [ [ "odd", 1800 ], [ "tt", 1620 ], [ "zf", 585 ] ] 
+90 [ [ "odd", 1800 ], [ "tt", 1620 ], [ "zf", 585 ] ] 
+90 [ [ "odd", 720 ], [ "tt", 2520 ], [ "zf", 765 ] ] 
+180 [ [ "odd", 5760 ], [ "tt", 7650 ], [ "zf", 2700 ] ] 
+180 [ [ "odd", 5760 ], [ "tt", 7650 ], [ "zf", 2700 ] ] 
+180 [ [ "odd", 7200 ], [ "tt", 6030 ], [ "zf", 2880 ] ] 
+180 [ [ "odd", 5760 ], [ "tt", 7650 ], [ "zf", 2700 ] ] 
+180 [ [ "odd", 5040 ], [ "tt", 9270 ], [ "zf", 1800 ] ] 
+180 [ [ "odd", 5040 ], [ "tt", 9270 ], [ "zf", 1800 ] ] 
+180 [ [ "odd", 5760 ], [ "tt", 7650 ], [ "zf", 2700 ] ] 
+180 [ [ "odd", 5040 ], [ "tt", 9270 ], [ "zf", 1800 ] ] 
+180 [ [ "odd", 5040 ], [ "tt", 9270 ], [ "zf", 1800 ] ] 
+180 [ [ "odd", 5040 ], [ "tt", 9270 ], [ "zf", 1800 ] ] 
+180 [ [ "odd", 5040 ], [ "tt", 9270 ], [ "zf", 1800 ] ] 
+180 [ [ "odd", 7200 ], [ "tt", 6030 ], [ "zf", 2880 ] ] 
+180 [ [ "odd", 5040 ], [ "tt", 9270 ], [ "zf", 1800 ] ] 
+180 [ [ "odd", 5040 ], [ "tt", 9270 ], [ "zf", 1800 ] ] 
+360 [ [ "odd", 24480 ], [ "tt", 33300 ], [ "zf", 6840 ] ] 
+360 [ [ "odd", 24480 ], [ "tt", 33300 ], [ "zf", 6840 ] ] 
+gap> savedata(Aut4455X);
+gap> Aut4455rec:=rec(
+>   AutX:=Aut4455X, 
+>   spconsset:=spconsset, 
+>   permsspconsset:=t2gperms
+>   orbs:=orbs
+Syntax error: ) expected
+  orbs:=orbs
+  ^^^^
+> );;
+gap> 
+gap> Aut4455rec:=rec(
+>   AutX:=Aut4455X, 
+>   spconsset:=spconsset, 
+>   permsspconsset:=t2gperms,
+>   orbs:=orbs
+> );;
+gap> savedata(Aut4455rec);
 gap> 
